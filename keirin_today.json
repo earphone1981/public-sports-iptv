@@ -1,6 +1,6 @@
 {
   "date": "20260813",
-  "updated_at": "2026-08-13T20:26:21.956458+09:00",
+  "updated_at": "2026-08-13T21:36:01.880735+09:00",
   "source": "OddsPark",
   "venues": {
     "青森": {
@@ -15,7 +15,7 @@
         {
           "race": 1,
           "name": "Ｌ級ガ予２",
-          "cutoff": "20:45",
+          "cutoff": "",
           "time": "20:50",
           "name_raw": "Ｌ級ガ予２",
           "event_day_detail": "2日目",
@@ -32,7 +32,7 @@
         {
           "race": 2,
           "name": "Ｌ級ガ予２",
-          "cutoff": "21:05",
+          "cutoff": "",
           "time": "21:10",
           "name_raw": "Ｌ級ガ予２",
           "event_day_detail": "2日目",
@@ -49,7 +49,7 @@
         {
           "race": 3,
           "name": "Ａ級一般",
-          "cutoff": "21:25",
+          "cutoff": "",
           "time": "21:30",
           "name_raw": "Ａ級一般",
           "event_day_detail": "2日目",
@@ -824,7 +824,7 @@
         {
           "race": 11,
           "name": "Ｓ級二予選",
-          "cutoff": "20:25",
+          "cutoff": "",
           "time": "20:30",
           "name_raw": "Ｓ級二予選",
           "event_day_detail": "3日目",
@@ -852,7 +852,7 @@
         {
           "race": 1,
           "name": "Ｌ級ガ予２",
-          "cutoff": "20:35",
+          "cutoff": "",
           "time": "20:40",
           "name_raw": "Ｌ級ガ予２",
           "event_day_detail": "2日目",
@@ -869,7 +869,7 @@
         {
           "race": 2,
           "name": "Ｌ級ガ予２",
-          "cutoff": "20:55",
+          "cutoff": "",
           "time": "21:00",
           "name_raw": "Ｌ級ガ予２",
           "event_day_detail": "2日目",
@@ -886,7 +886,7 @@
         {
           "race": 3,
           "name": "Ａ級一般",
-          "cutoff": "21:15",
+          "cutoff": "",
           "time": "21:20",
           "name_raw": "Ａ級一般",
           "event_day_detail": "2日目",

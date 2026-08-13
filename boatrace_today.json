@@ -1,0 +1,1808 @@
+{
+    "01 桐生":  {
+                  "tvg_id":  "boat.kiryu",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/01_N.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "15:17",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 1R【15:17】",
+                                    "epg_start":  "2026-08-13 14:45",
+                                    "epg_end":  "2026-08-13 15:17"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "15:42",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 2R【15:42】",
+                                    "epg_start":  "2026-08-13 15:17",
+                                    "epg_end":  "2026-08-13 15:42"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "16:07",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 3R【16:07】",
+                                    "epg_start":  "2026-08-13 15:42",
+                                    "epg_end":  "2026-08-13 16:07"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "16:33",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 4R【16:33】",
+                                    "epg_start":  "2026-08-13 16:07",
+                                    "epg_end":  "2026-08-13 16:33"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "17:01",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 5R【17:01】",
+                                    "epg_start":  "2026-08-13 16:33",
+                                    "epg_end":  "2026-08-13 17:01"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "17:25",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 6R【17:25】",
+                                    "epg_start":  "2026-08-13 17:01",
+                                    "epg_end":  "2026-08-13 17:25"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "17:52",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 7R【17:52】",
+                                    "epg_start":  "2026-08-13 17:25",
+                                    "epg_end":  "2026-08-13 17:52"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "18:22",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 8R【18:22】",
+                                    "epg_start":  "2026-08-13 17:52",
+                                    "epg_end":  "2026-08-13 18:22"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "18:52",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 9R【18:52】",
+                                    "epg_start":  "2026-08-13 18:22",
+                                    "epg_end":  "2026-08-13 18:52"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "19:24",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 10R【19:24】",
+                                    "epg_start":  "2026-08-13 18:52",
+                                    "epg_end":  "2026-08-13 19:24"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "20:02",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 11R【20:02】",
+                                    "epg_start":  "2026-08-13 19:24",
+                                    "epg_end":  "2026-08-13 20:02"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "20:31",
+                                    "race_name":  "",
+                                    "title":  "🌙 01 桐生 12R【20:31】",
+                                    "epg_start":  "2026-08-13 20:02",
+                                    "epg_end":  "2026-08-13 20:31"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/10bf28668fdf4654949d489d364eab76/6441819982bf43f7873b7c5c80675f0e/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1OTk5MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.KbKW5NrKi8-qRwvC1aj0q6U1yxTS8CTM6t33EysMRIg",
+                  "start":  "14:45",
+                  "end":  "20:51",
+                  "finish_title":  "🏁 01 桐生 本日開催終了",
+                  "finish_start":  "2026-08-13 20:31",
+                  "finish_end":  "2026-08-13 20:51"
+              },
+    "02 戸田":  {
+                  "tvg_id":  "boat.toda",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/02_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "デイ",
+                  "emoji":  "🌞",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "10:47",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 1R【10:47】",
+                                    "epg_start":  "2026-08-13 10:09",
+                                    "epg_end":  "2026-08-13 10:47"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "11:16",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 2R【11:16】",
+                                    "epg_start":  "2026-08-13 10:47",
+                                    "epg_end":  "2026-08-13 11:16"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "11:45",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 3R【11:45】",
+                                    "epg_start":  "2026-08-13 11:16",
+                                    "epg_end":  "2026-08-13 11:45"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "12:14",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 4R【12:14】",
+                                    "epg_start":  "2026-08-13 11:45",
+                                    "epg_end":  "2026-08-13 12:14"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "12:44",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 5R【12:44】",
+                                    "epg_start":  "2026-08-13 12:14",
+                                    "epg_end":  "2026-08-13 12:44"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "13:14",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 6R【13:14】",
+                                    "epg_start":  "2026-08-13 12:44",
+                                    "epg_end":  "2026-08-13 13:14"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "13:45",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 7R【13:45】",
+                                    "epg_start":  "2026-08-13 13:14",
+                                    "epg_end":  "2026-08-13 13:45"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "14:16",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 8R【14:16】",
+                                    "epg_start":  "2026-08-13 13:45",
+                                    "epg_end":  "2026-08-13 14:16"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "14:48",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 9R【14:48】",
+                                    "epg_start":  "2026-08-13 14:16",
+                                    "epg_end":  "2026-08-13 14:48"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "16:01",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 10R【16:01】",
+                                    "epg_start":  "2026-08-13 14:48",
+                                    "epg_end":  "2026-08-13 16:01"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "16:28",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 11R【16:28】",
+                                    "epg_start":  "2026-08-13 16:01",
+                                    "epg_end":  "2026-08-13 16:28"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "16:55",
+                                    "race_name":  "",
+                                    "title":  "🌞 02 戸田 12R【16:55】",
+                                    "epg_start":  "2026-08-13 16:28",
+                                    "epg_end":  "2026-08-13 16:55"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/e3536f14bb58419e8befd279ececc25d/b19df273ed2140d58de7cb6663795087/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODMzNDAsInZwOSI6MSwicHB3IjoiNDBrIn0.UFotedy94wJ5bL4-8aZit-_3TeSDdmnmpfwews-xhmg",
+                  "start":  "10:09",
+                  "end":  "17:15",
+                  "finish_title":  "🏁 02 戸田 本日開催終了",
+                  "finish_start":  "2026-08-13 16:55",
+                  "finish_end":  "2026-08-13 17:15"
+              },
+    "03 江戸川":  {
+                   "tvg_id":  "boat.edogawa",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/03_N-1.jpg",
+                   "live":  true,
+                   "held":  true,
+                   "day_type":  "デイ",
+                   "emoji":  "🌞",
+                   "races":  [
+                                 {
+                                     "rno":  1,
+                                     "time":  "11:14",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 1R【11:14】",
+                                     "epg_start":  "2026-08-13 10:39",
+                                     "epg_end":  "2026-08-13 11:14"
+                                 },
+                                 {
+                                     "rno":  2,
+                                     "time":  "11:43",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 2R【11:43】",
+                                     "epg_start":  "2026-08-13 11:14",
+                                     "epg_end":  "2026-08-13 11:43"
+                                 },
+                                 {
+                                     "rno":  3,
+                                     "time":  "12:09",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 3R【12:09】",
+                                     "epg_start":  "2026-08-13 11:43",
+                                     "epg_end":  "2026-08-13 12:09"
+                                 },
+                                 {
+                                     "rno":  4,
+                                     "time":  "12:35",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 4R【12:35】",
+                                     "epg_start":  "2026-08-13 12:09",
+                                     "epg_end":  "2026-08-13 12:35"
+                                 },
+                                 {
+                                     "rno":  5,
+                                     "time":  "13:02",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 5R【13:02】",
+                                     "epg_start":  "2026-08-13 12:35",
+                                     "epg_end":  "2026-08-13 13:02"
+                                 },
+                                 {
+                                     "rno":  6,
+                                     "time":  "13:29",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 6R【13:29】",
+                                     "epg_start":  "2026-08-13 13:02",
+                                     "epg_end":  "2026-08-13 13:29"
+                                 },
+                                 {
+                                     "rno":  7,
+                                     "time":  "13:56",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 7R【13:56】",
+                                     "epg_start":  "2026-08-13 13:29",
+                                     "epg_end":  "2026-08-13 13:56"
+                                 },
+                                 {
+                                     "rno":  8,
+                                     "time":  "14:24",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 8R【14:24】",
+                                     "epg_start":  "2026-08-13 13:56",
+                                     "epg_end":  "2026-08-13 14:24"
+                                 },
+                                 {
+                                     "rno":  9,
+                                     "time":  "14:52",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 9R【14:52】",
+                                     "epg_start":  "2026-08-13 14:24",
+                                     "epg_end":  "2026-08-13 14:52"
+                                 },
+                                 {
+                                     "rno":  10,
+                                     "time":  "15:22",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 10R【15:22】",
+                                     "epg_start":  "2026-08-13 14:52",
+                                     "epg_end":  "2026-08-13 15:22"
+                                 },
+                                 {
+                                     "rno":  11,
+                                     "time":  "15:53",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 11R【15:53】",
+                                     "epg_start":  "2026-08-13 15:22",
+                                     "epg_end":  "2026-08-13 15:53"
+                                 },
+                                 {
+                                     "rno":  12,
+                                     "time":  "16:25",
+                                     "race_name":  "",
+                                     "title":  "🌞 03 江戸川 12R【16:25】",
+                                     "epg_start":  "2026-08-13 15:53",
+                                     "epg_end":  "2026-08-13 16:25"
+                                 }
+                             ],
+                   "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/3c49cbb4a1ac49dd9337586730b7ab45/428aecff77af4416870a6eceaa03b961/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODUxNDAsInZwOSI6MSwicHB3IjoiNDBrIn0.0AhPWy-hoB8onacZ0VQpiOWRe_d83yqQSvqXs9jKZ-I",
+                   "start":  "10:39",
+                   "end":  "16:47",
+                   "finish_title":  "🏁 03 江戸川 本日開催終了",
+                   "finish_start":  "2026-08-13 16:25",
+                   "finish_end":  "2026-08-13 16:47"
+               },
+    "04 平和島":  {
+                   "tvg_id":  "boat.heiwajima",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/04_N-1.jpg",
+                   "live":  true,
+                   "held":  true,
+                   "day_type":  "サマータイム",
+                   "emoji":  "🌇",
+                   "races":  [
+                                 {
+                                     "rno":  1,
+                                     "time":  "11:55",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 1R【11:55】",
+                                     "epg_start":  "2026-08-13 10:00",
+                                     "epg_end":  "2026-08-13 11:55"
+                                 },
+                                 {
+                                     "rno":  2,
+                                     "time":  "12:24",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 2R【12:24】",
+                                     "epg_start":  "2026-08-13 11:55",
+                                     "epg_end":  "2026-08-13 12:24"
+                                 },
+                                 {
+                                     "rno":  3,
+                                     "time":  "12:54",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 3R【12:54】",
+                                     "epg_start":  "2026-08-13 12:24",
+                                     "epg_end":  "2026-08-13 12:54"
+                                 },
+                                 {
+                                     "rno":  4,
+                                     "time":  "13:24",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 4R【13:24】",
+                                     "epg_start":  "2026-08-13 12:54",
+                                     "epg_end":  "2026-08-13 13:24"
+                                 },
+                                 {
+                                     "rno":  5,
+                                     "time":  "13:55",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 5R【13:55】",
+                                     "epg_start":  "2026-08-13 13:24",
+                                     "epg_end":  "2026-08-13 13:55"
+                                 },
+                                 {
+                                     "rno":  6,
+                                     "time":  "14:26",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 6R【14:26】",
+                                     "epg_start":  "2026-08-13 13:55",
+                                     "epg_end":  "2026-08-13 14:26"
+                                 },
+                                 {
+                                     "rno":  7,
+                                     "time":  "14:58",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 7R【14:58】",
+                                     "epg_start":  "2026-08-13 14:26",
+                                     "epg_end":  "2026-08-13 14:58"
+                                 },
+                                 {
+                                     "rno":  8,
+                                     "time":  "15:31",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 8R【15:31】",
+                                     "epg_start":  "2026-08-13 14:58",
+                                     "epg_end":  "2026-08-13 15:31"
+                                 },
+                                 {
+                                     "rno":  9,
+                                     "time":  "16:05",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 9R【16:05】",
+                                     "epg_start":  "2026-08-13 15:31",
+                                     "epg_end":  "2026-08-13 16:05"
+                                 },
+                                 {
+                                     "rno":  10,
+                                     "time":  "16:37",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 10R【16:37】",
+                                     "epg_start":  "2026-08-13 16:05",
+                                     "epg_end":  "2026-08-13 16:37"
+                                 },
+                                 {
+                                     "rno":  11,
+                                     "time":  "17:08",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 11R【17:08】",
+                                     "epg_start":  "2026-08-13 16:37",
+                                     "epg_end":  "2026-08-13 17:08"
+                                 },
+                                 {
+                                     "rno":  12,
+                                     "time":  "17:42",
+                                     "race_name":  "",
+                                     "title":  "🌇 04 平和島 12R【17:42】",
+                                     "epg_start":  "2026-08-13 17:08",
+                                     "epg_end":  "2026-08-13 17:42"
+                                 }
+                             ],
+                   "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/16454ad4b2c6417e99b27295e8b23448/b86c55edc8d34ad29e8b92a245211db5/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODI4MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.N2c6H7ZxkokpsUf4Xc_Gz5HfExxI-sS9-zSWA1HVsoY",
+                   "start":  "10:00",
+                   "end":  "18:35",
+                   "finish_title":  "🏁 04 平和島 本日開催終了",
+                   "finish_start":  "2026-08-13 17:42",
+                   "finish_end":  "2026-08-13 18:35"
+               },
+    "05 多摩川":  {
+                   "tvg_id":  "boat.tamagawa",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/05_N-1.jpg",
+                   "live":  false,
+                   "held":  false,
+                   "day_type":  "デイ",
+                   "emoji":  "🌞",
+                   "races":  [
+
+                             ],
+                   "start":  "10:58",
+                   "end":  "17:44",
+                   "status_title":  "⛔ 05 多摩川 本日非開催"
+               },
+    "06 浜名湖":  {
+                   "tvg_id":  "boat.hamanako",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/06_N-1.jpg",
+                   "live":  true,
+                   "held":  true,
+                   "day_type":  "デイ",
+                   "emoji":  "🌞",
+                   "races":  [
+                                 {
+                                     "rno":  1,
+                                     "time":  "11:25",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 1R【11:25】",
+                                     "epg_start":  "2026-08-13 10:50",
+                                     "epg_end":  "2026-08-13 11:25"
+                                 },
+                                 {
+                                     "rno":  2,
+                                     "time":  "11:59",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 2R【11:59】",
+                                     "epg_start":  "2026-08-13 11:25",
+                                     "epg_end":  "2026-08-13 11:59"
+                                 },
+                                 {
+                                     "rno":  3,
+                                     "time":  "12:30",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 3R【12:30】",
+                                     "epg_start":  "2026-08-13 11:59",
+                                     "epg_end":  "2026-08-13 12:30"
+                                 },
+                                 {
+                                     "rno":  4,
+                                     "time":  "12:58",
+                                     "race_name":  "ランチタイム戦",
+                                     "title":  "🌞 06 浜名湖 4R ランチタイム戦【12:58】",
+                                     "epg_start":  "2026-08-13 12:30",
+                                     "epg_end":  "2026-08-13 12:58"
+                                 },
+                                 {
+                                     "rno":  5,
+                                     "time":  "13:33",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 5R【13:33】",
+                                     "epg_start":  "2026-08-13 12:58",
+                                     "epg_end":  "2026-08-13 13:33"
+                                 },
+                                 {
+                                     "rno":  6,
+                                     "time":  "14:08",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 6R【14:08】",
+                                     "epg_start":  "2026-08-13 13:33",
+                                     "epg_end":  "2026-08-13 14:08"
+                                 },
+                                 {
+                                     "rno":  7,
+                                     "time":  "14:35",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 7R【14:35】",
+                                     "epg_start":  "2026-08-13 14:08",
+                                     "epg_end":  "2026-08-13 14:35"
+                                 },
+                                 {
+                                     "rno":  8,
+                                     "time":  "15:05",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 8R【15:05】",
+                                     "epg_start":  "2026-08-13 14:35",
+                                     "epg_end":  "2026-08-13 15:05"
+                                 },
+                                 {
+                                     "rno":  9,
+                                     "time":  "15:36",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 9R【15:36】",
+                                     "epg_start":  "2026-08-13 15:05",
+                                     "epg_end":  "2026-08-13 15:36"
+                                 },
+                                 {
+                                     "rno":  10,
+                                     "time":  "16:08",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 10R【16:08】",
+                                     "epg_start":  "2026-08-13 15:36",
+                                     "epg_end":  "2026-08-13 16:08"
+                                 },
+                                 {
+                                     "rno":  11,
+                                     "time":  "16:35",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 11R【16:35】",
+                                     "epg_start":  "2026-08-13 16:08",
+                                     "epg_end":  "2026-08-13 16:35"
+                                 },
+                                 {
+                                     "rno":  12,
+                                     "time":  "17:04",
+                                     "race_name":  "",
+                                     "title":  "🌞 06 浜名湖 12R【17:04】",
+                                     "epg_start":  "2026-08-13 16:35",
+                                     "epg_end":  "2026-08-13 17:04"
+                                 }
+                             ],
+                   "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/4b3a2484787b472faebbc7c3a62a8fdf/d165b5f58119425ea05e9dd5b6e90174/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODU4MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.tXEPjtLYlZIfgrdz-RESxNDIIjtT0J2nYJ9lRlNi1ZY",
+                   "start":  "10:50",
+                   "end":  "17:22",
+                   "finish_title":  "🏁 06 浜名湖 本日開催終了",
+                   "finish_start":  "2026-08-13 17:04",
+                   "finish_end":  "2026-08-13 17:22"
+               },
+    "07 蒲郡":  {
+                  "tvg_id":  "boat.gamagori",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/07_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "15:25",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 1R【15:25】",
+                                    "epg_start":  "2026-08-13 14:10",
+                                    "epg_end":  "2026-08-13 15:25"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "15:50",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 2R【15:50】",
+                                    "epg_start":  "2026-08-13 15:25",
+                                    "epg_end":  "2026-08-13 15:50"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "16:19",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 3R【16:19】",
+                                    "epg_start":  "2026-08-13 15:50",
+                                    "epg_end":  "2026-08-13 16:19"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "16:44",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 4R【16:44】",
+                                    "epg_start":  "2026-08-13 16:19",
+                                    "epg_end":  "2026-08-13 16:44"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "17:11",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 5R【17:11】",
+                                    "epg_start":  "2026-08-13 16:44",
+                                    "epg_end":  "2026-08-13 17:11"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "17:36",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 6R【17:36】",
+                                    "epg_start":  "2026-08-13 17:11",
+                                    "epg_end":  "2026-08-13 17:36"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "18:03",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 7R【18:03】",
+                                    "epg_start":  "2026-08-13 17:36",
+                                    "epg_end":  "2026-08-13 18:03"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "18:40",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 8R【18:40】",
+                                    "epg_start":  "2026-08-13 18:03",
+                                    "epg_end":  "2026-08-13 18:40"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "19:11",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 9R【19:11】",
+                                    "epg_start":  "2026-08-13 18:40",
+                                    "epg_end":  "2026-08-13 19:11"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "19:42",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 10R【19:42】",
+                                    "epg_start":  "2026-08-13 19:11",
+                                    "epg_end":  "2026-08-13 19:42"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "20:13",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 11R【20:13】",
+                                    "epg_start":  "2026-08-13 19:42",
+                                    "epg_end":  "2026-08-13 20:13"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "20:41",
+                                    "race_name":  "",
+                                    "title":  "🌙 07 蒲郡 12R【20:41】",
+                                    "epg_start":  "2026-08-13 20:13",
+                                    "epg_end":  "2026-08-13 20:41"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/aeaec5c16f754551a9aa6eab577bc6d7/42655fde7d3a4497957353e25d75279b/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1OTc4MDAsInZwOSI6MSwiY3AiOiIyMDg3OTM0MDBfMjA4ODIwMTAwIiwicHB3IjoiNDBrIn0.bhuqBx6SROaVLvuKj2PtQEYmB_uGLJYu_-kdQfxqXlo",
+                  "start":  "14:10",
+                  "end":  "21:35",
+                  "finish_title":  "🏁 07 蒲郡 本日開催終了",
+                  "finish_start":  "2026-08-13 20:41",
+                  "finish_end":  "2026-08-13 21:35"
+              },
+    "08 常滑":  {
+                  "tvg_id":  "boat.tokoname",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/08_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "デイ",
+                  "emoji":  "🌞",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "10:33",
+                                    "race_name":  "朝トコ小判Ｒ",
+                                    "title":  "🌞 08 常滑 1R 朝トコ小判Ｒ【10:33】",
+                                    "epg_start":  "2026-08-13 09:59",
+                                    "epg_end":  "2026-08-13 10:33"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "11:06",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 2R【11:06】",
+                                    "epg_start":  "2026-08-13 10:33",
+                                    "epg_end":  "2026-08-13 11:06"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "11:34",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 3R【11:34】",
+                                    "epg_start":  "2026-08-13 11:06",
+                                    "epg_end":  "2026-08-13 11:34"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "12:07",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 4R【12:07】",
+                                    "epg_start":  "2026-08-13 11:34",
+                                    "epg_end":  "2026-08-13 12:07"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "12:35",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 5R【12:35】",
+                                    "epg_start":  "2026-08-13 12:07",
+                                    "epg_end":  "2026-08-13 12:35"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "13:08",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 6R【13:08】",
+                                    "epg_start":  "2026-08-13 12:35",
+                                    "epg_end":  "2026-08-13 13:08"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "13:38",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 7R【13:38】",
+                                    "epg_start":  "2026-08-13 13:08",
+                                    "epg_end":  "2026-08-13 13:38"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "14:06",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 8R【14:06】",
+                                    "epg_start":  "2026-08-13 13:38",
+                                    "epg_end":  "2026-08-13 14:06"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "14:33",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 9R【14:33】",
+                                    "epg_start":  "2026-08-13 14:06",
+                                    "epg_end":  "2026-08-13 14:33"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "15:02",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 10R【15:02】",
+                                    "epg_start":  "2026-08-13 14:33",
+                                    "epg_end":  "2026-08-13 15:02"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "15:30",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 11R【15:30】",
+                                    "epg_start":  "2026-08-13 15:02",
+                                    "epg_end":  "2026-08-13 15:30"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "16:02",
+                                    "race_name":  "",
+                                    "title":  "🌞 08 常滑 12R【16:02】",
+                                    "epg_start":  "2026-08-13 15:30",
+                                    "epg_end":  "2026-08-13 16:02"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/5222cc3a063a4b4fabc2260079e785c7/1c164133b39e4c68a14b688080ff9dff/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODI3NDAsInZwOSI6MSwicHB3IjoiNDBrIn0.8GlMq4mrhvY4Xvprq3jRBIkyiA02P3EU8rsWpC5eSpw",
+                  "start":  "09:59",
+                  "end":  "16:21",
+                  "finish_title":  "🏁 08 常滑 本日開催終了",
+                  "finish_start":  "2026-08-13 16:02",
+                  "finish_end":  "2026-08-13 16:21"
+              },
+    "09 津":  {
+                 "tvg_id":  "boat.tsu",
+                 "logo":  "https://www.boatrace.jp/static/uploads/sites/8/09_N-1-1.jpg",
+                 "live":  false,
+                 "held":  false,
+                 "day_type":  "デイ",
+                 "emoji":  "🌞",
+                 "races":  [
+
+                           ],
+                 "start":  "09:55",
+                 "end":  "16:38",
+                 "status_title":  "⛔ 09 津 本日非開催"
+             },
+    "10 三国":  {
+                  "tvg_id":  "boat.mikuni",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/10_N-1-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "モーニング",
+                  "emoji":  "🌅",
+                  "races":  [
+
+                            ],
+                  "start":  "07:57",
+                  "end":  "14:27",
+                  "status_title":  "⛔ 10 三国 本日非開催"
+              },
+    "11 びわこ":  {
+                   "tvg_id":  "boat.biwako",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/11_N-1.jpg",
+                   "live":  false,
+                   "held":  false,
+                   "day_type":  "デイ",
+                   "emoji":  "🌞",
+                   "races":  [
+
+                             ],
+                   "start":  "10:00",
+                   "end":  "16:53",
+                   "status_title":  "⛔ 11 びわこ 本日非開催"
+               },
+    "12 住之江":  {
+                   "tvg_id":  "boat.suminoe",
+                   "logo":  "https://www.boatrace.jp/static/uploads/sites/8/12_N-1-1.jpg",
+                   "live":  true,
+                   "held":  true,
+                   "day_type":  "ナイター",
+                   "emoji":  "🌙",
+                   "races":  [
+                                 {
+                                     "rno":  1,
+                                     "time":  "15:16",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 1R【15:16】",
+                                     "epg_start":  "2026-08-13 13:55",
+                                     "epg_end":  "2026-08-13 15:16"
+                                 },
+                                 {
+                                     "rno":  2,
+                                     "time":  "15:38",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 2R【15:38】",
+                                     "epg_start":  "2026-08-13 15:16",
+                                     "epg_end":  "2026-08-13 15:38"
+                                 },
+                                 {
+                                     "rno":  3,
+                                     "time":  "16:03",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 3R【16:03】",
+                                     "epg_start":  "2026-08-13 15:38",
+                                     "epg_end":  "2026-08-13 16:03"
+                                 },
+                                 {
+                                     "rno":  4,
+                                     "time":  "16:40",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 4R【16:40】",
+                                     "epg_start":  "2026-08-13 16:03",
+                                     "epg_end":  "2026-08-13 16:40"
+                                 },
+                                 {
+                                     "rno":  5,
+                                     "time":  "17:06",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 5R【17:06】",
+                                     "epg_start":  "2026-08-13 16:40",
+                                     "epg_end":  "2026-08-13 17:06"
+                                 },
+                                 {
+                                     "rno":  6,
+                                     "time":  "17:32",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 6R【17:32】",
+                                     "epg_start":  "2026-08-13 17:06",
+                                     "epg_end":  "2026-08-13 17:32"
+                                 },
+                                 {
+                                     "rno":  7,
+                                     "time":  "17:59",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 7R【17:59】",
+                                     "epg_start":  "2026-08-13 17:32",
+                                     "epg_end":  "2026-08-13 17:59"
+                                 },
+                                 {
+                                     "rno":  8,
+                                     "time":  "18:28",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 8R【18:28】",
+                                     "epg_start":  "2026-08-13 17:59",
+                                     "epg_end":  "2026-08-13 18:28"
+                                 },
+                                 {
+                                     "rno":  9,
+                                     "time":  "18:58",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 9R【18:58】",
+                                     "epg_start":  "2026-08-13 18:28",
+                                     "epg_end":  "2026-08-13 18:58"
+                                 },
+                                 {
+                                     "rno":  10,
+                                     "time":  "19:36",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 10R【19:36】",
+                                     "epg_start":  "2026-08-13 18:58",
+                                     "epg_end":  "2026-08-13 19:36"
+                                 },
+                                 {
+                                     "rno":  11,
+                                     "time":  "20:08",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 11R【20:08】",
+                                     "epg_start":  "2026-08-13 19:36",
+                                     "epg_end":  "2026-08-13 20:08"
+                                 },
+                                 {
+                                     "rno":  12,
+                                     "time":  "20:36",
+                                     "race_name":  "",
+                                     "title":  "🌙 12 住之江 12R【20:36】",
+                                     "epg_start":  "2026-08-13 20:08",
+                                     "epg_end":  "2026-08-13 20:36"
+                                 }
+                             ],
+                   "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/012f3626bd9d4534867f0fa37addb782/bb756692db0c4722bb0d27361cec1e4e/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1OTY5MDAsInZwOSI6MSwiY3AiOiIyMDg3OTI1MDBfMjA4ODIwMTAwIiwicHB3IjoiNDBrIn0.eSHWTYuvTgJFPpe-gN7xlwlab2Usi6WdnQm1XWf7rbA",
+                   "start":  "13:55",
+                   "end":  "21:35",
+                   "finish_title":  "🏁 12 住之江 本日開催終了",
+                   "finish_start":  "2026-08-13 20:36",
+                   "finish_end":  "2026-08-13 21:35"
+               },
+    "13 尼崎":  {
+                  "tvg_id":  "boat.amagasaki",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/13_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "デイ",
+                  "emoji":  "🌞",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "10:39",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 1R【10:39】",
+                                    "epg_start":  "2026-08-13 10:02",
+                                    "epg_end":  "2026-08-13 10:39"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "11:04",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 2R【11:04】",
+                                    "epg_start":  "2026-08-13 10:39",
+                                    "epg_end":  "2026-08-13 11:04"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "11:28",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 3R【11:28】",
+                                    "epg_start":  "2026-08-13 11:04",
+                                    "epg_end":  "2026-08-13 11:28"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "11:57",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 4R【11:57】",
+                                    "epg_start":  "2026-08-13 11:28",
+                                    "epg_end":  "2026-08-13 11:57"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "12:28",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 5R【12:28】",
+                                    "epg_start":  "2026-08-13 11:57",
+                                    "epg_end":  "2026-08-13 12:28"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "13:05",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 6R【13:05】",
+                                    "epg_start":  "2026-08-13 12:28",
+                                    "epg_end":  "2026-08-13 13:05"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "13:41",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 7R【13:41】",
+                                    "epg_start":  "2026-08-13 13:05",
+                                    "epg_end":  "2026-08-13 13:41"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "14:13",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 8R【14:13】",
+                                    "epg_start":  "2026-08-13 13:41",
+                                    "epg_end":  "2026-08-13 14:13"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "14:43",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 9R【14:43】",
+                                    "epg_start":  "2026-08-13 14:13",
+                                    "epg_end":  "2026-08-13 14:43"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "15:12",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 10R【15:12】",
+                                    "epg_start":  "2026-08-13 14:43",
+                                    "epg_end":  "2026-08-13 15:12"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "15:44",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 11R【15:44】",
+                                    "epg_start":  "2026-08-13 15:12",
+                                    "epg_end":  "2026-08-13 15:44"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "16:23",
+                                    "race_name":  "",
+                                    "title":  "🌞 13 尼崎 12R【16:23】",
+                                    "epg_start":  "2026-08-13 15:44",
+                                    "epg_end":  "2026-08-13 16:23"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/b9e84e9c65d54db1ba9a3b89c1d56961/443038b198dd4a95ade6484fd27fb439/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODI5MjAsInZwOSI6MSwicHB3IjoiNDBrIn0.wK2msKRAbxzCIfQCqqy3MrkKfkMYHOD4lHY2l7juOIs",
+                  "start":  "10:02",
+                  "end":  "16:41",
+                  "finish_title":  "🏁 13 尼崎 本日開催終了",
+                  "finish_start":  "2026-08-13 16:23",
+                  "finish_end":  "2026-08-13 16:41"
+              },
+    "14 鳴門":  {
+                  "tvg_id":  "boat.naruto",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/14_N-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "モーニング",
+                  "emoji":  "🌅",
+                  "races":  [
+
+                            ],
+                  "start":  "08:05",
+                  "end":  "14:39",
+                  "status_title":  "⛔ 14 鳴門 本日非開催"
+              },
+    "15 丸亀":  {
+                  "tvg_id":  "boat.marugame",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/15_N-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+
+                            ],
+                  "start":  "13:55",
+                  "end":  "21:35",
+                  "status_title":  "⛔ 15 丸亀 本日非開催"
+              },
+    "16 児島":  {
+                  "tvg_id":  "boat.kojima",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/16_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "サマータイム",
+                  "emoji":  "🌇",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "10:45",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 1R【10:45】",
+                                    "epg_start":  "2026-08-13 09:40",
+                                    "epg_end":  "2026-08-13 10:45"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "11:12",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 2R【11:12】",
+                                    "epg_start":  "2026-08-13 10:45",
+                                    "epg_end":  "2026-08-13 11:12"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "11:40",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 3R【11:40】",
+                                    "epg_start":  "2026-08-13 11:12",
+                                    "epg_end":  "2026-08-13 11:40"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "12:13",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 4R【12:13】",
+                                    "epg_start":  "2026-08-13 11:40",
+                                    "epg_end":  "2026-08-13 12:13"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "12:43",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 5R【12:43】",
+                                    "epg_start":  "2026-08-13 12:13",
+                                    "epg_end":  "2026-08-13 12:43"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "13:23",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 6R【13:23】",
+                                    "epg_start":  "2026-08-13 12:43",
+                                    "epg_end":  "2026-08-13 13:23"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "14:01",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 7R【14:01】",
+                                    "epg_start":  "2026-08-13 13:23",
+                                    "epg_end":  "2026-08-13 14:01"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "14:40",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 8R【14:40】",
+                                    "epg_start":  "2026-08-13 14:01",
+                                    "epg_end":  "2026-08-13 14:40"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "15:09",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 9R【15:09】",
+                                    "epg_start":  "2026-08-13 14:40",
+                                    "epg_end":  "2026-08-13 15:09"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "15:41",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 10R【15:41】",
+                                    "epg_start":  "2026-08-13 15:09",
+                                    "epg_end":  "2026-08-13 15:41"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "16:14",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 11R【16:14】",
+                                    "epg_start":  "2026-08-13 15:41",
+                                    "epg_end":  "2026-08-13 16:14"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "16:48",
+                                    "race_name":  "",
+                                    "title":  "🌇 16 児島 12R【16:48】",
+                                    "epg_start":  "2026-08-13 16:14",
+                                    "epg_end":  "2026-08-13 16:48"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/bc2437c6737544b69479c892347d5843/db2e365cadeb4028a66a4472ee2edebb/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODE2MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.GBbe_r-j30V9IZW7kD-aP1NM5P8hgwx0JMTduvc8GiI",
+                  "start":  "09:40",
+                  "end":  "18:05",
+                  "finish_title":  "🏁 16 児島 本日開催終了",
+                  "finish_start":  "2026-08-13 16:48",
+                  "finish_end":  "2026-08-13 18:05"
+              },
+    "17 宮島":  {
+                  "tvg_id":  "boat.miyajima",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/17_N-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "デイ",
+                  "emoji":  "🌞",
+                  "races":  [
+
+                            ],
+                  "start":  "10:13",
+                  "end":  "17:03",
+                  "status_title":  "⛔ 17 宮島 本日非開催"
+              },
+    "18 徳山":  {
+                  "tvg_id":  "boat.tokuyama",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/18_N-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "デイ",
+                  "emoji":  "🌞",
+                  "races":  [
+
+                            ],
+                  "start":  "10:00",
+                  "end":  "17:30",
+                  "status_title":  "⛔ 18 徳山 本日非開催"
+              },
+    "19 下関":  {
+                  "tvg_id":  "boat.shimonoseki",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/19_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "17:41",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 1R【17:41】",
+                                    "epg_start":  "2026-08-13 11:00",
+                                    "epg_end":  "2026-08-13 17:41"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "18:08",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 2R【18:08】",
+                                    "epg_start":  "2026-08-13 17:41",
+                                    "epg_end":  "2026-08-13 18:08"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "18:34",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 3R【18:34】",
+                                    "epg_start":  "2026-08-13 18:08",
+                                    "epg_end":  "2026-08-13 18:34"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "19:03",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 4R【19:03】",
+                                    "epg_start":  "2026-08-13 18:34",
+                                    "epg_end":  "2026-08-13 19:03"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "19:30",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 5R【19:30】",
+                                    "epg_start":  "2026-08-13 19:03",
+                                    "epg_end":  "2026-08-13 19:30"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "19:56",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 6R【19:56】",
+                                    "epg_start":  "2026-08-13 19:30",
+                                    "epg_end":  "2026-08-13 19:56"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "20:25",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 7R【20:25】",
+                                    "epg_start":  "2026-08-13 19:56",
+                                    "epg_end":  "2026-08-13 20:25"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "20:56",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 8R【20:56】",
+                                    "epg_start":  "2026-08-13 20:25",
+                                    "epg_end":  "2026-08-13 20:56"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "21:19",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 9R【21:19】",
+                                    "epg_start":  "2026-08-13 20:56",
+                                    "epg_end":  "2026-08-13 21:19"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "21:42",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 10R【21:42】",
+                                    "epg_start":  "2026-08-13 21:19",
+                                    "epg_end":  "2026-08-13 21:42"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "22:05",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 11R【22:05】",
+                                    "epg_start":  "2026-08-13 21:42",
+                                    "epg_end":  "2026-08-13 22:05"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "22:30",
+                                    "race_name":  "",
+                                    "title":  "🌙 19 下関 12R【22:30】",
+                                    "epg_start":  "2026-08-13 22:05",
+                                    "epg_end":  "2026-08-13 22:30"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/b3d2b09e38f94f8496a1c1d6107e1f7e/a1535744a5c24583a46ecfb3c7e9de29/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY2MDgzMDAsInZwOSI6MSwiY3AiOiIyMDg4MDM5MDBfMjA4ODM1OTk5IiwicHB3IjoiNDBrIn0.Y5exIC4pbcA4aPnsnE_4GsDLnVsWD-8AG1dM_8bsHv4",
+                  "start":  "11:00",
+                  "end":  "22:59",
+                  "finish_title":  "🏁 19 下関 本日開催終了",
+                  "finish_start":  "2026-08-13 22:30",
+                  "finish_end":  "2026-08-13 22:59"
+              },
+    "20 若松":  {
+                  "tvg_id":  "boat.wakamatsu",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/20_N-1.jpg",
+                  "live":  false,
+                  "held":  false,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+
+                            ],
+                  "start":  "14:45",
+                  "end":  "21:04",
+                  "status_title":  "⛔ 20 若松 本日非開催"
+              },
+    "21 芦屋":  {
+                  "tvg_id":  "boat.ashiya",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/21_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "モーニング",
+                  "emoji":  "🌅",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "08:32",
+                                    "race_name":  "サンライズＶ戦",
+                                    "title":  "🌅 21 芦屋 1R サンライズＶ戦【08:32】",
+                                    "epg_start":  "2026-08-13 07:57",
+                                    "epg_end":  "2026-08-13 08:32"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "08:58",
+                                    "race_name":  "サンライズＷ戦",
+                                    "title":  "🌅 21 芦屋 2R サンライズＷ戦【08:58】",
+                                    "epg_start":  "2026-08-13 08:32",
+                                    "epg_end":  "2026-08-13 08:58"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "09:24",
+                                    "race_name":  "サンライズＸ戦",
+                                    "title":  "🌅 21 芦屋 3R サンライズＸ戦【09:24】",
+                                    "epg_start":  "2026-08-13 08:58",
+                                    "epg_end":  "2026-08-13 09:24"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "09:50",
+                                    "race_name":  "サンライズＹ戦",
+                                    "title":  "🌅 21 芦屋 4R サンライズＹ戦【09:50】",
+                                    "epg_start":  "2026-08-13 09:24",
+                                    "epg_end":  "2026-08-13 09:50"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "10:16",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 5R【10:16】",
+                                    "epg_start":  "2026-08-13 09:50",
+                                    "epg_end":  "2026-08-13 10:16"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "10:50",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 6R【10:50】",
+                                    "epg_start":  "2026-08-13 10:16",
+                                    "epg_end":  "2026-08-13 10:50"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "11:20",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 7R【11:20】",
+                                    "epg_start":  "2026-08-13 10:50",
+                                    "epg_end":  "2026-08-13 11:20"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "11:52",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 8R【11:52】",
+                                    "epg_start":  "2026-08-13 11:20",
+                                    "epg_end":  "2026-08-13 11:52"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "12:21",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 9R【12:21】",
+                                    "epg_start":  "2026-08-13 11:52",
+                                    "epg_end":  "2026-08-13 12:21"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "12:51",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 10R【12:51】",
+                                    "epg_start":  "2026-08-13 12:21",
+                                    "epg_end":  "2026-08-13 12:51"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "13:27",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 11R【13:27】",
+                                    "epg_start":  "2026-08-13 12:51",
+                                    "epg_end":  "2026-08-13 13:27"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "14:02",
+                                    "race_name":  "",
+                                    "title":  "🌅 21 芦屋 12R【14:02】",
+                                    "epg_start":  "2026-08-13 13:27",
+                                    "epg_end":  "2026-08-13 14:02"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/bd749c83eed343ad8776a71679d8e5c7/f06d6e65e0da4238907aaabf1eac21e8/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1NzU0MjAsInZwOSI6MSwicHB3IjoiNDBrIn0.NMv4uevIy7t-uO24ZMX-em4ENkVBxotmcWHJ1IkCbaA",
+                  "start":  "07:57",
+                  "end":  "14:24",
+                  "finish_title":  "🏁 21 芦屋 本日開催終了",
+                  "finish_start":  "2026-08-13 14:02",
+                  "finish_end":  "2026-08-13 14:24"
+              },
+    "22 福岡":  {
+                  "tvg_id":  "boat.fukuoka",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/22_N-1-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "サマータイム",
+                  "emoji":  "🌇",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "12:18",
+                                    "race_name":  "カタメン１予選",
+                                    "title":  "🌇 22 福岡 1R カタメン１予選【12:18】",
+                                    "epg_start":  "2026-08-13 11:40",
+                                    "epg_end":  "2026-08-13 12:18"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "12:47",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 2R【12:47】",
+                                    "epg_start":  "2026-08-13 12:18",
+                                    "epg_end":  "2026-08-13 12:47"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "13:18",
+                                    "race_name":  "カタメン３予選",
+                                    "title":  "🌇 22 福岡 3R カタメン３予選【13:18】",
+                                    "epg_start":  "2026-08-13 12:47",
+                                    "epg_end":  "2026-08-13 13:18"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "13:43",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 4R【13:43】",
+                                    "epg_start":  "2026-08-13 13:18",
+                                    "epg_end":  "2026-08-13 13:43"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "14:20",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 5R【14:20】",
+                                    "epg_start":  "2026-08-13 13:43",
+                                    "epg_end":  "2026-08-13 14:20"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "14:46",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 6R【14:46】",
+                                    "epg_start":  "2026-08-13 14:20",
+                                    "epg_end":  "2026-08-13 14:46"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "15:14",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 7R【15:14】",
+                                    "epg_start":  "2026-08-13 14:46",
+                                    "epg_end":  "2026-08-13 15:14"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "15:46",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 8R【15:46】",
+                                    "epg_start":  "2026-08-13 15:14",
+                                    "epg_end":  "2026-08-13 15:46"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "16:15",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 9R【16:15】",
+                                    "epg_start":  "2026-08-13 15:46",
+                                    "epg_end":  "2026-08-13 16:15"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "16:56",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 10R【16:56】",
+                                    "epg_start":  "2026-08-13 16:15",
+                                    "epg_end":  "2026-08-13 16:56"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "17:28",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 11R【17:28】",
+                                    "epg_start":  "2026-08-13 16:56",
+                                    "epg_end":  "2026-08-13 17:28"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "17:55",
+                                    "race_name":  "",
+                                    "title":  "🌇 22 福岡 12R【17:55】",
+                                    "epg_start":  "2026-08-13 17:28",
+                                    "epg_end":  "2026-08-13 17:55"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/6a0459f8fb2342be88584dd9307a096e/4b52742091004521bcfad9c7e016ebc8/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1ODg4MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.MwsPzZJduKDF0zQRjGa8gLq7G9nm1GieSU74Xsc-jCA",
+                  "start":  "11:40",
+                  "end":  "18:14",
+                  "finish_title":  "🏁 22 福岡 本日開催終了",
+                  "finish_start":  "2026-08-13 17:55",
+                  "finish_end":  "2026-08-13 18:14"
+              },
+    "23 唐津":  {
+                  "tvg_id":  "boat.karatsu",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/23_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "モーニング",
+                  "emoji":  "🌅",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "08:44",
+                                    "race_name":  "朝１戦",
+                                    "title":  "🌅 23 唐津 1R 朝１戦【08:44】",
+                                    "epg_start":  "2026-08-13 08:09",
+                                    "epg_end":  "2026-08-13 08:44"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "09:10",
+                                    "race_name":  "モー２ング戦",
+                                    "title":  "🌅 23 唐津 2R モー２ング戦【09:10】",
+                                    "epg_start":  "2026-08-13 08:44",
+                                    "epg_end":  "2026-08-13 09:10"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "09:36",
+                                    "race_name":  "３ライズ戦",
+                                    "title":  "🌅 23 唐津 3R ３ライズ戦【09:36】",
+                                    "epg_start":  "2026-08-13 09:10",
+                                    "epg_end":  "2026-08-13 09:36"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "10:02",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 4R【10:02】",
+                                    "epg_start":  "2026-08-13 09:36",
+                                    "epg_end":  "2026-08-13 10:02"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "10:30",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 5R【10:30】",
+                                    "epg_start":  "2026-08-13 10:02",
+                                    "epg_end":  "2026-08-13 10:30"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "11:00",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 6R【11:00】",
+                                    "epg_start":  "2026-08-13 10:30",
+                                    "epg_end":  "2026-08-13 11:00"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "11:30",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 7R【11:30】",
+                                    "epg_start":  "2026-08-13 11:00",
+                                    "epg_end":  "2026-08-13 11:30"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "12:03",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 8R【12:03】",
+                                    "epg_start":  "2026-08-13 11:30",
+                                    "epg_end":  "2026-08-13 12:03"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "12:38",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 9R【12:38】",
+                                    "epg_start":  "2026-08-13 12:03",
+                                    "epg_end":  "2026-08-13 12:38"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "13:12",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 10R【13:12】",
+                                    "epg_start":  "2026-08-13 12:38",
+                                    "epg_end":  "2026-08-13 13:12"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "13:50",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 11R【13:50】",
+                                    "epg_start":  "2026-08-13 13:12",
+                                    "epg_end":  "2026-08-13 13:50"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "14:30",
+                                    "race_name":  "",
+                                    "title":  "🌅 23 唐津 12R【14:30】",
+                                    "epg_start":  "2026-08-13 13:50",
+                                    "epg_end":  "2026-08-13 14:30"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/2313d65222ec49c48549209743a77fd8/7c7dd756decb43d48e478275ac66f0ae/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1NzYxNDAsInZwOSI6MSwicHB3IjoiNDBrIn0.LJhJMXQ1kpXKeTzzBztUP9tQ-zybADEhfQ-cXvHPIxE",
+                  "start":  "08:09",
+                  "end":  "14:48",
+                  "finish_title":  "🏁 23 唐津 本日開催終了",
+                  "finish_start":  "2026-08-13 14:30",
+                  "finish_end":  "2026-08-13 14:48"
+              },
+    "24 大村":  {
+                  "tvg_id":  "boat.omura",
+                  "logo":  "https://www.boatrace.jp/static/uploads/sites/8/24_N-1.jpg",
+                  "live":  true,
+                  "held":  true,
+                  "day_type":  "ナイター",
+                  "emoji":  "🌙",
+                  "races":  [
+                                {
+                                    "rno":  1,
+                                    "time":  "15:19",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 1R【15:19】",
+                                    "epg_start":  "2026-08-13 14:45",
+                                    "epg_end":  "2026-08-13 15:19"
+                                },
+                                {
+                                    "rno":  2,
+                                    "time":  "15:48",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 2R【15:48】",
+                                    "epg_start":  "2026-08-13 15:19",
+                                    "epg_end":  "2026-08-13 15:48"
+                                },
+                                {
+                                    "rno":  3,
+                                    "time":  "16:17",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 3R【16:17】",
+                                    "epg_start":  "2026-08-13 15:48",
+                                    "epg_end":  "2026-08-13 16:17"
+                                },
+                                {
+                                    "rno":  4,
+                                    "time":  "16:49",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 4R【16:49】",
+                                    "epg_start":  "2026-08-13 16:17",
+                                    "epg_end":  "2026-08-13 16:49"
+                                },
+                                {
+                                    "rno":  5,
+                                    "time":  "17:19",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 5R【17:19】",
+                                    "epg_start":  "2026-08-13 16:49",
+                                    "epg_end":  "2026-08-13 17:19"
+                                },
+                                {
+                                    "rno":  6,
+                                    "time":  "17:47",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 6R【17:47】",
+                                    "epg_start":  "2026-08-13 17:19",
+                                    "epg_end":  "2026-08-13 17:47"
+                                },
+                                {
+                                    "rno":  7,
+                                    "time":  "18:15",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 7R【18:15】",
+                                    "epg_start":  "2026-08-13 17:47",
+                                    "epg_end":  "2026-08-13 18:15"
+                                },
+                                {
+                                    "rno":  8,
+                                    "time":  "18:46",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 8R【18:46】",
+                                    "epg_start":  "2026-08-13 18:15",
+                                    "epg_end":  "2026-08-13 18:46"
+                                },
+                                {
+                                    "rno":  9,
+                                    "time":  "19:18",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 9R【19:18】",
+                                    "epg_start":  "2026-08-13 18:46",
+                                    "epg_end":  "2026-08-13 19:18"
+                                },
+                                {
+                                    "rno":  10,
+                                    "time":  "19:49",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 10R【19:49】",
+                                    "epg_start":  "2026-08-13 19:18",
+                                    "epg_end":  "2026-08-13 19:49"
+                                },
+                                {
+                                    "rno":  11,
+                                    "time":  "20:18",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 11R【20:18】",
+                                    "epg_start":  "2026-08-13 19:49",
+                                    "epg_end":  "2026-08-13 20:18"
+                                },
+                                {
+                                    "rno":  12,
+                                    "time":  "20:45",
+                                    "race_name":  "",
+                                    "title":  "🌙 24 大村 12R【20:45】",
+                                    "epg_start":  "2026-08-13 20:18",
+                                    "epg_end":  "2026-08-13 20:45"
+                                }
+                            ],
+                  "url":  "https://manifest.streaks.jp/v6/cp-boatrace-prod/2fbd652410574222bfd8538e28339cb6/3f71e13ef68446689f96a2063bb49e68/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njc5ODgwMCwic3RhcnQiOjE3ODY1OTk5MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.KbKW5NrKi8-qRwvC1aj0q6U1yxTS8CTM6t33EysMRIg",
+                  "start":  "14:45",
+                  "end":  "21:02",
+                  "finish_title":  "🏁 24 大村 本日開催終了",
+                  "finish_start":  "2026-08-13 20:45",
+                  "finish_end":  "2026-08-13 21:02"
+              }
+}

@@ -10,6 +10,7 @@ KEIRIN_JSON = Path("keirin_today.json")
 KEIBA_JSON = Path("keiba_today.json")
 AUTORACE_JSON = Path("autorace_today.json")
 BOAT_JSON = Path("boatrace_today.json")
+JRA_JSON = Path("jra_today.json")
 OUT_XML = Path("epg.xml")
 
 KEIRIN_MAP = {
@@ -50,6 +51,14 @@ AUTO_MAP = {
     "浜松": "auto.hamamatsu",
     "飯塚": "auto.iizuka",
     "山陽": "auto.sanyo",
+}
+
+
+JRA_CHANNEL_MAP = {
+    "gch": "jra.gch",
+    "east": "jra.east",
+    "west": "jra.west",
+    "hokkaido": "jra.hokkaido",
 }
 
 BOAT_MAP = {
@@ -424,6 +433,160 @@ def build_boat_epg(tv, date_str, data):
     print("ボートレース: 24場を当日JSONから生成")
 
 
+
+def build_jra_epg(tv, date_str, data):
+    """JRA EAST/WEST/HOKKAIDO + グリーンチャンネル公式番組表。"""
+    day_start, day_end = day_bounds(date_str)
+
+    if data.get("date") != date_str:
+        for key, tvg_id in JRA_CHANNEL_MAP.items():
+            add_programme(
+                tv, tvg_id, day_start, day_end,
+                f"⚠️ {key.upper()} 当日データ未取得",
+                "中央競馬の当日JSONがありません。",
+            )
+        return
+
+    venues = data.get("venues", {})
+    channel_venues = data.get("channels", {})
+
+    # EAST / WEST / HOKKAIDO
+    for channel_key in ("east", "west", "hokkaido"):
+        tvg_id = JRA_CHANNEL_MAP[channel_key]
+        names = channel_venues.get(channel_key, [])
+
+        if not names:
+            add_programme(
+                tv, tvg_id, day_start, day_end,
+                "💤 本日非開催 JRA " + channel_key.upper(),
+                f"🏇 本日はJRA {channel_key.upper()}対象競馬場の開催はありません。",
+            )
+            continue
+
+        races = []
+        for venue in names:
+            info = venues.get(venue, {})
+            for race in info.get("races", []):
+                try:
+                    dt = parse_hm(date_str, race.get("time", ""))
+                    races.append((venue, race, dt))
+                except Exception:
+                    pass
+
+        races.sort(key=lambda x: x[2])
+        if not races:
+            add_programme(
+                tv, tvg_id, day_start, day_end,
+                f"📅 JRA {channel_key.upper()} 開催予定",
+                "JRA公式で開催は確認しましたが発走時刻を取得できませんでした。",
+            )
+            continue
+
+        pre_start = max(day_start, races[0][2] - datetime.timedelta(minutes=20))
+        if day_start < pre_start:
+            venue, race, _ = races[0]
+            add_programme(
+                tv, tvg_id, day_start, pre_start,
+                f"⏳ 待機 JRA {channel_key.upper()} {venue} 1R {race.get('time','')}",
+                f"🏇 中央競馬 {venue}\n1R発走予定 {race.get('time','')}",
+            )
+
+        for i, (venue, race, start_time) in enumerate(races):
+            block_start = max(pre_start, start_time - datetime.timedelta(minutes=8))
+
+            if i + 1 < len(races):
+                block_stop = races[i+1][2] - datetime.timedelta(minutes=8)
+            else:
+                block_stop = start_time + datetime.timedelta(minutes=30)
+
+            if block_stop <= block_start:
+                block_stop = start_time + datetime.timedelta(minutes=12)
+
+            race_no = race.get("race", "")
+            race_time = race.get("time", "")
+            race_name = clean_text(race.get("name", "")) or "競走"
+            race_type = clean_text(race.get("race_type", ""))
+            icon = clean_text(race.get("icon", "")) or "🐎"
+            main = bool(race.get("main"))
+
+            title_parts = []
+            if main:
+                title_parts.append("🏆 MAIN")
+            title_parts += [icon, f"{venue} {race_no}R", f"{race_time}発走", race_name]
+            if race_type and race_type not in {"一般", race_name} and race_type not in race_name:
+                title_parts.append(f"【{race_type}】")
+
+            desc = [
+                f"🏇 JRA {channel_key.upper()} / {venue}",
+                f"⏰ 発走予定: {race_time}",
+                f"📢 レース名: {race_name}",
+            ]
+            conditions = clean_text(race.get("conditions", ""))
+            if conditions and conditions != race_name:
+                desc.append(f"📋 条件: {conditions}")
+            if main:
+                desc.append("🏆 メインレース")
+
+            add_programme(
+                tv, tvg_id, block_start, min(block_stop, day_end),
+                " ".join(title_parts), "\n".join(desc),
+            )
+
+        finish = races[-1][2] + datetime.timedelta(minutes=30)
+        if finish < day_end:
+            add_programme(
+                tv, tvg_id, finish, day_end,
+                f"🏁 JRA {channel_key.upper()} 本日開催終了",
+                "本日の中央競馬中継対象レースは終了しました。",
+            )
+
+    # グリーンチャンネル本放送：公式番組表を優先
+    gch = data.get("greenchannel", {})
+    programs = gch.get("programs", []) if gch.get("ok") else []
+    tvg_id = JRA_CHANNEL_MAP["gch"]
+
+    if not programs:
+        add_programme(
+            tv, tvg_id, day_start, day_end,
+            "📺 グリーンチャンネル",
+            "グリーンチャンネル公式番組表を取得できなかったため、番組名は次回更新時に再取得します。",
+        )
+    else:
+        valid = []
+        for p in programs:
+            try:
+                start = parse_hm(date_str, p["start"])
+                stop = parse_hm(date_str, p["stop"])
+                if stop <= start:
+                    stop += datetime.timedelta(days=1)
+                valid.append((start, stop, p))
+            except Exception:
+                pass
+
+        valid.sort(key=lambda x: x[0])
+        if valid and day_start < valid[0][0]:
+            add_programme(tv, tvg_id, day_start, valid[0][0], "📺 グリーンチャンネル")
+
+        for start, stop, p in valid:
+            add_programme(
+                tv, tvg_id,
+                max(start, day_start), min(stop, day_end),
+                f"📺 {clean_text(p.get('title','')) or 'グリーンチャンネル'}",
+                "グリーンチャンネル公式番組表",
+            )
+
+        if valid and valid[-1][1] < day_end:
+            add_programme(tv, tvg_id, valid[-1][1], day_end, "📺 グリーンチャンネル")
+
+    print(
+        "中央競馬EPG:",
+        "EAST=" + ",".join(channel_venues.get("east", [])),
+        "WEST=" + ",".join(channel_venues.get("west", [])),
+        "HOKKAIDO=" + ",".join(channel_venues.get("hokkaido", [])),
+        "GCH=" + ("公式番組表" if programs else "プレースホルダー"),
+    )
+
+
 def build_epg():
     today = datetime.datetime.now(JST)
     date_str = today.strftime("%Y%m%d")
@@ -432,6 +595,7 @@ def build_epg():
     keiba = load_json(KEIBA_JSON)
     autorace = load_json(AUTORACE_JSON)
     boat = load_json(BOAT_JSON)
+    jra = load_json(JRA_JSON)
 
     tv = ET.Element("tv", {"generator-info-name": "PublicSportsIPTV"})
 
@@ -445,6 +609,16 @@ def build_epg():
             ch = ET.SubElement(tv, "channel", id=tvg_id)
             ET.SubElement(ch, "display-name").text = venue
 
+    jra_display = {
+        "jra.gch": "グリーンチャンネル",
+        "jra.east": "JRA EAST",
+        "jra.west": "JRA WEST",
+        "jra.hokkaido": "JRA HOKKAIDO",
+    }
+    for tvg_id, name in jra_display.items():
+        ch = ET.SubElement(tv, "channel", id=tvg_id)
+        ET.SubElement(ch, "display-name").text = name
+
     build_standard_race_epg(
         tv, date_str, keirin, KEIRIN_MAP, "競輪", "🚲"
     )
@@ -455,6 +629,7 @@ def build_epg():
         tv, date_str, autorace, AUTO_MAP, "オートレース", "🏍️"
     )
     build_boat_epg(tv, date_str, boat)
+    build_jra_epg(tv, date_str, jra)
 
     tree = ET.ElementTree(tv)
     if hasattr(ET, "indent"):

@@ -1,6 +1,7 @@
 import datetime
 import json
 import re
+import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from html.parser import HTMLParser
@@ -195,60 +196,101 @@ def clean_event_name(name, venue=""):
     return re.sub(r"\s+", " ", s).strip(" -　")
 
 
-def parse_mobile_page(venue, code, date_str):
+def parse_mobile_page(venue, code, date_str, retries=3):
     url = f"https://sp.oddspark.com/keirin/SpRaceList.do?joCd={code}&kaisaiBi={date_str}"
-    try:
-        tokens = tokens_of(fetch_html(url))
-    except Exception:
-        return None
 
-    text = "\n".join(tokens)
-    d = datetime.datetime.strptime(date_str, "%Y%m%d")
-    date_label = f"{d.year}年{d.month}月{d.day}日"
-    if venue not in text or date_label not in text:
-        return None
-    if not any(re.fullmatch(r"\d{1,2}R", t) for t in tokens):
-        return None
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            tokens = tokens_of(fetch_html(url, timeout=15))
+            text = "\n".join(tokens)
 
-    event_day = ""
-    event_name = ""
-    for i, t in enumerate(tokens):
-        if t in ("初日", "2日目", "3日目", "4日目", "5日目", "最終日"):
-            event_day = t
-            for cand in tokens[i + 1:min(i + 6, len(tokens))]:
-                if cand not in {"投票", "出走表", "オッズ", "結果", "レース映像"} and not re.fullmatch(r"\d{1,2}R", cand) and len(cand) >= 2:
-                    event_name = clean_event_name(cand, venue)
+            d = datetime.datetime.strptime(date_str, "%Y%m%d")
+            date_label = f"{d.year}年{d.month}月{d.day}日"
+
+            if venue not in text or date_label not in text:
+                raise RuntimeError("場名/日付が見つからない")
+
+            if not any(re.fullmatch(r"\d{1,2}R", t) for t in tokens):
+                raise RuntimeError("レース行が見つからない")
+
+            event_day = ""
+            event_name = ""
+
+            for i, t in enumerate(tokens):
+                if t in ("初日", "2日目", "3日目", "4日目", "5日目", "最終日"):
+                    event_day = t
+                    for cand in tokens[i + 1:min(i + 6, len(tokens))]:
+                        if (
+                            cand not in {"投票", "出走表", "オッズ", "結果", "レース映像"}
+                            and not re.fullmatch(r"\d{1,2}R", cand)
+                            and len(cand) >= 2
+                        ):
+                            event_name = clean_event_name(cand, venue)
+                            break
                     break
-            break
 
-    races = []
-    for i, tok in enumerate(tokens):
-        m = re.fullmatch(r"(\d{1,2})R", tok)
-        if not m:
-            continue
-        race_no = int(m.group(1))
-        race_name = ""
-        cutoff = ""
-        for t in tokens[i + 1:min(i + 8, len(tokens))]:
-            cm = re.search(r"([0-2]?\d):([0-5]\d)締切", t)
-            if cm:
-                cutoff = f"{int(cm.group(1)):02d}:{cm.group(2)}"
-            if re.fullmatch(r"[ＡAＳSＬL]級.+", t):
-                race_name = t.strip()
-        if race_name:
-            races.append({"race": race_no, "name": race_name, "cutoff": cutoff})
+            races = []
+            for i, tok in enumerate(tokens):
+                m = re.fullmatch(r"(\d{1,2})R", tok)
+                if not m:
+                    continue
 
-    if not races:
-        return None
-    return {"venue": venue, "code": code, "event_day": event_day, "event_name": event_name, "races": races}
+                race_no = int(m.group(1))
+                race_name = ""
+                cutoff = ""
 
+                for t in tokens[i + 1:min(i + 8, len(tokens))]:
+                    cm = re.search(r"([0-2]?\d):([0-5]\d)締切", t)
+                    if cm:
+                        cutoff = f"{int(cm.group(1)):02d}:{cm.group(2)}"
 
-def fetch_exact_race(venue, code, date_str, race):
+                    if re.fullmatch(r"[ＡAＳSＬL]級.+", t):
+                        race_name = t.strip()
+
+                if race_name:
+                    races.append({
+                        "race": race_no,
+                        "name": race_name,
+                        "cutoff": cutoff,
+                    })
+
+            if not races:
+                raise RuntimeError("レース情報を抽出できない")
+
+            if attempt > 1:
+                print(f"  RETRY OK {venue}: {attempt}回目で取得成功")
+
+            return {
+                "venue": venue,
+                "code": code,
+                "event_day": event_day,
+                "event_name": event_name,
+                "races": races,
+            }
+
+        except Exception as e:
+            last_error = e
+            if attempt < retries:
+                time.sleep(1.5 * attempt)
+
+    print(f"  WARN {venue}: {retries}回取得失敗 ({last_error})")
+    return None
+
+def fetch_exact_race(venue, code, date_str, race, retries=2):
     race_no = race["race"]
     url = f"https://www.oddspark.com/keirin/RaceList.do?joCode={code}&kaisaiBi={date_str}&raceNo={race_no}"
-    try:
-        tokens = tokens_of(fetch_html(url))
-    except Exception:
+
+    tokens = None
+    for attempt in range(1, retries + 1):
+        try:
+            tokens = tokens_of(fetch_html(url, timeout=15))
+            break
+        except Exception:
+            if attempt < retries:
+                time.sleep(0.8 * attempt)
+
+    if tokens is None:
         return race
 
     text = "\n".join(tokens)

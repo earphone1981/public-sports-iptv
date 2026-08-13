@@ -2,6 +2,7 @@ import datetime
 import html
 import json
 import re
+import time
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -213,63 +214,123 @@ def fetch_jra(date_str):
     flush()
     return result
 
-def fetch_greenchannel():
+def fetch_greenchannel(retries=4):
     """
     グリーンチャンネル公式「日別番組表」を取得。
-    サイトが混雑表示等で実番組を返さない場合は空配列。
+    一時的な混雑表示や通信失敗を考慮し、数回リトライする。
+    それでも取得できない場合は空配列を返し、EPG側で待機表示にフォールバック。
     """
     url = "https://www.greenchannel.jp/daily-timetable.html"
-    try:
-        page = fetch_html(url)
-    except Exception as e:
-        return {"source": "グリーンチャンネル公式", "url": url, "ok": False, "programs": [], "error": str(e)}
+    last_error = ""
 
-    tokens = visible_tokens(page)
-    joined = "\n".join(tokens)
-
-    if "現在アクセスが集中しているため表示できません" in joined:
-        return {
-            "source": "グリーンチャンネル公式",
-            "url": url,
-            "ok": False,
-            "programs": [],
-            "error": "公式番組表が混雑表示",
-        }
-
-    # 可視テキストから「HH:MM～HH:MM + 番組名」を拾う。
-    # サイト側HTML変更時は空配列にしてEPG側で待機表示にフォールバック。
-    programs = []
-    time_pat = re.compile(r"^([0-2]?\d):([0-5]\d)[～〜~\-]([0-2]?\d):([0-5]\d)$")
-
-    for i, t in enumerate(tokens):
-        m = time_pat.match(t.replace(" ", ""))
-        if not m:
+    for attempt in range(1, retries + 1):
+        try:
+            page = fetch_html(url, timeout=25)
+        except Exception as e:
+            last_error = f"通信失敗: {e}"
+            print(f"GCH番組表 {attempt}/{retries}: {last_error}")
+            if attempt < retries:
+                time.sleep(5 * attempt)
             continue
 
-        start = f"{int(m.group(1)):02d}:{m.group(2)}"
-        stop = f"{int(m.group(3)):02d}:{m.group(4)}"
+        tokens = visible_tokens(page)
+        joined = "\n".join(tokens)
 
-        title = ""
-        for cand in tokens[i+1:i+5]:
-            c = re.sub(r"\s+", " ", cand).strip()
-            if not c:
+        if "現在アクセスが集中しているため表示できません" in joined:
+            last_error = "公式番組表が混雑表示"
+            print(f"GCH番組表 {attempt}/{retries}: {last_error}")
+            if attempt < retries:
+                time.sleep(5 * attempt)
+            continue
+
+        programs = []
+
+        # 例:
+        # 06:30～07:00
+        # 番組名
+        time_pat = re.compile(
+            r"^([0-2]?\d):([0-5]\d)\s*[～〜~\-]\s*([0-2]?\d):([0-5]\d)$"
+        )
+
+        for i, t in enumerate(tokens):
+            m = time_pat.match(t.strip())
+            if not m:
                 continue
-            if time_pat.match(c.replace(" ", "")):
+
+            start_hm = f"{int(m.group(1)):02d}:{m.group(2)}"
+            stop_hm = f"{int(m.group(3)):02d}:{m.group(4)}"
+
+            title = ""
+            for cand in tokens[i + 1:i + 8]:
+                c = re.sub(r"\s+", " ", cand).strip()
+
+                if not c:
+                    continue
+
+                if time_pat.match(c):
+                    break
+
+                if c in {
+                    "番組表（日別）",
+                    "日別番組表",
+                    "週別番組表",
+                    "番組表",
+                    "放送スケジュール",
+                }:
+                    continue
+
+                # ナビゲーション系の短い語は除外
+                if c in {"トップ", "番組", "競馬", "ニュース", "検索"}:
+                    continue
+
+                title = c
                 break
-            if c in {"番組表（日別）","日別番組表","週別番組表"}:
-                continue
-            title = c
-            break
 
-        if title:
-            programs.append({"start": start, "stop": stop, "title": title})
+            if title:
+                programs.append(
+                    {
+                        "start": start_hm,
+                        "stop": stop_hm,
+                        "title": title,
+                    }
+                )
+
+        # 重複除去
+        unique = []
+        seen = set()
+        for p in programs:
+            key = (p["start"], p["stop"], p["title"])
+            if key not in seen:
+                seen.add(key)
+                unique.append(p)
+
+        if unique:
+            print(
+                f"GCH番組表 {attempt}/{retries}: OK "
+                f"{len(unique)}番組"
+            )
+            return {
+                "source": "グリーンチャンネル公式",
+                "url": url,
+                "ok": True,
+                "programs": unique,
+                "error": "",
+                "attempts": attempt,
+            }
+
+        last_error = "番組行を抽出できませんでした"
+        print(f"GCH番組表 {attempt}/{retries}: {last_error}")
+
+        if attempt < retries:
+            time.sleep(5 * attempt)
 
     return {
         "source": "グリーンチャンネル公式",
         "url": url,
-        "ok": bool(programs),
-        "programs": programs,
-        "error": "" if programs else "番組行を抽出できませんでした",
+        "ok": False,
+        "programs": [],
+        "error": last_error or "取得失敗",
+        "attempts": retries,
     }
 
 def main():

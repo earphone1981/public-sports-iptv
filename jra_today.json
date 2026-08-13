@@ -1,6 +1,8 @@
 {
   "date": "20260813",
-  "updated_at": "2026-08-13T22:58:30.696622+09:00",
+  "updated_at": "2026-08-13T23:21:51.015057+09:00",
+  "jra_source": "netkeiba",
+  "gch_source": "J:COM Ch.920",
   "venues": {},
   "channels": {
     "east": [],
@@ -8,11 +10,10 @@
     "hokkaido": []
   },
   "greenchannel": {
-    "source": "グリーンチャンネル公式",
-    "url": "https://www.greenchannel.jp/daily-timetable.html",
+    "source": "J:COMテレビ番組表 / グリーンチャンネルHD Ch.920",
+    "url": "https://tvguide.myjcom.jp/search/event/?channel=164_65406&channelType=120",
     "ok": false,
     "programs": [],
-    "error": "公式番組表が混雑表示",
-    "attempts": 4
+    "error": "対象日の番組行を抽出できませんでした"
   }
 }

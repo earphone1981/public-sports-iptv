@@ -11,5 +11,11 @@ https://dglu799jz6q5s.cloudfront.net/out/v1/42285a6d8aa7415d9cd14ff4a9e4127a/ind
 #EXTINF:-1 tvg-id="keirin.gifu" tvg-name="岐阜" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/gifu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",岐阜
 https://dhwnzvxv6smzu.cloudfront.net/out/v1/8aeb71175e4d4f818d765c6471f10602/index.m3u8
 
+#EXTINF:-1 tvg-id="keirin.matsuyama" tvg-name="松山" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/matsuyama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",松山
+https://d16wnx3wk8cnnt.cloudfront.net/out/v1/ceb0db1dbb934ef5b2836533d61729d0/index.m3u8
+
+#EXTINF:-1 tvg-id="keirin.takeo" tvg-name="武雄" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takeo-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",武雄
+https://d30l40wf0q5flx.cloudfront.net/out/v1/cc007464a1254ff9ac7e0644fdc230b5/index.m3u8
+
 #EXTINF:-1 tvg-id="keirin.kumamoto" tvg-name="熊本" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kumamoto-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",熊本
 https://d2m69fn251lhrf.cloudfront.net/out/v1/1fb24676fcbf458b964083925878052a/index.m3u8

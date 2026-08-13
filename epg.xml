@@ -278,7 +278,7 @@
 📢 レース名: Ｌ級ガ予２
 💛 ガールズ</desc>
     </programme>
-    <programme start="20260813210200 +0900" stop="20260813214200 +0900" channel="keirin.aomori">
+    <programme start="20260813210200 +0900" stop="20260813212200 +0900" channel="keirin.aomori">
         <title lang="ja">💛 青森 2R 21:10発走 Ｌ級ガ予２</title>
         <desc lang="ja">🚲 競輪 青森
 ⭐ 開催区分: ミッドナイト
@@ -287,6 +287,15 @@
 📅 開催日次: 2日目
 📢 レース名: Ｌ級ガ予２
 💛 ガールズ</desc>
+    </programme>
+    <programme start="20260813212200 +0900" stop="20260813214200 +0900" channel="keirin.aomori">
+        <title lang="ja">🚲 青森 3R 21:30発走 Ａ級一般</title>
+        <desc lang="ja">🚲 競輪 青森
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 21:30
+📢 開催名: Ｆ２ ＡＩ競輪も大人気チャリロト杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級一般</desc>
     </programme>
     <programme start="20260813214200 +0900" stop="20260813220200 +0900" channel="keirin.aomori">
         <title lang="ja">🚲 青森 4R 21:50発走 Ａ級一般</title>
@@ -315,11 +324,21 @@
 📅 開催日次: 2日目
 📢 レース名: Ａ級選抜</desc>
     </programme>
-    <programme start="20260813224200 +0900" stop="20260813232200 +0900" channel="keirin.aomori">
+    <programme start="20260813224200 +0900" stop="20260813230200 +0900" channel="keirin.aomori">
         <title lang="ja">🚲 青森 7R 22:50発走 Ａ級準決勝</title>
         <desc lang="ja">🚲 競輪 青森
 ⭐ 開催区分: ミッドナイト
 ⏰ 発走予定: 22:50
+📢 開催名: Ｆ２ ＡＩ競輪も大人気チャリロト杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級準決勝
+🔥 準決勝</desc>
+    </programme>
+    <programme start="20260813230200 +0900" stop="20260813232200 +0900" channel="keirin.aomori">
+        <title lang="ja">🚲 青森 8R 23:10発走 Ａ級準決勝</title>
+        <desc lang="ja">🚲 競輪 青森
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 23:10
 📢 開催名: Ｆ２ ＡＩ競輪も大人気チャリロト杯
 📅 開催日次: 2日目
 📢 レース名: Ａ級準決勝
@@ -356,7 +375,7 @@
 📅 開催日次: 最終日
 📢 レース名: Ａ級一般</desc>
     </programme>
-    <programme start="20260813105900 +0900" stop="20260813122700 +0900" channel="keirin.yahiko">
+    <programme start="20260813105900 +0900" stop="20260813112100 +0900" channel="keirin.yahiko">
         <title lang="ja">🚲 弥彦 2R 11:07発走 Ａ級一般</title>
         <desc lang="ja">🚲 競輪 弥彦
 ☀️ 開催区分: デイ
@@ -364,6 +383,33 @@
 📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 開催日次: 最終日
 📢 レース名: Ａ級一般</desc>
+    </programme>
+    <programme start="20260813112100 +0900" stop="20260813114300 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 3R 11:29発走 Ａ級特選</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 11:29
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ａ級特選</desc>
+    </programme>
+    <programme start="20260813114300 +0900" stop="20260813120500 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 4R 11:51発走 Ａ級特選</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 11:51
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ａ級特選</desc>
+    </programme>
+    <programme start="20260813120500 +0900" stop="20260813122700 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 5R 12:13発走 Ｓ級一般</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 12:13
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級一般</desc>
     </programme>
     <programme start="20260813122700 +0900" stop="20260813124900 +0900" channel="keirin.yahiko">
         <title lang="ja">🚲 弥彦 6R 12:35発走 Ｓ級一般</title>
@@ -374,7 +420,7 @@
 📅 開催日次: 最終日
 📢 レース名: Ｓ級一般</desc>
     </programme>
-    <programme start="20260813124900 +0900" stop="20260813135600 +0900" channel="keirin.yahiko">
+    <programme start="20260813124900 +0900" stop="20260813131100 +0900" channel="keirin.yahiko">
         <title lang="ja">🚲 弥彦 7R 12:57発走 Ｓ級一般</title>
         <desc lang="ja">🚲 競輪 弥彦
 ☀️ 開催区分: デイ
@@ -382,6 +428,24 @@
 📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 開催日次: 最終日
 📢 レース名: Ｓ級一般</desc>
+    </programme>
+    <programme start="20260813131100 +0900" stop="20260813133300 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 8R 13:19発走 Ｓ級特選</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 13:19
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級特選</desc>
+    </programme>
+    <programme start="20260813133300 +0900" stop="20260813135600 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 9R 13:41発走 Ｓ級特選</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 13:41
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級特選</desc>
     </programme>
     <programme start="20260813135600 +0900" stop="20260813142000 +0900" channel="keirin.yahiko">
         <title lang="ja">🚲 弥彦 10R 14:04発走 Ｓ級特選</title>
@@ -392,18 +456,28 @@
 📅 開催日次: 最終日
 📢 レース名: Ｓ級特選</desc>
     </programme>
-    <programme start="20260813142000 +0900" stop="20260813145300 +0900" channel="keirin.yahiko">
-        <title lang="ja">🏆 MAIN 🚲 弥彦 11R 14:28発走 Ａ級決勝</title>
+    <programme start="20260813142000 +0900" stop="20260813144400 +0900" channel="keirin.yahiko">
+        <title lang="ja">🚲 弥彦 11R 14:28発走 Ａ級決勝</title>
         <desc lang="ja">🚲 競輪 弥彦
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 14:28
 📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 開催日次: 最終日
 📢 レース名: Ａ級決勝
+🏆 決勝・優勝戦</desc>
+    </programme>
+    <programme start="20260813144400 +0900" stop="20260813151700 +0900" channel="keirin.yahiko">
+        <title lang="ja">🏆 MAIN 🚲 弥彦 12R 14:52発走 Ｓ級決勝</title>
+        <desc lang="ja">🚲 競輪 弥彦
+☀️ 開催区分: デイ
+⏰ 発走予定: 14:52
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級決勝
 🏆 決勝・優勝戦
 🏆 メインレース</desc>
     </programme>
-    <programme start="20260813145300 +0900" stop="20260813235900 +0900" channel="keirin.yahiko">
+    <programme start="20260813151700 +0900" stop="20260813235900 +0900" channel="keirin.yahiko">
         <title lang="ja">🏁 終了 弥彦 ☀️デイ</title>
         <desc lang="ja">弥彦の本日の競輪は終了しました。</desc>
     </programme>
@@ -491,7 +565,7 @@
 📅 2日目
 1R発走予定 08:30</desc>
     </programme>
-    <programme start="20260813082200 +0900" stop="20260813090200 +0900" channel="keirin.gifu">
+    <programme start="20260813082200 +0900" stop="20260813084200 +0900" channel="keirin.gifu">
         <title lang="ja">🚲 岐阜 1R 08:30発走 Ａ級一般</title>
         <desc lang="ja">🚲 競輪 岐阜
 🌅 開催区分: モーニング
@@ -500,11 +574,29 @@
 📅 開催日次: 2日目
 📢 レース名: Ａ級一般</desc>
     </programme>
-    <programme start="20260813090200 +0900" stop="20260813094200 +0900" channel="keirin.gifu">
+    <programme start="20260813084200 +0900" stop="20260813090200 +0900" channel="keirin.gifu">
+        <title lang="ja">🚲 岐阜 2R 08:50発走 Ａ級一般</title>
+        <desc lang="ja">🚲 競輪 岐阜
+🌅 開催区分: モーニング
+⏰ 発走予定: 08:50
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級一般</desc>
+    </programme>
+    <programme start="20260813090200 +0900" stop="20260813092200 +0900" channel="keirin.gifu">
         <title lang="ja">🚲 岐阜 3R 09:10発走 Ａ級選抜</title>
         <desc lang="ja">🚲 競輪 岐阜
 🌅 開催区分: モーニング
 ⏰ 発走予定: 09:10
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級選抜</desc>
+    </programme>
+    <programme start="20260813092200 +0900" stop="20260813094200 +0900" channel="keirin.gifu">
+        <title lang="ja">🚲 岐阜 4R 09:30発走 Ａ級選抜</title>
+        <desc lang="ja">🚲 競輪 岐阜
+🌅 開催区分: モーニング
+⏰ 発走予定: 09:30
 📢 開催名: Ｆ２ ウィンチケット杯
 📅 開催日次: 2日目
 📢 レース名: Ａ級選抜</desc>
@@ -544,14 +636,232 @@
         <title lang="ja">🏁 終了 岐阜 🌅モーニング</title>
         <desc lang="ja">岐阜の本日の競輪は終了しました。</desc>
     </programme>
-    <programme start="20260813010000 +0900" stop="20260813105800 +0900" channel="keirin.kumamoto">
+    <programme start="20260813010000 +0900" stop="20260813145500 +0900" channel="keirin.matsuyama">
+        <title lang="ja">⏳ 待機 松山 🌙ナイター</title>
+        <desc lang="ja">🚲 競輪 松山
+📢 Ｇ１ オールスター競輪
+📅 3日目
+1R発走予定 15:15</desc>
+    </programme>
+    <programme start="20260813150700 +0900" stop="20260813153300 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 1R 15:15発走 Ｓ級選抜二</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:15
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級選抜二</desc>
+    </programme>
+    <programme start="20260813153300 +0900" stop="20260813160300 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 2R 15:41発走 Ｓ級選抜二</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:41
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級選抜二</desc>
+    </programme>
+    <programme start="20260813160300 +0900" stop="20260813163400 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 3R 16:11発走 Ｓ級選抜二</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:11
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級選抜二</desc>
+    </programme>
+    <programme start="20260813163400 +0900" stop="20260813170500 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 4R 16:42発走 Ｓ級選抜二</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:42
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級選抜二</desc>
+    </programme>
+    <programme start="20260813170500 +0900" stop="20260813173600 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 5R 17:13発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:13
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813173600 +0900" stop="20260813180700 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 6R 17:44発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:44
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813180700 +0900" stop="20260813183800 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 7R 18:15発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:15
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813183800 +0900" stop="20260813190900 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 8R 18:46発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:46
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813190900 +0900" stop="20260813194000 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 9R 19:17発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:17
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813194000 +0900" stop="20260813202200 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🚲 松山 10R 19:48発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:48
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選</desc>
+    </programme>
+    <programme start="20260813202200 +0900" stop="20260813205500 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🏆 MAIN 🚲 松山 11R 20:30発走 Ｓ級二予選</title>
+        <desc lang="ja">🚲 競輪 松山
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:30
+📢 開催名: Ｇ１ オールスター競輪
+📅 開催日次: 3日目
+📢 レース名: Ｓ級二予選
+🏆 メインレース</desc>
+    </programme>
+    <programme start="20260813205500 +0900" stop="20260813235900 +0900" channel="keirin.matsuyama">
+        <title lang="ja">🏁 終了 松山 🌙ナイター</title>
+        <desc lang="ja">松山の本日の競輪は終了しました。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813202000 +0900" channel="keirin.takeo">
+        <title lang="ja">⏳ 待機 武雄 ⭐ミッドナイト</title>
+        <desc lang="ja">🚲 競輪 武雄
+📢 Ｆ２ ウィンチケット杯
+📅 2日目
+1R発走予定 20:40</desc>
+    </programme>
+    <programme start="20260813203200 +0900" stop="20260813205200 +0900" channel="keirin.takeo">
+        <title lang="ja">💛 武雄 1R 20:40発走 Ｌ級ガ予２</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 20:40
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ｌ級ガ予２
+💛 ガールズ</desc>
+    </programme>
+    <programme start="20260813205200 +0900" stop="20260813211200 +0900" channel="keirin.takeo">
+        <title lang="ja">💛 武雄 2R 21:00発走 Ｌ級ガ予２</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 21:00
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ｌ級ガ予２
+💛 ガールズ</desc>
+    </programme>
+    <programme start="20260813211200 +0900" stop="20260813213200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 3R 21:20発走 Ａ級一般</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 21:20
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級一般</desc>
+    </programme>
+    <programme start="20260813213200 +0900" stop="20260813215200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 4R 21:40発走 Ａ級一般</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 21:40
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級一般</desc>
+    </programme>
+    <programme start="20260813215200 +0900" stop="20260813221200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 5R 22:00発走 Ａ級選抜</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 22:00
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級選抜</desc>
+    </programme>
+    <programme start="20260813221200 +0900" stop="20260813223200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 6R 22:20発走 Ａ級選抜</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 22:20
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級選抜</desc>
+    </programme>
+    <programme start="20260813223200 +0900" stop="20260813225200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 7R 22:40発走 Ａ級準決勝</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 22:40
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級準決勝
+🔥 準決勝</desc>
+    </programme>
+    <programme start="20260813225200 +0900" stop="20260813231200 +0900" channel="keirin.takeo">
+        <title lang="ja">🚲 武雄 8R 23:00発走 Ａ級準決勝</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 23:00
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級準決勝
+🔥 準決勝</desc>
+    </programme>
+    <programme start="20260813231200 +0900" stop="20260813234500 +0900" channel="keirin.takeo">
+        <title lang="ja">🏆 MAIN 🚲 武雄 9R 23:20発走 Ａ級準決勝</title>
+        <desc lang="ja">🚲 競輪 武雄
+⭐ 開催区分: ミッドナイト
+⏰ 発走予定: 23:20
+📢 開催名: Ｆ２ ウィンチケット杯
+📅 開催日次: 2日目
+📢 レース名: Ａ級準決勝
+🔥 準決勝
+🏆 メインレース</desc>
+    </programme>
+    <programme start="20260813234500 +0900" stop="20260813235900 +0900" channel="keirin.takeo">
+        <title lang="ja">🏁 終了 武雄 ⭐ミッドナイト</title>
+        <desc lang="ja">武雄の本日の競輪は終了しました。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813103600 +0900" channel="keirin.kumamoto">
         <title lang="ja">⏳ 待機 熊本 ☀️デイ</title>
         <desc lang="ja">🚲 競輪 熊本
 📢 Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 最終日
-1R発走予定 11:18</desc>
+1R発走予定 10:56</desc>
     </programme>
-    <programme start="20260813111000 +0900" stop="20260813115400 +0900" channel="keirin.kumamoto">
+    <programme start="20260813104800 +0900" stop="20260813111000 +0900" channel="keirin.kumamoto">
+        <title lang="ja">🚲 熊本 1R 10:56発走 Ａ級一般</title>
+        <desc lang="ja">🚲 競輪 熊本
+☀️ 開催区分: デイ
+⏰ 発走予定: 10:56
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ａ級一般</desc>
+    </programme>
+    <programme start="20260813111000 +0900" stop="20260813113200 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚲 熊本 2R 11:18発走 Ａ級一般</title>
         <desc lang="ja">🚲 競輪 熊本
 ☀️ 開催区分: デイ
@@ -560,7 +870,16 @@
 📅 開催日次: 最終日
 📢 レース名: Ａ級一般</desc>
     </programme>
-    <programme start="20260813115400 +0900" stop="20260813130000 +0900" channel="keirin.kumamoto">
+    <programme start="20260813113200 +0900" stop="20260813115400 +0900" channel="keirin.kumamoto">
+        <title lang="ja">🚲 熊本 3R 11:40発走 Ａ級特選</title>
+        <desc lang="ja">🚲 競輪 熊本
+☀️ 開催区分: デイ
+⏰ 発走予定: 11:40
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ａ級特選</desc>
+    </programme>
+    <programme start="20260813115400 +0900" stop="20260813121600 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚲 熊本 4R 12:02発走 Ａ級特選</title>
         <desc lang="ja">🚲 競輪 熊本
 ☀️ 開催区分: デイ
@@ -568,6 +887,24 @@
 📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 開催日次: 最終日
 📢 レース名: Ａ級特選</desc>
+    </programme>
+    <programme start="20260813121600 +0900" stop="20260813123800 +0900" channel="keirin.kumamoto">
+        <title lang="ja">🚲 熊本 5R 12:24発走 Ｓ級一般</title>
+        <desc lang="ja">🚲 競輪 熊本
+☀️ 開催区分: デイ
+⏰ 発走予定: 12:24
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級一般</desc>
+    </programme>
+    <programme start="20260813123800 +0900" stop="20260813130000 +0900" channel="keirin.kumamoto">
+        <title lang="ja">🚲 熊本 6R 12:46発走 Ｓ級一般</title>
+        <desc lang="ja">🚲 競輪 熊本
+☀️ 開催区分: デイ
+⏰ 発走予定: 12:46
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級一般</desc>
     </programme>
     <programme start="20260813130000 +0900" stop="20260813132200 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚲 熊本 7R 13:08発走 Ｓ級一般</title>
@@ -587,11 +924,20 @@
 📅 開催日次: 最終日
 📢 レース名: Ｓ級特選</desc>
     </programme>
-    <programme start="20260813134400 +0900" stop="20260813143200 +0900" channel="keirin.kumamoto">
+    <programme start="20260813134400 +0900" stop="20260813140800 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚲 熊本 9R 13:52発走 Ｓ級特選</title>
         <desc lang="ja">🚲 競輪 熊本
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 13:52
+📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
+📅 開催日次: 最終日
+📢 レース名: Ｓ級特選</desc>
+    </programme>
+    <programme start="20260813140800 +0900" stop="20260813143200 +0900" channel="keirin.kumamoto">
+        <title lang="ja">🚲 熊本 10R 14:16発走 Ｓ級特選</title>
+        <desc lang="ja">🚲 競輪 熊本
+☀️ 開催区分: デイ
+⏰ 発走予定: 14:16
 📢 開催名: Ｆ１ ＫＥＩＲＩＮライジングスターズ
 📅 開催日次: 最終日
 📢 レース名: Ｓ級特選</desc>
@@ -745,10 +1091,6 @@
         <title lang="ja">💤 本日非開催 高知（競輪）</title>
         <desc lang="ja">🚲 本日は高知での競輪開催情報を取得していません。</desc>
     </programme>
-    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="keirin.matsuyama">
-        <title lang="ja">💤 本日非開催 松山（競輪）</title>
-        <desc lang="ja">🚲 本日は松山での競輪開催情報を取得していません。</desc>
-    </programme>
     <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="keirin.kokura">
         <title lang="ja">💤 本日非開催 小倉（競輪）</title>
         <desc lang="ja">🚲 本日は小倉での競輪開催情報を取得していません。</desc>
@@ -756,10 +1098,6 @@
     <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="keirin.kurume">
         <title lang="ja">💤 本日非開催 久留米（競輪）</title>
         <desc lang="ja">🚲 本日は久留米での競輪開催情報を取得していません。</desc>
-    </programme>
-    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="keirin.takeo">
-        <title lang="ja">💤 本日非開催 武雄（競輪）</title>
-        <desc lang="ja">🚲 本日は武雄での競輪開催情報を取得していません。</desc>
     </programme>
     <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="keirin.sasebo">
         <title lang="ja">💤 本日非開催 佐世保（競輪）</title>

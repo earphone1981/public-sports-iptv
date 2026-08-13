@@ -1,6 +1,6 @@
 {
   "date": "20260813",
-  "updated_at": "2026-08-13T22:16:19.935112+09:00",
+  "updated_at": "2026-08-13T22:51:07.429291+09:00",
   "source": "OddsPark",
   "venues": {
     "青森": {
@@ -100,7 +100,7 @@
         {
           "race": 6,
           "name": "Ａ級選抜",
-          "cutoff": "22:25",
+          "cutoff": "",
           "time": "22:30",
           "name_raw": "Ａ級選抜",
           "event_day_detail": "2日目",
@@ -117,7 +117,7 @@
         {
           "race": 7,
           "name": "Ａ級準決勝",
-          "cutoff": "22:45",
+          "cutoff": "",
           "time": "22:50",
           "name_raw": "Ａ級準決勝",
           "event_day_detail": "2日目",
@@ -937,7 +937,7 @@
         {
           "race": 6,
           "name": "Ａ級選抜",
-          "cutoff": "22:15",
+          "cutoff": "",
           "time": "22:20",
           "name_raw": "Ａ級選抜",
           "event_day_detail": "2日目",
@@ -954,7 +954,7 @@
         {
           "race": 7,
           "name": "Ａ級準決勝",
-          "cutoff": "22:35",
+          "cutoff": "",
           "time": "22:40",
           "name_raw": "Ａ級準決勝",
           "event_day_detail": "2日目",

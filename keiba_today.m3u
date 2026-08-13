@@ -1,7 +1,4 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="ホッカイドウ競馬(門別)" tvg-logo="https://www.hokkaidokeiba.net/common/images/head/logo.png" group-title="競馬 / 地方競馬",門別
-https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/monbetsu5.m3u8
-
 #EXTINF:-1 tvg-id="chihou.oi" tvg-name="南関東競馬(大井)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",大井
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/ooi5.m3u8
 

@@ -4,3 +4,6 @@ https://autorace-live.akamaized.net/hls/live/2036917-b/id3/streaming/media.m3u8
 
 #EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松" tvg-logo="https://www.hamamatsuauto.jp/assets/images/common/hamamatsu_auto_logo.png" group-title="オートレース",浜松
 https://autorace-live.akamaized.net/hls/live/2036917/id4/streaming/media.m3u8
+
+#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚" tvg-logo="https://www.iizuka-auto.jp/wp-content/themes/iizukaautorace/shared/img/logo.png" group-title="オートレース",飯塚
+https://autorace-live.akamaized.net/hls/live/2036917-b/id5/streaming/media.m3u8

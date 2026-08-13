@@ -39,7 +39,17 @@ jobs:
           test -f keiba_today.m3u
           echo "LOCAL KEIBA OK"
 
-      # 💾 生成結果をまとめて保存
+      # 🏍️ オートレース
+      - name: Update AUTORACE
+        run: python autorace_today.py
+
+      - name: Check AUTORACE outputs
+        run: |
+          test -f autorace_today.json
+          test -f autorace_today.m3u
+          echo "AUTORACE OK"
+
+      # 💾 3競技まとめて保存
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -49,7 +59,9 @@ jobs:
             keirin_today.json \
             keirin_today.m3u \
             keiba_today.json \
-            keiba_today.m3u
+            keiba_today.m3u \
+            autorace_today.json \
+            autorace_today.m3u
 
           git diff --cached --quiet && exit 0
 

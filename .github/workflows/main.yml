@@ -27,7 +27,6 @@ jobs:
         run: |
           test -f keirin_today.json
           test -f keirin_today.m3u
-          echo "KEIRIN OK"
 
       # 🐎 地方競馬
       - name: Update LOCAL KEIBA
@@ -37,7 +36,6 @@ jobs:
         run: |
           test -f keiba_today.json
           test -f keiba_today.m3u
-          echo "LOCAL KEIBA OK"
 
       # 🏍️ オートレース
       - name: Update AUTORACE
@@ -47,9 +45,18 @@ jobs:
         run: |
           test -f autorace_today.json
           test -f autorace_today.m3u
-          echo "AUTORACE OK"
 
-      # 💾 3競技まとめて保存
+      # 🚤 ボートレース
+      - name: Update BOATRACE
+        shell: pwsh
+        run: ./boatrace_today.ps1
+
+      - name: Check BOATRACE outputs
+        run: |
+          test -f boatrace_today.json
+          test -f boatrace_today.m3u
+
+      # 💾 4競技まとめて保存
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -61,9 +68,11 @@ jobs:
             keiba_today.json \
             keiba_today.m3u \
             autorace_today.json \
-            autorace_today.m3u
+            autorace_today.m3u \
+            boatrace_today.json \
+            boatrace_today.m3u
 
           git diff --cached --quiet && exit 0
 
-          git commit -m "Update public sports today"
+          git commit -m "Update all public sports today"
           git push

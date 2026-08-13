@@ -261,6 +261,18 @@
     <channel id="boat.omura">
         <display-name>24 大村</display-name>
     </channel>
+    <channel id="jra.gch">
+        <display-name>グリーンチャンネル</display-name>
+    </channel>
+    <channel id="jra.east">
+        <display-name>JRA EAST</display-name>
+    </channel>
+    <channel id="jra.west">
+        <display-name>JRA WEST</display-name>
+    </channel>
+    <channel id="jra.hokkaido">
+        <display-name>JRA HOKKAIDO</display-name>
+    </channel>
     <programme start="20260813010000 +0900" stop="20260813203000 +0900" channel="keirin.aomori">
         <title lang="ja">⏳ 待機 青森 ⭐ミッドナイト</title>
         <desc lang="ja">🚲 競輪 青森
@@ -3055,5 +3067,21 @@
     <programme start="20260813204500 +0900" stop="20260813235900 +0900" channel="boat.omura">
         <title lang="ja">🏁 24 大村 本日開催終了</title>
         <desc lang="ja">24 大村の本日のボートレースは終了しました。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="jra.east">
+        <title lang="ja">💤 本日非開催 JRA EAST</title>
+        <desc lang="ja">🏇 本日はJRA EAST対象競馬場の開催はありません。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="jra.west">
+        <title lang="ja">💤 本日非開催 JRA WEST</title>
+        <desc lang="ja">🏇 本日はJRA WEST対象競馬場の開催はありません。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="jra.hokkaido">
+        <title lang="ja">💤 本日非開催 JRA HOKKAIDO</title>
+        <desc lang="ja">🏇 本日はJRA HOKKAIDO対象競馬場の開催はありません。</desc>
+    </programme>
+    <programme start="20260813010000 +0900" stop="20260813235900 +0900" channel="jra.gch">
+        <title lang="ja">📺 グリーンチャンネル</title>
+        <desc lang="ja">グリーンチャンネル公式番組表を取得できなかったため、番組名は次回更新時に再取得します。</desc>
     </programme>
 </tv>

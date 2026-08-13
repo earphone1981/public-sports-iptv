@@ -1,0 +1,17 @@
+{
+  "date": "20260813",
+  "updated_at": "2026-08-13T22:23:49.370835+09:00",
+  "venues": {},
+  "channels": {
+    "east": [],
+    "west": [],
+    "hokkaido": []
+  },
+  "greenchannel": {
+    "source": "グリーンチャンネル公式",
+    "url": "https://www.greenchannel.jp/daily-timetable.html",
+    "ok": false,
+    "programs": [],
+    "error": "公式番組表が混雑表示"
+  }
+}

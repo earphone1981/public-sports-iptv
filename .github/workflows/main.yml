@@ -50,14 +50,23 @@ jobs:
           echo "AUTORACE OK"
 
       # 🚤 ボートレース
-      # Actionsでは取得しない。手動で置いた最新ファイルを使用。
+      # GitHub Actionsでは取得しない。手動で置いた最新ファイルを使用。
       - name: Check BOATRACE manual files
         run: |
           test -f boatrace_today.json
           test -f boatrace_today.m3u
           echo "BOATRACE manual files OK"
 
-      # 📺 EPG生成
+      # 📺 4競技M3U一本化
+      - name: Merge M3U
+        run: python merge_m3u.py
+
+      - name: Check merged M3U
+        run: |
+          test -f public_sports.m3u
+          echo "PUBLIC SPORTS M3U OK"
+
+      # 📡 EPG生成
       - name: Generate EPG
         run: python generate_epg.py
 
@@ -66,7 +75,7 @@ jobs:
           test -f epg.xml
           echo "EPG OK"
 
-      # 💾 自動生成分だけ保存
+      # 💾 自動生成分を保存
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -79,9 +88,10 @@ jobs:
             keiba_today.m3u \
             autorace_today.json \
             autorace_today.m3u \
+            public_sports.m3u \
             epg.xml
 
           git diff --cached --quiet && exit 0
 
-          git commit -m "Update public sports and EPG"
+          git commit -m "Update public sports, M3U and EPG"
           git push

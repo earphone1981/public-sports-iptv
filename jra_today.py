@@ -3,15 +3,32 @@ import html
 import json
 import re
 import time
+import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
 
 JST = datetime.timezone(datetime.timedelta(hours=9))
 OUT = Path("jra_today.json")
-VERSION = "1.0"
 
-JRA_VENUES = ["札幌","函館","福島","新潟","東京","中山","中京","京都","阪神","小倉"]
+NETKEIBA_LIST = "https://race.netkeiba.com/top/race_list.html?kaisai_date={date}"
+JCOM_SEARCH = (
+    "https://tvguide.myjcom.jp/search/event/"
+    "?channel=164_65406&channelType=120"
+)
+
+VENUE_CODE = {
+    "01": "札幌",
+    "02": "函館",
+    "03": "福島",
+    "04": "新潟",
+    "05": "東京",
+    "06": "中山",
+    "07": "中京",
+    "08": "京都",
+    "09": "阪神",
+    "10": "小倉",
+}
 
 CHANNEL_BY_VENUE = {
     "札幌": "hokkaido",
@@ -27,13 +44,14 @@ CHANNEL_BY_VENUE = {
 }
 
 TVG_ID = {
-    "gch": "jra.gch",
     "east": "jra.east",
     "west": "jra.west",
     "hokkaido": "jra.hokkaido",
+    "gch": "jra.gch",
 }
 
-class VisibleTextParser(HTMLParser):
+
+class TextParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.tokens = []
@@ -54,18 +72,23 @@ class VisibleTextParser(HTMLParser):
         if t:
             self.tokens.append(t)
 
-def fetch_html(url, timeout=25):
+
+def fetch(url, timeout=25):
     req = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept-Language": "ja,en-US;q=0.8,en;q=0.6",
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/151.0.0.0 Safari/537.36"
+            ),
+            "Accept-Language": "ja-JP,ja;q=0.9,en;q=0.5",
             "Cache-Control": "no-cache",
+            "Referer": "https://www.google.com/",
         },
     )
-    with urllib.request.urlopen(req, timeout=timeout) as res:
-        raw = res.read()
-
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        raw = r.read()
     for enc in ("utf-8", "cp932", "shift_jis"):
         try:
             return raw.decode(enc)
@@ -73,280 +96,280 @@ def fetch_html(url, timeout=25):
             pass
     return raw.decode("utf-8", errors="replace")
 
+
 def visible_tokens(source):
-    p = VisibleTextParser()
+    p = TextParser()
     p.feed(source)
     return p.tokens
 
-def classify_jra_race(name="", conditions=""):
-    text = f"{name} {conditions}".strip()
-    if "障害" in text and any(x in text for x in ["J・GⅠ","J・GI","J・GⅡ","J・GII","J・GⅢ","J・GIII"]):
-        return {"race_type":"障害重賞","icon":"🏆🚧"}
-    if "障害" in text:
-        return {"race_type":"障害","icon":"🚧"}
-    if "メイクデビュー" in text or "新馬" in text:
-        return {"race_type":"新馬","icon":"🆕"}
-    if any(x in text for x in ["GⅠ","GI","GⅡ","GII","GⅢ","GIII"]):
-        return {"race_type":"重賞","icon":"🏆"}
-    if "リステッド" in text or "(L)" in text or "（L）" in text:
-        return {"race_type":"リステッド","icon":"⭐"}
-    if "オープン" in text:
-        return {"race_type":"オープン","icon":"⭐"}
-    if any(x in text for x in ["特別","ステークス","カップ","賞"]):
-        return {"race_type":"特別","icon":"🏇"}
-    return {"race_type":"一般","icon":"🐎"}
 
-def race_text(r):
-    return f"{r.get('name','')} {r.get('conditions','')}".strip()
+def clean(s):
+    return re.sub(r"\s+", " ", html.unescape(str(s or ""))).strip()
 
-def detect_main_race(races):
+
+def classify(name):
+    t = name or ""
+    if "障害" in t:
+        return "障害", "🚧"
+    if any(x in t for x in ("GⅠ", "GI", "GⅡ", "GII", "GⅢ", "GIII")):
+        return "重賞", "🏆"
+    if "新馬" in t or "メイクデビュー" in t:
+        return "新馬", "🆕"
+    if "オープン" in t:
+        return "オープン", "⭐"
+    if any(x in t for x in ("特別", "ステークス", "カップ", "賞")):
+        return "特別", "🏇"
+    return "一般", "🐎"
+
+
+def extract_netkeiba_race_ids(source, date_str):
+    # race_idは通常12桁。ページ内のリンク・JS双方を拾う。
+    ids = set(re.findall(r"race_id(?:=|%3D)(\d{12})", source))
+    ids.update(re.findall(r'["\'](\d{12})["\']', source))
+
+    # 対象日と大きく無関係なIDを除外するため先頭4桁=年を最低条件にする。
+    year = date_str[:4]
+    ids = {x for x in ids if x.startswith(year) and x[4:6] in VENUE_CODE}
+    return sorted(ids)
+
+
+def parse_race_page(source, race_id):
+    tokens = visible_tokens(source)
+    text = "\n".join(tokens)
+
+    race_no = int(race_id[-2:])
+
+    time_text = ""
+    # netkeiba可視テキストによくある 15:35発走 / 発走 15:35
+    for pat in (
+        r"([0-2]?\d:[0-5]\d)\s*発走",
+        r"発走\s*([0-2]?\d:[0-5]\d)",
+    ):
+        m = re.search(pat, text)
+        if m:
+            h, mnt = m.group(1).split(":")
+            time_text = f"{int(h):02d}:{mnt}"
+            break
+
+    race_name = ""
+    # title/h1近辺の候補
+    for t in tokens[:80]:
+        c = clean(t)
+        if (
+            2 <= len(c) <= 80
+            and not re.fullmatch(r"\d+R", c)
+            and "netkeiba" not in c.lower()
+            and "出馬表" not in c
+            and "オッズ" not in c
+            and any(k in c for k in ("賞", "ステークス", "カップ", "新馬", "未勝利", "オープン", "クラス", "障害"))
+        ):
+            race_name = c
+            break
+
+    if not race_name:
+        race_name = f"{race_no}R"
+
+    rtype, icon = classify(race_name)
+
+    return {
+        "race": race_no,
+        "time": time_text,
+        "name": race_name,
+        "conditions": "",
+        "race_type": rtype,
+        "icon": icon,
+        "main": False,
+        "race_id": race_id,
+    }
+
+
+def mark_main(races):
     for r in races:
         r["main"] = False
-    priorities = ["J・GⅠ","J・GI","GⅠ","GI","J・GⅡ","J・GII","GⅡ","GII","J・GⅢ","J・GIII","GⅢ","GIII"]
-    for kw in priorities:
-        c = [r for r in races if kw in race_text(r)]
-        if c:
-            c[-1]["main"] = True
-            return races
-    c = [r for r in races if r.get("race_type") in {"重賞","障害重賞","リステッド"}]
-    if c:
-        c[-1]["main"] = True
+    if not races:
         return races
-    for r in races:
-        if r.get("race") == 11:
-            r["main"] = True
-            return races
-    if races:
+
+    graded = [r for r in races if r["race_type"] == "重賞"]
+    if graded:
+        graded[-1]["main"] = True
+        return races
+
+    r11 = [r for r in races if r["race"] == 11]
+    if r11:
+        r11[-1]["main"] = True
+    else:
         races[-1]["main"] = True
     return races
 
-def normalize_race(race_no, time_text, race_name="", conditions=""):
-    kind = classify_jra_race(race_name, conditions)
-    return {
-        "race": int(race_no),
-        "time": time_text,
-        "name": race_name.strip(),
-        "conditions": conditions.strip(),
-        "race_type": kind["race_type"],
-        "icon": kind["icon"],
-        "main": False,
-    }
 
-VENUE_HEADER_RE = re.compile(r"\d+回(" + "|".join(map(re.escape, JRA_VENUES)) + r")\d+日")
-RACE_RE = re.compile(r"^(\d{1,2})レース$")
-TIME_RE = re.compile(r"^(\d{1,2})時(\d{2})分$")
-
-def split_name_conditions(text):
-    text = html.unescape(re.sub(r"\s+", " ", text).strip())
-    if re.match(r"^\d歳", text) or text.startswith("障害"):
-        return text, text
-    m = re.search(r"\s(?=\d歳(?:以上)?(?:未勝利|新馬|以上|オープン|\d勝クラス))", text)
-    if m:
-        return text[:m.start()].strip() or text, text[m.start():].strip()
-    return text, text
-
-def fetch_jra(date_str):
-    result = {}
-    dt = datetime.datetime.strptime(date_str, "%Y%m%d")
-    url = f"https://www.jra.go.jp/keiba/calendar{dt.year}/{dt.year}/{dt.month}/{dt.strftime('%m%d')}.html"
-    print("JRA公式:", url)
+def fetch_netkeiba(date_str):
+    url = NETKEIBA_LIST.format(date=date_str)
+    print("netkeiba:", url)
 
     try:
-        page = fetch_html(url)
+        source = fetch(url)
     except Exception as e:
-        print("JRA取得失敗:", e)
-        return result
+        print("netkeiba一覧取得失敗:", e)
+        return {}
 
-    tokens = visible_tokens(page)
-    current_venue = None
-    current_races = []
+    race_ids = extract_netkeiba_race_ids(source, date_str)
+    print("netkeiba race_id候補:", len(race_ids))
 
-    def flush():
-        nonlocal current_venue, current_races
-        if current_venue and current_races:
-            current_races.sort(key=lambda x: x["race"])
-            result[current_venue] = {
-                "source": "JRA公式",
-                "channel": CHANNEL_BY_VENUE[current_venue],
-                "tvg_id": TVG_ID[CHANNEL_BY_VENUE[current_venue]],
-                "races": detect_main_race(current_races),
-            }
-        current_venue = None
-        current_races = []
+    grouped = {}
 
-    i = 0
-    while i < len(tokens):
-        token = tokens[i]
-        vm = VENUE_HEADER_RE.search(token)
-        if vm:
-            flush()
-            current_venue = vm.group(1)
-            i += 1
+    for race_id in race_ids:
+        venue_code = race_id[4:6]
+        venue = VENUE_CODE.get(venue_code)
+        if not venue:
             continue
 
-        rm = RACE_RE.match(token)
-        if rm and current_venue:
-            race_no = int(rm.group(1))
-            parts = []
-            time_text = None
-            j = i + 1
+        race_url = (
+            "https://race.netkeiba.com/race/shutuba.html"
+            f"?race_id={race_id}"
+        )
+        try:
+            page = fetch(race_url, timeout=20)
+            race = parse_race_page(page, race_id)
+        except Exception as e:
+            print("  WARN", venue, race_id, e)
+            continue
 
-            while j < len(tokens) and j < i + 30:
-                t = tokens[j]
-                if VENUE_HEADER_RE.search(t) or RACE_RE.match(t):
-                    break
-                tm = TIME_RE.match(t)
-                if tm:
-                    time_text = f"{int(tm.group(1)):02d}:{tm.group(2)}"
-                    break
-                if t not in {"レース番号","レース名・条件","発走時刻"}:
-                    parts.append(t)
-                j += 1
+        if not race["time"]:
+            continue
 
-            if time_text:
-                full = " ".join(parts)
-                name, cond = split_name_conditions(full)
-                current_races.append(normalize_race(race_no, time_text, name, cond))
-                i = j
+        grouped.setdefault(venue, []).append(race)
+        time.sleep(0.15)
 
-        i += 1
+    result = {}
+    for venue, races in grouped.items():
+        # 同一R重複を除去
+        unique = {}
+        for r in races:
+            unique.setdefault(r["race"], r)
+        races = sorted(unique.values(), key=lambda x: x["race"])
+        races = mark_main(races)
 
-    flush()
+        result[venue] = {
+            "source": "netkeiba",
+            "channel": CHANNEL_BY_VENUE[venue],
+            "tvg_id": TVG_ID[CHANNEL_BY_VENUE[venue]],
+            "races": races,
+        }
+        print(f"  OK {venue}: {len(races)}R")
+
     return result
 
-def fetch_greenchannel(retries=4):
+
+def extract_jcom_programs(source, date_str):
     """
-    グリーンチャンネル公式「日別番組表」を取得。
-    一時的な混雑表示や通信失敗を考慮し、数回リトライする。
-    それでも取得できない場合は空配列を返し、EPG側で待機表示にフォールバック。
+    J:COM検索結果から Ch.920 の番組候補を拾う。
+    HTMLに日時と番組名が同時に出る場合に抽出。
     """
-    url = "https://www.greenchannel.jp/daily-timetable.html"
-    last_error = ""
+    tokens = visible_tokens(source)
+    target = datetime.datetime.strptime(date_str, "%Y%m%d")
+    md = f"{target.month}/{target.day}"
 
-    for attempt in range(1, retries + 1):
-        try:
-            page = fetch_html(url, timeout=25)
-        except Exception as e:
-            last_error = f"通信失敗: {e}"
-            print(f"GCH番組表 {attempt}/{retries}: {last_error}")
-            if attempt < retries:
-                time.sleep(5 * attempt)
-            continue
+    programs = []
 
-        tokens = visible_tokens(page)
-        joined = "\n".join(tokens)
+    # 可視テキストを連結して「8/13(木)21:00～21:30」のような塊を探す。
+    for i, t in enumerate(tokens):
+        c = clean(t)
 
-        if "現在アクセスが集中しているため表示できません" in joined:
-            last_error = "公式番組表が混雑表示"
-            print(f"GCH番組表 {attempt}/{retries}: {last_error}")
-            if attempt < retries:
-                time.sleep(5 * attempt)
-            continue
-
-        programs = []
-
-        # 例:
-        # 06:30～07:00
-        # 番組名
-        time_pat = re.compile(
-            r"^([0-2]?\d):([0-5]\d)\s*[～〜~\-]\s*([0-2]?\d):([0-5]\d)$"
+        # 日付＋時刻が同一トークン
+        m = re.search(
+            rf"{re.escape(md)}(?:\([^)]*\))?\s*([0-2]?\d):([0-5]\d)\s*[～〜~\-]\s*([0-2]?\d):([0-5]\d)",
+            c,
         )
 
-        for i, t in enumerate(tokens):
-            m = time_pat.match(t.strip())
-            if not m:
+        if not m:
+            # 時刻だけの場合、前後に対象日があるか確認
+            m = re.search(
+                r"([0-2]?\d):([0-5]\d)\s*[～〜~\-]\s*([0-2]?\d):([0-5]\d)",
+                c,
+            )
+            nearby = " ".join(tokens[max(0, i-3):i+2])
+            if not m or md not in nearby:
                 continue
 
-            start_hm = f"{int(m.group(1)):02d}:{m.group(2)}"
-            stop_hm = f"{int(m.group(3)):02d}:{m.group(4)}"
+        start = f"{int(m.group(1)):02d}:{m.group(2)}"
+        stop = f"{int(m.group(3)):02d}:{m.group(4)}"
 
-            title = ""
-            for cand in tokens[i + 1:i + 8]:
-                c = re.sub(r"\s+", " ", cand).strip()
-
-                if not c:
-                    continue
-
-                if time_pat.match(c):
-                    break
-
-                if c in {
-                    "番組表（日別）",
-                    "日別番組表",
-                    "週別番組表",
-                    "番組表",
-                    "放送スケジュール",
-                }:
-                    continue
-
-                # ナビゲーション系の短い語は除外
-                if c in {"トップ", "番組", "競馬", "ニュース", "検索"}:
-                    continue
-
-                title = c
+        title = ""
+        # 近傍から番組タイトル候補
+        for cand in tokens[max(0, i-4):i+5]:
+            x = clean(cand)
+            if not x or x == c:
+                continue
+            if "グリーンチャンネルHD" in x:
+                continue
+            if "録画予約" in x or "見たい" in x:
+                continue
+            if re.search(r"\d{1,2}/\d{1,2}", x):
+                continue
+            if re.search(r"\d{1,2}:\d{2}", x):
+                continue
+            if 2 <= len(x) <= 120:
+                title = x
                 break
 
-            if title:
-                programs.append(
-                    {
-                        "start": start_hm,
-                        "stop": stop_hm,
-                        "title": title,
-                    }
-                )
+        if title:
+            programs.append({"start": start, "stop": stop, "title": title})
 
-        # 重複除去
-        unique = []
-        seen = set()
-        for p in programs:
-            key = (p["start"], p["stop"], p["title"])
-            if key not in seen:
-                seen.add(key)
-                unique.append(p)
+    # 重複排除
+    uniq = []
+    seen = set()
+    for p in programs:
+        key = (p["start"], p["stop"], p["title"])
+        if key not in seen:
+            seen.add(key)
+            uniq.append(p)
 
-        if unique:
-            print(
-                f"GCH番組表 {attempt}/{retries}: OK "
-                f"{len(unique)}番組"
-            )
-            return {
-                "source": "グリーンチャンネル公式",
-                "url": url,
-                "ok": True,
-                "programs": unique,
-                "error": "",
-                "attempts": attempt,
-            }
+    return uniq
 
-        last_error = "番組行を抽出できませんでした"
-        print(f"GCH番組表 {attempt}/{retries}: {last_error}")
 
-        if attempt < retries:
-            time.sleep(5 * attempt)
+def fetch_jcom_gch(date_str):
+    print("J:COM GCH:", JCOM_SEARCH)
+    try:
+        source = fetch(JCOM_SEARCH)
+    except Exception as e:
+        return {
+            "source": "J:COMテレビ番組表 / グリーンチャンネルHD Ch.920",
+            "url": JCOM_SEARCH,
+            "ok": False,
+            "programs": [],
+            "error": str(e),
+        }
+
+    programs = extract_jcom_programs(source, date_str)
 
     return {
-        "source": "グリーンチャンネル公式",
-        "url": url,
-        "ok": False,
-        "programs": [],
-        "error": last_error or "取得失敗",
-        "attempts": retries,
+        "source": "J:COMテレビ番組表 / グリーンチャンネルHD Ch.920",
+        "url": JCOM_SEARCH,
+        "ok": bool(programs),
+        "programs": programs,
+        "error": "" if programs else "対象日の番組行を抽出できませんでした",
     }
+
 
 def main():
     date_str = datetime.datetime.now(JST).strftime("%Y%m%d")
-    venues = fetch_jra(date_str)
+
+    venues = fetch_netkeiba(date_str)
 
     channels = {"east": [], "west": [], "hokkaido": []}
     for venue, info in venues.items():
         channels[info["channel"]].append(venue)
 
+    gch = fetch_jcom_gch(date_str)
+
     data = {
         "date": date_str,
         "updated_at": datetime.datetime.now(JST).isoformat(),
+        "jra_source": "netkeiba",
+        "gch_source": "J:COM Ch.920",
         "venues": venues,
         "channels": channels,
-        "greenchannel": fetch_greenchannel(),
+        "greenchannel": gch,
     }
 
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -356,12 +379,13 @@ def main():
     print("中央競馬データ取得")
     print("日付:", date_str)
     print("開催場:", ", ".join(venues) if venues else "なし")
-    print("EAST:", ", ".join(channels["east"]) or "非開催")
-    print("WEST:", ", ".join(channels["west"]) or "非開催")
-    print("HOKKAIDO:", ", ".join(channels["hokkaido"]) or "非開催")
-    print("GCH公式番組表:", "OK" if data["greenchannel"]["ok"] else "取得待ち")
+    print("EAST:", ", ".join(channels["east"]) or "非開催/未取得")
+    print("WEST:", ", ".join(channels["west"]) or "非開催/未取得")
+    print("HOKKAIDO:", ", ".join(channels["hokkaido"]) or "非開催/未取得")
+    print("J:COM GCH:", f"{len(gch['programs'])}番組" if gch["ok"] else "取得待ち")
     print("JSON:", OUT)
     print("============================")
+
 
 if __name__ == "__main__":
     main()

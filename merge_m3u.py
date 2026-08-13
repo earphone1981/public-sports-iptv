@@ -1,9 +1,9 @@
 from pathlib import Path
 
 INPUTS = [
-    ("競輪", Path("keirin_today.m3u")),
-    ("地方競馬", Path("keiba_today.m3u")),
-    ("オートレース", Path("autorace_today.m3u")),
+    ("競輪", Path("keirin_master.m3u")),
+    ("地方競馬", Path("keiba_master.m3u")),
+    ("オートレース", Path("autorace_master.m3u")),
     ("ボートレース", Path("boatrace_today.m3u")),
 ]
 
@@ -33,10 +33,8 @@ def read_entries(path: Path):
                 if not nxt:
                     j += 1
                     continue
-
                 if nxt.startswith("#EXTINF:"):
                     break
-
                 if not nxt.startswith("#"):
                     url = nxt
                     break
@@ -57,9 +55,9 @@ def main():
 
     for label, path in INPUTS:
         entries = read_entries(path)
-        print(f"{label}: {len(entries)} ch")
-
+        print(f"{label}: {len(entries)} ch <- {path.name}")
         out.append(f"## {label}")
+
         for extinf, url in entries:
             out.append(extinf)
             out.append(url)

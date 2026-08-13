@@ -27,7 +27,6 @@ jobs:
         run: |
           test -f keirin_today.json
           test -f keirin_today.m3u
-          echo "KEIRIN OK"
 
       # 🐎 地方競馬
       - name: Update LOCAL KEIBA
@@ -37,7 +36,6 @@ jobs:
         run: |
           test -f keiba_today.json
           test -f keiba_today.m3u
-          echo "LOCAL KEIBA OK"
 
       # 🏍️ オートレース
       - name: Update AUTORACE
@@ -47,24 +45,28 @@ jobs:
         run: |
           test -f autorace_today.json
           test -f autorace_today.m3u
-          echo "AUTORACE OK"
 
-      # 🚤 ボートレース
-      # GitHub Actionsでは取得しない。手動で置いた最新ファイルを使用。
+      # 🏇 中央競馬 + グリーンチャンネル番組表
+      - name: Update JRA
+        run: python jra_today.py
+
+      - name: Check JRA output
+        run: |
+          test -f jra_today.json
+
+      # 🚤 ボートレースはPC取得した当日版を使用
       - name: Check BOATRACE manual files
         run: |
           test -f boatrace_today.json
           test -f boatrace_today.m3u
-          echo "BOATRACE manual files OK"
 
-      # 📺 4競技M3U一本化
+      # 📺 M3U一本化
       - name: Merge M3U
         run: python merge_m3u.py
 
       - name: Check merged M3U
         run: |
           test -f public_sports.m3u
-          echo "PUBLIC SPORTS M3U OK"
 
       # 📡 EPG生成
       - name: Generate EPG
@@ -73,9 +75,8 @@ jobs:
       - name: Check EPG output
         run: |
           test -f epg.xml
-          echo "EPG OK"
 
-      # 💾 自動生成分を保存
+      # 💾 保存
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -88,10 +89,10 @@ jobs:
             keiba_today.m3u \
             autorace_today.json \
             autorace_today.m3u \
+            jra_today.json \
             public_sports.m3u \
             epg.xml
 
           git diff --cached --quiet && exit 0
-
-          git commit -m "Update public sports, M3U and EPG"
+          git commit -m "Update public sports, JRA, M3U and EPG"
           git push

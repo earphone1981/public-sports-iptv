@@ -1,0 +1,16 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-id="auto.kawaguchi" tvg-name="川口" tvg-logo="https://www.kawaguchiauto.jp/wp-content/themes/kawaguchi-ar_temp/images/common/logo@2x.png" group-title="オートレース",川口
+https://autorace-live.akamaized.net/hls/live/2036917/id2/streaming/media.m3u8
+
+#EXTINF:-1 tvg-id="auto.isesaki" tvg-name="伊勢崎" tvg-logo="https://isesaki-auto.jp/wp-content/themes/isesakiauto2021/img/header_logo.png" group-title="オートレース",伊勢崎
+https://autorace-live.akamaized.net/hls/live/2036917-b/id3/streaming/media.m3u8
+
+#EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松" tvg-logo="https://www.hamamatsuauto.jp/assets/images/common/hamamatsu_auto_logo.png" group-title="オートレース",浜松
+https://autorace-live.akamaized.net/hls/live/2036917/id4/streaming/media.m3u8
+
+#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚" tvg-logo="https://www.iizuka-auto.jp/wp-content/themes/iizukaautorace/shared/img/logo.png" group-title="オートレース",飯塚
+https://autorace-live.akamaized.net/hls/live/2036917-b/id5/streaming/media.m3u8
+
+#EXTINF:-1 tvg-id="auto.sanyo" tvg-name="山陽" tvg-logo="https://autorace.jp/news/37th/img/logo-sanyo.png" group-title="オートレース",山陽
+https://autorace-live.akamaized.net/hls/live/2036917-b/id6/streaming/media.m3u8

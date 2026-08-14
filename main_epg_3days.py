@@ -142,23 +142,6 @@ BOAT_TODAY_URL = (
     "earphone1981/ganble/main/boatrace_today.json"
 )
 
-KEIBA_SCHEDULE_URL = (
-    "https://raw.githubusercontent.com/"
-    "earphone1981/ganble/main/keiba_schedule.json"
-)
-
-
-KEIRIN_SCHEDULE_URL = (
-    "https://raw.githubusercontent.com/"
-    "earphone1981/ganble/main/keirin_schedule.json"
-)
-
-AUTORACE_SCHEDULE_URL = (
-    "https://raw.githubusercontent.com/"
-    "earphone1981/ganble/main/autorace_schedule.json"
-)
-
-
 GCH_GUIDES_URL = (
     "https://github.com/karenda-jp/etc/raw/refs/heads/main/guides.xml"
 )
@@ -191,18 +174,6 @@ def fetch_json(url, label):
 
 def load_boatrace_today():
     return fetch_json(BOAT_TODAY_URL, "BOAT JSON")
-
-
-def load_keiba_schedule():
-    return fetch_json(KEIBA_SCHEDULE_URL, "KEIBA JSON")
-
-
-def load_keirin_schedule():
-    return fetch_json(KEIRIN_SCHEDULE_URL, "KEIRIN JSON")
-
-
-def load_autorace_schedule():
-    return fetch_json(AUTORACE_SCHEDULE_URL, "AUTORACE JSON")
 
 
 def add_programme(tv, channel, start_dt, stop_dt, title, desc=""):
@@ -432,13 +403,11 @@ def fetch_nar_future_schedule(date_str):
             }
 
         races = [races_by_no[n] for n in sorted(races_by_no)]
-        if not races:
-            continue
-
         local[venue] = {
-            "day_type": infer_local_keiba_day_type(races),
+            "day_type": infer_local_keiba_day_type(races) if races else "デイ",
             "races": races,
             "source": "NAR公式",
+            "confirmed": True,
         }
 
     return {
@@ -453,10 +422,10 @@ def fetch_nar_future_schedule(date_str):
 
 def fetch_nar_epg_days(today_date, days):
     out = {}
-    for offset in range(1, days):
+    for offset in range(days):
         d = today_date + datetime.timedelta(days=offset)
         date_str = d.strftime("%Y%m%d")
-        print(f"NAR未来日: {date_str} ...", end="", flush=True)
+        print(f"NAR指定日: {date_str} ...", end="", flush=True)
         data = fetch_nar_future_schedule(date_str)
         out[date_str] = data
         print(f" {len(data.get('local', {}))}場")
@@ -471,7 +440,7 @@ def build_keiba_race_epg(
     today_display,
 ):
     """
-    keiba_schedule.json の各Rを1番組としてEPG化。
+    指定日の競馬データの各Rを1番組としてEPG化。
     その日のJSONが無い場合は False を返して手入力へフォールバック。
     """
     if not keiba_data:
@@ -502,6 +471,14 @@ def build_keiba_race_epg(
 
         races = info.get("races", [])
         if not races:
+            if info.get("confirmed"):
+                handled.add(venue)
+                add_provisional_event(
+                    tv, tvg_id, date_str, venue, "地方競馬", "🏇",
+                    info.get("day_type", "デイ"), JST, today_display,
+                    extra_title="開催予定",
+                    extra_desc=["NAR公式で開催を確認済み。各R時刻は未公表または未取得です。"],
+                )
             continue
 
         handled.add(venue)
@@ -1317,25 +1294,16 @@ def build_boat_race_epg(
         emoji = info.get("emoji", "🚤")
         event_title = info.get("title", "")
 
-        # Future cards can exist before individual race times are published.
+        # 開催は確認できたが各R時刻がまだ無い場合は、仮時間を明示して表示。
         if not races:
-            title = f"📅 開催予定 {v_name} {emoji}{day_type} 🚤ボートレース"
-            desc_lines = [
-                f"🚤 ボートレース {v_name}",
-                f"{emoji} 開催区分: {day_type}",
-                f"📅 {today_display}",
-                "BOAT RACE公式の開催一覧で開催を確認済み。",
-                "1R～12Rの発走予定時刻は公開後に自動反映します。",
-            ]
-            if event_title:
-                desc_lines.insert(1, f"📢 {event_title}")
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                title,
-                "\n".join(desc_lines),
+            add_provisional_event(
+                tv, tvg_id, date_str, v_name, "ボートレース", "🚤",
+                day_type, JST, today_display,
+                extra_title=event_title or "開催予定",
+                extra_desc=[
+                    "BOAT RACE公式の開催一覧で開催を確認済み。",
+                    "1R～12Rの発走予定時刻は未公表または未取得です。",
+                ],
             )
             continue
 
@@ -1592,12 +1560,71 @@ KEIRIN_FUTURE_TYPE_BY_SRC = {
     "ico_kaisai_8.png": ("モーニング", "🌅"),
 }
 
-KEIRIN_FUTURE_START = {
-    "モーニング": "08:30",
-    "デイ": "10:30",
-    "ナイター": "15:00",
-    "ミッドナイト": "20:30",
+PROVISIONAL_TIME_WINDOWS = {
+    # 競輪モーニングは2系統。月間表だけで判別できない場合は「通常モーニング」を使う。
+    "早朝モーニング": ("08:30", "12:30"),
+    "モーニング": ("10:00", "14:00"),
+    "デイ": ("10:30", "17:00"),
+    "薄暮": ("13:30", "19:00"),
+    "ナイター": ("15:00", "21:00"),
+    "ミッドナイト": ("20:30", "23:30"),
+    # 翌日00:30まで。build_provisional_times() で日付またぎに変換する。
+    "オーバーミッドナイト": ("21:00", "00:30"),
 }
+
+# 既存の競輪未来日コードとの互換用。
+KEIRIN_FUTURE_START = {
+    k: v[0] for k, v in PROVISIONAL_TIME_WINDOWS.items()
+}
+
+PROVISIONAL_NOTICE = "（仮時間）※実際の時間ではありません"
+
+
+def normalize_day_type(day_type):
+    text = str(day_type or "").strip()
+    aliases = {
+        "通常": "デイ",
+        "サマータイム": "薄暮",
+        "オーバーミットナイト": "オーバーミッドナイト",
+        "OVER MIDNIGHT": "オーバーミッドナイト",
+    }
+    return aliases.get(text, text or "デイ")
+
+
+def build_provisional_times(date_str, day_type, JST):
+    day_type = normalize_day_type(day_type)
+    start_text, end_text = PROVISIONAL_TIME_WINDOWS.get(
+        day_type, PROVISIONAL_TIME_WINDOWS["デイ"]
+    )
+    start_dt = datetime.datetime.strptime(
+        f"{date_str} {start_text}", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+    end_dt = datetime.datetime.strptime(
+        f"{date_str} {end_text}", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+    if end_dt <= start_dt:
+        end_dt += datetime.timedelta(days=1)
+    return start_dt, end_dt, start_text, end_text
+
+
+def add_provisional_event(tv, tvg_id, date_str, venue, category_label, icon, day_type, JST, today_display, extra_title="", extra_desc=None):
+    day_type = normalize_day_type(day_type)
+    start_dt, end_dt, start_text, end_text = build_provisional_times(date_str, day_type, JST)
+    title_parts = [icon, venue, f"{day_emoji(day_type)}{day_type}"]
+    if extra_title:
+        title_parts.append(extra_title)
+    title_parts.append(PROVISIONAL_NOTICE)
+    desc_lines = [
+        f"{icon} {category_label} {venue}",
+        f"{day_emoji(day_type)} 開催区分: {day_type}",
+        f"⏰ 仮予定: {start_text}～{'翌' if end_dt.date() != start_dt.date() else ''}{end_text}",
+        f"⚠️ {PROVISIONAL_NOTICE}",
+        "開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。",
+        f"📅 {today_display}",
+    ]
+    if extra_desc:
+        desc_lines[1:1] = [x for x in extra_desc if x]
+    add_programme(tv, tvg_id, start_dt, end_dt, " ".join(x for x in title_parts if x), "\n".join(desc_lines))
 
 
 class KeirinScheduleParser(HTMLParser):
@@ -1774,12 +1801,10 @@ def build_keirin_future_epg(
 ):
     date_str = target_date.strftime("%Y%m%d")
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00",
-        "%Y%m%d %H:%M",
+        f"{date_str} 01:00", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
-        f"{date_str} 23:59",
-        "%Y%m%d %H:%M",
+        f"{date_str} 23:59", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
 
     venues = month_schedule.get(date_str, {})
@@ -1790,82 +1815,68 @@ def build_keirin_future_epg(
 
         if not info:
             add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
+                tv, tvg_id, day_start, day_end,
                 f"💤 本日非開催 {venue}（競輪）",
                 f"KEIRIN.JP開催日程で{today_display}の開催予定はありません。",
             )
             continue
 
         handled += 1
-
         grade = info.get("grade", "")
-        day_type = info.get("day_type", "デイ")
-        emoji = info.get("emoji", "☀️")
+        day_type = normalize_day_type(info.get("day_type", "デイ"))
+        emoji = info.get("emoji", day_emoji(day_type))
         event_day = info.get("event_day", "")
-        start_text = KEIRIN_FUTURE_START.get(day_type, "10:30")
 
-        start_dt = datetime.datetime.strptime(
-            f"{date_str} {start_text}",
-            "%Y%m%d %H:%M",
-        ).replace(tzinfo=JST)
+        start_dt, end_dt, start_text, end_text = build_provisional_times(
+            date_str, day_type, JST
+        )
 
         if day_start < start_dt:
             add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                start_dt,
+                tv, tvg_id, day_start, start_dt,
                 f"⏳ 待機 {venue} 【{grade}】 {emoji}{day_type}",
-                "\n".join(
-                    x
-                    for x in [
-                        f"🚲 競輪 {venue}",
-                        f"🏆 開催種別: {grade}" if grade else "",
-                        f"{emoji} 開催パターン: {day_type}",
-                        f"📅 {event_day}" if event_day else "",
-                        f"⏰ 仮開始: {start_text}",
-                        f"📅 {today_display}",
-                    ]
-                    if x
-                ),
+                "\n".join(x for x in [
+                    f"🚲 競輪 {venue}",
+                    f"🏆 開催種別: {grade}" if grade else "",
+                    f"{emoji} 開催パターン: {day_type}",
+                    f"📅 {event_day}" if event_day else "",
+                    f"⏰ 仮開始: {start_text}",
+                    f"⚠️ {PROVISIONAL_NOTICE}",
+                    f"📅 {today_display}",
+                ] if x),
             )
 
         title_parts = [
-            f"【{grade}】" if grade else "",
-            venue,
-            f"{emoji}{day_type}",
-            event_day,
-            "開催予定",
+            f"【{grade}】" if grade else "", venue,
+            f"{emoji}{day_type}", event_day, "開催予定",
+            PROVISIONAL_NOTICE,
         ]
-        title = " ".join(x for x in title_parts if x)
-
         desc_lines = [
             f"🚲 競輪 {venue}",
             f"🏆 開催種別: {grade}" if grade else "",
             f"{emoji} 開催パターン: {day_type}",
             f"📅 開催日次: {event_day}" if event_day else "",
-            f"⏰ 仮開始: {start_text}",
-            "未来日のため発走時刻は仮予定です。",
-            "当日08:00更新で実際の各R発走時刻EPGへ切り替えます。",
+            f"⏰ 仮予定: {start_text}～{'翌' if end_dt.date() != start_dt.date() else ''}{end_text}",
+            f"⚠️ {PROVISIONAL_NOTICE}",
+            "開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。",
             f"📅 {today_display}",
         ]
-
         add_programme(
-            tv,
-            tvg_id,
-            start_dt,
-            day_end,
-            title,
+            tv, tvg_id, start_dt, end_dt,
+            " ".join(x for x in title_parts if x),
             "\n".join(x for x in desc_lines if x),
         )
 
-    print(
-        f"KEIRIN FUTURE EPG {date_str}: "
-        f"{handled}場を開催予定として生成"
-    )
+        # オーバーミッドナイト以外は同日内で終了表示。
+        if end_dt.date() == day_start.date() and end_dt < day_end:
+            add_programme(
+                tv, tvg_id, end_dt, day_end,
+                f"🏁 終了 {venue} {emoji}{day_type}",
+                f"{venue}の仮開催時間は終了しました。",
+            )
+
+    print(f"KEIRIN EPG {date_str}: {handled}場を公式開催表＋仮時間で生成")
+    return True
 
 
 def build_future_placeholder(
@@ -2302,7 +2313,10 @@ def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_displa
         start_text = str(race.get("liveStartTime", "") or "").strip()
         end_text = str(race.get("liveEndTime", "") or "").strip()
 
+        provisional = False
         try:
+            if not start_text or not end_text:
+                raise ValueError("official live time unavailable")
             start_dt = datetime.datetime.strptime(
                 f"{date_str} {start_text}", "%Y%m%d %H:%M"
             ).replace(tzinfo=JST)
@@ -2312,7 +2326,10 @@ def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_displa
             if end_dt <= start_dt:
                 end_dt += datetime.timedelta(days=1)
         except Exception:
-            start_dt, end_dt = day_start, day_end
+            provisional = True
+            start_dt, end_dt, start_text, end_text = build_provisional_times(
+                date_str, day_type, JST
+            )
 
         if day_start < start_dt:
             add_programme(
@@ -2335,12 +2352,16 @@ def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_displa
             desc.append(f"📢 開催名: {title}")
         if event_day:
             desc.append(f"📅 開催日次: {event_day}日目")
-        if start_text and end_text:
+        if provisional:
+            parts.append(PROVISIONAL_NOTICE)
+            desc.append(f"⏰ 仮予定: {start_text}～{'翌' if end_dt.date() != start_dt.date() else ''}{end_text}")
+            desc.append(f"⚠️ {PROVISIONAL_NOTICE}")
+        elif start_text and end_text:
             desc.append(f"⏰ 公式LIVE予定: {start_text}～{end_text}")
         desc.append(f"📅 {today_display}")
-        add_programme(tv, tvg_id, start_dt, min(end_dt, day_end), " ".join(parts), "\n".join(desc))
+        add_programme(tv, tvg_id, start_dt, end_dt, " ".join(parts), "\n".join(desc))
 
-        if end_dt < day_end:
+        if end_dt.date() == day_start.date() and end_dt < day_end:
             add_programme(
                 tv, tvg_id, end_dt, day_end,
                 f"🏁 終了 {venue} {emoji}{day_type}",
@@ -2359,9 +2380,6 @@ def build_epg_xml():
     JST = datetime.timezone(datetime.timedelta(hours=9))
 
     boat_today = load_boatrace_today()
-    keiba_schedule = load_keiba_schedule()
-    keirin_schedule = load_keirin_schedule()
-    autorace_schedule = load_autorace_schedule()
 
     today_str = datetime.datetime.now(JST).strftime("%Y%m%d")
 
@@ -2384,7 +2402,7 @@ def build_epg_xml():
 
     # AutoRace.JP monthly calendar for future-day EPG.
     autorace_future_months = {}
-    for offset in range(1, EPG_DAYS):
+    for offset in range(EPG_DAYS):
         d = today_date + datetime.timedelta(days=offset)
         key = (d.year, d.month)
         if key not in autorace_future_months:
@@ -2392,7 +2410,7 @@ def build_epg_xml():
 
     # KEIRIN.JP monthly schedule for future-day provisional EPG.
     keirin_future_months = {}
-    for offset in range(1, EPG_DAYS):
+    for offset in range(EPG_DAYS):
         d = today_date + datetime.timedelta(days=offset)
         key = (d.year, d.month)
         if key not in keirin_future_months:
@@ -2409,83 +2427,44 @@ def build_epg_xml():
 
         # -------------------------------------------------
         # 競輪
-        # 今日: JSONの日付一致なら各R自動EPG。
-        # 未来: 「非開催」と断定せず、当日更新待ちのプレースホルダー。
+        # KEIRIN.JP公式の月間開催表から3日分を直接生成。
+        # 実時刻が無い場合は開催区分ごとの仮時間を明示して使用する。
         # -------------------------------------------------
-        if is_today:
-            used_auto_keirin = build_keirin_race_epg(
-                tv,
-                date_str,
-                keirin_schedule,
-                JST,
-                today_display,
-            )
-            if not used_auto_keirin:
-                build_manual_category(
-                    tv,
-                    date_str,
-                    "keirin",
-                    KEIRIN_MAP,
-                    {},
-                    JST,
-                    today_display,
-                )
-        else:
-            month_schedule = keirin_future_months.get(
-                (target_date.year, target_date.month),
-                {},
-            )
-            build_keirin_future_epg(
-                tv,
-                target_date,
-                month_schedule,
-                JST,
-                today_display,
-            )
+        month_schedule = keirin_future_months.get(
+            (target_date.year, target_date.month),
+            {},
+        )
+        build_keirin_future_epg(
+            tv,
+            target_date,
+            month_schedule,
+            JST,
+            today_display,
+        )
 
         # -------------------------------------------------
         # 競馬
-        # 今日: JSONの日付一致なら各R自動EPG。
-        # 未来: 決め打ちせずプレースホルダー。
+        # NAR公式の指定日出馬表から3日分を直接取得。
+        # 各R時刻が取れない場合でも開催が確認できれば仮時間表示へ回す。
         # -------------------------------------------------
-        if is_today:
-            used_auto_keiba = build_keiba_race_epg(
+        used_nar = build_keiba_race_epg(
+            tv,
+            date_str,
+            nar_future.get(date_str, {}),
+            JST,
+            today_display,
+        )
+        if not used_nar:
+            regular_keiba_map = dict(KEIBA_MAP)
+            build_future_placeholder(
                 tv,
                 date_str,
-                keiba_schedule,
+                regular_keiba_map,
+                "競馬",
+                "🏇",
                 JST,
                 today_display,
             )
-            if not used_auto_keiba:
-                regular_keiba_map = dict(KEIBA_MAP)
-                build_manual_category(
-                    tv,
-                    date_str,
-                    "keiba",
-                    regular_keiba_map,
-                    {},
-                    JST,
-                    today_display,
-                )
-        else:
-            used_nar_future = build_keiba_race_epg(
-                tv,
-                date_str,
-                nar_future.get(date_str, {}),
-                JST,
-                today_display,
-            )
-            if not used_nar_future:
-                regular_keiba_map = dict(KEIBA_MAP)
-                build_future_placeholder(
-                    tv,
-                    date_str,
-                    regular_keiba_map,
-                    "競馬",
-                    "🏇",
-                    JST,
-                    today_display,
-                )
 
         # JRA EAST / WEST / HOKKAIDO はJRA公式から3日分を生成。
         # GCHは全日ループ終了後に guides.xml から3日分だけ統合する。
@@ -2498,37 +2477,20 @@ def build_epg_xml():
 
         # -------------------------------------------------
         # オートレース
+        # AutoRace.JP公式カレンダーから3日分を直接生成。
+        # LIVE時刻が無い場合は開催区分ごとの仮時間を明示して使用する。
         # -------------------------------------------------
-        if is_today:
-            used_auto_autorace = build_autorace_race_epg(
-                tv,
-                date_str,
-                autorace_schedule,
-                JST,
-                today_display,
-            )
-            if not used_auto_autorace:
-                build_manual_category(
-                    tv,
-                    date_str,
-                    "auto",
-                    AUTO_MAP,
-                    {},
-                    JST,
-                    today_display,
-                )
-        else:
-            month_schedule = autorace_future_months.get(
-                (target_date.year, target_date.month),
-                {},
-            )
-            build_autorace_future_epg(
-                tv,
-                target_date,
-                month_schedule,
-                JST,
-                today_display,
-            )
+        month_schedule = autorace_future_months.get(
+            (target_date.year, target_date.month),
+            {},
+        )
+        build_autorace_future_epg(
+            tv,
+            target_date,
+            month_schedule,
+            JST,
+            today_display,
+        )
 
         # -------------------------------------------------
         # ボートレース
@@ -2587,9 +2549,9 @@ def build_epg_xml():
     print("EPG生成完了")
     print(f"ボートLIVE: {boat_live_count} / 24")
     print(f"ボートEPG: BOAT RACE公式 3日分を自動取得")
-    print("競馬: 当日はkeiba_schedule.json、未来2日はNAR公式を自動取得")
-    print("競輪: keirin_schedule.json 優先")
-    print("オート: autorace_schedule.json 優先")
+    print("競馬: NAR公式から3日分を直接取得（時刻不明時は仮時間表示）")
+    print("競輪: KEIRIN.JP公式月間表から3日分を直接生成（仮時間表示）")
+    print("オート: AutoRace.JP公式カレンダーから3日分を直接生成（時刻不明時は仮時間表示）")
     print("JRA: EAST / WEST / HOKKAIDOをJRA公式から3日分生成")
     print(f"GCH: guides.xmlから3日分を抽出・統合 ({gch_programme_count}番組)")
     print("出力: epg.xml")

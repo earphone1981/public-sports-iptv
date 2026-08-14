@@ -1682,7 +1682,7 @@
 ⏰ 発走予定: 14:10
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814142900 +0900" stop="20260814150300 +0900" channel="boat.miyajima">
+    <programme start="20260814142900 +0900" stop="20260814150200 +0900" channel="boat.miyajima">
         <title lang="ja">🚤 17 宮島 8R 14:39発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
@@ -1690,39 +1690,39 @@
 ⏰ 発走予定: 14:39
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814150300 +0900" stop="20260814153000 +0900" channel="boat.miyajima">
-        <title lang="ja">🚤 17 宮島 9R 15:13発走 ☀️デイ 第５６回スポーツニッポン杯</title>
+    <programme start="20260814150200 +0900" stop="20260814152900 +0900" channel="boat.miyajima">
+        <title lang="ja">🚤 17 宮島 9R 15:12発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
 ☀️ 開催区分: デイ
-⏰ 発走予定: 15:13
+⏰ 発走予定: 15:12
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814153000 +0900" stop="20260814155500 +0900" channel="boat.miyajima">
-        <title lang="ja">🚤 17 宮島 10R 15:40発走 ☀️デイ 第５６回スポーツニッポン杯</title>
+    <programme start="20260814152900 +0900" stop="20260814155400 +0900" channel="boat.miyajima">
+        <title lang="ja">🚤 17 宮島 10R 15:39発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
 ☀️ 開催区分: デイ
-⏰ 発走予定: 15:40
+⏰ 発走予定: 15:39
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814155500 +0900" stop="20260814163800 +0900" channel="boat.miyajima">
-        <title lang="ja">🚤 17 宮島 11R 16:05発走 ☀️デイ 第５６回スポーツニッポン杯</title>
+    <programme start="20260814155400 +0900" stop="20260814163700 +0900" channel="boat.miyajima">
+        <title lang="ja">🚤 17 宮島 11R 16:04発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
 ☀️ 開催区分: デイ
-⏰ 発走予定: 16:05
+⏰ 発走予定: 16:04
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814163800 +0900" stop="20260814171800 +0900" channel="boat.miyajima">
-        <title lang="ja">🚤 17 宮島 12R 16:48発走 ☀️デイ 第５６回スポーツニッポン杯</title>
+    <programme start="20260814163700 +0900" stop="20260814171700 +0900" channel="boat.miyajima">
+        <title lang="ja">🚤 17 宮島 12R 16:47発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
 ☀️ 開催区分: デイ
-⏰ 発走予定: 16:48
+⏰ 発走予定: 16:47
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814171800 +0900" stop="20260814235900 +0900" channel="boat.miyajima">
+    <programme start="20260814171700 +0900" stop="20260814235900 +0900" channel="boat.miyajima">
         <title lang="ja">🏁 終了 17 宮島 ☀️デイ</title>
         <desc lang="ja">17 宮島の本日のボートレースは終了しました。</desc>
     </programme>
@@ -2270,262 +2270,272 @@
         <desc lang="ja">24 大村の本日のボートレースは終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.hakodate">
-        <title lang="ja">📅 函館（競輪）</title>
-        <desc lang="ja">🚲 競輪 函館
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 函館（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.aomori">
-        <title lang="ja">📅 青森（競輪）</title>
-        <desc lang="ja">🚲 競輪 青森
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 青森（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.iwakitaira">
-        <title lang="ja">📅 いわき平（競輪）</title>
-        <desc lang="ja">🚲 競輪 いわき平
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 いわき平（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.yahiko">
-        <title lang="ja">📅 弥彦（競輪）</title>
-        <desc lang="ja">🚲 競輪 弥彦
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 弥彦（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.maebashi">
-        <title lang="ja">📅 前橋（競輪）</title>
+    <programme start="20260815010000 +0900" stop="20260815203000 +0900" channel="keirin.maebashi">
+        <title lang="ja">⏳ 待機 前橋 【F2】 ⭐ミッドナイト</title>
         <desc lang="ja">🚲 競輪 前橋
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 初日
+⏰ 仮開始: 20:30
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815203000 +0900" stop="20260815235900 +0900" channel="keirin.maebashi">
+        <title lang="ja">【F2】 前橋 ⭐ミッドナイト 初日 開催予定</title>
+        <desc lang="ja">🚲 競輪 前橋
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 開催日次: 初日
+⏰ 仮開始: 20:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.toride">
-        <title lang="ja">📅 取手（競輪）</title>
-        <desc lang="ja">🚲 競輪 取手
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 取手（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.utsunomiya">
-        <title lang="ja">📅 宇都宮（競輪）</title>
-        <desc lang="ja">🚲 競輪 宇都宮
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 宇都宮（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.omiya">
-        <title lang="ja">📅 大宮（競輪）</title>
-        <desc lang="ja">🚲 競輪 大宮
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 大宮（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.seibuen">
-        <title lang="ja">📅 西武園（競輪）</title>
+    <programme start="20260815010000 +0900" stop="20260815083000 +0900" channel="keirin.seibuen">
+        <title lang="ja">⏳ 待機 西武園 【F2】 🌅モーニング</title>
         <desc lang="ja">🚲 競輪 西武園
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+🌅 開催パターン: モーニング
+📅 最終日
+⏰ 仮開始: 08:30
+📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.keiogatsu">
-        <title lang="ja">📅 京王閣（競輪）</title>
+    <programme start="20260815083000 +0900" stop="20260815235900 +0900" channel="keirin.seibuen">
+        <title lang="ja">【F2】 西武園 🌅モーニング 最終日 開催予定</title>
+        <desc lang="ja">🚲 競輪 西武園
+🏆 開催種別: F2
+🌅 開催パターン: モーニング
+📅 開催日次: 最終日
+⏰ 仮開始: 08:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815010000 +0900" stop="20260815103000 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">⏳ 待機 京王閣 【F1】 ☀️デイ</title>
         <desc lang="ja">🚲 競輪 京王閣
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 2日目
+⏰ 仮開始: 10:30
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815103000 +0900" stop="20260815235900 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">【F1】 京王閣 ☀️デイ 2日目 開催予定</title>
+        <desc lang="ja">🚲 競輪 京王閣
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 開催日次: 2日目
+⏰ 仮開始: 10:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.tachikawa">
-        <title lang="ja">📅 立川（競輪）</title>
-        <desc lang="ja">🚲 競輪 立川
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 立川（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.matsudo">
-        <title lang="ja">📅 松戸（競輪）</title>
-        <desc lang="ja">🚲 競輪 松戸
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 松戸（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kawasaki">
-        <title lang="ja">📅 川崎（競輪）</title>
-        <desc lang="ja">🚲 競輪 川崎
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 川崎（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.hiratsuka">
-        <title lang="ja">📅 平塚（競輪）</title>
-        <desc lang="ja">🚲 競輪 平塚
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 平塚（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.odawara">
-        <title lang="ja">📅 小田原（競輪）</title>
-        <desc lang="ja">🚲 競輪 小田原
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小田原（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.ito">
-        <title lang="ja">📅 伊東（競輪）</title>
-        <desc lang="ja">🚲 競輪 伊東
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 伊東（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.shizuoka">
-        <title lang="ja">📅 静岡（競輪）</title>
+    <programme start="20260815010000 +0900" stop="20260815203000 +0900" channel="keirin.shizuoka">
+        <title lang="ja">⏳ 待機 静岡 【F2】 ⭐ミッドナイト</title>
         <desc lang="ja">🚲 競輪 静岡
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 初日
+⏰ 仮開始: 20:30
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815203000 +0900" stop="20260815235900 +0900" channel="keirin.shizuoka">
+        <title lang="ja">【F2】 静岡 ⭐ミッドナイト 初日 開催予定</title>
+        <desc lang="ja">🚲 競輪 静岡
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 開催日次: 初日
+⏰ 仮開始: 20:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.nagoya">
-        <title lang="ja">📅 名古屋（競輪）</title>
-        <desc lang="ja">🚲 競輪 名古屋
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 名古屋（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.gifu">
-        <title lang="ja">📅 岐阜（競輪）</title>
-        <desc lang="ja">🚲 競輪 岐阜
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 岐阜（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.ogaki">
-        <title lang="ja">📅 大垣（競輪）</title>
-        <desc lang="ja">🚲 競輪 大垣
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 大垣（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.toyohashi">
-        <title lang="ja">📅 豊橋（競輪）</title>
-        <desc lang="ja">🚲 競輪 豊橋
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 豊橋（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.matsusaka">
-        <title lang="ja">📅 松阪（競輪）</title>
-        <desc lang="ja">🚲 競輪 松阪
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 松阪（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.yokkaichi">
-        <title lang="ja">📅 四日市（競輪）</title>
-        <desc lang="ja">🚲 競輪 四日市
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 四日市（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.toyama">
-        <title lang="ja">📅 富山（競輪）</title>
-        <desc lang="ja">🚲 競輪 富山
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 富山（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.fukui">
-        <title lang="ja">📅 福井（競輪）</title>
-        <desc lang="ja">🚲 競輪 福井
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 福井（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.nara">
-        <title lang="ja">📅 奈良（競輪）</title>
+    <programme start="20260815010000 +0900" stop="20260815103000 +0900" channel="keirin.nara">
+        <title lang="ja">⏳ 待機 奈良 【F1】 ☀️デイ</title>
         <desc lang="ja">🚲 競輪 奈良
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 2日目
+⏰ 仮開始: 10:30
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815103000 +0900" stop="20260815235900 +0900" channel="keirin.nara">
+        <title lang="ja">【F1】 奈良 ☀️デイ 2日目 開催予定</title>
+        <desc lang="ja">🚲 競輪 奈良
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 開催日次: 2日目
+⏰ 仮開始: 10:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kishiwada">
-        <title lang="ja">📅 岸和田（競輪）</title>
-        <desc lang="ja">🚲 競輪 岸和田
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 岸和田（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.wakayama">
-        <title lang="ja">📅 和歌山（競輪）</title>
-        <desc lang="ja">🚲 競輪 和歌山
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 和歌山（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.tamano">
-        <title lang="ja">📅 玉野（競輪）</title>
-        <desc lang="ja">🚲 競輪 玉野
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 玉野（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.hiroshima">
-        <title lang="ja">📅 広島（競輪）</title>
-        <desc lang="ja">🚲 競輪 広島
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 広島（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.hofu">
-        <title lang="ja">📅 防府（競輪）</title>
-        <desc lang="ja">🚲 競輪 防府
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 防府（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.komatsushima">
-        <title lang="ja">📅 小松島（競輪）</title>
-        <desc lang="ja">🚲 競輪 小松島
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小松島（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.matsuyama">
-        <title lang="ja">📅 松山（競輪）</title>
+    <programme start="20260815010000 +0900" stop="20260815150000 +0900" channel="keirin.matsuyama">
+        <title lang="ja">⏳ 待機 松山 【G1】 🌙ナイター</title>
         <desc lang="ja">🚲 競輪 松山
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: G1
+🌙 開催パターン: ナイター
+📅 5日目
+⏰ 仮開始: 15:00
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815150000 +0900" stop="20260815235900 +0900" channel="keirin.matsuyama">
+        <title lang="ja">【G1】 松山 🌙ナイター 5日目 開催予定</title>
+        <desc lang="ja">🚲 競輪 松山
+🏆 開催種別: G1
+🌙 開催パターン: ナイター
+📅 開催日次: 5日目
+⏰ 仮開始: 15:00
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kochi">
-        <title lang="ja">📅 高知（競輪）</title>
-        <desc lang="ja">🚲 競輪 高知
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 高知（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.takamatsu">
-        <title lang="ja">📅 高松（競輪）</title>
-        <desc lang="ja">🚲 競輪 高松
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 高松（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.mukomachi">
-        <title lang="ja">📅 向日町（競輪）</title>
-        <desc lang="ja">🚲 競輪 向日町
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 向日町（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kokura">
-        <title lang="ja">📅 小倉（競輪）</title>
-        <desc lang="ja">🚲 競輪 小倉
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小倉（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kurume">
-        <title lang="ja">📅 久留米（競輪）</title>
-        <desc lang="ja">🚲 競輪 久留米
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 久留米（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.takeo">
-        <title lang="ja">📅 武雄（競輪）</title>
-        <desc lang="ja">🚲 競輪 武雄
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 武雄（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.sasebo">
-        <title lang="ja">📅 佐世保（競輪）</title>
-        <desc lang="ja">🚲 競輪 佐世保
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 佐世保（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.beppu">
-        <title lang="ja">📅 別府（競輪）</title>
-        <desc lang="ja">🚲 競輪 別府
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 別府（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.kumamoto">
-        <title lang="ja">📅 熊本（競輪）</title>
-        <desc lang="ja">🚲 競輪 熊本
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 熊本（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="keirin.pist6">
-        <title lang="ja">📅 千葉（競輪）</title>
-        <desc lang="ja">🚲 競輪 千葉
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 千葉（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月15日の開催予定はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="chihou.obihiro">
         <title lang="ja">📅 帯広（競馬）</title>
@@ -3116,262 +3126,288 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 1R～12Rの発走予定時刻は公開後に自動反映します。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.hakodate">
-        <title lang="ja">📅 函館（競輪）</title>
-        <desc lang="ja">🚲 競輪 函館
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 函館（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.aomori">
-        <title lang="ja">📅 青森（競輪）</title>
-        <desc lang="ja">🚲 競輪 青森
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 青森（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.iwakitaira">
-        <title lang="ja">📅 いわき平（競輪）</title>
-        <desc lang="ja">🚲 競輪 いわき平
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 いわき平（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.yahiko">
-        <title lang="ja">📅 弥彦（競輪）</title>
-        <desc lang="ja">🚲 競輪 弥彦
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 弥彦（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.maebashi">
-        <title lang="ja">📅 前橋（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816203000 +0900" channel="keirin.maebashi">
+        <title lang="ja">⏳ 待機 前橋 【F2】 ⭐ミッドナイト</title>
         <desc lang="ja">🚲 競輪 前橋
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 2日目
+⏰ 仮開始: 20:30
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816203000 +0900" stop="20260816235900 +0900" channel="keirin.maebashi">
+        <title lang="ja">【F2】 前橋 ⭐ミッドナイト 2日目 開催予定</title>
+        <desc lang="ja">🚲 競輪 前橋
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 開催日次: 2日目
+⏰ 仮開始: 20:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.toride">
-        <title lang="ja">📅 取手（競輪）</title>
-        <desc lang="ja">🚲 競輪 取手
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 取手（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.utsunomiya">
-        <title lang="ja">📅 宇都宮（競輪）</title>
-        <desc lang="ja">🚲 競輪 宇都宮
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 宇都宮（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.omiya">
-        <title lang="ja">📅 大宮（競輪）</title>
-        <desc lang="ja">🚲 競輪 大宮
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 大宮（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.seibuen">
-        <title lang="ja">📅 西武園（競輪）</title>
-        <desc lang="ja">🚲 競輪 西武園
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 西武園（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.keiogatsu">
-        <title lang="ja">📅 京王閣（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816103000 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">⏳ 待機 京王閣 【F1】 ☀️デイ</title>
         <desc lang="ja">🚲 競輪 京王閣
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 最終日
+⏰ 仮開始: 10:30
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816103000 +0900" stop="20260816235900 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">【F1】 京王閣 ☀️デイ 最終日 開催予定</title>
+        <desc lang="ja">🚲 競輪 京王閣
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 開催日次: 最終日
+⏰ 仮開始: 10:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.tachikawa">
-        <title lang="ja">📅 立川（競輪）</title>
-        <desc lang="ja">🚲 競輪 立川
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 立川（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.matsudo">
-        <title lang="ja">📅 松戸（競輪）</title>
-        <desc lang="ja">🚲 競輪 松戸
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 松戸（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kawasaki">
-        <title lang="ja">📅 川崎（競輪）</title>
-        <desc lang="ja">🚲 競輪 川崎
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 川崎（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.hiratsuka">
-        <title lang="ja">📅 平塚（競輪）</title>
-        <desc lang="ja">🚲 競輪 平塚
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 平塚（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.odawara">
-        <title lang="ja">📅 小田原（競輪）</title>
-        <desc lang="ja">🚲 競輪 小田原
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小田原（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.ito">
-        <title lang="ja">📅 伊東（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816150000 +0900" channel="keirin.ito">
+        <title lang="ja">⏳ 待機 伊東 【F2】 🌙ナイター</title>
         <desc lang="ja">🚲 競輪 伊東
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+🌙 開催パターン: ナイター
+📅 初日
+⏰ 仮開始: 15:00
+📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.shizuoka">
-        <title lang="ja">📅 静岡（競輪）</title>
+    <programme start="20260816150000 +0900" stop="20260816235900 +0900" channel="keirin.ito">
+        <title lang="ja">【F2】 伊東 🌙ナイター 初日 開催予定</title>
+        <desc lang="ja">🚲 競輪 伊東
+🏆 開催種別: F2
+🌙 開催パターン: ナイター
+📅 開催日次: 初日
+⏰ 仮開始: 15:00
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816010000 +0900" stop="20260816203000 +0900" channel="keirin.shizuoka">
+        <title lang="ja">⏳ 待機 静岡 【F2】 ⭐ミッドナイト</title>
         <desc lang="ja">🚲 競輪 静岡
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 2日目
+⏰ 仮開始: 20:30
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816203000 +0900" stop="20260816235900 +0900" channel="keirin.shizuoka">
+        <title lang="ja">【F2】 静岡 ⭐ミッドナイト 2日目 開催予定</title>
+        <desc lang="ja">🚲 競輪 静岡
+🏆 開催種別: F2
+⭐ 開催パターン: ミッドナイト
+📅 開催日次: 2日目
+⏰ 仮開始: 20:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.nagoya">
-        <title lang="ja">📅 名古屋（競輪）</title>
-        <desc lang="ja">🚲 競輪 名古屋
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 名古屋（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.gifu">
-        <title lang="ja">📅 岐阜（競輪）</title>
-        <desc lang="ja">🚲 競輪 岐阜
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 岐阜（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.ogaki">
-        <title lang="ja">📅 大垣（競輪）</title>
-        <desc lang="ja">🚲 競輪 大垣
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 大垣（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.toyohashi">
-        <title lang="ja">📅 豊橋（競輪）</title>
-        <desc lang="ja">🚲 競輪 豊橋
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 豊橋（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.matsusaka">
-        <title lang="ja">📅 松阪（競輪）</title>
-        <desc lang="ja">🚲 競輪 松阪
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 松阪（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.yokkaichi">
-        <title lang="ja">📅 四日市（競輪）</title>
-        <desc lang="ja">🚲 競輪 四日市
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 四日市（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.toyama">
-        <title lang="ja">📅 富山（競輪）</title>
-        <desc lang="ja">🚲 競輪 富山
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 富山（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.fukui">
-        <title lang="ja">📅 福井（競輪）</title>
-        <desc lang="ja">🚲 競輪 福井
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 福井（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.nara">
-        <title lang="ja">📅 奈良（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816103000 +0900" channel="keirin.nara">
+        <title lang="ja">⏳ 待機 奈良 【F1】 ☀️デイ</title>
         <desc lang="ja">🚲 競輪 奈良
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 最終日
+⏰ 仮開始: 10:30
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816103000 +0900" stop="20260816235900 +0900" channel="keirin.nara">
+        <title lang="ja">【F1】 奈良 ☀️デイ 最終日 開催予定</title>
+        <desc lang="ja">🚲 競輪 奈良
+🏆 開催種別: F1
+☀️ 開催パターン: デイ
+📅 開催日次: 最終日
+⏰ 仮開始: 10:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kishiwada">
-        <title lang="ja">📅 岸和田（競輪）</title>
-        <desc lang="ja">🚲 競輪 岸和田
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 岸和田（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.wakayama">
-        <title lang="ja">📅 和歌山（競輪）</title>
-        <desc lang="ja">🚲 競輪 和歌山
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 和歌山（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.tamano">
-        <title lang="ja">📅 玉野（競輪）</title>
-        <desc lang="ja">🚲 競輪 玉野
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 玉野（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.hiroshima">
-        <title lang="ja">📅 広島（競輪）</title>
-        <desc lang="ja">🚲 競輪 広島
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 広島（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.hofu">
-        <title lang="ja">📅 防府（競輪）</title>
-        <desc lang="ja">🚲 競輪 防府
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 防府（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.komatsushima">
-        <title lang="ja">📅 小松島（競輪）</title>
-        <desc lang="ja">🚲 競輪 小松島
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小松島（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.matsuyama">
-        <title lang="ja">📅 松山（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816150000 +0900" channel="keirin.matsuyama">
+        <title lang="ja">⏳ 待機 松山 【G1】 🌙ナイター</title>
         <desc lang="ja">🚲 競輪 松山
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: G1
+🌙 開催パターン: ナイター
+📅 最終日
+⏰ 仮開始: 15:00
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816150000 +0900" stop="20260816235900 +0900" channel="keirin.matsuyama">
+        <title lang="ja">【G1】 松山 🌙ナイター 最終日 開催予定</title>
+        <desc lang="ja">🚲 競輪 松山
+🏆 開催種別: G1
+🌙 開催パターン: ナイター
+📅 開催日次: 最終日
+⏰ 仮開始: 15:00
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kochi">
-        <title lang="ja">📅 高知（競輪）</title>
-        <desc lang="ja">🚲 競輪 高知
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 高知（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.takamatsu">
-        <title lang="ja">📅 高松（競輪）</title>
-        <desc lang="ja">🚲 競輪 高松
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 高松（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.mukomachi">
-        <title lang="ja">📅 向日町（競輪）</title>
-        <desc lang="ja">🚲 競輪 向日町
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 向日町（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kokura">
-        <title lang="ja">📅 小倉（競輪）</title>
-        <desc lang="ja">🚲 競輪 小倉
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 小倉（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kurume">
-        <title lang="ja">📅 久留米（競輪）</title>
-        <desc lang="ja">🚲 競輪 久留米
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 久留米（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.takeo">
-        <title lang="ja">📅 武雄（競輪）</title>
-        <desc lang="ja">🚲 競輪 武雄
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 武雄（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.sasebo">
-        <title lang="ja">📅 佐世保（競輪）</title>
-        <desc lang="ja">🚲 競輪 佐世保
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 佐世保（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.beppu">
-        <title lang="ja">📅 別府（競輪）</title>
+    <programme start="20260816010000 +0900" stop="20260816083000 +0900" channel="keirin.beppu">
+        <title lang="ja">⏳ 待機 別府 【F2】 🌅モーニング</title>
         <desc lang="ja">🚲 競輪 別府
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 開催種別: F2
+🌅 開催パターン: モーニング
+📅 初日
+⏰ 仮開始: 08:30
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816083000 +0900" stop="20260816235900 +0900" channel="keirin.beppu">
+        <title lang="ja">【F2】 別府 🌅モーニング 初日 開催予定</title>
+        <desc lang="ja">🚲 競輪 別府
+🏆 開催種別: F2
+🌅 開催パターン: モーニング
+📅 開催日次: 初日
+⏰ 仮開始: 08:30
+未来日のため発走時刻は仮予定です。
+当日08:00更新で実際の各R発走時刻EPGへ切り替えます。
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.kumamoto">
-        <title lang="ja">📅 熊本（競輪）</title>
-        <desc lang="ja">🚲 競輪 熊本
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 熊本（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="keirin.pist6">
-        <title lang="ja">📅 千葉（競輪）</title>
-        <desc lang="ja">🚲 競輪 千葉
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 千葉（競輪）</title>
+        <desc lang="ja">KEIRIN.JP開催日程で2026年08月16日の開催予定はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="chihou.obihiro">
         <title lang="ja">📅 帯広（競馬）</title>

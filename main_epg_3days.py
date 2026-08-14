@@ -2108,125 +2108,6 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
     )
 
 
-
-# -------------------------------------------------
-# AutoRace.JP future calendar support
-# Future days use the official monthly Calendar API.
-# Only calendar[].race means a home-track event; outside[] is ignored.
-# -------------------------------------------------
-AUTORACE_CALENDAR_URL = "https://autorace.jp/race_info/XML/Calendar?date={year}-{month:02d}"
-
-def fetch_autorace_future_month(year, month):
-    data = fetch_json(
-        AUTORACE_CALENDAR_URL.format(year=year, month=month),
-        f"AUTORACE FUTURE {year}-{month:02d}",
-    )
-    result = {}
-    if not isinstance(data, dict):
-        return result
-
-    body = data.get("body", [])
-    if not isinstance(body, list):
-        return result
-
-    for place in body:
-        if not isinstance(place, dict):
-            continue
-        venue = re.sub(r"\s+", "", str(place.get("placeName", "")))
-        if venue not in AUTO_MAP:
-            continue
-        for day in place.get("calendar", []) or []:
-            if not isinstance(day, dict):
-                continue
-            race = day.get("race")
-            # [] means no home-track event. outside[] is off-track sales only.
-            if not isinstance(race, dict) or not race:
-                continue
-            iso_date = str(day.get("date", ""))
-            date_str = iso_date.replace("-", "")
-            if len(date_str) != 8:
-                continue
-            result.setdefault(date_str, {})[venue] = race
-    return result
-
-def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_display):
-    date_str = target_date.strftime("%Y%m%d")
-    day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
-    ).replace(tzinfo=JST)
-    day_end = datetime.datetime.strptime(
-        f"{date_str} 23:59", "%Y%m%d %H:%M"
-    ).replace(tzinfo=JST)
-
-    venues = month_schedule.get(date_str, {})
-    handled = 0
-    for venue, tvg_id in AUTO_MAP.items():
-        race = venues.get(venue)
-        if not race:
-            add_programme(
-                tv, tvg_id, day_start, day_end,
-                f"💤 本日非開催 {venue}（オートレース）",
-                f"AutoRace.JP公式カレンダーで{today_display}の本場開催はありません。",
-            )
-            continue
-
-        handled += 1
-        grade = clean_epg_meta_text(race.get("gradeName", ""))
-        title = clean_epg_meta_text(race.get("title", "")) or clean_epg_meta_text(race.get("titleShort", ""))
-        day_type = clean_epg_meta_text(race.get("nighterName", "")) or "デイ"
-        emoji = day_emoji(day_type)
-        event_day = race.get("paragraphDay", "")
-        start_text = str(race.get("liveStartTime", "") or "").strip()
-        end_text = str(race.get("liveEndTime", "") or "").strip()
-
-        try:
-            start_dt = datetime.datetime.strptime(
-                f"{date_str} {start_text}", "%Y%m%d %H:%M"
-            ).replace(tzinfo=JST)
-            end_dt = datetime.datetime.strptime(
-                f"{date_str} {end_text}", "%Y%m%d %H:%M"
-            ).replace(tzinfo=JST)
-            if end_dt <= start_dt:
-                end_dt += datetime.timedelta(days=1)
-        except Exception:
-            start_dt, end_dt = day_start, day_end
-
-        if day_start < start_dt:
-            add_programme(
-                tv, tvg_id, day_start, start_dt,
-                f"⏳ 開催待ち {venue} {emoji}{day_type}",
-                f"🏍️ オートレース {venue}\n📢 {title}\n📅 {today_display}",
-            )
-
-        parts = ["📅 開催予定", venue, f"{emoji}{day_type}"]
-        if grade:
-            parts.append(f"【{grade}】")
-        if title:
-            parts.append(title)
-        if event_day:
-            parts.append(f"{event_day}日目")
-        desc = [f"🏍️ オートレース {venue}"]
-        if grade:
-            desc.append(f"🏆 グレード: {grade}")
-        if title:
-            desc.append(f"📢 開催名: {title}")
-        if event_day:
-            desc.append(f"📅 開催日次: {event_day}日目")
-        if start_text and end_text:
-            desc.append(f"⏰ 公式LIVE予定: {start_text}～{end_text}")
-        desc.append(f"📅 {today_display}")
-        add_programme(tv, tvg_id, start_dt, min(end_dt, day_end), " ".join(parts), "\n".join(desc))
-
-        if end_dt < day_end:
-            add_programme(
-                tv, tvg_id, end_dt, day_end,
-                f"🏁 終了 {venue} {emoji}{day_type}",
-                f"{venue}の{today_display}の開催予定時間は終了しました。",
-            )
-
-    print(f"AUTORACE FUTURE EPG {date_str}: {handled}場を開催予定として生成")
-    return True
-
 def build_epg_xml():
     tv = ET.Element(
         "tv",
@@ -2257,14 +2138,6 @@ def build_epg_xml():
     today_date = datetime.datetime.now(JST).date()
     boat_week = fetch_boat_week_schedule(today_date, EPG_DAYS)
     nar_future = fetch_nar_epg_days(today_date, EPG_DAYS)
-
-    # AutoRace.JP monthly calendar for future-day EPG.
-    autorace_future_months = {}
-    for offset in range(1, EPG_DAYS):
-        d = today_date + datetime.timedelta(days=offset)
-        key = (d.year, d.month)
-        if key not in autorace_future_months:
-            autorace_future_months[key] = fetch_autorace_future_month(d.year, d.month)
 
     # KEIRIN.JP monthly schedule for future-day provisional EPG.
     keirin_future_months = {}
@@ -2394,14 +2267,12 @@ def build_epg_xml():
                     today_display,
                 )
         else:
-            month_schedule = autorace_future_months.get(
-                (target_date.year, target_date.month),
-                {},
-            )
-            build_autorace_future_epg(
+            build_future_placeholder(
                 tv,
-                target_date,
-                month_schedule,
+                date_str,
+                AUTO_MAP,
+                "オートレース",
+                "🏍️",
                 JST,
                 today_display,
             )

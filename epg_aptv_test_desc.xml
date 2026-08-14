@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="PublicSportsIPTV-APTV-Test">
+  <channel id="keirin.seibuen"><display-name>西武園</display-name></channel>
+  <channel id="boat.kiryu"><display-name>01 桐生</display-name></channel>
+  <channel id="boat.toda"><display-name>02 戸田</display-name></channel>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="keirin.seibuen">
+    <title lang="ja">🚲 西武園 DESC TEST</title>
+    <desc lang="ja">🚲 競輪 西武園
+🌅 開催区分: モーニング
+⏰ 発走予定: 09:20
+📢 レース名: Ａ級チ一般</desc>
+  </programme>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="boat.kiryu">
+    <title lang="ja">🚤 01 桐生 DESC TEST</title>
+    <desc lang="ja">🚤 ボートレース 桐生
+⏰ 締切予定: 10:00</desc>
+  </programme>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="boat.toda">
+    <title lang="ja">🚤 02 戸田 DESC TEST</title>
+    <desc lang="ja">🚤 ボートレース 戸田
+⏰ 締切予定: 10:00</desc>
+  </programme>
+</tv>

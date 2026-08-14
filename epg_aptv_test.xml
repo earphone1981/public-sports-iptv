@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="PublicSportsIPTV-APTV-Test">
+  <channel id="keirin.seibuen">
+    <display-name>西武園</display-name>
+  </channel>
+  <channel id="boat.kiryu">
+    <display-name>01 桐生</display-name>
+  </channel>
+  <channel id="boat.toda">
+    <display-name>02 戸田</display-name>
+  </channel>
+
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="keirin.seibuen">
+    <title>西武園 EPG TEST</title>
+  </programme>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="boat.kiryu">
+    <title>01 桐生 EPG TEST</title>
+  </programme>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="boat.toda">
+    <title>02 戸田 EPG TEST</title>
+  </programme>
+</tv>

@@ -1,0 +1,20 @@
+name: Debug AutoRace Calendar JS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Inspect AutoRace calendar.js
+        run: python debug_autorace_calendar_js.py

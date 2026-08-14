@@ -2,6 +2,7 @@ import datetime
 import html as html_lib
 import json
 import re
+import urllib.parse
 import urllib.request
 import http.cookiejar
 import xml.etree.ElementTree as ET
@@ -40,6 +41,19 @@ JRA_VENUE_TO_STREAM = {
 }
 
 AUTO_MAP = {"川口": "auto.kawaguchi", "伊勢崎": "auto.isesaki", "浜松": "auto.hamamatsu", "飯塚": "auto.iizuka", "山陽": "auto.sanyo"}
+
+
+NAR_VENUE_CODES = {
+    "帯広": "03", "盛岡": "10", "水沢": "11", "浦和": "18", "船橋": "19",
+    "大井": "20", "川崎": "21", "金沢": "22", "笠松": "23", "名古屋": "24",
+    "園田": "27", "姫路": "28", "高知": "31", "佐賀": "32", "門別": "36",
+}
+
+NAR_RACE_LIST_URL = (
+    "https://www.keiba.go.jp/KeibaWeb/TodayRaceInfo/RaceList"
+    "?k_babaCode={code}&k_raceDate={date}"
+)
+
 
 
 BOAT_MAP = {
@@ -346,6 +360,100 @@ def build_manual_category(
                 f"🏁 終了 {v_name} ({emoji}{day_type})（{cat_label}）",
                 f"{v_name} ({day_type}) の放送は終了しました。",
             )
+
+
+
+def infer_local_keiba_day_type(races):
+    if not races:
+        return "デイ"
+    try:
+        first_hour = int(races[0].get("time", "12:00").split(":")[0])
+        last_hour = int(races[-1].get("time", "17:00").split(":")[0])
+    except Exception:
+        return "デイ"
+    if first_hour < 10:
+        return "モーニング"
+    if last_hour >= 19 or first_hour >= 14:
+        return "ナイター"
+    if last_hour >= 17:
+        return "薄暮"
+    return "デイ"
+
+
+def fetch_nar_future_schedule(date_str):
+    """NAR公式の指定日出馬表から地方競馬の各R時刻・名称を取得する。"""
+    date_param = f"{date_str[:4]}/{date_str[4:6]}/{date_str[6:8]}"
+    encoded_date = urllib.parse.quote(date_param, safe="")
+    local = {}
+
+    for venue, code in NAR_VENUE_CODES.items():
+        url = NAR_RACE_LIST_URL.format(code=code, date=encoded_date)
+        source = fetch_text(url, f"NAR {date_str} {venue}")
+        if not source:
+            continue
+
+        plain = strip_html_tags(source)
+        if venue not in plain or "当日メニュー" not in plain:
+            continue
+
+        row_re = re.compile(
+            r"\b(\d{1,2})R\b\s+([0-2]?\d:[0-5]\d)\s+(.*?)"
+            r"(?=\s+\d{1,2}R\s+[0-2]?\d:[0-5]\d|\s+重賞競走優勝馬検索|\Z)",
+            flags=re.S,
+        )
+        races_by_no = {}
+        for m in row_re.finditer(plain):
+            race_no = int(m.group(1))
+            if not 1 <= race_no <= 12:
+                continue
+            hhmm = m.group(2)
+            if len(hhmm) == 4:
+                hhmm = "0" + hhmm
+            tail = re.sub(r"\s+", " ", m.group(3)).strip()
+            name = re.split(
+                r"\s+(?:右|左|直線)\d+m|\s+オッズ\b|\s+映像\b|\s+成績\b",
+                tail,
+                maxsplit=1,
+            )[0].strip()[:160]
+            races_by_no[race_no] = {
+                "race": str(race_no),
+                "time": hhmm,
+                "name": name or "競走",
+                "race_type": "一般",
+                "icon": "🐎",
+                "main": race_no == 12,
+            }
+
+        races = [races_by_no[n] for n in sorted(races_by_no)]
+        if not races:
+            continue
+
+        local[venue] = {
+            "day_type": infer_local_keiba_day_type(races),
+            "races": races,
+            "source": "NAR公式",
+        }
+
+    return {
+        "date": date_str,
+        "updated_at": datetime.datetime.now(
+            datetime.timezone(datetime.timedelta(hours=9))
+        ).isoformat(),
+        "jra": {},
+        "local": local,
+    }
+
+
+def fetch_nar_epg_days(today_date, days):
+    out = {}
+    for offset in range(1, days):
+        d = today_date + datetime.timedelta(days=offset)
+        date_str = d.strftime("%Y%m%d")
+        print(f"NAR未来日: {date_str} ...", end="", flush=True)
+        data = fetch_nar_future_schedule(date_str)
+        out[date_str] = data
+        print(f" {len(data.get('local', {}))}場")
+    return out
 
 
 def build_keiba_race_epg(
@@ -2029,6 +2137,7 @@ def build_epg_xml():
 
     today_date = datetime.datetime.now(JST).date()
     boat_week = fetch_boat_week_schedule(today_date, EPG_DAYS)
+    nar_future = fetch_nar_epg_days(today_date, EPG_DAYS)
 
     # KEIRIN.JP monthly schedule for future-day provisional EPG.
     keirin_future_months = {}
@@ -2108,16 +2217,24 @@ def build_epg_xml():
                     today_display,
                 )
         else:
-            regular_keiba_map = dict(KEIBA_MAP)
-            build_future_placeholder(
+            used_nar_future = build_keiba_race_epg(
                 tv,
                 date_str,
-                regular_keiba_map,
-                "競馬",
-                "🏇",
+                nar_future.get(date_str, {}),
                 JST,
                 today_display,
             )
+            if not used_nar_future:
+                regular_keiba_map = dict(KEIBA_MAP)
+                build_future_placeholder(
+                    tv,
+                    date_str,
+                    regular_keiba_map,
+                    "競馬",
+                    "🏇",
+                    JST,
+                    today_display,
+                )
 
         # JRA EAST / WEST / HOKKAIDO はJRA公式から3日分を生成。
         # GCHは guides.xml をAPTV側の別EPG源として使用。
@@ -2206,7 +2323,7 @@ def build_epg_xml():
     print("EPG生成完了")
     print(f"ボートLIVE: {boat_live_count} / 24")
     print(f"ボートEPG: BOAT RACE公式 3日分を自動取得")
-    print("競馬: keiba_schedule.json 優先")
+    print("競馬: 当日はkeiba_schedule.json、未来2日はNAR公式を自動取得")
     print("競輪: keirin_schedule.json 優先")
     print("オート: autorace_schedule.json 優先")
     print("JRA: EAST / WEST / HOKKAIDOをJRA公式から3日分生成")

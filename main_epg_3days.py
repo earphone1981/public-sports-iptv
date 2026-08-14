@@ -1209,6 +1209,17 @@ def fetch_boat_week_schedule(today_date, days):
             continue
 
         active_codes = extract_boat_active_codes(index_html)
+
+        # 未来日の0場は「非開催」と即断せず、公式掲載待ちとして扱う。
+        if not active_codes and d > today_date:
+            week[date_str] = {
+                "ok": True,
+                "status": "pending",
+                "venues": {},
+            }
+            print(" 開催情報確認待ち")
+            continue
+
         venues = {}
 
         for code in active_codes:
@@ -1244,6 +1255,7 @@ def fetch_boat_week_schedule(today_date, days):
 
         week[date_str] = {
             "ok": True,
+            "status": "published",
             "venues": venues,
         }
         print(f" {len(venues)}場")
@@ -1267,6 +1279,7 @@ def build_boat_race_epg(
         return False
 
     venues = day_info.get("venues", {})
+    schedule_status = day_info.get("status", "published")
 
     for v_name, tvg_id in BOAT_MAP.items():
         day_start = datetime.datetime.strptime(
@@ -1278,15 +1291,26 @@ def build_boat_race_epg(
 
         info = venues.get(v_name)
         if not info:
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                f"💤 本日非開催 {v_name}（ボートレース）",
-                f"BOAT RACE公式の{today_display}開催一覧に"
-                f"{v_name}は掲載されていません。",
-            )
+            if schedule_status == "pending":
+                add_programme(
+                    tv,
+                    tvg_id,
+                    day_start,
+                    day_end,
+                    f"⏳ 開催情報確認待ち {v_name}（ボートレース）",
+                    f"BOAT RACE公式の{today_display}開催一覧は未公表または確認待ちです。\n"
+                    "開催・非開催をまだ確定していません。",
+                )
+            else:
+                add_programme(
+                    tv,
+                    tvg_id,
+                    day_start,
+                    day_end,
+                    f"💤 本日非開催 {v_name}（ボートレース）",
+                    f"BOAT RACE公式の{today_display}開催一覧に"
+                    f"{v_name}は掲載されていません。",
+                )
             continue
 
         races = info.get("races", [])
@@ -1319,13 +1343,14 @@ def build_boat_race_epg(
             race_dts.append((race, dt))
 
         if not race_dts:
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                f"📅 開催予定 {v_name} {emoji}{day_type} 🚤ボートレース",
-                f"🚤 ボートレース {v_name}\n📅 {today_display}",
+            add_provisional_event(
+                tv, tvg_id, date_str, v_name, "ボートレース", "🚤",
+                day_type, JST, today_display,
+                extra_title=event_title or "開催予定",
+                extra_desc=[
+                    "BOAT RACE公式で開催を確認済み。",
+                    "発走予定時刻を利用できないため仮時間で表示しています。",
+                ],
             )
             continue
 
@@ -2065,7 +2090,8 @@ def fetch_jra_day(target_date):
     url = jra_calendar_url(target_date)
     source = fetch_jra_html(url, f"JRA {target_date:%Y%m%d}")
     if not source:
-        return {}
+        # 403等は「非開催」ではなく取得不能として区別する。
+        return None
 
     plain = strip_html_tags(source)
 
@@ -2121,6 +2147,19 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
 
     by_venue = fetch_jra_day(target_date)
     by_stream = {k: [] for k in JRA_STREAM_MAP}
+
+    if by_venue is None:
+        for stream_name, tvg_id in JRA_STREAM_MAP.items():
+            add_programme(
+                tv,
+                tvg_id,
+                day_start,
+                day_end,
+                f"⏳ JRA 開催情報確認待ち {stream_name}",
+                f"JRA公式の{today_display}開催情報を取得できませんでした。\n"
+                "開催・非開催をまだ確定していません。",
+            )
+        return
 
     for venue, races in by_venue.items():
         stream = JRA_VENUE_TO_STREAM.get(venue)

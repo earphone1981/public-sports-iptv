@@ -2617,697 +2617,193 @@
 📅 2026年08月15日
 当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815094000 +0900" channel="jra.east">
-        <title lang="ja">⏳ 待機 JRA EAST / 東京</title>
-        <desc lang="ja">🏇 JRA 東京
-1R発走予定 10:00
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
+    <programme start="20260815010000 +0900" stop="20260815092000 +0900" channel="jra.east">
+        <title lang="ja">⏳ 待機 JRA EAST / 新潟</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
+1R発走予定 09:40
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815095000 +0900" stop="20260815102000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
+    <programme start="20260815093000 +0900" stop="20260815100000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 1R 09:40発走 2歳未勝利 1,800 （芝・外）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
+⏰ 発走予定: 09:40
+📢 2歳未勝利 1,800 （芝・外）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815102000 +0900" stop="20260815105000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
+    <programme start="20260815100000 +0900" stop="20260815103000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 2R 10:10発走 2歳新馬 1,400 （芝）（牝）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
+⏰ 発走予定: 10:10
+📢 2歳新馬 1,400 （芝）（牝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815105000 +0900" stop="20260815112000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
+    <programme start="20260815103000 +0900" stop="20260815110000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 3R 10:40発走 2歳新馬 1,800 （芝・外）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
+⏰ 発走予定: 10:40
+📢 2歳新馬 1,800 （芝・外）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815112000 +0900" stop="20260815121000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 5R 12:20発走 2歳新馬 1,200 （芝）</title>
+    <programme start="20260815110000 +0900" stop="20260815113000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 4R 11:10発走 3歳未勝利 1,200 （ダ）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
+⏰ 発走予定: 11:10
+📢 3歳未勝利 1,200 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815121000 +0900" stop="20260815124000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
+    <programme start="20260815113000 +0900" stop="20260815144000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 5R 11:40発走 3歳以上1勝クラス 1,400 （芝）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
+⏰ 発走予定: 11:40
+📢 3歳以上1勝クラス 1,400 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815124000 +0900" stop="20260815131000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
+    <programme start="20260815144000 +0900" stop="20260815151500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 6R 14:50発走 阿賀野川特別 3歳以上2勝クラス 2,200 （芝）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
+⏰ 発走予定: 14:50
+📢 阿賀野川特別 3歳以上2勝クラス 2,200 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815131000 +0900" stop="20260815134000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
+    <programme start="20260815151500 +0900" stop="20260815155500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 7R 15:25発走 上越ステークス 3歳以上3勝クラス 1,200 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
+⏰ 発走予定: 15:25
+📢 上越ステークス 3歳以上3勝クラス 1,200 （ダ）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815134000 +0900" stop="20260815141500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
+    <programme start="20260815155500 +0900" stop="20260815163000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 8R 16:05発走 三国特別 3歳以上1勝クラス 1,800 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
+⏰ 発走予定: 16:05
+📢 三国特別 3歳以上1勝クラス 1,800 （ダ）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815141500 +0900" stop="20260815145000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
+    <programme start="20260815163000 +0900" stop="20260815170500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 9R 16:40発走 第28回 新潟ジャンプステークス（J・GⅢ） 障害3歳以上オープン 3,250 （芝・外→内）別定</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
+⏰ 発走予定: 16:40
+📢 第28回 新潟ジャンプステークス（J・GⅢ） 障害3歳以上オープン 3,250 （芝・外→内）別定
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815145000 +0900" stop="20260815152500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
+    <programme start="20260815170500 +0900" stop="20260815173500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 10R 17:15発走 3歳未勝利 1,800 （ダ）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
+⏰ 発走予定: 17:15
+📢 3歳未勝利 1,800 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815152500 +0900" stop="20260815160500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
+    <programme start="20260815173500 +0900" stop="20260815181000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 11R 17:45発走 3歳未勝利 1,000 （芝・直）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
+⏰ 発走予定: 17:45
+📢 3歳未勝利 1,000 （芝・直）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815160500 +0900" stop="20260815164500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
+    <programme start="20260815181000 +0900" stop="20260815185000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 12R 18:20発走 3歳未勝利 2,000 （芝）</title>
+        <desc lang="ja">🏇 JRA 新潟
+⏰ 発走予定: 18:20
+📢 3歳未勝利 2,000 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815164500 +0900" stop="20260815235900 +0900" channel="jra.east">
+    <programme start="20260815185000 +0900" stop="20260815235900 +0900" channel="jra.east">
         <title lang="ja">🏁 JRA 本日開催終了 JRA EAST</title>
-        <desc lang="ja">東京・中山・新潟・福島の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">新潟の本日のJRA開催は終了しました。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815094000 +0900" channel="jra.west">
-        <title lang="ja">⏳ 待機 JRA WEST / 京都</title>
-        <desc lang="ja">🏇 JRA 京都
-1R発走予定 10:00
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
+    <programme start="20260815010000 +0900" stop="20260815093000 +0900" channel="jra.west">
+        <title lang="ja">⏳ 待機 JRA WEST / 中京</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
+1R発走予定 09:50
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815095000 +0900" stop="20260815102000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
+    <programme start="20260815094000 +0900" stop="20260815101000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 1R 09:50発走 2歳未勝利 1,400 （ダ）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
+⏰ 発走予定: 09:50
+📢 2歳未勝利 1,400 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815102000 +0900" stop="20260815105000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
+    <programme start="20260815101000 +0900" stop="20260815104000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 2R 10:20発走 3歳未勝利 1,400 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
+⏰ 発走予定: 10:20
+📢 3歳未勝利 1,400 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815105000 +0900" stop="20260815112000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
+    <programme start="20260815104000 +0900" stop="20260815111000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 3R 10:50発走 2歳新馬 1,200 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815121000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 12:20
+⏰ 発走予定: 10:50
 📢 2歳新馬 1,200 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 5R 12:20発走 2歳新馬 1,200 （芝）</title>
+    <programme start="20260815111000 +0900" stop="20260815114000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 4R 11:20発走 3歳未勝利 1,400 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
+⏰ 発走予定: 11:20
+📢 3歳未勝利 1,400 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815121000 +0900" stop="20260815124000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
+    <programme start="20260815114000 +0900" stop="20260815150000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 5R 11:50発走 3歳未勝利 1,800 （ダ）（牝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
+⏰ 発走予定: 11:50
+📢 3歳未勝利 1,800 （ダ）（牝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815124000 +0900" stop="20260815131000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
+    <programme start="20260815150000 +0900" stop="20260815153500 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 6R 15:10発走 知多特別 3歳以上2勝クラス 1,200 （芝）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
+⏰ 発走予定: 15:10
+📢 知多特別 3歳以上2勝クラス 1,200 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815131000 +0900" stop="20260815134000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
+    <programme start="20260815153500 +0900" stop="20260815161500 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 7R 15:45発走 高山ステークス 3歳以上3勝クラス 2,000 （芝）ハンデ</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
+⏰ 発走予定: 15:45
+📢 高山ステークス 3歳以上3勝クラス 2,000 （芝）ハンデ
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815134000 +0900" stop="20260815141500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
+    <programme start="20260815161500 +0900" stop="20260815165000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 8R 16:25発走 常滑特別 3歳以上1勝クラス 2,000 （芝）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
+⏰ 発走予定: 16:25
+📢 常滑特別 3歳以上1勝クラス 2,000 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815141500 +0900" stop="20260815145000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
+    <programme start="20260815165000 +0900" stop="20260815172000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 9R 17:00発走 3歳以上1勝クラス 1,800 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
+⏰ 発走予定: 17:00
+📢 3歳以上1勝クラス 1,800 （ダ）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815145000 +0900" stop="20260815152500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
+    <programme start="20260815172000 +0900" stop="20260815175000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 10R 17:30発走 3歳以上1勝クラス 1,400 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
+⏰ 発走予定: 17:30
+📢 3歳以上1勝クラス 1,400 （ダ）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815152500 +0900" stop="20260815160500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
+    <programme start="20260815175000 +0900" stop="20260815182000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 11R 18:00発走 3歳以上1勝クラス 1,600 （芝）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
+⏰ 発走予定: 18:00
+📢 3歳以上1勝クラス 1,600 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815160500 +0900" stop="20260815164500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
+    <programme start="20260815182000 +0900" stop="20260815190000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 12R 18:30発走 3歳未勝利 1,200 （ダ）</title>
+        <desc lang="ja">🏇 JRA 中京
+⏰ 発走予定: 18:30
+📢 3歳未勝利 1,200 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815164500 +0900" stop="20260815235900 +0900" channel="jra.west">
+    <programme start="20260815190000 +0900" stop="20260815235900 +0900" channel="jra.west">
         <title lang="ja">🏁 JRA 本日開催終了 JRA WEST</title>
-        <desc lang="ja">京都・阪神・中京・小倉の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">中京の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815094000 +0900" channel="jra.hokkaido">
         <title lang="ja">⏳ 待機 JRA HOKKAIDO / 札幌</title>
@@ -3315,177 +2811,93 @@
 1R発走予定 10:00
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815095000 +0900" stop="20260815101500 +0900" channel="jra.hokkaido">
+    <programme start="20260815095000 +0900" stop="20260815102000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 10:00
 📢 3歳未勝利 1,700 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815095000 +0900" stop="20260815102000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 1R 10:00発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815102000 +0900" stop="20260815104500 +0900" channel="jra.hokkaido">
+    <programme start="20260815102000 +0900" stop="20260815105000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 10:30
 📢 2歳未勝利 1,800 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815102000 +0900" stop="20260815105000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 2R 10:30発走 2歳未勝利 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,800 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815105000 +0900" stop="20260815111500 +0900" channel="jra.hokkaido">
+    <programme start="20260815105000 +0900" stop="20260815112000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 11:00
 📢 3歳未勝利 1,000 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815105000 +0900" stop="20260815112000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 3R 11:00発走 3歳未勝利 1,000 （ダ）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 11:00
-📢 3歳未勝利 1,000 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815112000 +0900" stop="20260815114500 +0900" channel="jra.hokkaido">
+    <programme start="20260815112000 +0900" stop="20260815121000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 11:30
 📢 3歳未勝利 2,400 （ダ）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815112000 +0900" stop="20260815121000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 4R 11:30発走 3歳未勝利 2,400 （ダ）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 11:30
-📢 3歳未勝利 2,400 （ダ）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815121000 +0900" stop="20260815123500 +0900" channel="jra.hokkaido">
+    <programme start="20260815121000 +0900" stop="20260815124000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 5R 12:20発走 2歳新馬 1,200 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 12:20
 📢 2歳新馬 1,200 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815121000 +0900" stop="20260815124000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 5R 12:20発走 2歳新馬 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,200 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815124000 +0900" stop="20260815130500 +0900" channel="jra.hokkaido">
+    <programme start="20260815124000 +0900" stop="20260815131000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 12:50
 📢 3歳未勝利 1,500 （芝）
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815124000 +0900" stop="20260815131000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 6R 12:50発走 3歳未勝利 1,500 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 12:50
-📢 3歳未勝利 1,500 （芝）
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815131000 +0900" stop="20260815133500 +0900" channel="jra.hokkaido">
+    <programme start="20260815131000 +0900" stop="20260815134000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 13:20
 📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815131000 +0900" stop="20260815134000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 7R 13:20発走 3歳以上1勝クラス 2,000 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 13:20
-📢 3歳以上1勝クラス 2,000 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134000 +0900" stop="20260815140500 +0900" channel="jra.hokkaido">
+    <programme start="20260815134000 +0900" stop="20260815141500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 13:50
 📢 3歳以上1勝クラス 1,700 （ダ）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815134000 +0900" stop="20260815141500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 8R 13:50発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 13:50
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815141500 +0900" stop="20260815144000 +0900" channel="jra.hokkaido">
+    <programme start="20260815141500 +0900" stop="20260815145000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 14:25
 📢 コスモス賞 2歳オープン 1,800 （芝）別定
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815141500 +0900" stop="20260815145000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 9R 14:25発走 コスモス賞 2歳オープン 1,800 （芝）別定</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 14:25
-📢 コスモス賞 2歳オープン 1,800 （芝）別定
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815145000 +0900" stop="20260815151500 +0900" channel="jra.hokkaido">
+    <programme start="20260815145000 +0900" stop="20260815152500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 15:00
 📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815145000 +0900" stop="20260815152500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 10R 15:00発走 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 15:00
-📢 知床特別 3歳以上2勝クラス 1,200 （芝）（牝）定量
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815152500 +0900" stop="20260815155000 +0900" channel="jra.hokkaido">
+    <programme start="20260815152500 +0900" stop="20260815160500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 15:35
 📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815152500 +0900" stop="20260815160500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 11R 15:35発走 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 15:35
-📢 報知杯大雪ハンデキャップ 3歳以上3勝クラス 1,700 （ダ）ハンデ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815160500 +0900" stop="20260815163000 +0900" channel="jra.hokkaido">
+    <programme start="20260815160500 +0900" stop="20260815164500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 16:15
 📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
 📅 2026年08月15日</desc>
     </programme>
-    <programme start="20260815160500 +0900" stop="20260815164500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 12R 16:15発走 積丹特別 3歳以上1勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 16:15
-📢 積丹特別 3歳以上1勝クラス 2,600 （芝）定量
-📅 2026年08月15日</desc>
-    </programme>
     <programme start="20260815164500 +0900" stop="20260815235900 +0900" channel="jra.hokkaido">
         <title lang="ja">🏁 JRA 本日開催終了 JRA HOKKAIDO</title>
-        <desc lang="ja">札幌・函館の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.kawaguchi">
         <title lang="ja">📅 川口（オートレース）</title>
@@ -4051,697 +3463,193 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月16日
 当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816094000 +0900" channel="jra.east">
-        <title lang="ja">⏳ 待機 JRA EAST / 東京</title>
-        <desc lang="ja">🏇 JRA 東京
-1R発走予定 10:00
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
+    <programme start="20260816010000 +0900" stop="20260816092000 +0900" channel="jra.east">
+        <title lang="ja">⏳ 待機 JRA EAST / 新潟</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
+1R発走予定 09:40
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816095000 +0900" stop="20260816102000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
+    <programme start="20260816093000 +0900" stop="20260816100000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 1R 09:40発走 2歳未勝利 1,600 （芝・外）（牝）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
+⏰ 発走予定: 09:40
+📢 2歳未勝利 1,600 （芝・外）（牝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816102000 +0900" stop="20260816105000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
+    <programme start="20260816100000 +0900" stop="20260816103000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 2R 10:10発走 3歳未勝利 2,400 （芝）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
+⏰ 発走予定: 10:10
+📢 3歳未勝利 2,400 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816105000 +0900" stop="20260816112000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
+    <programme start="20260816103000 +0900" stop="20260816110000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 3R 10:40発走 2歳未勝利 1,200 （ダ）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
+⏰ 発走予定: 10:40
+📢 2歳未勝利 1,200 （ダ）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816112000 +0900" stop="20260816121000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 5R 12:20発走 2歳新馬 1,800 （芝）</title>
+    <programme start="20260816110000 +0900" stop="20260816113000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 4R 11:10発走 2歳新馬 1,600 （芝・外）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
+⏰ 発走予定: 11:10
+📢 2歳新馬 1,600 （芝・外）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816121000 +0900" stop="20260816124000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
+    <programme start="20260816113000 +0900" stop="20260816144000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 5R 11:40発走 3歳以上1勝クラス 1,800 （芝・外）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
+⏰ 発走予定: 11:40
+📢 3歳以上1勝クラス 1,800 （芝・外）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816124000 +0900" stop="20260816131500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
+    <programme start="20260816144000 +0900" stop="20260816151500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 6R 14:50発走 稲妻ステークス 3歳以上3勝クラス 1,000 （芝・直）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
+⏰ 発走予定: 14:50
+📢 稲妻ステークス 3歳以上3勝クラス 1,000 （芝・直）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816131500 +0900" stop="20260816135000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
+    <programme start="20260816151500 +0900" stop="20260816155500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 7R 15:25発走 NST賞 3歳以上オープン 1,200 （ダ）ハンデ</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
+⏰ 発走予定: 15:25
+📢 NST賞 3歳以上オープン 1,200 （ダ）ハンデ
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816135000 +0900" stop="20260816142500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
+    <programme start="20260816155500 +0900" stop="20260816163000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 8R 16:05発走 瀬波温泉特別 3歳以上2勝クラス 1,800 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
+⏰ 発走予定: 16:05
+📢 瀬波温泉特別 3歳以上2勝クラス 1,800 （ダ）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816142500 +0900" stop="20260816150000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
+    <programme start="20260816163000 +0900" stop="20260816170500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 9R 16:40発走 障害3歳以上未勝利 2,850 （芝・外→内）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
+⏰ 発走予定: 16:40
+📢 障害3歳以上未勝利 2,850 （芝・外→内）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816150000 +0900" stop="20260816153500 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
+    <programme start="20260816170500 +0900" stop="20260816173500 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 10R 17:15発走 3歳未勝利 1,800 （ダ）（牝）</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
+⏰ 発走予定: 17:15
+📢 3歳未勝利 1,800 （ダ）（牝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816153500 +0900" stop="20260816162000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.east">
-        <title lang="ja">🏇 東京 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 東京
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.east">
-        <title lang="ja">🏇 中山 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 中山
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.east">
-        <title lang="ja">🏇 新潟 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
+    <programme start="20260816173500 +0900" stop="20260816181000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 11R 17:45発走 3歳以上1勝クラス 2,400 （芝）定量</title>
         <desc lang="ja">🏇 JRA 新潟
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
+⏰ 発走予定: 17:45
+📢 3歳以上1勝クラス 2,400 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816162000 +0900" stop="20260816170000 +0900" channel="jra.east">
-        <title lang="ja">🏇 福島 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 福島
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
+    <programme start="20260816181000 +0900" stop="20260816185000 +0900" channel="jra.east">
+        <title lang="ja">🏇 新潟 12R 18:20発走 3歳未勝利 1,800 （ダ）</title>
+        <desc lang="ja">🏇 JRA 新潟
+⏰ 発走予定: 18:20
+📢 3歳未勝利 1,800 （ダ）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816170000 +0900" stop="20260816235900 +0900" channel="jra.east">
+    <programme start="20260816185000 +0900" stop="20260816235900 +0900" channel="jra.east">
         <title lang="ja">🏁 JRA 本日開催終了 JRA EAST</title>
-        <desc lang="ja">東京・中山・新潟・福島の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">新潟の本日のJRA開催は終了しました。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816094000 +0900" channel="jra.west">
-        <title lang="ja">⏳ 待機 JRA WEST / 京都</title>
-        <desc lang="ja">🏇 JRA 京都
-1R発走予定 10:00
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
+    <programme start="20260816010000 +0900" stop="20260816093000 +0900" channel="jra.west">
+        <title lang="ja">⏳ 待機 JRA WEST / 中京</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
+1R発走予定 09:50
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816095000 +0900" stop="20260816102000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 10:30
+    <programme start="20260816094000 +0900" stop="20260816101000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 1R 09:50発走 2歳未勝利 1,200 （芝）</title>
+        <desc lang="ja">🏇 JRA 中京
+⏰ 発走予定: 09:50
 📢 2歳未勝利 1,200 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
+    <programme start="20260816101000 +0900" stop="20260816104000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 2R 10:20発走 2歳新馬 1,400 （ダ）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
+⏰ 発走予定: 10:20
+📢 2歳新馬 1,400 （ダ）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816102000 +0900" stop="20260816105000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
+    <programme start="20260816104000 +0900" stop="20260816111000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 3R 10:50発走 2歳新馬 1,600 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
+⏰ 発走予定: 10:50
+📢 2歳新馬 1,600 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816105000 +0900" stop="20260816112000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
+    <programme start="20260816111000 +0900" stop="20260816114000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 4R 11:20発走 3歳未勝利 2,000 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816121000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816124000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816131500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 13:25
+⏰ 発走予定: 11:20
 📢 3歳未勝利 2,000 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
+    <programme start="20260816114000 +0900" stop="20260816145000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 5R 11:50発走 3歳未勝利 1,400 （ダ）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
+⏰ 発走予定: 11:50
+📢 3歳未勝利 1,400 （ダ）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816131500 +0900" stop="20260816135000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
+    <programme start="20260816145000 +0900" stop="20260816152500 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 6R 15:00発走 長久手特別 3歳以上2勝クラス 2,000 （芝）（牝）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
+⏰ 発走予定: 15:00
+📢 長久手特別 3歳以上2勝クラス 2,000 （芝）（牝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816135000 +0900" stop="20260816142500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
+    <programme start="20260816152500 +0900" stop="20260816160500 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 7R 15:35発走 サマーマイルシリーズ 第74回 中京記念（GⅢ） 3歳以上オープン 1,600 （芝）別定</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
+⏰ 発走予定: 15:35
+📢 サマーマイルシリーズ 第74回 中京記念（GⅢ） 3歳以上オープン 1,600 （芝）別定
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816142500 +0900" stop="20260816150000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
+    <programme start="20260816160500 +0900" stop="20260816164500 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 8R 16:15発走 大垣特別 3歳以上2勝クラス 1,400 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
+⏰ 発走予定: 16:15
+📢 大垣特別 3歳以上2勝クラス 1,400 （ダ）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816150000 +0900" stop="20260816153500 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
+    <programme start="20260816164500 +0900" stop="20260816172000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 9R 16:55発走 3歳未勝利 2,200 （芝）</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
+⏰ 発走予定: 16:55
+📢 3歳未勝利 2,200 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816153500 +0900" stop="20260816162000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.west">
-        <title lang="ja">🏇 京都 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 京都
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.west">
-        <title lang="ja">🏇 阪神 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 阪神
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.west">
-        <title lang="ja">🏇 中京 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
+    <programme start="20260816172000 +0900" stop="20260816175000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 10R 17:30発走 3歳以上1勝クラス 1,800 （ダ）（牝）定量</title>
         <desc lang="ja">🏇 JRA 中京
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
+⏰ 発走予定: 17:30
+📢 3歳以上1勝クラス 1,800 （ダ）（牝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816162000 +0900" stop="20260816170000 +0900" channel="jra.west">
-        <title lang="ja">🏇 小倉 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 小倉
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
+    <programme start="20260816175000 +0900" stop="20260816182000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 11R 18:00発走 3歳以上1勝クラス 1,400 （芝）定量</title>
+        <desc lang="ja">🏇 JRA 中京
+⏰ 発走予定: 18:00
+📢 3歳以上1勝クラス 1,400 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816170000 +0900" stop="20260816235900 +0900" channel="jra.west">
+    <programme start="20260816182000 +0900" stop="20260816190000 +0900" channel="jra.west">
+        <title lang="ja">🏇 中京 12R 18:30発走 3歳未勝利 1,800 （ダ）</title>
+        <desc lang="ja">🏇 JRA 中京
+⏰ 発走予定: 18:30
+📢 3歳未勝利 1,800 （ダ）
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816190000 +0900" stop="20260816235900 +0900" channel="jra.west">
         <title lang="ja">🏁 JRA 本日開催終了 JRA WEST</title>
-        <desc lang="ja">京都・阪神・中京・小倉の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">中京の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816094000 +0900" channel="jra.hokkaido">
         <title lang="ja">⏳ 待機 JRA HOKKAIDO / 札幌</title>
@@ -4749,177 +3657,93 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 1R発走予定 10:00
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816095000 +0900" stop="20260816101500 +0900" channel="jra.hokkaido">
+    <programme start="20260816095000 +0900" stop="20260816102000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 10:00
 📢 3歳未勝利 1,700 （ダ）（牝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816095000 +0900" stop="20260816102000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 1R 10:00発走 3歳未勝利 1,700 （ダ）（牝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 10:00
-📢 3歳未勝利 1,700 （ダ）（牝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816102000 +0900" stop="20260816104500 +0900" channel="jra.hokkaido">
+    <programme start="20260816102000 +0900" stop="20260816105000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 10:30
 📢 2歳未勝利 1,200 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816102000 +0900" stop="20260816105000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 2R 10:30発走 2歳未勝利 1,200 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 10:30
-📢 2歳未勝利 1,200 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816105000 +0900" stop="20260816111500 +0900" channel="jra.hokkaido">
+    <programme start="20260816105000 +0900" stop="20260816112000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 11:00
 📢 3歳以上1勝クラス 1,800 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816105000 +0900" stop="20260816112000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 3R 11:00発走 3歳以上1勝クラス 1,800 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 11:00
-📢 3歳以上1勝クラス 1,800 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816112000 +0900" stop="20260816114500 +0900" channel="jra.hokkaido">
+    <programme start="20260816112000 +0900" stop="20260816121000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 11:30
 📢 3歳未勝利 1,700 （ダ）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816112000 +0900" stop="20260816121000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 4R 11:30発走 3歳未勝利 1,700 （ダ）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 11:30
-📢 3歳未勝利 1,700 （ダ）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816121000 +0900" stop="20260816123500 +0900" channel="jra.hokkaido">
+    <programme start="20260816121000 +0900" stop="20260816124000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 5R 12:20発走 2歳新馬 1,800 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 12:20
 📢 2歳新馬 1,800 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816121000 +0900" stop="20260816124000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 5R 12:20発走 2歳新馬 1,800 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 12:20
-📢 2歳新馬 1,800 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816124000 +0900" stop="20260816130500 +0900" channel="jra.hokkaido">
+    <programme start="20260816124000 +0900" stop="20260816131500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 12:50
 📢 3歳以上1勝クラス 1,000 （ダ）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816124000 +0900" stop="20260816131500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 6R 12:50発走 3歳以上1勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 12:50
-📢 3歳以上1勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816131500 +0900" stop="20260816134000 +0900" channel="jra.hokkaido">
+    <programme start="20260816131500 +0900" stop="20260816135000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 13:25
 📢 3歳未勝利 2,000 （芝）
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816131500 +0900" stop="20260816135000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 7R 13:25発走 3歳未勝利 2,000 （芝）</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 13:25
-📢 3歳未勝利 2,000 （芝）
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816135000 +0900" stop="20260816141500 +0900" channel="jra.hokkaido">
+    <programme start="20260816135000 +0900" stop="20260816142500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 14:00
 📢 3歳以上1勝クラス 1,700 （ダ）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816135000 +0900" stop="20260816142500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 8R 14:00発走 3歳以上1勝クラス 1,700 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 14:00
-📢 3歳以上1勝クラス 1,700 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816142500 +0900" stop="20260816145000 +0900" channel="jra.hokkaido">
+    <programme start="20260816142500 +0900" stop="20260816150000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 14:35
 📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816142500 +0900" stop="20260816150000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 9R 14:35発走 小樽特別 3歳以上1勝クラス 1,200 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 14:35
-📢 小樽特別 3歳以上1勝クラス 1,200 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816150000 +0900" stop="20260816152500 +0900" channel="jra.hokkaido">
+    <programme start="20260816150000 +0900" stop="20260816153500 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 15:10
 📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816150000 +0900" stop="20260816153500 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 10R 15:10発走 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 15:10
-📢 大通公園特別 3歳以上2勝クラス 1,000 （ダ）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816153500 +0900" stop="20260816160000 +0900" channel="jra.hokkaido">
+    <programme start="20260816153500 +0900" stop="20260816162000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 15:45
 📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816153500 +0900" stop="20260816162000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 11R 15:45発走 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 15:45
-📢 サマー2000シリーズ 第62回 札幌記念（GⅡ） 3歳以上オープン 2,000 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816162000 +0900" stop="20260816164500 +0900" channel="jra.hokkaido">
+    <programme start="20260816162000 +0900" stop="20260816170000 +0900" channel="jra.hokkaido">
         <title lang="ja">🏇 札幌 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 16:30
 📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
 📅 2026年08月16日</desc>
     </programme>
-    <programme start="20260816162000 +0900" stop="20260816170000 +0900" channel="jra.hokkaido">
-        <title lang="ja">🏇 函館 12R 16:30発走 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量</title>
-        <desc lang="ja">🏇 JRA 函館
-⏰ 発走予定: 16:30
-📢 阿寒湖特別 3歳以上2勝クラス 2,600 （芝）定量
-📅 2026年08月16日</desc>
-    </programme>
     <programme start="20260816170000 +0900" stop="20260816235900 +0900" channel="jra.hokkaido">
         <title lang="ja">🏁 JRA 本日開催終了 JRA HOKKAIDO</title>
-        <desc lang="ja">札幌・函館の本日のJRA開催は終了しました。</desc>
+        <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.kawaguchi">
         <title lang="ja">📅 川口（オートレース）</title>

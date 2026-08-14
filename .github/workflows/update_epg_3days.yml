@@ -1,0 +1,35 @@
+name: Update Public Sports EPG 3 Days
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Generate 3-day EPG
+        run: python main_epg_3days.py
+
+      - name: Validate XML
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epg.xml
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Update 3-day public sports EPG"
+          git push

@@ -1,6 +1,8 @@
 name: Update Public Sports EPG 3 Days
 
 on:
+  schedule:
+    - cron: '0 23 * * *'
   workflow_dispatch:
 
 permissions:

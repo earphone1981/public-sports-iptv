@@ -16,4 +16,4 @@ jobs:
           python-version: "3.12"
 
       - name: Test JRA fetch
-        run: python test_jra_0815.py
+      run: python test_jra_0815_debug.py

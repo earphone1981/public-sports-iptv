@@ -1801,7 +1801,7 @@
 ⏰ 発走予定: 20:56
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814210900 +0900" stop="20260814213200 +0900" channel="boat.shimonoseki">
+    <programme start="20260814210900 +0900" stop="20260814213400 +0900" channel="boat.shimonoseki">
         <title lang="ja">🚤 19 下関 9R 21:19発走 🌙ナイター ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念</title>
         <desc lang="ja">🚤 ボートレース 19 下関
 📢 ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念
@@ -1809,20 +1809,20 @@
 ⏰ 発走予定: 21:19
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814213200 +0900" stop="20260814215500 +0900" channel="boat.shimonoseki">
-        <title lang="ja">🚤 19 下関 10R 21:42発走 🌙ナイター ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念</title>
+    <programme start="20260814213400 +0900" stop="20260814215700 +0900" channel="boat.shimonoseki">
+        <title lang="ja">🚤 19 下関 10R 21:44発走 🌙ナイター ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念</title>
         <desc lang="ja">🚤 ボートレース 19 下関
 📢 ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念
 🌙 開催区分: ナイター
-⏰ 発走予定: 21:42
+⏰ 発走予定: 21:44
 📅 2026年08月14日</desc>
     </programme>
-    <programme start="20260814215500 +0900" stop="20260814222000 +0900" channel="boat.shimonoseki">
-        <title lang="ja">🚤 19 下関 11R 22:05発走 🌙ナイター ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念</title>
+    <programme start="20260814215700 +0900" stop="20260814222000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">🚤 19 下関 11R 22:07発走 🌙ナイター ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念</title>
         <desc lang="ja">🚤 ボートレース 19 下関
 📢 ＭＮＢＲ下関４ｔｈふく〜る下関オープン１４周年記念
 🌙 開催区分: ナイター
-⏰ 発走予定: 22:05
+⏰ 発走予定: 22:07
 📅 2026年08月14日</desc>
     </programme>
     <programme start="20260814222000 +0900" stop="20260814230000 +0900" channel="boat.shimonoseki">
@@ -3187,44 +3187,34 @@
         <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.kawaguchi">
-        <title lang="ja">💤 本日非開催 川口（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
+        <title lang="ja">📅 川口（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 川口
+📅 2026年08月15日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815134500 +0900" channel="auto.isesaki">
-        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
+    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
+        <title lang="ja">📅 伊勢崎（オートレース）</title>
         <desc lang="ja">🏍️ オートレース 伊勢崎
-📢 オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134500 +0900" stop="20260815205000 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 5日目</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-🏆 グレード: SG
-📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 開催日次: 5日目
-⏰ 公式LIVE予定: 13:45～20:50
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815205000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
-        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">伊勢崎の2026年08月15日の開催予定時間は終了しました。</desc>
+📅 2026年08月15日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
+        <title lang="ja">📅 浜松（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 浜松
+📅 2026年08月15日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 2日目</title>
+        <title lang="ja">📅 飯塚（オートレース）</title>
         <desc lang="ja">🏍️ オートレース 飯塚
-🏆 グレード: 普通開催
-📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 開催日次: 2日目
-⏰ 公式LIVE予定: 21:00～24:50
-📅 2026年08月15日</desc>
+📅 2026年08月15日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.sanyo">
-        <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
+        <title lang="ja">📅 山陽（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 山陽
+📅 2026年08月15日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815145700 +0900" channel="boat.kiryu">
         <title lang="ja">⏳ 待機 01 桐生 🌙ナイター</title>
@@ -3868,14 +3858,112 @@
         <title lang="ja">🏁 終了 06 浜名湖 ☀️デイ</title>
         <desc lang="ja">06 浜名湖の本日のボートレースは終了しました。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="boat.gamagori">
-        <title lang="ja">📅 開催予定 07 蒲郡 🚤開催 🚤ボートレース</title>
+    <programme start="20260815010000 +0900" stop="20260815150500 +0900" channel="boat.gamagori">
+        <title lang="ja">⏳ 待機 07 蒲郡 🌙ナイター</title>
         <desc lang="ja">🚤 ボートレース 07 蒲郡
 📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
-🚤 開催区分: 開催
-📅 2026年08月15日
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は公開後に自動反映します。</desc>
+1R 15:25 発走予定
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815151500 +0900" stop="20260815154000 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 1R 15:25発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:25
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815154000 +0900" stop="20260815160900 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 2R 15:50発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:50
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815160900 +0900" stop="20260815163400 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 3R 16:19発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:19
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815163400 +0900" stop="20260815170100 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 4R 16:44発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:44
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815170100 +0900" stop="20260815172600 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 5R 17:11発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:11
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815172600 +0900" stop="20260815175300 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 6R 17:36発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:36
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815175300 +0900" stop="20260815183000 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 7R 18:03発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:03
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815183000 +0900" stop="20260815190100 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 8R 18:40発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:40
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815190100 +0900" stop="20260815193200 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 9R 19:11発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:11
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815193200 +0900" stop="20260815200300 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 10R 19:42発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:42
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815200300 +0900" stop="20260815203100 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 11R 20:13発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:13
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815203100 +0900" stop="20260815211100 +0900" channel="boat.gamagori">
+        <title lang="ja">🚤 07 蒲郡 12R 20:41発走 🌙ナイター 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 第１０回愛知・名古屋アジア・アジアパラ大会協賛競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:41
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815211100 +0900" stop="20260815235900 +0900" channel="boat.gamagori">
+        <title lang="ja">🏁 終了 07 蒲郡 🌙ナイター</title>
+        <desc lang="ja">07 蒲郡の本日のボートレースは終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815102000 +0900" channel="boat.tokoname">
         <title lang="ja">⏳ 待機 08 常滑 ☀️デイ</title>
@@ -6029,44 +6117,34 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.kawaguchi">
-        <title lang="ja">💤 本日非開催 川口（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
+        <title lang="ja">📅 川口（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 川口
+📅 2026年08月16日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816134500 +0900" channel="auto.isesaki">
-        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
+    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
+        <title lang="ja">📅 伊勢崎（オートレース）</title>
         <desc lang="ja">🏍️ オートレース 伊勢崎
-📢 オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816134500 +0900" stop="20260816205000 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 6日目</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-🏆 グレード: SG
-📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 開催日次: 6日目
-⏰ 公式LIVE予定: 13:45～20:50
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816205000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
-        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">伊勢崎の2026年08月16日の開催予定時間は終了しました。</desc>
+📅 2026年08月16日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
+        <title lang="ja">📅 浜松（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 浜松
+📅 2026年08月16日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 3日目</title>
+        <title lang="ja">📅 飯塚（オートレース）</title>
         <desc lang="ja">🏍️ オートレース 飯塚
-🏆 グレード: 普通開催
-📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 開催日次: 3日目
-⏰ 公式LIVE予定: 21:00～24:50
-📅 2026年08月16日</desc>
+📅 2026年08月16日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.sanyo">
-        <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
+        <title lang="ja">📅 山陽（オートレース）</title>
+        <desc lang="ja">🏍️ オートレース 山陽
+📅 2026年08月16日
+当日データ取得時に詳細EPGへ自動更新します。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="boat.kiryu">
         <title lang="ja">💤 本日非開催 01 桐生（ボートレース）</title>

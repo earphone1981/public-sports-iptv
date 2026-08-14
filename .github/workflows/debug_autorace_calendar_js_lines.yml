@@ -1,0 +1,20 @@
+name: Debug AutoRace Calendar JS Lines
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Show calendar.js lines 220-250
+        run: python debug_autorace_calendar_js_lines.py

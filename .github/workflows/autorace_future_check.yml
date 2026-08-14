@@ -1,0 +1,20 @@
+name: "[CHECK] AutoRace Future Calendar API"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Check official AutoRace future calendar
+        run: python autorace_future_check.py

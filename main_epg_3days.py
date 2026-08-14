@@ -83,10 +83,6 @@ BOAT_MAP = {
     "24 大村": "boat.omura",
 }
 
-BOAT_TODAY_URL = (
-    "https://raw.githubusercontent.com/"
-    "earphone1981/ganble/main/boatrace_today.json"
-)
 
 
 BOAT_OFFICIAL_INDEX_URL = (
@@ -137,10 +133,6 @@ ICON_MAP = {
     "boat": "🚤",
 }
 
-BOAT_TODAY_URL = (
-    "https://raw.githubusercontent.com/"
-    "earphone1981/ganble/main/boatrace_today.json"
-)
 
 GCH_GUIDES_URL = (
     "https://github.com/karenda-jp/etc/raw/refs/heads/main/guides.xml"
@@ -170,10 +162,6 @@ def fetch_json(url, label):
     except Exception as e:
         print(f"{label}: 取得失敗: {e}")
         return {}
-
-
-def load_boatrace_today():
-    return fetch_json(BOAT_TODAY_URL, "BOAT JSON")
 
 
 def add_programme(tv, channel, start_dt, stop_dt, title, desc=""):
@@ -1210,7 +1198,19 @@ def fetch_boat_week_schedule(today_date, days):
 
         active_codes = extract_boat_active_codes(index_html)
 
-        # 未来日の0場は「非開催」と即断せず、公式掲載待ちとして扱う。
+        # BOAT RACE公式は実質「今日＋明日」までの詳細取得を基本とする。
+        # 3日目が未公表（0場）の場合は非開催と断定せず、
+        # 全24場を区分別の仮時間でEPG表示する。
+        if not active_codes and offset >= 2:
+            week[date_str] = {
+                "ok": True,
+                "status": "provisional_all",
+                "venues": {},
+            }
+            print(" 3日目未公表 -> 全24場を仮時間で生成")
+            continue
+
+        # 明日までで0場の場合も、掲載遅延の可能性があるため確認待ち。
         if not active_codes and d > today_date:
             week[date_str] = {
                 "ok": True,
@@ -1291,7 +1291,26 @@ def build_boat_race_epg(
 
         info = venues.get(v_name)
         if not info:
-            if schedule_status == "pending":
+            if schedule_status == "provisional_all":
+                # 3日目は公式詳細未公表のため、開催・非開催を断定せず
+                # デイ相当の仮枠を全24場へ入れて3日分EPGを維持する。
+                add_provisional_event(
+                    tv,
+                    tvg_id,
+                    date_str,
+                    v_name,
+                    "ボートレース",
+                    "🚤",
+                    "デイ",
+                    JST,
+                    today_display,
+                    extra_title="開催予定（公式詳細未公表）",
+                    extra_desc=[
+                        "BOAT RACE公式の3日目詳細はまだ未公表です。",
+                        "開催・非開催および実際の発走時刻は未確定です。",
+                    ],
+                )
+            elif schedule_status == "pending":
                 add_programme(
                     tv,
                     tvg_id,
@@ -1438,125 +1457,6 @@ def build_boat_race_epg(
 
     return True
 
-
-
-def build_boat_epg(
-    tv,
-    date_str,
-    boat_today,
-    JST,
-    today_str,
-    today_display,
-):
-    for v_name, tvg_id in BOAT_MAP.items():
-        day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
-        ).replace(tzinfo=JST)
-
-        day_end = datetime.datetime.strptime(
-            f"{date_str} 23:59", "%Y%m%d %H:%M"
-        ).replace(tzinfo=JST)
-
-        if date_str != today_str:
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                f"📅 {v_name} ボートレース",
-                f"{today_display} {v_name} ボートレース",
-            )
-            continue
-
-        info = boat_today.get(v_name, {})
-
-        if not isinstance(info, dict) or not info.get("live"):
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                f"💤 本日非開催 {v_name}（ボートレース）",
-                f"{v_name}のライブ配信URLは取得されていません。",
-            )
-            continue
-
-        start_text = info.get("start")
-        end_text = info.get("end")
-        day_type = info.get("day_type", "開催")
-        emoji = info.get("emoji", "🚤")
-
-        if not start_text or not end_text:
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                day_end,
-                f"🔴 LIVE {v_name} 🚤ボートレース",
-                f"🚤 ボートレース {v_name}\n"
-                f"✅ 配信URL取得済み\n"
-                f"📅 {today_display}",
-            )
-            continue
-
-        start_dt = datetime.datetime.strptime(
-            f"{date_str} {start_text}", "%Y%m%d %H:%M"
-        ).replace(tzinfo=JST)
-
-        end_dt = datetime.datetime.strptime(
-            f"{date_str} {end_text}", "%Y%m%d %H:%M"
-        ).replace(tzinfo=JST)
-
-        if end_dt <= start_dt:
-            end_dt += datetime.timedelta(days=1)
-
-        pre_start = start_dt - datetime.timedelta(minutes=10)
-
-        desc = (
-            f"🚤 ボートレース {v_name}\n"
-            f"⏰ 配信予定: {start_text}～{end_text}\n"
-            f"{emoji} 開催区分: {day_type}\n"
-            f"📅 {today_display}"
-        )
-
-        if day_start < pre_start:
-            add_programme(
-                tv,
-                tvg_id,
-                day_start,
-                pre_start,
-                f"⏳ 待機 {v_name} {emoji}{day_type} {start_text}開始",
-                desc,
-            )
-
-        if pre_start < start_dt:
-            add_programme(
-                tv,
-                tvg_id,
-                max(pre_start, day_start),
-                start_dt,
-                f"⏳ まもなく開始 {v_name} {emoji}{day_type}",
-                desc,
-            )
-
-        add_programme(
-            tv,
-            tvg_id,
-            start_dt,
-            end_dt,
-            f"🔴 LIVE {v_name} {emoji}{day_type} 🚤ボートレース",
-            desc,
-        )
-
-        if end_dt < day_end:
-            add_programme(
-                tv,
-                tvg_id,
-                end_dt,
-                day_end,
-                f"🏁 終了 {v_name} {emoji}{day_type}",
-                f"{v_name}の本日のライブ配信は終了しました。",
-            )
 
 
 
@@ -2418,8 +2318,6 @@ def build_epg_xml():
 
     JST = datetime.timezone(datetime.timedelta(hours=9))
 
-    boat_today = load_boatrace_today()
-
     today_str = datetime.datetime.now(JST).strftime("%Y%m%d")
 
     all_channels = {
@@ -2533,9 +2431,9 @@ def build_epg_xml():
 
         # -------------------------------------------------
         # ボートレース
-        # BOAT RACE公式サイトの指定日開催一覧 + raceindex を使い、
-        # 今日から明後日まで（3日分）開催場と1R～12R発走予定を自動EPG化。
-        # 公式ページ取得失敗時だけ従来JSON方式へフォールバック。
+        # BOAT RACE公式サイトの指定日開催一覧 + raceindex を使用。
+        # 実時刻が取得できれば実時刻、開催確認済みで時刻不明なら仮時間。
+        # 公式ページ自体を取得できない場合は「開催情報確認待ち」とする。
         # -------------------------------------------------
         used_boat_official = build_boat_race_epg(
             tv,
@@ -2546,14 +2444,23 @@ def build_epg_xml():
         )
 
         if not used_boat_official:
-            build_boat_epg(
-                tv,
-                date_str,
-                boat_today,
-                JST,
-                today_str,
-                today_display,
-            )
+            day_start = datetime.datetime.strptime(
+                f"{date_str} 01:00", "%Y%m%d %H:%M"
+            ).replace(tzinfo=JST)
+            day_end = datetime.datetime.strptime(
+                f"{date_str} 23:59", "%Y%m%d %H:%M"
+            ).replace(tzinfo=JST)
+
+            for v_name, tvg_id in BOAT_MAP.items():
+                add_programme(
+                    tv,
+                    tvg_id,
+                    day_start,
+                    day_end,
+                    f"⏳ 開催情報確認待ち {v_name}（ボートレース）",
+                    f"BOAT RACE公式の{today_display}開催情報を取得できませんでした。\n"
+                    "開催・非開催をまだ確定していません。",
+                )
 
     # -------------------------------------------------
     # グリーンチャンネル
@@ -2577,17 +2484,10 @@ def build_epg_xml():
         xml_declaration=True,
     )
 
-    boat_live_count = sum(
-        1
-        for info in boat_today.values()
-        if isinstance(info, dict) and info.get("live")
-    )
-
     print("")
     print("============================")
     print("EPG生成完了")
-    print(f"ボートLIVE: {boat_live_count} / 24")
-    print(f"ボートEPG: BOAT RACE公式 3日分を自動取得")
+    print("ボートEPG: BOAT RACE公式から3日分を直接取得（時刻不明時は仮時間表示）")
     print("競馬: NAR公式から3日分を直接取得（時刻不明時は仮時間表示）")
     print("競輪: KEIRIN.JP公式月間表から3日分を直接生成（仮時間表示）")
     print("オート: AutoRace.JP公式カレンダーから3日分を直接生成（時刻不明時は仮時間表示）")

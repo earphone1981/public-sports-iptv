@@ -1215,48 +1215,17 @@
         <title lang="ja">💤 本日非開催 川口（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815134500 +0900" channel="auto.isesaki">
-        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-📢 オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815134500 +0900" stop="20260815205000 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 5日目</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-🏆 グレード: SG
-📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 開催日次: 5日目
-⏰ 公式LIVE予定: 13:45～20:50
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815205000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
-        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">伊勢崎の2026年08月15日の開催予定時間は終了しました。</desc>
+    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
+        <title lang="ja">💤 本日非開催 伊勢崎（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.hamamatsu">
         <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815203000 +0900" channel="auto.iizuka">
-        <title lang="ja">⏳ 開催待ち 飯塚 ⭐ミッドナイト</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-📢 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815203000 +0900" stop="20260815233000 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 2日目 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-🏆 グレード: 普通開催
-📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 開催日次: 2日目
-⏰ 仮予定: 20:30～23:30
-⚠️ （仮時間）※実際の時間ではありません
-📅 2026年08月15日</desc>
-    </programme>
-    <programme start="20260815233000 +0900" stop="20260815235900 +0900" channel="auto.iizuka">
-        <title lang="ja">🏁 終了 飯塚 ⭐ミッドナイト</title>
-        <desc lang="ja">飯塚の2026年08月15日の開催予定時間は終了しました。</desc>
+    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.iizuka">
+        <title lang="ja">💤 本日非開催 飯塚（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.sanyo">
         <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
@@ -4299,48 +4268,17 @@
         <title lang="ja">💤 本日非開催 川口（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816134500 +0900" channel="auto.isesaki">
-        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-📢 オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816134500 +0900" stop="20260816205000 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 6日目</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-🏆 グレード: SG
-📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 開催日次: 6日目
-⏰ 公式LIVE予定: 13:45～20:50
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816205000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
-        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">伊勢崎の2026年08月16日の開催予定時間は終了しました。</desc>
+    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
+        <title lang="ja">💤 本日非開催 伊勢崎（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.hamamatsu">
         <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816203000 +0900" channel="auto.iizuka">
-        <title lang="ja">⏳ 開催待ち 飯塚 ⭐ミッドナイト</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-📢 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816203000 +0900" stop="20260816233000 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 3日目 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-🏆 グレード: 普通開催
-📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 開催日次: 3日目
-⏰ 仮予定: 20:30～23:30
-⚠️ （仮時間）※実際の時間ではありません
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816233000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
-        <title lang="ja">🏁 終了 飯塚 ⭐ミッドナイト</title>
-        <desc lang="ja">飯塚の2026年08月16日の開催予定時間は終了しました。</desc>
+    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
+        <title lang="ja">💤 本日非開催 飯塚（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.sanyo">
         <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
@@ -5263,48 +5201,17 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">💤 本日非開催 伊勢崎（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月17日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260817010000 +0900" stop="20260817102500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">⏳ 開催待ち 浜松 ☀️デイ</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-📢 鳥ばっちり杯
-📅 2026年08月17日</desc>
-    </programme>
-    <programme start="20260817102500 +0900" stop="20260817165500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">📅 開催予定 浜松 ☀️デイ 【普通開催】 鳥ばっちり杯 1日目</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-🏆 グレード: 普通開催
-📢 開催名: 鳥ばっちり杯
-📅 開催日次: 1日目
-⏰ 公式LIVE予定: 10:25～16:55
-📅 2026年08月17日</desc>
-    </programme>
-    <programme start="20260817165500 +0900" stop="20260817235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏁 終了 浜松 ☀️デイ</title>
-        <desc lang="ja">浜松の2026年08月17日の開催予定時間は終了しました。</desc>
+    <programme start="20260817010000 +0900" stop="20260817235900 +0900" channel="auto.hamamatsu">
+        <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月17日の本場開催はありません。</desc>
     </programme>
     <programme start="20260817010000 +0900" stop="20260817235900 +0900" channel="auto.iizuka">
         <title lang="ja">💤 本日非開催 飯塚（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月17日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260817010000 +0900" stop="20260817203000 +0900" channel="auto.sanyo">
-        <title lang="ja">⏳ 開催待ち 山陽 ⭐ミッドナイト</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-📢 山陽ミッドナイトオートレース 当たるんですCUP
-📅 2026年08月17日</desc>
-    </programme>
-    <programme start="20260817203000 +0900" stop="20260817233000 +0900" channel="auto.sanyo">
-        <title lang="ja">📅 開催予定 山陽 ⭐ミッドナイト 【普通開催】 山陽ミッドナイトオートレース 当たるんですCUP 1日目 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-🏆 グレード: 普通開催
-📢 開催名: 山陽ミッドナイトオートレース 当たるんですCUP
-📅 開催日次: 1日目
-⏰ 仮予定: 20:30～23:30
-⚠️ （仮時間）※実際の時間ではありません
-📅 2026年08月17日</desc>
-    </programme>
-    <programme start="20260817233000 +0900" stop="20260817235900 +0900" channel="auto.sanyo">
-        <title lang="ja">🏁 終了 山陽 ⭐ミッドナイト</title>
-        <desc lang="ja">山陽の2026年08月17日の開催予定時間は終了しました。</desc>
+    <programme start="20260817010000 +0900" stop="20260817235900 +0900" channel="auto.sanyo">
+        <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月17日の本場開催はありません。</desc>
     </programme>
     <programme start="20260817103000 +0900" stop="20260817170000 +0900" channel="boat.kiryu">
         <title lang="ja">🚤 01 桐生 ☀️デイ 開催予定（公式詳細未公表） （仮時間）※実際の時間ではありません</title>

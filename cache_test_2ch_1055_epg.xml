@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="APTV-Cache-Test-1055">
+  <channel id="cachetest.toda.a.1055">
+    <display-name>戸田 CACHE TEST A</display-name>
+  </channel>
+  <channel id="cachetest.toda.b.1055">
+    <display-name>戸田 CACHE TEST B</display-name>
+  </channel>
+
+  <programme start="20260814000000 +0900" stop="20260814120000 +0900" channel="cachetest.toda.a.1055">
+    <title lang="ja">🅰️ 戸田 新規EPG A 10:55</title>
+    <desc lang="ja">APTVキャッシュ分離テスト A</desc>
+  </programme>
+  <programme start="20260814120000 +0900" stop="20260814235959 +0900" channel="cachetest.toda.a.1055">
+    <title lang="ja">🅰️ 戸田 新規EPG A 後半</title>
+    <desc lang="ja">APTVキャッシュ分離テスト A</desc>
+  </programme>
+
+  <programme start="20260814000000 +0900" stop="20260814120000 +0900" channel="cachetest.toda.b.1055">
+    <title lang="ja">🅱️ 戸田 新規EPG B 10:55</title>
+    <desc lang="ja">APTVキャッシュ分離テスト B</desc>
+  </programme>
+  <programme start="20260814120000 +0900" stop="20260814235959 +0900" channel="cachetest.toda.b.1055">
+    <title lang="ja">🅱️ 戸田 新規EPG B 後半</title>
+    <desc lang="ja">APTVキャッシュ分離テスト B</desc>
+  </programme>
+</tv>

@@ -5,6 +5,7 @@ import re
 import urllib.request
 import http.cookiejar
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 
 KEIRIN_MAP = {
     "函館": "keirin.hakodate", "青森": "keirin.aomori", "いわき平": "keirin.iwakitaira", "弥彦": "keirin.yahiko",
@@ -1334,6 +1335,308 @@ def build_boat_epg(
             )
 
 
+
+# -------------------------------------------------
+# KEIRIN.JP future schedule support
+# Future days use official monthly schedule metadata:
+# venue / grade / day pattern / event day.
+# Exact race times are replaced by provisional start times.
+# -------------------------------------------------
+
+KEIRIN_JP_SCHEDULE_URL = (
+    "https://keirin.jp/pc/raceschedule?scym={month}&scyy={year}"
+)
+
+KEIRIN_FUTURE_GRADE_BY_SRC = {
+    "ico_f1.png": "F1",
+    "ico_f2.png": "F2",
+    "ico_g1.png": "G1",
+    "ico_g2.png": "G2",
+    "ico_g3.png": "G3",
+}
+
+KEIRIN_FUTURE_TYPE_BY_SRC = {
+    "ico_kaisai_3.png": ("ナイター", "🌙"),
+    "ico_kaisai_5.png": ("ミッドナイト", "⭐"),
+    "ico_kaisai_8.png": ("モーニング", "🌅"),
+}
+
+KEIRIN_FUTURE_START = {
+    "モーニング": "08:30",
+    "デイ": "10:30",
+    "ナイター": "15:00",
+    "ミッドナイト": "20:30",
+}
+
+
+class KeirinScheduleParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.in_tr = False
+        self.in_td = False
+        self.rows = []
+        self.row = []
+        self.cell = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+
+        if tag == "tr":
+            self.in_tr = True
+            self.row = []
+
+        elif tag == "td" and self.in_tr:
+            self.in_td = True
+            try:
+                colspan = int(attrs.get("colspan", "1") or "1")
+            except Exception:
+                colspan = 1
+
+            self.cell = {
+                "text": [],
+                "imgs": [],
+                "colspan": max(1, colspan),
+            }
+
+        elif tag == "img" and self.in_td and self.cell is not None:
+            self.cell["imgs"].append(
+                {
+                    "src": attrs.get("src", ""),
+                    "alt": attrs.get("alt", ""),
+                    "title": attrs.get("title", ""),
+                }
+            )
+
+    def handle_data(self, data):
+        if self.in_td and self.cell is not None:
+            value = re.sub(r"\s+", " ", data).strip()
+            if value:
+                self.cell["text"].append(value)
+
+    def handle_endtag(self, tag):
+        if tag == "td" and self.in_td:
+            self.in_td = False
+            self.row.append(self.cell)
+            self.cell = None
+
+        elif tag == "tr" and self.in_tr:
+            self.in_tr = False
+            if self.row:
+                self.rows.append(self.row)
+            self.row = []
+
+
+def keirin_schedule_venue(cell):
+    text = re.sub(r"\s+", "", " ".join(cell.get("text", [])))
+    for venue in KEIRIN_MAP:
+        if venue in text:
+            return venue
+    return ""
+
+
+def classify_keirin_future_cell(cell):
+    grade = ""
+    day_type = "デイ"
+    emoji = "☀️"
+
+    combined_text = " ".join(
+        cell.get("text", [])
+        + [x.get("alt", "") for x in cell.get("imgs", [])]
+        + [x.get("title", "") for x in cell.get("imgs", [])]
+    )
+
+    if "ミッドナイト" in combined_text:
+        day_type, emoji = "ミッドナイト", "⭐"
+    elif "モーニング" in combined_text:
+        day_type, emoji = "モーニング", "🌅"
+    elif "ナイター" in combined_text:
+        day_type, emoji = "ナイター", "🌙"
+
+    icons = []
+
+    for img in cell.get("imgs", []):
+        base = img.get("src", "").rsplit("/", 1)[-1]
+        icons.append(base)
+
+        if base in KEIRIN_FUTURE_GRADE_BY_SRC:
+            grade = KEIRIN_FUTURE_GRADE_BY_SRC[base]
+
+        if base in KEIRIN_FUTURE_TYPE_BY_SRC:
+            day_type, emoji = KEIRIN_FUTURE_TYPE_BY_SRC[base]
+
+    # Dokanto! and other auxiliary icons are intentionally ignored.
+    return {
+        "has_event": bool(grade),
+        "grade": grade,
+        "day_type": day_type,
+        "emoji": emoji,
+        "icons": icons,
+    }
+
+
+def keirin_event_day_label(index_in_span, span):
+    if span <= 1:
+        return ""
+    if index_in_span == 0:
+        return "初日"
+    if index_in_span == span - 1:
+        return "最終日"
+    return f"{index_in_span + 1}日目"
+
+
+def fetch_keirin_future_month(year, month):
+    url = KEIRIN_JP_SCHEDULE_URL.format(
+        year=year,
+        month=f"{month:02d}",
+    )
+    source = fetch_text(url, f"KEIRIN.JP schedule {year}-{month:02d}")
+
+    if not source:
+        return {}
+
+    parser = KeirinScheduleParser()
+    parser.feed(source)
+
+    result = {}
+
+    for row in parser.rows:
+        if len(row) < 2:
+            continue
+
+        venue = keirin_schedule_venue(row[0])
+        if not venue:
+            continue
+
+        logical_day = 1
+
+        for cell in row[1:]:
+            span = max(1, int(cell.get("colspan", 1)))
+            info = classify_keirin_future_cell(cell)
+
+            for offset in range(span):
+                day = logical_day + offset
+                if day > 31:
+                    break
+
+                if info["has_event"]:
+                    date_str = f"{year:04d}{month:02d}{day:02d}"
+                    result.setdefault(date_str, {})[venue] = {
+                        **info,
+                        "event_day": keirin_event_day_label(offset, span),
+                        "span": span,
+                    }
+
+            logical_day += span
+
+            if logical_day > 31:
+                break
+
+    return result
+
+
+def build_keirin_future_epg(
+    tv,
+    target_date,
+    month_schedule,
+    JST,
+    today_display,
+):
+    date_str = target_date.strftime("%Y%m%d")
+    day_start = datetime.datetime.strptime(
+        f"{date_str} 01:00",
+        "%Y%m%d %H:%M",
+    ).replace(tzinfo=JST)
+    day_end = datetime.datetime.strptime(
+        f"{date_str} 23:59",
+        "%Y%m%d %H:%M",
+    ).replace(tzinfo=JST)
+
+    venues = month_schedule.get(date_str, {})
+    handled = 0
+
+    for venue, tvg_id in KEIRIN_MAP.items():
+        info = venues.get(venue)
+
+        if not info:
+            add_programme(
+                tv,
+                tvg_id,
+                day_start,
+                day_end,
+                f"💤 本日非開催 {venue}（競輪）",
+                f"KEIRIN.JP開催日程で{today_display}の開催予定はありません。",
+            )
+            continue
+
+        handled += 1
+
+        grade = info.get("grade", "")
+        day_type = info.get("day_type", "デイ")
+        emoji = info.get("emoji", "☀️")
+        event_day = info.get("event_day", "")
+        start_text = KEIRIN_FUTURE_START.get(day_type, "10:30")
+
+        start_dt = datetime.datetime.strptime(
+            f"{date_str} {start_text}",
+            "%Y%m%d %H:%M",
+        ).replace(tzinfo=JST)
+
+        if day_start < start_dt:
+            add_programme(
+                tv,
+                tvg_id,
+                day_start,
+                start_dt,
+                f"⏳ 待機 {venue} 【{grade}】 {emoji}{day_type}",
+                "\n".join(
+                    x
+                    for x in [
+                        f"🚲 競輪 {venue}",
+                        f"🏆 開催種別: {grade}" if grade else "",
+                        f"{emoji} 開催パターン: {day_type}",
+                        f"📅 {event_day}" if event_day else "",
+                        f"⏰ 仮開始: {start_text}",
+                        f"📅 {today_display}",
+                    ]
+                    if x
+                ),
+            )
+
+        title_parts = [
+            f"【{grade}】" if grade else "",
+            venue,
+            f"{emoji}{day_type}",
+            event_day,
+            "開催予定",
+        ]
+        title = " ".join(x for x in title_parts if x)
+
+        desc_lines = [
+            f"🚲 競輪 {venue}",
+            f"🏆 開催種別: {grade}" if grade else "",
+            f"{emoji} 開催パターン: {day_type}",
+            f"📅 開催日次: {event_day}" if event_day else "",
+            f"⏰ 仮開始: {start_text}",
+            "未来日のため発走時刻は仮予定です。",
+            "当日08:00更新で実際の各R発走時刻EPGへ切り替えます。",
+            f"📅 {today_display}",
+        ]
+
+        add_programme(
+            tv,
+            tvg_id,
+            start_dt,
+            day_end,
+            title,
+            "\n".join(x for x in desc_lines if x),
+        )
+
+    print(
+        f"KEIRIN FUTURE EPG {date_str}: "
+        f"{handled}場を開催予定として生成"
+    )
+
+
 def build_future_placeholder(
     tv,
     date_str,
@@ -1727,6 +2030,17 @@ def build_epg_xml():
     today_date = datetime.datetime.now(JST).date()
     boat_week = fetch_boat_week_schedule(today_date, EPG_DAYS)
 
+    # KEIRIN.JP monthly schedule for future-day provisional EPG.
+    keirin_future_months = {}
+    for offset in range(1, EPG_DAYS):
+        d = today_date + datetime.timedelta(days=offset)
+        key = (d.year, d.month)
+        if key not in keirin_future_months:
+            keirin_future_months[key] = fetch_keirin_future_month(
+                d.year,
+                d.month,
+            )
+
     for day_offset in range(EPG_DAYS):
         target_date = today_date + datetime.timedelta(days=day_offset)
         date_str = target_date.strftime("%Y%m%d")
@@ -1757,12 +2071,14 @@ def build_epg_xml():
                     today_display,
                 )
         else:
-            build_future_placeholder(
+            month_schedule = keirin_future_months.get(
+                (target_date.year, target_date.month),
+                {},
+            )
+            build_keirin_future_epg(
                 tv,
-                date_str,
-                KEIRIN_MAP,
-                "競輪",
-                "🚲",
+                target_date,
+                month_schedule,
                 JST,
                 today_display,
             )

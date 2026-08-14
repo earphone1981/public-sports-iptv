@@ -1419,10 +1419,6 @@ JRA_HEADERS = {
 
 
 def fetch_jra_html(url, label="JRA"):
-    """
-    JRA blocks simple urllib requests from GitHub Actions.
-    Prime a session/cookie on the top page first, then request the target page.
-    """
     jar = http.cookiejar.CookieJar()
     opener = urllib.request.build_opener(
         urllib.request.HTTPCookieProcessor(jar)
@@ -1432,6 +1428,7 @@ def fetch_jra_html(url, label="JRA"):
         headers = dict(JRA_HEADERS)
         if referer:
             headers["Referer"] = referer
+
         req = urllib.request.Request(target_url, headers=headers)
         with opener.open(req, timeout=30) as response:
             body = response.read()
@@ -1441,20 +1438,24 @@ def fetch_jra_html(url, label="JRA"):
         m = re.search(r"charset=([A-Za-z0-9_\-]+)", ctype, flags=re.I)
         if m:
             encodings.append(m.group(1))
+
         head = body[:5000].decode("ascii", errors="ignore")
         m = re.search(r'charset=["\']?\s*([A-Za-z0-9_\-]+)', head, flags=re.I)
         if m:
             encodings.append(m.group(1))
+
         encodings += ["utf-8", "cp932", "shift_jis", "euc_jp"]
 
         seen = set()
         best_text = ""
         best_score = -1
+
         for enc in encodings:
             enc = enc.lower()
             if enc in seen:
                 continue
             seen.add(enc)
+
             try:
                 decoded = body.decode(enc)
             except Exception:
@@ -1465,7 +1466,7 @@ def fetch_jra_html(url, label="JRA"):
                 for word in (
                     "東京", "中山", "新潟", "福島", "京都",
                     "阪神", "中京", "小倉", "札幌", "函館",
-                    "競馬番組", "レース"
+                    "競馬番組", "レース番号", "発走時刻",
                 )
             )
             if score > best_score:
@@ -1480,47 +1481,37 @@ def fetch_jra_html(url, label="JRA"):
         except Exception as e:
             print(f"{label}: top page prime failed: {e}")
 
-        return _open(url, "https://www.jra.go.jp/keiba/calendar/")
+        return _open(
+            url,
+            "https://www.jra.go.jp/keiba/calendar/",
+        )
     except Exception as e:
         print(f"{label}: 取得失敗: {e}")
         return ""
 
 
 def _extract_jra_races_from_section(section):
-    """Extract one meeting's 1R..12R from normalized plain text."""
     races = {}
 
-    patterns = [
-        # 1レース ... 9時40分
-        re.compile(
-            r"(\d{1,2})\s*レース\s+(.*?)\s+([0-2]?\d)\s*時\s*([0-5]\d)\s*分",
-            flags=re.S,
-        ),
-        # 1R ... 9時40分
-        re.compile(
-            r"\b(\d{1,2})R\b\s+(.*?)\s+([0-2]?\d)\s*時\s*([0-5]\d)\s*分",
-            flags=re.S | re.I,
-        ),
-    ]
+    race_re = re.compile(
+        r"(\d{1,2})\s*レース\s+(.*?)\s+([0-2]?\d)\s*時\s*([0-5]\d)\s*分",
+        flags=re.S,
+    )
 
-    for pat in patterns:
-        for m in pat.finditer(section):
-            rn = int(m.group(1))
-            if not 1 <= rn <= 12:
-                continue
+    for m in race_re.finditer(section):
+        rn = int(m.group(1))
+        if not 1 <= rn <= 12:
+            continue
 
-            name = re.sub(r"\s+", " ", m.group(2)).strip()
-            if len(name) > 140:
-                name = name[:140] + "…"
+        name = re.sub(r"\s+", " ", m.group(2)).strip()
+        if len(name) > 180:
+            name = name[:180] + "…"
 
-            races[rn] = {
-                "race": str(rn),
-                "time": f"{int(m.group(3)):02d}:{m.group(4)}",
-                "name": name or "JRA競走",
-            }
-
-        if len(races) >= 5:
-            break
+        races[rn] = {
+            "race": str(rn),
+            "time": f"{int(m.group(3)):02d}:{m.group(4)}",
+            "name": name or "JRA競走",
+        }
 
     return [races[n] for n in sorted(races)]
 
@@ -1532,39 +1523,44 @@ def fetch_jra_day(target_date):
         return {}
 
     plain = strip_html_tags(source)
-    venues = [
-        "東京", "中山", "新潟", "福島", "京都",
-        "阪神", "中京", "小倉", "札幌", "函館",
-    ]
+
+    # Actual meeting blocks on the JRA programme page are headed like:
+    # "2回新潟7日", "2回中京7日", "1回札幌7日".
+    # Parsing only these headings avoids false positives from navigation links.
+    meeting_re = re.compile(
+        r"(\d+)\s*回\s*"
+        r"(東京|中山|新潟|福島|京都|阪神|中京|小倉|札幌|函館)"
+        r"\s*(\d+)\s*日"
+    )
+    headings = list(meeting_re.finditer(plain))
 
     out = {}
 
-    # JRA calendar page is one long text block. Use every occurrence of a venue
-    # as a candidate meeting start, then keep the candidate yielding most races.
-    for venue in venues:
-        starts = [m.start() for m in re.finditer(re.escape(venue), plain)]
-        best = []
+    for i, match in enumerate(headings):
+        venue = match.group(2)
+        section_start = match.end()
+        section_end = (
+            headings[i + 1].start()
+            if i + 1 < len(headings)
+            else len(plain)
+        )
 
-        for st in starts:
-            next_positions = []
-            for other in venues:
-                m = re.search(re.escape(other), plain[st + len(venue):])
-                if m:
-                    next_positions.append(st + len(venue) + m.start())
+        section = plain[section_start:section_end]
+        races = _extract_jra_races_from_section(section)
 
-            # A generous window is safer because the JRA page includes navigation text.
-            section_end = min(next_positions) if next_positions else min(len(plain), st + 18000)
-            if section_end - st < 1500:
-                section_end = min(len(plain), st + 18000)
+        # A normal JRA meeting should have a substantial race card.
+        # Keep it only when enough races were actually parsed.
+        if len(races) >= 5:
+            out[venue] = races
 
-            section = plain[st:section_end]
-            cand = _extract_jra_races_from_section(section)
-
-            if len(cand) > len(best):
-                best = cand
-
-        if len(best) >= 5:
-            out[venue] = best
+    print(
+        f"JRA {target_date:%Y%m%d}: "
+        + (
+            ", ".join(f"{venue}={len(races)}R" for venue, races in out.items())
+            if out
+            else "開催場なし"
+        )
+    )
 
     return out
 
@@ -1601,6 +1597,7 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
             continue
 
         flat = []
+
         for venue, races in meetings:
             for race in races:
                 try:
@@ -1610,6 +1607,7 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
                     ).replace(tzinfo=JST)
                 except Exception:
                     continue
+
                 flat.append((dt, venue, race))
 
         flat.sort(key=lambda x: x[0])
@@ -1658,12 +1656,13 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
 
             title = (
                 f"🏇 {venue} {race['race']}R "
-                f"{race['time']}発走 {race.get('name','JRA競走')}"
+                f"{race['time']}発走 {race.get('name', 'JRA競走')}"
             )
+
             desc = (
                 f"🏇 JRA {venue}\n"
                 f"⏰ 発走予定: {race['time']}\n"
-                f"📢 {race.get('name','')}\n"
+                f"📢 {race.get('name', '')}\n"
                 f"📅 {today_display}"
             )
 
@@ -1677,6 +1676,7 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
             )
 
         finish = flat[-1][0] + datetime.timedelta(minutes=30)
+
         if finish < day_end:
             venues_text = "・".join(dict.fromkeys(v for _, v, _ in flat))
             add_programme(
@@ -1690,7 +1690,10 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
 
     print(
         "JRA EPG:",
-        ", ".join(f"{k}={len(v)}場" for k, v in by_stream.items()),
+        ", ".join(
+            f"{name}={len(meetings)}場"
+            for name, meetings in by_stream.items()
+        ),
     )
 
 

@@ -1,4 +1,4 @@
-#EXTM3U
+#EXTM3U　url-tvg="https://ajiousama.github.io/himitsu/epg.xml," tvg-shift=0 m3uautoload=1
 
 ## 競輪
 #EXTINF:-1 tvg-id="keirin.hakodate" tvg-name="函館" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_hakodate-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",函館

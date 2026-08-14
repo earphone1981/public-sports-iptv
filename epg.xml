@@ -261,6 +261,9 @@
     <channel id="jra.hokkaido">
         <display-name>JRA HOKKAIDO</display-name>
     </channel>
+    <channel id="jra.gch">
+        <display-name>グリーンチャンネル</display-name>
+    </channel>
     <programme start="20260814010000 +0900" stop="20260814235900 +0900" channel="keirin.hakodate">
         <title lang="ja">💤 本日非開催 函館（競輪）</title>
         <desc lang="ja">本日は函館での開催予定はありません。</desc>
@@ -3187,34 +3190,44 @@
         <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.kawaguchi">
-        <title lang="ja">📅 川口（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 川口
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 川口（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 伊勢崎（オートレース）</title>
+    <programme start="20260815010000 +0900" stop="20260815134500 +0900" channel="auto.isesaki">
+        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
         <desc lang="ja">🏍️ オートレース 伊勢崎
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+📢 オッズパークPRESENTS SG第30回オートレースグランプリ
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815134500 +0900" stop="20260815205000 +0900" channel="auto.isesaki">
+        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 5日目</title>
+        <desc lang="ja">🏍️ オートレース 伊勢崎
+🏆 グレード: SG
+📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
+📅 開催日次: 5日目
+⏰ 公式LIVE予定: 13:45～20:50
+📅 2026年08月15日</desc>
+    </programme>
+    <programme start="20260815205000 +0900" stop="20260815235900 +0900" channel="auto.isesaki">
+        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
+        <desc lang="ja">伊勢崎の2026年08月15日の開催予定時間は終了しました。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">📅 浜松（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 飯塚（オートレース）</title>
+        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 2日目</title>
         <desc lang="ja">🏍️ オートレース 飯塚
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 グレード: 普通開催
+📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
+📅 開催日次: 2日目
+⏰ 公式LIVE予定: 21:00～24:50
+📅 2026年08月15日</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815235900 +0900" channel="auto.sanyo">
-        <title lang="ja">📅 山陽（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-📅 2026年08月15日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月15日の本場開催はありません。</desc>
     </programme>
     <programme start="20260815010000 +0900" stop="20260815145700 +0900" channel="boat.kiryu">
         <title lang="ja">⏳ 待機 01 桐生 🌙ナイター</title>
@@ -6117,34 +6130,44 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.kawaguchi">
-        <title lang="ja">📅 川口（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 川口
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 川口（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 伊勢崎（オートレース）</title>
+    <programme start="20260816010000 +0900" stop="20260816134500 +0900" channel="auto.isesaki">
+        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
         <desc lang="ja">🏍️ オートレース 伊勢崎
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+📢 オッズパークPRESENTS SG第30回オートレースグランプリ
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816134500 +0900" stop="20260816205000 +0900" channel="auto.isesaki">
+        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 6日目</title>
+        <desc lang="ja">🏍️ オートレース 伊勢崎
+🏆 グレード: SG
+📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
+📅 開催日次: 6日目
+⏰ 公式LIVE予定: 13:45～20:50
+📅 2026年08月16日</desc>
+    </programme>
+    <programme start="20260816205000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
+        <title lang="ja">🏁 終了 伊勢崎 🌙ナイター</title>
+        <desc lang="ja">伊勢崎の2026年08月16日の開催予定時間は終了しました。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">📅 浜松（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 浜松（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 飯塚（オートレース）</title>
+        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 3日目</title>
         <desc lang="ja">🏍️ オートレース 飯塚
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+🏆 グレード: 普通開催
+📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
+📅 開催日次: 3日目
+⏰ 公式LIVE予定: 21:00～24:50
+📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="auto.sanyo">
-        <title lang="ja">📅 山陽（オートレース）</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-📅 2026年08月16日
-当日データ取得時に詳細EPGへ自動更新します。</desc>
+        <title lang="ja">💤 本日非開催 山陽（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="boat.kiryu">
         <title lang="ja">💤 本日非開催 01 桐生（ボートレース）</title>
@@ -6241,5 +6264,221 @@ BOAT RACE公式の開催一覧で開催を確認済み。
     <programme start="20260816010000 +0900" stop="20260816235900 +0900" channel="boat.omura">
         <title lang="ja">💤 本日非開催 24 大村（ボートレース）</title>
         <desc lang="ja">BOAT RACE公式の2026年08月16日開催一覧に24 大村は掲載されていません。</desc>
+    </programme>
+    <programme start="20260814000000 +0900" stop="20260814003000 +0900" channel="jra.gch">
+        <title lang="ja">競馬場の達人（内竜也） #614</title>
+        <desc lang="ja">「内竜也」</desc>
+    </programme>
+    <programme start="20260814003000 +0900" stop="20260814033000 +0900" channel="jra.gch">
+        <title lang="ja">ザ・パトロールビデオ（場別） #916</title>
+        <desc lang="ja">「第２回新潟競馬第５・６日、第２回中京競馬第５・６日、第１回札幌競馬第５・６日」</desc>
+    </programme>
+    <programme start="20260814033000 +0900" stop="20260814043000 +0900" channel="jra.gch">
+        <title lang="ja">今週の調教 #917</title>
+        <desc lang="ja">「中京記念、札幌記念　他」</desc>
+    </programme>
+    <programme start="20260814043000 +0900" stop="20260814053000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンまるごと情報局サマースペシャル2026 札幌記念</title>
+        <desc lang="ja">「トレセンまるごと情報局　サマースペシャル　札幌記念」</desc>
+    </programme>
+    <programme start="20260814053000 +0900" stop="20260814060000 +0900" channel="jra.gch">
+        <title lang="ja">草野仁のGate J.プラス（三浦大輔＆三浦凪沙 前編）#301</title>
+        <desc lang="ja">「三浦大輔＆三浦凪沙（前編）」</desc>
+    </programme>
+    <programme start="20260814060000 +0900" stop="20260814070000 +0900" channel="jra.gch">
+        <title lang="ja">水曜馬スペ！ダービージョッキーの一献</title>
+        <desc lang="ja">「ダービージョッキーの居酒屋紀行」</desc>
+    </programme>
+    <programme start="20260814070000 +0900" stop="20260814073000 +0900" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！9 #15</title>
+        <desc lang="ja">「畜産トレンド発見！消毒革命！２　肉用鶏農場のカンピロバクター対策」</desc>
+    </programme>
+    <programme start="20260814073000 +0900" stop="20260814080000 +0900" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！8 #18</title>
+        <desc lang="ja">「畜産トレンド発見！「総集編　ホルスタインに情熱を注ぐ高校生たち」」</desc>
+    </programme>
+    <programme start="20260814080000 +0900" stop="20260814083000 +0900" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！7 #18</title>
+        <desc lang="ja">「なるほど！畜産現場　総集編　思いが繋ぐ畜産の未来」</desc>
+    </programme>
+    <programme start="20260814083000 +0900" stop="20260814090000 +0900" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！6 #18</title>
+        <desc lang="ja">「畜産トレンド発見！　総集編(1) TMRセンター・自給飼料生産」</desc>
+    </programme>
+    <programme start="20260814090000 +0900" stop="20260814100000 +0900" channel="jra.gch">
+        <title lang="ja">グリーンチャンネル傑作選（競馬イントロドン！！） #67</title>
+        <desc lang="ja">競馬イントロドン！！</desc>
+    </programme>
+    <programme start="20260814100000 +0900" stop="20260814103000 +0900" channel="jra.gch">
+        <title lang="ja">新・馬学講座ホースアカデミー #113</title>
+        <desc lang="ja">「サラブレッドの最新遺伝学〜遺伝学の基礎〜」</desc>
+    </programme>
+    <programme start="20260814103000 +0900" stop="20260814110000 +0900" channel="jra.gch">
+        <title lang="ja">Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
+        <desc lang="ja">大自然の中でのびのびと過ごす馬の姿をお届けします。</desc>
+    </programme>
+    <programme start="20260814110000 +0900" stop="20260814120000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンまるごと情報局サマースペシャル2026 札幌記念</title>
+        <desc lang="ja">「トレセンまるごと情報局　サマースペシャル　札幌記念」</desc>
+    </programme>
+    <programme start="20260814120000 +0900" stop="20260814130000 +0900" channel="jra.gch">
+        <title lang="ja">重賞メモリアル #1024</title>
+        <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
+    </programme>
+    <programme start="20260814130000 +0900" stop="20260814140000 +0900" channel="jra.gch">
+        <title lang="ja">今週の調教 #917</title>
+        <desc lang="ja">「中京記念、札幌記念　他」</desc>
+    </programme>
+    <programme start="20260814140000 +0900" stop="20260814150000 +0900" channel="jra.gch">
+        <title lang="ja">水曜馬スペ！ダービージョッキーの一献</title>
+        <desc lang="ja">「ダービージョッキーの居酒屋紀行」</desc>
+    </programme>
+    <programme start="20260814150000 +0900" stop="20260814153000 +0900" channel="jra.gch">
+        <title lang="ja">競馬場の達人セレクション（竹内譲次＆辻直人 後編）</title>
+        <desc lang="ja">＃589「竹内譲次＆辻直人　後編」</desc>
+    </programme>
+    <programme start="20260814153000 +0900" stop="20260814160000 +0900" channel="jra.gch">
+        <title lang="ja">2026ジャックルマロワ賞参考レース</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞の参考レースを紹介</desc>
+    </programme>
+    <programme start="20260814160000 +0900" stop="20260814170000 +0900" channel="jra.gch">
+        <title lang="ja">重賞メモリアル #1024</title>
+        <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
+    </programme>
+    <programme start="20260814170000 +0900" stop="20260814180000 +0900" channel="jra.gch">
+        <title lang="ja">今週の調教 #917</title>
+        <desc lang="ja">「中京記念、札幌記念　他」</desc>
+    </programme>
+    <programme start="20260814180000 +0900" stop="20260814190000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンまるごと情報局サマースペシャル2026 札幌記念</title>
+        <desc lang="ja">「トレセンまるごと情報局　サマースペシャル　札幌記念」</desc>
+    </programme>
+    <programme start="20260814190000 +0900" stop="20260814203000 +0900" channel="jra.gch">
+        <title lang="ja">[生]トラックマンTV #763</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ、新潟ジャンプS他　展望」</desc>
+    </programme>
+    <programme start="20260814203000 +0900" stop="20260814223000 +0900" channel="jra.gch">
+        <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #917</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ　他」</desc>
+    </programme>
+    <programme start="20260814223000 +0900" stop="20260814230000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンχ同好会 #8</title>
+        <desc lang="ja">騎手が同じ趣味を持つ騎手仲間たちと同好会を結成！Χ＝サウナ（2）</desc>
+    </programme>
+    <programme start="20260814230000 +0900" stop="20260814233000 +0900" channel="jra.gch">
+        <title lang="ja">2026ジャックルマロワ賞参考レース</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞の参考レースを紹介</desc>
+    </programme>
+    <programme start="20260814233000 +0900" stop="20260815010000 +0900" channel="jra.gch">
+        <title lang="ja">[再]トラックマンTV #763</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ、新潟ジャンプS他　展望」</desc>
+    </programme>
+    <programme start="20260815010000 +0900" stop="20260815020000 +0900" channel="jra.gch">
+        <title lang="ja">今週の調教 #917</title>
+        <desc lang="ja">「中京記念、札幌記念　他」</desc>
+    </programme>
+    <programme start="20260815020000 +0900" stop="20260815030000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンまるごと情報局サマースペシャル2026 札幌記念</title>
+        <desc lang="ja">「トレセンまるごと情報局　サマースペシャル　札幌記念」</desc>
+    </programme>
+    <programme start="20260815030000 +0900" stop="20260815043000 +0900" channel="jra.gch">
+        <title lang="ja">[再]トラックマンTV #763</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ、新潟ジャンプS他　展望」</desc>
+    </programme>
+    <programme start="20260815043000 +0900" stop="20260815063000 +0900" channel="jra.gch">
+        <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #917</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ　他」</desc>
+    </programme>
+    <programme start="20260815063000 +0900" stop="20260815073000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンまるごと情報局サマースペシャル2026 札幌記念</title>
+        <desc lang="ja">「トレセンまるごと情報局　サマースペシャル　札幌記念」</desc>
+    </programme>
+    <programme start="20260815073000 +0900" stop="20260815090000 +0900" channel="jra.gch">
+        <title lang="ja">[再]トラックマンTV #763</title>
+        <desc lang="ja">「上越S、高山S、大雪ハンデキャップ、新潟ジャンプS他　展望」</desc>
+    </programme>
+    <programme start="20260815090000 +0900" stop="20260815130000 +0900" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+    </programme>
+    <programme start="20260815130000 +0900" stop="20260815190000 +0900" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+    </programme>
+    <programme start="20260815190000 +0900" stop="20260815193000 +0900" channel="jra.gch">
+        <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #417</title>
+        <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
+    </programme>
+    <programme start="20260815193000 +0900" stop="20260815210000 +0900" channel="jra.gch">
+        <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1017</title>
+        <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！札幌記念！</desc>
+    </programme>
+    <programme start="20260815210000 +0900" stop="20260815213000 +0900" channel="jra.gch">
+        <title lang="ja">アタック！地方競馬 #385</title>
+        <desc lang="ja">「地方競馬情報が満載！」</desc>
+    </programme>
+    <programme start="20260815213000 +0900" stop="20260815230000 +0900" channel="jra.gch">
+        <title lang="ja">今日のレースリプレイ</title>
+        <desc lang="ja">「第２回新潟競馬第７日・第２回中京競馬第７日・第１回札幌競馬第７日」</desc>
+    </programme>
+    <programme start="20260815230000 +0900" stop="20260816000000 +0900" channel="jra.gch">
+        <title lang="ja">TRAILER 海外馬券展望番組〜ジャックルマロワ賞展望 #21</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞を展望</desc>
+    </programme>
+    <programme start="20260816000000 +0900" stop="20260816013000 +0900" channel="jra.gch">
+        <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1017</title>
+        <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！札幌記念！</desc>
+    </programme>
+    <programme start="20260816013000 +0900" stop="20260816033000 +0900" channel="jra.gch">
+        <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #917</title>
+        <desc lang="ja">「札幌記念、中京記念、NST賞　他」</desc>
+    </programme>
+    <programme start="20260816033000 +0900" stop="20260816050000 +0900" channel="jra.gch">
+        <title lang="ja">今日のレースリプレイ</title>
+        <desc lang="ja">「第２回新潟競馬第７日・第２回中京競馬第７日・第１回札幌競馬第７日」</desc>
+    </programme>
+    <programme start="20260816050000 +0900" stop="20260816053000 +0900" channel="jra.gch">
+        <title lang="ja">アタック！地方競馬 #385</title>
+        <desc lang="ja">「地方競馬情報が満載！」</desc>
+    </programme>
+    <programme start="20260816053000 +0900" stop="20260816060000 +0900" channel="jra.gch">
+        <title lang="ja">2026ジャックルマロワ賞参考レース</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞の参考レースを紹介</desc>
+    </programme>
+    <programme start="20260816060000 +0900" stop="20260816070000 +0900" channel="jra.gch">
+        <title lang="ja">TRAILER 海外馬券展望番組〜ジャックルマロワ賞展望 #21</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞を展望</desc>
+    </programme>
+    <programme start="20260816070000 +0900" stop="20260816073000 +0900" channel="jra.gch">
+        <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #417</title>
+        <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
+    </programme>
+    <programme start="20260816073000 +0900" stop="20260816090000 +0900" channel="jra.gch">
+        <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1017</title>
+        <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！札幌記念！</desc>
+    </programme>
+    <programme start="20260816090000 +0900" stop="20260816130000 +0900" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+    </programme>
+    <programme start="20260816130000 +0900" stop="20260816193000 +0900" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+    </programme>
+    <programme start="20260816193000 +0900" stop="20260816200000 +0900" channel="jra.gch">
+        <title lang="ja">トレセンχ同好会 #8</title>
+        <desc lang="ja">騎手が同じ趣味を持つ騎手仲間たちと同好会を結成！Χ＝サウナ（2）</desc>
+    </programme>
+    <programme start="20260816200000 +0900" stop="20260816210000 +0900" channel="jra.gch">
+        <title lang="ja">水曜馬スペ！ダービージョッキーの一献</title>
+        <desc lang="ja">「ダービージョッキーの居酒屋紀行」</desc>
+    </programme>
+    <programme start="20260816210000 +0900" stop="20260816220000 +0900" channel="jra.gch">
+        <title lang="ja">TRAILER 海外馬券展望番組〜ジャックルマロワ賞展望 #21</title>
+        <desc lang="ja">馬券発売対象のジャックルマロワ賞を展望</desc>
+    </programme>
+    <programme start="20260816220000 +0900" stop="20260817000000 +0900" channel="jra.gch">
+        <title lang="ja">[生]2026ジャックルマロワ賞中継</title>
+        <desc lang="ja">馬券発売対象競走のジャックルマロワ賞をライヴでお送りします！</desc>
     </programme>
 </tv>

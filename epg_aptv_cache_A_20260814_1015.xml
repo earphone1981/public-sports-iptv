@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="PublicSportsIPTV-APTV-Test-20260814_1015">
+  <channel id="keirin.seibuen"><display-name>西武園</display-name></channel>
+  <programme start="20260814000000 +0900" stop="20260814235959 +0900" channel="keirin.seibuen">
+    <title>西武園 CACHE TEST A 10:15</title>
+  </programme>
+</tv>

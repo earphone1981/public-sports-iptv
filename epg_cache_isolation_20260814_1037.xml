@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tv generator-info-name="PublicSportsIPTV-APTV-Cache-Isolation-1037">
+  <channel id="cache.kiryu.1037"><display-name>桐生CACHE1037</display-name></channel>
+  <programme start="20260814090000 +0900" stop="20260814093000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 1R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814093000 +0900" stop="20260814100000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 2R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814100000 +0900" stop="20260814103000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 3R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814103000 +0900" stop="20260814110000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 4R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814110000 +0900" stop="20260814113000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 5R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814113000 +0900" stop="20260814120000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 6R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814120000 +0900" stop="20260814123000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 7R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814123000 +0900" stop="20260814130000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 8R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814130000 +0900" stop="20260814133000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 9R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814133000 +0900" stop="20260814140000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 10R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814140000 +0900" stop="20260814143000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 11R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814143000 +0900" stop="20260814150000 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 12R</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+  <programme start="20260814150000 +0900" stop="20260814235959 +0900" channel="cache.kiryu.1037">
+    <title lang="ja">🚤 CACHE1037 開催終了</title>
+    <desc lang="ja">新規channel idテスト cache.kiryu.1037\n生成時刻 10:37\n古いEPGと一致しない確認用</desc>
+  </programme>
+</tv>

@@ -159,6 +159,13 @@ AUTORACE_SCHEDULE_URL = (
 )
 
 
+GCH_GUIDES_URL = (
+    "https://github.com/karenda-jp/etc/raw/refs/heads/main/guides.xml"
+)
+GCH_TVG_ID = "jra.gch"
+GCH_DISPLAY_NAME = "グリーンチャンネル"
+
+
 def format_time_xml(dt):
     return dt.strftime("%Y%m%d%H%M%S +0900")
 
@@ -631,8 +638,8 @@ def build_keiba_race_epg(
                 f"{venue}の本日の競馬は終了しました。",
             )
 
-    # JSONに無い地方/JRAチャンネルは非開催表示。
-    # JRA公式・グリーンは配信専用なので手入力側に任せる。
+    # JSONに無い地方競馬チャンネルは非開催表示。
+    # JRA系は別処理、GCHは guides.xml から取得するためここでは除外。
     for venue, tvg_id in KEIBA_MAP.items():
         if venue in {"ＪＲＡ公式", "ＪＲＡグリーン"}:
             continue
@@ -991,6 +998,122 @@ def build_autorace_race_epg(
 
     print(f"AUTORACE EPG: {len(handled)}場を各R単位で生成")
     return True
+
+
+def parse_xmltv_datetime(value, default_tz):
+    """XMLTV start/stop (YYYYMMDDHHMMSS +0900 等)をtimezone付きdatetimeへ変換。"""
+    s = str(value or "").strip()
+    m = re.match(r"^(\d{8,14})\s*([+-]\d{4})?", s)
+    if not m:
+        return None
+
+    digits = m.group(1)
+    offset = m.group(2)
+
+    if len(digits) == 8:
+        digits += "000000"
+    elif len(digits) == 10:
+        digits += "0000"
+    elif len(digits) == 12:
+        digits += "00"
+    elif len(digits) != 14:
+        return None
+
+    try:
+        if offset:
+            return datetime.datetime.strptime(
+                f"{digits} {offset}",
+                "%Y%m%d%H%M%S %z",
+            )
+        return datetime.datetime.strptime(
+            digits,
+            "%Y%m%d%H%M%S",
+        ).replace(tzinfo=default_tz)
+    except Exception:
+        return None
+
+
+def normalize_channel_name(value):
+    return re.sub(r"[\s　]+", "", str(value or "")).strip()
+
+
+def import_gch_from_guides(tv, today_date, days, JST):
+    """
+    karenda-jp guides.xml からグリーンチャンネルだけを抽出し、
+    channel id を jra.gch に統一して本番EPGへ追加する。
+    """
+    try:
+        req = urllib.request.Request(
+            GCH_GUIDES_URL,
+            headers={
+                "User-Agent": "Mozilla/5.0",
+                "Cache-Control": "no-cache",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=60) as response:
+            raw = response.read()
+        source_root = ET.fromstring(raw)
+    except Exception as e:
+        print(f"GCH guides.xml: 取得失敗: {e}")
+        return 0
+
+    exact_ids = []
+    fallback_ids = []
+    target_norm = normalize_channel_name(GCH_DISPLAY_NAME)
+
+    for ch in source_root.findall("channel"):
+        ch_id = ch.get("id", "")
+        names = [
+            normalize_channel_name(x.text)
+            for x in ch.findall("display-name")
+            if x.text
+        ]
+        if target_norm in names:
+            exact_ids.append(ch_id)
+        elif any(target_norm in name for name in names):
+            fallback_ids.append(ch_id)
+
+    source_ids = exact_ids or fallback_ids
+    source_ids = [x for x in source_ids if x]
+
+    if not source_ids:
+        print("GCH guides.xml: グリーンチャンネルのchannel idを発見できません")
+        return 0
+
+    window_start = datetime.datetime.combine(
+        today_date,
+        datetime.time.min,
+        tzinfo=JST,
+    )
+    window_end = window_start + datetime.timedelta(days=days)
+
+    imported = 0
+    for prog in source_root.findall("programme"):
+        if prog.get("channel", "") not in source_ids:
+            continue
+
+        start_dt = parse_xmltv_datetime(prog.get("start"), JST)
+        stop_dt = parse_xmltv_datetime(prog.get("stop"), JST)
+        if not start_dt:
+            continue
+
+        start_jst = start_dt.astimezone(JST)
+        stop_jst = stop_dt.astimezone(JST) if stop_dt else start_jst + datetime.timedelta(hours=1)
+
+        # 今日0:00～3日後0:00と重なる番組だけ採用。
+        if stop_jst <= window_start or start_jst >= window_end:
+            continue
+
+        copied = ET.fromstring(ET.tostring(prog, encoding="utf-8"))
+        copied.set("channel", GCH_TVG_ID)
+        tv.append(copied)
+        imported += 1
+
+    print(
+        f"GCH guides.xml: source={','.join(source_ids)} / "
+        f"{imported}番組を{GCH_TVG_ID}へ統合"
+    )
+    return imported
 
 
 def fetch_text(url, label="URL"):
@@ -2108,6 +2231,125 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
     )
 
 
+
+# -------------------------------------------------
+# AutoRace.JP future calendar support
+# Future days use the official monthly Calendar API.
+# Only calendar[].race means a home-track event; outside[] is ignored.
+# -------------------------------------------------
+AUTORACE_CALENDAR_URL = "https://autorace.jp/race_info/XML/Calendar?date={year}-{month:02d}"
+
+def fetch_autorace_future_month(year, month):
+    data = fetch_json(
+        AUTORACE_CALENDAR_URL.format(year=year, month=month),
+        f"AUTORACE FUTURE {year}-{month:02d}",
+    )
+    result = {}
+    if not isinstance(data, dict):
+        return result
+
+    body = data.get("body", [])
+    if not isinstance(body, list):
+        return result
+
+    for place in body:
+        if not isinstance(place, dict):
+            continue
+        venue = re.sub(r"\s+", "", str(place.get("placeName", "")))
+        if venue not in AUTO_MAP:
+            continue
+        for day in place.get("calendar", []) or []:
+            if not isinstance(day, dict):
+                continue
+            race = day.get("race")
+            # [] means no home-track event. outside[] is off-track sales only.
+            if not isinstance(race, dict) or not race:
+                continue
+            iso_date = str(day.get("date", ""))
+            date_str = iso_date.replace("-", "")
+            if len(date_str) != 8:
+                continue
+            result.setdefault(date_str, {})[venue] = race
+    return result
+
+def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_display):
+    date_str = target_date.strftime("%Y%m%d")
+    day_start = datetime.datetime.strptime(
+        f"{date_str} 01:00", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+    day_end = datetime.datetime.strptime(
+        f"{date_str} 23:59", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+
+    venues = month_schedule.get(date_str, {})
+    handled = 0
+    for venue, tvg_id in AUTO_MAP.items():
+        race = venues.get(venue)
+        if not race:
+            add_programme(
+                tv, tvg_id, day_start, day_end,
+                f"💤 本日非開催 {venue}（オートレース）",
+                f"AutoRace.JP公式カレンダーで{today_display}の本場開催はありません。",
+            )
+            continue
+
+        handled += 1
+        grade = clean_epg_meta_text(race.get("gradeName", ""))
+        title = clean_epg_meta_text(race.get("title", "")) or clean_epg_meta_text(race.get("titleShort", ""))
+        day_type = clean_epg_meta_text(race.get("nighterName", "")) or "デイ"
+        emoji = day_emoji(day_type)
+        event_day = race.get("paragraphDay", "")
+        start_text = str(race.get("liveStartTime", "") or "").strip()
+        end_text = str(race.get("liveEndTime", "") or "").strip()
+
+        try:
+            start_dt = datetime.datetime.strptime(
+                f"{date_str} {start_text}", "%Y%m%d %H:%M"
+            ).replace(tzinfo=JST)
+            end_dt = datetime.datetime.strptime(
+                f"{date_str} {end_text}", "%Y%m%d %H:%M"
+            ).replace(tzinfo=JST)
+            if end_dt <= start_dt:
+                end_dt += datetime.timedelta(days=1)
+        except Exception:
+            start_dt, end_dt = day_start, day_end
+
+        if day_start < start_dt:
+            add_programme(
+                tv, tvg_id, day_start, start_dt,
+                f"⏳ 開催待ち {venue} {emoji}{day_type}",
+                f"🏍️ オートレース {venue}\n📢 {title}\n📅 {today_display}",
+            )
+
+        parts = ["📅 開催予定", venue, f"{emoji}{day_type}"]
+        if grade:
+            parts.append(f"【{grade}】")
+        if title:
+            parts.append(title)
+        if event_day:
+            parts.append(f"{event_day}日目")
+        desc = [f"🏍️ オートレース {venue}"]
+        if grade:
+            desc.append(f"🏆 グレード: {grade}")
+        if title:
+            desc.append(f"📢 開催名: {title}")
+        if event_day:
+            desc.append(f"📅 開催日次: {event_day}日目")
+        if start_text and end_text:
+            desc.append(f"⏰ 公式LIVE予定: {start_text}～{end_text}")
+        desc.append(f"📅 {today_display}")
+        add_programme(tv, tvg_id, start_dt, min(end_dt, day_end), " ".join(parts), "\n".join(desc))
+
+        if end_dt < day_end:
+            add_programme(
+                tv, tvg_id, end_dt, day_end,
+                f"🏁 終了 {venue} {emoji}{day_type}",
+                f"{venue}の{today_display}の開催予定時間は終了しました。",
+            )
+
+    print(f"AUTORACE FUTURE EPG {date_str}: {handled}場を開催予定として生成")
+    return True
+
 def build_epg_xml():
     tv = ET.Element(
         "tv",
@@ -2129,6 +2371,7 @@ def build_epg_xml():
         **AUTO_MAP,
         **BOAT_MAP,
         **JRA_STREAM_MAP,
+        GCH_DISPLAY_NAME: GCH_TVG_ID,
     }
 
     for v_name, tvg_id in all_channels.items():
@@ -2138,6 +2381,14 @@ def build_epg_xml():
     today_date = datetime.datetime.now(JST).date()
     boat_week = fetch_boat_week_schedule(today_date, EPG_DAYS)
     nar_future = fetch_nar_epg_days(today_date, EPG_DAYS)
+
+    # AutoRace.JP monthly calendar for future-day EPG.
+    autorace_future_months = {}
+    for offset in range(1, EPG_DAYS):
+        d = today_date + datetime.timedelta(days=offset)
+        key = (d.year, d.month)
+        if key not in autorace_future_months:
+            autorace_future_months[key] = fetch_autorace_future_month(d.year, d.month)
 
     # KEIRIN.JP monthly schedule for future-day provisional EPG.
     keirin_future_months = {}
@@ -2237,7 +2488,7 @@ def build_epg_xml():
                 )
 
         # JRA EAST / WEST / HOKKAIDO はJRA公式から3日分を生成。
-        # GCHは guides.xml をAPTV側の別EPG源として使用。
+        # GCHは全日ループ終了後に guides.xml から3日分だけ統合する。
         build_jra_stream_epg(
             tv,
             target_date,
@@ -2267,12 +2518,14 @@ def build_epg_xml():
                     today_display,
                 )
         else:
-            build_future_placeholder(
+            month_schedule = autorace_future_months.get(
+                (target_date.year, target_date.month),
+                {},
+            )
+            build_autorace_future_epg(
                 tv,
-                date_str,
-                AUTO_MAP,
-                "オートレース",
-                "🏍️",
+                target_date,
+                month_schedule,
                 JST,
                 today_display,
             )
@@ -2301,6 +2554,17 @@ def build_epg_xml():
                 today_display,
             )
 
+    # -------------------------------------------------
+    # グリーンチャンネル
+    # karenda-jp guides.xml から該当チャンネルだけ3日分抽出して統合。
+    # -------------------------------------------------
+    gch_programme_count = import_gch_from_guides(
+        tv,
+        today_date,
+        EPG_DAYS,
+        JST,
+    )
+
     tree = ET.ElementTree(tv)
 
     if hasattr(ET, "indent"):
@@ -2327,7 +2591,7 @@ def build_epg_xml():
     print("競輪: keirin_schedule.json 優先")
     print("オート: autorace_schedule.json 優先")
     print("JRA: EAST / WEST / HOKKAIDOをJRA公式から3日分生成")
-    print("GCH: guides.xmlをAPTV側で別EPG源として使用")
+    print(f"GCH: guides.xmlから3日分を抽出・統合 ({gch_programme_count}番組)")
     print("出力: epg.xml")
     print("============================")
 

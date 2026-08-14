@@ -1,9 +1,0 @@
-#EXTM3U
-#EXTINF:-1 tvg-id="chihou.oi" tvg-name="南関東競馬(大井)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",大井
-https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/ooi5.m3u8
-
-#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kasamatsu.png" group-title="競馬 / 地方競馬",笠松
-https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kasamatsu5.m3u8
-
-#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",園田
-https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/sonoda5.m3u8

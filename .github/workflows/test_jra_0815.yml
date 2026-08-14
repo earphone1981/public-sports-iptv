@@ -6,6 +6,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -15,5 +16,5 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Test JRA fetch
-      run: python test_jra_0815_debug.py
+      - name: Test JRA debug fetch
+        run: python test_jra_0815_debug.py

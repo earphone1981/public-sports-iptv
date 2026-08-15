@@ -1,0 +1,206 @@
+name: Test AutoRace Race Times V2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Test official AutoRace race times
+        run: |
+          python - <<'PY'
+          import json
+          import re
+          import urllib.request
+          import datetime
+          from html import unescape
+
+          DATE = "2026-08-16"
+          target_date = datetime.date.fromisoformat(DATE)
+          y, m, d = DATE.split("-")
+
+          calendar_url = (
+              f"https://autorace.jp/race_info/XML/Calendar?date={y}-{m}"
+          )
+
+          headers = {
+              "User-Agent": (
+                  "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
+                  "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1"
+              ),
+              "Referer": "https://autorace.jp/",
+          }
+
+          def get(url):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=20) as r:
+                  return r.read().decode("utf-8", errors="replace")
+
+          def parse_iso_date(s):
+              try:
+                  return datetime.date.fromisoformat(str(s)[:10])
+              except Exception:
+                  return None
+
+          def race_contains_target(race):
+              start = parse_iso_date(race.get("periodStartDate"))
+              end = parse_iso_date(race.get("periodEndDate"))
+
+              if start and end and start <= target_date <= end:
+                  return True
+
+              if start and start == target_date:
+                  return True
+
+              # periodEndDate が無い場合に liveAllTime の M/D 表記も確認
+              md1 = f"{target_date.month}/{target_date.day}"
+              md2 = f"{target_date.month:02d}/{target_date.day:02d}"
+
+              for item in race.get("liveAllTime", []) or []:
+                  s = str(item)
+                  if md1 in s or md2 in s:
+                      return True
+
+                  # 例: 8/14～8/16 10:00～17:00
+                  mm = re.search(
+                      r"(\d{1,2})/(\d{1,2})\s*[～~-]\s*"
+                      r"(\d{1,2})/(\d{1,2})",
+                      s
+                  )
+                  if mm:
+                      sm, sd, em, ed = map(int, mm.groups())
+                      try:
+                          sdate = datetime.date(target_date.year, sm, sd)
+                          edate = datetime.date(target_date.year, em, ed)
+                          if sdate <= target_date <= edate:
+                              return True
+                      except Exception:
+                          pass
+
+              return False
+
+          print("=== Calendar ===")
+          data = json.loads(get(calendar_url))
+
+          venues = []
+          for place in data.get("body", []):
+              slug = str(place.get("placeKey", "")).strip()
+              name = (
+                  str(place.get("placeName", ""))
+                  .replace("　", "")
+                  .replace(" ", "")
+                  .strip()
+              )
+
+              for item in place.get("calendar", []) or []:
+                  race = item.get("race")
+                  if not isinstance(race, dict):
+                      continue
+
+                  if race_contains_target(race):
+                      venues.append((name, slug, race))
+                      break
+
+          print("開催候補:", [(n, s) for n, s, _ in venues])
+
+          if not venues:
+              print("\nCalendar内の開催データ診断:")
+              for place in data.get("body", []):
+                  name = str(place.get("placeName", "")).replace("　", "").strip()
+                  for item in place.get("calendar", []) or []:
+                      race = item.get("race")
+                      if isinstance(race, dict):
+                          print(
+                              name,
+                              "start=", race.get("periodStartDate"),
+                              "end=", race.get("periodEndDate"),
+                              "liveAllTime=", race.get("liveAllTime"),
+                          )
+              raise SystemExit(
+                  "対象日の開催場をCalendarから検出できませんでした"
+              )
+
+          # 最初の開催場だけ12Rテスト
+          name, slug, race_meta = venues[0]
+          print(f"\n=== TEST {name} / {slug} / {DATE} ===")
+          print(
+              "Calendar:",
+              race_meta.get("title", ""),
+              race_meta.get("liveStartTime", ""),
+              race_meta.get("liveEndTime", ""),
+          )
+
+          found = 0
+
+          for race_no in range(1, 13):
+              candidates = [
+                  (
+                      f"https://autorace.jp/race_info/Program/"
+                      f"{slug}/{DATE}_{race_no}/program"
+                  ),
+                  (
+                      f"https://autorace.jp/race_info/Program/"
+                      f"{slug}/{DATE}_{race_no}"
+                  ),
+              ]
+
+              result = None
+              last_status = ""
+
+              for url in candidates:
+                  try:
+                      html = get(url)
+                      last_status = f"HTTP OK len={len(html)}"
+                  except Exception as e:
+                      last_status = f"{type(e).__name__}: {e}"
+                      continue
+
+                  text = re.sub(
+                      r"<script.*?</script>", " ", html,
+                      flags=re.S | re.I
+                  )
+                  text = re.sub(
+                      r"<style.*?</style>", " ", text,
+                      flags=re.S | re.I
+                  )
+                  text = re.sub(r"<[^>]+>", " ", text)
+                  text = unescape(text)
+                  text = re.sub(r"\s+", " ", text)
+
+                  patterns = [
+                      r"発走予定(?:時刻)?\s*([0-2]?\d[:：][0-5]\d)",
+                      r"発走\s*予定\s*([0-2]?\d[:：][0-5]\d)",
+                      r"([0-2]?\d[:：][0-5]\d)\s*発走",
+                  ]
+
+                  for pat in patterns:
+                      mm = re.search(pat, text)
+                      if mm:
+                          result = mm.group(1).replace("：", ":")
+                          break
+
+                  if result:
+                      break
+
+              if result:
+                  found += 1
+                  print(f"{race_no:>2}R  {result}  OK")
+              else:
+                  print(
+                      f"{race_no:>2}R  --:--  NOT FOUND  ({last_status})"
+                  )
+
+          print(f"\nRESULT: {name} {found}/12 races")
+
+          if found == 0:
+              raise SystemExit(
+                  "開催場は検出できましたが、発走時刻を1件も取得できませんでした"
+              )
+          PY

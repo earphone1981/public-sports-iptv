@@ -1,0 +1,208 @@
+name: Diagnose AutoRace Data Source
+
+on:
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Inspect AutoRace page source
+        run: |
+          python - <<'PY'
+          import re
+          import json
+          import urllib.request
+          from html import unescape
+
+          URL = "https://autorace.jp/race_info/Program/isesaki/2026-08-16"
+
+          headers = {
+              "User-Agent": (
+                  "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
+                  "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1"
+              ),
+              "Referer": "https://autorace.jp/",
+          }
+
+          req = urllib.request.Request(URL, headers=headers)
+          with urllib.request.urlopen(req, timeout=30) as r:
+              html = r.read().decode("utf-8", errors="replace")
+
+          print("HTML length:", len(html))
+          print("URL:", URL)
+
+          # --------------------------------------------------
+          # 1. 発走関連キーワードの生HTML周辺
+          # --------------------------------------------------
+          print("\n=== KEYWORD CONTEXT ===")
+          keywords = [
+              "発走",
+              "発走予定",
+              "startTime",
+              "start_time",
+              "raceTime",
+              "race_time",
+              "program",
+              "Program",
+              "race_info",
+              "api",
+              "API",
+          ]
+
+          for kw in keywords:
+              positions = [m.start() for m in re.finditer(re.escape(kw), html, flags=re.I)]
+              print(f"\n[{kw}] hits={len(positions)}")
+              for pos in positions[:10]:
+                  s = max(0, pos - 220)
+                  e = min(len(html), pos + 420)
+                  snippet = html[s:e].replace("\n", " ")
+                  print(snippet[:800])
+
+          # --------------------------------------------------
+          # 2. script src 一覧
+          # --------------------------------------------------
+          print("\n=== SCRIPT SRC ===")
+          scripts = re.findall(
+              r'<script[^>]+src=["\']([^"\']+)["\']',
+              html,
+              flags=re.I
+          )
+          for s in scripts:
+              print(s)
+
+          # --------------------------------------------------
+          # 3. HTML内に書かれたURL候補
+          # --------------------------------------------------
+          print("\n=== URL CANDIDATES ===")
+          urls = set(re.findall(r'https?://[^"\'<>\s]+', html))
+          interesting = []
+          for u in urls:
+              low = u.lower()
+              if any(x in low for x in [
+                  "api",
+                  "race",
+                  "program",
+                  "autorace",
+                  "json",
+                  "xml",
+              ]):
+                  interesting.append(u)
+
+          for u in sorted(interesting):
+              print(u)
+
+          # --------------------------------------------------
+          # 4. fetch / axios / ajax / XHR 候補
+          # --------------------------------------------------
+          print("\n=== NETWORK CALL PATTERNS ===")
+          patterns = [
+              r'fetch\s*\((.{0,500})',
+              r'axios\.(?:get|post)\s*\((.{0,500})',
+              r'\$\.ajax\s*\((.{0,700})',
+              r'XMLHttpRequest(.{0,700})',
+              r'url\s*:\s*["\']([^"\']+)["\']',
+          ]
+
+          for pat in patterns:
+              for m in re.finditer(pat, html, flags=re.I | re.S):
+                  text = m.group(0).replace("\n", " ")
+                  print(text[:900])
+
+          # --------------------------------------------------
+          # 5. 埋め込みJSONらしき script を抽出
+          # --------------------------------------------------
+          print("\n=== EMBEDDED JSON-LIKE SCRIPTS ===")
+          script_blocks = re.findall(
+              r'<script([^>]*)>(.*?)</script>',
+              html,
+              flags=re.I | re.S
+          )
+
+          count = 0
+          for attrs, body in script_blocks:
+              body_stripped = body.strip()
+              attrs_low = attrs.lower()
+
+              interesting_script = (
+                  "application/json" in attrs_low
+                  or "__next_data__" in attrs_low
+                  or "__nuxt" in body_stripped.lower()
+                  or "race" in body_stripped.lower()
+                  or "program" in body_stripped.lower()
+                  or "start" in body_stripped.lower()
+              )
+
+              if not interesting_script:
+                  continue
+
+              count += 1
+              print(f"\n--- script block {count} attrs={attrs[:200]} ---")
+              print(body_stripped[:5000])
+
+              if count >= 12:
+                  break
+
+          # --------------------------------------------------
+          # 6. JavaScriptファイルも軽く検査
+          # --------------------------------------------------
+          print("\n=== EXTERNAL JS INSPECTION ===")
+          base = "https://autorace.jp"
+
+          for src in scripts[:20]:
+              if src.startswith("//"):
+                  js_url = "https:" + src
+              elif src.startswith("/"):
+                  js_url = base + src
+              elif src.startswith("http"):
+                  js_url = src
+              else:
+                  js_url = base + "/" + src.lstrip("/")
+
+              try:
+                  req = urllib.request.Request(js_url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      js = r.read().decode("utf-8", errors="replace")
+              except Exception as e:
+                  print("JS fetch error:", js_url, repr(e))
+                  continue
+
+              low = js.lower()
+              if not any(k in low for k in [
+                  "fetch(",
+                  "axios",
+                  "xmlhttprequest",
+                  "race_info",
+                  "program",
+                  "starttime",
+                  "race_time",
+                  "api/",
+              ]):
+                  continue
+
+              print(f"\n### JS {js_url} len={len(js)}")
+
+              for kw in [
+                  "fetch(",
+                  "axios",
+                  "XMLHttpRequest",
+                  "race_info",
+                  "Program",
+                  "startTime",
+                  "race_time",
+                  "api/",
+              ]:
+                  for m in list(re.finditer(re.escape(kw), js, flags=re.I))[:5]:
+                      pos = m.start()
+                      s = max(0, pos - 300)
+                      e = min(len(js), pos + 700)
+                      print(js[s:e].replace("\n", " ")[:1200])
+
+          print("\n=== DONE ===")
+          PY

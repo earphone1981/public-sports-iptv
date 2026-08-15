@@ -1460,6 +1460,353 @@ def build_boat_race_epg(
 
 
 
+
+# -------------------------------------------------
+# 当日競輪 各R実時刻取得 (netkeirin)
+# KEIRIN.JP月間開催表を開催場の基準にし、当日だけ各R詳細を取得する。
+# 取得失敗時は従来のKEIRIN.JP月間表・仮時間へフォールバックする。
+# -------------------------------------------------
+NETKEIRIN_RACE_URL = (
+    "https://keirin.netkeiba.com/race/entry/?race_id={race_id}"
+)
+
+# 競輪場コード（race_id: YYYYMMDD + 場コード2桁 + R2桁）
+NETKEIRIN_VENUE_CODE = {
+    "函館": "11", "青森": "12", "いわき平": "13",
+    "弥彦": "21", "前橋": "22", "取手": "23", "宇都宮": "24",
+    "大宮": "25", "西武園": "26", "京王閣": "27", "立川": "28",
+    "松戸": "31", "千葉": "32", "川崎": "34", "平塚": "35",
+    "小田原": "36", "伊東": "37", "静岡": "38",
+    "名古屋": "42", "岐阜": "43", "大垣": "44", "豊橋": "45",
+    "富山": "46", "松阪": "47", "四日市": "48",
+    "福井": "51", "奈良": "53", "向日町": "54", "和歌山": "55",
+    "岸和田": "56",
+    "玉野": "61", "広島": "62", "防府": "63",
+    "高松": "71", "小松島": "73", "高知": "74", "松山": "75",
+    "小倉": "81", "久留米": "83", "武雄": "84", "佐世保": "85",
+    "別府": "86", "熊本": "87",
+}
+
+
+def fetch_netkeirin_text(url, label="netkeirin"):
+    """netkeirinの当日出走表HTMLを取得。失敗時は空文字。"""
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": (
+                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                    "AppleWebKit/537.36 (KHTML, like Gecko) "
+                    "Chrome/151.0.0.0 Safari/537.36"
+                ),
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "ja-JP,ja;q=0.9",
+                "Referer": "https://keirin.netkeiba.com/",
+                "Cache-Control": "no-cache",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=20) as response:
+            raw = response.read()
+        # netkeirinはUTF-8。念のためreplaceで落とさない。
+        return raw.decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"{label}: 取得失敗: {e}")
+        return ""
+
+
+def normalize_keirin_race_label(text):
+    s = html_lib.unescape(str(text or ""))
+    s = re.sub(r"[\u3000\t\r\n]+", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def parse_netkeirin_race_page(source, venue, date_str, race_no):
+    """1レース分の発走時刻・競走名・級班・開催名を抽出。"""
+    if not source:
+        return None
+
+    plain = strip_html_tags(source)
+    if venue not in plain:
+        return None
+
+    # 発走時刻
+    m_time = re.search(r"発走\s*([0-2]?\d:[0-5]\d)", plain)
+    if not m_time:
+        return None
+    hhmm = m_time.group(1)
+    if len(hhmm) == 4:
+        hhmm = "0" + hhmm
+
+    # <title> は「松山競輪 オールスター競輪 GI 2026年08月15日 7R 特選 出走表 ...」形式。
+    title_text = ""
+    mt = re.search(r"(?is)<title[^>]*>(.*?)</title>", source)
+    if mt:
+        title_text = normalize_keirin_race_label(strip_html_tags(mt.group(1)))
+
+    race_name = ""
+    event_name = ""
+    race_class = ""
+
+    # レース名はtitle末尾側を優先。
+    if title_text:
+        mr = re.search(
+            rf"{re.escape(date_str[:4])}年{int(date_str[4:6]):02d}月{int(date_str[6:8]):02d}日\s*"
+            rf"{race_no}R\s+(.+?)\s+出走表",
+            title_text,
+        )
+        if mr:
+            race_name = normalize_keirin_race_label(mr.group(1))
+
+        # 開催名: 「<場名>競輪 <開催名> <GI/FI等> YYYY年...」
+        me = re.search(
+            rf"{re.escape(venue)}競輪\s+(.+?)\s+(?:GP|G[1-3I]+|F[12I]+)\s+"
+            rf"{re.escape(date_str[:4])}年",
+            title_text,
+            flags=re.I,
+        )
+        if me:
+            event_name = normalize_keirin_race_label(me.group(1))
+
+    # 級班＋ステージ。例: 「Ｓ級 特選 発走 18:15」
+    mc = re.search(
+        r"([SＳAＡLＬ]級\s*[^ ]{1,12}(?:\s*[^ ]{1,12})?)\s+発走\s*[0-2]?\d:[0-5]\d",
+        plain,
+    )
+    if mc:
+        race_class = normalize_keirin_race_label(mc.group(1))
+
+    # titleから取れなければ級班文字列からステージ部分を使う。
+    if not race_name and race_class:
+        race_name = re.sub(r"^[SＳAＡLＬ]級\s*", "", race_class).strip()
+    if not race_name:
+        race_name = "競走"
+
+    girls = bool(re.search(r"[LＬ]級|ガールズ", race_class + " " + race_name))
+    is_semi = "準決" in race_name
+    is_final = ("決勝" in race_name or "優勝" in race_name) and not is_semi
+
+    return {
+        "race": str(race_no),
+        "time": hhmm,
+        "name": race_name,
+        "race_class": race_class or ("L級" if girls else "競輪"),
+        "girls": girls,
+        "is_semi": is_semi,
+        "is_final": is_final,
+        "main": False,  # 全R取得後に最終Rをmain化
+        "event_name": event_name,
+    }
+
+
+def extract_netkeirin_race_numbers(source, date_str, venue_code):
+    """出走表ページ内リンクから、その開催日の存在するR番号を抽出。"""
+    if not source:
+        return []
+    prefix = f"{date_str}{venue_code}"
+    nums = set()
+    for m in re.finditer(rf"race_id={re.escape(prefix)}(\d{{2}})", source):
+        n = int(m.group(1))
+        if 1 <= n <= 12:
+            nums.add(n)
+    return sorted(nums)
+
+
+def fetch_keirin_today_races(date_str, month_schedule):
+    """
+    当日競輪のみ各R実時刻を取得する。
+    開催場はKEIRIN.JP月間開催表(month_schedule)を基準にする。
+    詳細取得に失敗した場はvenuesへ入れず、呼び出し側で仮時間へフォールバックする。
+    """
+    schedule_today = month_schedule.get(date_str, {}) if month_schedule else {}
+    venues = {}
+
+    for venue, sched in schedule_today.items():
+        code = NETKEIRIN_VENUE_CODE.get(venue)
+        if not code:
+            print(f"KEIRIN TODAY: 場コード未登録: {venue}")
+            continue
+
+        first_id = f"{date_str}{code}01"
+        first_url = NETKEIRIN_RACE_URL.format(race_id=first_id)
+        first_html = fetch_netkeirin_text(first_url, f"KEIRIN TODAY {venue} 1R")
+        if not first_html:
+            continue
+
+        race_numbers = extract_netkeirin_race_numbers(first_html, date_str, code)
+        if 1 not in race_numbers:
+            race_numbers.insert(0, 1)
+        race_numbers = sorted(set(n for n in race_numbers if 1 <= n <= 12))
+
+        # ナビリンクを拾えない場合の安全策。1Rが取れれば最大12Rまで順に試す。
+        if len(race_numbers) <= 1:
+            race_numbers = list(range(1, 13))
+
+        races = []
+        event_name = ""
+        consecutive_missing = 0
+
+        for race_no in race_numbers:
+            if race_no == 1:
+                page = first_html
+            else:
+                rid = f"{date_str}{code}{race_no:02d}"
+                page = fetch_netkeirin_text(
+                    NETKEIRIN_RACE_URL.format(race_id=rid),
+                    f"KEIRIN TODAY {venue} {race_no}R",
+                )
+
+            race = parse_netkeirin_race_page(page, venue, date_str, race_no)
+            if not race:
+                consecutive_missing += 1
+                # ナビ無しフォールバック中、連続2R無ければその先は打ち切る。
+                if consecutive_missing >= 2 and len(race_numbers) == 12:
+                    break
+                continue
+
+            consecutive_missing = 0
+            if race.get("event_name") and not event_name:
+                event_name = race["event_name"]
+            races.append(race)
+
+        if not races:
+            print(f"KEIRIN TODAY {venue}: 各R実時刻を取得できず -> 仮時間へ")
+            continue
+
+        races.sort(key=lambda x: int(x.get("race", 0) or 0))
+        races[-1]["main"] = True
+
+        grade = sched.get("grade", "")
+        day_type = normalize_day_type(sched.get("day_type", "デイ"))
+        event_day = sched.get("event_day", "")
+
+        venues[venue] = {
+            "tvg_id": KEIRIN_MAP.get(venue, ""),
+            "grade": grade,
+            "day_type": day_type,
+            "day_emoji": sched.get("emoji", day_emoji(day_type)),
+            "event_day": event_day,
+            "event_name": event_name,
+            "races": races,
+            "source": "netkeirin当日出走表 / KEIRIN.JP開催表",
+        }
+        print(f"KEIRIN TODAY {venue}: {len(races)}R 実時刻取得")
+
+    return {
+        "date": date_str,
+        "venues": venues,
+        "updated_at": datetime.datetime.now(
+            datetime.timezone(datetime.timedelta(hours=9))
+        ).isoformat(),
+    }
+
+
+def build_keirin_today_with_fallback(
+    tv, target_date, month_schedule, JST, today_display
+):
+    """
+    今日: 実R取得できた場は各R表示。取れなかった場だけ月間表の仮時間。
+    ※同一チャンネルの重複を避けるため、実R成功場を月間表から除外して仮時間を生成。
+    """
+    date_str = target_date.strftime("%Y%m%d")
+    today_data = fetch_keirin_today_races(date_str, month_schedule)
+    real_venues = set(today_data.get("venues", {}))
+
+    used_real = False
+    if real_venues:
+        used_real = build_keirin_race_epg(
+            tv, date_str, today_data, JST, today_display
+        )
+
+    # 実Rを取れなかった開催場 + 非開催場は従来ロジックで埋める。
+    filtered_month = {}
+    for d, venues in (month_schedule or {}).items():
+        if d != date_str:
+            filtered_month[d] = venues
+            continue
+        filtered_month[d] = {
+            v: info for v, info in venues.items() if v not in real_venues
+        }
+
+    # build_keirin_future_epg は「月間表に無い場=非開催」を全場生成するため、
+    # 実R成功場まで非開催表示しないよう、ここでは失敗場のみ個別に生成する。
+    schedule_today = (month_schedule or {}).get(date_str, {})
+    day_start = datetime.datetime.strptime(
+        f"{date_str} 01:00", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+    day_end = datetime.datetime.strptime(
+        f"{date_str} 23:59", "%Y%m%d %H:%M"
+    ).replace(tzinfo=JST)
+
+    for venue, tvg_id in KEIRIN_MAP.items():
+        if venue in real_venues:
+            continue
+        info = schedule_today.get(venue)
+        if not info:
+            add_programme(
+                tv, tvg_id, day_start, day_end,
+                f"💤 本日非開催 {venue}（競輪）",
+                f"KEIRIN.JP開催日程で{today_display}の開催予定はありません。",
+            )
+            continue
+
+        grade = info.get("grade", "")
+        day_type = normalize_day_type(info.get("day_type", "デイ"))
+        emoji = info.get("emoji", day_emoji(day_type))
+        event_day = info.get("event_day", "")
+        start_dt, end_dt, start_text, end_text = build_provisional_times(
+            date_str, day_type, JST
+        )
+
+        if day_start < start_dt:
+            add_programme(
+                tv, tvg_id, day_start, start_dt,
+                f"⏳ 待機 {venue} 【{grade}】 {emoji}{day_type}",
+                "\n".join(x for x in [
+                    f"🚲 競輪 {venue}",
+                    f"🏆 開催種別: {grade}" if grade else "",
+                    f"{emoji} 開催パターン: {day_type}",
+                    f"📅 {event_day}" if event_day else "",
+                    f"⏰ 仮開始: {start_text}",
+                    f"⚠️ {PROVISIONAL_NOTICE}",
+                    f"📅 {today_display}",
+                ] if x),
+            )
+
+        title_parts = [
+            f"【{grade}】" if grade else "",
+            venue, f"{emoji}{day_type}", event_day,
+            "開催予定", PROVISIONAL_NOTICE,
+        ]
+        desc_lines = [
+            f"🚲 競輪 {venue}",
+            f"🏆 開催種別: {grade}" if grade else "",
+            f"{emoji} 開催パターン: {day_type}",
+            f"📅 開催日次: {event_day}" if event_day else "",
+            f"⏰ 仮予定: {start_text}～{'翌' if end_dt.date() != start_dt.date() else ''}{end_text}",
+            f"⚠️ {PROVISIONAL_NOTICE}",
+            "当日各Rの実時刻取得に失敗したため、KEIRIN.JP月間開催表の仮時間で表示しています。",
+            f"📅 {today_display}",
+        ]
+        add_programme(
+            tv, tvg_id, start_dt, end_dt,
+            " ".join(x for x in title_parts if x),
+            "\n".join(x for x in desc_lines if x),
+        )
+
+        if end_dt.date() == day_start.date() and end_dt < day_end:
+            add_programme(
+                tv, tvg_id, end_dt, day_end,
+                f"🏁 終了 {venue} {emoji}{day_type}",
+                f"{venue}の仮開催時間は終了しました。",
+            )
+
+    print(
+        f"KEIRIN TODAY EPG {date_str}: 実R {len(real_venues)}場 / "
+        f"残りは月間表仮時間"
+    )
+    return used_real
+
 # -------------------------------------------------
 # KEIRIN.JP future schedule support
 # Future days use official monthly schedule metadata:
@@ -2364,20 +2711,30 @@ def build_epg_xml():
 
         # -------------------------------------------------
         # 競輪
-        # KEIRIN.JP公式の月間開催表から3日分を直接生成。
-        # 実時刻が無い場合は開催区分ごとの仮時間を明示して使用する。
+        # 今日だけ各Rの実発走時刻・競走名を取得。
+        # 取得失敗した開催場はKEIRIN.JP月間開催表の仮時間へフォールバック。
+        # 明日・明後日は従来どおりKEIRIN.JP月間開催表＋仮時間。
         # -------------------------------------------------
         month_schedule = keirin_future_months.get(
             (target_date.year, target_date.month),
             {},
         )
-        build_keirin_future_epg(
-            tv,
-            target_date,
-            month_schedule,
-            JST,
-            today_display,
-        )
+        if is_today:
+            build_keirin_today_with_fallback(
+                tv,
+                target_date,
+                month_schedule,
+                JST,
+                today_display,
+            )
+        else:
+            build_keirin_future_epg(
+                tv,
+                target_date,
+                month_schedule,
+                JST,
+                today_display,
+            )
 
         # -------------------------------------------------
         # 競馬

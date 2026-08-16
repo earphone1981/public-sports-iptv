@@ -168,6 +168,41 @@ def fetch_json(url, label):
         return {}
 
 
+
+R_CIRCLED = {
+    1:"❶", 2:"❷", 3:"❸", 4:"❹", 5:"❺", 6:"❻",
+    7:"❼", 8:"❽", 9:"❾", 10:"❿", 11:"⓫", 12:"⓬",
+}
+
+def race_no_deco(race_no):
+    try:
+        n = int(str(race_no).strip())
+    except Exception:
+        return f"{race_no}R"
+    return f"{R_CIRCLED.get(n, str(n))}ℛ"
+
+def race_front_deco(name="", race_type="", grade="", is_semi=False, is_final=False):
+    s = " ".join(str(x or "") for x in (name, race_type, grade))
+    if is_final or any(k in s for k in ("優勝戦", "決勝", "ファイナル")):
+        return "🏆決勝🏆"
+    if is_semi or "準決" in s:
+        return "🔥準決勝🔥"
+    if "GⅠ" in s or "GI" in s or "ＧⅠ" in s:
+        return "👑GⅠ👑"
+    if "GⅡ" in s or "GII" in s or "ＧⅡ" in s:
+        return "✨GⅡ✨"
+    if "GⅢ" in s or "GIII" in s or "ＧⅢ" in s:
+        return "🌟GⅢ🌟"
+    return ""
+
+def decorate_race_title(title, race_no, name="", race_type="", grade="", is_semi=False, is_final=False):
+    front = race_front_deco(name, race_type, grade, is_semi, is_final)
+    rn = race_no_deco(race_no)
+    # 既存タイトル中の「1R」「12R」等は重複を避けるため削る
+    cleaned = re.sub(rf"(?<!\d){re.escape(str(race_no))}\s*R\b", "", str(title), count=1, flags=re.I)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip()
+    return " ".join(x for x in (front, rn, cleaned) if x)
+
 def add_programme(tv, channel, start_dt, stop_dt, title, desc=""):
     if stop_dt <= start_dt:
         return None
@@ -188,10 +223,12 @@ def add_programme(tv, channel, start_dt, stop_dt, title, desc=""):
 
 
 def non_event_title(venue, category):
-    return f"💤 本日非開催日です。 {venue}（{category}）"
+    icon = {"JRA":"🐴","競馬":"🐴","オートレース":"🏍️","競輪":"🚲","ボートレース":"🚤"}.get(category, "⭐")
+    return f"🌼{icon} 本日は開催していません 💤🍀 {venue}（{category}）"
 
 def finished_title(venue, category):
-    return f"🏁 本日当開催場のレースは全て終了しました。 {venue}（{category}）"
+    icon = {"JRA":"🐴","競馬":"🐴","オートレース":"🏍️","競輪":"🚲","ボートレース":"🚤"}.get(category, "⭐")
+    return f"🏁✨ 本日の開催は終了しました {icon}🌙 {venue}（{category}）"
 
 def preparing_title(venue, category):
     return f"🔄 ただ今データ取得準備中です。 {venue}（{category}）"
@@ -2435,7 +2472,7 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
                 tvg_id,
                 day_start,
                 day_end,
-                f"💤 JRA 本日使用なし {stream_name}",
+                f"🌼🐴 本日は開催していません 💤🍀 {stream_name}",
                 f"JRA公式で{today_display}の対象開催を確認できませんでした。",
             )
             continue
@@ -2490,17 +2527,29 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
                 dt - datetime.timedelta(minutes=10),
             )
 
-            if i + 1 < len(flat):
-                block_stop = flat[i + 1][0] - datetime.timedelta(minutes=10)
+            next_dt = flat[i + 1][0] if i + 1 < len(flat) else None
+            long_break = bool(next_dt and (next_dt - dt) >= datetime.timedelta(minutes=40))
+
+            if next_dt:
+                block_stop = (
+                    dt + datetime.timedelta(minutes=20)
+                    if long_break
+                    else next_dt - datetime.timedelta(minutes=10)
+                )
             else:
                 block_stop = dt + datetime.timedelta(minutes=30)
 
             if block_stop <= block_start:
                 block_stop = dt + datetime.timedelta(minutes=15)
 
-            title = (
+            base_title = (
                 f"🏇 {venue} {race['race']}R "
                 f"{race['time']}発走 {race.get('name', 'JRA競走')}"
+            )
+            title = decorate_race_title(
+                base_title,
+                race["race"],
+                name=race.get("name", ""),
             )
 
             desc = (
@@ -2518,6 +2567,26 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
                 title,
                 desc,
             )
+
+            if long_break:
+                break_start = dt + datetime.timedelta(minutes=20)
+                break_stop = next_dt - datetime.timedelta(minutes=10)
+                if break_stop > break_start:
+                    next_venue = flat[i + 1][1]
+                    next_race = flat[i + 1][2]
+                    add_programme(
+                        tv,
+                        tvg_id,
+                        break_start,
+                        min(break_stop, day_end),
+                        "🌸☕ ただいまお休み中です 🐴💤",
+                        (
+                            f"JRA {stream_name} はただいま中休みです。\n"
+                            f"次は {next_venue} {next_race.get('race','')}R "
+                            f"{next_race.get('time','')}発走予定です。\n"
+                            f"🌿 のんびりお待ちください 🐴☕"
+                        ),
+                    )
 
         finish = flat[-1][0] + datetime.timedelta(minutes=30)
 
@@ -2540,6 +2609,102 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
         ),
     )
 
+
+
+
+AUTORACE_PROGRAM_BASE = "https://autorace.jp/race_info/Program/{slug}/{date}_{race_no}"
+AUTORACE_SLUG = {"川口":"kawaguchi","伊勢崎":"isesaki","浜松":"hamamatsu","飯塚":"iizuka","山陽":"sanyo"}
+
+def _extract_autorace_program_race(source, race_no):
+    if not source:
+        return None
+    plain = strip_html_tags(source)
+    if "該当レースの開催は中止となりました" in plain:
+        return None
+    m = re.search(r"(?:発走予定|発走時刻|発走)\s*[:：]?\s*([0-2]?\d:[0-5]\d)", plain)
+    time_text = m.group(1) if m else ""
+    if not time_text:
+        m = re.search(r"投票締切\s*[:：]?\s*([0-2]?\d:[0-5]\d)", plain)
+        if m:
+            hh, mm = map(int, m.group(1).split(":"))
+            t = datetime.datetime(2000,1,1,hh,mm) + datetime.timedelta(minutes=1)
+            time_text = t.strftime("%H:%M")
+    if not time_text:
+        return None
+    name = ""
+    m = re.search(rf"([^\s　]{{1,30}}?)\s*{race_no}R\b", plain)
+    if m:
+        name = re.sub(r"\s+"," ",m.group(1)).strip()
+    if not name:
+        name = "オートレース"
+    return {
+        "race": str(race_no), "time": time_text, "name": name,
+        "race_type": name, "icon": "🏍️", "main": race_no == 12,
+        "is_semi": "準決" in name,
+        "is_final": ("優勝" in name or "決勝" in name),
+    }
+
+
+def classify_autorace_day_type_from_races(races, fallback="デイ"):
+    """
+    当日の実レース時刻を優先して開催区分を補正する。
+    最終Rの発走 + 30分を終了予定とみなし、
+    23:40を超える場合は「オーバーミッドナイト」。
+    """
+    valid = []
+    for r in races or []:
+        t = str(r.get("time", "")).strip()
+        if re.fullmatch(r"\d{1,2}:\d{2}", t):
+            hh, mm = map(int, t.split(":"))
+            valid.append((hh, mm))
+
+    if not valid:
+        return fallback or "デイ"
+
+    hh, mm = valid[-1]
+    end_minutes = hh * 60 + mm + 30
+
+    if end_minutes > (23 * 60 + 40):
+        return "オーバーミッドナイト"
+
+    # それ以外は公式カレンダーの区分を尊重
+    return fallback or "デイ"
+
+
+def fetch_autorace_today_exact(target_date, month_schedule):
+    date_str = target_date.strftime("%Y%m%d")
+    iso_date = target_date.strftime("%Y-%m-%d")
+    calendar_venues = month_schedule.get(date_str, {})
+    out = {"date": date_str, "venues": {}}
+    for venue, race_meta in calendar_venues.items():
+        slug = AUTORACE_SLUG.get(venue)
+        if not slug:
+            continue
+        races = []
+        for race_no in range(1,13):
+            url = AUTORACE_PROGRAM_BASE.format(slug=slug,date=iso_date,race_no=race_no)
+            source = fetch_text(url, f"AUTORACE TODAY {venue} {race_no}R")
+            r = _extract_autorace_program_race(source, race_no)
+            if r:
+                races.append(r)
+        if not races:
+            continue
+        official_day_type = clean_epg_meta_text(race_meta.get("nighterName","")) or "デイ"
+        day_type = classify_autorace_day_type_from_races(
+            races,
+            official_day_type,
+        )
+        out["venues"][venue] = {
+            "tvg_id": AUTO_MAP.get(venue,""),
+            "races": races,
+            "day_type": day_type,
+            "day_emoji": day_emoji(day_type),
+            "grade": clean_epg_meta_text(race_meta.get("gradeName","")),
+            "event_name": clean_epg_meta_text(race_meta.get("title","")) or clean_epg_meta_text(race_meta.get("titleShort","")),
+            "event_day": race_meta.get("paragraphDay",""),
+        }
+        print(f"AUTORACE TODAY {venue}: {len(races)}R取得")
+    return out
 
 
 # -------------------------------------------------
@@ -2821,13 +2986,19 @@ def build_epg_xml():
             (target_date.year, target_date.month),
             {},
         )
-        build_autorace_future_epg(
-            tv,
-            target_date,
-            month_schedule,
-            JST,
-            today_display,
-        )
+        if is_today:
+            autorace_today = fetch_autorace_today_exact(target_date, month_schedule)
+            used_autorace_exact = build_autorace_race_epg(
+                tv, date_str, autorace_today, JST, today_display
+            )
+            if not used_autorace_exact:
+                build_autorace_future_epg(
+                    tv, target_date, month_schedule, JST, today_display
+                )
+        else:
+            build_autorace_future_epg(
+                tv, target_date, month_schedule, JST, today_display
+            )
 
         # -------------------------------------------------
         # ボートレース
@@ -2890,8 +3061,8 @@ def build_epg_xml():
     print("ボートEPG: BOAT RACE公式から3日分を直接取得（時刻不明時は仮時間表示）")
     print("競馬: NAR公式から3日分を直接取得（時刻不明時は仮時間表示）")
     print("競輪: KEIRIN.JP公式月間表から3日分を直接生成（仮時間表示）")
-    print("オート: AutoRace.JP公式カレンダーから3日分を直接生成（時刻不明時は仮時間表示）")
-    print("JRA: EAST / WEST / HOKKAIDOをJRA公式から3日分生成")
+    print("オート: 当日は公式出走表から各R、明日以降は公式カレンダーから生成")
+    print("JRA: EAST / WEST / HOKKAIDOをJRA公式から生成（40分以上の間隔は休憩表示）")
     print(f"GCH: guides.xmlから3日分を抽出・統合 ({gch_programme_count}番組)")
     print("出力: epg.xml")
     print("============================")

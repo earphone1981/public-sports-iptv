@@ -1,9 +1,12 @@
 ﻿# ============================================================
-# Public Sports M3U merge - Workplace PC / SAFE
+# Public Sports M3U merge - Workplace PC / SAFE / EPG / JRA 8ch
+#
 # ・一旦 temporary ファイルへ生成
 # ・途中失敗 / ボート0ch の場合は public_sports.m3u を上書きしない
 # ・正常生成時のみ public_sports.m3u を置き換える
 # ・置換前の public_sports.m3u は public_sports_backup.m3u に保存
+# ・中央競馬は HQ 4ch + LQ 4ch
+# ・HQ/LQ は同じ tvg-id を共有し、同じEPGを表示
 # ============================================================
 
 $ErrorActionPreference = "Stop"
@@ -15,6 +18,7 @@ $backupPath = Join-Path $base "public_sports_backup.m3u"
 $boatPath   = Join-Path $base "boatrace_today.m3u"
 
 $root = "https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main"
+$epgUrl = "$root/epg.xml"
 
 $remote = @(
     @{ Label="競輪";       File="keirin_master.m3u" },
@@ -22,11 +26,19 @@ $remote = @(
     @{ Label="オートレース"; File="autorace_master.m3u" }
 )
 
+# HQ/LQで Id を同じにすることで同じEPGを表示
 $jra = @(
-    @{ Id="jra.gch";      Name="グリーンチャンネル"; File="gchmain.m3u8" },
-    @{ Id="jra.east";     Name="JRA EAST";          File="EAST_test.m3u8" },
-    @{ Id="jra.west";     Name="JRA WEST";          File="WEST_master .m3u8" },
-    @{ Id="jra.hokkaido"; Name="JRA HOKKAIDO";      File="hokaido_master (1).m3u8" }
+    @{ Id="jra.gch";      TvgName="グリーンチャンネル"; Name="グリーンチャンネル（高画質）"; File="gchmain.m3u8" },
+    @{ Id="jra.gch";      TvgName="グリーンチャンネル"; Name="グリーンチャンネル（低画質）"; File="gchmain_LQ.m3u8" },
+
+    @{ Id="jra.east";     TvgName="JRA EAST"; Name="JRA EAST（高画質）"; File="EAST_test.m3u8" },
+    @{ Id="jra.east";     TvgName="JRA EAST"; Name="JRA EAST（低画質）"; File="EAST_test_LQ.m3u8" },
+
+    @{ Id="jra.west";     TvgName="JRA WEST"; Name="JRA WEST（高画質）"; File="WEST_master .m3u8" },
+    @{ Id="jra.west";     TvgName="JRA WEST"; Name="JRA WEST（低画質）"; File="WEST_master_LQ.m3u8" },
+
+    @{ Id="jra.hokkaido"; TvgName="JRA HOKKAIDO"; Name="JRA HOKKAIDO（高画質）"; File="hokaido_master (1).m3u8" },
+    @{ Id="jra.hokkaido"; TvgName="JRA HOKKAIDO"; Name="JRA HOKKAIDO（低画質）"; File="hokaido_master_LQ.m3u8" }
 )
 
 function Encode-FileName([string]$name) {
@@ -62,7 +74,7 @@ function Get-Entries([string[]]$lines) {
 
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $out = New-Object System.Collections.Generic.List[string]
-$out.Add("#EXTM3U")
+$out.Add("#EXTM3U url-tvg=`"$epgUrl`"")
 $out.Add("")
 
 $total = 0
@@ -111,7 +123,6 @@ try {
 
     $boatText = [System.IO.File]::ReadAllText($boatPath)
 
-    # 「昨日リプレイ注意」だけの状態なら public_sports は触らない
     if ($boatText -match 'これは昨日のリプレイです') {
         throw "ボートが前回リプレイ状態です。本日分取得後に再実行してください。"
     }
@@ -135,7 +146,7 @@ try {
     $total += $boatEntries.Count
 
     # --------------------------------------------------------
-    # 中央競馬
+    # 中央競馬 HQ4 + LQ4
     # --------------------------------------------------------
     $out.Add("## 中央競馬")
 
@@ -143,11 +154,12 @@ try {
         $url = "$root/$(Encode-FileName $c.File)"
 
         $out.Add(
-            "#EXTINF:-1 tvg-id=`"$($c.Id)`" tvg-name=`"$($c.Name)`" group-title=`"中央競馬`",$($c.Name)"
+            "#EXTINF:-1 tvg-id=`"$($c.Id)`" tvg-name=`"$($c.TvgName)`" group-title=`"中央競馬`",$($c.Name)"
         )
         $out.Add($url)
         $out.Add("")
 
+        Write-Host "中央競馬: $($c.Name) <- $($c.File)"
         $total++
     }
 
@@ -160,7 +172,6 @@ try {
         $utf8NoBom
     )
 
-    # temporary が空・異常なら既存を残す
     if (-not (Test-Path $tempPath)) {
         throw "一時ファイル生成に失敗しました。"
     }
@@ -185,6 +196,8 @@ try {
     Write-Host " public_sports.m3u 安全更新 完了！" -ForegroundColor Green
     Write-Host " 合計チャンネル数: $total"
     Write-Host " ボート当日取得: $($boatEntries.Count) ch"
+    Write-Host " 中央競馬: 8 ch（高画質4 + 低画質4）"
+    Write-Host " EPG: $epgUrl"
     Write-Host " 出力: $outPath"
 
     if (Test-Path $backupPath) {

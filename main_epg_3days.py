@@ -183,6 +183,15 @@ def add_programme(tv, channel, start_dt, stop_dt, title, desc=""):
     return prog
 
 
+def non_event_title(venue, category):
+    return f"💤 本日非開催日です。 {venue}（{category}）"
+
+def finished_title(venue, category):
+    return f"🏁 本日当開催場のレースは全て終了しました。 {venue}（{category}）"
+
+def preparing_title(venue, category):
+    return f"🔄 ただ今データ取得準備中です。 {venue}（{category}）"
+
 def day_emoji(day_type):
     return {
         "モーニング": "🌅",
@@ -225,7 +234,7 @@ def build_manual_category(
                 tvg_id,
                 day_start,
                 day_end,
-                f"💤 本日非開催 {v_name}（{cat_label}）",
+                non_event_title(v_name, cat_label),
                 f"本日は{v_name}での開催予定はありません。",
             )
             continue
@@ -624,7 +633,7 @@ def build_keiba_race_epg(
             tvg_id,
             day_start,
             day_end,
-            f"💤 本日非開催 {venue}（競馬）",
+            non_event_title(venue, "競馬"),
             f"本日は{venue}のレース情報を取得していません。",
         )
 
@@ -1326,7 +1335,7 @@ def build_boat_race_epg(
                     tvg_id,
                     day_start,
                     day_end,
-                    f"💤 本日非開催 {v_name}（ボートレース）",
+                    non_event_title(v_name, "ボートレース"),
                     f"BOAT RACE公式の{today_display}開催一覧に"
                     f"{v_name}は掲載されていません。",
                 )
@@ -1745,7 +1754,7 @@ def build_keirin_today_with_fallback(
         if not info:
             add_programme(
                 tv, tvg_id, day_start, day_end,
-                f"💤 本日非開催 {venue}（競輪）",
+                non_event_title(venue, "競輪"),
                 f"KEIRIN.JP開催日程で{today_display}の開催予定はありません。",
             )
             continue
@@ -2088,7 +2097,7 @@ def build_keirin_future_epg(
         if not info:
             add_programme(
                 tv, tvg_id, day_start, day_end,
-                f"💤 本日非開催 {venue}（競輪）",
+                non_event_title(venue, "競輪"),
                 f"KEIRIN.JP開催日程で{today_display}の開催予定はありません。",
             )
             continue
@@ -2515,7 +2524,7 @@ def build_jra_stream_epg(tv, target_date, JST, today_display):
                 tvg_id,
                 finish,
                 day_end,
-                f"🏁 JRA 本日開催終了 {stream_name}",
+                finished_title(stream_name, "JRA"),
                 f"{venues_text}の本日のJRA開催は終了しました。",
             )
 
@@ -2585,7 +2594,7 @@ def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_displa
         if not race:
             add_programme(
                 tv, tvg_id, day_start, day_end,
-                f"💤 本日非開催 {venue}（オートレース）",
+                non_event_title(venue, "オートレース"),
                 f"AutoRace.JP公式カレンダーで{today_display}の本場開催はありません。",
             )
             continue
@@ -2708,6 +2717,17 @@ def build_epg_xml():
         date_str = target_date.strftime("%Y%m%d")
         today_display = target_date.strftime("%Y年%m月%d日")
         is_today = (day_offset == 0)
+        # 00:00-01:00 data preparation
+    midnight = datetime.datetime.strptime(f"{date_str} 00:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
+    one_am = datetime.datetime.strptime(f"{date_str} 01:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
+    preparing_channels = {}
+    for name, cid in KEIRIN_MAP.items(): preparing_channels[cid]=(name,"競輪")
+    for name, cid in KEIBA_MAP.items(): preparing_channels[cid]=(name,"競馬")
+    for name, cid in AUTO_MAP.items(): preparing_channels[cid]=(name,"オートレース")
+    for name, cid in BOAT_MAP.items(): preparing_channels[cid]=(name,"ボートレース")
+    for name, cid in JRA_STREAM_MAP.items(): preparing_channels[cid]=(name,"JRA")
+    for cid,(name,category) in preparing_channels.items():
+        add_programme(tv,cid,midnight,one_am,preparing_title(name,category),"日付更新後の次回EPGデータ取得・反映を準備しています。")
 
         # -------------------------------------------------
         # 競輪

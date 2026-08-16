@@ -1667,21 +1667,21 @@ F2 ＣＴＣは３分前杯
 📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816195000 +0900" stop="20260816203500 +0900" channel="chihou.obihiro">
-        <title lang="ja">🐎 帯広 11R 20:00発走 重賞 ばんえいグランプリ３歳以上選抜別定 直200m 晴 1.6 9</title>
+        <title lang="ja">🐎 帯広 11R 20:00発走 重賞 ばんえいグランプリ３歳以上選抜別定 直200m 晴 1.5 9</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:00
 🏷️ 種別: 一般
-📢 レース名: 重賞 ばんえいグランプリ３歳以上選抜別定 直200m 晴 1.6 9
+📢 レース名: 重賞 ばんえいグランプリ３歳以上選抜別定 直200m 晴 1.5 9
 📅 2026年08月16日</desc>
     </programme>
     <programme start="20260816203500 +0900" stop="20260816211500 +0900" channel="chihou.obihiro">
-        <title lang="ja">🏆 MAIN 🐎 帯広 12R 20:45発走 Ｂ２－２混合 直200m 晴 1.6 9</title>
+        <title lang="ja">🏆 MAIN 🐎 帯広 12R 20:45発走 Ｂ２－２混合 直200m 晴 1.5 9</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:45
 🏷️ 種別: 一般
-📢 レース名: Ｂ２－２混合 直200m 晴 1.6 9
+📢 レース名: Ｂ２－２混合 直200m 晴 1.5 9
 🏆 メインレース
 📅 2026年08月16日</desc>
     </programme>
@@ -2380,48 +2380,17 @@ F2 ＣＴＣは３分前杯
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 川口（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260816080000 +0900" stop="20260816134500 +0900" channel="auto.isesaki">
-        <title lang="ja">⏳ 開催待ち 伊勢崎 🌙ナイター</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-📢 オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816134500 +0900" stop="20260816205000 +0900" channel="auto.isesaki">
-        <title lang="ja">📅 開催予定 伊勢崎 🌙ナイター 【SG】 オッズパークPRESENTS SG第30回オートレースグランプリ 6日目</title>
-        <desc lang="ja">🏍️ オートレース 伊勢崎
-🏆 グレード: SG
-📢 開催名: オッズパークPRESENTS SG第30回オートレースグランプリ
-📅 開催日次: 6日目
-⏰ 公式LIVE予定: 13:45～20:50
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816205000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
-        <title lang="ja">🏁✨ 本日の開催は終了しました 🏍️🌙 伊勢崎（オートレース）</title>
-        <desc lang="ja">伊勢崎の本日のオートレースは全て終了しました。</desc>
+    <programme start="20260816080000 +0900" stop="20260816235900 +0900" channel="auto.isesaki">
+        <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 伊勢崎（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816080000 +0900" stop="20260816235900 +0900" channel="auto.hamamatsu">
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 浜松（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260816080000 +0900" stop="20260816203000 +0900" channel="auto.iizuka">
-        <title lang="ja">⏳ 開催待ち 飯塚 ⭐ミッドナイト</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-📢 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816203000 +0900" stop="20260816233000 +0900" channel="auto.iizuka">
-        <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 3日目 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🏍️ オートレース 飯塚
-🏆 グレード: 普通開催
-📢 開催名: AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～
-📅 開催日次: 3日目
-⏰ 仮予定: 20:30～23:30
-⚠️ （仮時間）※実際の時間ではありません
-📅 2026年08月16日</desc>
-    </programme>
-    <programme start="20260816233000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
-        <title lang="ja">🏁✨ 本日の開催は終了しました 🏍️🌙 飯塚（オートレース）</title>
-        <desc lang="ja">飯塚の本日のオートレースは全て終了しました。</desc>
+    <programme start="20260816080000 +0900" stop="20260816235900 +0900" channel="auto.iizuka">
+        <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 飯塚（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月16日の本場開催はありません。</desc>
     </programme>
     <programme start="20260816080000 +0900" stop="20260816235900 +0900" channel="auto.sanyo">
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 山陽（オートレース）</title>
@@ -5362,11 +5331,11 @@ F2 ＣＴＣは３分前杯
 📅 2026年08月17日</desc>
     </programme>
     <programme start="20260817102500 +0900" stop="20260817165500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">📅 開催予定 浜松 ☀️デイ 【普通開催】 鳥ばっちり杯 1日目</title>
+        <title lang="ja">📅 開催予定 浜松 ☀️デイ 【普通開催】 鳥ばっちり杯 4日目</title>
         <desc lang="ja">🏍️ オートレース 浜松
 🏆 グレード: 普通開催
 📢 開催名: 鳥ばっちり杯
-📅 開催日次: 1日目
+📅 開催日次: 4日目
 ⏰ 公式LIVE予定: 10:25～16:55
 📅 2026年08月17日</desc>
     </programme>
@@ -5385,11 +5354,11 @@ F2 ＣＴＣは３分前杯
 📅 2026年08月17日</desc>
     </programme>
     <programme start="20260817203000 +0900" stop="20260817233000 +0900" channel="auto.sanyo">
-        <title lang="ja">📅 開催予定 山陽 ⭐ミッドナイト 【普通開催】 山陽ミッドナイトオートレース 当たるんですCUP 1日目 （仮時間）※実際の時間ではありません</title>
+        <title lang="ja">📅 開催予定 山陽 ⭐ミッドナイト 【普通開催】 山陽ミッドナイトオートレース 当たるんですCUP 4日目 （仮時間）※実際の時間ではありません</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🏆 グレード: 普通開催
 📢 開催名: 山陽ミッドナイトオートレース 当たるんですCUP
-📅 開催日次: 1日目
+📅 開催日次: 4日目
 ⏰ 仮予定: 20:30～23:30
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年08月17日</desc>
@@ -5957,16 +5926,112 @@ F2 ＣＴＣは３分前杯
         <title lang="ja">🏁✨ 本日の開催は終了しました 🚤🌙 11 びわこ（ボートレース）</title>
         <desc lang="ja">11 びわこの本日のボートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260817103000 +0900" stop="20260817170000 +0900" channel="boat.suminoe">
-        <title lang="ja">🚤 12 住之江 ☀️開催 大阪ダービー第４３回摂河泉競走 （仮時間）※実際の時間ではありません</title>
+    <programme start="20260817080000 +0900" stop="20260817145600 +0900" channel="boat.suminoe">
+        <title lang="ja">⏳ 待機 12 住之江 🌙ナイター</title>
         <desc lang="ja">🚤 ボートレース 12 住之江
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
+📢 大阪ダービー第４３回摂河泉競走
+1R 15:16 発走予定
 📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817150600 +0900" stop="20260817152800 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 1R 15:16発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:16
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817152800 +0900" stop="20260817155900 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 2R 15:38発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:38
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817155900 +0900" stop="20260817162700 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 3R 16:09発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:09
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817162700 +0900" stop="20260817165200 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 4R 16:37発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:37
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817165200 +0900" stop="20260817172100 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 5R 17:02発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:02
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817172100 +0900" stop="20260817174600 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 6R 17:31発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:31
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817174600 +0900" stop="20260817181500 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 7R 17:56発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:56
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817181500 +0900" stop="20260817184400 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 8R 18:25発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:25
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817184400 +0900" stop="20260817191400 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 9R 18:54発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:54
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817191400 +0900" stop="20260817194700 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 10R 19:24発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:24
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817194700 +0900" stop="20260817202000 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 11R 19:57発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:57
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817202000 +0900" stop="20260817210000 +0900" channel="boat.suminoe">
+        <title lang="ja">🚤 12 住之江 12R 20:30発走 🌙ナイター 大阪ダービー第４３回摂河泉競走</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 大阪ダービー第４３回摂河泉競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:30
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817210000 +0900" stop="20260817235900 +0900" channel="boat.suminoe">
+        <title lang="ja">🏁✨ 本日の開催は終了しました 🚤🌙 12 住之江（ボートレース）</title>
+        <desc lang="ja">12 住之江の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260817080000 +0900" stop="20260817101400 +0900" channel="boat.amagasaki">
         <title lang="ja">⏳ 待機 13 尼崎 ☀️デイ</title>
@@ -6733,16 +6798,112 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🌼🚤 本日は開催していません 💤🍀 23 唐津（ボートレース）</title>
         <desc lang="ja">BOAT RACE公式の2026年08月17日開催一覧に23 唐津は掲載されていません。</desc>
     </programme>
-    <programme start="20260817103000 +0900" stop="20260817170000 +0900" channel="boat.omura">
-        <title lang="ja">🚤 24 大村 ☀️開催 オールレディース競走 （仮時間）※実際の時間ではありません</title>
+    <programme start="20260817080000 +0900" stop="20260817145900 +0900" channel="boat.omura">
+        <title lang="ja">⏳ 待機 24 大村 🌙ナイター</title>
         <desc lang="ja">🚤 ボートレース 24 大村
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
+📢 オールレディース競走
+1R 15:19 発走予定
 📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817150900 +0900" stop="20260817153800 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 1R 15:19発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:19
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817153800 +0900" stop="20260817160700 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 2R 15:48発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:48
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817160700 +0900" stop="20260817163900 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 3R 16:17発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:17
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817163900 +0900" stop="20260817170500 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 4R 16:49発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:49
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817170500 +0900" stop="20260817173400 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 5R 17:15発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:15
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817173400 +0900" stop="20260817180100 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 6R 17:44発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:44
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817180100 +0900" stop="20260817182900 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 7R 18:11発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:11
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817182900 +0900" stop="20260817185900 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 8R 18:39発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:39
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817185900 +0900" stop="20260817193000 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 9R 19:09発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:09
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817193000 +0900" stop="20260817200000 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 10R 19:40発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:40
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817200000 +0900" stop="20260817203000 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 11R 20:10発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:10
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817203000 +0900" stop="20260817211000 +0900" channel="boat.omura">
+        <title lang="ja">🚤 24 大村 12R 20:40発走 🌙ナイター オールレディース競走</title>
+        <desc lang="ja">🚤 ボートレース 24 大村
+📢 オールレディース競走
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:40
+📅 2026年08月17日</desc>
+    </programme>
+    <programme start="20260817211000 +0900" stop="20260817235900 +0900" channel="boat.omura">
+        <title lang="ja">🏁✨ 本日の開催は終了しました 🚤🌙 24 大村（ボートレース）</title>
+        <desc lang="ja">24 大村の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260818000000 +0900" stop="20260818080000 +0900" channel="keirin.hakodate">
         <title lang="ja">🔄 ただ今データ取得準備中です。 函館（競輪）</title>
@@ -8104,48 +8265,17 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 伊勢崎（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260818080000 +0900" stop="20260818102500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">⏳ 開催待ち 浜松 ☀️デイ</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-📢 鳥ばっちり杯
-📅 2026年08月18日</desc>
-    </programme>
-    <programme start="20260818102500 +0900" stop="20260818165500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">📅 開催予定 浜松 ☀️デイ 【普通開催】 鳥ばっちり杯 2日目</title>
-        <desc lang="ja">🏍️ オートレース 浜松
-🏆 グレード: 普通開催
-📢 開催名: 鳥ばっちり杯
-📅 開催日次: 2日目
-⏰ 公式LIVE予定: 10:25～16:55
-📅 2026年08月18日</desc>
-    </programme>
-    <programme start="20260818165500 +0900" stop="20260818235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏁✨ 本日の開催は終了しました 🏍️🌙 浜松（オートレース）</title>
-        <desc lang="ja">浜松の本日のオートレースは全て終了しました。</desc>
+    <programme start="20260818080000 +0900" stop="20260818235900 +0900" channel="auto.hamamatsu">
+        <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 浜松（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
     </programme>
     <programme start="20260818080000 +0900" stop="20260818235900 +0900" channel="auto.iizuka">
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 飯塚（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260818080000 +0900" stop="20260818203000 +0900" channel="auto.sanyo">
-        <title lang="ja">⏳ 開催待ち 山陽 ⭐ミッドナイト</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-📢 山陽ミッドナイトオートレース 当たるんですCUP
-📅 2026年08月18日</desc>
-    </programme>
-    <programme start="20260818203000 +0900" stop="20260818233000 +0900" channel="auto.sanyo">
-        <title lang="ja">📅 開催予定 山陽 ⭐ミッドナイト 【普通開催】 山陽ミッドナイトオートレース 当たるんですCUP 2日目 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🏍️ オートレース 山陽
-🏆 グレード: 普通開催
-📢 開催名: 山陽ミッドナイトオートレース 当たるんですCUP
-📅 開催日次: 2日目
-⏰ 仮予定: 20:30～23:30
-⚠️ （仮時間）※実際の時間ではありません
-📅 2026年08月18日</desc>
-    </programme>
-    <programme start="20260818233000 +0900" stop="20260818235900 +0900" channel="auto.sanyo">
-        <title lang="ja">🏁✨ 本日の開催は終了しました 🏍️🌙 山陽（オートレース）</title>
-        <desc lang="ja">山陽の本日のオートレースは全て終了しました。</desc>
+    <programme start="20260818080000 +0900" stop="20260818235900 +0900" channel="auto.sanyo">
+        <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 山陽（オートレース）</title>
+        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
     </programme>
     <programme start="20260818103000 +0900" stop="20260818170000 +0900" channel="boat.kiryu">
         <title lang="ja">🚤 01 桐生 ☀️デイ 開催予定（公式詳細未公表） （仮時間）※実際の時間ではありません</title>

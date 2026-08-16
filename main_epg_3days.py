@@ -2727,24 +2727,127 @@ def fetch_autorace_future_month(year, month):
     if not isinstance(body, list):
         return result
 
+    def add_range(venue, race, start_text, end_text):
+        try:
+            start_date = datetime.datetime.strptime(
+                str(start_text), "%Y-%m-%d"
+            ).date()
+            end_date = datetime.datetime.strptime(
+                str(end_text), "%Y-%m-%d"
+            ).date()
+        except Exception:
+            return False
+
+        if end_date < start_date:
+            start_date, end_date = end_date, start_date
+
+        cur = start_date
+        added = False
+        while cur <= end_date:
+            if cur.year == year and cur.month == month:
+                date_str = cur.strftime("%Y%m%d")
+                result.setdefault(date_str, {})[venue] = race
+                added = True
+            cur += datetime.timedelta(days=1)
+        return added
+
+    def live_all_time_dates(race):
+        dates = set()
+        for item in race.get("liveAllTime", []) or []:
+            s = str(item)
+
+            # 例: 8/14～8/16 10:00～17:00
+            m = re.search(
+                r"(\d{1,2})/(\d{1,2})\s*[～~\-]\s*"
+                r"(\d{1,2})/(\d{1,2})",
+                s,
+            )
+            if m:
+                sm, sd, em, ed = map(int, m.groups())
+                try:
+                    start_date = datetime.date(year, sm, sd)
+                    end_date = datetime.date(year, em, ed)
+                    if end_date < start_date:
+                        continue
+                    cur = start_date
+                    while cur <= end_date:
+                        if cur.year == year and cur.month == month:
+                            dates.add(cur.strftime("%Y%m%d"))
+                        cur += datetime.timedelta(days=1)
+                except Exception:
+                    pass
+                continue
+
+            # 例: 8/16 13:45～20:50
+            m = re.search(r"(\d{1,2})/(\d{1,2})", s)
+            if m:
+                try:
+                    d = datetime.date(year, int(m.group(1)), int(m.group(2)))
+                    if d.month == month:
+                        dates.add(d.strftime("%Y%m%d"))
+                except Exception:
+                    pass
+
+        return dates
+
     for place in body:
         if not isinstance(place, dict):
             continue
-        venue = re.sub(r"\s+", "", str(place.get("placeName", "")))
+
+        venue = re.sub(r"[\s　]+", "", str(place.get("placeName", "")))
         if venue not in AUTO_MAP:
             continue
+
         for day in place.get("calendar", []) or []:
             if not isinstance(day, dict):
                 continue
+
             race = day.get("race")
             # [] means no home-track event. outside[] is off-track sales only.
             if not isinstance(race, dict) or not race:
                 continue
-            iso_date = str(day.get("date", ""))
-            date_str = iso_date.replace("-", "")
-            if len(date_str) != 8:
-                continue
-            result.setdefault(date_str, {})[venue] = race
+
+            added = False
+
+            # 1) 公式の開催期間を最優先。
+            start_text = str(race.get("periodStartDate", "") or "").strip()
+            end_text = str(race.get("periodEndDate", "") or "").strip()
+            if start_text:
+                if not end_text:
+                    end_text = start_text
+                added = add_range(venue, race, start_text, end_text)
+
+            # 2) 開催期間が無い/使えない場合は liveAllTime を展開。
+            if not added:
+                for date_str in live_all_time_dates(race):
+                    result.setdefault(date_str, {})[venue] = race
+                    added = True
+
+            # 3) 最後の保険として calendar 側の日付情報を利用。
+            if not added:
+                iso_date = str(day.get("date", "") or "").strip()
+                if re.fullmatch(r"\d{4}-\d{2}-\d{2}", iso_date):
+                    d = datetime.datetime.strptime(iso_date, "%Y-%m-%d").date()
+                    if d.year == year and d.month == month:
+                        result.setdefault(d.strftime("%Y%m%d"), {})[venue] = race
+                        added = True
+
+            # 4) month内の weekDate を最後の最後の補助にする。
+            if not added:
+                week_date = str(day.get("weekDate", "") or "").strip()
+                if week_date.isdigit():
+                    try:
+                        d = datetime.date(year, month, int(week_date))
+                        result.setdefault(d.strftime("%Y%m%d"), {})[venue] = race
+                    except Exception:
+                        pass
+
+    total_dates = len(result)
+    total_entries = sum(len(v) for v in result.values())
+    print(
+        f"AUTORACE CALENDAR {year}-{month:02d}: "
+        f"{total_dates}日 / 延べ{total_entries}場を展開"
+    )
     return result
 
 def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_display):

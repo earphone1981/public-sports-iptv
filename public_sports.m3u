@@ -262,3 +262,27 @@ https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/WEST_mast
 
 #EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokkaido_local.png" group-title="中央競馬",JRA HOKKAIDO
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master%20%281%29.m3u8
+
+#EXTINF:-1,HOKKAIDO TEST 1
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_1.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 2
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_2.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 3
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_3.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 4
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_4.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 5
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_5.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 6
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_6.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 7
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_7.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES
+
+#EXTINF:-1,HOKKAIDO TEST 8
+https://variants.streaks.jp/v5/gch/9cb08fbe7c5040fa9b9eb2d4059d8593/122fa6bbe3ff44a689e42137bbc3eac7/manifest_8.m3u8?vt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlIjoibGl2ZS1nY2guc3RyZWFrcy5qcCJ9.gT7IYcwKRel8iO-zQWZQg4RzuFdNOdq7drqvOYqgt0s&_HLS_skip=YES

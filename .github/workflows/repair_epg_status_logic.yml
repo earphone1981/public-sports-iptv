@@ -1,0 +1,184 @@
+name: Repair EPG Status Logic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Repair main_epg_3days.py
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path("main_epg_3days.py")
+          s = p.read_text(encoding="utf-8-sig")
+          original = s
+
+          for token in (
+              "def non_event_title(",
+              "def finished_title(",
+              "def preparing_title(",
+          ):
+              if token not in s:
+                  raise SystemExit(f"必要な関数が見つかりません: {token}")
+
+          # 壊れた準備中ブロックを削除
+          start_marker = "        # 00:00-01:00 data preparation\n"
+          end_marker = "        # -------------------------------------------------\n        # 競輪\n"
+
+          if start_marker in s:
+              a = s.index(start_marker)
+              b = s.index(end_marker, a)
+              s = s[:a] + s[b:]
+              print("old prep block removed")
+
+          # 正しい準備中ブロックを挿入
+          marker = "        is_today = (day_offset == 0)\n"
+          prep_lines = [
+              "        # 00:00～01:00は次回EPGデータ取得準備中",
+              "        midnight = datetime.datetime.strptime(",
+              "            f\"{date_str} 00:00\", \"%Y%m%d %H:%M\"",
+              "        ).replace(tzinfo=JST)",
+              "",
+              "        one_am = datetime.datetime.strptime(",
+              "            f\"{date_str} 01:00\", \"%Y%m%d %H:%M\"",
+              "        ).replace(tzinfo=JST)",
+              "",
+              "        preparing_channels = {}",
+              "        for name, cid in KEIRIN_MAP.items():",
+              "            preparing_channels[cid] = (name, \"競輪\")",
+              "        for name, cid in KEIBA_MAP.items():",
+              "            preparing_channels[cid] = (name, \"競馬\")",
+              "        for name, cid in AUTO_MAP.items():",
+              "            preparing_channels[cid] = (name, \"オートレース\")",
+              "        for name, cid in BOAT_MAP.items():",
+              "            preparing_channels[cid] = (name, \"ボートレース\")",
+              "        for name, cid in JRA_STREAM_MAP.items():",
+              "            preparing_channels[cid] = (name, \"JRA\")",
+              "",
+              "        for cid, (name, category) in preparing_channels.items():",
+              "            add_programme(",
+              "                tv,",
+              "                cid,",
+              "                midnight,",
+              "                one_am,",
+              "                preparing_title(name, category),",
+              "                \"日付更新後の次回EPGデータ取得・反映を準備しています。\",",
+              "            )",
+              "",
+          ]
+          prep_block = "\n".join(prep_lines) + "\n"
+
+          if "00:00～01:00は次回EPGデータ取得準備中" not in s:
+              if marker not in s:
+                  raise SystemExit("day loop marker が見つかりません")
+              s = s.replace(marker, marker + prep_block, 1)
+
+          # 終了タイトルをすべて統一
+          replacements = [
+              (
+                  'f"🏁 終了 {v_name} ({emoji}{day_type})（{cat_label}）"',
+                  'finished_title(v_name, cat_label)'
+              ),
+              (
+                  'f"🏁 終了 {venue} {emoji}{day_type}",\n'
+                  '                f"{venue}の本日の競馬は終了しました。"',
+                  'finished_title(venue, "競馬"),\n'
+                  '                f"{venue}の本日の競馬は全て終了しました。"'
+              ),
+              (
+                  'f"🏁 終了 {venue} {day_icon}{day_type}",\n'
+                  '                f"{venue}の本日の競輪は終了しました。"',
+                  'finished_title(venue, "競輪"),\n'
+                  '                f"{venue}の本日の競輪は全て終了しました。"'
+              ),
+              (
+                  'f"🏁 終了 {venue} {day_icon}{day_type}",\n'
+                  '                f"{venue}の本日のオートレースは終了しました。"',
+                  'finished_title(venue, "オートレース"),\n'
+                  '                f"{venue}の本日のオートレースは全て終了しました。"'
+              ),
+              (
+                  'f"🏁 終了 {v_name} {emoji}{day_type}",\n'
+                  '                f"{v_name}の本日のボートレースは終了しました。"',
+                  'finished_title(v_name, "ボートレース"),\n'
+                  '                f"{v_name}の本日のボートレースは全て終了しました。"'
+              ),
+              (
+                  'f"🏁 終了 {venue} {emoji}{day_type}",\n'
+                  '                f"{venue}の仮開催時間は終了しました。"',
+                  'finished_title(venue, "競輪"),\n'
+                  '                f"{venue}の本日の競輪は全て終了しました。"'
+              ),
+              (
+                  'f"🏁 終了 {venue} {emoji}{day_type}",\n'
+                  '                f"{venue}の{today_display}の開催予定時間は終了しました。"',
+                  'finished_title(venue, "オートレース"),\n'
+                  '                f"{venue}の本日のオートレースは全て終了しました。"'
+              ),
+          ]
+
+          total = 0
+          for old, new in replacements:
+              count = s.count(old)
+              if count:
+                  s = s.replace(old, new)
+                  total += count
+                  print("replaced", count, old[:45])
+
+          print("finished-title replacements:", total)
+
+          # 念のため旧終了タイトルが残っていないことを確認
+          leftovers = [
+              line.strip() for line in s.splitlines()
+              if "🏁 終了 " in line
+          ]
+          if leftovers:
+              print("残存旧タイトル:")
+              for line in leftovers:
+                  print(line)
+              raise SystemExit("旧『🏁 終了』タイトルが残っています")
+
+          if s == original:
+              raise SystemExit("変更がありません")
+
+          p.write_text(s, encoding="utf-8")
+          print("repair completed")
+          PY
+
+      - name: Syntax check
+        run: python -m py_compile main_epg_3days.py
+
+      - name: Verify status logic
+        run: |
+          grep -n "本日当開催場のレースは全て終了しました。" main_epg_3days.py
+          grep -n "本日非開催日です。" main_epg_3days.py
+          grep -n "ただ今データ取得準備中です。" main_epg_3days.py
+          grep -n "00:00～01:00は次回EPGデータ取得準備中" main_epg_3days.py
+          if grep -n "🏁 終了 " main_epg_3days.py; then
+            echo "旧終了タイトルが残っています"
+            exit 1
+          fi
+
+      - name: Commit repaired generator
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add main_epg_3days.py
+          git commit -m "Repair EPG status logic" || exit 0
+          git push

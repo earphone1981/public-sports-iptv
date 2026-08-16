@@ -126,6 +126,10 @@ BOAT_NAME_BY_CODE = {code: name for name, code in BOAT_CODE_BY_NAME.items()}
 # Always generate today + tomorrow + the day after tomorrow.
 EPG_DAYS = 3
 
+# 日付更新後、当日データの自動取得・反映が完了する基準時刻。
+# 現在の当日更新は08:00運用。
+DATA_READY_TIME = "08:00"
+
 ICON_MAP = {
     "keirin": "🚲",
     "keiba": "🏇",
@@ -221,7 +225,7 @@ def build_manual_category(
 
     for v_name, tvg_id in target_map.items():
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
 
         day_end = datetime.datetime.strptime(
@@ -485,7 +489,7 @@ def build_keiba_race_epg(
         category_name = "JRA" if info.get("_category") == "jra" else "地方競馬"
 
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
 
         day_end = datetime.datetime.strptime(
@@ -621,7 +625,7 @@ def build_keiba_race_epg(
             continue
 
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
 
         day_end = datetime.datetime.strptime(
@@ -691,7 +695,7 @@ def build_keirin_race_epg(
         event_day = clean_epg_meta_text(info.get("event_day", ""))
 
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
         day_end = datetime.datetime.strptime(
             f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -862,7 +866,7 @@ def build_autorace_race_epg(
         event_day = info.get("event_day", "")
 
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
         day_end = datetime.datetime.strptime(
             f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -1292,7 +1296,7 @@ def build_boat_race_epg(
 
     for v_name, tvg_id in BOAT_MAP.items():
         day_start = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
         day_end = datetime.datetime.strptime(
             f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -1741,7 +1745,7 @@ def build_keirin_today_with_fallback(
     # 実R成功場まで非開催表示しないよう、ここでは失敗場のみ個別に生成する。
     schedule_today = (month_schedule or {}).get(date_str, {})
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2082,7 +2086,7 @@ def build_keirin_future_epg(
 ):
     date_str = target_date.strftime("%Y%m%d")
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2171,7 +2175,7 @@ def build_future_placeholder(
 ):
     """Future dates without race JSON: show a neutral schedule placeholder."""
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2199,7 +2203,7 @@ def build_stream_channel_placeholder(
 ):
     """Channels such as JRA official/Green Channel that have no race JSON."""
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2395,7 +2399,7 @@ def fetch_jra_day(target_date):
 def build_jra_stream_epg(tv, target_date, JST, today_display):
     date_str = target_date.strftime("%Y%m%d")
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2581,7 +2585,7 @@ def fetch_autorace_future_month(year, month):
 def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_display):
     date_str = target_date.strftime("%Y%m%d")
     day_start = datetime.datetime.strptime(
-        f"{date_str} 01:00", "%Y%m%d %H:%M"
+        f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
     ).replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(
         f"{date_str} 23:59", "%Y%m%d %H:%M"
@@ -2717,13 +2721,13 @@ def build_epg_xml():
         date_str = target_date.strftime("%Y%m%d")
         today_display = target_date.strftime("%Y年%m月%d日")
         is_today = (day_offset == 0)
-        # 00:00～01:00は次回EPGデータ取得準備中
+        # 00:00～当日データ更新時刻までは次回EPGデータ取得準備中
         midnight = datetime.datetime.strptime(
             f"{date_str} 00:00", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
 
         one_am = datetime.datetime.strptime(
-            f"{date_str} 01:00", "%Y%m%d %H:%M"
+            f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
         ).replace(tzinfo=JST)
 
         preparing_channels = {}
@@ -2841,7 +2845,7 @@ def build_epg_xml():
 
         if not used_boat_official:
             day_start = datetime.datetime.strptime(
-                f"{date_str} 01:00", "%Y%m%d %H:%M"
+                f"{date_str} {DATA_READY_TIME}", "%Y%m%d %H:%M"
             ).replace(tzinfo=JST)
             day_end = datetime.datetime.strptime(
                 f"{date_str} 23:59", "%Y%m%d %H:%M"

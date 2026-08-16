@@ -1,0 +1,81 @@
+name: Apply EPG Status Fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Fix status titles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("main_epg_3days.py")
+          s=p.read_text(encoding="utf-8-sig")
+          old=s
+
+          anchor="def day_emoji(day_type):\n"
+          helper='''def non_event_title(venue, category):
+              return f"💤 本日非開催日です。 {venue}（{category}）"
+
+          def finished_title(venue, category):
+              return f"🏁 本日当開催場のレースは全て終了しました。 {venue}（{category}）"
+
+          def preparing_title(venue, category):
+              return f"🔄 ただ今データ取得準備中です。 {venue}（{category}）"
+
+          '''
+          if "def non_event_title(" not in s:
+              if anchor not in s: raise SystemExit("day_emoji not found")
+              s=s.replace(anchor,helper+anchor,1)
+
+          reps={
+            'f"💤 本日非開催 {v_name}（{cat_label}）"':'non_event_title(v_name, cat_label)',
+            'f"💤 本日非開催 {venue}（競馬）"':'non_event_title(venue, "競馬")',
+            'f"💤 本日非開催 {venue}（競輪）"':'non_event_title(venue, "競輪")',
+            'f"💤 本日非開催 {venue}（オートレース）"':'non_event_title(venue, "オートレース")',
+            'f"💤 本日非開催 {v_name}（ボートレース）"':'non_event_title(v_name, "ボートレース")',
+            'f"🏁 JRA 本日開催終了 {stream_name}"':'finished_title(stream_name, "JRA")',
+          }
+          for a,b in reps.items(): s=s.replace(a,b)
+
+          marker="        is_today = (day_offset == 0)\n"
+          block='''        # 00:00-01:00 data preparation
+              midnight = datetime.datetime.strptime(f"{date_str} 00:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
+              one_am = datetime.datetime.strptime(f"{date_str} 01:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
+              preparing_channels = {}
+              for name, cid in KEIRIN_MAP.items(): preparing_channels[cid]=(name,"競輪")
+              for name, cid in KEIBA_MAP.items(): preparing_channels[cid]=(name,"競馬")
+              for name, cid in AUTO_MAP.items(): preparing_channels[cid]=(name,"オートレース")
+              for name, cid in BOAT_MAP.items(): preparing_channels[cid]=(name,"ボートレース")
+              for name, cid in JRA_STREAM_MAP.items(): preparing_channels[cid]=(name,"JRA")
+              for cid,(name,category) in preparing_channels.items():
+                  add_programme(tv,cid,midnight,one_am,preparing_title(name,category),"日付更新後の次回EPGデータ取得・反映を準備しています。")
+          '''
+          if "00:00-01:00 data preparation" not in s:
+              if marker not in s: raise SystemExit("day loop not found")
+              s=s.replace(marker,marker+block,1)
+
+          if s==old: raise SystemExit("no changes")
+          p.write_text(s,encoding="utf-8")
+          PY
+
+      - name: Syntax check
+        run: python -m py_compile main_epg_3days.py
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add main_epg_3days.py
+          git commit -m "Fix EPG status titles" || exit 0
+          git push

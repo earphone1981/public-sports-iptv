@@ -3166,7 +3166,7 @@ def build_epg_xml():
     print("競輪: KEIRIN.JP公式月間表から3日分を直接生成（仮時間表示）")
     print("オート: 当日は公式出走表から各R、明日以降は公式カレンダーから生成")
     print("JRA: EAST / WEST / HOKKAIDOをJRA公式から生成（40分以上の間隔は休憩表示）")
-    print(f"GCH: guides.xmlから3日分を抽出・統合 ({gch_programme_count}番組)")
+    print(f"GCH: guides.xmlから3日分を抽出・統合とか ({gch_programme_count}番組)")
     print("出力: epg.xml")
     print("============================")
 

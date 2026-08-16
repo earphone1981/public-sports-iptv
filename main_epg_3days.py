@@ -332,7 +332,7 @@ def build_manual_category(
                 tvg_id,
                 post_end,
                 day_end,
-                f"🏁 終了 {v_name} ({emoji}{day_type})（{cat_label}）",
+                finished_title(v_name, cat_label),
                 f"{v_name} ({day_type}) の放送は終了しました。",
             )
 
@@ -608,8 +608,8 @@ def build_keiba_race_epg(
                 tvg_id,
                 finish_start,
                 day_end,
-                f"🏁 終了 {venue} {emoji}{day_type}",
-                f"{venue}の本日の競馬は終了しました。",
+                finished_title(venue, "競馬"),
+                f"{venue}の本日の競馬は全て終了しました。",
             )
 
     # JSONに無い地方競馬チャンネルは非開催表示。
@@ -792,8 +792,8 @@ def build_keirin_race_epg(
         if finish < day_end:
             add_programme(
                 tv, tvg_id, finish, day_end,
-                f"🏁 終了 {venue} {day_icon}{day_type}",
-                f"{venue}の本日の競輪は終了しました。",
+                finished_title(venue, "競輪"),
+                f"{venue}の本日の競輪は全て終了しました。",
             )
 
     print(f"KEIRIN EPG: {len(handled)}場を各R単位で生成")
@@ -966,8 +966,8 @@ def build_autorace_race_epg(
         if finish < day_end:
             add_programme(
                 tv, tvg_id, finish, day_end,
-                f"🏁 終了 {venue} {day_icon}{day_type}",
-                f"{venue}の本日のオートレースは終了しました。",
+                finished_title(venue, "オートレース"),
+                f"{venue}の本日のオートレースは全て終了しました。",
             )
 
     print(f"AUTORACE EPG: {len(handled)}場を各R単位で生成")
@@ -1460,8 +1460,8 @@ def build_boat_race_epg(
                 tvg_id,
                 finish,
                 day_end,
-                f"🏁 終了 {v_name} {emoji}{day_type}",
-                f"{v_name}の本日のボートレースは終了しました。",
+                finished_title(v_name, "ボートレース"),
+                f"{v_name}の本日のボートレースは全て終了しました。",
             )
 
     return True
@@ -1806,8 +1806,8 @@ def build_keirin_today_with_fallback(
         if end_dt.date() == day_start.date() and end_dt < day_end:
             add_programme(
                 tv, tvg_id, end_dt, day_end,
-                f"🏁 終了 {venue} {emoji}{day_type}",
-                f"{venue}の仮開催時間は終了しました。",
+                finished_title(venue, "競輪"),
+                f"{venue}の本日の競輪は全て終了しました。",
             )
 
     print(
@@ -2152,8 +2152,8 @@ def build_keirin_future_epg(
         if end_dt.date() == day_start.date() and end_dt < day_end:
             add_programme(
                 tv, tvg_id, end_dt, day_end,
-                f"🏁 終了 {venue} {emoji}{day_type}",
-                f"{venue}の仮開催時間は終了しました。",
+                finished_title(venue, "競輪"),
+                f"{venue}の本日の競輪は全て終了しました。",
             )
 
     print(f"KEIRIN EPG {date_str}: {handled}場を公式開催表＋仮時間で生成")
@@ -2659,8 +2659,8 @@ def build_autorace_future_epg(tv, target_date, month_schedule, JST, today_displa
         if end_dt.date() == day_start.date() and end_dt < day_end:
             add_programme(
                 tv, tvg_id, end_dt, day_end,
-                f"🏁 終了 {venue} {emoji}{day_type}",
-                f"{venue}の{today_display}の開催予定時間は終了しました。",
+                finished_title(venue, "オートレース"),
+                f"{venue}の本日のオートレースは全て終了しました。",
             )
 
     print(f"AUTORACE FUTURE EPG {date_str}: {handled}場を開催予定として生成")
@@ -2717,17 +2717,36 @@ def build_epg_xml():
         date_str = target_date.strftime("%Y%m%d")
         today_display = target_date.strftime("%Y年%m月%d日")
         is_today = (day_offset == 0)
-        # 00:00-01:00 data preparation
-    midnight = datetime.datetime.strptime(f"{date_str} 00:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
-    one_am = datetime.datetime.strptime(f"{date_str} 01:00", "%Y%m%d %H:%M").replace(tzinfo=JST)
-    preparing_channels = {}
-    for name, cid in KEIRIN_MAP.items(): preparing_channels[cid]=(name,"競輪")
-    for name, cid in KEIBA_MAP.items(): preparing_channels[cid]=(name,"競馬")
-    for name, cid in AUTO_MAP.items(): preparing_channels[cid]=(name,"オートレース")
-    for name, cid in BOAT_MAP.items(): preparing_channels[cid]=(name,"ボートレース")
-    for name, cid in JRA_STREAM_MAP.items(): preparing_channels[cid]=(name,"JRA")
-    for cid,(name,category) in preparing_channels.items():
-        add_programme(tv,cid,midnight,one_am,preparing_title(name,category),"日付更新後の次回EPGデータ取得・反映を準備しています。")
+        # 00:00～01:00は次回EPGデータ取得準備中
+        midnight = datetime.datetime.strptime(
+            f"{date_str} 00:00", "%Y%m%d %H:%M"
+        ).replace(tzinfo=JST)
+
+        one_am = datetime.datetime.strptime(
+            f"{date_str} 01:00", "%Y%m%d %H:%M"
+        ).replace(tzinfo=JST)
+
+        preparing_channels = {}
+        for name, cid in KEIRIN_MAP.items():
+            preparing_channels[cid] = (name, "競輪")
+        for name, cid in KEIBA_MAP.items():
+            preparing_channels[cid] = (name, "競馬")
+        for name, cid in AUTO_MAP.items():
+            preparing_channels[cid] = (name, "オートレース")
+        for name, cid in BOAT_MAP.items():
+            preparing_channels[cid] = (name, "ボートレース")
+        for name, cid in JRA_STREAM_MAP.items():
+            preparing_channels[cid] = (name, "JRA")
+
+        for cid, (name, category) in preparing_channels.items():
+            add_programme(
+                tv,
+                cid,
+                midnight,
+                one_am,
+                preparing_title(name, category),
+                "日付更新後の次回EPGデータ取得・反映を準備しています。",
+            )
 
         # -------------------------------------------------
         # 競輪

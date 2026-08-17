@@ -45,7 +45,7 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import subprocess, urllib.request
+          import subprocess
 
           CHANNELS = [
               {"label":"ナミビア","source":"https://www.youtube.com/watch?v=ydYDqZQpim8","file":"namibia_live.m3u","tvg_id":"youtube.namibia.live","tvg_name":"ナミビア LIVE","display":"🇳🇦 ナミビア LIVE","group":"その他LIVE","logo":"","remove_when_offline":False},
@@ -60,35 +60,9 @@ jobs:
               urls=[x.strip() for x in p.stdout.splitlines() if x.strip().startswith(("http://","https://"))]
               return urls[0] if p.returncode==0 and urls else None
 
-          def get_ott_variant(master):
-              try:
-                  req=urllib.request.Request(master,headers={"User-Agent":"Mozilla/5.0"})
-                  text=urllib.request.urlopen(req,timeout=30).read().decode("utf-8","replace")
-                  lines=text.splitlines()
-                  candidates=[]
-                  for i,line in enumerate(lines):
-                      if line.startswith("#EXT-X-STREAM-INF:") and i+1<len(lines):
-                          u=lines[i+1].strip()
-                          if u.startswith("http"):
-                              bw=0
-                              try:
-                                  bw=int(line.split("BANDWIDTH=")[1].split(",")[0])
-                              except Exception: pass
-                              candidates.append((bw,u))
-                  if candidates:
-                      candidates.sort(reverse=True)
-                      return candidates[0][1]
-              except Exception as e:
-                  print("OTT variant parse error:",e)
-              return master
-
-          def extinf(ch, ott=False):
+          def extinf(ch):
               logo=f' tvg-logo="{ch["logo"]}"' if ch["logo"] else ""
-              tid=ch["tvg_id"]+(".ott" if ott else "")
-              name=ch["tvg_name"]+(" OTT用" if ott else "")
-              display=ch["display"]+("【OTT用】" if ott else "")
-              group="OTT用" if ott else ch["group"]
-              return f'#EXTINF:-1 tvg-id="{tid}" tvg-name="{name}"{logo} group-title="{group}",{display}'
+              return f'#EXTINF:-1 tvg-id="{ch["tvg_id"]}" tvg-name="{ch["tvg_name"]}"{logo} group-title="{ch["group"]}",{ch["display"]}'
 
           results={}
           for ch in CHANNELS:
@@ -102,7 +76,8 @@ jobs:
               elif ch["remove_when_offline"]:
                   Path(ch["file"]).write_text("#EXTM3U\n# 現在LIVEなし\n",encoding="utf-8")
                   print("OFFLINE")
-              else: print("URL取得失敗: existing entry is kept")
+              else:
+                  print("URL取得失敗: existing entry is kept")
 
           path=Path("public_sports.m3u")
           lines=path.read_text(encoding="utf-8-sig").replace("\r\n","\n").split("\n")
@@ -116,6 +91,7 @@ jobs:
                       i+=1
                   continue
               cleaned.append(line); i+=1
+
           base=[]
           for line in cleaned:
               if line=="" and base and base[-1]=="": continue
@@ -124,15 +100,8 @@ jobs:
 
           for ch in CHANNELS:
               url=results.get(ch["tvg_id"])
-              if url: base.extend(["",f'## {ch["group"]}',extinf(ch),url])
-
-          # OTT実験はナミビア1本だけ。同じ public_sports.m3u 内に追加。
-          nam=next(ch for ch in CHANNELS if ch["tvg_id"]=="youtube.namibia.live")
-          master=results.get("youtube.namibia.live")
-          if master:
-              ott=get_ott_variant(master)
-              print("Namibia OTT variant:",ott[:120])
-              base.extend(["","## OTT用",extinf(nam,True),ott])
+              if url:
+                  base.extend(["",f'## {ch["group"]}',extinf(ch),url])
 
           path.write_text("\n".join(base).rstrip()+"\n",encoding="utf-8")
           PY
@@ -141,8 +110,11 @@ jobs:
         shell: bash
         run: |
           grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
-          grep -q 'tvg-id="youtube.namibia.live.ott"' public_sports.m3u
-          echo "Normal + OTT Namibia entries generated"
+          if grep -q 'tvg-id="youtube.namibia.live.ott"' public_sports.m3u; then
+            echo "ERROR: old OTT test entry still exists"
+            exit 1
+          fi
+          echo "Normal YouTube entries only"
 
       - name: Commit updated LIVE URLs
         shell: bash
@@ -151,5 +123,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u kana_live.m3u public_sports.m3u
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "Update YouTube LIVE URLs and Namibia OTT test"
+          git commit -m "Update YouTube LIVE URLs"
           git push

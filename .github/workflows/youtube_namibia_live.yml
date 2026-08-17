@@ -145,50 +145,52 @@ jobs:
                   print("URL取得失敗: existing entry is kept")
 
           path = Path("public_sports.m3u")
-          text = path.read_text(encoding="utf-8-sig")
-          lines = text.replace("\r\n", "\n").split("\n")
+          lines = path.read_text(encoding="utf-8-sig").replace("\r\n", "\n").split("\n")
+          managed = {ch["tvg_id"]: ch for ch in CHANNELS}
 
-          ch_by_id = {ch["tvg_id"]: ch for ch in CHANNELS}
-          out = []
+          # 既存の管理対象4chを丸ごと除去。
+          # 過去の不具合で残った直後の googlevideo URL も、次のEXTINF/セクションまで掃除する。
+          cleaned = []
           i = 0
-          seen = set()
-
           while i < len(lines):
               line = lines[i]
-              matched_id = next((tid for tid in ch_by_id if f'tvg-id="{tid}"' in line), None)
-              if not matched_id:
-                  out.append(line)
+              tid = next((t for t in managed if f'tvg-id="{t}"' in line), None)
+              if not tid:
+                  cleaned.append(line)
                   i += 1
                   continue
 
-              ch = ch_by_id[matched_id]
-              seen.add(matched_id)
-              url = results.get(matched_id)
-
               i += 1
-              while i < len(lines) and not lines[i].strip():
-                  i += 1
-              if i < len(lines) and not lines[i].lstrip().startswith("#"):
-                  i += 1
+              # 管理対象EXTINFに属するURLと、その直後に残った重複googlevideo URLを除去
+              while i < len(lines):
+                  s = lines[i].strip()
+                  if s.startswith("#EXTINF:") or s.startswith("## "):
+                      break
+                  if s.startswith("https://manifest.googlevideo.com/") or s.startswith("https://rr") or not s:
+                      i += 1
+                      continue
+                  # その他のURL/コメントが来たら1行だけ旧エントリとして捨てて終了
+                  if s.startswith("http://") or s.startswith("https://"):
+                      i += 1
+                  break
 
-              if url:
-                  out.extend([extinf(ch), url, ""])
-              elif not ch["remove_when_offline"]:
-                  out.append(line)
-                  # keep old URL if it immediately followed in original file
-                  j = i - 1
-                  if 0 <= j < len(lines) and not lines[j].lstrip().startswith("#"):
-                      out.extend([lines[j], ""])
+          # 空行を軽く正規化
+          base = []
+          for line in cleaned:
+              if line == "" and base and base[-1] == "":
+                  continue
+              base.append(line)
+          while base and base[-1] == "":
+              base.pop()
 
+          # 現在取得できた管理対象だけを末尾へ、必ず EXTINF + URL 1組で追加
           for ch in CHANNELS:
-              tid = ch["tvg_id"]
-              url = results.get(tid)
-              if tid not in seen and url:
-                  while out and out[-1] == "":
-                      out.pop()
-                  out.extend(["", f'## {ch["group"]}', extinf(ch), url, ""])
+              url = results.get(ch["tvg_id"])
+              if not url:
+                  continue
+              base.extend(["", f'## {ch["group"]}', extinf(ch), url])
 
-          path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
+          path.write_text("\n".join(base).rstrip() + "\n", encoding="utf-8")
           PY
 
       - name: Validate generated files
@@ -197,6 +199,25 @@ jobs:
           grep -q 'tvg-id="youtube.namibia.live"' namibia_live.m3u
           grep -q '^https://' namibia_live.m3u
           grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
+          python - <<'PY'
+          from pathlib import Path
+          lines = Path("public_sports.m3u").read_text(encoding="utf-8-sig").splitlines()
+          ids = [
+              "youtube.namibia.live",
+              "youtube.matsuyama.clean",
+              "youtube.matsuyama.airport",
+              "youtube.kana",
+          ]
+          for tid in ids:
+              hits = [i for i, line in enumerate(lines) if f'tvg-id="{tid}"' in line]
+              if len(hits) > 1:
+                  raise SystemExit(f"duplicate EXTINF: {tid} x{len(hits)}")
+              if hits:
+                  i = hits[0]
+                  if i + 1 >= len(lines) or not lines[i + 1].startswith("https://"):
+                      raise SystemExit(f"URL missing immediately after EXTINF: {tid}")
+          print("Managed YouTube entries are clean")
+          PY
 
       - name: Commit updated LIVE URLs
         shell: bash
@@ -210,5 +231,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update YouTube LIVE URLs"
+          git commit -m "Clean and update YouTube LIVE URLs"
           git push

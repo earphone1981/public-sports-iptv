@@ -1,4 +1,4 @@
-name: Update Namibia YouTube LIVE
+name: Update YouTube LIVE Channels
 
 on:
   workflow_dispatch:
@@ -40,73 +40,153 @@ jobs:
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
 
-      - name: Get current Namibia HLS URL
-        id: hls
+      - name: Update YouTube LIVE M3U files
         shell: bash
-        run: |
-          set -e
-          URL=$(yt-dlp \
-            --js-runtimes node \
-            --cookies youtube_cookies.txt \
-            --extractor-args "youtube:player_client=default,web_safari" \
-            --no-playlist \
-            --match-filter "is_live" \
-            -f "95/best[protocol^=m3u8]/best" \
-            -g \
-            "https://www.youtube.com/watch?v=ydYDqZQpim8")
-
-          test -n "$URL"
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-
-      - name: Write Namibia M3U and refresh public_sports.m3u
-        shell: bash
-        env:
-          NAMIBIA_URL: ${{ steps.hls.outputs.url }}
         run: |
           python - <<'PY'
-          import os
           from pathlib import Path
+          import subprocess
 
-          url = os.environ["NAMIBIA_URL"].strip()
-          if not url:
-              raise SystemExit("Namibia HLS URL is empty")
+          CHANNELS = [
+              {
+                  "label": "ナミビア",
+                  "source": "https://www.youtube.com/watch?v=ydYDqZQpim8",
+                  "file": "namibia_live.m3u",
+                  "tvg_id": "youtube.namibia.live",
+                  "tvg_name": "ナミビア LIVE",
+                  "display": "🇳🇦 ナミビア LIVE",
+                  "group": "その他LIVE",
+                  "logo": "",
+                  "remove_when_offline": False,
+              },
+              {
+                  "label": "松山市クリーンセンター",
+                  "source": "https://www.youtube.com/watch?v=C0gpM_qIIl0",
+                  "file": "youtube_test.m3u",
+                  "tvg_id": "youtube.matsuyama.clean",
+                  "tvg_name": "松山市クリーンセンター LIVE",
+                  "display": "♻️ 松山市クリーンセンター LIVE",
+                  "group": "その他LIVE",
+                  "logo": "",
+                  "remove_when_offline": False,
+              },
+              {
+                  "label": "松山空港",
+                  "source": "https://www.youtube.com/watch?v=CFh9z-6IeEE",
+                  "file": "matsuyama_airport_live.m3u",
+                  "tvg_id": "youtube.matsuyama.airport",
+                  "tvg_name": "松山空港 LIVE",
+                  "display": "✈️ 松山空港 LIVE",
+                  "group": "その他LIVE",
+                  "logo": "",
+                  "remove_when_offline": False,
+              },
+              {
+                  "label": "華奈tube",
+                  "source": "https://www.youtube.com/@kana_tube/live",
+                  "file": "kana_live.m3u",
+                  "tvg_id": "youtube.kana",
+                  "tvg_name": "華奈tube LIVE",
+                  "display": "📺 華奈tube LIVE",
+                  "group": "競輪 YouTube LIVE",
+                  "logo": "https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/kana_tube.png",
+                  "remove_when_offline": True,
+              },
+          ]
 
-          extinf = '#EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE'
+          def get_url(source):
+              cmd = [
+                  "yt-dlp",
+                  "--js-runtimes", "node",
+                  "--cookies", "youtube_cookies.txt",
+                  "--extractor-args", "youtube:player_client=default,web_safari",
+                  "--no-playlist",
+                  "--match-filter", "is_live",
+                  "--no-warnings",
+                  "-f", "95/best[protocol^=m3u8]/best",
+                  "-g",
+                  source,
+              ]
+              p = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+              urls = [x.strip() for x in p.stdout.splitlines() if x.strip().startswith(("http://", "https://"))]
+              return urls[0] if p.returncode == 0 and urls else None
 
-          Path("namibia_live.m3u").write_text(
-              "#EXTM3U\n" + extinf + "\n" + url + "\n",
-              encoding="utf-8",
-          )
+          def extinf(ch):
+              logo = f' tvg-logo="{ch["logo"]}"' if ch["logo"] else ""
+              return (
+                  f'#EXTINF:-1 tvg-id="{ch["tvg_id"]}" tvg-name="{ch["tvg_name"]}"'
+                  f'{logo} group-title="{ch["group"]}",{ch["display"]}'
+              )
+
+          results = {}
+          for ch in CHANNELS:
+              print(f'=== {ch["label"]} ===')
+              try:
+                  url = get_url(ch["source"])
+              except Exception as e:
+                  print("ERROR:", e)
+                  url = None
+
+              results[ch["tvg_id"]] = url
+
+              if url:
+                  Path(ch["file"]).write_text(
+                      "#EXTM3U\n" + extinf(ch) + "\n" + url + "\n",
+                      encoding="utf-8",
+                  )
+                  print("LIVE URL OK")
+              elif ch["remove_when_offline"]:
+                  Path(ch["file"]).write_text(
+                      "#EXTM3U\n# 現在LIVEなし\n",
+                      encoding="utf-8",
+                  )
+                  print("OFFLINE: entry will be removed")
+              else:
+                  print("URL取得失敗: existing entry is kept")
 
           path = Path("public_sports.m3u")
           text = path.read_text(encoding="utf-8-sig")
           lines = text.replace("\r\n", "\n").split("\n")
 
+          ch_by_id = {ch["tvg_id"]: ch for ch in CHANNELS}
           out = []
           i = 0
-          found = False
+          seen = set()
+
           while i < len(lines):
               line = lines[i]
-              if 'tvg-id="youtube.namibia.live"' in line:
-                  out.append(extinf)
-                  out.append(url)
-                  found = True
+              matched_id = next((tid for tid in ch_by_id if f'tvg-id="{tid}"' in line), None)
+              if not matched_id:
+                  out.append(line)
                   i += 1
-                  while i < len(lines) and (not lines[i].strip() or lines[i].lstrip().startswith("#")):
-                      if lines[i].lstrip().startswith("#EXTINF:"):
-                          break
-                      i += 1
-                  if i < len(lines) and not lines[i].lstrip().startswith("#"):
-                      i += 1
-                  out.append("")
                   continue
-              out.append(line)
-              i += 1
 
-          if not found:
-              while out and out[-1] == "":
-                  out.pop()
-              out.extend(["", "## その他LIVE", extinf, url, ""])
+              ch = ch_by_id[matched_id]
+              seen.add(matched_id)
+              url = results.get(matched_id)
+
+              i += 1
+              while i < len(lines) and not lines[i].strip():
+                  i += 1
+              if i < len(lines) and not lines[i].lstrip().startswith("#"):
+                  i += 1
+
+              if url:
+                  out.extend([extinf(ch), url, ""])
+              elif not ch["remove_when_offline"]:
+                  out.append(line)
+                  # keep old URL if it immediately followed in original file
+                  j = i - 1
+                  if 0 <= j < len(lines) and not lines[j].lstrip().startswith("#"):
+                      out.extend([lines[j], ""])
+
+          for ch in CHANNELS:
+              tid = ch["tvg_id"]
+              url = results.get(tid)
+              if tid not in seen and url:
+                  while out and out[-1] == "":
+                      out.pop()
+                  out.extend(["", f'## {ch["group"]}', extinf(ch), url, ""])
 
           path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
           PY
@@ -115,20 +195,20 @@ jobs:
         shell: bash
         run: |
           grep -q 'tvg-id="youtube.namibia.live"' namibia_live.m3u
-          grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
           grep -q '^https://' namibia_live.m3u
+          grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
 
-      - name: Commit updated LIVE URL
+      - name: Commit updated LIVE URLs
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add namibia_live.m3u public_sports.m3u
+          git add namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u kana_live.m3u public_sports.m3u
 
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
 
-          git commit -m "Update Namibia YouTube LIVE URL"
+          git commit -m "Update YouTube LIVE URLs"
           git push

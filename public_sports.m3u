@@ -134,147 +134,128 @@ https://cfl.st.keirin.jp/54/dash/54.mpd
 #EXTINF:-1 tvg-id="chihou.obihiro" tvg-name="帯広競馬(ばんえい)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/obihiro.png" group-title="競馬 / 地方競馬",帯広競馬(ばんえい)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/obihiro5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="ホッカイドウ競馬(門別)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/hokkaido_keiba.png" group-title="競馬 / 地方競馬",ホッカイドウ競馬(門別)
+#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="ホッカイドウ競馬(門別)" tvg-logo="https://www.hokkaidokeiba.net/common/images/head/logo.png" group-title="競馬 / 地方競馬",ホッカイドウ競馬(門別)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/monbetsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="岩手競馬(盛岡)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/morioka.png" group-title="競馬 / 地方競馬",岩手競馬(盛岡)
+#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="岩手競馬(盛岡)" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",岩手競馬(盛岡)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/morioka5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="岩手競馬(水沢)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/mizusawa.png" group-title="競馬 / 地方競馬",岩手競馬(水沢)
+#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="岩手競馬(水沢)" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",岩手競馬(水沢)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/mizusawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="南関東競馬(浦和)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/urawa.png" group-title="競馬 / 地方競馬",南関東競馬(浦和)
+#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="南関東競馬(浦和)" tvg-logo="https://www.urawa-keiba.jp/assets/img/common/logo.png" group-title="競馬 / 地方競馬",南関東競馬(浦和)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/urawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="南関東競馬(船橋)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/funabashi.png" group-title="競馬 / 地方競馬",南関東競馬(船橋)
+#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="南関東競馬(船橋)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/funabashi.png" group-title="競馬 / 地方競馬",南関東競馬(船橋)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/funabashi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.oi" tvg-name="南関東競馬(大井)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/ooi.png" group-title="競馬 / 地方競馬",南関東競馬(大井)
+#EXTINF:-1 tvg-id="chihou.oi" tvg-name="南関東競馬(大井)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",南関東競馬(大井)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/ooi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="南関東競馬(川崎)" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kawasaki.png" group-title="競馬 / 地方競馬",南関東競馬(川崎)
+#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="南関東競馬(川崎)" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kawasaki.png" group-title="競馬 / 地方競馬",南関東競馬(川崎)
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kawasaki5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kanazawa.png" group-title="競馬 / 地方競馬",金沢競馬
+#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kanazawa.png" group-title="競馬 / 地方競馬",金沢競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kanazawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/nagoya.png" group-title="競馬 / 地方競馬",名古屋競馬
+#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/nagoya.png" group-title="競馬 / 地方競馬",名古屋競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/nagoya5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kasamatsu.png" group-title="競馬 / 地方競馬",笠松競馬
+#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kasamatsu.png" group-title="競馬 / 地方競馬",笠松競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kasamatsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/sonoda.png" group-title="競馬 / 地方競馬",園田競馬
+#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",園田競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/sonoda5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/himeji.png" group-title="競馬 / 地方競馬",姫路競馬
+#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",姫路競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/himeji5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="高知競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kochi.png" group-title="競馬 / 地方競馬",高知競馬
+#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="高知競馬" tvg-logo="https://www.keiba.or.jp/wp/wp-content/uploads/2016/07/0052a4614394e22c55614f818fd3138e.png" group-title="競馬 / 地方競馬",高知競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kouchi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀競馬" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/saga.png" group-title="競馬 / 地方競馬",佐賀競馬
+#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀競馬" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/saga.png" group-title="競馬 / 地方競馬",佐賀競馬
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/saga5.m3u8
 
 ## オートレース
-#EXTINF:-1 tvg-id="auto.kawaguchi" tvg-name="川口" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/autorace/auto_kawaguchi.png" group-title="オートレース",川口
+#EXTINF:-1 tvg-id="auto.kawaguchi" tvg-name="川口" tvg-logo="https://www.kawaguchiauto.jp/wp-content/themes/kawaguchi-ar_temp/images/common/logo@2x.png" group-title="オートレース",川口
 https://autorace-live.akamaized.net/hls/live/2036917/id2/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.isesaki" tvg-name="伊勢崎" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/autorace/auto_isesaki.png" group-title="オートレース",伊勢崎
+#EXTINF:-1 tvg-id="auto.isesaki" tvg-name="伊勢崎" tvg-logo="https://isesaki-auto.jp/wp-content/themes/isesakiauto2021/img/header_logo.png" group-title="オートレース",伊勢崎
 https://autorace-live.akamaized.net/hls/live/2036917-b/id3/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/autorace/auto_hamamatsu.png" group-title="オートレース",浜松
+#EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松" tvg-logo="https://www.hamamatsuauto.jp/assets/images/common/hamamatsu_auto_logo.png" group-title="オートレース",浜松
 https://autorace-live.akamaized.net/hls/live/2036917/id4/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/autorace/auto_iizuka.png" group-title="オートレース",飯塚
+#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚" tvg-logo="https://www.iizuka-auto.jp/wp-content/themes/iizukaautorace/shared/img/logo.png" group-title="オートレース",飯塚
 https://autorace-live.akamaized.net/hls/live/2036917-b/id5/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.sanyo" tvg-name="山陽" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/autorace/auto_sanyo.png" group-title="オートレース",山陽
+#EXTINF:-1 tvg-id="auto.sanyo" tvg-name="山陽" tvg-logo="https://autorace.jp/news/37th/img/logo-sanyo.png" group-title="オートレース",山陽
 https://autorace-live.akamaized.net/hls/live/2036917-b/id6/streaming/media.m3u8
 
 ## ボートレース
-#EXTINF:-1 tvg-id="boat.kiryu" tvg-name="01 桐生" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/01_kiryu.png" group-title="ボートレース",01 桐生
-https://manifest.streaks.jp/v6/cp-boatrace-prod/6e9213cc52ae4f7eb453690e8c2750da/b7597dd8405949248ee30c777d600ce2/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NTkxMDAsInZwOSI6MSwiY3AiOiIyMDkwNTQ3MDBfMjA5MDk1MTk5IiwicHB3IjoiNDBrIn0.3iBtNYrOFBrTsTj7utePLAABt9kYKzK2pvzr-Xqr7VM
+#EXTINF:-1 tvg-id="boat.toda" tvg-name="02 戸田" group-title="ボートレース",02 戸田
+https://manifest.streaks.jp/v4/cp-boatrace-prod/74a1d8a970fc4eaa9657bcc740715d37/eb8ecb16824c45099b7b3afc67da18fd/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5Mjg5NDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.-haHrApESXPC70t2NK9mmLv-ATpxBcsNbgsFVn8NDYQ
 
-#EXTINF:-1 tvg-id="boat.toda" tvg-name="02 戸田" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/02_toda.png" group-title="ボートレース",02 戸田
-https://manifest.streaks.jp/v6/cp-boatrace-prod/1697222ebfcf4f8abc415853a40be394/f32c249e32f642efa28ca7c442aebaad/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDI1NDAsInZwOSI6MSwicHB3IjoiNDBrIn0.ReaVwbLVYkBkTcvxfcs5pEzXoTO9ZFGQ_2AGIqJUi3g
+#EXTINF:-1 tvg-id="boat.tamagawa" tvg-name="05 多摩川" group-title="ボートレース",05 多摩川
+https://manifest.streaks.jp/v4/cp-boatrace-prod/637233691d6b4e789321f6177c1bd877/23e7eda763b241e29db3697591234bdc/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MzE4ODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.ZMXmpsDoA7Hs67T67hoRT5Us69xU5EO7kJnYi6K-UPY
 
-#EXTINF:-1 tvg-id="boat.edogawa" tvg-name="03 江戸川" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/03_edogawa.png" group-title="ボートレース",03 江戸川
-https://manifest.streaks.jp/v6/cp-boatrace-prod/37c9d54bab3c481b9ba1f57e955cc5e2/a5809302982c4af0a8f551998ae434f2/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njk2MDgwMCwic3RhcnQiOjE3ODY3NTc5NDAsInZwOSI6MSwicHB3IjoiNDBrIn0.pFeK3FxvY5M9hAW1Zo0rz3tg0DocJ2b9pasaSc6rsl8
+#EXTINF:-1 tvg-id="boat.tsu" tvg-name="09 津" group-title="ボートレース",09 津
+https://manifest.streaks.jp/v4/cp-boatrace-prod/35057cff2b0b4628bcf9bfaaecc6471b/9734ad929ea44da59db6a95aab840bbc/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MjgxMDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.9hz47Jw1x8vk_IulXDHbHiCulsyFcgVlqr9G83K8lVw
 
-#EXTINF:-1 tvg-id="boat.heiwajima" tvg-name="04 平和島" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/04_heiwajima.png" group-title="ボートレース",04 平和島
-https://manifest.streaks.jp/v6/cp-boatrace-prod/7eaa5653bfa64574a9edd155bb7cf407/d8003877592c4fb9aaf8ce4742e9b3d6/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDIwMDAsInZwOSI6MSwicHB3IjoiNDBrIn0.khc1TsNyH9QNzwllwpadO30XQktwymsOzBUp7mqqSrg
+#EXTINF:-1 tvg-id="boat.mikuni" tvg-name="10 三国" group-title="ボートレース",10 三国
+https://manifest.streaks.jp/v4/cp-boatrace-prod/a61d483010824a1785f7c00ce56490b2/b6c295dd308448ecad88262069506641/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MjEwMjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.E-6hzTN670z34OpZjPvaiVehSdDB-NHXnTJz1Emcvn0
 
-#EXTINF:-1 tvg-id="boat.tamagawa" tvg-name="05 多摩川" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/05_tamagawa.png" group-title="ボートレース",05 多摩川
-https://manifest.streaks.jp/v6/cp-boatrace-prod/8095641ad5a84da59045b16c8a59ec39/4125770bffc341d688d22341761afee4/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDU0ODAsInZwOSI6MSwicHB3IjoiNDBrIn0.eu8f2qmFkojzktCrlKfOEfQqMZBCn1orBwzrouULvJE
+#EXTINF:-1 tvg-id="boat.biwako" tvg-name="11 びわこ" group-title="ボートレース",11 びわこ
+https://manifest.streaks.jp/v4/cp-boatrace-prod/bbbf8ea2bf1043d391f462485a4f7429/d2a34769d539448ebee7fd18632bbfac/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MjgxMDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.9hz47Jw1x8vk_IulXDHbHiCulsyFcgVlqr9G83K8lVw
 
-#EXTINF:-1 tvg-id="boat.hamanako" tvg-name="06 浜名湖" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/06_hamanako.png" group-title="ボートレース",06 浜名湖
-https://manifest.streaks.jp/v6/cp-boatrace-prod/65655444872f471c88d56e0e6505b5d8/4024eb20a96d41d8bae06de519be0b3a/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDUwMDAsInZwOSI6MSwicHB3IjoiNDBrIn0.v8uSL1HPLZ57uLnSyJAAAcU4pxwd0YxRPDDlzAJIamk
+#EXTINF:-1 tvg-id="boat.suminoe" tvg-name="12 住之江" group-title="ボートレース",12 住之江
+https://manifest.streaks.jp/v4/cp-boatrace-prod/9bf0614b9a6840d69a12ad6903017d83/4982776d11fb4158aa8db621e0e29de5/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5NDI1MDAsImlvcyI6MTgsImNwIjoiMjA5MTM4MTAwXzIwOTE4MTI5OSIsInBwdyI6IjQwayJ9.JMsroaK68yp5XgTEcozpSJ60sknF3DnHxBTPVrjL2Js
 
-#EXTINF:-1 tvg-id="boat.gamagori" tvg-name="07 蒲郡" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/07_gamagori.png" group-title="ボートレース",07 蒲郡
-https://manifest.streaks.jp/v6/cp-boatrace-prod/b6b42da53eda43c190c2ec1b7f232d96/7f1e7e2d2548471a86d600938ee2e8f2/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NTcwMDAsInZwOSI6MSwiY3AiOiIyMDkwNTI2MDBfMjA5MDk1MTk5IiwicHB3IjoiNDBrIn0.k1Dip76qBbCVU3F90u6DVdLLlmHEb0N0ajMmOFD2004
+#EXTINF:-1 tvg-id="boat.amagasaki" tvg-name="13 尼崎" group-title="ボートレース",13 尼崎
+https://manifest.streaks.jp/v4/cp-boatrace-prod/7c6bfb941d4840bab1963b76b7da169e/bf840d7df9174cc3a3449659525eace4/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5Mjg1MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.yVQjFX6mUmyvukdibD9UdfXzrhcmtXAwFuIJaNFbMIA
 
-#EXTINF:-1 tvg-id="boat.tokoname" tvg-name="08 常滑" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/08_tokoname.png" group-title="ボートレース",08 常滑
-https://manifest.streaks.jp/v6/cp-boatrace-prod/68316f1d392f4aefab521e24f25977b1/7155e6b4023d4cc0a7fc912ac2d56848/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njk2MDgwMCwic3RhcnQiOjE3ODY3NTU1NDAsInZwOSI6MSwicHB3IjoiNDBrIn0.MC1fXbBOEst9UCNd0FtFbFRewA-Y5TyCCz5Dzr1RbU0
+#EXTINF:-1 tvg-id="boat.naruto" tvg-name="14 鳴門" group-title="ボートレース",14 鳴門
+https://manifest.streaks.jp/v4/cp-boatrace-prod/cf9ebd1f18c847b4a02778503a13c39a/4a74f68d4a594bc78adf6bb5243b19dc/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MjE1MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.m6OIS5Un3t9tiiHSF9WBGRNUw0_TdqlFuS4ExZI2z8g
 
-#EXTINF:-1 tvg-id="boat.tsu" tvg-name="09 津" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/09_tsu.png" group-title="ボートレース",09 津
-https://manifest.streaks.jp/v6/cp-boatrace-prod/b2801f56cc43469f9c1bf9fcea9badba/6451c54167d64957839667b841262c55/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDE3MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.332-AZWEvAzzQoZ7bR7mzR-MAlxh1PqigffaRK1Qu6s
+#EXTINF:-1 tvg-id="boat.marugame" tvg-name="15 丸亀" group-title="ボートレース",15 丸亀
+https://manifest.streaks.jp/v4/cp-boatrace-prod/ee68dfec03b843ff957440f5bac6262c/5fc24001f87d420cac21ec34906a6f5e/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5NDI1MDAsImlvcyI6MTgsImNwIjoiMjA5MTM4MTAwXzIwOTE4MTI5OSIsInBwdyI6IjQwayJ9.JMsroaK68yp5XgTEcozpSJ60sknF3DnHxBTPVrjL2Js
 
-#EXTINF:-1 tvg-id="boat.mikuni" tvg-name="10 三国" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/10_mikuni.png" group-title="ボートレース",10 三国
-https://manifest.streaks.jp/v6/cp-boatrace-prod/d29ec85e26a347509c1db3fa89c57b39/fba8def547d64d90bddd0cc9a7a948d5/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4MzQ2MjAsInZwOSI6MSwicHB3IjoiNDBrIn0.h-nv9uB281SLxpDLnMVV0-ecwNLN8DK1mmtGZ2x80tI
+#EXTINF:-1 tvg-id="boat.miyajima" tvg-name="17 宮島" group-title="ボートレース",17 宮島
+https://manifest.streaks.jp/v4/cp-boatrace-prod/d09a550065b749bdb07e0a999a69497c/a4f7d602990a40258b1fdf49e44718f5/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5Mjg4MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.LD6BGbpYBSDhX9dDID8BnV7N9MM3fKZxSeH6JPtntFY
 
-#EXTINF:-1 tvg-id="boat.biwako" tvg-name="11 びわこ" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/11_biwako.png" group-title="ボートレース",11 びわこ
-https://manifest.streaks.jp/v6/cp-boatrace-prod/2526729b404c4a9498aaa03f293774f1/3521bcba61584a12b00618f4f7bc2da0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDE3MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.332-AZWEvAzzQoZ7bR7mzR-MAlxh1PqigffaRK1Qu6s
+#EXTINF:-1 tvg-id="boat.tokuyama" tvg-name="18 徳山" group-title="ボートレース",18 徳山
+https://manifest.streaks.jp/v4/cp-boatrace-prod/35e4f155e2eb4eb2aafdd74786fb9832/29f0ac03cf31411e8cfbb6385ae166c0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MjE5ODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.3SabAe2alqtdqjoyEstZ11VtBRs4oQB7keQmr5nLl-w
 
-#EXTINF:-1 tvg-id="boat.suminoe" tvg-name="12 住之江" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/12_suminoe.png" group-title="ボートレース",12 住之江
-https://manifest.streaks.jp/v6/cp-boatrace-prod/3b518f68146d4f02b9d129cdd14d4e46/063ceee39d784e9e83c5c8c9bd3a8698/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NTYxMDAsInZwOSI6MSwiY3AiOiIyMDkwNTE3MDBfMjA5MDk0ODk5IiwicHB3IjoiNDBrIn0.nuZbwAYqLSJtnwho2_n4z0kw9uZK4JraWUit8J-k_0A
+#EXTINF:-1 tvg-id="boat.wakamatsu" tvg-name="20 若松" group-title="ボートレース",20 若松
+https://manifest.streaks.jp/v4/cp-boatrace-prod/0a92804368e4418e853f286ffc3d3724/f067c187975b4f96becf409f0eba1971/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5NDU1MDAsImlvcyI6MTgsImNwIjoiMjA5MTQxMTAwXzIwOTE4MTU5OSIsInBwdyI6IjQwayJ9.rwYalkznAWMFTeRZN9X8e1ke529CEmOeVOq_JrPE9xU
 
-#EXTINF:-1 tvg-id="boat.naruto" tvg-name="14 鳴門" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/14_naruto.png" group-title="ボートレース",14 鳴門
-https://manifest.streaks.jp/v6/cp-boatrace-prod/77ff6e7f0a0742538313ddd0a030d469/9ff9e5c5277a400a92c3938dc51d9d10/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4MzUxMDAsInZwOSI6MSwicHB3IjoiNDBrIn0.J4D1uEba_uiLwmkKw6tTECNkCYB6Ec4Xol5EY34YH7o
+#EXTINF:-1 tvg-id="boat.fukuoka" tvg-name="22 福岡" group-title="ボートレース",22 福岡
+https://manifest.streaks.jp/v4/cp-boatrace-prod/357b59615e07486bb9064732e95130d6/2fed6c71fd3d4938bfe2e4cc410ccc28/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5MzQ0MDAsImlvcyI6MTgsImNwIjoiMjA5MTMwMDAwXzIwOTE3MzE5OSIsInBwdyI6IjQwayJ9.jbkgj0tWy29cbOPPe1YfqcjhXa2TV-9tYulq21wo1NM
 
-#EXTINF:-1 tvg-id="boat.miyajima" tvg-name="17 宮島" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/17_miyajima.png" group-title="ボートレース",17 宮島
-https://manifest.streaks.jp/v6/cp-boatrace-prod/8856c86d3a5b48c2aae67d03325a84c2/b339a4321220433ab016de9ffa9f9272/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDI0MjAsInZwOSI6MSwicHB3IjoiNDBrIn0.IK3y4yXAO5ksWcUJrJ0OfexcGAi83moLy5Ys4h07nnc
-
-#EXTINF:-1 tvg-id="boat.tokuyama" tvg-name="18 徳山" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/18_tokuyama.png" group-title="ボートレース",18 徳山
-https://manifest.streaks.jp/v6/cp-boatrace-prod/48aebda398054810b20ae00339832a44/16bc3d4d932448269ad06db82d13599d/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4MzU1ODAsInZwOSI6MSwicHB3IjoiNDBrIn0.HTJ6bapJXzfdHhRC2OMTbdrUQPmkPzzUDm1x1xHwqUk
-
-#EXTINF:-1 tvg-id="boat.shimonoseki" tvg-name="19 下関" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/19_shimonoseki.png" group-title="ボートレース",19 下関
-https://manifest.streaks.jp/v6/cp-boatrace-prod/0e2ccffa7ac349b98011346dc178e214/363cfbfbfa4c4793bb977148c765a36d/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4Njc1MDAsInZwOSI6MSwiY3AiOiIyMDkwNjMxMDBfMjA5MDk1MTk5IiwicHB3IjoiNDBrIn0.3IQph_VpyuFd5J4VlryMaE9_U6XYLXouFNrBUfqNYLc
-
-#EXTINF:-1 tvg-id="boat.ashiya" tvg-name="21 芦屋" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/21_ashiya.png" group-title="ボートレース",21 芦屋
-https://manifest.streaks.jp/v6/cp-boatrace-prod/d8229377f95a49ab9cf792923c71fbe8/f4db9485148a4770a15ad9c17100bca5/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Njk2MDgwMCwic3RhcnQiOjE3ODY3NDg3MDAsInZwOSI6MSwicHB3IjoiNDBrIn0.foen4u8-sMz7z8MsoHx6yyH371lfqSjdg7N9IS8sbrg
-
-#EXTINF:-1 tvg-id="boat.fukuoka" tvg-name="22 福岡" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/22_fukuoka.png" group-title="ボートレース",22 福岡
-https://manifest.streaks.jp/v6/cp-boatrace-prod/a544e79673c546c2a9fd263e130b713c/1f6f80dab64d49b58c1b5c75a26d7471/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NDgwMDAsInZwOSI6MSwicHB3IjoiNDBrIn0.35Hsh0b6jtYZ8KrbEQqq86miyXU0E3rLV3AQV6vGV40
-
-#EXTINF:-1 tvg-id="boat.omura" tvg-name="24 大村" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/24_omura.png" group-title="ボートレース",24 大村
-https://manifest.streaks.jp/v6/cp-boatrace-prod/bd755546e6d347e481108d099af6c406/2c5f9baa40224175875fa0ca78495075/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzA1MDgwMCwic3RhcnQiOjE3ODY4NTkxMDAsInZwOSI6MSwiY3AiOiIyMDkwNTQ3MDBfMjA5MDk1MTk5IiwicHB3IjoiNDBrIn0.3iBtNYrOFBrTsTj7utePLAABt9kYKzK2pvzr-Xqr7VM
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",🏭 松山市クリーンセンター LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1786898985/ei/yZWBaqe_CayV1d8P082O4Aw/ip/220.156.193.34/id/C0gpM_qIIl0.7/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr2---sn-xiphx-htwz.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/bui/AR3QkAmGRziRDISn98mbPQiCwzI87rjmE727JPgooixWYZtdTifOrfJZgeAzoF4eshCZUiQVp0btW6sX/spc/KBGBcrolEsSal2KjUk3Rev_rxfl66h6wkAlQLpxGTTJ3b_M/vprv/1/reg/0/playlist_type/DVR/initcwndbps/3442500/met/1786877385,/mh/5D/mm/44/mn/sn-xiphx-htwz/ms/lva/mv/m/mvi/2/pl/18/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565116,51946838,52089683/mt/1786877060/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRAIgdbQ5YaklRUMU86ijfZgm5kLVbufzXVo0JFL16z0p9eQCIF4gkGAWd2H3b_ujKkQT12VMe38xyPvv-UN-Jx7-oKtj/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRAIgcljmxqLfVigOi-iF6L9HJ0RIALvkPEsOXChl1dW9LGsCIAPnIQE9Ak8n9q333XQ-p0LkI6OrNAFWMkeuFOfRu3gy/playlist/index.m3u8
+#EXTINF:-1 tvg-id="boat.omura" tvg-name="24 大村" group-title="ボートレース",24 大村
+https://manifest.streaks.jp/v4/cp-boatrace-prod/2942aab5169a45ff9d1ae703459647e1/117d4dcf4a984ea8b56b76f49eed897a/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzEzMzYwMCwic3RhcnQiOjE3ODY5NDU1MDAsImlvcyI6MTgsImNwIjoiMjA5MTQxMTAwXzIwOTE4MTU5OSIsInBwdyI6IjQwayJ9.rwYalkznAWMFTeRZN9X8e1ke529CEmOeVOq_JrPE9xU
 
 ## 中央競馬
-#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gch.png" group-title="中央競馬",グリーンチャンネル（高画質）
+#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain.m3u8
 
-#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gch.png" group-title="中央競馬",グリーンチャンネル（低画質）
+#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/east_web3.png" group-title="中央競馬",JRA EAST（高画質）
+#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" group-title="中央競馬",JRA EAST（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/EAST_test.m3u8
 
-#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/east_web3.png" group-title="中央競馬",JRA EAST（低画質）
+#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" group-title="中央競馬",JRA EAST（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/EAST_test_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/west_web4.png" group-title="中央競馬",JRA WEST（高画質）
+#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" group-title="中央競馬",JRA WEST（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/WEST_master%20.m3u8
 
-#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/west_web4.png" group-title="中央競馬",JRA WEST（低画質）
+#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" group-title="中央競馬",JRA WEST（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/WEST_master_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokkaido_local.png" group-title="中央競馬",JRA HOKKAIDO（高画質）
+#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" group-title="中央競馬",JRA HOKKAIDO（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master%20%281%29.m3u8
 
-#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokkaido_local.png" group-title="中央競馬",JRA HOKKAIDO（低画質）
+#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" group-title="中央競馬",JRA HOKKAIDO（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master_LQ.m3u8

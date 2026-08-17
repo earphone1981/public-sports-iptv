@@ -1,4 +1,4 @@
-name: Update Public Sports EPG 3 Days
+name: Update Public Sports EPG + M3U
 
 on:
   schedule:
@@ -27,11 +27,14 @@ jobs:
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 
+      - name: Merge public sports M3U
+        run: python merge_m3u.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epg.xml
+          git add epg.xml public_sports.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update 3-day public sports EPG"
+          git commit -m "Update public sports EPG and M3U"
           git push

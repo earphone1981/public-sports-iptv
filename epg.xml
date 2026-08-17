@@ -1675,21 +1675,21 @@ F2 ＣＴＣは３分前杯
 📅 2026年08月17日</desc>
     </programme>
     <programme start="20260817194000 +0900" stop="20260817202000 +0900" channel="chihou.obihiro">
-        <title lang="ja">🐎 帯広 11R 19:50発走 特別 涼風特別Ａ１混合 直200m 晴 1.3 10</title>
+        <title lang="ja">🐎 帯広 11R 19:50発走 特別 涼風特別Ａ１混合 直200m 晴 1.2 10</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:50
 🏷️ 種別: 一般
-📢 レース名: 特別 涼風特別Ａ１混合 直200m 晴 1.3 10
+📢 レース名: 特別 涼風特別Ａ１混合 直200m 晴 1.2 10
 📅 2026年08月17日</desc>
     </programme>
     <programme start="20260817202000 +0900" stop="20260817210000 +0900" channel="chihou.obihiro">
-        <title lang="ja">🏆 MAIN 🐎 帯広 12R 20:30発走 有 Ｃ１－５ 直200m 晴 1.3 10</title>
+        <title lang="ja">🏆 MAIN 🐎 帯広 12R 20:30発走 有 Ｃ１－５ 直200m 晴 1.2 10</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:30
 🏷️ 種別: 一般
-📢 レース名: 有 Ｃ１－５ 直200m 晴 1.3 10
+📢 レース名: 有 Ｃ１－５ 直200m 晴 1.2 10
 🏆 メインレース
 📅 2026年08月17日</desc>
     </programme>
@@ -1876,7 +1876,7 @@ F2 ＣＴＣは３分前杯
 📢 レース名: ミント・フラッペ賞Ｃ２三 四 五
 📅 2026年08月17日</desc>
     </programme>
-    <programme start="20260817184900 +0900" stop="20260817192000 +0900" channel="chihou.oi">
+    <programme start="20260817184900 +0900" stop="20260817192200 +0900" channel="chihou.oi">
         <title lang="ja">🐎 大井 7R 18:59発走 特別 月見草特別３歳選抜牝馬</title>
         <desc lang="ja">地方競馬 大井
 🌙 開催区分: ナイター
@@ -1885,11 +1885,11 @@ F2 ＣＴＣは３分前杯
 📢 レース名: 特別 月見草特別３歳選抜牝馬
 📅 2026年08月17日</desc>
     </programme>
-    <programme start="20260817192000 +0900" stop="20260817200000 +0900" channel="chihou.oi">
-        <title lang="ja">🐎 大井 8R 19:30発走 Ｃ２三 四 五</title>
+    <programme start="20260817192200 +0900" stop="20260817200000 +0900" channel="chihou.oi">
+        <title lang="ja">🐎 大井 8R 19:32発走 Ｃ２三 四 五</title>
         <desc lang="ja">地方競馬 大井
 🌙 開催区分: ナイター
-⏰ 発走予定: 19:30
+⏰ 発走予定: 19:32
 🏷️ 種別: 一般
 📢 レース名: Ｃ２三 四 五
 📅 2026年08月17日</desc>

@@ -1,0 +1,134 @@
+name: Update Namibia YouTube LIVE
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install latest yt-dlp
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade --pre "yt-dlp[default]"
+
+      - name: Restore YouTube cookies
+        shell: bash
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          test -n "$YOUTUBE_COOKIES"
+          printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
+          chmod 600 youtube_cookies.txt
+
+      - name: Get current Namibia HLS URL
+        id: hls
+        shell: bash
+        run: |
+          set -e
+          URL=$(yt-dlp \
+            --js-runtimes node \
+            --cookies youtube_cookies.txt \
+            --extractor-args "youtube:player_client=default,web_safari" \
+            --no-playlist \
+            --match-filter "is_live" \
+            -f "95/best[protocol^=m3u8]/best" \
+            -g \
+            "https://www.youtube.com/watch?v=ydYDqZQpim8")
+
+          test -n "$URL"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
+      - name: Write Namibia M3U and refresh public_sports.m3u
+        shell: bash
+        env:
+          NAMIBIA_URL: ${{ steps.hls.outputs.url }}
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          url = os.environ["NAMIBIA_URL"].strip()
+          if not url:
+              raise SystemExit("Namibia HLS URL is empty")
+
+          extinf = '#EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE'
+
+          Path("namibia_live.m3u").write_text(
+              "#EXTM3U\n" + extinf + "\n" + url + "\n",
+              encoding="utf-8",
+          )
+
+          path = Path("public_sports.m3u")
+          text = path.read_text(encoding="utf-8-sig")
+          lines = text.replace("\r\n", "\n").split("\n")
+
+          out = []
+          i = 0
+          found = False
+          while i < len(lines):
+              line = lines[i]
+              if 'tvg-id="youtube.namibia.live"' in line:
+                  out.append(extinf)
+                  out.append(url)
+                  found = True
+                  i += 1
+                  while i < len(lines) and (not lines[i].strip() or lines[i].lstrip().startswith("#")):
+                      if lines[i].lstrip().startswith("#EXTINF:"):
+                          break
+                      i += 1
+                  if i < len(lines) and not lines[i].lstrip().startswith("#"):
+                      i += 1
+                  out.append("")
+                  continue
+              out.append(line)
+              i += 1
+
+          if not found:
+              while out and out[-1] == "":
+                  out.pop()
+              out.extend(["", "## その他LIVE", extinf, url, ""])
+
+          path.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
+          PY
+
+      - name: Validate generated files
+        shell: bash
+        run: |
+          grep -q 'tvg-id="youtube.namibia.live"' namibia_live.m3u
+          grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
+          grep -q '^https://' namibia_live.m3u
+
+      - name: Commit updated LIVE URL
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add namibia_live.m3u public_sports.m3u
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "Update Namibia YouTube LIVE URL"
+          git push

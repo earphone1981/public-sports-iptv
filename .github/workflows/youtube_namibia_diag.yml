@@ -32,6 +32,7 @@ jobs:
       - name: Show yt-dlp version
         run: |
           yt-dlp --version
+          node --version
 
       - name: Restore YouTube cookies
         shell: bash
@@ -51,6 +52,7 @@ jobs:
         continue-on-error: true
         run: |
           yt-dlp -v -F \
+            --js-runtimes node \
             --cookies youtube_cookies.txt \
             --extractor-args "youtube:player_client=default,web_safari" \
             "https://www.youtube.com/watch?v=ydYDqZQpim8"
@@ -62,6 +64,7 @@ jobs:
         run: |
           set +e
           URL=$(yt-dlp -v \
+            --js-runtimes node \
             --cookies youtube_cookies.txt \
             --extractor-args "youtube:player_client=default,web_safari" \
             -f "95/best[protocol^=m3u8]/best" \
@@ -94,17 +97,12 @@ jobs:
               "Referer": "https://www.youtube.com/",
               "Origin": "https://www.youtube.com",
           })
-          try:
-              with urllib.request.urlopen(req, timeout=20) as r:
-                  body = r.read().decode("utf-8", "replace")
-                  print("HTTP:", r.status)
-                  print("Content-Type:", r.headers.get("content-type"))
-                  print("Final URL:", r.geturl())
-                  print()
-                  print(body[:5000])
-          except Exception as e:
-              print("PLAYLIST ERROR:", repr(e))
-              raise
+          with urllib.request.urlopen(req, timeout=20) as r:
+              body = r.read().decode("utf-8", "replace")
+              print("HTTP:", r.status)
+              print("Content-Type:", r.headers.get("content-type"))
+              print("Final URL:", r.geturl())
+              print(body[:5000])
           PY
 
       - name: Test first media segment
@@ -136,13 +134,9 @@ jobs:
               raise SystemExit(2)
           print("SEGMENT URL FOUND")
           req2 = urllib.request.Request(segment, headers=headers)
-          try:
-              with urllib.request.urlopen(req2, timeout=20) as r2:
-                  data = r2.read(4096)
-                  print("SEG HTTP:", r2.status)
-                  print("SEG TYPE:", r2.headers.get("content-type"))
-                  print("SEG FIRST BYTES:", len(data))
-          except Exception as e:
-              print("SEGMENT ERROR:", repr(e))
-              raise
+          with urllib.request.urlopen(req2, timeout=20) as r2:
+              data = r2.read(4096)
+              print("SEG HTTP:", r2.status)
+              print("SEG TYPE:", r2.headers.get("content-type"))
+              print("SEG FIRST BYTES:", len(data))
           PY

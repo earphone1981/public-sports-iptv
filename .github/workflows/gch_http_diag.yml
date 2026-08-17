@@ -13,48 +13,53 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Diagnose GCH manifests
+      - name: Diagnose GCH manifests keys and segments
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
           import re, urllib.request, urllib.error
+          from urllib.parse import urljoin
 
-          files = [
-              "gchmain.m3u8",
-              "EAST_test.m3u8",
-              "WEST_master .m3u8",
-              "hokaido_master (1).m3u8",
-          ]
+          files = ["gchmain.m3u8","EAST_test.m3u8","WEST_master .m3u8","hokaido_master (1).m3u8"]
+          headers={"User-Agent":"Mozilla/5.0","Accept":"*/*"}
+
+          def fetch(url, limit=1000):
+              req=urllib.request.Request(url,headers=headers)
+              try:
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      return r.status,r.headers.get("Content-Type"),r.read(limit)
+              except urllib.error.HTTPError as e:
+                  return e.code,e.headers.get("Content-Type"),e.read(limit)
+              except Exception as e:
+                  return None,None,(type(e).__name__+": "+str(e)).encode()
 
           for fn in files:
-              print("\n" + "="*70)
-              print(fn)
-              p = Path(fn)
-              if not p.exists():
-                  print("FILE MISSING")
-                  continue
-              text = p.read_text(encoding="utf-8-sig", errors="replace")
-              urls = re.findall(r'https?://[^"\s]+', text)
-              if not urls:
-                  print("NO URL FOUND")
-                  continue
-              for n, url in enumerate(urls, 1):
-                  print(f"URL {n}: {url[:110]}...")
-                  req = urllib.request.Request(url, headers={
-                      "User-Agent": "Mozilla/5.0",
-                      "Accept": "application/vnd.apple.mpegurl,application/x-mpegURL,*/*",
-                  })
-                  try:
-                      with urllib.request.urlopen(req, timeout=20) as r:
-                          body = r.read(500).decode("utf-8", "replace")
-                          print("HTTP:", r.status)
-                          print("Content-Type:", r.headers.get("Content-Type"))
-                          print("BODY:", repr(body[:300]))
-                  except urllib.error.HTTPError as e:
-                      body = e.read(500).decode("utf-8", "replace")
-                      print("HTTP:", e.code)
-                      print("BODY:", repr(body[:300]))
-                  except Exception as e:
-                      print("ERROR:", type(e).__name__, str(e))
+              print("\n"+"="*70+"\n"+fn)
+              text=Path(fn).read_text(encoding="utf-8-sig",errors="replace")
+              urls=re.findall(r'https?://[^"\s]+',text)
+              for n,media_url in enumerate(urls,1):
+                  status,ctype,body=fetch(media_url,12000)
+                  print(f"MEDIA {n}: HTTP {status} {ctype}")
+                  if status != 200: continue
+                  playlist=body.decode("utf-8","replace")
+                  km=re.search(r'#EXT-X-KEY:[^\n]*URI="([^"]+)"',playlist)
+                  if km:
+                      key_url=urljoin(media_url,km.group(1))
+                      ks,kct,kbody=fetch(key_url,64)
+                      print("  KEY HTTP:",ks,"Content-Type:",kct,"bytes:",len(kbody))
+                      print("  KEY HEX:",kbody[:16].hex() if ks==200 else repr(kbody[:100]))
+                  else:
+                      print("  NO AES KEY FOUND")
+                  seg=None
+                  for line in playlist.splitlines():
+                      line=line.strip()
+                      if line and not line.startswith("#"):
+                          seg=urljoin(media_url,line); break
+                  if seg:
+                      ss,sct,sbody=fetch(seg,64)
+                      print("  SEGMENT HTTP:",ss,"Content-Type:",sct,"bytes-read:",len(sbody))
+                      print("  SEGMENT HEAD:",sbody[:16].hex() if ss==200 else repr(sbody[:100]))
+                  else:
+                      print("  NO SEGMENT FOUND")
           PY

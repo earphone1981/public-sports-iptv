@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Install latest yt-dlp
         run: |
           python -m pip install --upgrade pip
@@ -28,9 +33,6 @@ jobs:
         run: |
           yt-dlp --version
 
-      # --------------------------------------------------------
-      # GitHub Secret → cookies.txt
-      # --------------------------------------------------------
       - name: Restore YouTube cookies
         shell: bash
         env:
@@ -40,16 +42,11 @@ jobs:
             echo "ERROR: YOUTUBE_COOKIES secret is empty"
             exit 1
           fi
-
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
-
           echo "Cookie file restored."
           echo "Size: $(wc -c < youtube_cookies.txt) bytes"
 
-      # --------------------------------------------------------
-      # YouTube形式一覧
-      # --------------------------------------------------------
       - name: Diagnose formats
         continue-on-error: true
         run: |
@@ -58,29 +55,22 @@ jobs:
             --extractor-args "youtube:player_client=default,web_safari" \
             "https://www.youtube.com/watch?v=ydYDqZQpim8"
 
-      # --------------------------------------------------------
-      # HLS URL取得
-      # --------------------------------------------------------
       - name: Get HLS URL
         id: hls
         continue-on-error: true
         shell: bash
         run: |
           set +e
-
           URL=$(yt-dlp -v \
             --cookies youtube_cookies.txt \
             --extractor-args "youtube:player_client=default,web_safari" \
             -f "95/best[protocol^=m3u8]/best" \
             -g \
             "https://www.youtube.com/watch?v=ydYDqZQpim8" 2>yt_err.txt)
-
           echo "===== yt-dlp stderr ====="
           cat yt_err.txt
-
           echo
           echo "===== HLS RESULT ====="
-
           if [ -n "$URL" ]; then
             echo "HLS URL取得成功"
             echo "url=$URL" >> "$GITHUB_OUTPUT"
@@ -88,9 +78,6 @@ jobs:
             echo "HLS URL取得失敗"
           fi
 
-      # --------------------------------------------------------
-      # HLSプレイリスト確認
-      # --------------------------------------------------------
       - name: Test HLS playlist
         if: steps.hls.outputs.url != ''
         shell: bash
@@ -98,42 +85,28 @@ jobs:
           URL: ${{ steps.hls.outputs.url }}
         run: |
           echo "===== HEADERS / PLAYLIST ====="
-
           python - <<'PY'
           import os
           import urllib.request
-
           url = os.environ["URL"]
-
-          req = urllib.request.Request(
-              url,
-              headers={
-                  "User-Agent":
-                      "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
-                      "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1",
-                  "Referer": "https://www.youtube.com/",
-                  "Origin": "https://www.youtube.com",
-              },
-          )
-
+          req = urllib.request.Request(url, headers={
+              "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1",
+              "Referer": "https://www.youtube.com/",
+              "Origin": "https://www.youtube.com",
+          })
           try:
               with urllib.request.urlopen(req, timeout=20) as r:
                   body = r.read().decode("utf-8", "replace")
-
                   print("HTTP:", r.status)
                   print("Content-Type:", r.headers.get("content-type"))
                   print("Final URL:", r.geturl())
                   print()
                   print(body[:5000])
-
           except Exception as e:
               print("PLAYLIST ERROR:", repr(e))
               raise
           PY
 
-      # --------------------------------------------------------
-      # 最初のメディアsegment確認
-      # --------------------------------------------------------
       - name: Test first media segment
         if: steps.hls.outputs.url != ''
         shell: bash
@@ -143,59 +116,32 @@ jobs:
           python - <<'PY'
           import os
           import urllib.request
-
           url = os.environ["URL"]
-
           headers = {
-              "User-Agent":
-                  "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
-                  "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1",
+              "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1",
               "Referer": "https://www.youtube.com/",
               "Origin": "https://www.youtube.com",
           }
-
-          req = urllib.request.Request(
-              url,
-              headers=headers
-          )
-
+          req = urllib.request.Request(url, headers=headers)
           with urllib.request.urlopen(req, timeout=20) as r:
               text = r.read().decode("utf-8", "replace")
-
           segment = None
-
           for line in text.splitlines():
               line = line.strip()
-
-              if (
-                  line.startswith("http")
-                  and (
-                      "seg.ts" in line
-                      or "videoplayback" in line
-                  )
-              ):
+              if line.startswith("http") and ("seg.ts" in line or "videoplayback" in line):
                   segment = line
                   break
-
           if not segment:
               print("No segment URL found")
               raise SystemExit(2)
-
           print("SEGMENT URL FOUND")
-
-          req2 = urllib.request.Request(
-              segment,
-              headers=headers
-          )
-
+          req2 = urllib.request.Request(segment, headers=headers)
           try:
               with urllib.request.urlopen(req2, timeout=20) as r2:
                   data = r2.read(4096)
-
                   print("SEG HTTP:", r2.status)
                   print("SEG TYPE:", r2.headers.get("content-type"))
                   print("SEG FIRST BYTES:", len(data))
-
           except Exception as e:
               print("SEGMENT ERROR:", repr(e))
               raise

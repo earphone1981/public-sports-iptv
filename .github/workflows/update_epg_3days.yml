@@ -1,9 +1,13 @@
-name: Update Public Sports EPG + M3U + YouTube
+name: Update Public Sports EPG 3 Days
 
 on:
   schedule:
     - cron: '0 23 * * *'
   workflow_dispatch:
+
+concurrency:
+  group: public-sports-epg
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -21,31 +25,18 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install yt-dlp
-        run: python -m pip install -U yt-dlp
-
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
 
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 
-      - name: Get KANA YouTube LIVE
-        run: python kana_live.py
-        continue-on-error: true
-
-      - name: Get YouTube LIVE all
-        run: python youtube_live_all.py
-        continue-on-error: true
-
-      - name: Merge public sports M3U
-        run: python merge_m3u_youtube_live.py
-
-      - name: Commit and push if changed
+      - name: Commit and push EPG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epg.xml public_sports.m3u
+          git add epg.xml
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update public sports EPG M3U and YouTube LIVE"
+          git commit -m "Update 3-day public sports EPG"
+          git pull --rebase origin main
           git push

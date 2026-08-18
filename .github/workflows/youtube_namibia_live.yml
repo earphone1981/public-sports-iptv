@@ -16,26 +16,21 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-
       - name: Install latest yt-dlp
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade --pre "yt-dlp[default]"
-
       - name: Restore YouTube cookies
         shell: bash
         env:
@@ -44,20 +39,36 @@ jobs:
           test -n "$YOUTUBE_COOKIES"
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
-
-      - name: Update YouTube LIVE M3U files
+      - name: Update YouTube LIVE entries
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
           import subprocess
 
-          CHANNELS = [
-              {"label":"ナミビア","source":"https://www.youtube.com/watch?v=ydYDqZQpim8","file":"namibia_live.m3u","tvg_id":"youtube.namibia.live","tvg_name":"ナミビア LIVE","display":"🇳🇦 ナミビア LIVE","group":"その他LIVE","logo":"","remove_when_offline":False},
-              {"label":"松山市クリーンセンター","source":"https://www.youtube.com/watch?v=C0gpM_qIIl0","file":"youtube_test.m3u","tvg_id":"youtube.matsuyama.clean","tvg_name":"松山市クリーンセンター LIVE","display":"♻️ 松山市クリーンセンター LIVE","group":"その他LIVE","logo":"","remove_when_offline":False},
-              {"label":"松山空港","source":"https://www.youtube.com/watch?v=CFh9z-6IeEE","file":"matsuyama_airport_live.m3u","tvg_id":"youtube.matsuyama.airport","tvg_name":"松山空港 LIVE","display":"✈️ 松山空港 LIVE","group":"その他LIVE","logo":"","remove_when_offline":False},
-              {"label":"華奈tube","source":"https://www.youtube.com/@kana_tube/live","file":"kana_live.m3u","tvg_id":"youtube.kana","tvg_name":"華奈tube LIVE","display":"📺 華奈tube LIVE","group":"競輪 YouTube LIVE","logo":"https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/kana_tube.png","remove_when_offline":True},
-          ]
+          C=[]
+          def add(label,source,tvg,display,group,logo="",file="",offline=True):
+              C.append(dict(label=label,source=source,tvg_id=tvg,tvg_name=label+" LIVE",display=display,group=group,logo=logo,file=file,remove_when_offline=offline))
+
+          # 固定LIVE
+          add("ナミビア","https://www.youtube.com/watch?v=ydYDqZQpim8","youtube.namibia.live","🇳🇦 ナミビア LIVE","その他LIVE",file="namibia_live.m3u",offline=False)
+          add("松山市クリーンセンター","https://www.youtube.com/watch?v=C0gpM_qIIl0","youtube.matsuyama.clean","♻️ 松山市クリーンセンター LIVE","その他LIVE",file="youtube_test.m3u",offline=False)
+          add("松山空港","https://www.youtube.com/watch?v=CFh9z-6IeEE","youtube.matsuyama.airport","✈️ 松山空港 LIVE","その他LIVE",file="matsuyama_airport_live.m3u",offline=False)
+          add("愛媛MP","https://www.youtube.com/@EhimeMandarinPirates/live","youtube.ehime.mp.home","⚾ 愛媛マンダリンパイレーツ HOME LIVE","野球LIVE",offline=True)
+          add("華奈tube","https://www.youtube.com/@kana_tube/live","youtube.kana","📺 華奈tube LIVE","競輪 YouTube LIVE","https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/kana_tube.png",file="kana_live.m3u",offline=True)
+
+          # 今回追加の常設LIVE
+          add("大阪環状線","https://www.youtube.com/watch?v=HYQHcAqNBms","youtube.osaka.loop.live","🚃 大阪環状線 LIVE","その他LIVE",offline=False)
+          add("淡路島モンキーセンター","https://www.youtube.com/watch?v=lsxYH2XQQCg","youtube.awaji.monkey.live","🐒 淡路島モンキーセンター LIVE","その他LIVE",offline=False)
+          add("柴犬なつとこどもたち","https://www.youtube.com/watch?v=AqhaZl0fRYY","youtube.shiba.natsu.live","🐕 柴犬なつとこどもたち LIVE","その他LIVE",offline=False)
+          add("コノド・馬の映るお天気カメラ（新冠・近距離カメラ）","https://www.youtube.com/watch?v=1NtYMzERRxs","youtube.niikappu.horse.live","🐴 コノド・馬の映るお天気カメラ（新冠・近距離カメラ）","その他LIVE",offline=False)
+
+          # BOAT RACE 24場公式YouTube（サブ映像、EPGは本線tvg-id共有）
+          boats=[
+          ("桐生","UCT2pRt_me0tOA8B2sakEv7Q","boat.kiryu","01_kiryu.png"),("戸田","UCoLCf3aVRMSukwetHfn1p1A","boat.toda","02_toda.png"),("江戸川","UCpNAwETM_vPV2Skumzc_KMA","boat.edogawa","03_edogawa.png"),("平和島","UCGExstl4XKMun5eY9V0zlSg","boat.heiwajima","04_heiwajima.png"),("多摩川","UC4lvZQUptR8m5VDSu49xCGQ","boat.tamagawa","05_tamagawa.png"),("浜名湖","UCGZig6i5JrZ33jjW2GG6Bzw","boat.hamanako","06_hamanako.png"),("蒲郡","UCZhuyNQgLORLjgl8hlA7uHw","boat.gamagori","07_gamagori.png"),("常滑","UCu9lPbAk1MosTGm2yQ4BapQ","boat.tokoname","08_tokoname.png"),("津","UCEUXzh5FRxDneaLvv0YdEfQ","boat.tsu","09_tsu.png"),("三国","UCu-yP6WJQ0zcx5nmWhxvJEg","boat.mikuni","10_mikuni.png"),("びわこ","UCLbcsJqsT5Qa1axpYcOBpmg","boat.biwako","11_biwako.png"),("住之江","UCW3AReETO-oDmEoE-m3i7dQ","boat.suminoe","12_suminoe.png"),("尼崎","UC-vpH4QQKPwsqsbESOfNgZQ","boat.amagasaki","13_amagasaki.png"),("鳴門","UCd8rJfg7p8qsASOEIIwAinQ","boat.naruto","14_naruto.png"),("丸亀","UC2CWDMG18mpBGXkI9KHdACQ","boat.marugame","15_marugame.png"),("児島","UC6IrOXVuw6xXLl1qJqYUrsg","boat.kojima","16_kojima.png"),("宮島","UCxvYC6PPCsy2_p0tGuvIv5w","boat.miyajima","17_miyajima.png"),("徳山","UCqyq1Dav7D5ztEl_ierxsjw","boat.tokuyama","18_tokuyama.png"),("下関","UCl-7IwVjJHzWUhqxz7hwY1w","boat.shimonoseki","19_shimonoseki.png"),("若松","UCll--OtE3eJpzb4uwX8MX9A","boat.wakamatsu","20_wakamatsu.png"),("芦屋","UC5BunThJ_eBJq5gz-DOaRLw","boat.ashiya","21_ashiya.png"),("福岡","UCgyb8el3rLkg8i0bEMboQhA","boat.fukuoka","22_fukuoka.png"),("唐津","UCO6ycDxAk-5OHAiKc71gNSQ","boat.karatsu","23_karatsu.png"),("大村","UCPLb9R1EIqxNBy8Qzcrz8Wg","boat.omura","24_omura.png")]
+          for venue,ch,tvg,logo_file in boats:
+              logo=f"https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/{logo_file}"
+              add(venue+" 公式YouTube",f"https://www.youtube.com/channel/{ch}/live",tvg,f"📺 {venue} 公式YouTube LIVE","ボートレース YouTube LIVE",logo=logo,offline=True)
 
           def get_url(source):
               cmd=["yt-dlp","--js-runtimes","node","--cookies","youtube_cookies.txt","--extractor-args","youtube:player_client=default,web_safari","--no-playlist","--match-filter","is_live","--no-warnings","-f","95/best[protocol^=m3u8]/best","-g",source]
@@ -69,30 +80,31 @@ jobs:
               logo=f' tvg-logo="{ch["logo"]}"' if ch["logo"] else ""
               return f'#EXTINF:-1 tvg-id="{ch["tvg_id"]}" tvg-name="{ch["tvg_name"]}"{logo} group-title="{ch["group"]}",{ch["display"]}'
 
+          path=Path("public_sports.m3u")
+          original=path.read_text(encoding="utf-8-sig").replace("\r\n","\n").split("\n")
           results={}
-          for ch in CHANNELS:
+          for ch in C:
               print("===",ch["label"],"===")
               try: url=get_url(ch["source"])
               except Exception as e: print("ERROR:",e); url=None
-              results[ch["tvg_id"]]=url
-              if url:
-                  Path(ch["file"]).write_text("#EXTM3U\n"+extinf(ch)+"\n"+url+"\n",encoding="utf-8")
-                  print("LIVE URL OK")
-              elif ch["remove_when_offline"]:
-                  Path(ch["file"]).write_text("#EXTM3U\n# 現在LIVEなし\n",encoding="utf-8")
-                  print("OFFLINE")
-              else:
-                  print("URL取得失敗: existing entry is kept")
+              results[ch["tvg_id"]+"|"+ch["label"]]=url
+              if url: print("LIVE URL OK")
+              else: print("OFFLINE / URL取得なし")
+              if ch["file"]:
+                  if url:
+                      Path(ch["file"]).write_text("#EXTM3U\n"+extinf(ch)+"\n"+url+"\n",encoding="utf-8")
+                  elif ch["remove_when_offline"]:
+                      Path(ch["file"]).write_text("#EXTM3U\n# 現在LIVEなし\n",encoding="utf-8")
 
-          path=Path("public_sports.m3u")
-          lines=path.read_text(encoding="utf-8-sig").replace("\r\n","\n").split("\n")
-          managed={ch["tvg_id"] for ch in CHANNELS}|{"youtube.namibia.live.ott"}
+          # 管理対象を除去。BOATは本線とtvg-id共有なので group-title=YouTube の項目だけ除去する
+          managed_youtube_ids={ch["tvg_id"] for ch in C if ch["tvg_id"].startswith("youtube.")}|{"youtube.namibia.live.ott"}
           cleaned=[]; i=0
-          while i<len(lines):
-              line=lines[i]
-              if any(f'tvg-id="{t}"' in line for t in managed):
+          while i<len(original):
+              line=original[i]
+              is_managed=(any(f'tvg-id="{t}"' in line for t in managed_youtube_ids) or (line.startswith("#EXTINF:") and "YouTube LIVE" in line and any(f'tvg-id="{tvg}"' in line for _,_,tvg,_ in boats)))
+              if is_managed:
                   i+=1
-                  while i<len(lines) and not lines[i].startswith("#EXTINF:") and not lines[i].startswith("## "):
+                  while i<len(original) and not original[i].startswith("#EXTINF:") and not original[i].startswith("## "):
                       i+=1
                   continue
               cleaned.append(line); i+=1
@@ -103,30 +115,29 @@ jobs:
               base.append(line)
           while base and base[-1]=="": base.pop()
 
-          for ch in CHANNELS:
-              url=results.get(ch["tvg_id"])
+          # 取得できたものを追加。常設LIVEは取得失敗時に旧エントリを消さないため、旧URLを後段で保持する設計は次回拡張対象。
+          for ch in C:
+              url=results.get(ch["tvg_id"]+"|"+ch["label"])
               if url:
                   base.extend(["",f'## {ch["group"]}',extinf(ch),url])
 
           path.write_text("\n".join(base).rstrip()+"\n",encoding="utf-8")
           PY
-
-      - name: Validate generated files
+      - name: Validate generated M3U
         shell: bash
         run: |
-          grep -q 'tvg-id="youtube.namibia.live"' public_sports.m3u
+          test -s public_sports.m3u
           if grep -q 'tvg-id="youtube.namibia.live.ott"' public_sports.m3u; then
-            echo "ERROR: old OTT test entry still exists"
-            exit 1
+            echo "ERROR: old OTT test entry still exists"; exit 1
           fi
-          echo "Normal YouTube entries only"
-
+          echo "M3U validation OK"
       - name: Commit updated LIVE URLs
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u kana_live.m3u public_sports.m3u
+          git add public_sports.m3u namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u kana_live.m3u
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Update YouTube LIVE URLs"
+          git pull --rebase origin main
           git push

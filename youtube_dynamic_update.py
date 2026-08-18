@@ -9,9 +9,11 @@ M3U = Path('public_sports.m3u')
 # 一発更新用 YouTube DYNAMIC
 # ・公営競技のYouTubeサブは完全廃止
 # ・ここでは「かなチューブ」だけを拾う
+# ・LIVEなし時も「現在LIVEなし」をM3Uに常設する
 # ============================================================
 
 KANA_STREAMS = 'https://www.youtube.com/@kana_tube/streams'
+KANA_CHANNEL = 'https://www.youtube.com/@kana_tube/streams'
 
 
 def run(cmd, timeout=180):
@@ -90,13 +92,24 @@ for title, page in items:
         print('OK KANA', title)
         break
 
-# 単独M3Uも更新
-kana_file = Path('kana_live.m3u')
+# LIVEなしでもプレイリスト上には常設表示する
 if entries:
-    ext, url = entries[0]
-    kana_file.write_text('#EXTM3U\n' + ext + '\n' + url + '\n', encoding='utf-8')
+    display_ext, display_url = entries[0]
 else:
-    kana_file.write_text('#EXTM3U\n# 現在LIVEなし\n', encoding='utf-8')
+    display_ext = (
+        '#EXTINF:-1 tvg-id="youtube.kana.live" '
+        'tvg-name="華奈tube LIVE" group-title="かなチューブ",'
+        '📺 華奈tube｜現在LIVEなし'
+    )
+    display_url = KANA_CHANNEL
+    print('KANA OFFLINE PLACEHOLDER')
+
+# 単独M3Uも常設更新
+kana_file = Path('kana_live.m3u')
+kana_file.write_text(
+    '#EXTM3U\n' + display_ext + '\n' + display_url + '\n',
+    encoding='utf-8'
+)
 
 text = M3U.read_text(encoding='utf-8-sig').replace('\r\n', '\n')
 start = '# === DYNAMIC YOUTUBE LIVE START ==='
@@ -144,11 +157,19 @@ while i < len(lines):
 while out and not out[-1].strip():
     out.pop()
 
-block = ['', start]
-if entries:
-    ext, url = entries[0]
-    block += ['## かなチューブ', ext, url, '']
-block += [end, '']
+block = [
+    '',
+    start,
+    '## かなチューブ',
+    display_ext,
+    display_url,
+    '',
+    end,
+    ''
+]
 
-M3U.write_text('\n'.join(out).rstrip() + '\n' + '\n'.join(block), encoding='utf-8')
-print('DYNAMIC KANA COUNT', len(entries))
+M3U.write_text(
+    '\n'.join(out).rstrip() + '\n' + '\n'.join(block),
+    encoding='utf-8'
+)
+print('DYNAMIC KANA LIVE COUNT', len(entries))

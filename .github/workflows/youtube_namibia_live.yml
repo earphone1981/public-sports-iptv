@@ -128,6 +128,35 @@ jobs:
           path.write_text('\n'.join(cleaned).rstrip() + '\n', encoding='utf-8')
           PY
 
+      - name: Normalize Keirin names to EPG
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('public_sports.m3u')
+          lines = path.read_text(encoding='utf-8-sig').splitlines()
+          names = {
+              'keirin.kawasaki': 'かわさきⓀ',
+              'keirin.nagoya': 'なごやⓀ',
+              'keirin.kochi': 'こうちⓀ',
+          }
+          out = []
+          for line in lines:
+              if line.startswith('#EXTINF:'):
+                  m = re.search(r'tvg-id="([^"]+)"', line)
+                  cid = m.group(1) if m else ''
+                  if cid in names and 'group-title="競輪(TIPSTAR)"' in line:
+                      name = names[cid]
+                      line = re.sub(r'tvg-name="[^"]*"', f'tvg-name="{name}"', line)
+                      if ',' in line:
+                          line = line.rsplit(',', 1)[0] + ',' + name
+              out.append(line)
+          path.write_text('\n'.join(out).rstrip() + '\n', encoding='utf-8')
+          print('Keirin names normalized:', ', '.join(names.values()))
+          PY
+
       - name: Validate generated M3U
         shell: bash
         run: |
@@ -166,6 +195,20 @@ jobs:
                   if tvg_id in seen:
                       raise SystemExit(f'ERROR: duplicate その他LIVE tvg-id remains: {tvg_id} at line {i}')
                   seen.add(tvg_id)
+
+          required = {
+              'keirin.kawasaki': 'かわさきⓀ',
+              'keirin.nagoya': 'なごやⓀ',
+              'keirin.kochi': 'こうちⓀ',
+          }
+          for cid, name in required.items():
+              ok = any(
+                  f'tvg-id="{cid}"' in line and f'tvg-name="{name}"' in line
+                  and 'group-title="競輪(TIPSTAR)"' in line
+                  for line in lines
+              )
+              if not ok:
+                  raise SystemExit(f'ERROR: Keirin name mismatch: {cid} -> {name}')
 
           print('M3U validation OK / その他LIVE unique:', len(seen))
           PY

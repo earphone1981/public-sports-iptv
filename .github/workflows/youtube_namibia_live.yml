@@ -5,13 +5,6 @@ on:
   push:
     paths:
       - '.github/youtube_update.trigger'
-  schedule:
-    # JST 08:30 / 12:00 / 13:30 / 15:00 / 20:40
-    - cron: "30 23 * * *"
-    - cron: "0 3 * * *"
-    - cron: "30 4 * * *"
-    - cron: "0 6 * * *"
-    - cron: "40 11 * * *"
 
 concurrency:
   group: public-sports-youtube-live
@@ -51,78 +44,11 @@ jobs:
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
 
-      - name: Refresh base YouTube LIVE entries
+      - name: Refresh requested その他LIVE only
         run: python youtube_base_update.py
 
-      - name: Refresh venue and cross-channel LIVE entries
+      - name: Refresh かなチューブ only
         run: python youtube_dynamic_update.py
-
-      - name: Deduplicate その他LIVE and clean headers
-        shell: bash
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          path = Path('public_sports.m3u')
-          lines = path.read_text(encoding='utf-8-sig').replace('\r\n', '\n').split('\n')
-
-          seen_other = set()
-          deduped = []
-          i = 0
-          while i < len(lines):
-              line = lines[i]
-              if line.lstrip().startswith('#EXTINF:') and 'group-title="その他LIVE"' in line:
-                  m = re.search(r'tvg-id="([^"]+)"', line)
-                  tvg_id = m.group(1) if m else None
-                  if tvg_id and tvg_id in seen_other:
-                      print('DROP duplicate その他LIVE:', tvg_id)
-                      i += 1
-                      while i < len(lines):
-                          s = lines[i].lstrip()
-                          if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
-                              break
-                          i += 1
-                      continue
-                  if tvg_id:
-                      seen_other.add(tvg_id)
-              deduped.append(line)
-              i += 1
-
-          managed_headers = {
-              '## その他LIVE',
-              '## 野球LIVE',
-              '## 競輪 YouTube LIVE',
-              '## 地方競馬 YouTube LIVE',
-              '## オートレース YouTube LIVE',
-              '## ボートレース YouTube LIVE',
-              '## 公営競技 横断LIVE',
-          }
-
-          out = []
-          i = 0
-          while i < len(deduped):
-              line = deduped[i].strip()
-              if line in managed_headers:
-                  j = i + 1
-                  while j < len(deduped) and not deduped[j].strip():
-                      j += 1
-                  if j < len(deduped) and deduped[j].lstrip().startswith('#EXTINF:'):
-                      if not out or out[-1].strip() != line:
-                          out.append(line)
-                  i += 1
-                  continue
-              out.append(deduped[i].rstrip())
-              i += 1
-
-          cleaned = []
-          for line in out:
-              if not line.strip() and cleaned and not cleaned[-1].strip():
-                  continue
-              cleaned.append(line)
-
-          path.write_text('\n'.join(cleaned).rstrip() + '\n', encoding='utf-8')
-          PY
 
       - name: Normalize public sports labels
         run: python normalize_public_sports_labels.py
@@ -131,68 +57,22 @@ jobs:
         shell: bash
         run: |
           test -s public_sports.m3u
-          grep -q '# === BASE YOUTUBE LIVE ===' public_sports.m3u
-          grep -q '# === DYNAMIC YOUTUBE LIVE START ===' public_sports.m3u
-          if grep -q 'tvg-id="youtube.namibia.live.ott"' public_sports.m3u; then
-            echo "ERROR: old OTT test entry still exists"
+          if grep -Eq 'group-title="(競輪 YouTube LIVE|地方競馬 YouTube LIVE|オートレース YouTube LIVE|ボートレース YouTube LIVE|公営競技 横断LIVE)"' public_sports.m3u; then
+            echo "ERROR: 公営競技YouTubeサブが残っています"
             exit 1
           fi
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          lines = Path('public_sports.m3u').read_text(encoding='utf-8-sig').splitlines()
-          managed = {
-              '## その他LIVE', '## 野球LIVE', '## 競輪 YouTube LIVE',
-              '## 地方競馬 YouTube LIVE', '## オートレース YouTube LIVE',
-              '## ボートレース YouTube LIVE', '## 公営競技 横断LIVE'
-          }
-          for i, line in enumerate(lines):
-              if line.strip() in managed:
-                  j = i + 1
-                  while j < len(lines) and not lines[j].strip():
-                      j += 1
-                  if j >= len(lines) or not lines[j].lstrip().startswith('#EXTINF:'):
-                      raise SystemExit(f'ERROR: orphan header remains at line {i+1}: {line}')
-
-          seen = set()
-          for i, line in enumerate(lines, 1):
-              if line.startswith('#EXTINF:') and 'group-title="その他LIVE"' in line:
-                  m = re.search(r'tvg-id="([^"]+)"', line)
-                  if not m:
-                      continue
-                  tvg_id = m.group(1)
-                  if tvg_id in seen:
-                      raise SystemExit(f'ERROR: duplicate その他LIVE tvg-id remains: {tvg_id} at line {i}')
-                  seen.add(tvg_id)
-
-          required = {
-              'keirin.kawasaki': 'かわさきけいりん',
-              'keirin.nagoya': 'なごやけいりん',
-              'keirin.kochi': 'こうちけいりん',
-          }
-          for cid, name in required.items():
-              ok = any(
-                  f'tvg-id="{cid}"' in line and f'tvg-name="{name}"' in line
-                  and 'group-title="競輪(TIPSTAR)"' in line
-                  for line in lines
-              )
-              if not ok:
-                  raise SystemExit(f'ERROR: Keirin name mismatch: {cid} -> {name}')
-
-          print('M3U validation OK / その他LIVE unique:', len(seen))
-          PY
+          echo "YouTube sub channels: none"
 
       - name: Commit updated LIVE URLs
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public_sports.m3u namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u || true
+          git add public_sports.m3u kana_live.m3u namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u || true
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "Update YouTube LIVE URLs"
+          git commit -m "Update selected YouTube LIVE URLs"
           git pull --rebase origin main
           git push

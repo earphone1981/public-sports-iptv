@@ -1,133 +1,133 @@
 #EXTM3U url-tvg="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/epg.xml"
 
 ## 競輪
-#EXTINF:-1 tvg-id="keirin.hakodate" tvg-name="函館けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_hakodate-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",函館けいりん
+#EXTINF:-1 tvg-id="keirin.hakodate" tvg-name="函館" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_hakodate-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",函館
 https://d2gdop8qem62ia.cloudfront.net/out/v1/b5655c91f8fb4d4d928070ab6ba8a828/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.aomori" tvg-name="青森けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_aomori-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",青森けいりん
+#EXTINF:-1 tvg-id="keirin.aomori" tvg-name="青森" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_aomori-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",青森
 https://d18cvifc0fh5r6.cloudfront.net/out/v1/e86a6fef2a4b4cefb7e767727ec3df4c/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.iwakitaira" tvg-name="いわき平けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_iwakitaira-keirin.png?w=446&ssl=1" group-title="競輪(TIPSTAR)",いわき平けいりん
+#EXTINF:-1 tvg-id="keirin.iwakitaira" tvg-name="いわき平" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_iwakitaira-keirin.png?w=446&ssl=1" group-title="競輪(TIPSTAR)",いわき平
 https://d23qgpjepvhwta.cloudfront.net/out/v1/780e6abc75d24525a95b9998b0892a86/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.yahiko" tvg-name="弥彦けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_yahiko-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",弥彦けいりん
+#EXTINF:-1 tvg-id="keirin.yahiko" tvg-name="弥彦" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_yahiko-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",弥彦
 https://d1bvxvt0rc15dk.cloudfront.net/out/v1/d448b09b86504888b4753bec784f965e/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.maebashi" tvg-name="前橋けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_maebashi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",前橋けいりん
+#EXTINF:-1 tvg-id="keirin.maebashi" tvg-name="前橋" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_maebashi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",前橋
 https://d1k0zwbhpej0or.cloudfront.net/out/v1/1b4717ba26ca42e09066b373c5f296a4/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.toride" tvg-name="取手けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_toride-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",取手けいりん
+#EXTINF:-1 tvg-id="keirin.toride" tvg-name="取手" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/10/minchari_toride-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",取手
 https://d3n5p1k00kshap.cloudfront.net/out/v1/84eb6113cff44686b6af39f71d4344a1/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.utsunomiya" tvg-name="宇都宮けいりん" tvg-logo="https://utsunomiya-keirin.jp/img/logo.png" group-title="競輪(TIPSTAR)",宇都宮けいりん
+#EXTINF:-1 tvg-id="keirin.utsunomiya" tvg-name="宇都宮" tvg-logo="https://utsunomiya-keirin.jp/img/logo.png" group-title="競輪(TIPSTAR)",宇都宮
 https://d1bbh9hna9i29a.cloudfront.net/out/v1/b7a1f334e53d4f6d8c0feb6bd08cfa02/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.omiya" tvg-name="大宮けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-oomiya-keirin.jpg?w=789&ssl=1" group-title="競輪(TIPSTAR)",大宮けいりん
+#EXTINF:-1 tvg-id="keirin.omiya" tvg-name="大宮" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-oomiya-keirin.jpg?w=789&ssl=1" group-title="競輪(TIPSTAR)",大宮
 https://dtobnwhel29h8.cloudfront.net/out/v1/932d55421d9d49deb1a64be99899d402/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.seibuen" tvg-name="西武園けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-seibuen-keirin.jpg?w=789&ssl=1" group-title="競輪(TIPSTAR)",西武園けいりん
+#EXTINF:-1 tvg-id="keirin.seibuen" tvg-name="西武園" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-seibuen-keirin.jpg?w=789&ssl=1" group-title="競輪(TIPSTAR)",西武園
 https://dglu799jz6q5s.cloudfront.net/out/v1/42285a6d8aa7415d9cd14ff4a9e4127a/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.keiogatsu" tvg-name="京王閣けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-keiokaku-keirin.png?w=628&ssl=1" group-title="競輪(TIPSTAR)",京王閣けいりん
+#EXTINF:-1 tvg-id="keirin.keiogatsu" tvg-name="京王閣" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-keiokaku-keirin.png?w=628&ssl=1" group-title="競輪(TIPSTAR)",京王閣
 https://dzrovda3802mb.cloudfront.net/out/v1/cae23cf64f45479a9adc8375c7bc9243/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.tachikawa" tvg-name="立川けいりん" tvg-logo="https://static.bizpa.net/images/72daf5709756d5d4423e3227a796bad203133dd972707122e0f8a69989f7317b.jpg?width=480&wbp=t" group-title="競輪(TIPSTAR)",立川けいりん
+#EXTINF:-1 tvg-id="keirin.tachikawa" tvg-name="立川" tvg-logo="https://static.bizpa.net/images/72daf5709756d5d4423e3227a796bad203133dd972707122e0f8a69989f7317b.jpg?width=480&wbp=t" group-title="競輪(TIPSTAR)",立川
 https://d1tu50d3glwfd3.cloudfront.net/out/v1/fb4d91b4805a48bb8c3ed3da9dfc8a17/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.matsudo" tvg-name="松戸けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-matsudo-keirin.png?resize=169%2C74" group-title="競輪(TIPSTAR)",松戸けいりん
+#EXTINF:-1 tvg-id="keirin.matsudo" tvg-name="松戸" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2024/11/minchari-matsudo-keirin.png?resize=169%2C74" group-title="競輪(TIPSTAR)",松戸
 https://d3um80ws33iv2t.cloudfront.net/out/v1/b573e645e5de40c999eecfe4e7221fe0/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kawasaki" tvg-name="かわさきけいりん" tvg-logo="https://www.kawasakikeirin.com/images/logo_kawasaki.png" group-title="競輪(TIPSTAR)",かわさきけいりん
+#EXTINF:-1 tvg-id="keirin.kawasaki" tvg-name="川崎" tvg-logo="https://www.kawasakikeirin.com/images/logo_kawasaki.png" group-title="競輪(TIPSTAR)",川崎
 https://d19fq96jx01oj3.cloudfront.net/out/v1/5648c4b609c248d9a6a23080241da3e8/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.hiratsuka" tvg-name="平塚けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hiratsuka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",平塚けいりん
+#EXTINF:-1 tvg-id="keirin.hiratsuka" tvg-name="平塚" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hiratsuka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",平塚
 https://d1fozgui02sgex.cloudfront.net/out/v1/e5b143c0b1c84a728bd58d264d6f2492/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.odawara" tvg-name="小田原けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/odawara-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小田原けいりん
+#EXTINF:-1 tvg-id="keirin.odawara" tvg-name="小田原" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/odawara-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小田原
 https://d17o27baf9gld.cloudfront.net/out/v1/98e6234557064a03b6b65f68f1695b4c/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.ito" tvg-name="伊東温泉けいりん" tvg-logo="https://www.itokeirin.com/img/logo.png" group-title="競輪(TIPSTAR)",伊東温泉けいりん
+#EXTINF:-1 tvg-id="keirin.ito" tvg-name="伊東温泉" tvg-logo="https://www.itokeirin.com/img/logo.png" group-title="競輪(TIPSTAR)",伊東温泉
 https://d1ziw7o7biw5lw.cloudfront.net/out/v1/b9fb027896494e27b702da5caa624c08/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.shizuoka" tvg-name="静岡けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/shizuoka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",静岡けいりん
+#EXTINF:-1 tvg-id="keirin.shizuoka" tvg-name="静岡" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/shizuoka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",静岡
 https://d2zw3hk976cigz.cloudfront.net/out/v1/d88039ca0c144c4c897e3d05c70d24e9/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.nagoya" tvg-name="なごやけいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/nagoya-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",なごやけいりん
+#EXTINF:-1 tvg-id="keirin.nagoya" tvg-name="名古屋" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/nagoya-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",名古屋
 https://d3vgcjt9ja8dpm.cloudfront.net/out/v1/5d8c23f974b24ba09c210e8f9fec6595/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.gifu" tvg-name="岐阜けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/gifu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",岐阜けいりん
+#EXTINF:-1 tvg-id="keirin.gifu" tvg-name="岐阜" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/gifu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",岐阜
 https://dhwnzvxv6smzu.cloudfront.net/out/v1/8aeb71175e4d4f818d765c6471f10602/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.ogaki" tvg-name="大垣けいりん" tvg-logo="https://www.ogakikeirin.com/common/images/logos/logo.png?20190412" group-title="競輪(TIPSTAR)",大垣けいりん
+#EXTINF:-1 tvg-id="keirin.ogaki" tvg-name="大垣" tvg-logo="https://www.ogakikeirin.com/common/images/logos/logo.png?20190412" group-title="競輪(TIPSTAR)",大垣
 https://dfb6s2sy8m4fj.cloudfront.net/out/v1/46a75c8c38534b64902fcf3d080af7e2/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.toyohashi" tvg-name="豊橋けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/toyohasjhi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",豊橋けいりん
+#EXTINF:-1 tvg-id="keirin.toyohashi" tvg-name="豊橋" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/toyohasjhi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",豊橋
 https://d21j4it98v7rxt.cloudfront.net/out/v1/0cc7bc9319734e6aaf26e6e402595df1/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.matsusaka" tvg-name="松阪けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/matsusaka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",松阪けいりん
+#EXTINF:-1 tvg-id="keirin.matsusaka" tvg-name="松阪" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/matsusaka-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",松阪
 https://ds87bovfu9b2r.cloudfront.net/out/v1/e755c8d84ca84705815c267e18126bf9/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.yokkaichi" tvg-name="四日市けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/yokkaichi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",四日市けいりん
+#EXTINF:-1 tvg-id="keirin.yokkaichi" tvg-name="四日市" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/yokkaichi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",四日市
 https://d2qwtrte7v1vrk.cloudfront.net/out/v1/b09f11096a2449179ecc765450e5d70e/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.toyama" tvg-name="富山けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/toyama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",富山けいりん
+#EXTINF:-1 tvg-id="keirin.toyama" tvg-name="富山" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/toyama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",富山
 https://d1fzg1sb6wtn97.cloudfront.net/out/v1/8c5cd6880a4c464e8d69a265fc2b7c22/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.fukui" tvg-name="福井けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/fukui-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",福井けいりん
+#EXTINF:-1 tvg-id="keirin.fukui" tvg-name="福井" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/fukui-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",福井
 https://d3tqfxjoliy123.cloudfront.net/out/v1/c6f5fdc0027240d6bf60245c584fd053/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.nara" tvg-name="奈良けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/nara-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",奈良けいりん
+#EXTINF:-1 tvg-id="keirin.nara" tvg-name="奈良" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/nara-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",奈良
 https://d39uosfxy3v3ex.cloudfront.net/out/v1/e405ba3f01604bc59a3657bdd988675b/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kishiwada" tvg-name="岸和田けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kishiwada-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",岸和田けいりん
+#EXTINF:-1 tvg-id="keirin.kishiwada" tvg-name="岸和田" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kishiwada-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",岸和田
 https://d327j1m2owk3qs.cloudfront.net/out/v1/6506022445bc485ba601599264a7f957/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.wakayama" tvg-name="和歌山けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/wakayama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",和歌山けいりん
+#EXTINF:-1 tvg-id="keirin.wakayama" tvg-name="和歌山" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/wakayama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",和歌山
 https://dnlnyxpzhof71.cloudfront.net/out/v1/dd8dee97c5c84d6a9da740c8b146b985/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.tamano" tvg-name="玉野けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/tamano-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",玉野けいりん
+#EXTINF:-1 tvg-id="keirin.tamano" tvg-name="玉野" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/tamano-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",玉野
 https://d2uq2b4l05jg6a.cloudfront.net/out/v1/68b69ddf47e146d98f9d1d67d31b6de2/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.hiroshima" tvg-name="広島けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hiroshima-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",広島けいりん
+#EXTINF:-1 tvg-id="keirin.hiroshima" tvg-name="広島" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hiroshima-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",広島
 https://d1yzi8hrgaz4rt.cloudfront.net/out/v1/5f2efd0cc08548d6a7c5a34767f101ce/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.hofu" tvg-name="防府けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hofu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",防府けいりん
+#EXTINF:-1 tvg-id="keirin.hofu" tvg-name="防府" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/hofu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",防府
 https://dqvde69slajbu.cloudfront.net/out/v1/b7d49cbee81d41b589f4b5494e71f282/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.komatsushima" tvg-name="小松島けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/komatsushima-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小松島けいりん
+#EXTINF:-1 tvg-id="keirin.komatsushima" tvg-name="小松島" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/komatsushima-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小松島
 https://dcf6ntbilxcid.cloudfront.net/out/v1/1f8e803200c04979a25e1554a5c1b798/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.matsuyama" tvg-name="松山けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/matsuyama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",松山けいりん
+#EXTINF:-1 tvg-id="keirin.matsuyama" tvg-name="松山" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/matsuyama-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",松山
 https://d16wnx3wk8cnnt.cloudfront.net/out/v1/ceb0db1dbb934ef5b2836533d61729d0/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kochi" tvg-name="こうちけいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kochi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",こうちけいりん
+#EXTINF:-1 tvg-id="keirin.kochi" tvg-name="高知" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kochi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",高知
 https://d20x1p8tfre91b.cloudfront.net/out/v1/517433a16e384f348ad03da3df981912/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kokura" tvg-name="小倉けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kokura-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小倉けいりん
+#EXTINF:-1 tvg-id="keirin.kokura" tvg-name="小倉" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kokura-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",小倉
 https://d30ufn4a9sgbxl.cloudfront.net/out/v1/f7691a65aa464c4782a50dfb05ae1767/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kurume" tvg-name="久留米けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kurume-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",久留米けいりん
+#EXTINF:-1 tvg-id="keirin.kurume" tvg-name="久留米" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kurume-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",久留米
 https://d3bgx2raetd21p.cloudfront.net/out/v1/44fcf9079c5c47af803262853c6035e4/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.takeo" tvg-name="武雄けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takeo-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",武雄けいりん
+#EXTINF:-1 tvg-id="keirin.takeo" tvg-name="武雄" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takeo-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",武雄
 https://d30l40wf0q5flx.cloudfront.net/out/v1/cc007464a1254ff9ac7e0644fdc230b5/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.sasebo" tvg-name="佐世保けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/sasebo-keirin-logo.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",佐世保けいりん
+#EXTINF:-1 tvg-id="keirin.sasebo" tvg-name="佐世保" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/sasebo-keirin-logo.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",佐世保
 https://d3ned0jklmmsf9.cloudfront.net/out/v1/f3d0b40d4fbb4d7d9469888af4944884/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.beppu" tvg-name="別府けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/beppu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",別府けいりん
+#EXTINF:-1 tvg-id="keirin.beppu" tvg-name="別府" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/beppu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",別府
 https://d2cnginkpbghia.cloudfront.net/out/v1/6955332159294a8a93b45370d4b356bf/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.kumamoto" tvg-name="熊本けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kumamoto-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",熊本けいりん
+#EXTINF:-1 tvg-id="keirin.kumamoto" tvg-name="熊本" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kumamoto-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",熊本
 https://d2m69fn251lhrf.cloudfront.net/out/v1/1fb24676fcbf458b964083925878052a/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.pist6" tvg-name="千葉PIST6（休止中）" tvg-logo="https://pist6.co.jp/assets/images/common/ogp.jpg" group-title="競輪(TIPSTAR)",千葉PIST6（休止中）
+#EXTINF:-1 tvg-id="keirin.pist6" tvg-name="千葉PIST6" tvg-logo="https://pist6.co.jp/assets/images/common/ogp.jpg" group-title="競輪(TIPSTAR)",千葉PIST6
 https://duyycwqvxot9t.cloudfront.net/out/v1/769ad1fdda0d4e238f66e0b0f25edabb/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.takamatsu" tvg-name="高松けいりん（休止中）" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takamatsu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",高松けいりん（休止中）
+#EXTINF:-1 tvg-id="keirin.takamatsu" tvg-name="高松" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takamatsu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",高松
 https://d20jzsap8ax0i2.cloudfront.net/out/v1/2dabf5a556dd4bfbb75c28537be02c2f/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.mukomachi" tvg-name="向日町けいりん（休止中）" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kyoto-mukomachi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",向日町けいりん（休止中）
+#EXTINF:-1 tvg-id="keirin.mukomachi" tvg-name="向日町" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kyoto-mukomachi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",向日町
 https://cfl.st.keirin.jp/54/dash/54.mpd
 
 ## 地方競馬
@@ -177,91 +177,90 @@ https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kouch
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/saga5.m3u8
 
 ## オートレース
-#EXTINF:-1 tvg-id="auto.kawaguchi" tvg-name="川口オート" tvg-logo="https://www.kawaguchiauto.jp/wp-content/themes/kawaguchi-ar_temp/images/common/logo@2x.png" group-title="オートレース",川口オート
+#EXTINF:-1 tvg-id="auto.kawaguchi" tvg-name="川口" tvg-logo="https://www.kawaguchiauto.jp/wp-content/themes/kawaguchi-ar_temp/images/common/logo@2x.png" group-title="オートレース",川口
 https://autorace-live.akamaized.net/hls/live/2036917/id2/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.isesaki" tvg-name="伊勢崎オート" tvg-logo="https://isesaki-auto.jp/wp-content/themes/isesakiauto2021/img/header_logo.png" group-title="オートレース",伊勢崎オート
+#EXTINF:-1 tvg-id="auto.isesaki" tvg-name="伊勢崎" tvg-logo="https://isesaki-auto.jp/wp-content/themes/isesakiauto2021/img/header_logo.png" group-title="オートレース",伊勢崎
 https://autorace-live.akamaized.net/hls/live/2036917-b/id3/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松オート" tvg-logo="https://www.hamamatsuauto.jp/assets/images/common/hamamatsu_auto_logo.png" group-title="オートレース",浜松オート
+#EXTINF:-1 tvg-id="auto.hamamatsu" tvg-name="浜松" tvg-logo="https://www.hamamatsuauto.jp/assets/images/common/hamamatsu_auto_logo.png" group-title="オートレース",浜松
 https://autorace-live.akamaized.net/hls/live/2036917/id4/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚オート" tvg-logo="https://www.iizuka-auto.jp/wp-content/themes/iizukaautorace/shared/img/logo.png" group-title="オートレース",飯塚オート
+#EXTINF:-1 tvg-id="auto.iizuka" tvg-name="飯塚" tvg-logo="https://www.iizuka-auto.jp/wp-content/themes/iizukaautorace/shared/img/logo.png" group-title="オートレース",飯塚
 https://autorace-live.akamaized.net/hls/live/2036917-b/id5/streaming/media.m3u8
 
-#EXTINF:-1 tvg-id="auto.sanyo" tvg-name="山陽オート" tvg-logo="https://autorace.jp/news/37th/img/logo-sanyo.png" group-title="オートレース",山陽オート
+#EXTINF:-1 tvg-id="auto.sanyo" tvg-name="山陽" tvg-logo="https://autorace.jp/news/37th/img/logo-sanyo.png" group-title="オートレース",山陽
 https://autorace-live.akamaized.net/hls/live/2036917-b/id6/streaming/media.m3u8
 
 ## ボートレース
 #EXTINF:-1 tvg-id="boat.tamagawa" tvg-name="BOATRACE多摩川" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/05_tamagawa.png" group-title="ボートレース",BOATRACE多摩川
-https://manifest.streaks.jp/v4/cp-boatrace-prod/030de8db1e09409d8ddd37b19fa62974/5a29481e6bbf4092a22c7971e053879f/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTgyODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.hpSSfrty1ses_DVohwcQz8TUopBGpCbJedjRwMtQS6k
+https://manifest.streaks.jp/v4/cp-boatrace-prod/030de8db1e09409d8ddd37b19fa62974/5a29481e6bbf4092a22c7971e053879f/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTgyODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.3DBVb5mDpVJDiTDwqLGzzlBIShzrbH7MKmbYMlQYIxM
 
 #EXTINF:-1 tvg-id="boat.tsu" tvg-name="BOATRACE津" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/09_tsu.png" group-title="ボートレース",BOATRACE津
-https://manifest.streaks.jp/v4/cp-boatrace-prod/b9600400b0084f919c2e0bf4934b3d7f/3bf58c1700f14fdab92925ccb1510600/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTQ1MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.vv-6P767ujKARFrGjCKR-L3xFg8z41ml3eWkYZsPgew
+https://manifest.streaks.jp/v4/cp-boatrace-prod/b9600400b0084f919c2e0bf4934b3d7f/3bf58c1700f14fdab92925ccb1510600/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTQ1MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.B_QcgNc1cou1hz9yxQuoASgP-1HM5WwRBaciQbc5jlc
 
 #EXTINF:-1 tvg-id="boat.mikuni" tvg-name="BOATRACE三国" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/10_mikuni.png" group-title="ボートレース",BOATRACE三国
-https://manifest.streaks.jp/v4/cp-boatrace-prod/2c59f7ac11034cac8b8f0c1fdaa073cd/4a14cb073c3e49c88afd4b72942c6e30/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMDc0MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.XRTQROmn4x98tTYQS0YxfdnvgWdwPEwkN22aU0H_cJ8
+https://manifest.streaks.jp/v4/cp-boatrace-prod/2c59f7ac11034cac8b8f0c1fdaa073cd/4a14cb073c3e49c88afd4b72942c6e30/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMDc0MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.Jt52eYnZs-3bfa4QluIT1_t_a_S8vmuFxVOVdSNEdSM
 
 #EXTINF:-1 tvg-id="boat.biwako" tvg-name="BOATRACEびわこ" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/11_biwako.png" group-title="ボートレース",BOATRACEびわこ
-https://manifest.streaks.jp/v4/cp-boatrace-prod/9cdb0b4a158b4617abf149941c5c3890/d4a3c6d113ca4d469dcaa10042c508f0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTQ1MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.vv-6P767ujKARFrGjCKR-L3xFg8z41ml3eWkYZsPgew
+https://manifest.streaks.jp/v4/cp-boatrace-prod/9cdb0b4a158b4617abf149941c5c3890/d4a3c6d113ca4d469dcaa10042c508f0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTQ1MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.B_QcgNc1cou1hz9yxQuoASgP-1HM5WwRBaciQbc5jlc
 
 #EXTINF:-1 tvg-id="boat.suminoe" tvg-name="BOATRACE住之江" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/12_suminoe.png" group-title="ボートレース",BOATRACE住之江
-https://manifest.streaks.jp/v4/cp-boatrace-prod/d44c5de6e34547f0a96d3ded85374407/d93049ccb246443188842fd19533230a/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMjg5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.Qfze6jOfESLBfw5Gfuq8JbwmqaSuqJ11m3UMW8Kd720
+https://manifest.streaks.jp/v4/cp-boatrace-prod/d44c5de6e34547f0a96d3ded85374407/d93049ccb246443188842fd19533230a/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMjg5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.TYjomlzYhyIeAHCHPeIJfclTL44xLrzVFHFXa0SrYcw
 
 #EXTINF:-1 tvg-id="boat.amagasaki" tvg-name="BOATRACE尼崎" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/13_amagasaki.png" group-title="ボートレース",BOATRACE尼崎
-https://manifest.streaks.jp/v4/cp-boatrace-prod/385a9958135c4522b71263fbde2b4303/80173ef0270347eeb23698ff5e0901a4/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTQ5MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.HtLMHcwgU3BqZGKjTd7XcbPm8l7mjFJz-_sOYy_lgZg
+https://manifest.streaks.jp/v4/cp-boatrace-prod/385a9958135c4522b71263fbde2b4303/80173ef0270347eeb23698ff5e0901a4/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTQ5MjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.uQrXXN_eoeVAixT4aHczJEsBNkLdNvKQH-hzlpwk_Uc
 
 #EXTINF:-1 tvg-id="boat.naruto" tvg-name="BOATRACE鳴門" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/14_naruto.png" group-title="ボートレース",BOATRACE鳴門
-https://manifest.streaks.jp/v4/cp-boatrace-prod/6643e36ce38e4ff7b39ce94706e1437b/80a63434519244da86ee879ea4933c27/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMDc5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.147lN8y-mLMaJ4LNCmGG-INgHt-esZ8yeFLxSVPIbp0
+https://manifest.streaks.jp/v4/cp-boatrace-prod/6643e36ce38e4ff7b39ce94706e1437b/80a63434519244da86ee879ea4933c27/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMDc5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.BZAwC3R5s3b16sF4_a_qTXC22vPBoOCrcOROfj8LUKg
 
 #EXTINF:-1 tvg-id="boat.marugame" tvg-name="BOATRACE丸亀" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/15_marugame.png" group-title="ボートレース",BOATRACE丸亀
-https://manifest.streaks.jp/v4/cp-boatrace-prod/4904fe5b7a9b41ab8f35382f9c3fa8e8/2e2b4423c1f64607891c0c48f5c32f29/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMjg5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.Qfze6jOfESLBfw5Gfuq8JbwmqaSuqJ11m3UMW8Kd720
+https://manifest.streaks.jp/v4/cp-boatrace-prod/4904fe5b7a9b41ab8f35382f9c3fa8e8/2e2b4423c1f64607891c0c48f5c32f29/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMjg5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.TYjomlzYhyIeAHCHPeIJfclTL44xLrzVFHFXa0SrYcw
 
 #EXTINF:-1 tvg-id="boat.kojima" tvg-name="BOATRACE児島" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/16_kojima.png" group-title="ボートレース",BOATRACE児島
-https://manifest.streaks.jp/v4/cp-boatrace-prod/7dc283ba79834697869858479151c40d/30ca418cc613411f8217d2882e5ea092/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTIxMDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.UgVX5TjKljJiN_XEaukV4GYFxqnZL30i3zmpxXIwoWs
+https://manifest.streaks.jp/v4/cp-boatrace-prod/7dc283ba79834697869858479151c40d/30ca418cc613411f8217d2882e5ea092/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTIxMDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.6LptJPKgBqQveWZNheEX_t3DSP4dO0i5fnmSrhVyoFY
 
 #EXTINF:-1 tvg-id="boat.miyajima" tvg-name="BOATRACE宮島" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/17_miyajima.png" group-title="ボートレース",BOATRACE宮島
-https://manifest.streaks.jp/v4/cp-boatrace-prod/ebeef59107224f3b9e0153eb4cd46232/e957b0ff74f34586a110031014fd36d0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMTUyMjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.q1ReyPS3MZHO_TqnWF2NowgJYAMEHJw-B8OnBri-7G0
+https://manifest.streaks.jp/v4/cp-boatrace-prod/ebeef59107224f3b9e0153eb4cd46232/e957b0ff74f34586a110031014fd36d0/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMTUyMjAsImlvcyI6MTgsInBwdyI6IjQwayJ9.bhhGqvMAb6UzIQmPFvp61Xp7VERM82sAF1v0oWVp-lI
 
 #EXTINF:-1 tvg-id="boat.tokuyama" tvg-name="BOATRACE徳山" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/18_tokuyama.png" group-title="ボートレース",BOATRACE徳山
-https://manifest.streaks.jp/v4/cp-boatrace-prod/9b7b29a71fc14508966c1ef3252b2b29/0f2a97bf0bb3468096d5c1ba2e6e0233/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMDgzODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.CCe17WASwwIxcbKprKPhKWOeNtIg8k6mIoDLnhfB8ko
+https://manifest.streaks.jp/v4/cp-boatrace-prod/9b7b29a71fc14508966c1ef3252b2b29/0f2a97bf0bb3468096d5c1ba2e6e0233/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMDgzODAsImlvcyI6MTgsInBwdyI6IjQwayJ9.0QsOXLCdEdmGhDmr5M0iABiSDmmGKUDNu81fb7ZJuhg
 
 #EXTINF:-1 tvg-id="boat.wakamatsu" tvg-name="BOATRACE若松" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace/20_wakamatsu.png" group-title="ボートレース",BOATRACE若松
-https://manifest.streaks.jp/v4/cp-boatrace-prod/0372b441d1254a87a31c4262cbdb6a0a/801cb2e8a8e04b25a1792264a4a7f13c/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzNDQwMCwic3RhcnQiOjE3ODcwMzE5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.BHCFTePdLuyxt0X7bjS5p6UfNLVuKEFT5ZeoEtHIWCM
+https://manifest.streaks.jp/v4/cp-boatrace-prod/0372b441d1254a87a31c4262cbdb6a0a/801cb2e8a8e04b25a1792264a4a7f13c/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzIzODAwMCwic3RhcnQiOjE3ODcwMzE5MDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.zYxZw3xDHy3JLLRn9Fo1lJFOW76gdvRKHnkyc1B36OA
 
-## その他LIVE
+## YouTube LIVE
 #EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",♻️ 松山市クリーンセンター LIVE
 https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787050852/ei/BOeDasD6NPOcsfIP2OHQkAs/ip/13.83.166.244/id/C0gpM_qIIl0.7/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr39---sn-4o.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAkDSUtdjT93evlfrRDtn97RIUAuKo2I7PxUiSppKnBEr3XwwwbYgi7AU8wGRJsgPEB5AQ/spc/KBGBcidvAGcBBQHkjFTPj2LeKs0xpzVFW0KGaUPEtC3TCuWOFzyPFWNQyolPFJjvehqNRrwJ8l3UTg/vprv/1/ns/snU9JulmV03p_werBPs6huwX/reg/0/playlist_type/DVR/initcwndbps/6542500/met/1787029256,/mh/5D/mm/44/mn/sn-4o/ms/lva/mv/m/mvi/39/pl/15/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/u519Lwo4s5rvbA/mt/1787028980/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRAIgVCNeXDPLOQLsGWnySmpT7qot-z4m1bIzy-Q3BN40nrcCIHG2r5Aaj0g-8Fe98T63N53ESMeZbjc8p7gEyagFQO48/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAPyvVuKbzop8dwtl6c4qlsaKl7G_pWyWzuf5dLNI-0xuAiEA-bXd6hJ2xXE7biVkXbrbYmTsLT6HdjYx9qOM9QIsgZg%3D/playlist/index.m3u8
 
-## その他LIVE
 #EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE
 https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787050847/ei/_-aDaubzFImWzLUPke_LoQQ/ip/13.83.166.244/id/ydYDqZQpim8.45/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr47---sn-4o.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAmplkBQDRXR9fswF-u9pxjntzdG8z8T5HCR_paaGfwoKlUu29-iKhRqZjETIvkTV7kbCw/spc/KBGBcjS5g_ctNgo0lHgUuUFBwQCUId5MB-HQmaY7qefjIiiG15Robdp9bFo1_LDIu5DmcIXSvUIP4w/vprv/1/ns/_80vQZr69LSusZ2BvWMyaT4X/reg/0/playlist_type/DVR/initcwndbps/6542500/met/1787029252,/mh/XM/mm/44/mn/sn-4o/ms/lva/mv/m/mvi/47/pl/15/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/fmVjAYl8AnGXEw/mt/1787028980/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIhANLmq3aouophUyVJgano9VS0bXId206WTs5LmcqZqyOWAiB4evzrlz2krsER1yP5fe3clACBK_ZRAFia50DjjwPFow%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIgFjOh-3WS3tIIT2KddRm2SHsX-8HuauAiZgjWeFeGhGICIQChtu5ENeVy2I9nzhBpxOvGfwz3uMt0akreVtNuunOt8Q%3D%3D/playlist/index.m3u8
 
-## その他LIVE
 #EXTINF:-1 tvg-id="youtube.matsuyama.airport" tvg-name="松山空港 LIVE" group-title="その他LIVE",✈️ 松山空港 LIVE
 https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787050857/ei/CeeDavfOEZLRsfIPusCSwAo/ip/13.83.166.244/id/CFh9z-6IeEE.3/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr53---sn-4o.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/ss/1/ssa/1/siu/1/bui/AR3QkAngpFKfISLgOfYrfI_uS5VAtnA1gw7z77CfJnfLisTs0kaAmur38bbHzxlWwajz_JHl5w/spc/KBGBcnokN7rOO_PvDK9Fi9uKc1EhFudMan83HbU1dVFs06dYtQhCQWKBvhdlmRrL9zrOA_MiDtWTJw/vprv/1/ns/AOcMjtPDcwDXy3FiyDZIQkAX/reg/0/playlist_type/DVR/initcwndbps/6542500/met/1787029261,/mh/dQ/mm/44/mn/sn-4o/ms/lva/mv/m/mvi/53/pl/15/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/OnD3sI1XZwTlbQ/mt/1787028980/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,ss,ssa,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIgO316W_siyVgpi3lEgPxD8O9HXg2glk_ox7FaXWHdhV0CIQCcG7WlBTKMcosPCg2TCtrnErv3It8LgOaRzWRYFS2Zww%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhAOvbryfWQXHiWSrPylLhA6WSH-JpuFmmRMj4gLf83yPSAiB4ZCPzddCiHgBUDqEr2YhCMTE4_FlfFSJRCWdSPbgWSg%3D%3D/playlist/index.m3u8
 
 ## 中央競馬
-#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（高画質）
+#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gch.png" group-title="中央競馬",グリーンチャンネル（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain.m3u8
 
-#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（低画質）
+#EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gch.png" group-title="中央競馬",グリーンチャンネル（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" group-title="中央競馬",JRA EAST（高画質）
+#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/east_web3.png" group-title="中央競馬",JRA EAST（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/EAST_test.m3u8
 
-#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" group-title="中央競馬",JRA EAST（低画質）
+#EXTINF:-1 tvg-id="jra.east" tvg-name="JRA EAST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/east_web3.png" group-title="中央競馬",JRA EAST（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/EAST_test_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" group-title="中央競馬",JRA WEST（高画質）
+#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/west_web4.png" group-title="中央競馬",JRA WEST（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/WEST_master%20.m3u8
 
-#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" group-title="中央競馬",JRA WEST（低画質）
+#EXTINF:-1 tvg-id="jra.west" tvg-name="JRA WEST" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/west_web4.png" group-title="中央競馬",JRA WEST（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/WEST_master_LQ.m3u8
 
-#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" group-title="中央競馬",JRA HOKKAIDO（高画質）
-https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master%20%281%29.m3u8
+#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokkaido_local.png" group-title="中央競馬",JRA HOKKAIDO（高画質）
+https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master%20(1).m3u8
 
-#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" group-title="中央競馬",JRA HOKKAIDO（低画質）
+#EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokkaido_local.png" group-title="中央競馬",JRA HOKKAIDO（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master_LQ.m3u8
+

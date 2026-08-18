@@ -103,10 +103,10 @@
         <display-name>高知けいば</display-name>
     </channel>
     <channel id="keirin.takamatsu">
-        <display-name>高松けいりん</display-name>
+        <display-name>高松けいりん（休止中）</display-name>
     </channel>
     <channel id="keirin.mukomachi">
-        <display-name>向日町けいりん</display-name>
+        <display-name>向日町けいりん（休止中）</display-name>
     </channel>
     <channel id="keirin.kokura">
         <display-name>小倉けいりん</display-name>
@@ -127,7 +127,7 @@
         <display-name>熊本けいりん</display-name>
     </channel>
     <channel id="keirin.pist6">
-        <display-name>千葉けいりん</display-name>
+        <display-name>千葉PIST6（休止中）</display-name>
     </channel>
     <channel id="chihou.obihiro">
         <display-name>帯広けいば</display-name>

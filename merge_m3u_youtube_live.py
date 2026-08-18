@@ -2,10 +2,8 @@ from pathlib import Path
 from urllib.parse import quote
 
 BASE = Path(__file__).resolve().parent
-
 EPG_URL = "https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/epg.xml"
 
-# OTT Navigator 1.6.5.5 向けテスト
 OTT_TEST_UA = (
     "Mozilla/5.0 (Linux; Android 10; Android TV) "
     "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -20,13 +18,13 @@ INPUTS = [
     ("ボートレース", BASE / "boatrace_today.m3u"),
 ]
 
+# YouTube系はこの2系統だけ。
+# 各公営競技のYouTubeサブチャンネルは入れない。
 YOUTUBE_INPUTS = [
-    ("競輪 YouTube LIVE", BASE / "kana_live.m3u"),
+    ("かなチューブ", BASE / "kana_live.m3u"),
     ("その他LIVE", BASE / "youtube_test.m3u"),
     ("その他LIVE", BASE / "namibia_live.m3u"),
     ("その他LIVE", BASE / "matsuyama_airport_live.m3u"),
-    ("野球LIVE", BASE / "ehime_mp_home_live.m3u"),
-    ("ボートレース YouTube LIVE", BASE / "boatrace_youtube_backup.m3u"),
 ]
 
 JRA = [
@@ -43,39 +41,25 @@ JRA = [
 def read_entries(path):
     if not path.exists():
         return []
-
-    lines = path.read_text(
-        encoding="utf-8-sig",
-        errors="replace",
-    ).splitlines()
-
+    lines = path.read_text(encoding="utf-8-sig", errors="replace").splitlines()
     entries = []
     i = 0
-
     while i < len(lines):
         line = lines[i].strip()
-
         if line.startswith("#EXTINF:"):
             j = i + 1
-
             while j < len(lines):
                 nxt = lines[j].strip()
-
                 if not nxt:
                     j += 1
                     continue
-
                 if nxt.startswith("#EXTINF:"):
                     break
-
                 if not nxt.startswith("#"):
                     entries.append((line, nxt))
                     break
-
                 j += 1
-
         i += 1
-
     return entries
 
 def raw(filename):
@@ -90,23 +74,17 @@ def main():
 
     for label, path in INPUTS:
         entries = read_entries(path)
-
         if not entries:
             continue
-
         out.append(f"## {label}")
-
         for extinf, url in entries:
             out += [extinf, url, ""]
 
     for label, path in YOUTUBE_INPUTS:
         entries = read_entries(path)
-
         if not entries:
             continue
-
         out.append(f"## {label}")
-
         for extinf, url in entries:
             if label == "その他LIVE":
                 out += [
@@ -120,7 +98,6 @@ def main():
                 out += [extinf, url, ""]
 
     out.append("## 中央競馬")
-
     for tvg_id, tvg_name, display, filename in JRA:
         out += [
             f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="{tvg_name}" group-title="中央競馬",{display}',

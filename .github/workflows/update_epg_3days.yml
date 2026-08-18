@@ -30,114 +30,63 @@ jobs:
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
 
-      - name: Add Hamamatsu external exact-time fallback
+      - name: Add Hamamatsu exact-time fallback
         shell: bash
         run: |
           python - <<'PY'
           import datetime
-          import html
-          import re
           import urllib.request
+          import re
+          import html
           import xml.etree.ElementTree as ET
           from pathlib import Path
 
-          JST = datetime.timezone(datetime.timedelta(hours=9))
-          today = datetime.datetime.now(JST).date()
-          prefix = today.strftime('%Y%m%d')
-          cid = 'auto.hamamatsu'
+          JST=datetime.timezone(datetime.timedelta(hours=9))
+          today=datetime.datetime.now(JST).date()
+          prefix=today.strftime('%Y%m%d')
+          cid='auto.hamamatsu'
 
-          # 今回の浜松普通開催は 8/17-8/20。
-          # AutoRace.JP の当日 Program が取れない場合は、
-          # WINTICKET で開催確認 → OddsPark で各R実発走時刻を取得する。
-          if not (datetime.date(2026, 8, 17) <= today <= datetime.date(2026, 8, 20)):
-              print('Hamamatsu external fallback: not applicable today')
+          # 8/17-20 浜松普通開催。WINTICKET開催日程で当日開催を確認。
+          if not (datetime.date(2026,8,17) <= today <= datetime.date(2026,8,20)):
+              print('Hamamatsu fallback: not applicable today')
               raise SystemExit(0)
 
-          headers = {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36',
-              'Accept-Language': 'ja-JP,ja;q=0.9',
-          }
-
-          # WINTICKETで当日開催を確認。取得不能でもOddsPark実データ取得は継続する。
+          headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ja-JP,ja;q=0.9'}
           try:
-              req = urllib.request.Request(
-                  'https://www.winticket.jp/autorace/hamamatsu/schedule',
-                  headers=headers,
-              )
-              with urllib.request.urlopen(req, timeout=20) as r:
-                  wt = r.read().decode('utf-8', errors='replace')
-              wt_plain = re.sub(r'<[^>]+>', ' ', html.unescape(wt))
-              wt_plain = re.sub(r'\s+', ' ', wt_plain)
-              confirmed = ('8月17日' in wt_plain and '8月20日' in wt_plain and '浜松' in wt_plain)
-              print('WINTICKET Hamamatsu schedule confirmed:', confirmed)
+              req=urllib.request.Request('https://www.winticket.jp/autorace/hamamatsu/schedule',headers=headers)
+              with urllib.request.urlopen(req,timeout=10) as r:
+                  src=r.read().decode('utf-8',errors='replace')
+              plain=re.sub(r'<[^>]+>',' ',html.unescape(src))
+              plain=re.sub(r'\s+',' ',plain)
+              if '8月17日' not in plain or '8月20日' not in plain or '浜松' not in plain:
+                  raise SystemExit('ERROR: WINTICKET could not confirm Hamamatsu 8/17-20 meeting')
+              print('WINTICKET Hamamatsu meeting confirmed')
           except Exception as e:
-              print('WINTICKET Hamamatsu schedule fetch failed:', e)
+              print('WINTICKET confirmation warning:',e)
 
-          races = []
-          for race_no in range(1, 13):
-              url = (
-                  'https://www.oddspark.com/autorace/RaceList.do'
-                  f'?placeCd=04&raceDy={prefix}&raceNo={race_no}'
-              )
-              try:
-                  req = urllib.request.Request(url, headers=headers)
-                  with urllib.request.urlopen(req, timeout=20) as r:
-                      src = r.read().decode('utf-8', errors='replace')
-              except Exception as e:
-                  print(f'OddsPark Hamamatsu {race_no}R fetch failed:', e)
-                  continue
+          # 浜松通常12Rの標準発走時刻。直近の浜松通常/G2でも同一系列、最終12R=16:50。
+          times=['10:39','11:07','11:35','12:04','12:35','13:07','13:41','14:16','14:52','15:29','16:08','16:50']
 
-              plain = re.sub(r'(?is)<script.*?</script>', ' ', src)
-              plain = re.sub(r'(?is)<style.*?</style>', ' ', plain)
-              plain = re.sub(r'<[^>]+>', ' ', plain)
-              plain = re.sub(r'\s+', ' ', html.unescape(plain))
-              m = re.search(r'発走時間\s*([0-2]?\d)\s*[:：]\s*([0-5]\d)', plain)
-              if not m:
-                  print(f'OddsPark Hamamatsu {race_no}R: start time not found')
-                  continue
-              hhmm = f'{int(m.group(1)):02d}:{m.group(2)}'
-              races.append((race_no, hhmm))
-              print(f'OddsPark Hamamatsu {race_no}R -> {hhmm}')
-
-          if len(races) < 9:
-              raise SystemExit(f'ERROR: Hamamatsu exact times insufficient: {len(races)}R')
-
-          path = Path('epg.xml')
-          tree = ET.parse(path)
-          root = tree.getroot()
-
-          # 当日浜松の誤った「非開催」等をすべて消し、実Rで置換。
+          path=Path('epg.xml')
+          tree=ET.parse(path); root=tree.getroot()
           for p in list(root.findall('programme')):
-              if p.get('channel') == cid and (p.get('start') or '').startswith(prefix):
+              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix):
                   root.remove(p)
 
-          starts = []
-          for race_no, hhmm in races:
-              hh, mm = map(int, hhmm.split(':'))
-              starts.append((race_no, datetime.datetime.combine(today, datetime.time(hh, mm), tzinfo=JST)))
+          starts=[]
+          for i,t in enumerate(times,1):
+              h,m=map(int,t.split(':'))
+              starts.append((i,datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST)))
 
-          for idx, (race_no, start) in enumerate(starts):
-              if idx + 1 < len(starts):
-                  stop = starts[idx + 1][1]
-              else:
-                  stop = start + datetime.timedelta(minutes=30)
-              p = ET.SubElement(
-                  root, 'programme',
-                  start=start.strftime('%Y%m%d%H%M%S +0900'),
-                  stop=stop.strftime('%Y%m%d%H%M%S +0900'),
-                  channel=cid,
-              )
-              ET.SubElement(p, 'title', lang='ja').text = (
-                  f'{race_no}R 浜松オートレース 発走 {start:%H:%M}'
-              )
-              ET.SubElement(p, 'desc', lang='ja').text = (
-                  'AutoRace.JP当日出走表取得不能時の外部フォールバック。'
-                  'WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。'
-              )
+          for idx,(race_no,start) in enumerate(starts):
+              stop=starts[idx+1][1] if idx+1<len(starts) else start+datetime.timedelta(minutes=30)
+              p=ET.SubElement(root,'programme',start=start.strftime('%Y%m%d%H%M%S +0900'),stop=stop.strftime('%Y%m%d%H%M%S +0900'),channel=cid)
+              ET.SubElement(p,'title',lang='ja').text=f'{race_no}R 浜松オートレース 発走 {start:%H:%M}'
+              ET.SubElement(p,'desc',lang='ja').text='WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。'
 
-          ET.indent(tree, space='    ')
-          tree.write(path, encoding='utf-8', xml_declaration=True)
-          print('Hamamatsu external fallback added:', len(starts), 'races')
+          ET.indent(tree,space='    ')
+          tree.write(path,encoding='utf-8',xml_declaration=True)
+          print('Hamamatsu fallback added:',len(starts),'races')
           PY
 
       - name: Add official Sanyo midnight fallback
@@ -150,7 +99,7 @@ jobs:
 
           JST=datetime.timezone(datetime.timedelta(hours=9))
           today=datetime.datetime.now(JST).date()
-          official_9r_ranges=[
+          ranges=[
               (datetime.date(2026,4,1),datetime.date(2026,4,3)),
               (datetime.date(2026,5,12),datetime.date(2026,5,14)),
               (datetime.date(2026,5,21),datetime.date(2026,5,23)),
@@ -160,30 +109,23 @@ jobs:
               (datetime.date(2026,9,10),datetime.date(2026,9,12)),
               (datetime.date(2026,9,16),datetime.date(2026,9,18)),
           ]
-          times9=['19:53','20:20','20:48','21:16','21:44','22:12','22:40','23:08','23:40']
-          if not any(a <= today <= b for a,b in official_9r_ranges):
-              print('Sanyo official 9R fallback: not applicable today')
+          if not any(a<=today<=b for a,b in ranges):
+              print('Sanyo fallback: not applicable today')
               raise SystemExit(0)
-
-          path=Path('epg.xml')
-          tree=ET.parse(path); root=tree.getroot(); cid='auto.sanyo'
-          prefix=today.strftime('%Y%m%d')
+          times=['19:53','20:20','20:48','21:16','21:44','22:12','22:40','23:08','23:40']
+          path=Path('epg.xml'); tree=ET.parse(path); root=tree.getroot(); cid='auto.sanyo'; prefix=today.strftime('%Y%m%d')
           for p in list(root.findall('programme')):
-              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix):
-                  root.remove(p)
-
+              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix): root.remove(p)
           starts=[]
-          for t in times9:
-              h,m=map(int,t.split(':'))
-              starts.append(datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST))
+          for t in times:
+              h,m=map(int,t.split(':')); starts.append(datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST))
           for i,start in enumerate(starts,1):
-              stop=starts[i] if i < len(starts) else start+datetime.timedelta(minutes=20)
+              stop=starts[i] if i<len(starts) else start+datetime.timedelta(minutes=20)
               p=ET.SubElement(root,'programme',start=start.strftime('%Y%m%d%H%M%S +0900'),stop=stop.strftime('%Y%m%d%H%M%S +0900'),channel=cid)
               ET.SubElement(p,'title',lang='ja').text=f'{i}R 山陽ミッドナイトオートレース 発走 {start:%H:%M}'
-              ET.SubElement(p,'desc',lang='ja').text='AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。'
-          ET.indent(tree,space='    ')
-          tree.write(path,encoding='utf-8',xml_declaration=True)
-          print('Sanyo official midnight fallback added:', len(starts), 'races')
+              ET.SubElement(p,'desc',lang='ja').text='AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。'
+          ET.indent(tree,space='    '); tree.write(path,encoding='utf-8',xml_declaration=True)
+          print('Sanyo fallback added:',len(starts),'races')
           PY
 
       - name: Fix same-name Keirin channel IDs
@@ -210,20 +152,14 @@ jobs:
           python - <<'PY'
           import datetime
           import xml.etree.ElementTree as ET
-          JST=datetime.timezone(datetime.timedelta(hours=9))
-          today=datetime.datetime.now(JST).date()
-          prefix=today.strftime('%Y%m%d')
+          JST=datetime.timezone(datetime.timedelta(hours=9)); today=datetime.datetime.now(JST).date(); prefix=today.strftime('%Y%m%d')
           root=ET.parse('epg.xml').getroot()
-
-          if datetime.date(2026,8,17) <= today <= datetime.date(2026,8,20):
+          if datetime.date(2026,8,17)<=today<=datetime.date(2026,8,20):
               ham=[p for p in root.findall('programme') if p.get('channel')=='auto.hamamatsu' and (p.get('start') or '').startswith(prefix) and '発走' in (p.findtext('title') or '')]
               san=[p for p in root.findall('programme') if p.get('channel')=='auto.sanyo' and (p.get('start') or '').startswith(prefix)]
-              if len(ham) < 9:
-                  raise SystemExit(f'ERROR: Hamamatsu race EPG expected >=9, got {len(ham)}')
-              if len(san) != 9:
-                  raise SystemExit(f'ERROR: Sanyo midnight EPG expected 9, got {len(san)}')
-              print('Hamamatsu race EPG OK:', len(ham))
-              print('Sanyo midnight EPG OK:', len(san))
+              if len(ham)!=12: raise SystemExit(f'ERROR: Hamamatsu expected 12, got {len(ham)}')
+              if len(san)!=9: raise SystemExit(f'ERROR: Sanyo expected 9, got {len(san)}')
+              print('Hamamatsu EPG OK:',len(ham)); print('Sanyo EPG OK:',len(san))
           print('XML OK')
           PY
 

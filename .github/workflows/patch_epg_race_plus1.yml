@@ -1,3 +1,4 @@
+# trigger: workflow already exists on default branch
 name: One-time EPG Race +1min Switch Patch
 
 on:
@@ -51,12 +52,6 @@ jobs:
               chunk = chunk.replace(old, new, 1)
               return src[:start] + chunk + src[end:]
 
-          # --------------------------------------------------
-          # 地方競馬
-          # 1R: 従来どおり発走前から表示
-          # 2R以降: 前R発走+1分から次R表示
-          # 各R: 自身の発走+1分で終了
-          # --------------------------------------------------
           old_keiba = '''        # 各Rを「発走10分前～次R発走10分前」で連続表示
           for idx, (race, start_time) in enumerate(race_times):
               block_start = max(
@@ -87,17 +82,8 @@ jobs:
                   block_stop = block_start + datetime.timedelta(minutes=1)
 '''
           text = patch_function(text, 'build_keiba_race_epg', old_keiba, new_keiba, 'KEIBA timing')
-          text = patch_function(
-              text,
-              'build_keiba_race_epg',
-              '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=30)\n',
-              '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
-              'KEIBA finish',
-          )
+          text = patch_function(text, 'build_keiba_race_epg', '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=30)\n', '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=1)\n', 'KEIBA finish')
 
-          # --------------------------------------------------
-          # 競輪
-          # --------------------------------------------------
           old_keirin = '''        for idx, (race, start_time) in enumerate(race_times):
               block_start = max(
                   pre_start,
@@ -125,29 +111,11 @@ jobs:
                   block_stop = block_start + datetime.timedelta(minutes=1)
 '''
           text = patch_function(text, 'build_keirin_race_epg', old_keirin, new_keirin, 'KEIRIN timing')
-          text = patch_function(
-              text,
-              'build_keirin_race_epg',
-              '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n',
-              '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
-              'KEIRIN finish',
-          )
+          text = patch_function(text, 'build_keirin_race_epg', '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n', '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n', 'KEIRIN finish')
 
-          # --------------------------------------------------
-          # オートレース
-          # --------------------------------------------------
           text = patch_function(text, 'build_autorace_race_epg', old_keirin, new_keirin, 'AUTORACE timing')
-          text = patch_function(
-              text,
-              'build_autorace_race_epg',
-              '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n',
-              '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
-              'AUTORACE finish',
-          )
+          text = patch_function(text, 'build_autorace_race_epg', '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n', '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n', 'AUTORACE finish')
 
-          # --------------------------------------------------
-          # ボートレース
-          # --------------------------------------------------
           old_boat = '''        # Continuous race blocks:
           # from 10 min before each deadline until 10 min before next race.
           for idx, (race, race_dt) in enumerate(race_dts):
@@ -179,18 +147,8 @@ jobs:
                   block_stop = block_start + datetime.timedelta(minutes=1)
 '''
           text = patch_function(text, 'build_boat_race_epg', old_boat, new_boat, 'BOAT timing')
-          text = patch_function(
-              text,
-              'build_boat_race_epg',
-              '        finish = race_dts[-1][1] + datetime.timedelta(minutes=30)\n',
-              '        finish = race_dts[-1][1] + datetime.timedelta(minutes=1)\n',
-              'BOAT finish',
-          )
+          text = patch_function(text, 'build_boat_race_epg', '        finish = race_dts[-1][1] + datetime.timedelta(minutes=30)\n', '        finish = race_dts[-1][1] + datetime.timedelta(minutes=1)\n', 'BOAT finish')
 
-          # --------------------------------------------------
-          # JRA EAST / WEST / HOKKAIDO
-          # GCH本放送(jra.gch)はこの関数では扱わないため変更なし。
-          # --------------------------------------------------
           old_jra = '''        for i, (dt, venue, race) in enumerate(flat):
               block_start = max(
                   pre,
@@ -227,15 +185,8 @@ jobs:
               long_break = False
 '''
           text = patch_function(text, 'build_jra_stream_epg', old_jra, new_jra, 'JRA timing')
-          text = patch_function(
-              text,
-              'build_jra_stream_epg',
-              '        finish = flat[-1][0] + datetime.timedelta(minutes=30)\n',
-              '        finish = flat[-1][0] + datetime.timedelta(minutes=1)\n',
-              'JRA finish',
-          )
+          text = patch_function(text, 'build_jra_stream_epg', '        finish = flat[-1][0] + datetime.timedelta(minutes=30)\n', '        finish = flat[-1][0] + datetime.timedelta(minutes=1)\n', 'JRA finish')
 
-          # Marker comment for future maintenance.
           marker = '# EPG race progression rule: switch to the next race at scheduled post time + 1 minute.\n'
           if marker not in text:
               insert_at = text.find('EPG_DAYS = 3')

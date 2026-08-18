@@ -7,6 +7,9 @@ on:
     paths:
       - 'epg.xml'
       - 'public_sports.m3u'
+      - 'keiba_master.m3u'
+      - 'normalize_public_sports_labels.py'
+      - '.github/workflows/normalize_public_sports.yml'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +33,9 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+
+      - name: Rebuild public M3U
+        run: python merge_m3u.py
 
       - name: Normalize EPG and M3U labels/status
         run: python normalize_public_sports_labels.py

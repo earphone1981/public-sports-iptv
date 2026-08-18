@@ -5,6 +5,14 @@ BASE = Path(__file__).resolve().parent
 
 EPG_URL = "https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/epg.xml"
 
+# OTT Navigator 1.6.5.5 向けテスト
+OTT_TEST_UA = (
+    "Mozilla/5.0 (Linux; Android 10; Android TV) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/131.0.0.0 Safari/537.36"
+)
+OTT_TEST_REFERRER = "https://www.youtube.com/"
+
 INPUTS = [
     ("競輪", BASE / "keirin_master.m3u"),
     ("地方競馬", BASE / "keiba_master.m3u"),
@@ -100,7 +108,16 @@ def main():
         out.append(f"## {label}")
 
         for extinf, url in entries:
-            out += [extinf, url, ""]
+            if label == "その他LIVE":
+                out += [
+                    extinf,
+                    f"#EXTVLCOPT:http-user-agent={OTT_TEST_UA}",
+                    f"#EXTVLCOPT:http-referrer={OTT_TEST_REFERRER}",
+                    url,
+                    "",
+                ]
+            else:
+                out += [extinf, url, ""]
 
     out.append("## 中央競馬")
 

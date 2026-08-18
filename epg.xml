@@ -513,10 +513,6 @@
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊勢崎（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260818000000 +0900" stop="20260818080000 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 浜松（オートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
-    </programme>
     <programme start="20260818000000 +0900" stop="20260818080000 +0900" channel="auto.iizuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 飯塚（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
@@ -2440,10 +2436,6 @@ F2 ＣＴＣは３分前杯
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 伊勢崎（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260818080000 +0900" stop="20260818235900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 浜松（オートレース）</title>
-        <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
-    </programme>
     <programme start="20260818080000 +0900" stop="20260818235900 +0900" channel="auto.iizuka">
         <title lang="ja">🌼🏍️ 本日は開催していません 💤🍀 飯塚（オートレース）</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年08月18日の本場開催はありません。</desc>
@@ -3363,7 +3355,7 @@ F2 ＣＴＣは３分前杯
 ⏰ 発走予定: 11:40
 📅 2026年08月18日</desc>
     </programme>
-    <programme start="20260818120100 +0900" stop="20260818123200 +0900" channel="boat.kojima">
+    <programme start="20260818120100 +0900" stop="20260818123700 +0900" channel="boat.kojima">
         <title lang="ja">🚤 16 児島 4R 12:11発走 ☀️デイ ヴィーナスシリーズ第１０戦 第１６回クラリスカップ</title>
         <desc lang="ja">🚤 ボートレース 16 児島
 📢 ヴィーナスシリーズ第１０戦 第１６回クラリスカップ
@@ -3371,20 +3363,20 @@ F2 ＣＴＣは３分前杯
 ⏰ 発走予定: 12:11
 📅 2026年08月18日</desc>
     </programme>
-    <programme start="20260818123200 +0900" stop="20260818130500 +0900" channel="boat.kojima">
-        <title lang="ja">🚤 16 児島 5R 12:42発走 ☀️デイ ヴィーナスシリーズ第１０戦 第１６回クラリスカップ</title>
+    <programme start="20260818123700 +0900" stop="20260818130800 +0900" channel="boat.kojima">
+        <title lang="ja">🚤 16 児島 5R 12:47発走 ☀️デイ ヴィーナスシリーズ第１０戦 第１６回クラリスカップ</title>
         <desc lang="ja">🚤 ボートレース 16 児島
 📢 ヴィーナスシリーズ第１０戦 第１６回クラリスカップ
 ☀️ 開催区分: デイ
-⏰ 発走予定: 12:42
+⏰ 発走予定: 12:47
 📅 2026年08月18日</desc>
     </programme>
-    <programme start="20260818130500 +0900" stop="20260818134000 +0900" channel="boat.kojima">
-        <title lang="ja">🚤 16 児島 6R 13:15発走 ☀️デイ ヴィーナスシリーズ第１０戦 第１６回クラリスカップ</title>
+    <programme start="20260818130800 +0900" stop="20260818134000 +0900" channel="boat.kojima">
+        <title lang="ja">🚤 16 児島 6R 13:18発走 ☀️デイ ヴィーナスシリーズ第１０戦 第１６回クラリスカップ</title>
         <desc lang="ja">🚤 ボートレース 16 児島
 📢 ヴィーナスシリーズ第１０戦 第１６回クラリスカップ
 ☀️ 開催区分: デイ
-⏰ 発走予定: 13:15
+⏰ 発走予定: 13:18
 📅 2026年08月18日</desc>
     </programme>
     <programme start="20260818134000 +0900" stop="20260818141900 +0900" channel="boat.kojima">
@@ -3470,7 +3462,7 @@ F2 ＣＴＣは３分前杯
 ⏰ 発走予定: 11:49
 📅 2026年08月18日</desc>
     </programme>
-    <programme start="20260818120700 +0900" stop="20260818124600 +0900" channel="boat.miyajima">
+    <programme start="20260818120700 +0900" stop="20260818124700 +0900" channel="boat.miyajima">
         <title lang="ja">🚤 17 宮島 4R 12:17発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
@@ -3478,12 +3470,12 @@ F2 ＣＴＣは３分前杯
 ⏰ 発走予定: 12:17
 📅 2026年08月18日</desc>
     </programme>
-    <programme start="20260818124600 +0900" stop="20260818131300 +0900" channel="boat.miyajima">
-        <title lang="ja">🚤 17 宮島 5R 12:56発走 ☀️デイ 第５６回スポーツニッポン杯</title>
+    <programme start="20260818124700 +0900" stop="20260818131300 +0900" channel="boat.miyajima">
+        <title lang="ja">🚤 17 宮島 5R 12:57発走 ☀️デイ 第５６回スポーツニッポン杯</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
 📢 第５６回スポーツニッポン杯
 ☀️ 開催区分: デイ
-⏰ 発走予定: 12:56
+⏰ 発走予定: 12:57
 📅 2026年08月18日</desc>
     </programme>
     <programme start="20260818131300 +0900" stop="20260818134200 +0900" channel="boat.miyajima">
@@ -6846,6 +6838,54 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     </programme>
     <programme start="20260819020000 +0900" stop="20260819023000 +0900" channel="jra.gch">
         <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
+    </programme>
+    <programme start="20260818105600 +0900" stop="20260818112100 +0900" channel="auto.hamamatsu">
+        <title lang="ja">1R 浜松オートレース 発走 10:56</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818112100 +0900" stop="20260818114700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">2R 浜松オートレース 発走 11:21</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818114700 +0900" stop="20260818121500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">3R 浜松オートレース 発走 11:47</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818121500 +0900" stop="20260818124600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">4R 浜松オートレース 発走 12:15</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818124600 +0900" stop="20260818131600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">5R 浜松オートレース 発走 12:46</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818131600 +0900" stop="20260818134600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">6R 浜松オートレース 発走 13:16</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818134600 +0900" stop="20260818141600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">7R 浜松オートレース 発走 13:46</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818141600 +0900" stop="20260818144700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">8R 浜松オートレース 発走 14:16</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818144700 +0900" stop="20260818151800 +0900" channel="auto.hamamatsu">
+        <title lang="ja">9R 浜松オートレース 発走 14:47</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818151800 +0900" stop="20260818155600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">10R 浜松オートレース 発走 15:18</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818155600 +0900" stop="20260818163500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">11R 浜松オートレース 発走 15:56</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    </programme>
+    <programme start="20260818163500 +0900" stop="20260818170500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">12R 浜松オートレース 発走 16:35</title>
+        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
     </programme>
     <programme start="20260818195300 +0900" stop="20260818202000 +0900" channel="auto.sanyo">
         <title lang="ja">1R 山陽ミッドナイトオートレース 発走 19:53</title>

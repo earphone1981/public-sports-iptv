@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - public_sports.m3u
+      - .github/workflows/youtube_namibia_live.yml
   schedule:
     - cron: "17 * * * *"
 

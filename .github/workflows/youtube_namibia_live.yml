@@ -2,14 +2,13 @@ name: Update YouTube LIVE Channels
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - public_sports.m3u
-      - .github/workflows/youtube_namibia_live.yml
   schedule:
-    - cron: "17 * * * *"
+    # JST 08:30 / 12:00 / 13:30 / 15:00 / 20:40
+    - cron: "30 23 * * *"
+    - cron: "0 3 * * *"
+    - cron: "30 4 * * *"
+    - cron: "0 6 * * *"
+    - cron: "40 11 * * *"
 
 permissions:
   contents: write

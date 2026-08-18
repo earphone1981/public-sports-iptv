@@ -38,12 +38,22 @@ def standardized_name(tvg_id: str, current: str) -> str:
     if tvg_id in SPECIAL_KEIRIN_FULL:
         return SPECIAL_KEIRIN_FULL[tvg_id]
 
+    # 地方競馬は「帯広けいば（ばんえい競馬）」のように
+    # 前半をひらがな表記、括弧内の正式名称をそのまま残す。
+    # 括弧の後ろに余計な「けいば」は付けない。
+    if tvg_id.startswith(("chihou.", "keiba.")):
+        s = str(current or "").strip()
+        s = re.sub(r"^\d{1,2}\s+", "", s)
+        s = re.sub(r"けいば（([^）]+)）けいば$", r"けいば（\1）", s)
+        if re.search(r"けいば（[^）]+）$", s):
+            return s
+        base = clean_base(s)
+        return f"{base}けいば"
+
     base = clean_base(current)
     if tvg_id.startswith("keirin."):
         base = SPECIAL_KEIRIN.get(tvg_id, base)
         return f"{base}けいりん"
-    if tvg_id.startswith("chihou.") or tvg_id.startswith("keiba."):
-        return f"{base}けいば"
     if tvg_id.startswith("auto."):
         return f"{base}オート"
     if tvg_id.startswith("boat."):
@@ -123,21 +133,16 @@ def race_title(title: str) -> bool:
 
 
 def race_detail(title: str, cid: str) -> str:
-    """実況表示の後ろに置く、競技共通の見やすいレース詳細を作る。"""
     t = re.sub(rf"^.*?{re.escape(LIVE_PREFIX)}｜?", "", str(title or "")).strip()
     m = re.search(r"発走\s*(.+)$", t)
     detail = m.group(1).strip() if m else t
-
-    # 前側タイトル末尾に付いている級・種別を詳細側へまとめる。
     bracket = re.findall(r"【([^】]+)】", detail)
     plain = re.sub(r"\s*【[^】]+】\s*", " ", detail)
     plain = re.sub(r"\s+", " ", plain).strip()
     meta = " ".join(x for x in bracket if x and x not in plain).strip()
     combined = " ".join(x for x in (meta, plain) if x).strip()
-
     if not combined:
         combined = "レース"
-
     if re.search(r"[LＬ]級|ガールズ", combined):
         return f"💛【{combined}】"
     if re.search(r"優勝|決勝|ファイナル", combined):
@@ -162,7 +167,6 @@ def race_detail(title: str, cid: str) -> str:
 
 
 def base_race_title(title: str) -> str:
-    """前半は 場名 R 発走 レース名。後置きの【級/種別】は詳細側へ移す。"""
     t = re.sub(rf"^.*?{re.escape(LIVE_PREFIX)}｜?", "", str(title or "")).strip()
     t = re.sub(r"\s*【[^】]+】\s*$", "", t).strip()
     return t
@@ -173,7 +177,6 @@ def normalize_epg(path: Path) -> None:
         return
     tree = ET.parse(path)
     root = tree.getroot()
-
     channel_names = {}
     for ch in root.findall("channel"):
         cid = ch.get("id", "")
@@ -185,12 +188,7 @@ def normalize_epg(path: Path) -> None:
                 dn = ET.SubElement(ch, "display-name")
             dn.text = new_name
             channel_names[cid] = new_name
-
-    normalized_live = 0
-    normalized_end = 0
-    normalized_off = 0
-    shifted_25h = 0
-
+    normalized_live = normalized_end = normalized_off = shifted_25h = 0
     for p in root.findall("programme"):
         cid = p.get("channel", "")
         if not category_id(cid):
@@ -199,34 +197,25 @@ def normalize_epg(path: Path) -> None:
         if title_el is None:
             title_el = ET.SubElement(p, "title", {"lang": "ja"})
         title = title_el.text or ""
-
         if "本日は開催していません" in title:
             title_el.text = NON_EVENT_TITLE
             stop = parse_xmltv(p.get("stop"))
             if stop and stop.hour == 23 and stop.minute >= 50:
                 next_1 = (stop + datetime.timedelta(days=1)).replace(hour=1, minute=0, second=0, microsecond=0)
-                p.set("stop", fmt_xmltv(next_1))
-                shifted_25h += 1
-            normalized_off += 1
-            continue
-
+                p.set("stop", fmt_xmltv(next_1)); shifted_25h += 1
+            normalized_off += 1; continue
         if "本日の開催は終了しました" in title or "本日の全レースは終了しました" in title:
             title_el.text = FINISHED_TITLE
             stop = parse_xmltv(p.get("stop"))
             if stop and stop.hour == 23 and stop.minute >= 50:
                 next_1 = (stop + datetime.timedelta(days=1)).replace(hour=1, minute=0, second=0, microsecond=0)
-                p.set("stop", fmt_xmltv(next_1))
-                shifted_25h += 1
-            normalized_end += 1
-            continue
-
+                p.set("stop", fmt_xmltv(next_1)); shifted_25h += 1
+            normalized_end += 1; continue
         if race_title(title):
             detail = race_detail(title, cid)
             base = base_race_title(title)
             title_el.text = f"{base} {LIVE_PREFIX}｜{detail}"
             normalized_live += 1
-
-    # 25:00切替: 翌日00:00開始の「準備中」は01:00開始へずらす。
     for p in root.findall("programme"):
         cid = p.get("channel", "")
         if not category_id(cid):
@@ -234,22 +223,14 @@ def normalize_epg(path: Path) -> None:
         title = p.findtext("title") or ""
         if "データ取得準備中" not in title:
             continue
-        start = parse_xmltv(p.get("start"))
-        stop = parse_xmltv(p.get("stop"))
+        start = parse_xmltv(p.get("start")); stop = parse_xmltv(p.get("stop"))
         if start and stop and start.hour == 0 and start.minute == 0 and stop > start:
             new_start = start.replace(hour=1)
             if new_start < stop:
                 p.set("start", fmt_xmltv(new_start))
-
     ET.indent(tree, space="    ")
     tree.write(path, encoding="utf-8", xml_declaration=True)
-    print(
-        "EPG normalized:",
-        f"live={normalized_live}",
-        f"finished={normalized_end}",
-        f"off={normalized_off}",
-        f"25h={shifted_25h}",
-    )
+    print("EPG normalized:", f"live={normalized_live}", f"finished={normalized_end}", f"off={normalized_off}", f"25h={shifted_25h}")
 
 
 if __name__ == "__main__":

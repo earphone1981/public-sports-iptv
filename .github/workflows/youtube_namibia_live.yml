@@ -2,6 +2,9 @@ name: Update YouTube LIVE Channels
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/youtube_update.trigger'
   schedule:
     # JST 08:30 / 12:00 / 13:30 / 15:00 / 20:40
     - cron: "30 23 * * *"

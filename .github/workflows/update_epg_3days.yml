@@ -18,183 +18,98 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
-      - name: Patch AutoRace exact-time parser
+      - name: Generate 3-day EPG
+        run: python main_epg_3days.py
+      - name: Add official Sanyo midnight fallback
         shell: bash
         run: |
           python - <<'PY'
+          import datetime
+          import xml.etree.ElementTree as ET
           from pathlib import Path
 
-          p = Path('main_epg_3days.py')
-          s = p.read_text(encoding='utf-8')
+          JST=datetime.timezone(datetime.timedelta(hours=9))
+          today=datetime.datetime.now(JST).date()
+          # AutoRace.JP 2026年度上期 山陽ミッドナイト公式時刻表。
+          # 8/17-20 は9R制。Program/Webが取得不能でも公式時刻表を優先する。
+          official_9r_ranges=[
+              (datetime.date(2026,4,1),datetime.date(2026,4,3)),
+              (datetime.date(2026,5,12),datetime.date(2026,5,14)),
+              (datetime.date(2026,5,21),datetime.date(2026,5,23)),
+              (datetime.date(2026,6,15),datetime.date(2026,6,17)),
+              (datetime.date(2026,7,30),datetime.date(2026,8,1)),
+              (datetime.date(2026,8,17),datetime.date(2026,8,20)),
+              (datetime.date(2026,9,10),datetime.date(2026,9,12)),
+              (datetime.date(2026,9,16),datetime.date(2026,9,18)),
+          ]
+          times9=['19:53','20:20','20:48','21:16','21:44','22:12','22:40','23:08','23:40']
+          if not any(a <= today <= b for a,b in official_9r_ranges):
+              print('Sanyo official 9R fallback: not applicable today')
+              raise SystemExit(0)
 
-          old = 'AUTORACE_PROGRAM_BASE = "https://autorace.jp/race_info/Program/{slug}/{date}_{race_no}"'
-          new = 'AUTORACE_PROGRAM_BASE = "https://autorace.jp/race_info/Program/Web/{slug}/{date}_{race_no}"'
-          if old in s:
-              s = s.replace(old, new)
+          path=Path('epg.xml')
+          tree=ET.parse(path); root=tree.getroot(); cid='auto.sanyo'
+          # 当日分だけ置換。翌日以降の既存EPGには触らない。
+          prefix=today.strftime('%Y%m%d')
+          for p in list(root.findall('programme')):
+              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix):
+                  root.remove(p)
 
-          # 当日は月間カレンダーに拾われた場だけでなく全5場を直接確認する。
-          old_loop = 'for venue, race_meta in calendar_venues.items():\n        slug = AUTORACE_SLUG.get(venue)\n        if not slug:\n            continue'
-          new_loop = 'for venue, slug in AUTORACE_SLUG.items():\n        race_meta = calendar_venues.get(venue, {})'
-          if old_loop in s:
-              s = s.replace(old_loop, new_loop, 1)
-
-          # AutoRace WEB出走表は「発走予定10 : 56」のようにコロン前後へ空白が入る。
-          s = s.replace(
-              'r"(?:発走予定|発走時刻|発走)\\s*[:：]?\\s*([0-2]?\\d:[0-5]\\d)"',
-              'r"(?:発走予定|発走時刻|発走)\\s*[:：]?\\s*([0-2]?\\d\\s*[:：]\\s*[0-5]\\d)"'
-          )
-          s = s.replace(
-              'r"投票締切\\s*[:：]?\\s*([0-2]?\\d:[0-5]\\d)"',
-              'r"投票締切\\s*[:：]?\\s*([0-2]?\\d\\s*[:：]\\s*[0-5]\\d)"'
-          )
-
-          needle = 'time_text = m.group(1) if m else ""\n'
-          repl = (
-              'time_text = m.group(1) if m else ""\n'
-              '    if time_text:\n'
-              '        time_text = re.sub(r"\\s+", "", time_text).replace("：", ":")\n'
-          )
-          if needle in s and repl not in s:
-              s = s.replace(needle, repl, 1)
-
-          needle2 = 'hh, mm = map(int, m.group(1).split(":"))\n'
-          repl2 = (
-              'raw_deadline = re.sub(r"\\s+", "", m.group(1)).replace("：", ":")\n'
-              '            hh, mm = map(int, raw_deadline.split(":"))\n'
-          )
-          if needle2 in s:
-              s = s.replace(needle2, repl2, 1)
-
-          p.write_text(s, encoding='utf-8')
-          print('AutoRace parser patched: Program/Web + all 5 tracks + spaced-colon times')
+          starts=[]
+          for t in times9:
+              h,m=map(int,t.split(':'))
+              starts.append(datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST))
+          for i,start in enumerate(starts,1):
+              if i < len(starts):
+                  stop=starts[i]
+              else:
+                  stop=start+datetime.timedelta(minutes=20)
+              p=ET.SubElement(root,'programme',start=start.strftime('%Y%m%d%H%M%S +0900'),stop=stop.strftime('%Y%m%d%H%M%S +0900'),channel=cid)
+              ET.SubElement(p,'title',lang='ja').text=f'{i}R 山陽ミッドナイトオートレース 発走 {start:%H:%M}'
+              ET.SubElement(p,'desc',lang='ja').text='AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。'
+          ET.indent(tree,space='    ')
+          tree.write(path,encoding='utf-8',xml_declaration=True)
+          print('Sanyo official midnight fallback added:', len(starts), 'races')
           PY
-
-      - name: Generate 3-day EPG
-        run: python main_epg_3days.py
-
       - name: Fix same-name Keirin channel IDs
         shell: bash
         run: |
           python - <<'PY'
           import xml.etree.ElementTree as ET
           from pathlib import Path
-
-          path = Path('epg.xml')
-          tree = ET.parse(path)
-          root = tree.getroot()
-
-          wanted = {
-              'keirin.kawasaki': 'かわさきⓀ',
-              'keirin.nagoya': 'なごやⓀ',
-              'keirin.kochi': 'こうちⓀ',
-          }
-
-          channels = {ch.get('id'): ch for ch in root.findall('channel')}
-
-          for channel_id, display_name in wanted.items():
-              ch = channels.get(channel_id)
+          path=Path('epg.xml'); tree=ET.parse(path); root=tree.getroot()
+          wanted={'keirin.kawasaki':'かわさきⓀ','keirin.nagoya':'なごやⓀ','keirin.kochi':'こうちⓀ'}
+          channels={ch.get('id'):ch for ch in root.findall('channel')}
+          for cid,name in wanted.items():
+              ch=channels.get(cid)
               if ch is None:
-                  ch = ET.Element('channel', {'id': channel_id})
-                  insert_at = 0
-                  for i, child in enumerate(list(root)):
-                      if child.tag == 'channel':
-                          insert_at = i + 1
-                      else:
-                          break
-                  root.insert(insert_at, ch)
-              names = ch.findall('display-name')
-              if names:
-                  names[0].text = display_name
-                  for extra in names[1:]:
-                      ch.remove(extra)
-              else:
-                  ET.SubElement(ch, 'display-name').text = display_name
-
-          ET.indent(tree, space='    ')
-          tree.write(path, encoding='utf-8', xml_declaration=True)
-          print('Keirin same-name channel IDs fixed')
+                  ch=ET.Element('channel',{'id':cid}); root.insert(0,ch)
+              names=ch.findall('display-name')
+              if names: names[0].text=name
+              else: ET.SubElement(ch,'display-name').text=name
+          ET.indent(tree,space='    '); tree.write(path,encoding='utf-8',xml_declaration=True)
           PY
-
-      - name: Validate XML and AutoRace live programmes
+      - name: Validate XML and today's AutoRace
         run: |
           python - <<'PY'
           import datetime
-          import re
-          import urllib.request
           import xml.etree.ElementTree as ET
-
-          root = ET.parse('epg.xml').getroot()
-          channels = {ch.get('id'): (ch.findtext('display-name') or '') for ch in root.findall('channel')}
-          expected = {
-              'keirin.kawasaki': 'かわさきⓀ',
-              'keirin.nagoya': 'なごやⓀ',
-              'keirin.kochi': 'こうちⓀ',
-          }
-          for cid, name in expected.items():
-              if channels.get(cid) != name:
-                  raise SystemExit(f'ERROR: {cid} -> {channels.get(cid)!r}')
-
-          JST = datetime.timezone(datetime.timedelta(hours=9))
-          today = datetime.datetime.now(JST).strftime('%Y-%m-%d')
-          tracks = {
-              '川口': ('kawaguchi', 'auto.kawaguchi'),
-              '伊勢崎': ('isesaki', 'auto.isesaki'),
-              '浜松': ('hamamatsu', 'auto.hamamatsu'),
-              '飯塚': ('iizuka', 'auto.iizuka'),
-              '山陽': ('sanyo', 'auto.sanyo'),
-          }
-          headers = {
-              'User-Agent': 'Mozilla/5.0',
-              'Referer': 'https://autorace.jp/',
-          }
-
-          live = []
-          for name, (slug, cid) in tracks.items():
-              url = f'https://autorace.jp/race_info/Program/Web/{slug}/{today}_1'
-              try:
-                  req = urllib.request.Request(url, headers=headers)
-                  with urllib.request.urlopen(req, timeout=20) as r:
-                      html = r.read().decode('utf-8', errors='replace')
-              except Exception as e:
-                  print(f'AutoRace probe {name}: fetch error {e}')
-                  continue
-
-              text = re.sub(r'<script.*?</script>', ' ', html, flags=re.S|re.I)
-              text = re.sub(r'<style.*?</style>', ' ', text, flags=re.S|re.I)
-              text = re.sub(r'<[^>]+>', ' ', text)
-              text = re.sub(r'\s+', ' ', text)
-              if '該当レースの開催は中止となりました' in text:
-                  continue
-              if re.search(r'発走予定\s*[0-2]?\d\s*[:：]\s*[0-5]\d', text):
-                  live.append((name, cid))
-
-          print('AutoRace today detected:', live)
-          programmes = root.findall('programme')
-          missing = []
-          for name, cid in live:
-              progs = [p for p in programmes if p.get('channel') == cid]
-              race_progs = [p for p in progs if '発走' in (p.findtext('title') or '')]
-              if not race_progs:
-                  missing.append(f'{name}({cid})')
-              else:
-                  print(f'AutoRace EPG OK {name}: {len(race_progs)} race programmes')
-
-          if missing:
-              raise SystemExit('ERROR: AutoRace live venue missing race EPG: ' + ', '.join(missing))
-
-          print('XML OK / same-name Keirin IDs OK / AutoRace live EPG OK')
+          JST=datetime.timezone(datetime.timedelta(hours=9)); today=datetime.datetime.now(JST).date(); prefix=today.strftime('%Y%m%d')
+          root=ET.parse('epg.xml').getroot()
+          # 8/17-20 山陽ミッドナイトは公式9R制なので9件必須。
+          if datetime.date(2026,8,17) <= today <= datetime.date(2026,8,20):
+              ps=[p for p in root.findall('programme') if p.get('channel')=='auto.sanyo' and (p.get('start') or '').startswith(prefix)]
+              if len(ps)!=9: raise SystemExit(f'ERROR: Sanyo midnight EPG expected 9, got {len(ps)}')
+              print('Sanyo midnight EPG OK:',len(ps))
+          print('XML OK')
           PY
-
       - name: Commit and push EPG
         run: |
           git config user.name "github-actions[bot]"

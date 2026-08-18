@@ -42,6 +42,12 @@ jobs:
           if old in s:
               s = s.replace(old, new)
 
+          # 当日は月間カレンダーに拾われた場だけでなく全5場を直接確認する。
+          old_loop = 'for venue, race_meta in calendar_venues.items():\n        slug = AUTORACE_SLUG.get(venue)\n        if not slug:\n            continue'
+          new_loop = 'for venue, slug in AUTORACE_SLUG.items():\n        race_meta = calendar_venues.get(venue, {})'
+          if old_loop in s:
+              s = s.replace(old_loop, new_loop, 1)
+
           # AutoRace WEB出走表は「発走予定10 : 56」のようにコロン前後へ空白が入る。
           s = s.replace(
               'r"(?:発走予定|発走時刻|発走)\\s*[:：]?\\s*([0-2]?\\d:[0-5]\\d)"',
@@ -52,7 +58,6 @@ jobs:
               'r"投票締切\\s*[:：]?\\s*([0-2]?\\d\\s*[:：]\\s*[0-5]\\d)"'
           )
 
-          # 抽出後の「10 : 56」「10：56」を必ず HH:MM に正規化。
           needle = 'time_text = m.group(1) if m else ""\n'
           repl = (
               'time_text = m.group(1) if m else ""\n'
@@ -71,7 +76,7 @@ jobs:
               s = s.replace(needle2, repl2, 1)
 
           p.write_text(s, encoding='utf-8')
-          print('AutoRace parser patched: Program/Web + spaced-colon times')
+          print('AutoRace parser patched: Program/Web + all 5 tracks + spaced-colon times')
           PY
 
       - name: Generate 3-day EPG
@@ -120,10 +125,14 @@ jobs:
           print('Keirin same-name channel IDs fixed')
           PY
 
-      - name: Validate XML
+      - name: Validate XML and AutoRace live programmes
         run: |
           python - <<'PY'
+          import datetime
+          import re
+          import urllib.request
           import xml.etree.ElementTree as ET
+
           root = ET.parse('epg.xml').getroot()
           channels = {ch.get('id'): (ch.findtext('display-name') or '') for ch in root.findall('channel')}
           expected = {
@@ -134,7 +143,56 @@ jobs:
           for cid, name in expected.items():
               if channels.get(cid) != name:
                   raise SystemExit(f'ERROR: {cid} -> {channels.get(cid)!r}')
-          print('XML OK / same-name Keirin IDs OK')
+
+          JST = datetime.timezone(datetime.timedelta(hours=9))
+          today = datetime.datetime.now(JST).strftime('%Y-%m-%d')
+          tracks = {
+              '川口': ('kawaguchi', 'auto.kawaguchi'),
+              '伊勢崎': ('isesaki', 'auto.isesaki'),
+              '浜松': ('hamamatsu', 'auto.hamamatsu'),
+              '飯塚': ('iizuka', 'auto.iizuka'),
+              '山陽': ('sanyo', 'auto.sanyo'),
+          }
+          headers = {
+              'User-Agent': 'Mozilla/5.0',
+              'Referer': 'https://autorace.jp/',
+          }
+
+          live = []
+          for name, (slug, cid) in tracks.items():
+              url = f'https://autorace.jp/race_info/Program/Web/{slug}/{today}_1'
+              try:
+                  req = urllib.request.Request(url, headers=headers)
+                  with urllib.request.urlopen(req, timeout=20) as r:
+                      html = r.read().decode('utf-8', errors='replace')
+              except Exception as e:
+                  print(f'AutoRace probe {name}: fetch error {e}')
+                  continue
+
+              text = re.sub(r'<script.*?</script>', ' ', html, flags=re.S|re.I)
+              text = re.sub(r'<style.*?</style>', ' ', text, flags=re.S|re.I)
+              text = re.sub(r'<[^>]+>', ' ', text)
+              text = re.sub(r'\s+', ' ', text)
+              if '該当レースの開催は中止となりました' in text:
+                  continue
+              if re.search(r'発走予定\s*[0-2]?\d\s*[:：]\s*[0-5]\d', text):
+                  live.append((name, cid))
+
+          print('AutoRace today detected:', live)
+          programmes = root.findall('programme')
+          missing = []
+          for name, cid in live:
+              progs = [p for p in programmes if p.get('channel') == cid]
+              race_progs = [p for p in progs if '発走' in (p.findtext('title') or '')]
+              if not race_progs:
+                  missing.append(f'{name}({cid})')
+              else:
+                  print(f'AutoRace EPG OK {name}: {len(race_progs)} race programmes')
+
+          if missing:
+              raise SystemExit('ERROR: AutoRace live venue missing race EPG: ' + ', '.join(missing))
+
+          print('XML OK / same-name Keirin IDs OK / AutoRace live EPG OK')
           PY
 
       - name: Commit and push EPG

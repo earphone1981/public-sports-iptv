@@ -1,2 +1,3 @@
 #EXTM3U
-# 現在LIVEなし
+#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
+https://www.youtube.com/@kana_tube/streams

@@ -54,7 +54,7 @@ def standardized_name(tvg_id: str, current: str) -> str:
 def is_core_m3u_entry(line: str, tvg_id: str) -> bool:
     if 'group-title="競輪(TIPSTAR)"' in line:
         return tvg_id.startswith("keirin.")
-    if 'group-title="地方競馬"' in line:
+    if 'group-title="地方競馬"' in line or 'group-title="競馬 / 地方競馬"' in line:
         return tvg_id.startswith(("chihou.", "keiba."))
     if 'group-title="オートレース"' in line:
         return tvg_id.startswith("auto.")
@@ -112,12 +112,60 @@ def fmt_xmltv(dt: datetime.datetime) -> str:
 
 
 def category_id(cid: str) -> bool:
-    return cid.startswith(("keirin.", "chihou.", "keiba.", "auto.", "boat."))
+    return cid.startswith(("keirin.", "chihou.", "keiba.", "auto.", "boat.")) or cid in {
+        "jra.east", "jra.west", "jra.hokkaido"
+    }
 
 
 def race_title(title: str) -> bool:
     t = str(title or "")
     return bool(re.search(r"(?:❶|❷|❸|❹|❺|❻|❼|❽|❾|❿|⓫|⓬|\b\d{1,2}\s*R\b|\b\d{1,2}R\b)", t) and "発走" in t)
+
+
+def race_detail(title: str, cid: str) -> str:
+    """実況表示の後ろに置く、競技共通の見やすいレース詳細を作る。"""
+    t = re.sub(rf"^.*?{re.escape(LIVE_PREFIX)}｜?", "", str(title or "")).strip()
+    m = re.search(r"発走\s*(.+)$", t)
+    detail = m.group(1).strip() if m else t
+
+    # 前側タイトル末尾に付いている級・種別を詳細側へまとめる。
+    bracket = re.findall(r"【([^】]+)】", detail)
+    plain = re.sub(r"\s*【[^】]+】\s*", " ", detail)
+    plain = re.sub(r"\s+", " ", plain).strip()
+    meta = " ".join(x for x in bracket if x and x not in plain).strip()
+    combined = " ".join(x for x in (meta, plain) if x).strip()
+
+    if not combined:
+        combined = "レース"
+
+    if re.search(r"[LＬ]級|ガールズ", combined):
+        return f"💛【{combined}】"
+    if re.search(r"優勝|決勝|ファイナル", combined):
+        return f"🏆【{combined}】🏆"
+    if "準決" in combined:
+        return f"🔥【{combined}】🔥"
+    if re.search(r"G[ⅠI1]|ＧⅠ|JpnI\b", combined, re.I):
+        return f"👑【{combined}】👑"
+    if re.search(r"G[ⅡI2]|ＧⅡ|JpnII\b", combined, re.I):
+        return f"✨【{combined}】✨"
+    if re.search(r"G[ⅢI3]|ＧⅢ|JpnIII\b", combined, re.I):
+        return f"🌟【{combined}】🌟"
+    if cid.startswith("boat."):
+        return f"🚤【{combined}】"
+    if cid.startswith("auto."):
+        return f"🏍️【{combined}】"
+    if cid.startswith(("chihou.", "keiba.")) or cid.startswith("jra."):
+        return f"🏇【{combined}】"
+    if cid.startswith("keirin."):
+        return f"🚲【{combined}】"
+    return f"【{combined}】"
+
+
+def base_race_title(title: str) -> str:
+    """前半は 場名 R 発走 レース名。後置きの【級/種別】は詳細側へ移す。"""
+    t = re.sub(rf"^.*?{re.escape(LIVE_PREFIX)}｜?", "", str(title or "")).strip()
+    t = re.sub(r"\s*【[^】]+】\s*$", "", t).strip()
+    return t
 
 
 def normalize_epg(path: Path) -> None:
@@ -172,8 +220,10 @@ def normalize_epg(path: Path) -> None:
             normalized_end += 1
             continue
 
-        if race_title(title) and not title.startswith(LIVE_PREFIX):
-            title_el.text = f"{LIVE_PREFIX}｜{title}"
+        if race_title(title):
+            detail = race_detail(title, cid)
+            base = base_race_title(title)
+            title_el.text = f"{base} {LIVE_PREFIX}｜{detail}"
             normalized_live += 1
 
     # 25:00切替: 翌日00:00開始の「準備中」は01:00開始へずらす。

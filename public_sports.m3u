@@ -121,13 +121,13 @@ https://d2cnginkpbghia.cloudfront.net/out/v1/6955332159294a8a93b45370d4b356bf/in
 #EXTINF:-1 tvg-id="keirin.kumamoto" tvg-name="熊本けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kumamoto-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",熊本けいりん
 https://d2m69fn251lhrf.cloudfront.net/out/v1/1fb24676fcbf458b964083925878052a/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.pist6" tvg-name="千葉PIST6けいりん" tvg-logo="https://pist6.co.jp/assets/images/common/ogp.jpg" group-title="競輪(TIPSTAR)",千葉PIST6けいりん
+#EXTINF:-1 tvg-id="keirin.pist6" tvg-name="千葉PIST6（休止中）" tvg-logo="https://pist6.co.jp/assets/images/common/ogp.jpg" group-title="競輪(TIPSTAR)",千葉PIST6けいりん
 https://duyycwqvxot9t.cloudfront.net/out/v1/769ad1fdda0d4e238f66e0b0f25edabb/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.takamatsu" tvg-name="高松けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takamatsu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",高松けいりん
+#EXTINF:-1 tvg-id="keirin.takamatsu" tvg-name="高松けいりん（休止中）" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/takamatsu-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",高松けいりん
 https://d20jzsap8ax0i2.cloudfront.net/out/v1/2dabf5a556dd4bfbb75c28537be02c2f/index.m3u8
 
-#EXTINF:-1 tvg-id="keirin.mukomachi" tvg-name="向日町けいりん" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kyoto-mukomachi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",向日町けいりん
+#EXTINF:-1 tvg-id="keirin.mukomachi" tvg-name="向日町けいりん（休止中）" tvg-logo="https://i0.wp.com/minchari.com/wp-content/uploads/2025/06/kyoto-mukomachi-keirin.png?resize=1024%2C300&ssl=1" group-title="競輪(TIPSTAR)",向日町けいりん
 https://cfl.st.keirin.jp/54/dash/54.mpd
 
 ## 地方競馬

@@ -15,6 +15,12 @@ SPECIAL_KEIRIN = {
     "keirin.kochi": "こうち",
 }
 
+SPECIAL_KEIRIN_FULL = {
+    "keirin.pist6": "千葉PIST6（休止中）",
+    "keirin.takamatsu": "高松けいりん（休止中）",
+    "keirin.mukomachi": "向日町けいりん（休止中）",
+}
+
 
 def clean_base(name: str) -> str:
     s = str(name or "").strip()
@@ -29,6 +35,9 @@ def clean_base(name: str) -> str:
 
 
 def standardized_name(tvg_id: str, current: str) -> str:
+    if tvg_id in SPECIAL_KEIRIN_FULL:
+        return SPECIAL_KEIRIN_FULL[tvg_id]
+
     base = clean_base(current)
     if tvg_id.startswith("keirin."):
         base = SPECIAL_KEIRIN.get(tvg_id, base)

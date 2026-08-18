@@ -57,6 +57,56 @@ jobs:
       - name: Refresh venue and cross-channel LIVE entries
         run: python youtube_dynamic_update.py
 
+      - name: Clean duplicate and orphan section headers
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('public_sports.m3u')
+          lines = path.read_text(encoding='utf-8-sig').replace('\r\n', '\n').split('\n')
+
+          managed_headers = {
+              '## その他LIVE',
+              '## 野球LIVE',
+              '## 競輪 YouTube LIVE',
+              '## 地方競馬 YouTube LIVE',
+              '## オートレース YouTube LIVE',
+              '## ボートレース YouTube LIVE',
+              '## 公営競技 横断LIVE',
+          }
+
+          out = []
+          i = 0
+          while i < len(lines):
+              line = lines[i].strip()
+
+              if line in managed_headers:
+                  j = i + 1
+                  while j < len(lines) and not lines[j].strip():
+                      j += 1
+
+                  # Keep a managed header only when the next meaningful line
+                  # is an actual EXTINF entry. This removes orphan/stacked headers.
+                  if j < len(lines) and lines[j].lstrip().startswith('#EXTINF:'):
+                      if not out or out[-1].strip() != line:
+                          out.append(line)
+                  i += 1
+                  continue
+
+              out.append(lines[i].rstrip())
+              i += 1
+
+          # Collapse excessive blank lines without touching entries/URLs.
+          cleaned = []
+          for line in out:
+              if not line.strip() and cleaned and not cleaned[-1].strip():
+                  continue
+              cleaned.append(line)
+
+          path.write_text('\n'.join(cleaned).rstrip() + '\n', encoding='utf-8')
+          PY
+
       - name: Validate generated M3U
         shell: bash
         run: |
@@ -67,7 +117,23 @@ jobs:
             echo "ERROR: old OTT test entry still exists"
             exit 1
           fi
-          echo "M3U validation OK"
+          python - <<'PY'
+          from pathlib import Path
+          lines = Path('public_sports.m3u').read_text(encoding='utf-8-sig').splitlines()
+          managed = {
+              '## その他LIVE', '## 野球LIVE', '## 競輪 YouTube LIVE',
+              '## 地方競馬 YouTube LIVE', '## オートレース YouTube LIVE',
+              '## ボートレース YouTube LIVE', '## 公営競技 横断LIVE'
+          }
+          for i, line in enumerate(lines):
+              if line.strip() in managed:
+                  j = i + 1
+                  while j < len(lines) and not lines[j].strip():
+                      j += 1
+                  if j >= len(lines) or not lines[j].lstrip().startswith('#EXTINF:'):
+                      raise SystemExit(f'ERROR: orphan header remains at line {i+1}: {line}')
+          print('M3U validation OK')
+          PY
 
       - name: Commit updated LIVE URLs
         shell: bash

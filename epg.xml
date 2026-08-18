@@ -6839,88 +6839,88 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <programme start="20260819020000 +0900" stop="20260819023000 +0900" channel="jra.gch">
         <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
     </programme>
-    <programme start="20260818105600 +0900" stop="20260818112100 +0900" channel="auto.hamamatsu">
-        <title lang="ja">1R 浜松オートレース 発走 10:56</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818103900 +0900" stop="20260818110700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">1R 浜松オートレース 発走 10:39</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818112100 +0900" stop="20260818114700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">2R 浜松オートレース 発走 11:21</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818110700 +0900" stop="20260818113500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">2R 浜松オートレース 発走 11:07</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818114700 +0900" stop="20260818121500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">3R 浜松オートレース 発走 11:47</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818113500 +0900" stop="20260818120400 +0900" channel="auto.hamamatsu">
+        <title lang="ja">3R 浜松オートレース 発走 11:35</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818121500 +0900" stop="20260818124600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">4R 浜松オートレース 発走 12:15</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818120400 +0900" stop="20260818123500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">4R 浜松オートレース 発走 12:04</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818124600 +0900" stop="20260818131600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">5R 浜松オートレース 発走 12:46</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818123500 +0900" stop="20260818130700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">5R 浜松オートレース 発走 12:35</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818131600 +0900" stop="20260818134600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">6R 浜松オートレース 発走 13:16</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818130700 +0900" stop="20260818134100 +0900" channel="auto.hamamatsu">
+        <title lang="ja">6R 浜松オートレース 発走 13:07</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818134600 +0900" stop="20260818141600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">7R 浜松オートレース 発走 13:46</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818134100 +0900" stop="20260818141600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">7R 浜松オートレース 発走 13:41</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818141600 +0900" stop="20260818144700 +0900" channel="auto.hamamatsu">
+    <programme start="20260818141600 +0900" stop="20260818145200 +0900" channel="auto.hamamatsu">
         <title lang="ja">8R 浜松オートレース 発走 14:16</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818144700 +0900" stop="20260818151800 +0900" channel="auto.hamamatsu">
-        <title lang="ja">9R 浜松オートレース 発走 14:47</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818145200 +0900" stop="20260818152900 +0900" channel="auto.hamamatsu">
+        <title lang="ja">9R 浜松オートレース 発走 14:52</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818151800 +0900" stop="20260818155600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">10R 浜松オートレース 発走 15:18</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818152900 +0900" stop="20260818160800 +0900" channel="auto.hamamatsu">
+        <title lang="ja">10R 浜松オートレース 発走 15:29</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818155600 +0900" stop="20260818163500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">11R 浜松オートレース 発走 15:56</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818160800 +0900" stop="20260818165000 +0900" channel="auto.hamamatsu">
+        <title lang="ja">11R 浜松オートレース 発走 16:08</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
-    <programme start="20260818163500 +0900" stop="20260818170500 +0900" channel="auto.hamamatsu">
-        <title lang="ja">12R 浜松オートレース 発走 16:35</title>
-        <desc lang="ja">AutoRace.JP当日出走表取得不能時の外部フォールバック。WINTICKETで開催確認し、OddsPark出走表の実発走時刻を採用。</desc>
+    <programme start="20260818165000 +0900" stop="20260818172000 +0900" channel="auto.hamamatsu">
+        <title lang="ja">12R 浜松オートレース 発走 16:50</title>
+        <desc lang="ja">WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。</desc>
     </programme>
     <programme start="20260818195300 +0900" stop="20260818202000 +0900" channel="auto.sanyo">
         <title lang="ja">1R 山陽ミッドナイトオートレース 発走 19:53</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818202000 +0900" stop="20260818204800 +0900" channel="auto.sanyo">
         <title lang="ja">2R 山陽ミッドナイトオートレース 発走 20:20</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818204800 +0900" stop="20260818211600 +0900" channel="auto.sanyo">
         <title lang="ja">3R 山陽ミッドナイトオートレース 発走 20:48</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818211600 +0900" stop="20260818214400 +0900" channel="auto.sanyo">
         <title lang="ja">4R 山陽ミッドナイトオートレース 発走 21:16</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818214400 +0900" stop="20260818221200 +0900" channel="auto.sanyo">
         <title lang="ja">5R 山陽ミッドナイトオートレース 発走 21:44</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818221200 +0900" stop="20260818224000 +0900" channel="auto.sanyo">
         <title lang="ja">6R 山陽ミッドナイトオートレース 発走 22:12</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818224000 +0900" stop="20260818230800 +0900" channel="auto.sanyo">
         <title lang="ja">7R 山陽ミッドナイトオートレース 発走 22:40</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818230800 +0900" stop="20260818234000 +0900" channel="auto.sanyo">
         <title lang="ja">8R 山陽ミッドナイトオートレース 発走 23:08</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
     <programme start="20260818234000 +0900" stop="20260819000000 +0900" channel="auto.sanyo">
         <title lang="ja">9R 山陽ミッドナイトオートレース 発走 23:40</title>
-        <desc lang="ja">AutoRace.JP 2026年度上期 山陽ミッドナイトオートレース（9R制）公式発走予定時刻表による当日実時刻。</desc>
+        <desc lang="ja">AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。</desc>
     </programme>
 </tv>

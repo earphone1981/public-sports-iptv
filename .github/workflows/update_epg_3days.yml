@@ -28,8 +28,66 @@ jobs:
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
 
+      - name: Fix same-name Keirin channel IDs
+        shell: bash
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+
+          path = Path('epg.xml')
+          tree = ET.parse(path)
+          root = tree.getroot()
+
+          wanted = {
+              'keirin.kawasaki': 'かわさきⓀ',
+              'keirin.nagoya': 'なごやⓀ',
+              'keirin.kochi': 'こうちⓀ',
+          }
+
+          channels = {ch.get('id'): ch for ch in root.findall('channel')}
+
+          for channel_id, display_name in wanted.items():
+              ch = channels.get(channel_id)
+              if ch is None:
+                  ch = ET.Element('channel', {'id': channel_id})
+                  # programme群より前にchannelを置く
+                  insert_at = 0
+                  for i, child in enumerate(list(root)):
+                      if child.tag == 'channel':
+                          insert_at = i + 1
+                      else:
+                          break
+                  root.insert(insert_at, ch)
+              names = ch.findall('display-name')
+              if names:
+                  names[0].text = display_name
+                  for extra in names[1:]:
+                      ch.remove(extra)
+              else:
+                  ET.SubElement(ch, 'display-name').text = display_name
+
+          ET.indent(tree, space='    ')
+          tree.write(path, encoding='utf-8', xml_declaration=True)
+          print('Keirin same-name channel IDs fixed')
+          PY
+
       - name: Validate XML
-        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse('epg.xml').getroot()
+          channels = {ch.get('id'): (ch.findtext('display-name') or '') for ch in root.findall('channel')}
+          expected = {
+              'keirin.kawasaki': 'かわさきⓀ',
+              'keirin.nagoya': 'なごやⓀ',
+              'keirin.kochi': 'こうちⓀ',
+          }
+          for cid, name in expected.items():
+              if channels.get(cid) != name:
+                  raise SystemExit(f'ERROR: {cid} -> {channels.get(cid)!r}')
+          print('XML OK / same-name Keirin IDs OK')
+          PY
 
       - name: Commit and push EPG
         run: |

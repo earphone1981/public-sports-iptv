@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: '0 23 * * *'
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/epg_update.trigger'
 
 concurrency:
   group: public-sports-epg
@@ -18,6 +15,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -30,145 +28,14 @@ jobs:
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
 
-      - name: Add Hamamatsu exact-time fallback
-        shell: bash
-        run: |
-          python - <<'PY'
-          import datetime
-          import urllib.request
-          import re
-          import html
-          import xml.etree.ElementTree as ET
-          from pathlib import Path
-
-          JST=datetime.timezone(datetime.timedelta(hours=9))
-          today=datetime.datetime.now(JST).date()
-          prefix=today.strftime('%Y%m%d')
-          cid='auto.hamamatsu'
-
-          if not (datetime.date(2026,8,17) <= today <= datetime.date(2026,8,20)):
-              print('Hamamatsu fallback: not applicable today')
-              raise SystemExit(0)
-
-          headers={'User-Agent':'Mozilla/5.0','Accept-Language':'ja-JP,ja;q=0.9'}
-          try:
-              req=urllib.request.Request('https://www.winticket.jp/autorace/hamamatsu/schedule',headers=headers)
-              with urllib.request.urlopen(req,timeout=10) as r:
-                  src=r.read().decode('utf-8',errors='replace')
-              plain=re.sub(r'<[^>]+>',' ',html.unescape(src))
-              plain=re.sub(r'\s+',' ',plain)
-              if '8月17日' not in plain or '8月20日' not in plain or '浜松' not in plain:
-                  raise SystemExit('ERROR: WINTICKET could not confirm Hamamatsu 8/17-20 meeting')
-              print('WINTICKET Hamamatsu meeting confirmed')
-          except Exception as e:
-              print('WINTICKET confirmation warning:',e)
-
-          times=['10:39','11:07','11:35','12:04','12:35','13:07','13:41','14:16','14:52','15:29','16:08','16:50']
-
-          path=Path('epg.xml')
-          tree=ET.parse(path); root=tree.getroot()
-          for p in list(root.findall('programme')):
-              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix):
-                  root.remove(p)
-
-          starts=[]
-          for i,t in enumerate(times,1):
-              h,m=map(int,t.split(':'))
-              starts.append((i,datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST)))
-
-          for idx,(race_no,start) in enumerate(starts):
-              stop=starts[idx+1][1] if idx+1<len(starts) else start+datetime.timedelta(minutes=30)
-              p=ET.SubElement(root,'programme',start=start.strftime('%Y%m%d%H%M%S +0900'),stop=stop.strftime('%Y%m%d%H%M%S +0900'),channel=cid)
-              ET.SubElement(p,'title',lang='ja').text=f'{race_no}R 浜松オートレース 発走 {start:%H:%M}'
-              ET.SubElement(p,'desc',lang='ja').text='WINTICKETで当日開催を確認し、浜松通常12Rの発走時刻系列を反映。'
-
-          ET.indent(tree,space='    ')
-          tree.write(path,encoding='utf-8',xml_declaration=True)
-          print('Hamamatsu fallback added:',len(starts),'races')
-          PY
-
-      - name: Add official Sanyo midnight fallback
-        shell: bash
-        run: |
-          python - <<'PY'
-          import datetime
-          import xml.etree.ElementTree as ET
-          from pathlib import Path
-
-          JST=datetime.timezone(datetime.timedelta(hours=9))
-          today=datetime.datetime.now(JST).date()
-          ranges=[
-              (datetime.date(2026,4,1),datetime.date(2026,4,3)),
-              (datetime.date(2026,5,12),datetime.date(2026,5,14)),
-              (datetime.date(2026,5,21),datetime.date(2026,5,23)),
-              (datetime.date(2026,6,15),datetime.date(2026,6,17)),
-              (datetime.date(2026,7,30),datetime.date(2026,8,1)),
-              (datetime.date(2026,8,17),datetime.date(2026,8,20)),
-              (datetime.date(2026,9,10),datetime.date(2026,9,12)),
-              (datetime.date(2026,9,16),datetime.date(2026,9,18)),
-          ]
-          if not any(a<=today<=b for a,b in ranges):
-              print('Sanyo fallback: not applicable today')
-              raise SystemExit(0)
-          times=['19:53','20:20','20:48','21:16','21:44','22:12','22:40','23:08','23:40']
-          path=Path('epg.xml'); tree=ET.parse(path); root=tree.getroot(); cid='auto.sanyo'; prefix=today.strftime('%Y%m%d')
-          for p in list(root.findall('programme')):
-              if p.get('channel')==cid and (p.get('start') or '').startswith(prefix): root.remove(p)
-          starts=[]
-          for t in times:
-              h,m=map(int,t.split(':')); starts.append(datetime.datetime.combine(today,datetime.time(h,m),tzinfo=JST))
-          for i,start in enumerate(starts,1):
-              stop=starts[i] if i<len(starts) else start+datetime.timedelta(minutes=20)
-              p=ET.SubElement(root,'programme',start=start.strftime('%Y%m%d%H%M%S +0900'),stop=stop.strftime('%Y%m%d%H%M%S +0900'),channel=cid)
-              ET.SubElement(p,'title',lang='ja').text=f'{i}R 山陽ミッドナイトオートレース 発走 {start:%H:%M}'
-              ET.SubElement(p,'desc',lang='ja').text='AutoRace.JP公式 山陽ミッドナイト9R制発走予定時刻表による当日実時刻。'
-          ET.indent(tree,space='    '); tree.write(path,encoding='utf-8',xml_declaration=True)
-          print('Sanyo fallback added:',len(starts),'races')
-          PY
-
-      - name: Fix same-name Keirin channel IDs
-        shell: bash
-        run: |
-          python - <<'PY'
-          import xml.etree.ElementTree as ET
-          from pathlib import Path
-          path=Path('epg.xml'); tree=ET.parse(path); root=tree.getroot()
-          wanted={'keirin.kawasaki':'かわさき','keirin.nagoya':'なごや','keirin.kochi':'こうち'}
-          channels={ch.get('id'):ch for ch in root.findall('channel')}
-          for cid,name in wanted.items():
-              ch=channels.get(cid)
-              if ch is None:
-                  ch=ET.Element('channel',{'id':cid}); root.insert(0,ch)
-              names=ch.findall('display-name')
-              if names: names[0].text=name
-              else: ET.SubElement(ch,'display-name').text=name
-          ET.indent(tree,space='    '); tree.write(path,encoding='utf-8',xml_declaration=True)
-          PY
-
-      - name: Normalize names, LIVE status and 25:00 boundary
-        run: python normalize_public_sports_labels.py
-
-      - name: Validate XML and today's AutoRace
-        run: |
-          python - <<'PY'
-          import datetime
-          import xml.etree.ElementTree as ET
-          JST=datetime.timezone(datetime.timedelta(hours=9)); today=datetime.datetime.now(JST).date(); prefix=today.strftime('%Y%m%d')
-          root=ET.parse('epg.xml').getroot()
-          if datetime.date(2026,8,17)<=today<=datetime.date(2026,8,20):
-              ham=[p for p in root.findall('programme') if p.get('channel')=='auto.hamamatsu' and (p.get('start') or '').startswith(prefix) and '発走' in (p.findtext('title') or '')]
-              san=[p for p in root.findall('programme') if p.get('channel')=='auto.sanyo' and (p.get('start') or '').startswith(prefix)]
-              if len(ham)!=12: raise SystemExit(f'ERROR: Hamamatsu expected 12, got {len(ham)}')
-              if len(san)!=9: raise SystemExit(f'ERROR: Sanyo expected 9, got {len(san)}')
-              print('Hamamatsu EPG OK:',len(ham)); print('Sanyo EPG OK:',len(san))
-          print('XML OK')
-          PY
+      - name: Validate XML
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 
       - name: Commit and push EPG
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epg.xml public_sports.m3u
+          git add epg.xml
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update 3-day public sports EPG"
           git pull --rebase origin main

@@ -7,8 +7,8 @@ on:
       - '.github/youtube_update.trigger'
 
 concurrency:
-  group: public-sports-youtube-live
-  cancel-in-progress: true
+  group: public-sports-m3u-writer
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -43,6 +45,10 @@ jobs:
           test -n "$YOUTUBE_COOKIES"
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
+
+      - name: Sync latest main before generation
+        shell: bash
+        run: git pull --ff-only origin main
 
       - name: Refresh requested その他LIVE only
         run: python youtube_base_update.py
@@ -74,5 +80,4 @@ jobs:
             exit 0
           fi
           git commit -m "Update selected YouTube LIVE URLs"
-          git pull --rebase origin main
-          git push
+          git push origin main

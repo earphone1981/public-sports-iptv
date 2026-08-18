@@ -10,10 +10,12 @@ M3U = Path('public_sports.m3u')
 # ・公営競技のYouTubeサブは完全廃止
 # ・ここでは「かなチューブ」だけを拾う
 # ・LIVEなし時も「現在LIVEなし」をM3Uに常設する
+# ・同じ tvg-id は更新前に必ず除去して重複させない
 # ============================================================
 
 KANA_STREAMS = 'https://www.youtube.com/@kana_tube/streams'
 KANA_CHANNEL = 'https://www.youtube.com/@kana_tube/streams'
+KANA_TVG_ID = 'youtube.kana.live'
 
 
 def run(cmd, timeout=180):
@@ -67,6 +69,16 @@ def get_url(page):
     return urls[0] if p.returncode == 0 and urls else None
 
 
+def skip_entry(lines, i):
+    i += 1
+    while i < len(lines):
+        s = lines[i].strip()
+        if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
+            break
+        i += 1
+    return i
+
+
 entries = []
 try:
     items = live_items(KANA_STREAMS)
@@ -84,7 +96,7 @@ for title, page in items:
     if url:
         name = f'📺 華奈tube｜{title}'
         ext = (
-            '#EXTINF:-1 tvg-id="youtube.kana.live" '
+            f'#EXTINF:-1 tvg-id="{KANA_TVG_ID}" '
             'tvg-name="華奈tube LIVE" group-title="かなチューブ",'
             + name
         )
@@ -92,21 +104,18 @@ for title, page in items:
         print('OK KANA', title)
         break
 
-# LIVEなしでもプレイリスト上には常設表示する
 if entries:
     display_ext, display_url = entries[0]
 else:
     display_ext = (
-        '#EXTINF:-1 tvg-id="youtube.kana.live" '
+        f'#EXTINF:-1 tvg-id="{KANA_TVG_ID}" '
         'tvg-name="華奈tube LIVE" group-title="かなチューブ",'
         '📺 華奈tube｜現在LIVEなし'
     )
     display_url = KANA_CHANNEL
     print('KANA OFFLINE PLACEHOLDER')
 
-# 単独M3Uも常設更新
-kana_file = Path('kana_live.m3u')
-kana_file.write_text(
+Path('kana_live.m3u').write_text(
     '#EXTM3U\n' + display_ext + '\n' + display_url + '\n',
     encoding='utf-8'
 )
@@ -120,12 +129,18 @@ if start in text and end in text:
     after = text.split(end, 1)[1].lstrip()
     text = before + '\n' + after
 
-# 念のため旧公営YouTubeサブを除去
 lines = text.split('\n')
 out = []
 i = 0
 while i < len(lines):
     line = lines[i]
+    stripped = line.strip()
+
+    # マーカー外に残った旧かなチューブも必ず削除する。
+    if line.startswith('#EXTINF:') and f'tvg-id="{KANA_TVG_ID}"' in line:
+        i = skip_entry(lines, i)
+        continue
+
     if line.startswith('#EXTINF:') and any(g in line for g in [
         '競輪 YouTube LIVE',
         '地方競馬 YouTube LIVE',
@@ -133,15 +148,10 @@ while i < len(lines):
         'ボートレース YouTube LIVE',
         '公営競技 横断LIVE',
     ]):
-        i += 1
-        while i < len(lines):
-            s = lines[i].strip()
-            if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
-                break
-            i += 1
+        i = skip_entry(lines, i)
         continue
 
-    if line.strip() in {
+    if stripped in {
         '## 競輪 YouTube LIVE',
         '## 地方競馬 YouTube LIVE',
         '## オートレース YouTube LIVE',

@@ -1,0 +1,267 @@
+name: One-time EPG Race +1min Switch Patch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/patch_epg_race_plus1.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: one-time-epg-race-plus1-patch
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Patch main_epg_3days.py
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('main_epg_3days.py')
+          text = path.read_text(encoding='utf-8')
+
+          def patch_function(src, func_name, old, new, label):
+              marker = f'def {func_name}('
+              start = src.find(marker)
+              if start < 0:
+                  raise RuntimeError(f'{label}: function not found: {func_name}')
+              next_def = src.find('\ndef ', start + len(marker))
+              end = len(src) if next_def < 0 else next_def + 1
+              chunk = src[start:end]
+              count = chunk.count(old)
+              if count != 1:
+                  raise RuntimeError(f'{label}: expected 1 match, got {count}')
+              chunk = chunk.replace(old, new, 1)
+              return src[:start] + chunk + src[end:]
+
+          # --------------------------------------------------
+          # 地方競馬
+          # 1R: 従来どおり発走前から表示
+          # 2R以降: 前R発走+1分から次R表示
+          # 各R: 自身の発走+1分で終了
+          # --------------------------------------------------
+          old_keiba = '''        # 各Rを「発走10分前～次R発走10分前」で連続表示
+          for idx, (race, start_time) in enumerate(race_times):
+              block_start = max(
+                  pre_start,
+                  start_time - datetime.timedelta(minutes=10),
+              )
+
+              if idx + 1 < len(race_times):
+                  next_time = race_times[idx + 1][1]
+                  block_stop = next_time - datetime.timedelta(minutes=10)
+              else:
+                  block_stop = start_time + datetime.timedelta(minutes=30)
+
+              if block_stop <= block_start:
+                  block_stop = start_time + datetime.timedelta(minutes=15)
+'''
+          new_keiba = '''        # 各Rは「前R発走+1分～当該R発走+1分」で連続表示。
+          # 1Rのみ従来どおり発走前から表示する。
+          for idx, (race, start_time) in enumerate(race_times):
+              if idx == 0:
+                  block_start = pre_start
+              else:
+                  block_start = race_times[idx - 1][1] + datetime.timedelta(minutes=1)
+
+              block_stop = start_time + datetime.timedelta(minutes=1)
+
+              if block_stop <= block_start:
+                  block_stop = block_start + datetime.timedelta(minutes=1)
+'''
+          text = patch_function(text, 'build_keiba_race_epg', old_keiba, new_keiba, 'KEIBA timing')
+          text = patch_function(
+              text,
+              'build_keiba_race_epg',
+              '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=30)\n',
+              '        finish_start = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
+              'KEIBA finish',
+          )
+
+          # --------------------------------------------------
+          # 競輪
+          # --------------------------------------------------
+          old_keirin = '''        for idx, (race, start_time) in enumerate(race_times):
+              block_start = max(
+                  pre_start,
+                  start_time - datetime.timedelta(minutes=8),
+              )
+
+              if idx + 1 < len(race_times):
+                  next_time = race_times[idx + 1][1]
+                  block_stop = next_time - datetime.timedelta(minutes=8)
+              else:
+                  block_stop = start_time + datetime.timedelta(minutes=25)
+
+              if block_stop <= block_start:
+                  block_stop = start_time + datetime.timedelta(minutes=12)
+'''
+          new_keirin = '''        for idx, (race, start_time) in enumerate(race_times):
+              if idx == 0:
+                  block_start = pre_start
+              else:
+                  block_start = race_times[idx - 1][1] + datetime.timedelta(minutes=1)
+
+              block_stop = start_time + datetime.timedelta(minutes=1)
+
+              if block_stop <= block_start:
+                  block_stop = block_start + datetime.timedelta(minutes=1)
+'''
+          text = patch_function(text, 'build_keirin_race_epg', old_keirin, new_keirin, 'KEIRIN timing')
+          text = patch_function(
+              text,
+              'build_keirin_race_epg',
+              '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n',
+              '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
+              'KEIRIN finish',
+          )
+
+          # --------------------------------------------------
+          # オートレース
+          # --------------------------------------------------
+          text = patch_function(text, 'build_autorace_race_epg', old_keirin, new_keirin, 'AUTORACE timing')
+          text = patch_function(
+              text,
+              'build_autorace_race_epg',
+              '        finish = race_times[-1][1] + datetime.timedelta(minutes=25)\n',
+              '        finish = race_times[-1][1] + datetime.timedelta(minutes=1)\n',
+              'AUTORACE finish',
+          )
+
+          # --------------------------------------------------
+          # ボートレース
+          # --------------------------------------------------
+          old_boat = '''        # Continuous race blocks:
+          # from 10 min before each deadline until 10 min before next race.
+          for idx, (race, race_dt) in enumerate(race_dts):
+              block_start = max(
+                  pre_start,
+                  race_dt - datetime.timedelta(minutes=10),
+              )
+
+              if idx + 1 < len(race_dts):
+                  next_dt = race_dts[idx + 1][1]
+                  block_stop = next_dt - datetime.timedelta(minutes=10)
+              else:
+                  block_stop = race_dt + datetime.timedelta(minutes=30)
+
+              if block_stop <= block_start:
+                  block_stop = race_dt + datetime.timedelta(minutes=15)
+'''
+          new_boat = '''        # 各Rは「前R発走+1分～当該R発走+1分」で連続表示。
+          # 1Rのみ従来どおり発走前から表示する。
+          for idx, (race, race_dt) in enumerate(race_dts):
+              if idx == 0:
+                  block_start = pre_start
+              else:
+                  block_start = race_dts[idx - 1][1] + datetime.timedelta(minutes=1)
+
+              block_stop = race_dt + datetime.timedelta(minutes=1)
+
+              if block_stop <= block_start:
+                  block_stop = block_start + datetime.timedelta(minutes=1)
+'''
+          text = patch_function(text, 'build_boat_race_epg', old_boat, new_boat, 'BOAT timing')
+          text = patch_function(
+              text,
+              'build_boat_race_epg',
+              '        finish = race_dts[-1][1] + datetime.timedelta(minutes=30)\n',
+              '        finish = race_dts[-1][1] + datetime.timedelta(minutes=1)\n',
+              'BOAT finish',
+          )
+
+          # --------------------------------------------------
+          # JRA EAST / WEST / HOKKAIDO
+          # GCH本放送(jra.gch)はこの関数では扱わないため変更なし。
+          # --------------------------------------------------
+          old_jra = '''        for i, (dt, venue, race) in enumerate(flat):
+              block_start = max(
+                  pre,
+                  dt - datetime.timedelta(minutes=10),
+              )
+
+              next_dt = flat[i + 1][0] if i + 1 < len(flat) else None
+              long_break = bool(next_dt and (next_dt - dt) >= datetime.timedelta(minutes=40))
+
+              if next_dt:
+                  block_stop = (
+                      dt + datetime.timedelta(minutes=20)
+                      if long_break
+                      else next_dt - datetime.timedelta(minutes=10)
+                  )
+              else:
+                  block_stop = dt + datetime.timedelta(minutes=30)
+
+              if block_stop <= block_start:
+                  block_stop = dt + datetime.timedelta(minutes=15)
+'''
+          new_jra = '''        for i, (dt, venue, race) in enumerate(flat):
+              if i == 0:
+                  block_start = pre
+              else:
+                  block_start = flat[i - 1][0] + datetime.timedelta(minutes=1)
+
+              block_stop = dt + datetime.timedelta(minutes=1)
+
+              if block_stop <= block_start:
+                  block_stop = block_start + datetime.timedelta(minutes=1)
+
+              # 発走+1分で必ず次R表示へ進めるため、中休み表示は挟まない。
+              long_break = False
+'''
+          text = patch_function(text, 'build_jra_stream_epg', old_jra, new_jra, 'JRA timing')
+          text = patch_function(
+              text,
+              'build_jra_stream_epg',
+              '        finish = flat[-1][0] + datetime.timedelta(minutes=30)\n',
+              '        finish = flat[-1][0] + datetime.timedelta(minutes=1)\n',
+              'JRA finish',
+          )
+
+          # Marker comment for future maintenance.
+          marker = '# EPG race progression rule: switch to the next race at scheduled post time + 1 minute.\n'
+          if marker not in text:
+              insert_at = text.find('EPG_DAYS = 3')
+              if insert_at < 0:
+                  raise RuntimeError('EPG_DAYS marker not found')
+              text = text[:insert_at] + marker + text[insert_at:]
+
+          path.write_text(text, encoding='utf-8')
+          print('main_epg_3days.py patched successfully')
+          PY
+
+      - name: Syntax check
+        run: python -m py_compile main_epg_3days.py
+
+      - name: Generate updated EPG
+        run: python main_epg_3days.py
+
+      - name: Validate XML
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+
+      - name: Commit main generator and EPG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add main_epg_3days.py epg.xml
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "EPG: switch races at post time plus 1 minute"
+          git pull --rebase origin main
+          git push

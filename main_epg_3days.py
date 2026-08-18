@@ -139,7 +139,7 @@ ICON_MAP = {
 
 
 GCH_GUIDES_URL = (
-    "https://github.com/karenda-jp/etc/raw/refs/heads/main/guides.xml"
+    "https://raw.githubusercontent.com/ajiousama/himitsu/main/guides.xml"
 )
 GCH_TVG_ID = "jra.gch"
 GCH_DISPLAY_NAME = "グリーンチャンネル"

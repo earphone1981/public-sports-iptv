@@ -1,0 +1,48 @@
+name: Normalize Public Sports Labels
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'epg.xml'
+      - 'public_sports.m3u'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-public-sports
+  cancel-in-progress: true
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Normalize EPG and M3U labels/status
+        run: python normalize_public_sports_labels.py
+
+      - name: Validate XML
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+
+      - name: Commit normalized files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epg.xml public_sports.m3u
+          git diff --cached --quiet && echo "No normalization changes" && exit 0
+          git commit -m "Normalize public sports labels and EPG status"
+          git pull --rebase origin main
+          git push

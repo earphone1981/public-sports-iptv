@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 23 * * *'
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/epg_update.trigger'
 
 concurrency:
   group: public-sports-epg
@@ -24,6 +27,52 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Patch AutoRace exact-time parser
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('main_epg_3days.py')
+          s = p.read_text(encoding='utf-8')
+
+          old = 'AUTORACE_PROGRAM_BASE = "https://autorace.jp/race_info/Program/{slug}/{date}_{race_no}"'
+          new = 'AUTORACE_PROGRAM_BASE = "https://autorace.jp/race_info/Program/Web/{slug}/{date}_{race_no}"'
+          if old in s:
+              s = s.replace(old, new)
+
+          # AutoRace WEB出走表は「発走予定10 : 56」のようにコロン前後へ空白が入る。
+          s = s.replace(
+              'r"(?:発走予定|発走時刻|発走)\\s*[:：]?\\s*([0-2]?\\d:[0-5]\\d)"',
+              'r"(?:発走予定|発走時刻|発走)\\s*[:：]?\\s*([0-2]?\\d\\s*[:：]\\s*[0-5]\\d)"'
+          )
+          s = s.replace(
+              'r"投票締切\\s*[:：]?\\s*([0-2]?\\d:[0-5]\\d)"',
+              'r"投票締切\\s*[:：]?\\s*([0-2]?\\d\\s*[:：]\\s*[0-5]\\d)"'
+          )
+
+          # 抽出後の「10 : 56」「10：56」を必ず HH:MM に正規化。
+          needle = 'time_text = m.group(1) if m else ""\n'
+          repl = (
+              'time_text = m.group(1) if m else ""\n'
+              '    if time_text:\n'
+              '        time_text = re.sub(r"\\s+", "", time_text).replace("：", ":")\n'
+          )
+          if needle in s and repl not in s:
+              s = s.replace(needle, repl, 1)
+
+          needle2 = 'hh, mm = map(int, m.group(1).split(":"))\n'
+          repl2 = (
+              'raw_deadline = re.sub(r"\\s+", "", m.group(1)).replace("：", ":")\n'
+              '            hh, mm = map(int, raw_deadline.split(":"))\n'
+          )
+          if needle2 in s:
+              s = s.replace(needle2, repl2, 1)
+
+          p.write_text(s, encoding='utf-8')
+          print('AutoRace parser patched: Program/Web + spaced-colon times')
+          PY
 
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
@@ -51,7 +100,6 @@ jobs:
               ch = channels.get(channel_id)
               if ch is None:
                   ch = ET.Element('channel', {'id': channel_id})
-                  # programme群より前にchannelを置く
                   insert_at = 0
                   for i, child in enumerate(list(root)):
                       if child.tag == 'channel':

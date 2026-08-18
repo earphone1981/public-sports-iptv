@@ -2,11 +2,12 @@ from pathlib import Path
 from urllib.parse import quote
 
 # ============================================================
-# 公営まとめ M3U - 自宅PC版 / JRA 8ch対応
+# 公営まとめ M3U - 一発更新用
 #
-# ・競輪・地方競馬・オート・ボートは従来どおりローカルM3Uを統合
+# ・競輪・地方競馬・オート・ボートを統合
+# ・YouTube系は「かなチューブ」と「その他LIVE」だけ残す
+# ・各公営競技のYouTubeサブチャンネルは統合しない
 # ・中央競馬は GitHub 上の HQ 4本 + LQ 4本 = 8ch
-# ・HQ/LQ は同じ tvg-id を共有するため、同じEPGを表示
 # ・EPGは GitHub上の epg.xml を読み込む
 # ============================================================
 
@@ -15,6 +16,13 @@ INPUTS = [
     ("地方競馬", Path("keiba_master.m3u")),
     ("オートレース", Path("autorace_master.m3u")),
     ("ボートレース", Path("boatrace_today.m3u")),
+]
+
+YOUTUBE_INPUTS = [
+    ("かなチューブ", Path("kana_live.m3u")),
+    ("その他LIVE", Path("youtube_test.m3u")),
+    ("その他LIVE", Path("namibia_live.m3u")),
+    ("その他LIVE", Path("matsuyama_airport_live.m3u")),
 ]
 
 OUT = Path("public_sports.m3u")
@@ -28,99 +36,52 @@ EPG_URL = (
     f"{GITHUB_USER}/{GITHUB_REPO}/{GITHUB_BRANCH}/epg.xml"
 )
 
-# 同じ競走系統のHQ/LQは同一tvg-idを使う
-# → XMLTVの同じ番組表を両方へ表示させる
 JRA_CHANNELS = [
-    {
-        "tvg_id": "jra.gch",
-        "tvg_name": "グリーンチャンネル",
-        "display_name": "グリーンチャンネル（高画質）",
-        "file": "gchmain.m3u8",
-    },
-    {
-        "tvg_id": "jra.gch",
-        "tvg_name": "グリーンチャンネル",
-        "display_name": "グリーンチャンネル（低画質）",
-        "file": "gchmain_LQ.m3u8",
-    },
-    {
-        "tvg_id": "jra.east",
-        "tvg_name": "JRA EAST",
-        "display_name": "JRA EAST（高画質）",
-        "file": "EAST_test.m3u8",
-    },
-    {
-        "tvg_id": "jra.east",
-        "tvg_name": "JRA EAST",
-        "display_name": "JRA EAST（低画質）",
-        "file": "EAST_test_LQ.m3u8",
-    },
-    {
-        "tvg_id": "jra.west",
-        "tvg_name": "JRA WEST",
-        "display_name": "JRA WEST（高画質）",
-        "file": "WEST_master .m3u8",
-    },
-    {
-        "tvg_id": "jra.west",
-        "tvg_name": "JRA WEST",
-        "display_name": "JRA WEST（低画質）",
-        "file": "WEST_master_LQ.m3u8",
-    },
-    {
-        "tvg_id": "jra.hokkaido",
-        "tvg_name": "JRA HOKKAIDO",
-        "display_name": "JRA HOKKAIDO（高画質）",
-        "file": "hokaido_master (1).m3u8",
-    },
-    {
-        "tvg_id": "jra.hokkaido",
-        "tvg_name": "JRA HOKKAIDO",
-        "display_name": "JRA HOKKAIDO（低画質）",
-        "file": "hokaido_master_LQ.m3u8",
-    },
+    {"tvg_id":"jra.gch","tvg_name":"グリーンチャンネル","display_name":"グリーンチャンネル（高画質）","file":"gchmain.m3u8"},
+    {"tvg_id":"jra.gch","tvg_name":"グリーンチャンネル","display_name":"グリーンチャンネル（低画質）","file":"gchmain_LQ.m3u8"},
+    {"tvg_id":"jra.east","tvg_name":"JRA EAST","display_name":"JRA EAST（高画質）","file":"EAST_test.m3u8"},
+    {"tvg_id":"jra.east","tvg_name":"JRA EAST","display_name":"JRA EAST（低画質）","file":"EAST_test_LQ.m3u8"},
+    {"tvg_id":"jra.west","tvg_name":"JRA WEST","display_name":"JRA WEST（高画質）","file":"WEST_master .m3u8"},
+    {"tvg_id":"jra.west","tvg_name":"JRA WEST","display_name":"JRA WEST（低画質）","file":"WEST_master_LQ.m3u8"},
+    {"tvg_id":"jra.hokkaido","tvg_name":"JRA HOKKAIDO","display_name":"JRA HOKKAIDO（高画質）","file":"hokaido_master (1).m3u8"},
+    {"tvg_id":"jra.hokkaido","tvg_name":"JRA HOKKAIDO","display_name":"JRA HOKKAIDO（低画質）","file":"hokaido_master_LQ.m3u8"},
 ]
 
 
 def read_entries(path: Path):
     if not path.exists():
-        raise FileNotFoundError(f"{path} がありません")
+        return []
 
-    text = path.read_text(encoding="utf-8-sig")
+    text = path.read_text(encoding="utf-8-sig", errors="replace")
     lines = [line.rstrip() for line in text.replace("\r\n", "\n").split("\n")]
 
     entries = []
     i = 0
-
     while i < len(lines):
         line = lines[i].strip()
-
         if line.startswith("#EXTINF:"):
             extinf = line
+            options = []
             url = ""
-
             j = i + 1
             while j < len(lines):
                 nxt = lines[j].strip()
-
                 if not nxt:
                     j += 1
                     continue
-
                 if nxt.startswith("#EXTINF:"):
                     break
-
+                if nxt.startswith("#EXTVLCOPT:"):
+                    options.append(nxt)
+                    j += 1
+                    continue
                 if not nxt.startswith("#"):
                     url = nxt
                     break
-
                 j += 1
-
             if url:
-                entries.append((extinf, url))
-
+                entries.append((extinf, options, url))
         i += 1
-
     return entries
 
 
@@ -132,34 +93,44 @@ def raw_github_url(filename: str) -> str:
     )
 
 
+def append_entries(out, entries):
+    for extinf, options, url in entries:
+        out.append(extinf)
+        out.extend(options)
+        out.append(url)
+        out.append("")
+
+
 def main():
     out = [f'#EXTM3U url-tvg="{EPG_URL}"', ""]
     total = 0
 
-    # --------------------------------------------------------
-    # 既存4競技
-    # --------------------------------------------------------
+    # 公営4競技
     for label, path in INPUTS:
         entries = read_entries(path)
+        if not entries:
+            print(f"{label}: 0 ch <- {path.name}")
+            continue
         print(f"{label}: {len(entries)} ch <- {path.name}")
-
         out.append(f"## {label}")
-
-        for extinf, url in entries:
-            out.append(extinf)
-            out.append(url)
-            out.append("")
-
+        append_entries(out, entries)
         total += len(entries)
 
-    # --------------------------------------------------------
-    # 中央競馬 / HQ 4ch + LQ 4ch
-    # --------------------------------------------------------
-    out.append("## 中央競馬")
+    # YouTube系：かなチューブ + その他LIVEのみ
+    for label, path in YOUTUBE_INPUTS:
+        entries = read_entries(path)
+        if not entries:
+            print(f"{label}: 現在LIVEなし <- {path.name}")
+            continue
+        print(f"{label}: {len(entries)} ch <- {path.name}")
+        out.append(f"## {label}")
+        append_entries(out, entries)
+        total += len(entries)
 
+    # 中央競馬 HQ/LQ
+    out.append("## 中央競馬")
     for ch in JRA_CHANNELS:
         raw_url = raw_github_url(ch["file"])
-
         extinf = (
             f'#EXTINF:-1 '
             f'tvg-id="{ch["tvg_id"]}" '
@@ -167,28 +138,15 @@ def main():
             f'group-title="中央競馬",'
             f'{ch["display_name"]}'
         )
-
-        out.append(extinf)
-        out.append(raw_url)
-        out.append("")
-
-        print(
-            f'中央競馬: {ch["display_name"]} '
-            f'<- {ch["file"]}'
-        )
-
+        out.extend([extinf, raw_url, ""])
         total += 1
 
-    OUT.write_text(
-        "\n".join(out).rstrip() + "\n",
-        encoding="utf-8",
-    )
+    OUT.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
 
-    print("")
     print("============================")
     print("M3U一本化 完了")
     print(f"合計チャンネル数: {total}")
-    print("中央競馬追加: 8 ch（高画質4 + 低画質4）")
+    print("YouTube: かなチューブ + その他LIVEのみ")
     print(f"EPG: {EPG_URL}")
     print(f"出力: {OUT}")
     print("============================")

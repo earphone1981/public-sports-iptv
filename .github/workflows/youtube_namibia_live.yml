@@ -2,6 +2,11 @@ name: Update YouTube LIVE Channels
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - public_sports.m3u
   schedule:
     - cron: "17 * * * *"
 

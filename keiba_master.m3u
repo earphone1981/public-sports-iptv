@@ -1,46 +1,46 @@
 #EXTM3U
 
-#EXTINF:-1 tvg-id="chihou.obihiro" tvg-name="帯広けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/obihiro.png" group-title="競馬 / 地方競馬",帯広けいば
+#EXTINF:-1 tvg-id="chihou.obihiro" tvg-name="帯広けいば（ばんえい競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/obihiro.png" group-title="競馬 / 地方競馬",帯広けいば（ばんえい競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/obihiro5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="門別けいば" tvg-logo="https://www.hokkaidokeiba.net/common/images/head/logo.png" group-title="競馬 / 地方競馬",門別けいば
+#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="門別けいば（ホッカイドウ競馬）" tvg-logo="https://www.hokkaidokeiba.net/common/images/head/logo.png" group-title="競馬 / 地方競馬",門別けいば（ホッカイドウ競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/monbetsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="盛岡けいば" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",盛岡けいば
+#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="盛岡けいば（岩手競馬）" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",盛岡けいば（岩手競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/morioka5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="水沢けいば" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",水沢けいば
+#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="水沢けいば（岩手競馬）" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",水沢けいば（岩手競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/mizusawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="浦和けいば" tvg-logo="https://www.urawa-keiba.jp/assets/img/common/logo.png" group-title="競馬 / 地方競馬",浦和けいば
+#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="浦和けいば（南関東競馬）" tvg-logo="https://www.urawa-keiba.jp/assets/img/common/logo.png" group-title="競馬 / 地方競馬",浦和けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/urawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="船橋けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/funabashi.png" group-title="競馬 / 地方競馬",船橋けいば
+#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="船橋けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/funabashi.png" group-title="競馬 / 地方競馬",船橋けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/funabashi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.oi" tvg-name="大井けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",大井けいば
+#EXTINF:-1 tvg-id="chihou.oi" tvg-name="大井けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",大井けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/ooi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="川崎けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kawasaki.png" group-title="競馬 / 地方競馬",川崎けいば
+#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="川崎けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kawasaki.png" group-title="競馬 / 地方競馬",川崎けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kawasaki5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kanazawa.png" group-title="競馬 / 地方競馬",金沢けいば
+#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢けいば（金沢競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kanazawa.png" group-title="競馬 / 地方競馬",金沢けいば（金沢競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kanazawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/nagoya.png" group-title="競馬 / 地方競馬",名古屋けいば
+#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋けいば（名古屋競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/nagoya.png" group-title="競馬 / 地方競馬",名古屋けいば（名古屋競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/nagoya5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kasamatsu.png" group-title="競馬 / 地方競馬",笠松けいば
+#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松けいば（笠松競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kasamatsu.png" group-title="競馬 / 地方競馬",笠松けいば（笠松競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kasamatsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",園田けいば
+#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田けいば（園田競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",園田けいば（園田競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/sonoda5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",姫路けいば
+#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路けいば（姫路競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",姫路けいば（姫路競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/himeji5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="こうちけいば" tvg-logo="https://www.keiba.or.jp/wp/wp-content/uploads/2016/07/0052a4614394e22c55614f818fd3138e.png" group-title="競馬 / 地方競馬",こうちけいば
+#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="こうちけいば（高知競馬）" tvg-logo="https://www.keiba.or.jp/wp/wp-content/uploads/2016/07/0052a4614394e22c55614f818fd3138e.png" group-title="競馬 / 地方競馬",こうちけいば（高知競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kouchi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀けいば" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/saga.png" group-title="競馬 / 地方競馬",佐賀けいば
+#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀けいば（佐賀競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/saga.png" group-title="競馬 / 地方競馬",佐賀けいば（佐賀競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/saga5.m3u8

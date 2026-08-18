@@ -1,12 +1,8 @@
-# trigger: workflow already exists on default branch
 name: One-time EPG Race +1min Switch Patch
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/patch_epg_race_plus1.yml'
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:

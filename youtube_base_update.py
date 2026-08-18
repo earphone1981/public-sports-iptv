@@ -9,10 +9,10 @@ M3U = Path('public_sports.m3u')
 # ・公営競技のYouTubeサブは完全廃止
 # ・「かなチューブ」は youtube_dynamic_update.py 側
 # ・ここでは「その他LIVE」だけ更新する
+# ・同じ tvg-id は更新前に必ず除去して重複させない
 # ============================================================
 
 SOURCES = [
-    # 固定動画IDで安定しているもの
     ('ナミビア', 'https://www.youtube.com/watch?v=ydYDqZQpim8',
      'youtube.namibia.live', '🇳🇦 ナミビア LIVE', 'namibia_live.m3u'),
     ('松山市クリーンセンター', 'https://www.youtube.com/watch?v=C0gpM_qIIl0',
@@ -21,8 +21,6 @@ SOURCES = [
      'youtube.matsuyama.airport', '✈️ 松山空港 LIVE', 'matsuyama_airport_live.m3u'),
     ('大阪環状線', 'https://www.youtube.com/watch?v=HYQHcAqNBms',
      'youtube.osaka.loop.live', '🚃 大阪環状線 LIVE', ''),
-
-    # 配信動画IDが変わっても一発更新で現行LIVEを探すもの
     ('道後温泉本館', 'ytsearch3:道後温泉本館 ライブカメラ LIVE',
      'youtube.dogo.live', '♨️ 道後温泉本館 LIVE', ''),
     ('松山市本町', 'ytsearch3:松山市本町 ライブカメラ 南海放送NEWS LIVE',
@@ -34,6 +32,8 @@ SOURCES = [
     ('しまなみ', 'ytsearch5:しまなみ ライブカメラ テレビ愛媛 LIVE',
      'youtube.shimanami.live', '🌉 しまなみ LIVE', ''),
 ]
+
+MANAGED_TVG_IDS = {tvg for _, _, tvg, _, _ in SOURCES}
 
 
 def get_url(source):
@@ -63,6 +63,16 @@ def ext(label, tvg, display):
     )
 
 
+def skip_entry(lines, i):
+    i += 1
+    while i < len(lines):
+        s = lines[i].strip()
+        if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
+            break
+        i += 1
+    return i
+
+
 results = []
 for label, source, tvg, display, file_name in SOURCES:
     try:
@@ -88,25 +98,33 @@ text = M3U.read_text(encoding='utf-8-sig').replace('\r\n', '\n')
 start = '# === BASE YOUTUBE LIVE START ==='
 end = '# === BASE YOUTUBE LIVE END ==='
 
-# 旧BASE形式・旧公営サブを除去
 lines = text.split('\n')
 out = []
 i = 0
 while i < len(lines):
     line = lines[i]
+    stripped = line.strip()
 
-    if line.strip() == '# === BASE YOUTUBE LIVE ===':
+    if stripped == '# === BASE YOUTUBE LIVE ===':
         i += 1
         while i < len(lines) and not lines[i].strip().startswith('# === DYNAMIC YOUTUBE LIVE START ==='):
             i += 1
         continue
 
-    if line.strip() == start:
+    if stripped == start:
         i += 1
         while i < len(lines) and lines[i].strip() != end:
             i += 1
         if i < len(lines):
             i += 1
+        continue
+
+    # BASE管理対象は、マーカー外に残っていても必ず削除する。
+    # これにより v11 → Actions を何回繰り返しても増殖しない。
+    if line.startswith('#EXTINF:') and any(
+        f'tvg-id="{tvg}"' in line for tvg in MANAGED_TVG_IDS
+    ):
+        i = skip_entry(lines, i)
         continue
 
     # 公営競技YouTubeサブは残さない
@@ -117,15 +135,10 @@ while i < len(lines):
         'ボートレース YouTube LIVE',
         '公営競技 横断LIVE',
     ]):
-        i += 1
-        while i < len(lines):
-            s = lines[i].strip()
-            if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
-                break
-            i += 1
+        i = skip_entry(lines, i)
         continue
 
-    if line.strip() in {
+    if stripped in {
         '## 競輪 YouTube LIVE',
         '## 地方競馬 YouTube LIVE',
         '## オートレース YouTube LIVE',

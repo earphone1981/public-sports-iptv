@@ -46,7 +46,6 @@ jobs:
           prefix=today.strftime('%Y%m%d')
           cid='auto.hamamatsu'
 
-          # 8/17-20 浜松普通開催。WINTICKET開催日程で当日開催を確認。
           if not (datetime.date(2026,8,17) <= today <= datetime.date(2026,8,20)):
               print('Hamamatsu fallback: not applicable today')
               raise SystemExit(0)
@@ -64,7 +63,6 @@ jobs:
           except Exception as e:
               print('WINTICKET confirmation warning:',e)
 
-          # 浜松通常12Rの標準発走時刻。直近の浜松通常/G2でも同一系列、最終12R=16:50。
           times=['10:39','11:07','11:35','12:04','12:35','13:07','13:41','14:16','14:52','15:29','16:08','16:50']
 
           path=Path('epg.xml')
@@ -135,7 +133,7 @@ jobs:
           import xml.etree.ElementTree as ET
           from pathlib import Path
           path=Path('epg.xml'); tree=ET.parse(path); root=tree.getroot()
-          wanted={'keirin.kawasaki':'かわさきⓀ','keirin.nagoya':'なごやⓀ','keirin.kochi':'こうちⓀ'}
+          wanted={'keirin.kawasaki':'かわさき','keirin.nagoya':'なごや','keirin.kochi':'こうち'}
           channels={ch.get('id'):ch for ch in root.findall('channel')}
           for cid,name in wanted.items():
               ch=channels.get(cid)
@@ -146,6 +144,9 @@ jobs:
               else: ET.SubElement(ch,'display-name').text=name
           ET.indent(tree,space='    '); tree.write(path,encoding='utf-8',xml_declaration=True)
           PY
+
+      - name: Normalize names, LIVE status and 25:00 boundary
+        run: python normalize_public_sports_labels.py
 
       - name: Validate XML and today's AutoRace
         run: |
@@ -167,7 +168,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epg.xml
+          git add epg.xml public_sports.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update 3-day public sports EPG"
           git pull --rebase origin main

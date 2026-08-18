@@ -26,11 +26,8 @@ jobs:
       - name: Generate 3-day EPG
         run: python main_epg_3days.py
 
-      - name: Normalize race titles and status
-        run: python -c "from pathlib import Path; from normalize_public_sports_labels import normalize_epg; normalize_epg(Path('epg.xml'))"
-
-      - name: Switch to next race one minute after post time
-        run: python finalize_race_epg.py
+      - name: Finalize v11 race titles and one-minute switching
+        run: python fix_epg_v11.py
 
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"

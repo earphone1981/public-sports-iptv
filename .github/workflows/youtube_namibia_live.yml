@@ -57,15 +57,42 @@ jobs:
       - name: Refresh venue and cross-channel LIVE entries
         run: python youtube_dynamic_update.py
 
-      - name: Clean duplicate and orphan section headers
+      - name: Deduplicate その他LIVE and clean headers
         shell: bash
         run: |
           python - <<'PY'
           from pathlib import Path
+          import re
 
           path = Path('public_sports.m3u')
           lines = path.read_text(encoding='utf-8-sig').replace('\r\n', '\n').split('\n')
 
+          # 1) その他LIVEだけ、同じ tvg-id は最初の1本だけ残す。
+          #    公営競技の「本線＋別配信元」は消さない。
+          seen_other = set()
+          deduped = []
+          i = 0
+          while i < len(lines):
+              line = lines[i]
+              if line.lstrip().startswith('#EXTINF:') and 'group-title="その他LIVE"' in line:
+                  m = re.search(r'tvg-id="([^"]+)"', line)
+                  tvg_id = m.group(1) if m else None
+                  if tvg_id and tvg_id in seen_other:
+                      print('DROP duplicate その他LIVE:', tvg_id)
+                      i += 1
+                      # EXTINFに属するURL/EXTVLCOPT等を丸ごと飛ばす。
+                      while i < len(lines):
+                          s = lines[i].lstrip()
+                          if s.startswith('#EXTINF:') or s.startswith('## ') or s.startswith('# ==='):
+                              break
+                          i += 1
+                      continue
+                  if tvg_id:
+                      seen_other.add(tvg_id)
+              deduped.append(line)
+              i += 1
+
+          # 2) 空見出し・積み重なった見出しを除去。
           managed_headers = {
               '## その他LIVE',
               '## 野球LIVE',
@@ -78,26 +105,20 @@ jobs:
 
           out = []
           i = 0
-          while i < len(lines):
-              line = lines[i].strip()
-
+          while i < len(deduped):
+              line = deduped[i].strip()
               if line in managed_headers:
                   j = i + 1
-                  while j < len(lines) and not lines[j].strip():
+                  while j < len(deduped) and not deduped[j].strip():
                       j += 1
-
-                  # Keep a managed header only when the next meaningful line
-                  # is an actual EXTINF entry. This removes orphan/stacked headers.
-                  if j < len(lines) and lines[j].lstrip().startswith('#EXTINF:'):
+                  if j < len(deduped) and deduped[j].lstrip().startswith('#EXTINF:'):
                       if not out or out[-1].strip() != line:
                           out.append(line)
                   i += 1
                   continue
-
-              out.append(lines[i].rstrip())
+              out.append(deduped[i].rstrip())
               i += 1
 
-          # Collapse excessive blank lines without touching entries/URLs.
           cleaned = []
           for line in out:
               if not line.strip() and cleaned and not cleaned[-1].strip():
@@ -119,6 +140,8 @@ jobs:
           fi
           python - <<'PY'
           from pathlib import Path
+          import re
+
           lines = Path('public_sports.m3u').read_text(encoding='utf-8-sig').splitlines()
           managed = {
               '## その他LIVE', '## 野球LIVE', '## 競輪 YouTube LIVE',
@@ -132,7 +155,19 @@ jobs:
                       j += 1
                   if j >= len(lines) or not lines[j].lstrip().startswith('#EXTINF:'):
                       raise SystemExit(f'ERROR: orphan header remains at line {i+1}: {line}')
-          print('M3U validation OK')
+
+          seen = set()
+          for i, line in enumerate(lines, 1):
+              if line.startswith('#EXTINF:') and 'group-title="その他LIVE"' in line:
+                  m = re.search(r'tvg-id="([^"]+)"', line)
+                  if not m:
+                      continue
+                  tvg_id = m.group(1)
+                  if tvg_id in seen:
+                      raise SystemExit(f'ERROR: duplicate その他LIVE tvg-id remains: {tvg_id} at line {i}')
+                  seen.add(tvg_id)
+
+          print('M3U validation OK / その他LIVE unique:', len(seen))
           PY
 
       - name: Commit updated LIVE URLs

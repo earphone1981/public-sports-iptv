@@ -14,7 +14,6 @@ on:
       - "main_epg_3days.py"
       - "fix_epg_v11.py"
       - "fix_boat_waiting_title.py"
-      - "fix_autorace_today_official.py"
       - "fix_epg_duplicate_channel_ids.py"
       - ".github/workflows/update_epg_3days.yml"
 
@@ -47,8 +46,9 @@ jobs:
       - name: Show BOAT first race while waiting
         run: python fix_boat_waiting_title.py
 
-      - name: Fix today's AutoRace from official current-day page
-        run: python fix_autorace_today_official.py
+      # AutoRaceの当日専用後処理は実行しない。
+      # main_epg_3days.py が生成した開催データを正とし、
+      # 当日ページ検出失敗を「非開催」と誤認して上書きする事故を防ぐ。
 
       - name: Fix duplicate-name channel IDs
         run: python fix_epg_duplicate_channel_ids.py

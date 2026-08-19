@@ -55,6 +55,9 @@ jobs:
       - name: Refresh public sports official YouTube LIVE
         run: python public_sports_youtube_update.py
 
+      - name: Hard dedupe public sports YouTube
+        run: python dedupe_public_sports_youtube.py
+
       - name: Refresh かなチューブ
         run: python youtube_dynamic_update.py
 

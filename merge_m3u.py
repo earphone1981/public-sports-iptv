@@ -14,11 +14,11 @@ INPUTS = [
     ('ボートレース', BASE/'boatrace_today.m3u'),
 ]
 
-# 公営側には公営YouTube＋かなチューブだけを残す。
-# その他LIVEは ajiousama/himitsu 側へ移動するため、ここでは読まない。
+# 公営YouTube・かなチューブ・一般LIVEをそれぞれのソースから統合する。
 YOUTUBE_INPUTS = [
     ('公営YouTube', BASE/'public_sports_youtube.m3u'),
     ('かなチューブ', BASE/'kana_live.m3u'),
+    ('その他LIVE', BASE/'other_live.m3u'),
 ]
 
 JRA = [
@@ -86,7 +86,6 @@ def append_file(out, label, path, seen_ids=None, seen_exact=None):
         url=block[-1] if block else ''
         exact=(ext,url)
 
-        # YouTube系は同一tvg-idを1件だけ。tvg-id無しも同一EXTINF+URLを1件だけ。
         if tvg_id:
             if tvg_id in seen_ids:
                 continue
@@ -119,12 +118,9 @@ def main():
     out=[f'#EXTM3U url-tvg="{EPG_URL}"','']
     total=0
 
-    # 通常4競技は各マスターから毎回完全再構築。
     for label,path in INPUTS:
         total += append_file(out,label,path)
 
-    # YouTubeは毎回ソースM3Uから再構築し、前回public_sports.m3uは一切継承しない。
-    # これで更新のたびに同じチャンネルが積み上がることを防ぐ。
     seen_youtube_ids=set()
     seen_youtube_exact=set()
     for label,path in YOUTUBE_INPUTS:

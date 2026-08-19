@@ -24,9 +24,10 @@ on:
 permissions:
   contents: write
 
+# public_sports.m3u / epg.xml を書き換えるWorkflowを同じキューで直列化する。
 concurrency:
-  group: normalize-public-sports
-  cancel-in-progress: true
+  group: public-sports-m3u-writer
+  cancel-in-progress: false
 
 jobs:
   normalize:
@@ -42,6 +43,9 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+
+      - name: Sync latest main before generation
+        run: git pull --ff-only origin main
 
       - name: Rebuild public M3U
         run: python merge_m3u.py

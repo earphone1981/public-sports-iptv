@@ -1,5 +1,6 @@
 from pathlib import Path
 from urllib.parse import quote
+import re
 
 BASE = Path(__file__).resolve().parent
 OUT = BASE / 'public_sports.m3u'
@@ -13,12 +14,11 @@ INPUTS = [
     ('ボートレース', BASE/'boatrace_today.m3u'),
 ]
 
+# 公営側には公営YouTube＋かなチューブだけを残す。
+# その他LIVEは ajiousama/himitsu 側へ移動するため、ここでは読まない。
 YOUTUBE_INPUTS = [
     ('公営YouTube', BASE/'public_sports_youtube.m3u'),
     ('かなチューブ', BASE/'kana_live.m3u'),
-    ('その他LIVE', BASE/'youtube_test.m3u'),
-    ('その他LIVE', BASE/'namibia_live.m3u'),
-    ('その他LIVE', BASE/'matsuyama_airport_live.m3u'),
 ]
 
 JRA = [
@@ -62,18 +62,41 @@ def read_entries(path):
     return entries
 
 
-def append_file(out, label, path):
+def attr(ext, name):
+    m = re.search(rf'{re.escape(name)}="([^"]*)"', ext)
+    return m.group(1).strip() if m else ''
+
+
+def append_file(out, label, path, seen_ids=None, seen_exact=None):
     entries=read_entries(path)
     if not entries:
         print(label, '0 <-', path.name)
         return 0
+
+    if seen_ids is None:
+        seen_ids=set()
+    if seen_exact is None:
+        seen_exact=set()
+
+    added=0
     last_group=None
     for block in entries:
         ext=block[0]
-        group=''
-        marker='group-title="'
-        if marker in ext:
-            group=ext.split(marker,1)[1].split('"',1)[0]
+        tvg_id=attr(ext,'tvg-id')
+        url=block[-1] if block else ''
+        exact=(ext,url)
+
+        # YouTube系は同一tvg-idを1件だけ。tvg-id無しも同一EXTINF+URLを1件だけ。
+        if tvg_id:
+            if tvg_id in seen_ids:
+                continue
+            seen_ids.add(tvg_id)
+        else:
+            if exact in seen_exact:
+                continue
+            seen_exact.add(exact)
+
+        group=attr(ext,'group-title')
         if group and group != last_group:
             out.append('## '+group)
             last_group=group
@@ -82,8 +105,10 @@ def append_file(out, label, path):
             last_group=label
         out.extend(block)
         out.append('')
-    print(label, len(entries), '<-', path.name)
-    return len(entries)
+        added += 1
+
+    print(label, added, '<-', path.name)
+    return added
 
 
 def raw(filename):
@@ -93,16 +118,26 @@ def raw(filename):
 def main():
     out=[f'#EXTM3U url-tvg="{EPG_URL}"','']
     total=0
+
+    # 通常4競技は各マスターから毎回完全再構築。
     for label,path in INPUTS:
         total += append_file(out,label,path)
+
+    # YouTubeは毎回ソースM3Uから再構築し、前回public_sports.m3uは一切継承しない。
+    # これで更新のたびに同じチャンネルが積み上がることを防ぐ。
+    seen_youtube_ids=set()
+    seen_youtube_exact=set()
     for label,path in YOUTUBE_INPUTS:
-        total += append_file(out,label,path)
+        total += append_file(out,label,path,seen_youtube_ids,seen_youtube_exact)
+
     out.append('## 中央競馬')
     for tvg,name,display,filename in JRA:
         out += [f'#EXTINF:-1 tvg-id="{tvg}" tvg-name="{name}" group-title="中央競馬",{display}',raw(filename),'']
         total += 1
+
     OUT.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
     print('M3U一本化 完了:',total,'ch')
+    print('YouTube重複防止: canonical source rebuild + tvg-id dedupe')
 
 if __name__ == '__main__':
     main()

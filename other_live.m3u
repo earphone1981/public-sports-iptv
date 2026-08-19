@@ -4,3 +4,30 @@
 
 #EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",♻️ 松山市クリーンセンター LIVE
 https://www.youtube.com/watch?v=C0gpM_qIIl0
+
+#EXTINF:-1 tvg-id="youtube.matsuyama.airport" tvg-name="松山空港 LIVE" group-title="その他LIVE",✈️ 松山空港 LIVE
+https://www.youtube.com/watch?v=CFh9z-6IeEE
+
+#EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE
+https://www.youtube.com/watch?v=ydYDqZQpim8
+
+#EXTINF:-1 tvg-id="youtube.shiba.natsu" tvg-name="柴犬なつと子供たち" group-title="その他LIVE",🐕 柴犬なつと子供たち
+https://www.youtube.com/@Natsu-shibafamily/live
+
+#EXTINF:-1 tvg-id="youtube.osaka.loop" tvg-name="大阪環状線 LIVE" group-title="その他LIVE",🚃 大阪環状線 LIVE
+https://www.youtube.com/@osakalive/live
+
+#EXTINF:-1 tvg-id="youtube.kobe.waterfront" tvg-name="神戸ウォーターフロント LIVE" group-title="その他LIVE",🌃 神戸ウォーターフロント LIVE
+https://www.youtube.com/watch?v=AU_2zfM4m68
+
+#EXTINF:-1 tvg-id="youtube.muko.camera" tvg-name="向日市・向日町 LIVE CAMERA" group-title="その他LIVE",🚆 向日市・向日町 LIVE CAMERA（まちてらすMUKO）
+https://www.youtube.com/watch?v=8QljbTT1t88
+
+#EXTINF:-1 tvg-id="youtube.itami.mbs" tvg-name="大阪・伊丹空港 LIVE" group-title="その他LIVE",✈️ 大阪・伊丹空港 LIVE（MBS NEWS）
+https://www.youtube.com/watch?v=NAuMwYBWbfU
+
+#EXTINF:-1 tvg-id="youtube.narita.asahi" tvg-name="成田空港 A滑走路 南側 LIVE" group-title="その他LIVE",✈️ 成田空港 A滑走路（南側）LIVE（朝日新聞）
+https://www.youtube.com/watch?v=wb2xVVPA_2o
+
+#EXTINF:-1 tvg-id="youtube.kix.ktv" tvg-name="関西国際空港 KIX LIVE" group-title="その他LIVE",✈️ 関西国際空港 KIX・第1ターミナル LIVE（カンテレNEWS）
+https://www.youtube.com/watch?v=QWj9gFg3S4U

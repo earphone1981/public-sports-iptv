@@ -19,9 +19,11 @@ on:
       - "sort_public_sports_by_epg.py"
       - ".github/workflows/update_epg_3days.yml"
 
+# public_sports.m3u / epg.xml を書き換える他Workflowと直列化する。
+# 同時pushによる git pull --rebase の競合を防ぐ。
 concurrency:
-  group: public-sports-epg
-  cancel-in-progress: true
+  group: public-sports-m3u-writer
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -33,11 +35,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      - name: Sync latest main before generation
+        run: git pull --ff-only origin main
 
       # 既存Runが固まっても、新Runでは12分で次工程へ進む。
       - name: Generate 3-day EPG

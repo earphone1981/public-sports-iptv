@@ -1,3 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/youtube_live/kana_tube.png" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
+#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
 https://www.youtube.com/@kana_tube/streams

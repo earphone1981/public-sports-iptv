@@ -76,7 +76,6 @@ def standardized_name(cid, current):
 
 def extract_race_parts(title):
     t = str(title or "").strip()
-    # 場名 + 通常R表記 + 発走時刻を元データから拾う。
     m = re.search(
         r"(?P<venue>[^\s【】]+)\s+(?P<race>\d{1,2})R\s+(?P<time>\d{1,2}:\d{2})発走\s*(?P<rest>.*)$",
         t,
@@ -162,18 +161,17 @@ def decorate_detail(detail, cid):
     return f"{icon}【{d} {icon}】" if icon else f"【{d}】"
 
 
-def build_live_title(race_no, detail, cid):
-    # 朝に決めた仕様：レース番号を必ず前面へ。準決・決勝・G級も前面で強調。
+def build_live_title(race_no, race_time, detail, cid):
+    # 確定順：前面デコ（該当時）→ ❶ℛ → 17:36発走 → 詳細 → 実況中
     parts = []
     deco = front_deco(detail)
     if deco:
         parts.append(deco)
-    icon = competition_icon(cid, detail)
-    if icon:
-        parts.append(icon)
     parts.append(race_no_deco(race_no))
+    parts.append(f"{race_time}発走")
+    parts.append(decorate_detail(detail, cid))
     parts.append(LIVE_PREFIX)
-    return f"{' '.join(parts)}｜{decorate_detail(detail, cid)}"
+    return "  ".join(parts)
 
 
 def resolve_post_time(programme, race_time):
@@ -233,11 +231,10 @@ def main():
         if post is None:
             continue
 
-        title_el.text = build_live_title(race_no, detail, cid)
+        title_el.text = build_live_title(race_no, race_time, detail, cid)
         by_channel.setdefault(cid, []).append((post, p))
         formatted += 1
 
-    # 発走1分後に次レース表示へ切替
     adjusted = 0
     for cid, items in by_channel.items():
         items.sort(key=lambda x: x[0])
@@ -259,7 +256,6 @@ def main():
                     adjusted += 1
                 previous_cut = own_cut
 
-    # 深夜の準備中は01:00から
     for p in root.findall("programme"):
         cid = p.get("channel", "")
         if not is_target(cid):

@@ -1,39 +1,26 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: cyan; icon-glyph: magic;
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: cyan; icon-glyph: magic;
+
 // ============================================================
-// 公営これ一発 v14
+// 公営これ一発 v14.1
 // Scriptable 全文コピペ正式版
 //
-// ★ v14変更点
-//
-// BOATRACE:
-//   ・v13仕様をそのまま維持
-//   ・24場の前回URLを保持
-//   ・当日の新URL取得成功 → 新URLへ更新
-//   ・当日の新URL取得失敗 → 前回URLを保持
-//
-// 公営YouTube:
-//   ・public_sports_youtube.m3u を正式統合
-//   ・対象: 競輪 / 地方競馬 / オート / ボート 全場公式
-//           JRA公式 / WINTICKET / オッズパーク / チャリロト
-//           Kドリームス / ガールズインフォメーション / かなチューブ
-//   ・同一 tvg-id は1件だけ採用
-//   ・public_sports_youtube.m3u が未作成/取得失敗でも本体更新は続行
-//   ・かなチューブは kana_live.m3u を別読込して必ず保険をかける
-//   ・旧「その他LIVE」は公営側から引き継がない
-//
-// JRA/GCH:
-//   ・v13の高画質/低画質8本を維持
-//
-// 自己保存:
-//   ・実行時にこの全文を GitHub の v14 / latest へバックアップ
-//
-// EPG:
-//   ・update_epg_3days.yml を起動
-//
+// v14.1
+// ・公営YouTubeを毎回ゼロから再構築
+// ・tvg-id重複を除去
+// ・同一YouTube配信ID / 実URL重複も除去
+// ・前回のYouTubeエントリーを積み増さない
+// ・かなチューブは kana_live.m3u から保険読込
+// ・その他LIVEは公営側へ戻さない
+// ・BOAT前回URL保持
+// ・JRA/GCH維持
+// ・YouTube Actions / EPG Actions 起動
+// ・本体を v14.1 / latest としてGitHub保存
 // ============================================================
-
 
 const OWNER = "earphone1981";
 const REPO = "public-sports-iptv";
@@ -95,7 +82,7 @@ const BOAT = [
 
 
 // ============================================================
-// JRA
+// JRA / GCH
 // ============================================================
 
 const JRA = [
@@ -159,7 +146,7 @@ const JRA = [
 
 
 // ============================================================
-// 共通
+// 日付 / RAW
 // ============================================================
 
 function japanDate() {
@@ -172,9 +159,7 @@ function japanDate() {
         month: "2-digit",
         day: "2-digit"
       }
-    ).formatToParts(
-      new Date()
-    );
+    ).formatToParts(new Date());
 
   return (
     p.find(x => x.type === "year").value +
@@ -194,10 +179,11 @@ function rawUrl(path) {
 
 
 // ============================================================
-// Token
+// TOKEN
 // ============================================================
 
 async function getToken() {
+
   if (Keychain.contains(TOKEN_KEY)) {
     return Keychain.get(TOKEN_KEY);
   }
@@ -209,17 +195,22 @@ async function getToken() {
   a.addAction("保存");
   a.addCancelAction("中止");
 
-  const r = await a.present();
+  const r =
+    await a.present();
 
   if (r === -1) {
-    throw new Error("Token入力中止");
+    throw new Error(
+      "Token入力中止"
+    );
   }
 
   const token =
     a.textFieldValue(0).trim();
 
   if (!token) {
-    throw new Error("Tokenが空です");
+    throw new Error(
+      "Tokenが空です"
+    );
   }
 
   Keychain.set(
@@ -241,6 +232,7 @@ async function githubRequest(
   method = "GET",
   body = null
 ) {
+
   const req =
     new Request(
       `https://api.github.com${path}`
@@ -249,10 +241,14 @@ async function githubRequest(
   req.method = method;
 
   req.headers = {
-    "Authorization": `Bearer ${token}`,
-    "Accept": "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-    "User-Agent": "Scriptable-Public-Sports"
+    "Authorization":
+      `Bearer ${token}`,
+    "Accept":
+      "application/vnd.github+json",
+    "X-GitHub-Api-Version":
+      "2022-11-28",
+    "User-Agent":
+      "Scriptable-Public-Sports"
   };
 
   if (body !== null) {
@@ -295,7 +291,7 @@ async function githubRequest(
 
 
 // ============================================================
-// Base64
+// GitHub保存
 // ============================================================
 
 function toBase64(text) {
@@ -305,16 +301,13 @@ function toBase64(text) {
 }
 
 
-// ============================================================
-// GitHubへファイル保存
-// ============================================================
-
 async function uploadFile(
   path,
   content,
   token,
   message
 ) {
+
   const encodedPath =
     path
       .split("/")
@@ -324,6 +317,7 @@ async function uploadFile(
   let sha = null;
 
   try {
+
     const current =
       await githubRequest(
         `${API_REPO}/contents/${encodedPath}?ref=${BRANCH}`,
@@ -334,10 +328,12 @@ async function uploadFile(
       current.sha ?? null;
 
     if (current.content) {
+
       const old =
         Data
           .fromBase64String(
-            current.content.replace(/\n/g, "")
+            current.content
+              .replace(/\n/g, "")
           )
           .toRawString();
 
@@ -345,16 +341,15 @@ async function uploadFile(
         console.log(
           `${path}: 変更なし`
         );
+
         return false;
       }
     }
 
   } catch(e) {
-    const s =
-      String(e);
 
     if (
-      !s.includes(
+      !String(e).includes(
         "GitHub API 404"
       )
     ) {
@@ -363,8 +358,9 @@ async function uploadFile(
   }
 
   const body = {
-    message: message,
-    content: toBase64(content),
+    message,
+    content:
+      toBase64(content),
     branch: BRANCH
   };
 
@@ -392,14 +388,17 @@ async function uploadFile(
 // ============================================================
 
 async function getRaw(path) {
+
   const req =
     new Request(
       rawUrl(path)
     );
 
   req.headers = {
-    "Cache-Control": "no-cache",
-    "User-Agent": UA
+    "Cache-Control":
+      "no-cache",
+    "User-Agent":
+      UA
   };
 
   req.timeoutInterval = 30;
@@ -408,14 +407,13 @@ async function getRaw(path) {
 }
 
 
-// ============================================================
-// RAW安全取得
-// ============================================================
-
 async function safeGetRaw(path) {
+
   try {
     return await getRaw(path);
+
   } catch(e) {
+
     console.log(
       `${path}: 取得失敗`
     );
@@ -434,6 +432,7 @@ async function safeGetRaw(path) {
 // ============================================================
 
 function readEntries(text) {
+
   const lines =
     String(text || "")
       .replace(/\r\n/g, "\n")
@@ -447,6 +446,7 @@ function readEntries(text) {
     i < lines.length;
     i++
   ) {
+
     const extinf =
       lines[i].trim();
 
@@ -466,6 +466,7 @@ function readEntries(text) {
       j < lines.length;
       j++
     ) {
+
       const n =
         lines[j].trim();
 
@@ -511,11 +512,8 @@ function readEntries(text) {
 }
 
 
-// ============================================================
-// tvg-id取得
-// ============================================================
-
 function getTvgId(extinf) {
+
   const m =
     String(extinf || "")
       .match(
@@ -529,12 +527,193 @@ function getTvgId(extinf) {
 
 
 // ============================================================
+// YouTube安定識別キー
+//
+// 期限・署名が変わっても同じ配信なら同一扱い
+// ============================================================
+
+function getStableStreamKey(url) {
+
+  const s =
+    String(url || "").trim();
+
+  if (!s) {
+    return "";
+  }
+
+  // YouTube watch URL
+  try {
+
+    const u =
+      new URL(s);
+
+    const host =
+      u.hostname.toLowerCase();
+
+    if (
+      host === "youtu.be" ||
+      host.endsWith(".youtu.be")
+    ) {
+
+      const id =
+        u.pathname
+          .replace(/^\/+/, "")
+          .split("/")[0];
+
+      if (id) {
+        return `youtube-video:${id}`;
+      }
+    }
+
+
+    if (
+      host.includes("youtube.com")
+    ) {
+
+      const v =
+        u.searchParams.get("v");
+
+      if (v) {
+        return `youtube-video:${v}`;
+      }
+
+      // /live/VIDEOID
+      const liveMatch =
+        u.pathname.match(
+          /\/live\/([^/]+)/
+        );
+
+      if (liveMatch) {
+        return `youtube-video:${liveMatch[1]}`;
+      }
+    }
+
+
+    // googlevideo系
+    // HLS URLの /id/XXXX/ を安定識別子として使う
+    if (
+      host.includes(
+        "googlevideo.com"
+      )
+    ) {
+
+      const idMatch =
+        u.pathname.match(
+          /\/id\/([^/]+)/
+        );
+
+      if (idMatch) {
+        return `googlevideo-id:${idMatch[1]}`;
+      }
+
+      // IDが取れない場合でもクエリは期限付きなので除外
+      return (
+        u.origin +
+        u.pathname
+      );
+    }
+
+
+    // その他のURLも
+    // ?token= 等を無視
+    return (
+      u.origin +
+      u.pathname
+    );
+
+  } catch {
+
+    return s
+      .split("?")[0]
+      .split("#")[0];
+  }
+}
+
+
+// ============================================================
+// YouTube重複除去
+//
+// ・同じtvg-id → 1件
+// ・同じ配信ID/URL → 1件
+//
+// 前回データは使わず、今回読み込んだM3Uだけから作る
+// ============================================================
+
+function dedupeYouTubeEntries(entries) {
+
+  const result = [];
+
+  const seenIds =
+    new Set();
+
+  const seenStreams =
+    new Set();
+
+  for (
+    const item
+    of entries || []
+  ) {
+
+    const tvgId =
+      getTvgId(
+        item.extinf
+      );
+
+    const streamKey =
+      getStableStreamKey(
+        item.url
+      );
+
+
+    if (
+      tvgId &&
+      seenIds.has(tvgId)
+    ) {
+
+      console.log(
+        `YouTube重複除去 tvg-id: ${tvgId}`
+      );
+
+      continue;
+    }
+
+
+    if (
+      streamKey &&
+      seenStreams.has(streamKey)
+    ) {
+
+      console.log(
+        `YouTube重複除去 stream: ${streamKey}`
+      );
+
+      continue;
+    }
+
+
+    if (tvgId) {
+      seenIds.add(tvgId);
+    }
+
+    if (streamKey) {
+      seenStreams.add(streamKey);
+    }
+
+    result.push(item);
+  }
+
+  return result;
+}
+
+
+// ============================================================
 // 前回BOAT URL取得
 // ============================================================
 
 function extractPreviousBoat(
   existingPublic
 ) {
+
   const map =
     new Map();
 
@@ -547,6 +726,7 @@ function extractPreviousBoat(
     const item
     of entries
   ) {
+
     const tvgId =
       getTvgId(
         item.extinf
@@ -554,12 +734,15 @@ function extractPreviousBoat(
 
     if (
       !tvgId ||
-      !tvgId.startsWith("boat.")
+      !tvgId.startsWith(
+        "boat."
+      )
     ) {
       continue;
     }
 
     if (!map.has(tvgId)) {
+
       map.set(
         tvgId,
         item.url
@@ -572,19 +755,24 @@ function extractPreviousBoat(
 
 
 // ============================================================
-// ストリームURL探索
+// BOAT JSONから映像URL探索
 // ============================================================
 
 function findStreamUrl(data) {
+
   if (!data) {
     return null;
   }
 
-  if (Array.isArray(data)) {
+  if (
+    Array.isArray(data)
+  ) {
+
     for (
       const item
       of data
     ) {
+
       const found =
         findStreamUrl(item);
 
@@ -596,19 +784,23 @@ function findStreamUrl(data) {
     return null;
   }
 
+
   if (
     typeof data ===
     "object"
   ) {
+
     if (
       Array.isArray(
         data.sources
       )
     ) {
+
       for (
         const s
         of data.sources
       ) {
+
         if (
           typeof s?.src ===
           "string"
@@ -625,23 +817,24 @@ function findStreamUrl(data) {
       }
     }
 
+
     for (
       const key
       of Object.keys(data)
     ) {
+
       const value =
         data[key];
 
       if (
         typeof value ===
-        "string"
-      ) {
-        if (
+        "string" &&
+        (
           value.includes(".m3u8") ||
           value.includes("manifest")
-        ) {
-          return value;
-        }
+        )
+      ) {
+        return value;
       }
 
       if (
@@ -649,6 +842,7 @@ function findStreamUrl(data) {
         typeof value ===
         "object"
       ) {
+
         const found =
           findStreamUrl(value);
 
@@ -670,6 +864,7 @@ function findStreamUrl(data) {
 async function makeBoatM3U(
   existingPublic
 ) {
+
   const date =
     japanDate();
 
@@ -689,6 +884,7 @@ async function makeBoatM3U(
   const kept = [];
   const missing = [];
 
+
   for (
     const [
       apiId,
@@ -699,6 +895,7 @@ async function makeBoatM3U(
     ]
     of BOAT
   ) {
+
     const api =
       "https://playback.api.streaks.jp/v1/" +
       "projects/cp-boatrace-prod/" +
@@ -711,25 +908,31 @@ async function makeBoatM3U(
     let stream = null;
     let sourceType = "none";
 
+
     try {
+
       const req =
         new Request(api);
 
       req.headers = {
-        "User-Agent": UA,
+        "User-Agent":
+          UA,
         "Origin":
           "https://front.player.boatrace-cdn.jp",
         "Referer":
           "https://front.player.boatrace-cdn.jp/"
       };
 
-      req.timeoutInterval = 15;
+      req.timeoutInterval =
+        15;
 
       const json =
         await req.loadJSON();
 
       const found =
-        findStreamUrl(json);
+        findStreamUrl(
+          json
+        );
 
       if (found) {
         stream = found;
@@ -737,32 +940,45 @@ async function makeBoatM3U(
       }
 
     } catch(e) {
+
       console.warn(
         `${venue} 当日URL取得失敗`,
         e
       );
     }
 
+
     if (
       !stream &&
-      previousBoat.has(tvgId)
+      previousBoat.has(
+        tvgId
+      )
     ) {
-      stream =
-        previousBoat.get(tvgId);
 
-      sourceType = "kept";
+      stream =
+        previousBoat.get(
+          tvgId
+        );
+
+      sourceType =
+        "kept";
     }
+
 
     if (!stream) {
+
       missingCount++;
       missing.push(venue);
+
       continue;
     }
+
 
     const logo =
       rawUrl(
         `public_sports_logos_github_43/boatrace/${logoFile}`
       );
+
 
     text +=
       `#EXTINF:-1 ` +
@@ -775,17 +991,22 @@ async function makeBoatM3U(
       stream +
       "\n\n";
 
+
     if (
-      sourceType === "fresh"
+      sourceType ===
+      "fresh"
     ) {
+
       freshCount++;
       fresh.push(venue);
 
     } else {
+
       keptCount++;
       kept.push(venue);
     }
   }
+
 
   return {
     date,
@@ -807,53 +1028,11 @@ async function makeBoatM3U(
 
 
 // ============================================================
-// 公営YouTube v14
-// ============================================================
-
-function uniqueEntriesByTvgId(text) {
-  const entries =
-    readEntries(
-      text || ""
-    );
-
-  const seen =
-    new Set();
-
-  const result = [];
-
-  for (
-    const item
-    of entries
-  ) {
-    const tvgId =
-      getTvgId(
-        item.extinf
-      );
-
-    const key =
-      tvgId
-        ? `id:${tvgId}`
-        : `ext:${item.extinf}|url:${item.url}`;
-
-    if (
-      seen.has(key)
-    ) {
-      continue;
-    }
-
-    seen.add(key);
-    result.push(item);
-  }
-
-  return result;
-}
-
-
-// ============================================================
 // かなチューブ判定
 // ============================================================
 
 function isKanaEntry(item) {
+
   const text =
     `${item.extinf}\n${item.url}`
       .toLowerCase();
@@ -876,24 +1055,39 @@ function isKanaEntry(item) {
 
 
 // ============================================================
-// 公営YouTube本体読込
+// 公営YouTube読込
 // ============================================================
 
 async function loadPublicYouTube() {
+
   try {
+
     const text =
       await getRaw(
         PUBLIC_YOUTUBE_FILE
       );
 
+    const source =
+      readEntries(text);
+
+    const entries =
+      dedupeYouTubeEntries(
+        source
+      );
+
     return {
-      entries:
-        uniqueEntriesByTvgId(text),
+      entries,
       loaded: true,
+      sourceCount:
+        source.length,
+      removed:
+        source.length -
+        entries.length,
       error: null
     };
 
   } catch(e) {
+
     console.warn(
       `${PUBLIC_YOUTUBE_FILE} 取得失敗:`,
       e
@@ -902,7 +1096,10 @@ async function loadPublicYouTube() {
     return {
       entries: [],
       loaded: false,
-      error: String(e)
+      sourceCount: 0,
+      removed: 0,
+      error:
+        String(e)
     };
   }
 }
@@ -913,15 +1110,24 @@ async function loadPublicYouTube() {
 // ============================================================
 
 async function loadKanaFallback() {
+
   try {
+
     const text =
       await getRaw(
         KANA_FILE
       );
 
+    const source =
+      readEntries(text)
+        .filter(
+          isKanaEntry
+        );
+
     const entries =
-      uniqueEntriesByTvgId(text)
-        .filter(isKanaEntry);
+      dedupeYouTubeEntries(
+        source
+      );
 
     return {
       entries,
@@ -930,6 +1136,7 @@ async function loadKanaFallback() {
     };
 
   } catch(e) {
+
     console.warn(
       `${KANA_FILE} 取得失敗:`,
       e
@@ -938,60 +1145,92 @@ async function loadKanaFallback() {
     return {
       entries: [],
       loaded: false,
-      error: String(e)
+      error:
+        String(e)
     };
   }
 }
 
 
 // ============================================================
-// 公営YouTube + かな保険統合
+// 公営YouTube + かな保険
+//
+// ここでも再度重複除去
 // ============================================================
 
 function mergePublicYouTubeAndKana(
   publicEntries,
   kanaEntries
 ) {
-  const out = [];
-  const seen = new Set();
+
+  return dedupeYouTubeEntries([
+    ...(publicEntries || []),
+    ...(kanaEntries || [])
+  ]);
+}
+
+
+// ============================================================
+// 通常M3Uを出力
+// ============================================================
+
+function appendM3UEntries(
+  out,
+  label,
+  source
+) {
+
+  const entries =
+    readEntries(source);
+
+  if (!entries.length) {
+    return 0;
+  }
+
+  out.push(
+    `## ${label}`
+  );
 
   for (
     const item
-    of [
-      ...(publicEntries || []),
-      ...(kanaEntries || [])
-    ]
+    of entries
   ) {
-    const tvgId =
-      getTvgId(
-        item.extinf
-      );
 
-    const key =
-      tvgId
-        ? `id:${tvgId}`
-        : `ext:${item.extinf}|url:${item.url}`;
+    out.push(
+      item.extinf
+    );
 
-    if (seen.has(key)) {
-      continue;
+    for (
+      const opt
+      of item.options
+    ) {
+
+      out.push(opt);
     }
 
-    seen.add(key);
-    out.push(item);
+    out.push(
+      item.url
+    );
+
+    out.push("");
   }
 
-  return out;
+  return entries.length;
 }
 
 
 // ============================================================
 // public_sports.m3u
+//
+// ★ 毎回ゼロから作成
+// ★ 前回YouTube部分を引き継がない
 // ============================================================
 
 async function makePublicM3U(
   boatText,
   publicYouTube
 ) {
+
   const keirin =
     await getRaw(
       "keirin_master.m3u"
@@ -1007,99 +1246,89 @@ async function makePublicM3U(
       "autorace_master.m3u"
     );
 
-  let out =
-    `#EXTM3U url-tvg="${EPG_URL}"\n\n`;
 
-  const sources = [
-    [
-      "競輪",
-      keirin
-    ],
-    [
-      "地方競馬",
-      keiba
-    ],
-    [
-      "オートレース",
-      auto
-    ],
-    [
-      "ボートレース",
-      boatText
-    ]
+  const out = [
+    `#EXTM3U url-tvg="${EPG_URL}"`,
+    ""
   ];
 
-  for (
-    const [
-      label,
-      source
-    ]
-    of sources
-  ) {
-    const entries =
-      readEntries(source);
 
-    if (!entries.length) {
-      continue;
-    }
+  appendM3UEntries(
+    out,
+    "競輪",
+    keirin
+  );
 
-    out +=
-      `## ${label}\n`;
+  appendM3UEntries(
+    out,
+    "地方競馬",
+    keiba
+  );
 
-    for (
-      const item
-      of entries
-    ) {
-      out +=
-        item.extinf +
-        "\n";
+  appendM3UEntries(
+    out,
+    "オートレース",
+    auto
+  );
 
-      for (
-        const opt
-        of item.options
-      ) {
-        out +=
-          opt +
-          "\n";
-      }
+  appendM3UEntries(
+    out,
+    "ボートレース",
+    boatText
+  );
 
-      out +=
-        item.url +
-        "\n\n";
-    }
-  }
+
+  // ----------------------------------------------------------
+  // 公営YouTube
+  // 今回取得したリストだけを使用
+  // ----------------------------------------------------------
+
+  const cleanYouTube =
+    dedupeYouTubeEntries(
+      publicYouTube || []
+    );
+
 
   if (
-    publicYouTube.length
+    cleanYouTube.length
   ) {
-    out +=
-      "## 公営YouTube公式\n";
+
+    out.push(
+      "## 公営YouTube公式"
+    );
 
     for (
       const item
-      of publicYouTube
+      of cleanYouTube
     ) {
-      out +=
-        item.extinf +
-        "\n";
+
+      out.push(
+        item.extinf
+      );
 
       for (
         const opt
         of item.options
       ) {
-        out +=
-          opt +
-          "\n";
+        out.push(opt);
       }
 
-      out +=
-        item.url +
-        "\n\n";
+      out.push(
+        item.url
+      );
+
+      out.push("");
     }
   }
 
-  out +=
-    "## 中央競馬\n";
+
+  // ----------------------------------------------------------
+  // JRA / GCH
+  // ----------------------------------------------------------
+
+  out.push(
+    "## 中央競馬"
+  );
 
   for (
     const [
@@ -1111,35 +1340,48 @@ async function makePublicM3U(
     ]
     of JRA
   ) {
-    out +=
+
+    out.push(
       `#EXTINF:-1 ` +
       `tvg-id="${tvg}" ` +
       `tvg-name="${tvgName}" ` +
       `tvg-logo="${rawUrl(logoFile)}" ` +
-      `group-title="中央競馬",` +
-      `${display}\n`;
+      `group-title="中央競馬",${display}`
+    );
 
-    out +=
-      rawUrl(file) +
-      "\n\n";
+    out.push(
+      rawUrl(file)
+    );
+
+    out.push("");
   }
 
+
   return {
-    text: out,
+    text:
+      out.join("\n")
+        .replace(
+          /\n{3,}/g,
+          "\n\n"
+        )
+        .trimEnd() +
+      "\n",
+
     youtubeCount:
-      publicYouTube.length
+      cleanYouTube.length
   };
 }
 
 
 // ============================================================
-// iCloud
+// iCloud保存
 // ============================================================
 
 function saveICloud(
   name,
   text
 ) {
+
   const fm =
     FileManager.iCloud();
 
@@ -1157,12 +1399,13 @@ function saveICloud(
 
 
 // ============================================================
-// GitHub Actions
+// Actions
 // ============================================================
 
 async function dispatchEPG(
   token
 ) {
+
   await githubRequest(
     `${API_REPO}/actions/workflows/update_epg_3days.yml/dispatches`,
     token,
@@ -1177,6 +1420,7 @@ async function dispatchEPG(
 async function dispatchYouTube(
   token
 ) {
+
   await githubRequest(
     `${API_REPO}/actions/workflows/youtube_namibia_live.yml/dispatches`,
     token,
@@ -1195,7 +1439,9 @@ async function dispatchYouTube(
 async function backupSelfScript(
   token
 ) {
+
   try {
+
     const fm =
       FileManager.iCloud();
 
@@ -1210,10 +1456,12 @@ async function backupSelfScript(
     let selfText =
       null;
 
+
     for (
       const name
       of candidates
     ) {
+
       const path =
         fm.joinPath(
           fm.documentsDirectory(),
@@ -1221,20 +1469,26 @@ async function backupSelfScript(
         );
 
       if (
-        fm.fileExists(path)
+        !fm.fileExists(path)
       ) {
-        try {
-          selfText =
-            fm.readString(path);
-
-          if (selfText) {
-            break;
-          }
-        } catch {}
+        continue;
       }
+
+      try {
+
+        selfText =
+          fm.readString(path);
+
+        if (selfText) {
+          break;
+        }
+
+      } catch {}
     }
 
+
     if (!selfText) {
+
       console.warn(
         "自己バックアップ: Scriptable本体取得できず"
       );
@@ -1242,23 +1496,29 @@ async function backupSelfScript(
       return false;
     }
 
+
+    // 世代版
     await uploadFile(
-      "公営これ一発_v14.js",
+      "公営これ一発_v14.1.js",
       selfText,
       token,
-      "Backup 公営これ一発 v14"
+      "Backup 公営これ一発 v14.1"
     );
 
+
+    // 常に最新版
     await uploadFile(
       "公営これ一発_latest.js",
       selfText,
       token,
-      "Backup 公営これ一発 latest"
+      "Backup 公営これ一発 latest v14.1"
     );
+
 
     return true;
 
   } catch(e) {
+
     console.warn(
       "自己バックアップ失敗:",
       e
@@ -1277,11 +1537,15 @@ async function show(
   title,
   message
 ) {
+
   const a =
     new Alert();
 
-  a.title = title;
-  a.message = message;
+  a.title =
+    title;
+
+  a.message =
+    message;
 
   a.addAction("OK");
 
@@ -1294,34 +1558,68 @@ async function show(
 // ============================================================
 
 try {
+
   const token =
     await getToken();
+
+
+  // ----------------------------------------------------------
+  // 前回BOAT URLだけは保持に使用
+  // YouTube部分は引き継がない
+  // ----------------------------------------------------------
 
   let existingPublic = "";
 
   try {
+
     existingPublic =
       await getRaw(
         "public_sports.m3u"
       );
 
   } catch(e) {
+
     console.warn(
       "既存public_sports.m3u取得失敗:",
       e
     );
   }
 
+
+  // ----------------------------------------------------------
+  // BOAT
+  // ----------------------------------------------------------
+
   const boat =
     await makeBoatM3U(
       existingPublic
     );
 
+
+  // ----------------------------------------------------------
+  // 公営YouTube
+  // ----------------------------------------------------------
+
   const publicYouTube =
     await loadPublicYouTube();
 
+
+  // ----------------------------------------------------------
+  // かな保険
+  // ----------------------------------------------------------
+
   const kanaFallback =
     await loadKanaFallback();
+
+
+  // ----------------------------------------------------------
+  // YouTube最終重複除去
+  // ----------------------------------------------------------
+
+  const beforeMergeCount =
+    publicYouTube.entries.length +
+    kanaFallback.entries.length;
+
 
   const mergedYouTube =
     mergePublicYouTubeAndKana(
@@ -1329,44 +1627,78 @@ try {
       kanaFallback.entries
     );
 
+
+  const totalDuplicateRemoved =
+    publicYouTube.removed +
+    (
+      beforeMergeCount -
+      mergedYouTube.length
+    );
+
+
+  // ----------------------------------------------------------
+  // 統合M3U
+  // 毎回完全再生成
+  // ----------------------------------------------------------
+
   const built =
     await makePublicM3U(
       boat.text,
       mergedYouTube
     );
 
+
   const publicM3U =
     built.text;
+
+
+  // ----------------------------------------------------------
+  // iCloud
+  // ----------------------------------------------------------
 
   saveICloud(
     "boatrace_today.m3u",
     boat.text
   );
 
+
   saveICloud(
     "public_sports.m3u",
     publicM3U
   );
 
+
+  // ----------------------------------------------------------
+  // GitHub M3U
+  // ----------------------------------------------------------
+
   await uploadFile(
     "boatrace_today.m3u",
     boat.text,
     token,
-    `Update BOATRACE M3U v14 ${boat.date}`
+    `Update BOATRACE M3U v14.1 ${boat.date}`
   );
+
 
   const changed =
     await uploadFile(
       "public_sports.m3u",
       publicM3U,
       token,
-      `Update public sports M3U v14 ${boat.date}`
+      `Update public sports M3U v14.1 ${boat.date}`
     );
+
+
+  // ----------------------------------------------------------
+  // YouTube Action
+  // ----------------------------------------------------------
 
   let youtubeDispatchOK =
     false;
 
+
   try {
+
     await dispatchYouTube(
       token
     );
@@ -1375,20 +1707,53 @@ try {
       true;
 
   } catch(e) {
+
     console.warn(
       "YouTube Actions起動失敗:",
       e
     );
   }
 
-  await dispatchEPG(
-    token
-  );
+
+  // ----------------------------------------------------------
+  // EPG Action
+  // ----------------------------------------------------------
+
+  let epgDispatchOK =
+    false;
+
+
+  try {
+
+    await dispatchEPG(
+      token
+    );
+
+    epgDispatchOK =
+      true;
+
+  } catch(e) {
+
+    console.warn(
+      "EPG Actions起動失敗:",
+      e
+    );
+  }
+
+
+  // ----------------------------------------------------------
+  // 自己保存
+  // ----------------------------------------------------------
 
   const backupOK =
     await backupSelfScript(
       token
     );
+
+
+  // ----------------------------------------------------------
+  // 結果
+  // ----------------------------------------------------------
 
   let msg =
     `🚤 BOATRACE登録：${boat.total} / 24場\n` +
@@ -1398,57 +1763,71 @@ try {
     `📺 公営YouTube：${publicYouTube.loaded ? "正式M3U読込OK" : "M3U未作成/取得失敗"}\n` +
     `📺 かなチューブ保険：${kanaFallback.loaded ? "読込OK" : "取得失敗"}\n` +
     `📺 公営YouTube登録：${built.youtubeCount}件\n` +
-    `🧹 YouTube重複：tvg-id単位で除去\n` +
+    `🧹 YouTube重複除去：${totalDuplicateRemoved}件\n` +
+    `🔒 重複防止：tvg-id＋配信ID/URL\n` +
+    `♻️ YouTube：毎回完全再構築\n` +
     `🚫 その他LIVE：公営側には引継ぎなし\n` +
     `🏇 GCH/JRA：GitHub設定維持\n` +
     `📋 M3U：${changed ? "更新" : "変更なし"}\n` +
     `📺 YouTube Actions：${youtubeDispatchOK ? "起動済み" : "起動失敗"}\n` +
-    `📅 EPG：更新Actions起動済み\n` +
+    `📅 EPG Actions：${epgDispatchOK ? "起動済み" : "起動失敗"}\n` +
     `💾 本体バックアップ：${backupOK ? "GitHub保存OK" : "保存できず"}\n` +
     `⚠️ 非開催判定はEPG側を正とします`;
+
 
   if (
     !publicYouTube.loaded
   ) {
+
     msg +=
-      `\n\n⚠️ ${PUBLIC_YOUTUBE_FILE}：まだ未作成、または取得できません`;
+      `\n\n⚠️ ${PUBLIC_YOUTUBE_FILE}：未作成または取得できません`;
   }
+
 
   if (
     !kanaFallback.loaded
   ) {
+
     msg +=
-      `\n⚠️ ${KANA_FILE}：取得できません（かなチューブ保険なし）`;
+      `\n⚠️ ${KANA_FILE}：取得できません`;
   }
+
 
   if (
     boat.kept.length
   ) {
+
     msg +=
       `\n\n📼 前回映像保持：\n` +
       boat.kept.join(" / ");
   }
 
+
   if (
     boat.missing.length
   ) {
+
     msg +=
       `\n\n⚠️ URL履歴なし：\n` +
       boat.missing.join(" / ");
   }
 
+
   await show(
-    "✅ 公営これ一発 v14 完了",
+    "✅ 公営これ一発 v14.1 完了",
     msg
   );
 
+
 } catch(e) {
+
   console.error(e);
 
   await show(
-    "❌ 公営これ一発 v14 エラー",
+    "❌ 公営これ一発 v14.1 エラー",
     String(e)
   );
 }
+
 
 Script.complete();

@@ -9,6 +9,8 @@ on:
     branches:
       - main
     paths:
+      # 「これ一発」が統合M3Uを書き換えたらEPGも続けて更新する
+      - "public_sports.m3u"
       - "main_epg_3days.py"
       - "fix_epg_v11.py"
       - "fix_boat_waiting_title.py"

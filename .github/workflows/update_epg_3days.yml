@@ -38,6 +38,7 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 既存Runが固まっても、新Runでは12分で次工程へ進む。
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true

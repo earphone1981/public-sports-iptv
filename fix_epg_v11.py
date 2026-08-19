@@ -25,6 +25,7 @@ R_CIRCLED = {
     1: "❶", 2: "❷", 3: "❸", 4: "❹", 5: "❺", 6: "❻",
     7: "❼", 8: "❽", 9: "❾", 10: "❿", 11: "⓫", 12: "⓬",
 }
+CIRCLED_R = {v: str(k) for k, v in R_CIRCLED.items()}
 
 
 def parse_xmltv(value):
@@ -76,16 +77,38 @@ def standardized_name(cid, current):
 
 def extract_race_parts(title):
     t = str(title or "").strip()
+
+    # 1) 元データ形式: 「山陽 9R 23:40発走 ...」
     m = re.search(
         r"(?P<venue>[^\s【】]+)\s+(?P<race>\d{1,2})R\s+(?P<time>\d{1,2}:\d{2})発走\s*(?P<rest>.*)$",
         t,
     )
-    if not m:
-        return None
-    venue = m.group("venue")
-    race_no = m.group("race")
-    race_time = m.group("time")
-    rest = m.group("rest").strip()
+
+    if m:
+        venue = m.group("venue")
+        race_no = m.group("race")
+        race_time = m.group("time")
+        rest = m.group("rest").strip()
+    else:
+        # 2) 既に装飾済みの形式:
+        #    「🔥準決勝🔥 ❾ℛ 23:40発走 🏍️【...】 ...」
+        symbols = "".join(re.escape(x) for x in CIRCLED_R)
+        m2 = re.search(
+            rf"(?P<race>[{symbols}])ℛ\s+(?P<time>\d{{1,2}}:\d{{2}})発走\s*(?P<rest>.*)$",
+            t,
+        )
+        if not m2:
+            return None
+
+        venue = ""
+        race_no = CIRCLED_R.get(m2.group("race"))
+        race_time = m2.group("time")
+        rest = m2.group("rest").strip()
+        if not race_no:
+            return None
+
+    # 既に実況表示が付いている場合は一度除去して、最後に1回だけ付け直す。
+    rest = rest.replace(LIVE_PREFIX, "").strip()
 
     rest = re.sub(r"^(?:🌅|☀️|🌇|🌙|⭐|🌃|🌌|🚲|🚤|🏍️|🏇|💛)+\s*", "", rest)
     rest = re.sub(r"^(?:モーニング|通常|デイ|薄暮|サマータイム|ナイター|ミッドナイト|オーバーミッドナイト)\s*", "", rest)

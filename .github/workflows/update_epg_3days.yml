@@ -29,6 +29,9 @@ jobs:
       - name: Finalize v11 race titles and one-minute switching
         run: python fix_epg_v11.py
 
+      - name: Show BOAT first race while waiting
+        run: python fix_boat_waiting_title.py
+
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 

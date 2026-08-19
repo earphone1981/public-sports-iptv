@@ -1476,7 +1476,7 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📅 開催日次: 最終日</desc>
     </programme>
     <programme start="20260819104600 +0900" stop="20260819111100 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❶ℛ  10:56発走  🏍️【一般戦 2026年08月19日 電投締切10 : 54 発走予定10 : 56 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❶ℛ 10:56発走 🏍️【一般戦 2026年08月19日 電投締切10 : 54 発走予定10 : 56】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 10:56
@@ -1574,8 +1574,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: デイリースポーツ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260819105700 +0900" stop="20260819112200 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❷ℛ  11:21発走  🏍️【一般戦 2026年08月19日 電投締切11 : 19 発走予定11 : 21 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819111100 +0900" stop="20260819113700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❷ℛ 11:21発走 🏍️【一般戦 2026年08月19日 電投締切11 : 19 発走予定11 : 21】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 11:21
@@ -1686,8 +1686,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: デイリースポーツ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260819112200 +0900" stop="20260819114800 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❸ℛ  11:47発走  🏍️【一般戦 2026年08月19日 電投締切11 : 45 発走予定11 : 47 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819113700 +0900" stop="20260819120500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❸ℛ 11:47発走 🏍️【一般戦 2026年08月19日 電投締切11 : 45 発走予定11 : 47】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 11:47
@@ -1793,10 +1793,6 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 レース名: 薬研堀７ハロンＣ３一３歳以上
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819120020 +0000" stop="20260819130020 +0000" channel="jra.gch">
-        <title lang="ja">競馬ブロス #171</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/62800/S_42c226a771ee43509a74ed1150ec1a28_20260309112807669.jpg</image>
-    </programme>
     <programme start="20260819114100 +0900" stop="20260819121300 +0900" channel="boat.kojima">
         <title lang="ja">❹ℛ  12:12発走  🚤【ヴィーナスシリーズ第１０戦 第１６回クラリスカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 16 児島
@@ -1815,8 +1811,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: デイリースポーツ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260819114800 +0900" stop="20260819121600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❹ℛ  12:15発走  🏍️【一般戦 2026年08月19日 電投締切12 : 13 発走予定12 : 15 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819120500 +0900" stop="20260819123600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❹ℛ 12:15発走 🏍️【一般戦 2026年08月19日 電投締切12 : 13 発走予定12 : 15】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 12:15
@@ -1936,8 +1932,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 レース名: 厩橋７ハロンＣ２一３歳以上
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819121600 +0900" stop="20260819124700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏆決勝🏆  ❺ℛ  12:46発走  🏆【準決勝戦 2026年08月19日 電投締切12 : 44 発走予定12 : 46】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819123600 +0900" stop="20260819130600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">🔥準決勝🔥 ❺ℛ 12:46発走 🏍️【準決勝戦 2026年08月19日 電投締切12 : 44 発走予定12 : 46】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 12:46
@@ -2035,10 +2031,6 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
         <desc lang="ja">「新潟２歳Ｓ、キーンランドＣ　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260819130020 +0000" stop="20260819133020 +0000" channel="jra.gch">
-        <title lang="ja">今日の調教 #891</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49138/S_f3735d86b44e47078afa099ed555a6f5_20251226113302915.png</image>
-    </programme>
     <programme start="20260819124000 +0900" stop="20260819131300 +0900" channel="boat.tokuyama">
         <title lang="ja">❿ℛ  13:12発走  🚤【黒神杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 18 徳山
@@ -2066,8 +2058,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: デイリースポーツ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260819124700 +0900" stop="20260819131700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❻ℛ  13:16発走  🏍️【一般戦 2026年08月19日 電投締切13 : 14 発走予定13 : 16 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819130600 +0900" stop="20260819133600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❻ℛ 13:16発走 🏍️【一般戦 2026年08月19日 電投締切13 : 14 発走予定13 : 16】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 13:16
@@ -2186,8 +2178,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📅 開催日次: 最終日
 🏆 決勝</desc>
     </programme>
-    <programme start="20260819131700 +0900" stop="20260819134700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❼ℛ  13:46発走  🏍️【一般戦 2026年08月19日 電投締切13 : 44 発走予定13 : 46 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819133600 +0900" stop="20260819140600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❼ℛ 13:46発走 🏍️【一般戦 2026年08月19日 電投締切13 : 44 発走予定13 : 46】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 13:46
@@ -2317,8 +2309,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 💛 ガールズ
 🏆 決勝</desc>
     </programme>
-    <programme start="20260819134700 +0900" stop="20260819141700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❽ℛ  14:16発走  🏍️【一般戦 2026年08月19日 電投締切14 : 14 発走予定14 : 16 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819140600 +0900" stop="20260819143700 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❽ℛ 14:16発走 🏍️【一般戦 2026年08月19日 電投締切14 : 14 発走予定14 : 16】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 14:16
@@ -2447,8 +2439,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: デイリースポーツ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260819141700 +0900" stop="20260819144800 +0900" channel="auto.hamamatsu">
-        <title lang="ja">❾ℛ  14:47発走  🏍️【一般戦 2026年08月19日 電投締切14 : 45 発走予定14 : 47 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819143700 +0900" stop="20260819150800 +0900" channel="auto.hamamatsu">
+        <title lang="ja">❾ℛ 14:47発走 🏍️【一般戦 2026年08月19日 電投締切14 : 45 発走予定14 : 47】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 14:47
@@ -2599,8 +2591,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 ⏰ 発走予定: 15:16
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819144800 +0900" stop="20260819151900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏆決勝🏆  ❿ℛ  15:18発走  🏆【準決勝戦 2026年08月19日 電投締切15 : 16 発走予定15 : 18】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819150800 +0900" stop="20260819154600 +0900" channel="auto.hamamatsu">
+        <title lang="ja">🔥準決勝🔥 ❿ℛ 15:18発走 🏍️【準決勝戦 2026年08月19日 電投締切15 : 16 発走予定15 : 18】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 15:18
@@ -2782,8 +2774,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 レース名: ３歳以上 Ｃ４－３
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819151900 +0900" stop="20260819155700 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏆決勝🏆  ⓫ℛ  15:56発走  🏆【準決勝戦 2026年08月19日 電投締切15 : 54 発走予定15 : 56】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819154600 +0900" stop="20260819162500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">🔥準決勝🔥 ⓫ℛ 15:56発走 🏍️【準決勝戦 2026年08月19日 電投締切15 : 54 発走予定15 : 56】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 15:56
@@ -2976,8 +2968,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 ⏰ 発走予定: 16:33
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819155700 +0900" stop="20260819163600 +0900" channel="auto.hamamatsu">
-        <title lang="ja">🏆決勝🏆  ⓬ℛ  16:35発走  🏆【準決勝戦 2026年08月19日 電投締切16 : 33 発走予定16 : 35】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819162500 +0900" stop="20260819170500 +0900" channel="auto.hamamatsu">
+        <title lang="ja">🔥準決勝🔥 ⓬ℛ 16:35発走 🏍️【準決勝戦 2026年08月19日 電投締切16 : 33 発走予定16 : 35】</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 16:35
@@ -3557,7 +3549,7 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📅 2026年08月19日</desc>
     </programme>
     <programme start="20260819194300 +0900" stop="20260819201000 +0900" channel="auto.sanyo">
-        <title lang="ja">❶ℛ  19:53発走  🏍️【一般戦 2026年08月19日 電投締切19 : 51 発走予定19 : 53 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❶ℛ 19:53発走 🏍️【一般戦 2026年08月19日 電投締切19 : 51 発走予定19 : 53】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 19:53
@@ -3644,8 +3636,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📅 開催日次: 初日
 🏆 メインレース</desc>
     </programme>
-    <programme start="20260819195400 +0900" stop="20260819202100 +0900" channel="auto.sanyo">
-        <title lang="ja">❷ℛ  20:20発走  🏍️【一般戦 2026年08月19日 電投締切20 : 18 発走予定20 : 20 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819201000 +0900" stop="20260819203800 +0900" channel="auto.sanyo">
+        <title lang="ja">❷ℛ 20:20発走 🏍️【一般戦 2026年08月19日 電投締切20 : 18 発走予定20 : 20】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 20:20
@@ -3718,8 +3710,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 ⏰ 発走予定: 20:45
 📅 2026年08月19日</desc>
     </programme>
-    <programme start="20260819202100 +0900" stop="20260819204900 +0900" channel="auto.sanyo">
-        <title lang="ja">❸ℛ  20:48発走  🏍️【一般戦 2026年08月19日 電投締切20 : 46 発走予定20 : 48 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819203800 +0900" stop="20260819210600 +0900" channel="auto.sanyo">
+        <title lang="ja">❸ℛ 20:48発走 🏍️【一般戦 2026年08月19日 電投締切20 : 46 発走予定20 : 48】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 20:48
@@ -3789,8 +3781,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">門別の本日の競馬は全て終了しました。</desc>
     </programme>
-    <programme start="20260819204900 +0900" stop="20260819211700 +0900" channel="auto.sanyo">
-        <title lang="ja">❹ℛ  21:16発走  🏍️【一般戦 2026年08月19日 電投締切21 : 14 発走予定21 : 16 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819210600 +0900" stop="20260819213400 +0900" channel="auto.sanyo">
+        <title lang="ja">❹ℛ 21:16発走 🏍️【一般戦 2026年08月19日 電投締切21 : 14 発走予定21 : 16】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 21:16
@@ -3846,8 +3838,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📢 開催名: 週刊実話賞
 📅 開催日次: 2日目</desc>
     </programme>
-    <programme start="20260819211700 +0900" stop="20260819214500 +0900" channel="auto.sanyo">
-        <title lang="ja">❺ℛ  21:44発走  🏍️【一般戦 2026年08月19日 電投締切21 : 42 発走予定21 : 44 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819213400 +0900" stop="20260819220200 +0900" channel="auto.sanyo">
+        <title lang="ja">❺ℛ 21:44発走 🏍️【一般戦 2026年08月19日 電投締切21 : 42 発走予定21 : 44】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 21:44
@@ -3883,8 +3875,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
         <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260819214500 +0900" stop="20260819221300 +0900" channel="auto.sanyo">
-        <title lang="ja">❻ℛ  22:12発走  🏍️【一般戦 2026年08月19日 電投締切22 : 10 発走予定22 : 12 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819220200 +0900" stop="20260819223000 +0900" channel="auto.sanyo">
+        <title lang="ja">❻ℛ 22:12発走 🏍️【一般戦 2026年08月19日 電投締切22 : 10 発走予定22 : 12】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 22:12
@@ -3926,8 +3918,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
         <desc lang="ja">「畜産トレンド発見！「総集編　ホルスタインに情熱を注ぐ高校生たち」」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260819221300 +0900" stop="20260819224100 +0900" channel="auto.sanyo">
-        <title lang="ja">🏆決勝🏆  ❼ℛ  22:40発走  🏆【準決勝戦 2026年08月19日 電投締切22 : 38 発走予定22 : 40】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819223000 +0900" stop="20260819225800 +0900" channel="auto.sanyo">
+        <title lang="ja">🔥準決勝🔥 ❼ℛ 22:40発走 🏍️【準決勝戦 2026年08月19日 電投締切22 : 38 発走予定22 : 40】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 22:40
@@ -3971,8 +3963,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
 📅 開催日次: 2日目
 🔥 準決勝</desc>
     </programme>
-    <programme start="20260819224100 +0900" stop="20260819230900 +0900" channel="auto.sanyo">
-        <title lang="ja">🏆決勝🏆  ❽ℛ  23:08発走  🏆【準決勝戦 2026年08月19日 電投締切23 : 06 発走予定23 : 08】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819225800 +0900" stop="20260819233000 +0900" channel="auto.sanyo">
+        <title lang="ja">🔥準決勝🔥 ❽ℛ 23:08発走 🏍️【準決勝戦 2026年08月19日 電投締切23 : 06 発走予定23 : 08】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 23:08
@@ -4028,8 +4020,8 @@ F1 競輪ＷＳ ケイドリ杯 中スポ賞
         <desc lang="ja">「畜産トレンド発見！　総集編(1) TMRセンター・自給飼料生産」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260819230900 +0900" stop="20260819234100 +0900" channel="auto.sanyo">
-        <title lang="ja">🏆決勝🏆  ❾ℛ  23:40発走  🏆【準決勝戦 2026年08月19日 電投締切23 : 38 発走予定23 : 40】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260819233000 +0900" stop="20260820001000 +0900" channel="auto.sanyo">
+        <title lang="ja">🔥準決勝🔥 ❾ℛ 23:40発走 🏍️【準決勝戦 2026年08月19日 電投締切23 : 38 発走予定23 : 40】</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌌 開催区分: オーバーミッドナイト
 ⏰ 発走予定: 23:40

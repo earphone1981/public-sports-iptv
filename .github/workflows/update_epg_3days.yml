@@ -16,6 +16,7 @@ on:
       - "fix_boat_waiting_title.py"
       - "fix_autorace_today_official.py"
       - "fix_epg_duplicate_channel_ids.py"
+      - "sort_public_sports_by_epg.py"
       - ".github/workflows/update_epg_3days.yml"
 
 concurrency:
@@ -58,6 +59,13 @@ jobs:
       - name: Fix duplicate-name channel IDs
         run: python -u fix_epg_duplicate_channel_ids.py
 
+      # EPGを正として、各公営競技グループ内のM3Uを
+      # モーニング→デイ→薄暮→ナイター→ミッドナイト→オーバーミッドナイト順へ並べる。
+      # 同一区分は1R発走の早い順。非開催・取得不能は末尾。
+      # YouTube/JRA/GCHは固定順を維持する。
+      - name: Sort public sports M3U from today's EPG
+        run: python -u sort_public_sports_by_epg.py
+
       - name: Validate required duplicate-name channels
         run: |
           python - <<'PY'
@@ -78,12 +86,12 @@ jobs:
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 
-      - name: Commit and push EPG
+      - name: Commit and push EPG and sorted M3U
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add epg.xml
+          git add epg.xml public_sports.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update 3-day public sports EPG"
+          git commit -m "Update EPG and sort public sports M3U"
           git pull --rebase origin main
           git push

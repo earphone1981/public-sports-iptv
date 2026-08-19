@@ -9,6 +9,7 @@ on:
       - 'public_sports.m3u'
       - 'keiba_master.m3u'
       - 'normalize_public_sports_labels.py'
+      - 'fix_logo_refs.py'
       - '.github/workflows/normalize_public_sports.yml'
   workflow_dispatch:
 
@@ -39,6 +40,9 @@ jobs:
 
       - name: Normalize EPG and M3U labels/status
         run: python normalize_public_sports_labels.py
+
+      - name: Fix IPTV logo references
+        run: python fix_logo_refs.py
 
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"

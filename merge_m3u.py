@@ -14,11 +14,10 @@ INPUTS = [
     ('ボートレース', BASE/'boatrace_today.m3u'),
 ]
 
-# 公営YouTube・かなチューブ・一般LIVEをそれぞれのソースから統合する。
+# 公営側は公営公式YouTubeのみ統合する。
+# かなチューブ・一般LIVEは himitsu 側で管理するため、ここでは読まない。
 YOUTUBE_INPUTS = [
     ('公営YouTube', BASE/'public_sports_youtube.m3u'),
-    ('かなチューブ', BASE/'kana_live.m3u'),
-    ('その他LIVE', BASE/'other_live.m3u'),
 ]
 
 JRA = [

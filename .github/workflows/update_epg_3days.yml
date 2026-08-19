@@ -32,6 +32,9 @@ jobs:
       - name: Show BOAT first race while waiting
         run: python fix_boat_waiting_title.py
 
+      - name: Fix duplicate-name channel IDs
+        run: python fix_epg_duplicate_channel_ids.py
+
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 

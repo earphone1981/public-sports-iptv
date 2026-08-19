@@ -50,10 +50,13 @@ jobs:
         shell: bash
         run: git pull --ff-only origin main
 
-      - name: Refresh requested その他LIVE only
+      - name: Refresh current その他LIVE
         run: python youtube_base_update.py
 
-      - name: Refresh かなチューブ only
+      - name: Refresh public sports official YouTube LIVE
+        run: python public_sports_youtube_update.py
+
+      - name: Refresh かなチューブ
         run: python youtube_dynamic_update.py
 
       - name: Normalize public sports labels
@@ -63,21 +66,21 @@ jobs:
         shell: bash
         run: |
           test -s public_sports.m3u
-          if grep -Eq 'group-title="(競輪 YouTube LIVE|地方競馬 YouTube LIVE|オートレース YouTube LIVE|ボートレース YouTube LIVE|公営競技 横断LIVE)"' public_sports.m3u; then
-            echo "ERROR: 公営競技YouTubeサブが残っています"
-            exit 1
-          fi
-          echo "YouTube sub channels: none"
+          test -s public_sports_youtube.m3u
+          grep -q 'group-title="かなチューブ"' public_sports.m3u
+          echo "Public sports YouTube LIVE count: $(grep -Ec 'group-title="(競輪 YouTube LIVE|地方競馬 YouTube LIVE|オートレース YouTube LIVE|ボートレース YouTube LIVE|公営競技 横断LIVE)"' public_sports.m3u || true)"
+          echo "YouTube validation OK"
 
       - name: Commit updated LIVE URLs
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public_sports.m3u kana_live.m3u namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u || true
+          git add public_sports.m3u public_sports_youtube.m3u kana_live.m3u namibia_live.m3u youtube_test.m3u matsuyama_airport_live.m3u || true
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "Update selected YouTube LIVE URLs"
+          git commit -m "Update public sports and selected YouTube LIVE URLs"
+          git pull --rebase origin main
           git push origin main

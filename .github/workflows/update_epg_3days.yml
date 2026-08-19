@@ -32,6 +32,9 @@ jobs:
       - name: Show BOAT first race while waiting
         run: python fix_boat_waiting_title.py
 
+      - name: Fix today's AutoRace from official current-day page
+        run: python fix_autorace_today_official.py
+
       - name: Fix duplicate-name channel IDs
         run: python fix_epg_duplicate_channel_ids.py
 

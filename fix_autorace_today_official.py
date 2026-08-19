@@ -74,21 +74,16 @@ def detect_today_venues():
     if not joined:
         raise SystemExit("AutoRace.JP today's page could not be fetched")
 
-    # Safety: do not trust a page that clearly is not the current-day page.
     date_tokens = {
         TODAY.strftime("%Y/%m/%d"),
-        TODAY.strftime("%Y/%-m/%-d") if hasattr(TODAY, "strftime") else "",
         f"{TODAY.year}年{TODAY.month}月{TODAY.day}日",
+        f"{TODAY.year}/{TODAY.month}/{TODAY.day}",
     }
-    # %-m is not portable on Windows, so also build manually.
-    date_tokens.add(f"{TODAY.year}/{TODAY.month}/{TODAY.day}")
     if not any(t and t in joined for t in date_tokens):
         print("warning: today's explicit date string not found; continuing with venue-card checks")
 
     active = {}
     for venue in AUTO:
-        # Find a limited chunk after the venue name. Official cards include
-        # venue + event title + 1R HH:MM 発走. Multiple occurrences are okay.
         matches = list(re.finditer(re.escape(venue) + r"オート", joined))
         best = None
         for m in matches:
@@ -115,7 +110,8 @@ def detect_today_venues():
             active[venue] = best
 
     if not active:
-        raise SystemExit("No current-day AutoRace venues detected; refusing to overwrite EPG")
+        print("AUTORACE official today: no home-track venues; treating all 5 venues as non-event")
+        return {}
 
     print("AUTORACE official today:", ", ".join(
         f"{v} 1R {i['first']} {i['day_type']}" for v, i in active.items()
@@ -164,8 +160,6 @@ def get_races(venue, slug, first_hint):
         r = parse_program(fetch(url, f"AUTORACE {venue} {n}R"), n)
         if r:
             races.append(r)
-    # If Program pages are temporarily unavailable but the official card has 1R,
-    # keep the event as confirmed rather than falsely marking it non-event.
     if not races:
         races.append({"race": 1, "time": first_hint, "name": "開催予定", "provisional": True})
     return races
@@ -215,7 +209,6 @@ def main():
     day_start = datetime.datetime.combine(TODAY, datetime.time(8, 0), tzinfo=JST)
     day_end = datetime.datetime.combine(TODAY, datetime.time(23, 59), tzinfo=JST)
 
-    # Remove only today's 08:00+ AutoRace blocks. Keep 00:00-08:00 preparation block.
     auto_ids = {cid for cid, _ in AUTO.values()}
     for prog in list(root.findall("programme")):
         if prog.get("channel") not in auto_ids:
@@ -293,7 +286,6 @@ def main():
                 f"{venue}の本日のオートレースは全て終了しました。",
             )
 
-    # Keep XMLTV programmes sorted by start time for stable output.
     channels = [x for x in list(root) if x.tag == "channel"]
     programmes = [x for x in list(root) if x.tag == "programme"]
     programmes.sort(key=lambda x: (x.get("start", ""), x.get("channel", "")))

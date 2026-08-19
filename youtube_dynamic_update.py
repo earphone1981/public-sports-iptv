@@ -11,6 +11,7 @@ M3U = Path('public_sports.m3u')
 # ・ここでは「かなチューブ」だけを拾う
 # ・LIVEなし時も「現在LIVEなし」をM3Uに常設する
 # ・同じ tvg-id は更新前に必ず除去して重複させない
+# ・かなLIVEは映像+音声一体のHLSを優先してプレーヤー互換性を上げる
 # ============================================================
 
 KANA_STREAMS = 'https://www.youtube.com/@kana_tube/streams'
@@ -50,23 +51,38 @@ def live_items(src):
 
 
 def get_url(page):
-    p = run([
-        'yt-dlp',
-        '--js-runtimes', 'node',
-        '--cookies', COOKIES,
-        '--extractor-args', 'youtube:player_client=default,web_safari',
-        '--no-playlist',
-        '--match-filter', 'is_live',
-        '--no-warnings',
-        '-f', '95/best[protocol^=m3u8]/best',
-        '-g', page,
-    ], 150)
-
-    urls = [
-        x.strip() for x in p.stdout.splitlines()
-        if x.strip().startswith(('http://', 'https://'))
+    # iPhone系IPTVプレーヤーとの互換性を優先。
+    # まず video+audio が同一HLSに入った形式を明示的に選び、
+    # 取れない場合だけ従来の95/汎用HLSへフォールバックする。
+    selectors = [
+        'best[protocol^=m3u8][vcodec!=none][acodec!=none]',
+        '96/95/94/93/92/91',
+        'best[protocol^=m3u8]',
+        'best',
     ]
-    return urls[0] if p.returncode == 0 and urls else None
+
+    for selector in selectors:
+        p = run([
+            'yt-dlp',
+            '--js-runtimes', 'node',
+            '--cookies', COOKIES,
+            '--extractor-args', 'youtube:player_client=default,web_safari',
+            '--no-playlist',
+            '--match-filter', 'is_live',
+            '--no-warnings',
+            '-f', selector,
+            '-g', page,
+        ], 150)
+
+        urls = [
+            x.strip() for x in p.stdout.splitlines()
+            if x.strip().startswith(('http://', 'https://'))
+        ]
+        if p.returncode == 0 and len(urls) == 1:
+            print('KANA FORMAT', selector)
+            return urls[0]
+
+    return None
 
 
 def skip_entry(lines, i):
@@ -136,7 +152,6 @@ while i < len(lines):
     line = lines[i]
     stripped = line.strip()
 
-    # マーカー外に残った旧かなチューブも必ず削除する。
     if line.startswith('#EXTINF:') and f'tvg-id="{KANA_TVG_ID}"' in line:
         i = skip_entry(lines, i)
         continue

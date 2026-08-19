@@ -131,49 +131,49 @@ https://d20jzsap8ax0i2.cloudfront.net/out/v1/2dabf5a556dd4bfbb75c28537be02c2f/in
 https://cfl.st.keirin.jp/54/dash/54.mpd
 
 ## 地方競馬
-#EXTINF:-1 tvg-id="chihou.obihiro" tvg-name="帯広けいば（ばんえい競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/obihiro.png" group-title="競馬 / 地方競馬",帯広けいば（ばんえい競馬）
+#EXTINF:-1 tvg-id="chihou.obihiro" tvg-name="帯広けいば（ばんえい競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/obihiro.svg" group-title="競馬 / 地方競馬",帯広けいば（ばんえい競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/obihiro5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="門別けいば（ホッカイドウ競馬）" tvg-logo="https://www.hokkaidokeiba.net/common/images/head/logo.png" group-title="競馬 / 地方競馬",門別けいば（ホッカイドウ競馬）
+#EXTINF:-1 tvg-id="chihou.mombetsu" tvg-name="門別けいば（ホッカイドウ競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/hokkaido_keiba.png" group-title="競馬 / 地方競馬",門別けいば（ホッカイドウ競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/monbetsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="盛岡けいば（岩手競馬）" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",盛岡けいば（岩手競馬）
+#EXTINF:-1 tvg-id="chihou.morioka" tvg-name="盛岡けいば（岩手競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/morioka.png" group-title="競馬 / 地方競馬",盛岡けいば（岩手競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/morioka5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="水沢けいば（岩手競馬）" tvg-logo="https://www.iwatekeiba.or.jp/dir/wp-content/themes/iwatekeiba/img/head_logo.png" group-title="競馬 / 地方競馬",水沢けいば（岩手競馬）
+#EXTINF:-1 tvg-id="chihou.mizusawa" tvg-name="水沢けいば（岩手競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/mizusawa.png" group-title="競馬 / 地方競馬",水沢けいば（岩手競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/mizusawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="浦和けいば（南関東競馬）" tvg-logo="https://www.urawa-keiba.jp/assets/img/common/logo.png" group-title="競馬 / 地方競馬",浦和けいば（南関東競馬）
+#EXTINF:-1 tvg-id="chihou.urawa" tvg-name="浦和けいば（南関東競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/urawa.png" group-title="競馬 / 地方競馬",浦和けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/urawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="船橋けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/funabashi.png" group-title="競馬 / 地方競馬",船橋けいば（南関東競馬）
+#EXTINF:-1 tvg-id="chihou.funabashi" tvg-name="船橋けいば（南関東競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/funabashi.png" group-title="競馬 / 地方競馬",船橋けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/funabashi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.oi" tvg-name="大井けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/ooi.png" group-title="競馬 / 地方競馬",大井けいば（南関東競馬）
+#EXTINF:-1 tvg-id="chihou.oi" tvg-name="大井けいば（南関東競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/ooi.png" group-title="競馬 / 地方競馬",大井けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/ooi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="川崎けいば（南関東競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kawasaki.png" group-title="競馬 / 地方競馬",川崎けいば（南関東競馬）
+#EXTINF:-1 tvg-id="chihou.kawasaki_keiba" tvg-name="川崎けいば（南関東競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kawasaki.png" group-title="競馬 / 地方競馬",川崎けいば（南関東競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kawasaki5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢けいば（金沢競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kanazawa.png" group-title="競馬 / 地方競馬",金沢けいば（金沢競馬）
+#EXTINF:-1 tvg-id="chihou.kanazawa" tvg-name="金沢けいば（金沢競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kanazawa.png" group-title="競馬 / 地方競馬",金沢けいば（金沢競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kanazawa5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋けいば（名古屋競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/nagoya.png" group-title="競馬 / 地方競馬",名古屋けいば（名古屋競馬）
+#EXTINF:-1 tvg-id="chihou.nagoya_keiba" tvg-name="名古屋けいば（名古屋競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/nagoya.png" group-title="競馬 / 地方競馬",名古屋けいば（名古屋競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/nagoya5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松けいば（笠松競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/kasamatsu.png" group-title="競馬 / 地方競馬",笠松けいば（笠松競馬）
+#EXTINF:-1 tvg-id="chihou.kasamatsu" tvg-name="笠松けいば（笠松競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kasamatsu.png" group-title="競馬 / 地方競馬",笠松けいば（笠松競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kasamatsu5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田けいば（園田競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",園田けいば（園田競馬）
+#EXTINF:-1 tvg-id="chihou.sonoda" tvg-name="園田けいば（園田競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/sonoda.png" group-title="競馬 / 地方競馬",園田けいば（園田競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/sonoda5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路けいば（姫路競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/sonoda.png" group-title="競馬 / 地方競馬",姫路けいば（姫路競馬）
+#EXTINF:-1 tvg-id="chihou.himeji" tvg-name="姫路けいば（姫路競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/himeji.png" group-title="競馬 / 地方競馬",姫路けいば（姫路競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/himeji5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="こうちけいば（高知競馬）" tvg-logo="https://www.keiba.or.jp/wp/wp-content/uploads/2016/07/0052a4614394e22c55614f818fd3138e.png" group-title="競馬 / 地方競馬",こうちけいば（高知競馬）
+#EXTINF:-1 tvg-id="chihou.kochi_keiba" tvg-name="こうちけいば（高知競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/kochi.png" group-title="競馬 / 地方競馬",こうちけいば（高知競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/kouchi5.m3u8
 
-#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀けいば（佐賀競馬）" tvg-logo="https://keiba-lv-st.jp/img/track/left-s/saga.png" group-title="競馬 / 地方競馬",佐賀けいば（佐賀競馬）
+#EXTINF:-1 tvg-id="chihou.saga" tvg-name="佐賀けいば（佐賀競馬）" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/local_keiba/saga.png" group-title="競馬 / 地方競馬",佐賀けいば（佐賀競馬）
 https://rakuten3qdrzrp0.keiba-racing.jp/hls-live/keiba/_definst_/liveevent/saga5.m3u8
 
 ## オートレース
@@ -218,9 +218,21 @@ https://manifest.streaks.jp/v4/cp-boatrace-prod/129a07a27a9b42619ef6ff3d3518b1ef
 https://manifest.streaks.jp/v4/cp-boatrace-prod/44890356fef04e47b23da48d177834bf/293cfc12630a48d1ad55b76fd293e39e/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzI3NDAwMCwic3RhcnQiOjE3ODcwOTQ3ODAsImlvcyI6MTgsImNwIjoiMjA5MjkwMzgwXzIwOTMzMzU3OSIsInBwdyI6IjQwayJ9.emN2CUxdrLi4-KZ9WpX1LxBggP4bVKyYrX0DVb0PFKw
 
 ## かなチューブ
+#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
+https://www.youtube.com/@kana_tube/streams
+
 ## その他LIVE
+#EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",♻️ 松山市クリーンセンター LIVE
+https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120734/ei/_veEaoDrK6aAsfIPptCngQU/ip/134.33.70.50/id/C0gpM_qIIl0.7/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr3---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAlKbKRD5dPJxG2xepQkzVRy8E5-hHhxdxlEIZICOPo-l639vs-IAAVMnmy2LyP4i6SQNQ/spc/KBGBcvfhWwt--FDquX_Ip8ux0C4Ct-q_brnJ_lSueMjzMggObcbCTLYF8SQMma8LITfO4YOu5Jb0wg/vprv/1/ns/pCKZH7lmjKbq77RqlAHD94cX/reg/0/playlist_type/DVR/met/1787099138,/mh/5D/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/3/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/BkIPJFhZJlPH0Q/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIgHPgtvlwTiEVsY_7Ah8T9llH-GTl02GJ6KWKvwrpt_YgCIQCvsq-oKsUBc-kim96akEcUBN32aAoUs2l8tkrwmWjtWQ%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRAIgA6exYAIP3qptOdPmww_J0xIRC_oeQorGpWFaP3wDGokCICUzREbEkcokOrcfDypaj4G0r92V42wBhpLI0pebjIzc/playlist/index.m3u8
+
 ## その他LIVE
+#EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE
+https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120729/ei/-feEapP-NKWBsfIP8faJIA/ip/134.33.70.50/id/ydYDqZQpim8.45/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr2---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAlpR7vTrJNSLC1K450N38lIA2586MynmkNn5Kl8HW0cHkb5wLScfNI43zhtzzT9RgYWPA/spc/KBGBcjJLFtFTVlWzM-l-pe2Lvxy5E8wZc9WEBwd0MA6HRwdXCOHVsnjBpKZOMVvOidx6ROigH9kyUQ/vprv/1/ns/h2UUUUBLU6iqDx32wbxrrskX/reg/0/playlist_type/DVR/met/1787099134,/mh/XM/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/2/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/ehUPCdj2j1J_Nw/mt/1787098992/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIhAJX46tBjB1i2dGTHgtpDhFHYv3DHEH_NU7JHZxEUDQQ0AiB4cHUsnxRzhe2QTIhmiasScPq6UJ87LpqBPhf_tW5M6w%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIgU5tIwM_maXY0DXskwubdIugR73_Ht3Rm5Z_VPuUlpOYCIQDFhWJcBAqbwP9BY8gnPF0KJoH4F88pnmQoFRRGvgrCWQ%3D%3D/playlist/index.m3u8
+
 ## その他LIVE
+#EXTINF:-1 tvg-id="youtube.matsuyama.airport" tvg-name="松山空港 LIVE" group-title="その他LIVE",✈️ 松山空港 LIVE
+https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120740/ei/BPiEaqrqBtmXsfIP3LaoqAk/ip/134.33.70.50/id/CFh9z-6IeEE.3/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr5---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAl7cQrmjspEK0E_ZElhMr6OwVwcgQY6mFgPWQDKDheqD-J4geSuKMeU1wHJeLYdL6ghNQ/spc/KBGBcnVNEYLtMRWhkmBknI8DjVlMxlquulyFS48s-Qljj9iJY6-qfFeGQS8YhfovsCRkFqFjzah8rw/vprv/1/ns/Cvb9kymFi70RHJhEi78Q0ZwX/reg/0/playlist_type/DVR/met/1787099143,/mh/dQ/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/5/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/lDd6GxbrxAL0tQ/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIhAPW0ObBQphAg4ee5tBHI4WfThkyDNRMDiOjEF7j5s8_kAiAXPLnxeGxMa3s8zFG4xNk6HYf4OfDaLZjEeC8PreD1mw%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhAMTcy3I6s3JWkGYT1TfwHi_OgchG9I0KURioTg_K3pxhAiAj6cnW_Zu6sZPYbRCbca4psfUkwBgx5LJElDdcUnodNw%3D%3D/playlist/index.m3u8
+
 ## 中央競馬
 #EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain.m3u8
@@ -245,45 +257,3 @@ https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_m
 
 #EXTINF:-1 tvg-id="jra.hokkaido" tvg-name="JRA HOKKAIDO" group-title="中央競馬",JRA HOKKAIDO（低画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/hokaido_master_LQ.m3u8
-
-# === BASE YOUTUBE LIVE START ===
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.namibia.live" tvg-name="ナミビア LIVE" group-title="その他LIVE",🇳🇦 ナミビア LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120729/ei/-feEapP-NKWBsfIP8faJIA/ip/134.33.70.50/id/ydYDqZQpim8.45/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr2---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAlpR7vTrJNSLC1K450N38lIA2586MynmkNn5Kl8HW0cHkb5wLScfNI43zhtzzT9RgYWPA/spc/KBGBcjJLFtFTVlWzM-l-pe2Lvxy5E8wZc9WEBwd0MA6HRwdXCOHVsnjBpKZOMVvOidx6ROigH9kyUQ/vprv/1/ns/h2UUUUBLU6iqDx32wbxrrskX/reg/0/playlist_type/DVR/met/1787099134,/mh/XM/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/2/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/ehUPCdj2j1J_Nw/mt/1787098992/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIhAJX46tBjB1i2dGTHgtpDhFHYv3DHEH_NU7JHZxEUDQQ0AiB4cHUsnxRzhe2QTIhmiasScPq6UJ87LpqBPhf_tW5M6w%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIgU5tIwM_maXY0DXskwubdIugR73_Ht3Rm5Z_VPuUlpOYCIQDFhWJcBAqbwP9BY8gnPF0KJoH4F88pnmQoFRRGvgrCWQ%3D%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",♻️ 松山市クリーンセンター LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120734/ei/_veEaoDrK6aAsfIPptCngQU/ip/134.33.70.50/id/C0gpM_qIIl0.7/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr3---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAlKbKRD5dPJxG2xepQkzVRy8E5-hHhxdxlEIZICOPo-l639vs-IAAVMnmy2LyP4i6SQNQ/spc/KBGBcvfhWwt--FDquX_Ip8ux0C4Ct-q_brnJ_lSueMjzMggObcbCTLYF8SQMma8LITfO4YOu5Jb0wg/vprv/1/ns/pCKZH7lmjKbq77RqlAHD94cX/reg/0/playlist_type/DVR/met/1787099138,/mh/5D/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/3/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/BkIPJFhZJlPH0Q/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIgHPgtvlwTiEVsY_7Ah8T9llH-GTl02GJ6KWKvwrpt_YgCIQCvsq-oKsUBc-kim96akEcUBN32aAoUs2l8tkrwmWjtWQ%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRAIgA6exYAIP3qptOdPmww_J0xIRC_oeQorGpWFaP3wDGokCICUzREbEkcokOrcfDypaj4G0r92V42wBhpLI0pebjIzc/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.matsuyama.airport" tvg-name="松山空港 LIVE" group-title="その他LIVE",✈️ 松山空港 LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120740/ei/BPiEaqrqBtmXsfIP3LaoqAk/ip/134.33.70.50/id/CFh9z-6IeEE.3/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr5---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAl7cQrmjspEK0E_ZElhMr6OwVwcgQY6mFgPWQDKDheqD-J4geSuKMeU1wHJeLYdL6ghNQ/spc/KBGBcnVNEYLtMRWhkmBknI8DjVlMxlquulyFS48s-Qljj9iJY6-qfFeGQS8YhfovsCRkFqFjzah8rw/vprv/1/ns/Cvb9kymFi70RHJhEi78Q0ZwX/reg/0/playlist_type/DVR/met/1787099143,/mh/dQ/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/5/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/lDd6GxbrxAL0tQ/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIhAPW0ObBQphAg4ee5tBHI4WfThkyDNRMDiOjEF7j5s8_kAiAXPLnxeGxMa3s8zFG4xNk6HYf4OfDaLZjEeC8PreD1mw%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhAMTcy3I6s3JWkGYT1TfwHi_OgchG9I0KURioTg_K3pxhAiAj6cnW_Zu6sZPYbRCbca4psfUkwBgx5LJElDdcUnodNw%3D%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.dogo.live" tvg-name="道後温泉本館 LIVE" group-title="その他LIVE",♨️ 道後温泉本館 LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120753/ei/EfiEav7rE5yRsfIPxqCxqAs/ip/134.33.70.50/id/hy7sPwngWNQ.1/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr4---sn-aj2im9-5j.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAmTMaH3ZNkylRpKwlK_aLgHDG32WKK-TlJXNZyt1DR_M8Si7xtJfcALusH2cBEeFC3YRA/spc/KBGBcs5a-URf4Ey7z9mlqfe319DyAaWjN2ieeK68vPZt7plkiTDsD-q6drvxVc9xs6FEU6M-wXCRSg/vprv/1/ns/ry1fuyBRTyr7Xu6wpUHF0jMX/reg/0/playlist_type/DVR/met/1787099156,/mh/0s/mm/44/mn/sn-aj2im9-5j/ms/lva/mv/u/mvi/4/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/8w_LufJ2imz0mQ/mt/1787098992/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRgIhAPhNG7V6Dw_J2x_OeEclLvap7RIm8gHqIYgbMLIHstAEAiEAqb_RTMyVj8iPNgjFRthsSGTAuSsDZnyI9qNfQnIYkKE%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhAI2_cmEpp3XNssB1BiUg2SML_xIAdbR-4OME_973C4KJAiBK6wSd2ZlNsUwz1KgVo8cpoBJRux-D3rOXJDMrLFsesw%3D%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.matsuyama.honmachi.live" tvg-name="松山市本町 LIVE" group-title="その他LIVE",🏙️ 松山市本町 LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120769/ei/IfiEavG2F7eRsfIPnYHYkQE/ip/134.33.70.50/id/dR38IfNLULA.1/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr3---sn-2imern7r.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAnaAG8Hfyg7MzNXR87FKfiCk7auPneKkzOjAE9cFJcXdRGHKfQ38yI4I1es_KZ6IUKEFA/spc/KBGBcnY_6aQF2ptbg4a8O7eEvhfTxfX9JAmilRyU8F0wXLS0_2Ig4zeY2yDz9FiGbGALbIV6Rb3Bmw/vprv/1/ns/w4LDNM0V_Sq581SftTKQ7u4X/reg/0/playlist_type/DVR/met/1787099172,/mh/c-/mm/44/mn/sn-2imern7r/ms/lva/mv/u/mvi/3/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/WpirOHVfcPt0fA/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRAIgYg0cus7TQkbpzlz2zdoZXo8GjkeD0_RlkIOWdbBrPIQCIHiHxBWjYDwAw4JiQhvzainXltyAeM7cxayj4Cr5Rcfp/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAKESZB9krKJU-E0ewfuV1SU0Ltfkc5xEz2WSmEbHZ_-bAiEAiISOv1JflQnEuvU3KIrYbOpbcuIIT5fD9LKnaz64M_s%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.yawatahama.port.live" tvg-name="八幡浜港 LIVE" group-title="その他LIVE",⛴️ 八幡浜港 LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120784/ei/MPiEasfoCvObzN0PhcLzmQM/ip/134.33.70.50/id/XJ-o3WNR6Fk.6/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr2---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAnxHmXiqVmT4DFflIXQzMTkl9CLAOCW10LYguejwHVqLCkkYJOTZMKcw_2yn4nPTP7Hqw/spc/KBGBcpMF7dUyZCe2j48JXBzCnjibhOeAg3qzJT0isIGCx7zru9nrGnVfK3sbAT2eERtPHlnZe3ThZQ/vprv/1/ns/nSoMkHbgtIzA3z9TOsacTZwX/reg/0/playlist_type/DVR/met/1787099188,/mh/Nr/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/2/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/3e6t9cPlAx83ug/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRQIgM30oC_eWO6CsW5iKnwn12VWX6-85TfDLaOyy1PZoVgYCIQDWhbjgrh-1gKpiPMBI4IF9FKHqWW-wuePflFEJomVrWw%3D%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAMM_TNbHZgJE9RYr9nUoHS52JSalo5YbaUimRyTAd3OrAiEAqlUmu706BT_87cce62F5Vxv3PqeJzztmko4otxFBHD4%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.uwajima.live" tvg-name="宇和島 LIVE" group-title="その他LIVE",🏯 宇和島 LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120801/ei/QfiEapOCEN6LsfIPjZnymQU/ip/134.33.70.50/id/aJcTvBuj5AA.6/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr4---sn-aj2im9-5j.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAm3DFwdF_U8mJtdApZzQyApmEpOQCG3PCooLYaIFNh2OJRASDodsgbzEnBQKRCnaPcNmA/spc/KBGBcgdxbXyCTcV996U_Jakhlv8JXYsnolcl-LuPW3xnsfgkj6-LqB05WHiPenQlsOg1Dmdn0u4AGA/vprv/1/ns/0Y8Vb4SwlBM5nTGLBiDSw40X/reg/0/playlist_type/DVR/met/1787099204,/mh/6S/mm/44/mn/sn-aj2im9-5j/ms/lva/mv/u/mvi/4/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/PKcDSE0nIAgOqg/mt/1787098992/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRAIgNwMjtPlkzmcP9O9Xp-aa0dBkZPYF6l5w11tE-GfQR0gCIE83d18T3H4TzVYil4kFdeAPtN5ze4Yxv5u_7B-iWDOe/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIgVLxsLtNqKNInFVx1fR1ldCFnlATVjkdUZUGnFhA-IhoCIQC6seqFcuZElXRPhubVgFzTsH5cJaC6hEssIzn5SujJng%3D%3D/playlist/index.m3u8
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.shimanami.live" tvg-name="しまなみ LIVE" group-title="その他LIVE",🌉 しまなみ LIVE
-https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1787120827/ei/W_iEar-iC56LsfIP2JOtgQs/ip/134.33.70.50/id/OV0JEv6C2QQ.5/itag/95/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D136/rqh/1/hls_chunk_host/rr4---sn-aj2im9-5q.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/siu/1/bui/AR3QkAmeQScYP3Fe9e6iJe0GjejhfOrNQEAON_jy-KuHhPz_NE1aaRaXLN-ShRzkdCCYoZKP6Q/spc/KBGBcjHSSXRy09xFIl5Mx9XV6vIH-hW5LYYCYU6ACzMMJdU9IcGlBkm7_1kobwLqedvmuFW7Zm8rPA/vprv/1/ns/eTIlj3xU5s99XM5bMUu7FnMX/reg/0/playlist_type/DVR/met/1787099230,/mh/Fj/mm/44/mn/sn-aj2im9-5q/ms/lva/mv/u/mvi/4/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565115,51946838,51973818/n/0OldV2m9-zQPvg/mt/1787098425/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,siu,bui,spc,vprv,ns,reg,playlist_type/sig/AE0s2JYwRAIgftRBlZWlPoO_59_Z73P8qAZuGF8vUVr3aGZnXN5-shwCIBCFk2Cs5j0Qy3vCkNwDzgECEx9aTdUje4OR7cFYuJD2/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhAMNqAEc_DuC5YzFDX9xKWCA_9P75sDr62rzqmDsex6scAiBKHXXUhjGb1XEDoweW8vDOjAVZpYguBrLw_Z9jYQcVkg%3D%3D/playlist/index.m3u8
-
-# === BASE YOUTUBE LIVE END ===
-
-# === DYNAMIC YOUTUBE LIVE START ===
-## かなチューブ
-#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
-https://www.youtube.com/@kana_tube/streams
-
-# === DYNAMIC YOUTUBE LIVE END ===

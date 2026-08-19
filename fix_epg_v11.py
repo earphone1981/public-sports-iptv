@@ -21,6 +21,11 @@ SPECIAL_KEIRIN_FULL = {
     "keirin.mukomachi": "向日町けいりん（休止中）",
 }
 
+R_CIRCLED = {
+    1: "❶", 2: "❷", 3: "❸", 4: "❹", 5: "❺", 6: "❻",
+    7: "❼", 8: "❽", 9: "❾", 10: "❿", 11: "⓫", 12: "⓬",
+}
+
 
 def parse_xmltv(value):
     s = str(value or "").strip()
@@ -71,7 +76,7 @@ def standardized_name(cid, current):
 
 def extract_race_parts(title):
     t = str(title or "").strip()
-    # 先頭のデコや競技アイコンは無視して、場名 R 発走 以降を拾う
+    # 場名 + 通常R表記 + 発走時刻を元データから拾う。
     m = re.search(
         r"(?P<venue>[^\s【】]+)\s+(?P<race>\d{1,2})R\s+(?P<time>\d{1,2}:\d{2})発走\s*(?P<rest>.*)$",
         t,
@@ -83,7 +88,6 @@ def extract_race_parts(title):
     race_time = m.group("time")
     rest = m.group("rest").strip()
 
-    # 開催区分など前置きの飾りを除去
     rest = re.sub(r"^(?:🌅|☀️|🌇|🌙|⭐|🌃|🌌|🚲|🚤|🏍️|🏇|💛)+\s*", "", rest)
     rest = re.sub(r"^(?:モーニング|通常|デイ|薄暮|サマータイム|ナイター|ミッドナイト|オーバーミッドナイト)\s*", "", rest)
 
@@ -91,12 +95,10 @@ def extract_race_parts(title):
     plain = re.sub(r"\s*【[^】]+】\s*", " ", rest)
     plain = re.sub(r"\s+", " ", plain).strip()
 
-    # 後半詳細は原則として級・種別の【】を優先
     detail = brackets[-1].strip() if brackets else plain
     if not detail:
         detail = plain or "レース"
 
-    # 前半のレース名は【】の外側。空なら詳細を使う
     front_name = plain or detail
     front_name = re.sub(r"^(?:🏆\s*MAIN\s*)", "", front_name).strip()
     front_name = re.sub(r"^[🚲🚤🏍️🏇💛]+\s*", "", front_name).strip()
@@ -104,10 +106,48 @@ def extract_race_parts(title):
     return venue, race_no, race_time, front_name, detail
 
 
+def race_no_deco(race_no):
+    try:
+        n = int(str(race_no).strip())
+    except Exception:
+        return f"{race_no}ℛ"
+    return f"{R_CIRCLED.get(n, str(n))}ℛ"
+
+
+def competition_icon(cid, detail):
+    d = str(detail or "")
+    if re.search(r"[LＬ]級|ガールズ", d):
+        return "💛"
+    if cid.startswith("boat."):
+        return "🚤"
+    if cid.startswith("auto."):
+        return "🏍️"
+    if cid.startswith(("chihou.", "keiba.")) or cid in TARGET_JRA:
+        return "🏇"
+    if cid.startswith("keirin."):
+        return "🚲"
+    return ""
+
+
+def front_deco(detail):
+    d = re.sub(r"\s+", " ", str(detail or "")).strip()
+    if re.search(r"優勝|決勝|ファイナル", d):
+        return "🏆決勝🏆"
+    if "準決" in d:
+        return "🔥準決勝🔥"
+    if re.search(r"G[ⅠI1]|ＧⅠ|JpnI\b", d, re.I):
+        return "👑GⅠ👑"
+    if re.search(r"G[ⅡI2]|ＧⅡ|JpnII\b", d, re.I):
+        return "✨GⅡ✨"
+    if re.search(r"G[ⅢI3]|ＧⅢ|JpnIII\b", d, re.I):
+        return "🌟GⅢ🌟"
+    return ""
+
+
 def decorate_detail(detail, cid):
     d = re.sub(r"\s+", " ", str(detail or "レース")).strip()
     if re.search(r"[LＬ]級|ガールズ", d):
-        return f"💛【{d}】"
+        return f"💛【{d} 💛】"
     if re.search(r"優勝|決勝|ファイナル", d):
         return f"🏆【{d}】🏆"
     if "準決" in d:
@@ -118,15 +158,22 @@ def decorate_detail(detail, cid):
         return f"✨【{d}】✨"
     if re.search(r"G[ⅢI3]|ＧⅢ|JpnIII\b", d, re.I):
         return f"🌟【{d}】🌟"
-    if cid.startswith("boat."):
-        return f"🚤【{d}】"
-    if cid.startswith("auto."):
-        return f"🏍️【{d}】"
-    if cid.startswith(("chihou.", "keiba.")) or cid in TARGET_JRA:
-        return f"🏇【{d}】"
-    if cid.startswith("keirin."):
-        return f"🚲【{d}】"
-    return f"【{d}】"
+    icon = competition_icon(cid, d)
+    return f"{icon}【{d} {icon}】" if icon else f"【{d}】"
+
+
+def build_live_title(race_no, detail, cid):
+    # 朝に決めた仕様：レース番号を必ず前面へ。準決・決勝・G級も前面で強調。
+    parts = []
+    deco = front_deco(detail)
+    if deco:
+        parts.append(deco)
+    icon = competition_icon(cid, detail)
+    if icon:
+        parts.append(icon)
+    parts.append(race_no_deco(race_no))
+    parts.append(LIVE_PREFIX)
+    return f"{' '.join(parts)}｜{decorate_detail(detail, cid)}"
 
 
 def resolve_post_time(programme, race_time):
@@ -147,7 +194,6 @@ def main():
     tree = ET.parse(path)
     root = tree.getroot()
 
-    # チャンネル表示名を確定仕様へ
     for ch in root.findall("channel"):
         cid = ch.get("id", "")
         if not is_target(cid):
@@ -187,8 +233,7 @@ def main():
         if post is None:
             continue
 
-        base = f"{venue} {race_no}R {race_time}発走 {front_name}".strip()
-        title_el.text = f"{base} {LIVE_PREFIX}｜{decorate_detail(detail, cid)}"
+        title_el.text = build_live_title(race_no, detail, cid)
         by_channel.setdefault(cid, []).append((post, p))
         formatted += 1
 

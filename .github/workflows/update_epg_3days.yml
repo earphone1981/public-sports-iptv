@@ -39,19 +39,23 @@ jobs:
           python-version: "3.12"
 
       - name: Generate 3-day EPG
-        run: python main_epg_3days.py
+        timeout-minutes: 12
+        continue-on-error: true
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python -u main_epg_3days.py
 
       - name: Repair today's AutoRace directly from all 5 official program pages
-        run: python fix_autorace_today_official.py
+        run: python -u fix_autorace_today_official.py
 
       - name: Finalize v11 race titles and one-minute switching
-        run: python fix_epg_v11.py
+        run: python -u fix_epg_v11.py
 
       - name: Show BOAT first race while waiting
-        run: python fix_boat_waiting_title.py
+        run: python -u fix_boat_waiting_title.py
 
       - name: Fix duplicate-name channel IDs
-        run: python fix_epg_duplicate_channel_ids.py
+        run: python -u fix_epg_duplicate_channel_ids.py
 
       - name: Validate required duplicate-name channels
         run: |

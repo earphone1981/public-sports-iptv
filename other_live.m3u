@@ -52,3 +52,12 @@ https://www.youtube.com/watch?v=N1_qXtzWA30
 
 #EXTINF:-1 tvg-id="youtube.katsuragawa.mlit" tvg-name="淀川水系 桂川 LIVE" group-title="その他LIVE",🌊 2 淀川水系 桂川 LIVE
 https://www.youtube.com/channel/UCeczXzGd2EkYyCxJOdIRWWQ/live
+
+#EXTINF:-1 tvg-id="youtube.radio171.rail" tvg-name="JR京都線 阪急京都線 4K LIVE" group-title="その他LIVE",🚆 JR京都線・阪急京都線・東海道新幹線 4K LIVE（Radio171）
+https://www.youtube.com/@radio171/live
+
+#EXTINF:-1 tvg-id="youtube.newchitose.stv" tvg-name="新千歳空港ターミナル LIVE" group-title="その他LIVE",✈️ 新千歳空港ターミナル LIVE（STV札幌テレビ）
+https://www.youtube.com/watch?v=uvNVpMKG8rw
+
+#EXTINF:-1 tvg-id="youtube.fukuoka.ube.tnc" tvg-name="福岡空港 山口宇部空港 LIVE" group-title="その他LIVE",✈️ 福岡空港／山口宇部空港 LIVE（テレビ西日本）
+https://www.youtube.com/watch?v=CzgSFUAbE9s

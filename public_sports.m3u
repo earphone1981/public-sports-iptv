@@ -229,14 +229,6 @@ https://manifest.streaks.jp/v4/cp-boatrace-prod/93e9691f0795426b8cffdfaba1df8916
 #EXTINF:-1 tvg-id="boat.wakamatsu" tvg-name="BOATRACE若松" tvg-logo="https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace_24_spaced_cut_1024/wakamatsu.png" group-title="ボートレース",BOATRACE若松
 https://manifest.streaks.jp/v4/cp-boatrace-prod/7ac916a877d940c6b2328f16c6f1041a/b139348e9b114692a4b4a3b90f78b504/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzMyMDgwMCwic3RhcnQiOjE3ODcxMTgzMDAsImlvcyI6MTgsInBwdyI6IjQwayJ9.dDLIe6lSZrBrsGMk2XYaKHictoKrinRkRz0TdGOIBCc
 
-## かなチューブ
-#EXTINF:-1 tvg-id="youtube.kana.live" tvg-name="華奈tube LIVE" group-title="かなチューブ",📺 華奈tube｜現在LIVEなし
-https://www.youtube.com/@kana_tube/streams
-
-## その他LIVE
-#EXTINF:-1 tvg-id="youtube.matsuyama.clean" tvg-name="松山市クリーンセンター LIVE" group-title="その他LIVE",♻️ 松山市クリーンセンター LIVE
-https://www.youtube.com/watch?v=C0gpM_qIIl0
-
 ## 中央競馬
 #EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル（高画質）
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain.m3u8

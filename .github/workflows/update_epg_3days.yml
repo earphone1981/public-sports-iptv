@@ -2,6 +2,19 @@ name: Update Public Sports EPG 3 Days
 
 on:
   workflow_dispatch:
+  schedule:
+    # 08:00 JST every day
+    - cron: "0 23 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "main_epg_3days.py"
+      - "fix_epg_v11.py"
+      - "fix_boat_waiting_title.py"
+      - "fix_autorace_today_official.py"
+      - "fix_epg_duplicate_channel_ids.py"
+      - ".github/workflows/update_epg_3days.yml"
 
 concurrency:
   group: public-sports-epg
@@ -37,6 +50,23 @@ jobs:
 
       - name: Fix duplicate-name channel IDs
         run: python fix_epg_duplicate_channel_ids.py
+
+      - name: Validate required duplicate-name channels
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          root = ET.parse('epg.xml').getroot()
+          ids = [x.get('id') for x in root.findall('channel')]
+          required = {
+              'keirin.kawasaki', 'keirin.nagoya', 'keirin.kochi',
+              'chihou.kawasaki_keiba', 'chihou.nagoya_keiba', 'chihou.kochi_keiba',
+          }
+          missing = sorted(required - set(ids))
+          dup = sorted({x for x in ids if ids.count(x) > 1})
+          if missing or dup:
+              raise SystemExit(f'EPG channel validation failed: missing={missing} duplicate={dup}')
+          print('Duplicate-name channel separation OK')
+          PY
 
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"

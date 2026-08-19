@@ -8,7 +8,7 @@ import re
 # ・YouTube系は「かなチューブ」と「その他LIVE」だけ残す
 # ・中央競馬は GitHub 上の HQ 4本 + LQ 4本 = 8ch
 # ・EPGは GitHub上の epg.xml
-# ・YouTube/LIVE系は tvg-id でGitHub新ロゴを自動付与
+# ・競輪 / YouTube / LIVE系は tvg-id でGitHub新ロゴを自動付与
 # ============================================================
 
 INPUTS = [
@@ -33,8 +33,55 @@ GITHUB_BRANCH = "main"
 RAW_BASE = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/{GITHUB_BRANCH}"
 EPG_URL = f"{RAW_BASE}/epg.xml"
 
-# 現行 その他LIVE / かなチューブの新ロゴ
+KEIRIN_LOGO_DIR = "public_sports_logos_github_43/keirin_logos_github_ready"
+
 LOGO_BY_TVG_ID = {
+    # 競輪 43ch（確定マスター）
+    "keirin.hakodate": f"{KEIRIN_LOGO_DIR}/hakodate.png",
+    "keirin.aomori": f"{KEIRIN_LOGO_DIR}/aomori.png",
+    "keirin.iwakitaira": f"{KEIRIN_LOGO_DIR}/iwakitaira.png",
+    "keirin.yahiko": f"{KEIRIN_LOGO_DIR}/yahiko.png",
+    "keirin.maebashi": f"{KEIRIN_LOGO_DIR}/maebashi.png",
+    "keirin.toride": f"{KEIRIN_LOGO_DIR}/toride.png",
+    "keirin.utsunomiya": f"{KEIRIN_LOGO_DIR}/utsunomiya.png",
+    "keirin.omiya": f"{KEIRIN_LOGO_DIR}/omiya.png",
+    "keirin.seibuen": f"{KEIRIN_LOGO_DIR}/seibuen.png",
+    "keirin.keiogatsu": f"{KEIRIN_LOGO_DIR}/keiokaku.png",
+    "keirin.tachikawa": f"{KEIRIN_LOGO_DIR}/tachikawa.png",
+    "keirin.matsudo": f"{KEIRIN_LOGO_DIR}/matsudo.png",
+    "keirin.kawasaki": f"{KEIRIN_LOGO_DIR}/kawasaki.png",
+    "keirin.hiratsuka": f"{KEIRIN_LOGO_DIR}/hiratsuka.png",
+    "keirin.odawara": f"{KEIRIN_LOGO_DIR}/odawara.png",
+    "keirin.ito": f"{KEIRIN_LOGO_DIR}/ito.png",
+    "keirin.shizuoka": f"{KEIRIN_LOGO_DIR}/shizuoka.png",
+    "keirin.nagoya": f"{KEIRIN_LOGO_DIR}/nagoya.png",
+    "keirin.gifu": f"{KEIRIN_LOGO_DIR}/gifu.png",
+    "keirin.ogaki": f"{KEIRIN_LOGO_DIR}/ogaki.png",
+    "keirin.toyohashi": f"{KEIRIN_LOGO_DIR}/toyohashi.png",
+    "keirin.toyama": f"{KEIRIN_LOGO_DIR}/toyama.png",
+    "keirin.matsusaka": f"{KEIRIN_LOGO_DIR}/matsusaka.png",
+    "keirin.yokkaichi": f"{KEIRIN_LOGO_DIR}/yokkaichi.png",
+    "keirin.fukui": f"{KEIRIN_LOGO_DIR}/fukui.png",
+    "keirin.nara": f"{KEIRIN_LOGO_DIR}/nara.png",
+    "keirin.mukomachi": f"{KEIRIN_LOGO_DIR}/mukomachi.png",
+    "keirin.wakayama": f"{KEIRIN_LOGO_DIR}/wakayama.png",
+    "keirin.kishiwada": f"{KEIRIN_LOGO_DIR}/kishiwada.png",
+    "keirin.tamano": f"{KEIRIN_LOGO_DIR}/tamano.png",
+    "keirin.hiroshima": f"{KEIRIN_LOGO_DIR}/hiroshima.png",
+    "keirin.hofu": f"{KEIRIN_LOGO_DIR}/hofu.png",
+    "keirin.takamatsu": f"{KEIRIN_LOGO_DIR}/takamatsu.png",
+    "keirin.komatsushima": f"{KEIRIN_LOGO_DIR}/komatsushima.png",
+    "keirin.kochi": f"{KEIRIN_LOGO_DIR}/kochi.png",
+    "keirin.matsuyama": f"{KEIRIN_LOGO_DIR}/matsuyama.png",
+    "keirin.kokura": f"{KEIRIN_LOGO_DIR}/kokura.png",
+    "keirin.kurume": f"{KEIRIN_LOGO_DIR}/kurume.png",
+    "keirin.takeo": f"{KEIRIN_LOGO_DIR}/takeo.png",
+    "keirin.sasebo": f"{KEIRIN_LOGO_DIR}/sasebo.png",
+    "keirin.beppu": f"{KEIRIN_LOGO_DIR}/beppu.png",
+    "keirin.kumamoto": f"{KEIRIN_LOGO_DIR}/kumamoto.png",
+    "keirin.pist6": f"{KEIRIN_LOGO_DIR}/pist6.png",
+
+    # 現行 その他LIVE / かなチューブ
     "youtube.kana.live": "public_sports_logos_github_43/youtube_live/kana_tube.png",
     "youtube.namibia.live": "public_sports_logos_github_43/youtube_live/namibia_live.png",
     "youtube.matsuyama.clean": "public_sports_logos_github_43/youtube_live/matsuyama_clean.png",
@@ -61,10 +108,8 @@ JRA_CHANNELS = [
 def read_entries(path: Path):
     if not path.exists():
         return []
-
     text = path.read_text(encoding="utf-8-sig", errors="replace")
     lines = [line.rstrip() for line in text.replace("\r\n", "\n").split("\n")]
-
     entries = []
     i = 0
     while i < len(lines):
@@ -104,24 +149,19 @@ def apply_logo(extinf: str) -> str:
     m = re.search(r'tvg-id="([^"]+)"', extinf)
     if not m:
         return extinf
-
     tvg_id = m.group(1)
     rel = LOGO_BY_TVG_ID.get(tvg_id)
     if not rel:
         return extinf
-
     logo = f"{RAW_BASE}/{rel}"
     if 'tvg-logo="' in extinf:
         return re.sub(r'tvg-logo="[^"]*"', f'tvg-logo="{logo}"', extinf, count=1)
-
     pos = extinf.find('group-title="')
     if pos >= 0:
         return extinf[:pos] + f'tvg-logo="{logo}" ' + extinf[pos:]
-
     comma = extinf.find(',')
     if comma >= 0:
         return extinf[:comma] + f' tvg-logo="{logo}"' + extinf[comma:]
-
     return extinf
 
 
@@ -136,7 +176,6 @@ def append_entries(out, entries):
 def main():
     out = [f'#EXTM3U url-tvg="{EPG_URL}"', ""]
     total = 0
-
     for label, path in INPUTS:
         entries = read_entries(path)
         if not entries:
@@ -146,7 +185,6 @@ def main():
         out.append(f"## {label}")
         append_entries(out, entries)
         total += len(entries)
-
     for label, path in YOUTUBE_INPUTS:
         entries = read_entries(path)
         if not entries:
@@ -156,7 +194,6 @@ def main():
         out.append(f"## {label}")
         append_entries(out, entries)
         total += len(entries)
-
     out.append("## 中央競馬")
     for ch in JRA_CHANNELS:
         raw_url = raw_github_url(ch["file"])
@@ -167,14 +204,11 @@ def main():
         )
         out.extend([extinf, raw_url, ""])
         total += 1
-
     OUT.write_text("\n".join(out).rstrip() + "\n", encoding="utf-8")
-
     print("============================")
     print("M3U一本化 完了")
     print(f"合計チャンネル数: {total}")
-    print("YouTube: かなチューブ + その他LIVEのみ")
-    print("YouTube/LIVEロゴ: GitHub新ロゴを自動付与")
+    print("競輪 / YouTube / LIVEロゴ: GitHub新ロゴを自動付与")
     print(f"EPG: {EPG_URL}")
     print(f"出力: {OUT}")
     print("============================")

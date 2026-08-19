@@ -1,6 +1,9 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: cyan; icon-glyph: magic;
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: cyan; icon-glyph: magic;
 
 // ============================================================
 // 公営これ一発 v14.3
@@ -76,19 +79,26 @@ const JRA = [
 
 function japanDate() {
   const p = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit"
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
   }).formatToParts(new Date());
+
   return p.find(x => x.type === "year").value +
          p.find(x => x.type === "month").value +
          p.find(x => x.type === "day").value;
 }
 
 function rawUrl(path) {
-  return RAW_BASE + "/" + path.split("/").map(encodeURIComponent).join("/");
+  return RAW_BASE + "/" +
+    path.split("/").map(encodeURIComponent).join("/");
 }
 
 async function getSavedToken(key, title) {
-  if (Keychain.contains(key)) return Keychain.get(key);
+  if (Keychain.contains(key)) {
+    return Keychain.get(key);
+  }
 
   const a = new Alert();
   a.title = title;
@@ -98,70 +108,144 @@ async function getSavedToken(key, title) {
   a.addCancelAction("中止");
 
   const r = await a.present();
-  if (r === -1) throw new Error(`${title} 入力中止`);
 
-  const token = a.textFieldValue(0).trim();
-  if (!token) throw new Error(`${title} が空です`);
+  if (r === -1) {
+    throw new Error(`${title} 入力中止`);
+  }
+
+  const token =
+    a.textFieldValue(0).trim();
+
+  if (!token) {
+    throw new Error(`${title} が空です`);
+  }
+
   Keychain.set(key, token);
   return token;
 }
 
 async function getToken() {
-  return await getSavedToken(TOKEN_KEY, "公営 GitHub Token");
+  return await getSavedToken(
+    TOKEN_KEY,
+    "公営 GitHub Token"
+  );
 }
 
 async function getHimitsuToken() {
-  return await getSavedToken(HIM_TOKEN_KEY, "Free Wi-Fi GitHub Token");
+  return await getSavedToken(
+    HIM_TOKEN_KEY,
+    "Free Wi-Fi GitHub Token"
+  );
 }
 
-async function githubRequest(path, token, method = "GET", body = null) {
-  const req = new Request(`https://api.github.com${path}`);
+async function githubRequest(
+  path,
+  token,
+  method = "GET",
+  body = null
+) {
+  const req =
+    new Request(
+      `https://api.github.com${path}`
+    );
+
   req.method = method;
+
   req.headers = {
     "Authorization": `Bearer ${token}`,
     "Accept": "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": "Scriptable-Public-Sports"
   };
+
   if (body !== null) {
-    req.headers["Content-Type"] = "application/json";
-    req.body = JSON.stringify(body);
+    req.headers["Content-Type"] =
+      "application/json";
+
+    req.body =
+      JSON.stringify(body);
   }
 
-  const data = await req.load();
-  const status = req.response?.statusCode ?? 0;
-  const text = data.toRawString();
+  const data =
+    await req.load();
 
-  if (status < 200 || status >= 300) {
-    throw new Error(`GitHub API ${status}\n${text.slice(0, 500)}`);
+  const status =
+    req.response?.statusCode ?? 0;
+
+  const text =
+    data.toRawString();
+
+  if (
+    status < 200 ||
+    status >= 300
+  ) {
+    throw new Error(
+      `GitHub API ${status}\n` +
+      text.slice(0, 500)
+    );
   }
-  if (!text) return {};
-  try { return JSON.parse(text); } catch { return text; }
+
+  if (!text) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    return text;
+  }
 }
 
 function toBase64(text) {
-  return Data.fromString(text).toBase64String();
+  return Data
+    .fromString(text)
+    .toBase64String();
 }
 
-async function uploadFile(path, content, token, message) {
-  const encodedPath = path.split("/").map(encodeURIComponent).join("/");
+async function uploadFile(
+  path,
+  content,
+  token,
+  message
+) {
+  const encodedPath =
+    path
+      .split("/")
+      .map(encodeURIComponent)
+      .join("/");
+
   let sha = null;
 
   try {
-    const current = await githubRequest(
-      `${API_REPO}/contents/${encodedPath}?ref=${BRANCH}`,
-      token
-    );
-    sha = current.sha ?? null;
+    const current =
+      await githubRequest(
+        `${API_REPO}/contents/${encodedPath}?ref=${BRANCH}`,
+        token
+      );
+
+    sha =
+      current.sha ?? null;
 
     if (current.content) {
-      const old = Data.fromBase64String(
-        current.content.replace(/\n/g, "")
-      ).toRawString();
-      if (old === content) return false;
+      const old =
+        Data
+          .fromBase64String(
+            current.content.replace(/\n/g, "")
+          )
+          .toRawString();
+
+      if (old === content) {
+        return false;
+      }
     }
+
   } catch (e) {
-    if (!String(e).includes("GitHub API 404")) throw e;
+    if (
+      !String(e)
+        .includes("GitHub API 404")
+    ) {
+      throw e;
+    }
   }
 
   const body = {
@@ -169,7 +253,10 @@ async function uploadFile(path, content, token, message) {
     content: toBase64(content),
     branch: BRANCH
   };
-  if (sha) body.sha = sha;
+
+  if (sha) {
+    body.sha = sha;
+  }
 
   await githubRequest(
     `${API_REPO}/contents/${encodedPath}`,
@@ -177,188 +264,425 @@ async function uploadFile(path, content, token, message) {
     "PUT",
     body
   );
+
   return true;
 }
 
 async function getRaw(path) {
-  const req = new Request(rawUrl(path));
-  req.headers = { "Cache-Control": "no-cache", "User-Agent": UA };
+  const req =
+    new Request(
+      rawUrl(path)
+    );
+
+  req.headers = {
+    "Cache-Control": "no-cache",
+    "User-Agent": UA
+  };
+
   req.timeoutInterval = 30;
+
   return await req.loadString();
 }
 
 function readEntries(text) {
-  const lines = String(text || "").replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");
+  const lines =
+    String(text || "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .split("\n");
+
   const result = [];
 
-  for (let i = 0; i < lines.length; i++) {
-    const extinf = lines[i].trim();
-    if (!extinf.startsWith("#EXTINF:")) continue;
+  for (
+    let i = 0;
+    i < lines.length;
+    i++
+  ) {
+    const extinf =
+      lines[i].trim();
+
+    if (
+      !extinf.startsWith("#EXTINF:")
+    ) {
+      continue;
+    }
 
     const options = [];
     let url = null;
 
-    for (let j = i + 1; j < lines.length; j++) {
-      const n = lines[j].trim();
-      if (!n) continue;
-      if (n.startsWith("#EXTINF:")) break;
-      if (n.startsWith("#EXTVLCOPT:")) {
+    for (
+      let j = i + 1;
+      j < lines.length;
+      j++
+    ) {
+      const n =
+        lines[j].trim();
+
+      if (!n) {
+        continue;
+      }
+
+      if (
+        n.startsWith("#EXTINF:")
+      ) {
+        break;
+      }
+
+      if (
+        n.startsWith("#EXTVLCOPT:")
+      ) {
         options.push(n);
         continue;
       }
-      if (!n.startsWith("#")) {
+
+      if (
+        !n.startsWith("#")
+      ) {
         url = n;
         break;
       }
     }
 
-    if (url) result.push({ extinf, options, url });
+    if (url) {
+      result.push({
+        extinf,
+        options,
+        url
+      });
+    }
   }
+
   return result;
 }
 
 function getTvgId(extinf) {
-  const m = String(extinf || "").match(/tvg-id="([^"]+)"/i);
-  return m ? m[1].trim() : null;
+  const m =
+    String(extinf || "")
+      .match(
+        /tvg-id="([^"]+)"/i
+      );
+
+  return m
+    ? m[1].trim()
+    : null;
 }
 
 function getStableStreamKey(url) {
-  const s = String(url || "").trim();
-  if (!s) return "";
+  const s =
+    String(url || "").trim();
+
+  if (!s) {
+    return "";
+  }
 
   try {
-    const u = new URL(s);
-    const host = u.hostname.toLowerCase();
+    const u =
+      new URL(s);
 
-    if (host === "youtu.be" || host.endsWith(".youtu.be")) {
-      const id = u.pathname.replace(/^\/+/, "").split("/")[0];
-      if (id) return `youtube-video:${id}`;
+    const host =
+      u.hostname.toLowerCase();
+
+    if (
+      host === "youtu.be" ||
+      host.endsWith(".youtu.be")
+    ) {
+      const id =
+        u.pathname
+          .replace(/^\/+/, "")
+          .split("/")[0];
+
+      if (id) {
+        return `youtube-video:${id}`;
+      }
     }
 
-    if (host.includes("youtube.com")) {
-      const v = u.searchParams.get("v");
-      if (v) return `youtube-video:${v}`;
-      const liveMatch = u.pathname.match(/\/live\/([^/]+)/);
-      if (liveMatch) return `youtube-video:${liveMatch[1]}`;
+    if (
+      host.includes("youtube.com")
+    ) {
+      const v =
+        u.searchParams.get("v");
+
+      if (v) {
+        return `youtube-video:${v}`;
+      }
+
+      const liveMatch =
+        u.pathname.match(
+          /\/live\/([^/]+)/
+        );
+
+      if (liveMatch) {
+        return `youtube-video:${liveMatch[1]}`;
+      }
     }
 
-    if (host.includes("googlevideo.com")) {
-      const idMatch = u.pathname.match(/\/id\/([^/]+)/);
-      if (idMatch) return `googlevideo-id:${idMatch[1]}`;
+    if (
+      host.includes("googlevideo.com")
+    ) {
+      const idMatch =
+        u.pathname.match(
+          /\/id\/([^/]+)/
+        );
+
+      if (idMatch) {
+        return `googlevideo-id:${idMatch[1]}`;
+      }
     }
 
-    return u.origin + u.pathname;
+    return (
+      u.origin +
+      u.pathname
+    );
+
   } catch {
-    return s.split("?")[0].split("#")[0];
+    return s
+      .split("?")[0]
+      .split("#")[0];
   }
 }
 
 function dedupeYouTubeEntries(entries) {
   const result = [];
-  const seenIds = new Set();
-  const seenStreams = new Set();
 
-  for (const item of entries || []) {
-    const tvgId = getTvgId(item.extinf);
-    const streamKey = getStableStreamKey(item.url);
+  const seenIds =
+    new Set();
 
-    if (tvgId && seenIds.has(tvgId)) continue;
-    if (streamKey && seenStreams.has(streamKey)) continue;
+  const seenStreams =
+    new Set();
 
-    if (tvgId) seenIds.add(tvgId);
-    if (streamKey) seenStreams.add(streamKey);
+  for (
+    const item
+    of entries || []
+  ) {
+    const tvgId =
+      getTvgId(item.extinf);
+
+    const streamKey =
+      getStableStreamKey(item.url);
+
+    if (
+      tvgId &&
+      seenIds.has(tvgId)
+    ) {
+      continue;
+    }
+
+    if (
+      streamKey &&
+      seenStreams.has(streamKey)
+    ) {
+      continue;
+    }
+
+    if (tvgId) {
+      seenIds.add(tvgId);
+    }
+
+    if (streamKey) {
+      seenStreams.add(streamKey);
+    }
+
     result.push(item);
   }
+
   return result;
 }
 
 function extractPreviousBoat(existingPublic) {
-  const map = new Map();
-  for (const item of readEntries(existingPublic)) {
-    const tvgId = getTvgId(item.extinf);
-    if (!tvgId || !tvgId.startsWith("boat.")) continue;
-    if (!map.has(tvgId)) map.set(tvgId, item.url);
+  const map =
+    new Map();
+
+  for (
+    const item
+    of readEntries(existingPublic)
+  ) {
+    const tvgId =
+      getTvgId(item.extinf);
+
+    if (
+      !tvgId ||
+      !tvgId.startsWith("boat.")
+    ) {
+      continue;
+    }
+
+    if (!map.has(tvgId)) {
+      map.set(
+        tvgId,
+        item.url
+      );
+    }
   }
+
   return map;
 }
 
 function findStreamUrl(data) {
-  if (!data) return null;
-
-  if (Array.isArray(data)) {
-    for (const item of data) {
-      const found = findStreamUrl(item);
-      if (found) return found;
-    }
+  if (!data) {
     return null;
   }
 
-  if (typeof data === "object") {
-    if (Array.isArray(data.sources)) {
-      for (const s of data.sources) {
-        if (typeof s?.src === "string") return s.src;
-        if (typeof s?.url === "string") return s.url;
+  if (
+    Array.isArray(data)
+  ) {
+    for (
+      const item
+      of data
+    ) {
+      const found =
+        findStreamUrl(item);
+
+      if (found) {
+        return found;
       }
     }
 
-    for (const key of Object.keys(data)) {
-      const value = data[key];
-      if (typeof value === "string" &&
-          (value.includes(".m3u8") || value.includes("manifest"))) {
+    return null;
+  }
+
+  if (
+    typeof data === "object"
+  ) {
+    if (
+      Array.isArray(data.sources)
+    ) {
+      for (
+        const s
+        of data.sources
+      ) {
+        if (
+          typeof s?.src === "string"
+        ) {
+          return s.src;
+        }
+
+        if (
+          typeof s?.url === "string"
+        ) {
+          return s.url;
+        }
+      }
+    }
+
+    for (
+      const key
+      of Object.keys(data)
+    ) {
+      const value =
+        data[key];
+
+      if (
+        typeof value === "string" &&
+        (
+          value.includes(".m3u8") ||
+          value.includes("manifest")
+        )
+      ) {
         return value;
       }
-      if (value && typeof value === "object") {
-        const found = findStreamUrl(value);
-        if (found) return found;
+
+      if (
+        value &&
+        typeof value === "object"
+      ) {
+        const found =
+          findStreamUrl(value);
+
+        if (found) {
+          return found;
+        }
       }
     }
   }
+
   return null;
 }
 
-async function makeBoatM3U(existingPublic) {
-  const date = japanDate();
-  const previousBoat = extractPreviousBoat(existingPublic);
+async function makeBoatM3U(
+  existingPublic
+) {
+  const date =
+    japanDate();
 
-  let text = "#EXTM3U\n\n";
+  const previousBoat =
+    extractPreviousBoat(
+      existingPublic
+    );
+
+  let text =
+    "#EXTM3U\n\n";
+
   let freshCount = 0;
   let keptCount = 0;
   let missingCount = 0;
+
   const fresh = [];
   const kept = [];
   const missing = [];
 
-  for (const [apiId, tvgId, display, venue, logoFile] of BOAT) {
+  for (
+    const [
+      apiId,
+      tvgId,
+      display,
+      venue,
+      logoFile
+    ]
+    of BOAT
+  ) {
     const api =
       "https://playback.api.streaks.jp/v1/" +
       "projects/cp-boatrace-prod/" +
-      "medias/ref:lm-br-" + apiId + "-tokyo-" + date +
+      "medias/ref:lm-br-" +
+      apiId +
+      "-tokyo-" +
+      date +
       "?audio_only=false";
 
     let stream = null;
     let sourceType = "none";
 
     try {
-      const req = new Request(api);
+      const req =
+        new Request(api);
+
       req.headers = {
         "User-Agent": UA,
-        "Origin": "https://front.player.boatrace-cdn.jp",
-        "Referer": "https://front.player.boatrace-cdn.jp/"
+        "Origin":
+          "https://front.player.boatrace-cdn.jp",
+        "Referer":
+          "https://front.player.boatrace-cdn.jp/"
       };
+
       req.timeoutInterval = 15;
-      const json = await req.loadJSON();
-      const found = findStreamUrl(json);
+
+      const json =
+        await req.loadJSON();
+
+      const found =
+        findStreamUrl(json);
+
       if (found) {
         stream = found;
         sourceType = "fresh";
       }
+
     } catch (e) {
-      console.warn(`${venue} 当日URL取得失敗`, e);
+      console.warn(
+        `${venue} 当日URL取得失敗`,
+        e
+      );
     }
 
-    if (!stream && previousBoat.has(tvgId)) {
-      stream = previousBoat.get(tvgId);
-      sourceType = "kept";
+    if (
+      !stream &&
+      previousBoat.has(tvgId)
+    ) {
+      stream =
+        previousBoat.get(tvgId);
+
+      sourceType =
+        "kept";
     }
 
     if (!stream) {
@@ -367,15 +691,23 @@ async function makeBoatM3U(existingPublic) {
       continue;
     }
 
-    const logo = rawUrl(`public_sports_logos_github_43/boatrace/${logoFile}`);
+    const logo =
+      rawUrl(
+        `public_sports_logos_github_43/boatrace/${logoFile}`
+      );
+
     text +=
       `#EXTINF:-1 tvg-id="${tvgId}" tvg-name="${display}" ` +
       `tvg-logo="${logo}" group-title="ボートレース",${display}\n` +
-      stream + "\n\n";
+      stream +
+      "\n\n";
 
-    if (sourceType === "fresh") {
+    if (
+      sourceType === "fresh"
+    ) {
       freshCount++;
       fresh.push(venue);
+
     } else {
       keptCount++;
       kept.push(venue);
@@ -383,189 +715,447 @@ async function makeBoatM3U(existingPublic) {
   }
 
   return {
-    date, text, freshCount, keptCount, missingCount,
-    fresh, kept, missing,
-    total: freshCount + keptCount
+    date,
+    text,
+    freshCount,
+    keptCount,
+    missingCount,
+    fresh,
+    kept,
+    missing,
+    total:
+      freshCount +
+      keptCount
   };
 }
 
 async function loadPublicYouTube() {
   try {
-    const source = readEntries(await getRaw(PUBLIC_YOUTUBE_FILE));
-    const entries = dedupeYouTubeEntries(source);
+    const source =
+      readEntries(
+        await getRaw(
+          PUBLIC_YOUTUBE_FILE
+        )
+      );
+
+    const entries =
+      dedupeYouTubeEntries(
+        source
+      );
+
     return {
       entries,
       loaded: true,
       sourceCount: source.length,
-      removed: source.length - entries.length,
+      removed:
+        source.length -
+        entries.length,
       error: null
     };
+
   } catch (e) {
     return {
-      entries: [], loaded: false, sourceCount: 0, removed: 0,
+      entries: [],
+      loaded: false,
+      sourceCount: 0,
+      removed: 0,
       error: String(e)
     };
   }
 }
 
-function appendM3UEntries(out, label, source) {
-  const entries = readEntries(source);
-  if (!entries.length) return 0;
+function appendM3UEntries(
+  out,
+  label,
+  source
+) {
+  const entries =
+    readEntries(source);
 
-  out.push(`## ${label}`);
-  for (const item of entries) {
-    out.push(item.extinf);
-    for (const opt of item.options) out.push(opt);
-    out.push(item.url);
+  if (!entries.length) {
+    return 0;
+  }
+
+  out.push(
+    `## ${label}`
+  );
+
+  for (
+    const item
+    of entries
+  ) {
+    out.push(
+      item.extinf
+    );
+
+    for (
+      const opt
+      of item.options
+    ) {
+      out.push(opt);
+    }
+
+    out.push(
+      item.url
+    );
+
     out.push("");
   }
+
   return entries.length;
 }
 
-async function makePublicM3U(boatText, publicYouTube) {
-  const keirin = await getRaw("keirin_master.m3u");
-  const keiba = await getRaw("keiba_master.m3u");
-  const auto = await getRaw("autorace_master.m3u");
+async function makePublicM3U(
+  boatText,
+  publicYouTube
+) {
+  const keirin =
+    await getRaw(
+      "keirin_master.m3u"
+    );
 
-  const out = [`#EXTM3U url-tvg="${EPG_URL}"`, ""];
+  const keiba =
+    await getRaw(
+      "keiba_master.m3u"
+    );
 
-  appendM3UEntries(out, "競輪", keirin);
-  appendM3UEntries(out, "地方競馬", keiba);
-  appendM3UEntries(out, "オートレース", auto);
-  appendM3UEntries(out, "ボートレース", boatText);
+  const auto =
+    await getRaw(
+      "autorace_master.m3u"
+    );
 
-  const cleanYouTube = dedupeYouTubeEntries(publicYouTube || []);
-  if (cleanYouTube.length) {
-    out.push("## 公営YouTube公式");
-    for (const item of cleanYouTube) {
-      out.push(item.extinf);
-      for (const opt of item.options) out.push(opt);
-      out.push(item.url);
+  const out = [
+    `#EXTM3U url-tvg="${EPG_URL}"`,
+    ""
+  ];
+
+  appendM3UEntries(
+    out,
+    "競輪",
+    keirin
+  );
+
+  appendM3UEntries(
+    out,
+    "地方競馬",
+    keiba
+  );
+
+  appendM3UEntries(
+    out,
+    "オートレース",
+    auto
+  );
+
+  appendM3UEntries(
+    out,
+    "ボートレース",
+    boatText
+  );
+
+  const cleanYouTube =
+    dedupeYouTubeEntries(
+      publicYouTube || []
+    );
+
+  if (
+    cleanYouTube.length
+  ) {
+    out.push(
+      "## 公営YouTube公式"
+    );
+
+    for (
+      const item
+      of cleanYouTube
+    ) {
+      out.push(
+        item.extinf
+      );
+
+      for (
+        const opt
+        of item.options
+      ) {
+        out.push(opt);
+      }
+
+      out.push(
+        item.url
+      );
+
       out.push("");
     }
   }
 
-  out.push("## 中央競馬");
-  for (const [tvg, tvgName, display, file, logoFile] of JRA) {
+  out.push(
+    "## 中央競馬"
+  );
+
+  for (
+    const [
+      tvg,
+      tvgName,
+      display,
+      file,
+      logoFile
+    ]
+    of JRA
+  ) {
     out.push(
       `#EXTINF:-1 tvg-id="${tvg}" tvg-name="${tvgName}" ` +
       `tvg-logo="${rawUrl(logoFile)}" group-title="中央競馬",${display}`
     );
-    out.push(rawUrl(file));
+
+    out.push(
+      rawUrl(file)
+    );
+
     out.push("");
   }
 
   return {
-    text: out.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd() + "\n",
-    youtubeCount: cleanYouTube.length
+    text:
+      out
+        .join("\n")
+        .replace(
+          /\n{3,}/g,
+          "\n\n"
+        )
+        .trimEnd() +
+      "\n",
+
+    youtubeCount:
+      cleanYouTube.length
   };
 }
 
-function saveICloud(name, text) {
-  const fm = FileManager.iCloud();
-  const path = fm.joinPath(fm.documentsDirectory(), name);
-  fm.writeString(path, text);
+function saveICloud(
+  name,
+  text
+) {
+  const fm =
+    FileManager.iCloud();
+
+  const path =
+    fm.joinPath(
+      fm.documentsDirectory(),
+      name
+    );
+
+  fm.writeString(
+    path,
+    text
+  );
 }
 
 async function dispatchPublicEPG(token) {
   await githubRequest(
     `${API_REPO}/actions/workflows/update_epg_3days.yml/dispatches`,
-    token, "POST", { ref: BRANCH }
+    token,
+    "POST",
+    {
+      ref: BRANCH
+    }
   );
 }
 
 async function dispatchPublicYouTube(token) {
   await githubRequest(
     `${API_REPO}/actions/workflows/youtube_namibia_live.yml/dispatches`,
-    token, "POST", { ref: BRANCH }
+    token,
+    "POST",
+    {
+      ref: BRANCH
+    }
   );
 }
 
 async function dispatchHimitsuEPG(token) {
   await githubRequest(
     `${HIM_API_REPO}/actions/workflows/${HIM_EPG_WORKFLOW}/dispatches`,
-    token, "POST", { ref: HIM_BRANCH }
+    token,
+    "POST",
+    {
+      ref: HIM_BRANCH
+    }
   );
 }
 
 async function backupSelfScript(token) {
   try {
-    const managers = [FileManager.iCloud(), FileManager.local()];
-    const scriptName = Script.name();
-    const candidates = [`${scriptName}.js`, scriptName];
-    let selfText = null;
+    const managers = [
+      FileManager.iCloud(),
+      FileManager.local()
+    ];
 
-    for (const fm of managers) {
-      for (const name of candidates) {
+    const scriptName =
+      Script.name();
+
+    const candidates = [
+      `${scriptName}.js`,
+      scriptName
+    ];
+
+    let selfText =
+      null;
+
+    for (
+      const fm
+      of managers
+    ) {
+      for (
+        const name
+        of candidates
+      ) {
         try {
-          const path = fm.joinPath(fm.documentsDirectory(), name);
-          if (!fm.fileExists(path)) continue;
+          const path =
+            fm.joinPath(
+              fm.documentsDirectory(),
+              name
+            );
+
+          if (
+            !fm.fileExists(path)
+          ) {
+            continue;
+          }
 
           try {
-            if (fm.isFileStoredIniCloud && fm.isFileStoredIniCloud(path)) {
-              await fm.downloadFileFromiCloud(path);
+            if (
+              fm.isFileStoredIniCloud &&
+              fm.isFileStoredIniCloud(path)
+            ) {
+              await fm
+                .downloadFileFromiCloud(
+                  path
+                );
             }
           } catch {}
 
-          selfText = fm.readString(path);
-          if (selfText) break;
+          selfText =
+            fm.readString(path);
+
+          if (selfText) {
+            break;
+          }
+
         } catch {}
       }
-      if (selfText) break;
+
+      if (selfText) {
+        break;
+      }
     }
 
-    if (!selfText) return false;
+    if (!selfText) {
+      return false;
+    }
 
     await uploadFile(
-      "公営これ一発_v14.3.js", selfText, token,
+      "公営これ一発_v14.3.js",
+      selfText,
+      token,
       "Backup 公営これ一発 v14.3"
     );
+
     await uploadFile(
-      "公営これ一発_latest.js", selfText, token,
+      "公営これ一発_latest.js",
+      selfText,
+      token,
       "Backup 公営これ一発 latest v14.3"
     );
+
     return true;
+
   } catch (e) {
-    console.warn("自己バックアップ失敗:", e);
+    console.warn(
+      "自己バックアップ失敗:",
+      e
+    );
+
     return false;
   }
 }
 
-async function show(title, message) {
-  const a = new Alert();
-  a.title = title;
-  a.message = message;
+async function show(
+  title,
+  message
+) {
+  const a =
+    new Alert();
+
+  a.title =
+    title;
+
+  a.message =
+    message;
+
   a.addAction("OK");
+
   await a.present();
 }
 
 try {
-  const token = await getToken();
+  const token =
+    await getToken();
 
   let existingPublic = "";
+
   try {
-    existingPublic = await getRaw("public_sports.m3u");
+    existingPublic =
+      await getRaw(
+        "public_sports.m3u"
+      );
+
   } catch (e) {
-    console.warn("既存M3U取得失敗", e);
+    console.warn(
+      "既存M3U取得失敗",
+      e
+    );
   }
 
-  const boat = await makeBoatM3U(existingPublic);
-  const publicYouTube = await loadPublicYouTube();
-  const built = await makePublicM3U(boat.text, publicYouTube.entries);
-  const publicM3U = built.text;
+  const boat =
+    await makeBoatM3U(
+      existingPublic
+    );
 
-  saveICloud("boatrace_today.m3u", boat.text);
-  saveICloud("public_sports.m3u", publicM3U);
+  const publicYouTube =
+    await loadPublicYouTube();
+
+  const built =
+    await makePublicM3U(
+      boat.text,
+      publicYouTube.entries
+    );
+
+  const publicM3U =
+    built.text;
+
+  saveICloud(
+    "boatrace_today.m3u",
+    boat.text
+  );
+
+  saveICloud(
+    "public_sports.m3u",
+    publicM3U
+  );
 
   await uploadFile(
-    "boatrace_today.m3u", boat.text, token,
+    "boatrace_today.m3u",
+    boat.text,
+    token,
     `Update BOATRACE M3U v14.3 ${boat.date}`
   );
 
-  const changed = await uploadFile(
-    "public_sports.m3u", publicM3U, token,
-    `Update public sports M3U v14.3 ${boat.date}`
-  );
+  const changed =
+    await uploadFile(
+      "public_sports.m3u",
+      publicM3U,
+      token,
+      `Update public sports M3U v14.3 ${boat.date}`
+    );
 
   let youtubeDispatchOK = false;
   let publicEpgDispatchOK = false;
@@ -574,30 +1164,59 @@ try {
   let himitsuError = "";
 
   try {
-    await dispatchPublicYouTube(token);
+    await dispatchPublicYouTube(
+      token
+    );
+
     youtubeDispatchOK = true;
+
   } catch (e) {
-    console.warn("公営YouTube Actions起動失敗", e);
+    console.warn(
+      "公営YouTube Actions起動失敗",
+      e
+    );
   }
 
   try {
-    await dispatchPublicEPG(token);
+    await dispatchPublicEPG(
+      token
+    );
+
     publicEpgDispatchOK = true;
+
   } catch (e) {
-    console.warn("公営EPG Actions起動失敗", e);
+    console.warn(
+      "公営EPG Actions起動失敗",
+      e
+    );
   }
 
   try {
-    const himitsuToken = await getHimitsuToken();
+    const himitsuToken =
+      await getHimitsuToken();
+
     himitsuTokenReady = true;
-    await dispatchHimitsuEPG(himitsuToken);
+
+    await dispatchHimitsuEPG(
+      himitsuToken
+    );
+
     himitsuEpgDispatchOK = true;
+
   } catch (e) {
-    himitsuError = String(e);
-    console.warn("himitsu EPG Actions起動失敗", e);
+    himitsuError =
+      String(e);
+
+    console.warn(
+      "himitsu EPG Actions起動失敗",
+      e
+    );
   }
 
-  const backupOK = await backupSelfScript(token);
+  const backupOK =
+    await backupSelfScript(
+      token
+    );
 
   let msg =
     `🚤 BOATRACE登録：${boat.total} / 24場\n` +
@@ -618,28 +1237,43 @@ try {
     `⚠️ 非開催判定はEPG側を正とします`;
 
   if (!publicYouTube.loaded) {
-    msg += `\n\n⚠️ ${PUBLIC_YOUTUBE_FILE}：未作成または取得できません`;
+    msg +=
+      `\n\n⚠️ ${PUBLIC_YOUTUBE_FILE}：未作成または取得できません`;
   }
 
-  if (!himitsuEpgDispatchOK && himitsuError) {
+  if (
+    !himitsuEpgDispatchOK &&
+    himitsuError
+  ) {
     msg +=
       `\n\n⚠️ Free Wi-Fi EPG起動失敗\n` +
       `ajiousama/himitsu に Actions: write 権限を持つTokenを使ってください。`;
   }
 
   if (boat.kept.length) {
-    msg += `\n\n📼 前回映像保持：\n${boat.kept.join(" / ")}`;
+    msg +=
+      `\n\n📼 前回映像保持：\n` +
+      boat.kept.join(" / ");
   }
 
   if (boat.missing.length) {
-    msg += `\n\n⚠️ URL履歴なし：\n${boat.missing.join(" / ")}`;
+    msg +=
+      `\n\n⚠️ URL履歴なし：\n` +
+      boat.missing.join(" / ");
   }
 
-  await show("✅ 公営これ一発 v14.3 完了", msg);
+  await show(
+    "✅ 公営これ一発 v14.3 完了",
+    msg
+  );
 
 } catch (e) {
   console.error(e);
-  await show("❌ 公営これ一発 v14.3 エラー", String(e));
+
+  await show(
+    "❌ 公営これ一発 v14.3 エラー",
+    String(e)
+  );
 }
 
 Script.complete();

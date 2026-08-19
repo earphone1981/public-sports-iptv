@@ -58,6 +58,9 @@ jobs:
       - name: Refresh かなチューブ
         run: python youtube_dynamic_update.py
 
+      - name: Rebuild public_sports.m3u from canonical sources
+        run: python merge_m3u.py
+
       - name: Normalize public sports labels
         run: python normalize_public_sports_labels.py
 
@@ -72,7 +75,13 @@ jobs:
           if [ "$COUNT" -eq 0 ]; then
             echo "No public-sports official channels are LIVE right now; empty public_sports_youtube.m3u is normal."
           fi
-          echo "YouTube validation OK"
+          DUPES=$(grep '^#EXTINF:' public_sports.m3u | sed -n 's/.*tvg-id="\([^"]*\)".*/\1/p' | grep '^youtube\.' | sort | uniq -d || true)
+          if [ -n "$DUPES" ]; then
+            echo "Duplicate YouTube tvg-id detected:"
+            echo "$DUPES"
+            exit 1
+          fi
+          echo "YouTube duplicate validation OK"
 
       - name: Commit updated LIVE URLs
         shell: bash

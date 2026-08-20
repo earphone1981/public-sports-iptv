@@ -38,25 +38,57 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --upgrade --pre "yt-dlp[default]"
+          yt-dlp --version
 
       - name: Restore YouTube cookies
         shell: bash
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          test -n "$YOUTUBE_COOKIES"
+          if [ -z "$YOUTUBE_COOKIES" ]; then
+            echo "ERROR: YOUTUBE_COOKIES secret is empty or unavailable"
+            exit 1
+          fi
           printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
           chmod 600 youtube_cookies.txt
+          echo "Cookie bytes: $(wc -c < youtube_cookies.txt)"
+          head -n 1 youtube_cookies.txt | grep -q 'Netscape HTTP Cookie File' || {
+            echo "ERROR: YOUTUBE_COOKIES is not Netscape cookie format"
+            exit 1
+          }
 
       - name: Sync latest main before generation
         shell: bash
         run: git pull --ff-only origin main
+
+      - name: YouTube cookie smoke test
+        shell: bash
+        run: |
+          set +e
+          yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --flat-playlist --playlist-end 1 --dump-json 'ytsearch1:競輪 公式 LIVE' > /tmp/yt-smoke.out 2> /tmp/yt-smoke.err
+          RC=$?
+          echo "smoke return code=$RC"
+          echo '--- stderr ---'
+          cat /tmp/yt-smoke.err || true
+          echo '--- stdout first line ---'
+          head -n 1 /tmp/yt-smoke.out || true
+          if [ $RC -ne 0 ]; then exit $RC; fi
 
       - name: Refresh public sports official YouTube LIVE
         run: python public_sports_youtube_update.py
 
       - name: Hard dedupe public sports YouTube
         run: python dedupe_public_sports_youtube.py
+
+      - name: Require at least one YouTube LIVE
+        shell: bash
+        run: |
+          COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u || true)
+          echo "Generated YouTube entries: $COUNT"
+          if [ "$COUNT" -lt 1 ]; then
+            echo "ERROR: YouTube updater returned zero LIVE entries"
+            exit 1
+          fi
 
       - name: Rebuild public_sports.m3u from canonical sources
         run: python merge_m3u.py

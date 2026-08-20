@@ -1,21 +1,21 @@
-UTC=2026-08-20T06:28:14Z
+UTC=2026-08-20T09:03:36Z
 UPDATER_RC=0
 GENERATED_ENTRIES=0
 PREVIOUS_ENTRIES=0
 
 ===== updater log =====
 NO LIVE 青森
-NO LIVE 函館
 NO LIVE 前橋
+NO LIVE 函館
 NO LIVE 取手
 NO LIVE 弥彦
 NO LIVE いわき平
-NO LIVE 宇都宮
-NO LIVE 大宮
 NO LIVE 西武園
+NO LIVE 大宮
+NO LIVE 宇都宮
 NO LIVE 京王閣
-NO LIVE 松戸
 NO LIVE 立川
+NO LIVE 松戸
 NO LIVE 平塚
 NO LIVE 小田原
 NO LIVE 川崎
@@ -23,19 +23,19 @@ NO LIVE 伊東温泉
 NO LIVE 名古屋
 NO LIVE 静岡
 NO LIVE 岐阜
-NO LIVE 豊橋
 NO LIVE 大垣
+NO LIVE 豊橋
 NO LIVE 松阪
 NO LIVE 四日市
 NO LIVE 富山
 NO LIVE 福井
 NO LIVE 奈良
 NO LIVE 岸和田
-NO LIVE 広島
-NO LIVE 玉野
 NO LIVE 和歌山
-NO LIVE 防府
+NO LIVE 玉野
+NO LIVE 広島
 NO LIVE 小松島
+NO LIVE 防府
 NO LIVE 松山
 NO LIVE 久留米
 NO LIVE 高知
@@ -50,26 +50,26 @@ NO LIVE 向日町
 NO LIVE 帯広けいば（ばんえい競馬）
 NO LIVE 門別けいば（ホッカイドウ競馬）
 NO LIVE 盛岡けいば（岩手競馬）
-NO LIVE 水沢けいば（岩手競馬）
 NO LIVE 浦和けいば（南関東競馬）
+NO LIVE 水沢けいば（岩手競馬）
 NO LIVE 船橋けいば（南関東競馬）
 NO LIVE 大井けいば（南関東競馬）
-NO LIVE 金沢けいば（金沢競馬）
 NO LIVE 川崎けいば（南関東競馬）
+NO LIVE 金沢けいば（金沢競馬）
 NO LIVE 名古屋けいば（名古屋競馬）
 NO LIVE 笠松けいば（笠松競馬）
 NO LIVE 園田けいば（園田競馬）
 NO LIVE 姫路けいば（姫路競馬）
+NO LIVE こうちけいば（高知競馬）
 NO LIVE 川口
 NO LIVE 伊勢崎
 NO LIVE 佐賀けいば（佐賀競馬）
-NO LIVE こうちけいば（高知競馬）
 NO LIVE 浜松
 NO LIVE 飯塚
 NO LIVE 山陽
 NO LIVE BOATRACE戸田
-NO LIVE BOATRACE平和島
 NO LIVE BOATRACE多摩川
+NO LIVE BOATRACE平和島
 NO LIVE BOATRACE津
 NO LIVE BOATRACE三国
 NO LIVE BOATRACEびわこ
@@ -83,6 +83,7 @@ NO LIVE BOATRACE下関
 NO LIVE BOATRACE若松
 NO LIVE BOATRACE芦屋
 NO LIVE BOATRACE唐津
+NO LIVE BOATRACE大村
 NO LIVE CROSS WINTICKET
 NO LIVE CROSS オッズパーク
 NO LIVE CROSS チャリロト

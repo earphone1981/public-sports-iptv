@@ -40,39 +40,59 @@ jobs:
           python -m pip install --upgrade --pre "yt-dlp[default]"
           yt-dlp --version
 
-      - name: Restore YouTube cookies
+      - name: Restore YouTube cookies or create empty jar
         shell: bash
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          if [ -z "$YOUTUBE_COOKIES" ]; then
-            echo "ERROR: YOUTUBE_COOKIES secret is empty or unavailable"
-            exit 1
+          if [ -n "$YOUTUBE_COOKIES" ]; then
+            printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
+            chmod 600 youtube_cookies.txt
+            echo "Cookie bytes: $(wc -c < youtube_cookies.txt)"
+          else
+            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
+            chmod 600 youtube_cookies.txt
+            echo 'YOUTUBE_COOKIES is empty; using no-cookie fallback jar'
           fi
-          printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
-          chmod 600 youtube_cookies.txt
-          echo "Cookie bytes: $(wc -c < youtube_cookies.txt)"
           head -n 1 youtube_cookies.txt | grep -q 'Netscape HTTP Cookie File' || {
-            echo "ERROR: YOUTUBE_COOKIES is not Netscape cookie format"
-            exit 1
+            echo 'Cookie format invalid; switching to empty cookie jar'
+            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
           }
 
       - name: Sync latest main before generation
         shell: bash
         run: git pull --ff-only origin main
 
-      - name: YouTube cookie smoke test
+      - name: Backup previous successful YouTube M3U
+        shell: bash
+        run: |
+          cp public_sports_youtube.m3u /tmp/public_sports_youtube.prev.m3u 2>/dev/null || printf '#EXTM3U\n' > /tmp/public_sports_youtube.prev.m3u
+          PREV=$(grep -c '^#EXTINF:' /tmp/public_sports_youtube.prev.m3u || true)
+          echo "Previous YouTube entries: $PREV"
+
+      - name: YouTube smoke test with cookie fallback
         shell: bash
         run: |
           set +e
           yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --flat-playlist --playlist-end 1 --dump-json 'ytsearch1:競輪 公式 LIVE' > /tmp/yt-smoke.out 2> /tmp/yt-smoke.err
           RC=$?
-          echo "smoke return code=$RC"
-          echo '--- stderr ---'
+          echo "cookie smoke return code=$RC"
           cat /tmp/yt-smoke.err || true
-          echo '--- stdout first line ---'
           head -n 1 /tmp/yt-smoke.out || true
-          if [ $RC -ne 0 ]; then exit $RC; fi
+
+          if [ $RC -ne 0 ] || [ ! -s /tmp/yt-smoke.out ]; then
+            echo 'Cookie smoke failed; retrying without account cookies'
+            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
+            yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --flat-playlist --playlist-end 1 --dump-json 'ytsearch1:競輪 公式 LIVE' > /tmp/yt-smoke2.out 2> /tmp/yt-smoke2.err
+            RC2=$?
+            echo "no-cookie smoke return code=$RC2"
+            cat /tmp/yt-smoke2.err || true
+            head -n 1 /tmp/yt-smoke2.out || true
+            if [ $RC2 -ne 0 ] || [ ! -s /tmp/yt-smoke2.out ]; then
+              echo 'ERROR: YouTube search unavailable with both cookie and no-cookie modes'
+              exit 1
+            fi
+          fi
 
       - name: Refresh public sports official YouTube LIVE
         run: python public_sports_youtube_update.py
@@ -80,13 +100,17 @@ jobs:
       - name: Hard dedupe public sports YouTube
         run: python dedupe_public_sports_youtube.py
 
-      - name: Require at least one YouTube LIVE
+      - name: Protect against zero-result overwrite
         shell: bash
         run: |
           COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u || true)
+          PREV=$(grep -c '^#EXTINF:' /tmp/public_sports_youtube.prev.m3u || true)
           echo "Generated YouTube entries: $COUNT"
+          echo "Previous YouTube entries: $PREV"
           if [ "$COUNT" -lt 1 ]; then
-            echo "ERROR: YouTube updater returned zero LIVE entries"
+            echo 'ERROR: YouTube updater returned zero LIVE entries'
+            echo 'Restoring previous successful M3U before stopping'
+            cp /tmp/public_sports_youtube.prev.m3u public_sports_youtube.m3u
             exit 1
           fi
 

@@ -94,6 +94,8 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Runtime patch is intentionally temporary; discard it before rebase/push.
+          git restore --worktree public_sports_youtube_update.py || true
           git add public_sports.m3u public_sports_youtube.m3u public_youtube_run_latest.txt || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Update public sports YouTube LIVE and diagnostics'

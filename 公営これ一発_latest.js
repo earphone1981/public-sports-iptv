@@ -1,6 +1,9 @@
 // Variables used by Scriptable.
 // These must be at the very top of the file. Do not edit.
 // icon-color: cyan; icon-glyph: magic;
+// Variables used by Scriptable.
+// These must be at the very top of the file. Do not edit.
+// icon-color: cyan; icon-glyph: magic;
 
 // ============================================================
 // 公営これ一発 v14.4
@@ -30,7 +33,10 @@ async function loadBaseScript() {
     throw new Error(`v14.3本体取得失敗: HTTP ${status}`);
   }
 
+  // v14.3 の全機能をそのまま v14.4 として動かす。
   text = text.replace(/v14\.3/g, "v14.4");
+
+  // 内側の Script.complete() は最後まで走らせるため外す。
   text = text.replace(/Script\.complete\(\);/g, "");
 
   return text;
@@ -83,11 +89,13 @@ async function showResult(title, message) {
 try {
   const base = await loadBaseScript();
 
+  // v14.3正式版を丸ごと継承して実行。
   const runner = new Function(
     `return (async () => {\n${base}\n})();`
   );
   await runner();
 
+  // 公営・EPG処理終了後、一般YouTubeも同じ一発で起動。
   await dispatchGeneralYouTube();
 
   await showResult(

@@ -58,9 +58,6 @@ jobs:
       - name: Hard dedupe public sports YouTube
         run: python dedupe_public_sports_youtube.py
 
-      - name: Refresh かなチューブ
-        run: python youtube_dynamic_update.py
-
       - name: Rebuild public_sports.m3u from canonical sources
         run: python merge_m3u.py
 
@@ -72,12 +69,8 @@ jobs:
         run: |
           test -s public_sports.m3u
           test -s public_sports_youtube.m3u
-          grep -q 'group-title="かなチューブ"' public_sports.m3u
           COUNT=$(grep -Ec 'group-title="(競輪 YouTube LIVE|地方競馬 YouTube LIVE|オートレース YouTube LIVE|ボートレース YouTube LIVE|公営競技 横断LIVE)"' public_sports_youtube.m3u || true)
           echo "Public sports YouTube LIVE count: $COUNT"
-          if [ "$COUNT" -eq 0 ]; then
-            echo "No public-sports official channels are LIVE right now; empty public_sports_youtube.m3u is normal."
-          fi
           DUPES=$(grep '^#EXTINF:' public_sports.m3u | sed -n 's/.*tvg-id="\([^"]*\)".*/\1/p' | grep '^youtube\.' | sort | uniq -d || true)
           if [ -n "$DUPES" ]; then
             echo "Duplicate YouTube tvg-id detected:"
@@ -91,7 +84,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public_sports.m3u public_sports_youtube.m3u kana_live.m3u || true
+          git add public_sports.m3u public_sports_youtube.m3u || true
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0

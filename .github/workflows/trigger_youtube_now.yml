@@ -26,4 +26,4 @@ jobs:
             "https://api.github.com/repos/$REPO/actions/workflows/youtube_namibia_live.yml/dispatches" \
             -d '{"ref":"main"}'
 
-# trigger: 2026-08-18T10:57JST
+# trigger: 2026-08-20T14:18JST

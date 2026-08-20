@@ -25,16 +25,12 @@ BOAT_LOGO_BASE='https://raw.githubusercontent.com/earphone1981/public-sports-ipt
 def current_order():
     h=datetime.datetime.now(JST).hour
     if h < 11:
-        seq=['モーニング','デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト']
-        band='朝'
+        seq=['モーニング','デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト']; band='朝'
     elif h < 17:
-        seq=['デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','モーニング']
-        band='昼'
+        seq=['デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','モーニング']; band='昼'
     else:
-        seq=['薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','デイ','通常','モーニング']
-        band='夕'
+        seq=['薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','デイ','通常','モーニング']; band='夕'
     return {x:i for i,x in enumerate(seq)},band
-
 
 def parse_dt(value):
     m=re.match(r'(\d{14})\s*([+-]\d{4})?',str(value or ''))
@@ -42,7 +38,6 @@ def parse_dt(value):
     digits,off=m.groups()
     if off:return datetime.datetime.strptime(f'{digits} {off}','%Y%m%d%H%M%S %z').astimezone(JST)
     return datetime.datetime.strptime(digits,'%Y%m%d%H%M%S').replace(tzinfo=JST)
-
 
 def classify(desc,first,last):
     for key in ('オーバーミッドナイト','ミッドナイト','ナイター','サマータイム','薄暮','モーニング','デイ','通常'):
@@ -54,6 +49,12 @@ def classify(desc,first,last):
     if first >= 14*60:return 'ナイター'
     return 'デイ'
 
+def load_epg_names():
+    root=ET.parse(EPG).getroot(); names={}
+    for ch in root.findall('channel'):
+        cid=(ch.get('id') or '').strip(); name=(ch.findtext('display-name') or '').strip()
+        if cid and name:names[cid]=name
+    return names
 
 def build_epg_keys():
     root=ET.parse(EPG).getroot(); by={}
@@ -73,76 +74,82 @@ def build_epg_keys():
     for cid,info in by.items():
         times=sorted(info['times'])
         if not times:keys[cid]=(99,9999,cid);continue
-        typ=classify(info['desc'],times[0],times[-1])
-        keys[cid]=(priority.get(typ,50),times[0],cid)
+        typ=classify(info['desc'],times[0],times[-1]); keys[cid]=(priority.get(typ,50),times[0],cid)
     return keys,band
-
 
 def split_sections(text):
     lines=text.replace('\r\n','\n').split('\n'); header=[]; sections=[]; name=None; cur=[]
     for line in lines:
         if line.startswith('## '):
-            if name is None: header.extend(cur)
-            else: sections.append((name,cur))
+            if name is None:header.extend(cur)
+            else:sections.append((name,cur))
             name=line[3:].strip(); cur=[line]
-        else: cur.append(line)
+        else:cur.append(line)
     if name is None:header.extend(cur)
     else:sections.append((name,cur))
     return header,sections
-
 
 def parse_blocks(lines):
     prefix=[lines[0]] if lines else []; blocks=[]; i=1
     while i<len(lines):
         if not lines[i].startswith('#EXTINF:'):i+=1;continue
         b=[lines[i]];i+=1
-        while i<len(lines) and not lines[i].startswith('#EXTINF:'):
-            b.append(lines[i]);i+=1
+        while i<len(lines) and not lines[i].startswith('#EXTINF:'):b.append(lines[i]);i+=1
         while b and b[-1]=='':b.pop()
         blocks.append(b)
     return prefix,blocks
-
 
 def block_id(block):
     m=TVG_ID_RE.search(block[0]) if block else None
     return m.group(1).strip() if m else ''
 
+def sync_tvg_name(block,epg_names):
+    if not block:return block
+    cid=block_id(block); name=epg_names.get(cid)
+    if not name:return block
+    ext=block[0]
+    if re.search(r'tvg-name="[^"]*"',ext,re.I):
+        ext=re.sub(r'tvg-name="[^"]*"',f'tvg-name="{name}"',ext,flags=re.I)
+    else:
+        ext=ext.replace(' group-title=',f' tvg-name="{name}" group-title=',1)
+    block[0]=ext; return block
 
 def repair_boat_logo(block):
     if not block:return block
-    cid=block_id(block)
-    slug=BOAT_LOGO_SLUG.get(cid)
+    cid=block_id(block); slug=BOAT_LOGO_SLUG.get(cid)
     if not slug:return block
-    logo=f'{BOAT_LOGO_BASE}/{slug}.png'
-    ext=block[0]
-    if re.search(r'tvg-logo="[^"]*"',ext,re.I):
-        ext=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{logo}"',ext,flags=re.I)
-    else:
-        ext=ext.replace(' group-title=',f' tvg-logo="{logo}" group-title=',1)
-    block[0]=ext
-    return block
-
+    logo=f'{BOAT_LOGO_BASE}/{slug}.png'; ext=block[0]
+    if re.search(r'tvg-logo="[^"]*"',ext,re.I):ext=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{logo}"',ext,flags=re.I)
+    else:ext=ext.replace(' group-title=',f' tvg-logo="{logo}" group-title=',1)
+    block[0]=ext; return block
 
 def main():
-    keys,band=build_epg_keys(); text=M3U.read_text(encoding='utf-8-sig'); header,sections=split_sections(text); out=[]
+    keys,band=build_epg_keys(); epg_names=load_epg_names(); text=M3U.read_text(encoding='utf-8-sig'); header,sections=split_sections(text); out=[]
     if header:
         out.extend(header)
         while out and out[-1]=='':out.pop()
         out.append('')
+    synced=0
     for name,lines in sections:
-        if name not in SORT_GROUPS:
+        prefix,blocks=parse_blocks(lines)
+        if not blocks:
             out.extend(lines)
             if out and out[-1]!='':out.append('')
             continue
-        prefix,blocks=parse_blocks(lines); decorated=[]
+        decorated=[]
         for idx,b in enumerate(blocks):
-            if name=='ボートレース':
-                b=repair_boat_logo(b)
-            cid=block_id(b); key=keys.get(cid,(99,9999,cid or f'zz{idx:04d}')); decorated.append((key,idx,b))
-        decorated.sort(key=lambda x:(x[0],x[1])); out.extend(prefix)
+            cid=block_id(b)
+            before=b[0] if b else ''
+            b=sync_tvg_name(b,epg_names)
+            if b and b[0]!=before:synced+=1
+            if name=='ボートレース':b=repair_boat_logo(b)
+            key=keys.get(cid,(99,9999,cid or f'zz{idx:04d}')) if name in SORT_GROUPS else (idx,)
+            decorated.append((key,idx,b))
+        if name in SORT_GROUPS:decorated.sort(key=lambda x:(x[0],x[1]))
+        out.extend(prefix)
         for _,_,b in decorated:out.extend(b);out.append('')
-        print(f'{name}: {len(blocks)} ch sorted')
+        if name in SORT_GROUPS:print(f'{name}: {len(blocks)} ch sorted')
     M3U.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
-    print(f'public_sports.m3u sorted for {band} priority / BOAT logo URLs repaired')
+    print(f'public_sports.m3u sorted for {band} priority / tvg-name synced={synced} / BOAT logos repaired')
 
 if __name__=='__main__':main()

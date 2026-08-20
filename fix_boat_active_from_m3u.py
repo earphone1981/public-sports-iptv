@@ -27,37 +27,91 @@ CODE_NAME = {
 
 def fetch(url):
     req = urllib.request.Request(url, headers={
-        'User-Agent':'Mozilla/5.0', 'Accept-Language':'ja-JP,ja;q=0.9', 'Cache-Control':'no-cache'
+        'User-Agent':'Mozilla/5.0',
+        'Accept-Language':'ja-JP,ja;q=0.9',
+        'Cache-Control':'no-cache',
+        'Referer':'https://www.boatrace.jp/'
     })
     with urllib.request.urlopen(req, timeout=25) as r:
         return r.read().decode('utf-8', errors='ignore')
 
+def strip_tags(src):
+    src = re.sub(r'(?is)<script.*?</script>', ' ', src or '')
+    src = re.sub(r'(?is)<style.*?</style>', ' ', src)
+    src = re.sub(r'(?s)<[^>]+>', ' ', src)
+    src = html.unescape(src)
+    return re.sub(r'\s+', ' ', src).strip()
+
 def race_times(src):
-    src = re.sub(r'\s+', ' ', html.unescape(src or ''))
-    out = []
+    raw = html.unescape(src or '')
+    compact = re.sub(r'\s+', ' ', raw)
+    found = {}
+
+    # 1) 1R ... HH:MM を直接拾う。
     for n in range(1, 13):
-        m = re.search(rf'\b{n}R\b.{{0,1600}}?([0-2]?\d:[0-5]\d)', src, re.I|re.S)
+        for pat in (
+            rf'>\s*{n}R\s*<.*?([0-2]?\d:[0-5]\d)',
+            rf'\b{n}R\b.{{0,2200}}?([0-2]?\d:[0-5]\d)',
+        ):
+            m = re.search(pat, compact, re.I | re.S)
+            if m:
+                found[n] = m.group(1)
+                break
+
+    # 2) BOAT公式の上部表「締切予定時刻」に12個並ぶ時刻を直接読む。
+    # HTML構造変更で1Rと時刻が遠くなってもこちらで救済する。
+    if len(found) < 12:
+        plain = strip_tags(raw)
+        pos = plain.find('締切予定時刻')
+        if pos >= 0:
+            window = plain[pos:pos + 1800]
+            seq = re.findall(r'(?<!\d)([0-2]?\d:[0-5]\d)(?!\d)', window)
+            # 同一時刻の重複を順序維持で除く。
+            uniq = []
+            for hm in seq:
+                if not uniq or hm != uniq[-1]:
+                    uniq.append(hm)
+            if len(uniq) >= 12:
+                return [(n, uniq[n-1]) for n in range(1, 13)]
+
+    # 3) テーブル見出し「1R 2R ... 12R」の後に時刻だけ並ぶ形式も救済。
+    if len(found) < 12:
+        plain = strip_tags(raw)
+        m = re.search(
+            r'1R\s+2R\s+3R\s+4R\s+5R\s+6R\s+7R\s+8R\s+9R\s+10R\s+11R\s+12R(.{0,2200})',
+            plain,
+            re.S,
+        )
         if m:
-            out.append((n, m.group(1)))
-    return out
+            seq = re.findall(r'(?<!\d)([0-2]?\d:[0-5]\d)(?!\d)', m.group(1))
+            if len(seq) >= 12:
+                return [(n, seq[n-1]) for n in range(1, 13)]
+
+    return [(n, found[n]) for n in sorted(found)]
 
 def day_type(times):
-    if not times: return ('開催','🚤')
+    if not times:
+        return ('開催','🚤')
     h = int(times[0][1].split(':')[0])
     last_h = int(times[-1][1].split(':')[0])
-    # 大村等の深夜帯は最終発走時刻を優先してミッドナイト判定。
-    if last_h >= 22: return ('ミッドナイト','⭐')
-    if h < 10: return ('モーニング','🌅')
-    if h >= 14: return ('ナイター','🌙')
+    if last_h >= 22:
+        return ('ミッドナイト','⭐')
+    if h < 10:
+        return ('モーニング','🌅')
+    if h >= 14:
+        return ('ナイター','🌙')
     return ('デイ','☀️')
 
-def xdt(dt): return dt.strftime('%Y%m%d%H%M%S +0900')
+def xdt(dt):
+    return dt.strftime('%Y%m%d%H%M%S +0900')
 
 def add(root, ch, start, stop, title, desc=''):
-    if stop <= start: return
+    if stop <= start:
+        return
     p = ET.SubElement(root, 'programme', start=xdt(start), stop=xdt(stop), channel=ch)
     ET.SubElement(p, 'title', lang='ja').text = title
-    if desc: ET.SubElement(p, 'desc', lang='ja').text = desc
+    if desc:
+        ET.SubElement(p, 'desc', lang='ja').text = desc
 
 m3u = open(M3U, encoding='utf-8-sig').read()
 active = []
@@ -68,12 +122,25 @@ for tvg, code in TVG_TO_CODE.items():
 root = ET.parse(EPG).getroot()
 start_prefix = DATE
 changed = 0
+print('BOAT active from M3U:', ','.join(code for _, code in active))
+
 for tvg, code in active:
-    existing = [p for p in root.findall('programme') if p.get('channel') == tvg and (p.get('start') or '').startswith(start_prefix)]
-    # 実レースEPGが既にあれば触らない。非開催/準備中だけなら置換する。
-    real = [p for p in existing if '開催していません' not in ''.join(p.itertext()) and 'データ取得準備中' not in ''.join(p.itertext()) and '開催情報確認待ち' not in ''.join(p.itertext())]
-    if real:
+    existing = [
+        p for p in root.findall('programme')
+        if p.get('channel') == tvg and (p.get('start') or '').startswith(start_prefix)
+    ]
+
+    # 本当に各Rが入っている場合だけ既存EPGを採用。
+    # 「非開催」「終了」「準備中」等だけでは開催済みと判定しない。
+    real_race = []
+    for p in existing:
+        text = ' '.join(p.itertext())
+        if re.search(r'(?:\b(?:[1-9]|1[0-2])R\b|[❶❷❸❹❺❻❼❽❾❿⓫⓬]ℛ)', text):
+            real_race.append(p)
+    if real_race:
+        print(f'BOAT {code}: existing race EPG OK ({len(real_race)})')
         continue
+
     url = f'https://www.boatrace.jp/owpc/pc/race/raceindex?hd={DATE}&jcd={code}'
     try:
         src = fetch(url)
@@ -81,37 +148,66 @@ for tvg, code in active:
     except Exception as e:
         print(f'BOAT {code} fetch failed: {e}')
         continue
-    if not times:
-        print(f'BOAT {code}: race times not found')
+
+    if len(times) < 2:
+        print(f'BOAT {code}: race times not found ({len(times)})')
         continue
+
+    print(f'BOAT {code}: race times = {times}')
+
     for p in existing:
         root.remove(p)
+
     typ, emo = day_type(times)
     name = CODE_NAME[code]
     dts = []
     for n, hm in times:
         dt = datetime.datetime.strptime(f'{DATE} {hm}', '%Y%m%d %H:%M').replace(tzinfo=JST)
         dts.append((n, hm, dt))
+
     day_start = datetime.datetime.strptime(f'{DATE} 08:00', '%Y%m%d %H:%M').replace(tzinfo=JST)
     day_end = datetime.datetime.strptime(f'{DATE} 23:59', '%Y%m%d %H:%M').replace(tzinfo=JST)
     pre = max(day_start, dts[0][2] - datetime.timedelta(minutes=20))
+
     if day_start < pre:
-        add(root, tvg, day_start, pre, f'⏳ 待機 {code} {name} {emo}{typ}', f'🚤 BOATRACE{name}\n1R {dts[0][1]} 発走予定')
+        add(
+            root, tvg, day_start, pre,
+            f'⏳ 待機 {code} {name} {emo}{typ}',
+            f'🚤 BOATRACE{name}\n1R {dts[0][1]} 発走予定'
+        )
+
     for i, (n, hm, dt) in enumerate(dts):
         bs = max(pre, dt - datetime.timedelta(minutes=10))
-        be = (dts[i+1][2] - datetime.timedelta(minutes=10)) if i+1 < len(dts) else dt + datetime.timedelta(minutes=30)
-        if be <= bs: be = dt + datetime.timedelta(minutes=15)
-        add(root, tvg, bs, min(be, day_end), f'🚤 {code} {name} {n}R {hm}発走 {emo}{typ}', f'🚤 BOATRACE{name}\n{emo} 開催区分: {typ}\n⏰ 発走予定: {hm}')
+        be = (
+            dts[i+1][2] - datetime.timedelta(minutes=10)
+            if i + 1 < len(dts)
+            else dt + datetime.timedelta(minutes=30)
+        )
+        if be <= bs:
+            be = dt + datetime.timedelta(minutes=15)
+        add(
+            root, tvg, bs, min(be, day_end),
+            f'🚤 {code} {name} {n}R {hm}発走 {emo}{typ}',
+            f'🚤 BOATRACE{name}\n{emo} 開催区分: {typ}\n⏰ 発走予定: {hm}'
+        )
+
     finish = dts[-1][2] + datetime.timedelta(minutes=30)
     if finish < day_end:
-        add(root, tvg, finish, day_end, f'🏁✨ 本日の開催は終了しました 🚤🌙 {code} {name}（ボートレース）')
+        add(
+            root, tvg, finish, day_end,
+            f'🏁✨ 本日の開催は終了しました 🚤🌙 {code} {name}（ボートレース）'
+        )
+
     changed += 1
     print(f'BOAT EPG repaired from M3U: {code} {name} / {typ} / {len(times)}R')
 
 if changed:
     programmes = list(root.findall('programme'))
-    for p in programmes: root.remove(p)
+    for p in programmes:
+        root.remove(p)
     programmes.sort(key=lambda p: (p.get('start',''), p.get('channel','')))
-    for p in programmes: root.append(p)
+    for p in programmes:
+        root.append(p)
     ET.ElementTree(root).write(EPG, encoding='utf-8', xml_declaration=True)
+
 print(f'BOAT M3U active repair: {changed} venue(s)')

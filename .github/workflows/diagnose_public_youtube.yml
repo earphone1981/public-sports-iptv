@@ -64,14 +64,14 @@ jobs:
             echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_nocookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
             echo | tee -a diag/summary.txt
           }
-          test_one '函館競輪' 'https://www.youtube.com/results?search_query=%E5%87%BD%E9%A4%A8%E7%AB%B6%E8%BC%AA+LIVE'
+          test_one '高知競輪' 'ytsearch1:高知競輪 公式 LIVE'
           test_one 'BOATRACE大村' 'https://www.youtube.com/channel/UCPLb9R1EIqxNBy8Qzcrz8Wg/live'
           test_one 'WINTICKET' 'https://www.youtube.com/@winticket0402/live'
           echo '===== search test =====' | tee -a diag/summary.txt
-          yt-dlp --cookies youtube_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:函館競輪 公式 LIVE' > diag/search_cookie.jsonl 2> diag/search_cookie_error.txt
+          yt-dlp --cookies youtube_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:高知競輪 公式 LIVE' > diag/search_cookie.jsonl 2> diag/search_cookie_error.txt
           echo "search cookie rc=$? lines=$(wc -l < diag/search_cookie.jsonl)" | tee -a diag/summary.txt
           tail -n 20 diag/search_cookie_error.txt | tee -a diag/summary.txt
-          yt-dlp --cookies empty_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:函館競輪 公式 LIVE' > diag/search_nocookie.jsonl 2> diag/search_nocookie_error.txt
+          yt-dlp --cookies empty_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:高知競輪 公式 LIVE' > diag/search_nocookie.jsonl 2> diag/search_nocookie_error.txt
           echo "search no-cookie rc=$? lines=$(wc -l < diag/search_nocookie.jsonl)" | tee -a diag/summary.txt
           tail -n 20 diag/search_nocookie_error.txt | tee -a diag/summary.txt
           cp diag/summary.txt public_youtube_diag_latest.txt

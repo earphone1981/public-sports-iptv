@@ -18,6 +18,7 @@ on:
       - "fix_autorace_today_official.py"
       - "fix_epg_duplicate_channel_ids.py"
       - "sort_public_sports_by_epg.py"
+      - "reorder_epg_channels_by_m3u.py"
       - ".github/workflows/update_epg_3days.yml"
 
 concurrency:
@@ -73,6 +74,9 @@ jobs:
       - name: Sort public sports M3U from today's EPG
         run: python -u sort_public_sports_by_epg.py
 
+      - name: Sync EPG channel order to sorted M3U
+        run: python -u reorder_epg_channels_by_m3u.py
+
       - name: Validate required duplicate-name channels
         run: |
           python - <<'PY'
@@ -116,4 +120,4 @@ jobs:
           git commit -m "Update EPG and sort public sports M3U"
           git push origin HEAD:main
 
-# trigger: 2026-08-20 safe generated-file publish
+# trigger: 2026-08-21 sync EPG channel order to M3U

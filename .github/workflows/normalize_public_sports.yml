@@ -11,10 +11,6 @@ on:
       - 'keiba_master.m3u'
       - 'autorace_master.m3u'
       - 'boatrace_today.m3u'
-      - 'kana_live.m3u'
-      - 'youtube_test.m3u'
-      - 'namibia_live.m3u'
-      - 'matsuyama_airport_live.m3u'
       - 'merge_m3u.py'
       - 'normalize_public_sports_labels.py'
       - 'fix_logo_refs.py'
@@ -24,7 +20,6 @@ on:
 permissions:
   contents: write
 
-# public_sports.m3u / epg.xml を書き換えるWorkflowを同じキューで直列化する。
 concurrency:
   group: public-sports-m3u-writer
   cancel-in-progress: false
@@ -32,33 +27,25 @@ concurrency:
 jobs:
   normalize:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
-
       - name: Rebuild public M3U
         run: python merge_m3u.py
-
       - name: Normalize EPG and M3U labels/status
         run: python normalize_public_sports_labels.py
-
       - name: Fix IPTV logo references
         run: python fix_logo_refs.py
-
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
-
       - name: Commit normalized files
         run: |
           git config user.name "github-actions[bot]"

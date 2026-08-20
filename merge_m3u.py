@@ -18,10 +18,6 @@ INPUTS = [
     ('ボートレース', BASE/'boatrace_today.m3u'),
 ]
 
-YOUTUBE_INPUTS = [
-    ('公営YouTube', BASE/'public_sports_youtube.m3u'),
-]
-
 JRA = [
     ('jra.gch','グリーンチャンネル','グリーンチャンネル（高画質）','gchmain.m3u8'),
     ('jra.gch','グリーンチャンネル','グリーンチャンネル（低画質）','gchmain_LQ.m3u8'),
@@ -34,6 +30,20 @@ JRA = [
 ]
 
 
+def priority_order():
+    h = datetime.datetime.now(JST).hour
+    if h < 11:
+        seq = ['モーニング','デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト']
+        label = '朝'
+    elif h < 17:
+        seq = ['デイ','通常','薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','モーニング']
+        label = '昼'
+    else:
+        seq = ['薄暮','サマータイム','ナイター','ミッドナイト','オーバーミッドナイト','デイ','通常','モーニング']
+        label = '夕'
+    return {name:i for i,name in enumerate(seq)}, label
+
+
 def read_entries(path):
     if not path.exists():
         return []
@@ -41,25 +51,23 @@ def read_entries(path):
     entries=[]
     i=0
     while i < len(lines):
-        line=lines[i].strip()
-        if line.startswith('#EXTINF:'):
-            block=[line]
-            j=i+1
-            url=False
-            while j < len(lines):
-                s=lines[j].strip()
-                if not s:
-                    j+=1; continue
+        if lines[i].strip().startswith('#EXTINF:'):
+            block=[lines[i].strip()]
+            i += 1
+            while i < len(lines):
+                s=lines[i].strip()
                 if s.startswith('#EXTINF:') or s.startswith('## '):
                     break
-                if s.startswith('#'):
-                    block.append(s); j+=1; continue
-                block.append(s); url=True; j+=1; break
-            if url:
+                if s:
+                    block.append(s)
+                    if not s.startswith('#'):
+                        i += 1
+                        break
+                i += 1
+            if block and not block[-1].startswith('#'):
                 entries.append(block)
-            i=j
             continue
-        i+=1
+        i += 1
     return entries
 
 
@@ -78,42 +86,28 @@ def parse_xmltv(value):
     return datetime.datetime.strptime(digits, '%Y%m%d%H%M%S').replace(tzinfo=JST)
 
 
-def session_rank(text, start):
-    t = str(text or '')
-    # EPGに明示区分があれば最優先。
-    if 'オーバーミッドナイト' in t or 'OVER MIDNIGHT' in t.upper(): return 4
-    if 'ミッドナイト' in t or 'MIDNIGHT' in t.upper(): return 3
-    if 'ナイター' in t or 'NIGHT' in t.upper(): return 2
-    if 'モーニング' in t or 'MORNING' in t.upper(): return 0
-    if 'デイ' in t or 'DAY' in t.upper(): return 1
-    # 明示がない競技は最初の番組開始時刻で大分類。
-    if start:
-        h = start.hour
-        if h < 10: return 0
-        if h < 15: return 1
-        if h < 20: return 2
-        if h < 23: return 3
-        return 4
-    return 1
+def classify(text, first, last):
+    for key in ('オーバーミッドナイト','ミッドナイト','ナイター','サマータイム','薄暮','モーニング','デイ','通常'):
+        if key in text:
+            return key
+    if last and (last.hour * 60 + last.minute) > 23 * 60 + 40:
+        return 'オーバーミッドナイト'
+    if not first:
+        return '通常'
+    h = first.hour
+    if h < 10: return 'モーニング'
+    if h >= 19: return 'ミッドナイト'
+    if h >= 14: return 'ナイター'
+    return 'デイ'
 
 
 def today_order():
-    """EPGから本日開催チャンネルを抽出し、
-    モーニング→デイ→ナイター→ミッドナイト→オーバーミッドナイト順のキーを返す。
-    非開催・準備中だけのチャンネルは対象外。
-    """
     if not EPG.exists():
-        return {}
-    try:
-        root = ET.parse(EPG).getroot()
-    except Exception as e:
-        print('EPG parse failed:', e)
-        return {}
-
+        return {}, 'EPGなし'
+    root = ET.parse(EPG).getroot()
     today = datetime.datetime.now(JST).date()
-    found = {}
-    bad_words = ('本日非開催', '開催なし', 'データ取得準備中', '開催情報確認待ち')
-
+    by_ch = {}
+    bad = ('本日は開催していません','データ取得準備中','開催情報確認待ち')
     for p in root.findall('programme'):
         cid = p.get('channel','')
         if not cid.startswith(('keirin.','chihou.','keiba.','auto.','boat.')):
@@ -122,65 +116,51 @@ def today_order():
         stop = parse_xmltv(p.get('stop'))
         if not start:
             continue
-        # 早朝まで続くオーバーミッドナイトは前日開催扱いにしないため、
-        # EPG上の本日開始番組を基準にする。
-        if start.date() != today:
+        logical = start.date() if start.hour >= 4 else start.date() - datetime.timedelta(days=1)
+        if logical != today:
             continue
-        title = p.findtext('title') or ''
-        desc = p.findtext('desc') or ''
-        text = title + ' ' + desc
-        if any(w in text for w in bad_words):
+        text = (p.findtext('title') or '') + ' ' + (p.findtext('desc') or '')
+        if any(x in text for x in bad):
             continue
-        rank = session_rank(text, start)
-        key = (rank, start)
-        if cid not in found or key < found[cid]:
-            found[cid] = key
+        info = by_ch.setdefault(cid, {'starts':[], 'stops':[], 'text':''})
+        info['starts'].append(start)
+        if stop: info['stops'].append(stop)
+        info['text'] += ' ' + text
 
-    return found
+    priorities, band = priority_order()
+    order = {}
+    for cid, info in by_ch.items():
+        first = min(info['starts']) if info['starts'] else None
+        last = max(info['stops']) if info['stops'] else first
+        typ = classify(info['text'], first, last)
+        order[cid] = (priorities.get(typ, 50), first or datetime.datetime.max.replace(tzinfo=JST))
+    return order, band
 
 
 def sorted_entries(path, order):
     entries = read_entries(path)
-    indexed = list(enumerate(entries))
-    def key(pair):
-        idx, block = pair
+    decorated=[]
+    for idx, block in enumerate(entries):
         cid = attr(block[0], 'tvg-id')
         if cid in order:
-            rank, start = order[cid]
-            return (0, rank, start, idx)
-        return (1, 99, datetime.datetime.max.replace(tzinfo=JST), idx)
-    indexed.sort(key=key)
-    return [block for _, block in indexed]
+            decorated.append(((0,)+order[cid]+(idx,), block))
+        else:
+            decorated.append(((1,99,datetime.datetime.max.replace(tzinfo=JST),idx), block))
+    decorated.sort(key=lambda x:x[0])
+    return [b for _,b in decorated]
 
 
-def append_file(out, label, path, seen_ids=None, seen_exact=None, order=None):
-    entries = sorted_entries(path, order) if order is not None else read_entries(path)
+def append_file(out, label, path, order):
+    entries = sorted_entries(path, order)
     if not entries:
         print(label, '0 <-', path.name)
         return 0
-    if seen_ids is None: seen_ids=set()
-    if seen_exact is None: seen_exact=set()
-    added=0
-    last_group=None
+    out.append('## ' + label)
     for block in entries:
-        ext=block[0]
-        tvg_id=attr(ext,'tvg-id')
-        url=block[-1] if block else ''
-        exact=(ext,url)
-        if tvg_id:
-            if tvg_id in seen_ids: continue
-            seen_ids.add(tvg_id)
-        else:
-            if exact in seen_exact: continue
-            seen_exact.add(exact)
-        group=attr(ext,'group-title')
-        if group and group != last_group:
-            out.append('## '+group); last_group=group
-        elif not group and last_group is None:
-            out.append('## '+label); last_group=label
-        out.extend(block); out.append(''); added += 1
-    print(label, added, '<-', path.name)
-    return added
+        out.extend(block)
+        out.append('')
+    print(label, len(entries), '<-', path.name)
+    return len(entries)
 
 
 def raw(filename):
@@ -189,25 +169,20 @@ def raw(filename):
 
 def main():
     out=[f'#EXTM3U url-tvg="{EPG_URL}"','']
+    order, band = today_order()
     total=0
-    order=today_order()
-    print('本日開催並べ替え対象:', len(order), 'ch')
-
+    print('時間帯:', band, '並べ替え対象:', len(order), 'ch')
     for label,path in INPUTS:
-        total += append_file(out,label,path,order=order)
-
-    seen_youtube_ids=set(); seen_youtube_exact=set()
-    for label,path in YOUTUBE_INPUTS:
-        total += append_file(out,label,path,seen_youtube_ids,seen_youtube_exact)
+        total += append_file(out,label,path,order)
 
     out.append('## 中央競馬')
     for tvg,name,display,filename in JRA:
         out += [f'#EXTINF:-1 tvg-id="{tvg}" tvg-name="{name}" group-title="中央競馬",{display}',raw(filename),'']
         total += 1
 
-    OUT.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
-    print('M3U一本化 完了:',total,'ch')
-    print('本日開催順: モーニング -> デイ -> ナイター -> ミッドナイト -> オーバーミッドナイト -> 非開催')
+    OUT.write_text('\n'.join(out).rstrip()+'\n', encoding='utf-8')
+    print('M3U一本化 完了:', total, 'ch / YouTubeなし')
+
 
 if __name__ == '__main__':
     main()

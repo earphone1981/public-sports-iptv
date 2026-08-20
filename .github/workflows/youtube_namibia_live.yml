@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - '.github/youtube_update.trigger'
+      - 'patch_public_sports_youtube_runtime.py'
   schedule:
     - cron: '*/15 * * * *'
 
@@ -93,6 +94,9 @@ jobs:
               exit 1
             fi
           fi
+
+      - name: Patch updater for multi-URL output
+        run: python patch_public_sports_youtube_runtime.py
 
       - name: Refresh public sports official YouTube LIVE
         run: python public_sports_youtube_update.py

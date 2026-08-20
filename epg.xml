@@ -4028,9 +4028,13 @@ F2 週刊実話賞
 📢 開催名: 週刊実話賞
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260820204800 +0900" stop="20260820211500 +0900" channel="boat.shimonoseki">
-        <title lang="ja">⏳ 開催情報確認待ち BOATRACE下関</title>
-        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
+    <programme start="20260820204800 +0900" stop="20260821000000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❶ℛ  15:26発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 15:26
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260820204800 +0900" stop="20260821000000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">❶ℛ  14:35発走  🏇【３歳１０組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -4116,10 +4120,6 @@ F2 週刊実話賞
 🏆 グレード: F2
 📢 開催名: 前検コメはウィンチケット杯
 📅 開催日次: 最終日</desc>
-    </programme>
-    <programme start="20260820211500 +0900" stop="20260820235900 +0900" channel="boat.shimonoseki">
-        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
-        <desc lang="ja">19 下関の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260820211900 +0900" stop="20260820214700 +0900" channel="auto.sanyo">
         <title lang="ja">❺ℛ  21:44発走  🏍️【一般戦 2026年08月20日 電投締切21 : 42 発走予定21 : 44 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -4416,10 +4416,6 @@ F2 週刊実話賞
     </programme>
     <programme start="20260820235900 +0900" stop="20260821000000 +0900" channel="boat.omura">
         <title lang="ja">⏳ 開催情報確認待ち BOATRACE大村</title>
-        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
-    </programme>
-    <programme start="20260820235900 +0900" stop="20260821000000 +0900" channel="boat.shimonoseki">
-        <title lang="ja">⏳ 開催情報確認待ち BOATRACE下関</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
     <programme start="20260820235900 +0900" stop="20260821000000 +0900" channel="boat.suminoe">
@@ -5213,6 +5209,13 @@ F2 週刊実話賞
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年08月21日開催一覧に14 鳴門は掲載されていません。</desc>
     </programme>
+    <programme start="20260821080000 +0900" stop="20260821150600 +0900" channel="boat.shimonoseki">
+        <title lang="ja">🚤 19 下関　本日開催　第1️⃣R 15:26発走予定❗️</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+1R 15:26 発走予定
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821080000 +0900" stop="20260821235900 +0900" channel="boat.suminoe">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年08月21日開催一覧に12 住之江は掲載されていません。</desc>
@@ -5676,17 +5679,6 @@ F2 週刊実話賞
     <programme start="20260821103000 +0900" stop="20260821170000 +0900" channel="boat.omura">
         <title lang="ja">🚤 24 大村 ☀️開催 ミッドナイトボートレースｉｎ大村 ７ （仮時間）※実際の時間ではありません</title>
         <desc lang="ja">🚤 ボートレース 24 大村
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月21日</desc>
-    </programme>
-    <programme start="20260821103000 +0900" stop="20260821170000 +0900" channel="boat.shimonoseki">
-        <title lang="ja">🚤 19 下関 ☀️開催 日刊スポーツ杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 19 下関
 BOAT RACE公式の開催一覧で開催を確認済み。
 1R～12Rの発走予定時刻は未公表または未取得です。
 ☀️ 開催区分: 開催
@@ -6459,6 +6451,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 15:48
 📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
+    <programme start="20260821152900 +0900" stop="20260821155400 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❷ℛ  15:51発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 15:51
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821063000 +0000" stop="20260821070000 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #350</title>
         <desc lang="ja">「セレクトセールリポート」</desc>
@@ -6543,6 +6543,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 Ｃ２二３歳以上特別
 📅 2026年08月21日</desc>
     </programme>
+    <programme start="20260821155400 +0900" stop="20260821162200 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❸ℛ  16:19発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 16:19
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821155600 +0900" stop="20260821162800 +0900" channel="boat.edogawa">
         <title lang="ja">⓬ℛ  16:25発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 03 江戸川
@@ -6626,6 +6634,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 ルミナス特別２歳１
 📅 2026年08月21日</desc>
     </programme>
+    <programme start="20260821162200 +0900" stop="20260821164900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❹ℛ  16:46発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 16:46
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821162800 +0900" stop="20260821170300 +0900" channel="chihou.sonoda">
         <title lang="ja">❻ℛ  17:00発走  🏇【特別 Ｃ２一３歳以上特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6684,6 +6700,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 増田家結婚１周年記念Ｂ９
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821164900 +0900" stop="20260821172000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❺ℛ  17:17発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 17:17
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260821165300 +0900" stop="20260821235900 +0900" channel="boat.amagasaki">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -6773,6 +6797,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">16 児島の本日のボートレースは全て終了しました。</desc>
     </programme>
+    <programme start="20260821172000 +0900" stop="20260821175100 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❻ℛ  17:48発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 17:48
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821173000 +0900" stop="20260821175800 +0900" channel="boat.marugame">
         <title lang="ja">❼ℛ  17:55発走  🚤【🌙ナイター ＲＮＣ杯争奪 サマーチャンピオンレース 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 15 丸亀
@@ -6819,6 +6851,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 連続開催！第３回中京競馬Ｂ８
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821175100 +0900" stop="20260821182000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❼ℛ  18:17発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 18:17
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260821175800 +0900" stop="20260821182800 +0900" channel="boat.marugame">
         <title lang="ja">❽ℛ  18:25発走  🚤【🌙ナイター ＲＮＣ杯争奪 サマーチャンピオンレース 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6867,6 +6907,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２二３歳以上
 📅 2026年08月21日</desc>
     </programme>
+    <programme start="20260821182000 +0900" stop="20260821185100 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❽ℛ  18:48発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 18:48
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821182300 +0900" stop="20260821185800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">❾ℛ  18:55発走  🏇【特別 壮馬大空特別３歳１ａ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -6909,6 +6957,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 有 ジニア賞Ｃ２一３歳以上
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821185100 +0900" stop="20260821191900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❾ℛ  19:16発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 19:16
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260821185800 +0900" stop="20260821192600 +0900" channel="boat.marugame">
         <title lang="ja">❿ℛ  19:23発走  🚤【🌙ナイター ＲＮＣ杯争奪 サマーチャンピオンレース 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6953,6 +7009,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 19:39
 📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
+    <programme start="20260821191900 +0900" stop="20260821195100 +0900" channel="boat.shimonoseki">
+        <title lang="ja">❿ℛ  19:48発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 19:48
+📅 2026年08月21日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260821192300 +0900" stop="20260821195800 +0900" channel="chihou.sonoda">
         <title lang="ja">⓫ℛ  19:55発走  🏇【有 特別 兵庫馬事畜産特別Ｂ１Ｂ２ ３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6995,6 +7059,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 神奈川の水がめ「やまなみ五湖」賞Ｂ１Ｂ２
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821195100 +0900" stop="20260821202000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">⓫ℛ  20:17発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 20:17
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260821195800 +0900" stop="20260821203300 +0900" channel="chihou.sonoda">
         <title lang="ja">⓬ℛ  20:30発走  🏇【トレニア賞Ｃ３一３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -7041,6 +7113,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 鶺鴒賞３歳１
 🏆 メインレース
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821202000 +0900" stop="20260821204800 +0900" channel="boat.shimonoseki">
+        <title lang="ja">⓬ℛ  20:45発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 日刊スポーツ杯
+🌙
+⏰ 発走予定: 20:45
+📅 2026年08月21日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260821113000 +0000" stop="20260821133000 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #918</title>
@@ -7100,6 +7180,10 @@ BOAT RACE公式の開催一覧で開催を確認済み。
     <programme start="20260821211000 +0900" stop="20260821235900 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">名古屋の本日の競馬は全て終了しました。</desc>
+    </programme>
+    <programme start="20260821211500 +0900" stop="20260821235900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
+        <desc lang="ja">19 下関の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260821212000 +0900" stop="20260821235900 +0900" channel="chihou.kawasaki_keiba">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>

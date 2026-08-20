@@ -1,0 +1,29 @@
+===== 松山競輪 : cookie =====
+formats rc=1
+ERROR: [youtube] _li6V09SZ1E: This live event will begin in 32 hours.
+urls rc=1 count=0
+===== 松山競輪 : no-cookie =====
+formats rc=1
+ERROR: [youtube] _li6V09SZ1E: This live event will begin in 32 hours.
+urls rc=1 count=0
+
+===== BOATRACE大村 : cookie =====
+formats rc=1
+ERROR: [youtube] 5hXdhgmRXHw: This live event will begin in 5 hours.
+urls rc=1 count=0
+===== BOATRACE大村 : no-cookie =====
+formats rc=1
+ERROR: [youtube] 5hXdhgmRXHw: This live event will begin in 5 hours.
+urls rc=1 count=0
+
+===== WINTICKET : cookie =====
+formats rc=0
+urls rc=0 count=1
+===== WINTICKET : no-cookie =====
+formats rc=1
+ERROR: [youtube] J8Xa5kwtvPQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies
+urls rc=1 count=0
+
+===== search test =====
+search cookie rc=0 lines=3
+search no-cookie rc=0 lines=3

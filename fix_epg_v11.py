@@ -106,27 +106,58 @@ def resolve_post_time(programme,race_time):
     candidates=[datetime.datetime.combine(base+datetime.timedelta(days=d),datetime.time(h,minute),tzinfo=JST) for d in (-1,0,1)]
     return min(candidates,key=lambda x:abs((x-start).total_seconds()))
 
-def add_safety_epg(root):
-    """最終安全網: 公営/JRAローカルで当日8時以降のEPGが完全に空ならガイドなしを防ぐ。"""
-    today=datetime.datetime.now(JST).date(); date_str=today.strftime("%Y%m%d")
-    start=datetime.datetime.combine(today,datetime.time(8,0),tzinfo=JST); stop=datetime.datetime.combine(today,datetime.time(23,59),tzinfo=JST)
+def add_gap_epg(root):
+    """当日08:00～23:59で、各公営/JRAローカルchの未カバー区間を全て補完する。"""
+    today=datetime.datetime.now(JST).date()
+    date_str=today.strftime("%Y%m%d")
+    day_start=datetime.datetime.combine(today,datetime.time(8,0),tzinfo=JST)
+    day_end=datetime.datetime.combine(today,datetime.time(23,59),tzinfo=JST)
+
     names={}
     for ch in root.findall("channel"):
         cid=ch.get("id","")
-        if is_target(cid):names[cid]=ch.findtext("display-name") or cid
+        if is_target(cid):
+            names[cid]=ch.findtext("display-name") or cid
+
     filled=0
     for cid,name in names.items():
-        has=False
+        intervals=[]
         for p in root.findall("programme"):
-            if p.get("channel")!=cid:continue
+            if p.get("channel")!=cid:
+                continue
             ps=parse_xmltv(p.get("start")); pe=parse_xmltv(p.get("stop"))
-            if ps and pe and pe>start and ps<stop:
-                has=True; break
-        if has:continue
-        p=ET.SubElement(root,"programme",start=fmt_xmltv(start),stop=fmt_xmltv(stop),channel=cid)
-        t=ET.SubElement(p,"title",lang="ja"); t.text=f"⏳ 開催情報確認待ち {name}"
-        d=ET.SubElement(p,"desc",lang="ja"); d.text=f"{date_str} のEPG取得結果が空のため安全表示中です。次回更新で開催・非開催・各R情報へ自動更新します。"
-        filled+=1
+            if not ps or not pe or pe<=day_start or ps>=day_end:
+                continue
+            intervals.append((max(ps,day_start),min(pe,day_end)))
+
+        intervals.sort(key=lambda x:x[0])
+        merged=[]
+        for s,e in intervals:
+            if not merged or s>merged[-1][1]:
+                merged.append([s,e])
+            elif e>merged[-1][1]:
+                merged[-1][1]=e
+
+        gaps=[]
+        cur=day_start
+        for s,e in merged:
+            if s>cur:
+                gaps.append((cur,s))
+            if e>cur:
+                cur=e
+        if cur<day_end:
+            gaps.append((cur,day_end))
+
+        for gs,ge in gaps:
+            if ge<=gs:
+                continue
+            p=ET.SubElement(root,"programme",start=fmt_xmltv(gs),stop=fmt_xmltv(ge),channel=cid)
+            t=ET.SubElement(p,"title",lang="ja"); t.text=f"⏳ 開催情報確認待ち {name}"
+            d=ET.SubElement(p,"desc",lang="ja"); d.text=(
+                f"{date_str} のEPG未取得時間帯を安全補完しています。\n"
+                "次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。"
+            )
+            filled+=1
     return filled
 
 def main():
@@ -137,6 +168,7 @@ def main():
         dn=ch.find("display-name"); current=dn.text if dn is not None and dn.text else ""; new_name=standardized_name(cid,current)
         if dn is None:dn=ET.SubElement(ch,"display-name")
         dn.text=new_name
+
     by_channel={}; formatted=0
     for p in root.findall("programme"):
         cid=p.get("channel","")
@@ -151,6 +183,7 @@ def main():
         venue,race_no,race_time,front_name,detail=parts; post=resolve_post_time(p,race_time)
         if post is None:continue
         title_el.text=build_live_title(race_no,race_time,detail,cid); by_channel.setdefault(cid,[]).append((post,p)); formatted+=1
+
     adjusted=0
     for cid,items in by_channel.items():
         items.sort(key=lambda x:x[0]); groups={}
@@ -160,8 +193,10 @@ def main():
             races.sort(key=lambda x:x[0]); previous_cut=None
             for post,p in races:
                 own_cut=post+datetime.timedelta(minutes=1); old_start=parse_xmltv(p.get("start")); new_start=previous_cut if previous_cut is not None else old_start
-                if new_start is not None and new_start<own_cut:p.set("start",fmt_xmltv(new_start)); p.set("stop",fmt_xmltv(own_cut)); adjusted+=1
+                if new_start is not None and new_start<own_cut:
+                    p.set("start",fmt_xmltv(new_start)); p.set("stop",fmt_xmltv(own_cut)); adjusted+=1
                 previous_cut=own_cut
+
     for p in root.findall("programme"):
         cid=p.get("channel","")
         if not is_target(cid):continue
@@ -171,12 +206,13 @@ def main():
         if start and stop and start.hour==0 and start.minute==0:
             new_start=start.replace(hour=1)
             if new_start<stop:p.set("start",fmt_xmltv(new_start))
-    safety=add_safety_epg(root)
+
+    safety=add_gap_epg(root)
     programmes=list(root.findall("programme"))
     for p in programmes:root.remove(p)
     programmes.sort(key=lambda p:(p.get("start",""),p.get("channel","")))
     for p in programmes:root.append(p)
     ET.indent(tree,space="    "); tree.write(path,encoding="utf-8",xml_declaration=True)
-    print(f"EPG v11 finalized: titles={formatted} timing={adjusted} safety={safety}")
+    print(f"EPG v11 finalized: titles={formatted} timing={adjusted} gap_fill={safety}")
 
 if __name__=="__main__":main()

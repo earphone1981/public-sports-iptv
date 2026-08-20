@@ -46,8 +46,6 @@ def race_times(src):
     raw = html.unescape(src or '')
     compact = re.sub(r'\s+', ' ', raw)
     found = {}
-
-    # 1) 1R ... HH:MM を直接拾う。
     for n in range(1, 13):
         for pat in (
             rf'>\s*{n}R\s*<.*?([0-2]?\d:[0-5]\d)',
@@ -57,28 +55,22 @@ def race_times(src):
             if m:
                 found[n] = m.group(1)
                 break
-
-    # 2) BOAT公式の上部表「締切予定時刻」に12個並ぶ時刻を直接読む。
-    # HTML構造変更で1Rと時刻が遠くなってもこちらで救済する。
     if len(found) < 12:
         plain = strip_tags(raw)
         pos = plain.find('締切予定時刻')
         if pos >= 0:
-            window = plain[pos:pos + 1800]
+            window = plain[pos:pos + 2400]
             seq = re.findall(r'(?<!\d)([0-2]?\d:[0-5]\d)(?!\d)', window)
-            # 同一時刻の重複を順序維持で除く。
             uniq = []
             for hm in seq:
                 if not uniq or hm != uniq[-1]:
                     uniq.append(hm)
             if len(uniq) >= 12:
                 return [(n, uniq[n-1]) for n in range(1, 13)]
-
-    # 3) テーブル見出し「1R 2R ... 12R」の後に時刻だけ並ぶ形式も救済。
     if len(found) < 12:
         plain = strip_tags(raw)
         m = re.search(
-            r'1R\s+2R\s+3R\s+4R\s+5R\s+6R\s+7R\s+8R\s+9R\s+10R\s+11R\s+12R(.{0,2200})',
+            r'1R\s+2R\s+3R\s+4R\s+5R\s+6R\s+7R\s+8R\s+9R\s+10R\s+11R\s+12R(.{0,2600})',
             plain,
             re.S,
         )
@@ -86,7 +78,6 @@ def race_times(src):
             seq = re.findall(r'(?<!\d)([0-2]?\d:[0-5]\d)(?!\d)', m.group(1))
             if len(seq) >= 12:
                 return [(n, seq[n-1]) for n in range(1, 13)]
-
     return [(n, found[n]) for n in sorted(found)]
 
 def day_type(times):
@@ -124,14 +115,14 @@ start_prefix = DATE
 changed = 0
 print('BOAT active from M3U:', ','.join(code for _, code in active))
 
+day_start = datetime.datetime.strptime(f'{DATE} 08:00', '%Y%m%d %H:%M').replace(tzinfo=JST)
+day_end = datetime.datetime.strptime(f'{DATE} 23:59', '%Y%m%d %H:%M').replace(tzinfo=JST)
+
 for tvg, code in active:
     existing = [
         p for p in root.findall('programme')
         if p.get('channel') == tvg and (p.get('start') or '').startswith(start_prefix)
     ]
-
-    # 本当に各Rが入っている場合だけ既存EPGを採用。
-    # 「非開催」「終了」「準備中」等だけでは開催済みと判定しない。
     real_race = []
     for p in existing:
         text = ' '.join(p.itertext())
@@ -147,14 +138,29 @@ for tvg, code in active:
         times = race_times(src)
     except Exception as e:
         print(f'BOAT {code} fetch failed: {e}')
+        if code == '24':
+            for p in existing:
+                root.remove(p)
+            add(root, tvg, day_start, day_end,
+                '⚠️ BOAT EPG診断 大村: 公式ページ取得失敗',
+                f'URL={url}\nERROR={type(e).__name__}: {e}')
+            changed += 1
         continue
 
     if len(times) < 2:
         print(f'BOAT {code}: race times not found ({len(times)})')
+        if code == '24':
+            plain = strip_tags(src)
+            sample = plain[:1200]
+            for p in existing:
+                root.remove(p)
+            add(root, tvg, day_start, day_end,
+                f'⚠️ BOAT EPG診断 大村: 時刻抽出失敗 ({len(times)}件)',
+                f'取得HTML文字数={len(src)}\n先頭サンプル={sample}')
+            changed += 1
         continue
 
     print(f'BOAT {code}: race times = {times}')
-
     for p in existing:
         root.remove(p)
 
@@ -165,38 +171,25 @@ for tvg, code in active:
         dt = datetime.datetime.strptime(f'{DATE} {hm}', '%Y%m%d %H:%M').replace(tzinfo=JST)
         dts.append((n, hm, dt))
 
-    day_start = datetime.datetime.strptime(f'{DATE} 08:00', '%Y%m%d %H:%M').replace(tzinfo=JST)
-    day_end = datetime.datetime.strptime(f'{DATE} 23:59', '%Y%m%d %H:%M').replace(tzinfo=JST)
     pre = max(day_start, dts[0][2] - datetime.timedelta(minutes=20))
-
     if day_start < pre:
-        add(
-            root, tvg, day_start, pre,
+        add(root, tvg, day_start, pre,
             f'⏳ 待機 {code} {name} {emo}{typ}',
-            f'🚤 BOATRACE{name}\n1R {dts[0][1]} 発走予定'
-        )
+            f'🚤 BOATRACE{name}\n1R {dts[0][1]} 発走予定')
 
     for i, (n, hm, dt) in enumerate(dts):
         bs = max(pre, dt - datetime.timedelta(minutes=10))
-        be = (
-            dts[i+1][2] - datetime.timedelta(minutes=10)
-            if i + 1 < len(dts)
-            else dt + datetime.timedelta(minutes=30)
-        )
+        be = dts[i+1][2] - datetime.timedelta(minutes=10) if i + 1 < len(dts) else dt + datetime.timedelta(minutes=30)
         if be <= bs:
             be = dt + datetime.timedelta(minutes=15)
-        add(
-            root, tvg, bs, min(be, day_end),
+        add(root, tvg, bs, min(be, day_end),
             f'🚤 {code} {name} {n}R {hm}発走 {emo}{typ}',
-            f'🚤 BOATRACE{name}\n{emo} 開催区分: {typ}\n⏰ 発走予定: {hm}'
-        )
+            f'🚤 BOATRACE{name}\n{emo} 開催区分: {typ}\n⏰ 発走予定: {hm}')
 
     finish = dts[-1][2] + datetime.timedelta(minutes=30)
     if finish < day_end:
-        add(
-            root, tvg, finish, day_end,
-            f'🏁✨ 本日の開催は終了しました 🚤🌙 {code} {name}（ボートレース）'
-        )
+        add(root, tvg, finish, day_end,
+            f'🏁✨ 本日の開催は終了しました 🚤🌙 {code} {name}（ボートレース）')
 
     changed += 1
     print(f'BOAT EPG repaired from M3U: {code} {name} / {typ} / {len(times)}R')

@@ -7,7 +7,7 @@ on:
       - '.github/public_youtube_diag.trigger'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   diagnose:
@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -58,51 +60,17 @@ jobs:
             SAFE=$(echo "$NAME" | tr ' /' '__')
 
             echo "===== $NAME : cookie =====" | tee -a diag/summary.txt
-            yt-dlp \
-              --cookies youtube_cookies.txt \
-              --js-runtimes node \
-              --extractor-args 'youtube:player_client=default,web_safari' \
-              --no-playlist \
-              --no-warnings \
-              -F "$URL" \
-              > "diag/${SAFE}_cookie_formats.txt" \
-              2> "diag/${SAFE}_cookie_error.txt"
+            yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --no-warnings -F "$URL" > "diag/${SAFE}_cookie_formats.txt" 2> "diag/${SAFE}_cookie_error.txt"
             echo "formats rc=$?" | tee -a diag/summary.txt
             tail -n 20 "diag/${SAFE}_cookie_error.txt" | tee -a diag/summary.txt
-
-            yt-dlp \
-              --cookies youtube_cookies.txt \
-              --js-runtimes node \
-              --extractor-args 'youtube:player_client=default,web_safari' \
-              --no-playlist \
-              --match-filter is_live \
-              -g "$URL" \
-              > "diag/${SAFE}_cookie_urls.txt" \
-              2>> "diag/${SAFE}_cookie_error.txt"
+            yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --match-filter is_live -g "$URL" > "diag/${SAFE}_cookie_urls.txt" 2>> "diag/${SAFE}_cookie_error.txt"
             echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_cookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
 
             echo "===== $NAME : no-cookie =====" | tee -a diag/summary.txt
-            yt-dlp \
-              --cookies empty_cookies.txt \
-              --js-runtimes node \
-              --extractor-args 'youtube:player_client=default,web_safari' \
-              --no-playlist \
-              --no-warnings \
-              -F "$URL" \
-              > "diag/${SAFE}_nocookie_formats.txt" \
-              2> "diag/${SAFE}_nocookie_error.txt"
+            yt-dlp --cookies empty_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --no-warnings -F "$URL" > "diag/${SAFE}_nocookie_formats.txt" 2> "diag/${SAFE}_nocookie_error.txt"
             echo "formats rc=$?" | tee -a diag/summary.txt
             tail -n 20 "diag/${SAFE}_nocookie_error.txt" | tee -a diag/summary.txt
-
-            yt-dlp \
-              --cookies empty_cookies.txt \
-              --js-runtimes node \
-              --extractor-args 'youtube:player_client=default,web_safari' \
-              --no-playlist \
-              --match-filter is_live \
-              -g "$URL" \
-              > "diag/${SAFE}_nocookie_urls.txt" \
-              2>> "diag/${SAFE}_nocookie_error.txt"
+            yt-dlp --cookies empty_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --match-filter is_live -g "$URL" > "diag/${SAFE}_nocookie_urls.txt" 2>> "diag/${SAFE}_nocookie_error.txt"
             echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_nocookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
             echo | tee -a diag/summary.txt
           }
@@ -119,7 +87,8 @@ jobs:
           echo "search no-cookie rc=$? lines=$(wc -l < diag/search_nocookie.jsonl)" | tee -a diag/summary.txt
           tail -n 20 diag/search_nocookie_error.txt | tee -a diag/summary.txt
 
-          cat diag/summary.txt
+          cp diag/summary.txt public_youtube_diag_latest.txt
+          cat public_youtube_diag_latest.txt
 
       - name: Upload diagnostics artifact
         uses: actions/upload-artifact@v4
@@ -127,3 +96,17 @@ jobs:
           name: public-youtube-diagnostics
           path: diag/
           if-no-files-found: error
+
+      - name: Commit latest diagnostic summary
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public_youtube_diag_latest.txt
+          if git diff --cached --quiet; then
+            echo 'No diagnostic summary changes'
+            exit 0
+          fi
+          git commit -m 'Update public YouTube diagnostic summary'
+          git pull --rebase origin main
+          git push origin main

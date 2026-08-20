@@ -11,6 +11,16 @@ SORT_GROUPS={'競輪','地方競馬','オートレース','ボートレース'}
 RACE_TIME_RE=re.compile(r'([0-2]?\d:[0-5]\d)\s*発走')
 TVG_ID_RE=re.compile(r'tvg-id="([^"]+)"',re.I)
 
+BOAT_LOGO_SLUG={
+    'boat.kiryu':'kiryu','boat.toda':'toda','boat.edogawa':'edogawa','boat.heiwajima':'heiwajima',
+    'boat.tamagawa':'tamagawa','boat.hamanako':'hamanako','boat.gamagori':'gamagori','boat.tokoname':'tokoname',
+    'boat.tsu':'tsu','boat.mikuni':'mikuni','boat.biwako':'biwako','boat.suminoe':'suminoe',
+    'boat.amagasaki':'amagasaki','boat.naruto':'naruto','boat.marugame':'marugame','boat.kojima':'kojima',
+    'boat.miyajima':'miyajima','boat.tokuyama':'tokuyama','boat.shimonoseki':'shimonoseki','boat.wakamatsu':'wakamatsu',
+    'boat.ashiya':'ashiya','boat.fukuoka':'fukuoka','boat.karatsu':'karatsu','boat.omura':'omura',
+}
+BOAT_LOGO_BASE='https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/boatrace_24_spaced_cut_1024'
+
 
 def current_order():
     h=datetime.datetime.now(JST).hour
@@ -98,6 +108,21 @@ def block_id(block):
     return m.group(1).strip() if m else ''
 
 
+def repair_boat_logo(block):
+    if not block:return block
+    cid=block_id(block)
+    slug=BOAT_LOGO_SLUG.get(cid)
+    if not slug:return block
+    logo=f'{BOAT_LOGO_BASE}/{slug}.png'
+    ext=block[0]
+    if re.search(r'tvg-logo="[^"]*"',ext,re.I):
+        ext=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{logo}"',ext,flags=re.I)
+    else:
+        ext=ext.replace(' group-title=',f' tvg-logo="{logo}" group-title=',1)
+    block[0]=ext
+    return block
+
+
 def main():
     keys,band=build_epg_keys(); text=M3U.read_text(encoding='utf-8-sig'); header,sections=split_sections(text); out=[]
     if header:
@@ -111,11 +136,13 @@ def main():
             continue
         prefix,blocks=parse_blocks(lines); decorated=[]
         for idx,b in enumerate(blocks):
+            if name=='ボートレース':
+                b=repair_boat_logo(b)
             cid=block_id(b); key=keys.get(cid,(99,9999,cid or f'zz{idx:04d}')); decorated.append((key,idx,b))
         decorated.sort(key=lambda x:(x[0],x[1])); out.extend(prefix)
         for _,_,b in decorated:out.extend(b);out.append('')
         print(f'{name}: {len(blocks)} ch sorted')
     M3U.write_text('\n'.join(out).rstrip()+'\n',encoding='utf-8')
-    print(f'public_sports.m3u sorted for {band} priority')
+    print(f'public_sports.m3u sorted for {band} priority / BOAT logo URLs repaired')
 
 if __name__=='__main__':main()

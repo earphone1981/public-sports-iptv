@@ -1,0 +1,46 @@
+name: Recolor Keirin 333m Logos Once
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recolor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: fix-keirin-333-real
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: Recolor only 333m logos
+        shell: python
+        run: |
+          from pathlib import Path
+          from PIL import Image, ImageEnhance
+          root = Path('public_sports_logos_github_43/keirin_square_final_43')
+          targets = ['matsudo.png','odawara.png','ito.png','toyama.png','nara.png','hofu.png']
+          # 前橋はドームのため対象外。元デザインを崩さず、6場だけ軽い緑系の識別色を重ねる。
+          tint = Image.new('RGB', (1024,1024), (70,155,105))
+          for name in targets:
+              p = root / name
+              im = Image.open(p).convert('RGBA')
+              rgb = im.convert('RGB')
+              # 12%だけ緑系をブレンド。文字・配置・陰影は保持。
+              overlay = tint.resize(rgb.size)
+              out = Image.blend(rgb, overlay, 0.12)
+              out = ImageEnhance.Contrast(out).enhance(1.02)
+              out.putalpha(im.getchannel('A'))
+              out.save(p, 'PNG', optimize=True)
+              print('UPDATED', p)
+      - name: Commit six PNGs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public_sports_logos_github_43/keirin_square_final_43/{matsudo,odawara,ito,toyama,nara,hofu}.png
+          git commit -m 'Color-code six 333m keirin logos' || exit 0
+          git push origin HEAD:fix-keirin-333-real

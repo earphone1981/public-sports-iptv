@@ -107,56 +107,47 @@ def resolve_post_time(programme,race_time):
     return min(candidates,key=lambda x:abs((x-start).total_seconds()))
 
 def add_gap_epg(root):
-    """当日08:00～23:59で、各公営/JRAローカルchの未カバー区間を全て補完する。"""
+    """当日00:00～23:59を、画面に表示できるtitleを持つEPGで必ず連続カバーする。"""
     today=datetime.datetime.now(JST).date()
     date_str=today.strftime("%Y%m%d")
-    day_start=datetime.datetime.combine(today,datetime.time(8,0),tzinfo=JST)
-    day_end=datetime.datetime.combine(today,datetime.time(23,59),tzinfo=JST)
+    day_start=datetime.datetime.combine(today,datetime.time(0,0),tzinfo=JST)
+    day_end=datetime.datetime.combine(today,datetime.time(23,59,59),tzinfo=JST)
 
     names={}
     for ch in root.findall("channel"):
         cid=ch.get("id","")
-        if is_target(cid):
-            names[cid]=ch.findtext("display-name") or cid
+        if is_target(cid):names[cid]=ch.findtext("display-name") or cid
 
     filled=0
     for cid,name in names.items():
         intervals=[]
         for p in root.findall("programme"):
-            if p.get("channel")!=cid:
-                continue
+            if p.get("channel")!=cid:continue
+            # titleが空の壊れたprogrammeは「カバー済み」と数えない。
+            title=(p.findtext("title") or "").strip()
+            if not title:continue
             ps=parse_xmltv(p.get("start")); pe=parse_xmltv(p.get("stop"))
-            if not ps or not pe or pe<=day_start or ps>=day_end:
-                continue
+            if not ps or not pe or pe<=day_start or ps>=day_end:continue
             intervals.append((max(ps,day_start),min(pe,day_end)))
 
         intervals.sort(key=lambda x:x[0])
         merged=[]
         for s,e in intervals:
-            if not merged or s>merged[-1][1]:
-                merged.append([s,e])
-            elif e>merged[-1][1]:
-                merged[-1][1]=e
+            if not merged or s>merged[-1][1]:merged.append([s,e])
+            elif e>merged[-1][1]:merged[-1][1]=e
 
-        gaps=[]
         cur=day_start
+        gaps=[]
         for s,e in merged:
-            if s>cur:
-                gaps.append((cur,s))
-            if e>cur:
-                cur=e
-        if cur<day_end:
-            gaps.append((cur,day_end))
+            if s>cur:gaps.append((cur,s))
+            if e>cur:cur=e
+        if cur<day_end:gaps.append((cur,day_end))
 
         for gs,ge in gaps:
-            if ge<=gs:
-                continue
+            if ge<=gs:continue
             p=ET.SubElement(root,"programme",start=fmt_xmltv(gs),stop=fmt_xmltv(ge),channel=cid)
             t=ET.SubElement(p,"title",lang="ja"); t.text=f"⏳ 開催情報確認待ち {name}"
-            d=ET.SubElement(p,"desc",lang="ja"); d.text=(
-                f"{date_str} のEPG未取得時間帯を安全補完しています。\n"
-                "次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。"
-            )
+            d=ET.SubElement(p,"desc",lang="ja"); d.text=(f"{date_str} のEPG未取得時間帯を安全補完しています。\n次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。")
             filled+=1
     return filled
 
@@ -213,6 +204,6 @@ def main():
     programmes.sort(key=lambda p:(p.get("start",""),p.get("channel","")))
     for p in programmes:root.append(p)
     ET.indent(tree,space="    "); tree.write(path,encoding="utf-8",xml_declaration=True)
-    print(f"EPG v11 finalized: titles={formatted} timing={adjusted} gap_fill={safety}")
+    print(f"EPG v11 finalized: titles={formatted} timing={adjusted} full_day_gap_fill={safety}")
 
 if __name__=="__main__":main()

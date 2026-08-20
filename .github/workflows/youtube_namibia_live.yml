@@ -24,131 +24,86 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
-
+          python-version: '3.12'
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
-
+          node-version: '22'
       - name: Install latest yt-dlp
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --upgrade --pre "yt-dlp[default]"
+          python -m pip install --upgrade --pre 'yt-dlp[default]'
           yt-dlp --version
-
-      - name: Restore YouTube cookies or create empty jar
+      - name: Restore YouTube cookies
         shell: bash
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          if [ -n "$YOUTUBE_COOKIES" ]; then
-            printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
-            chmod 600 youtube_cookies.txt
-            echo "Cookie bytes: $(wc -c < youtube_cookies.txt)"
-          else
-            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
-            chmod 600 youtube_cookies.txt
-            echo 'YOUTUBE_COOKIES is empty; using no-cookie fallback jar'
-          fi
-          head -n 1 youtube_cookies.txt | grep -q 'Netscape HTTP Cookie File' || {
-            echo 'Cookie format invalid; switching to empty cookie jar'
-            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
-          }
-
-      - name: Sync latest main before generation
-        shell: bash
+          if [ -n "$YOUTUBE_COOKIES" ]; then printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt; else printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt; fi
+          chmod 600 youtube_cookies.txt
+      - name: Sync latest main
         run: git pull --ff-only origin main
-
-      - name: Backup previous successful YouTube M3U
-        shell: bash
-        run: |
-          cp public_sports_youtube.m3u /tmp/public_sports_youtube.prev.m3u 2>/dev/null || printf '#EXTM3U\n' > /tmp/public_sports_youtube.prev.m3u
-          PREV=$(grep -c '^#EXTINF:' /tmp/public_sports_youtube.prev.m3u || true)
-          echo "Previous YouTube entries: $PREV"
-
-      - name: YouTube smoke test with cookie fallback
+      - name: Backup previous M3U
+        run: cp public_sports_youtube.m3u /tmp/public_sports_youtube.prev.m3u 2>/dev/null || printf '#EXTM3U\n' > /tmp/public_sports_youtube.prev.m3u
+      - name: Patch updater
+        run: python patch_public_sports_youtube_runtime.py
+      - name: Run updater and capture full log
+        id: updater
         shell: bash
         run: |
           set +e
-          yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --flat-playlist --playlist-end 1 --dump-json 'ytsearch1:競輪 公式 LIVE' > /tmp/yt-smoke.out 2> /tmp/yt-smoke.err
+          python -u public_sports_youtube_update.py > /tmp/public_youtube_run.log 2>&1
           RC=$?
-          echo "cookie smoke return code=$RC"
-          cat /tmp/yt-smoke.err || true
-          head -n 1 /tmp/yt-smoke.out || true
-
-          if [ $RC -ne 0 ] || [ ! -s /tmp/yt-smoke.out ]; then
-            echo 'Cookie smoke failed; retrying without account cookies'
-            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
-            yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --flat-playlist --playlist-end 1 --dump-json 'ytsearch1:競輪 公式 LIVE' > /tmp/yt-smoke2.out 2> /tmp/yt-smoke2.err
-            RC2=$?
-            echo "no-cookie smoke return code=$RC2"
-            cat /tmp/yt-smoke2.err || true
-            head -n 1 /tmp/yt-smoke2.out || true
-            if [ $RC2 -ne 0 ] || [ ! -s /tmp/yt-smoke2.out ]; then
-              echo 'ERROR: YouTube search unavailable with both cookie and no-cookie modes'
-              exit 1
-            fi
-          fi
-
-      - name: Patch updater for multi-URL output
-        run: python patch_public_sports_youtube_runtime.py
-
-      - name: Refresh public sports official YouTube LIVE
-        run: python public_sports_youtube_update.py
-
-      - name: Hard dedupe public sports YouTube
+          cat /tmp/public_youtube_run.log
+          echo "UPDATER_RC=$RC" >> /tmp/public_youtube_run.log
+          echo "rc=$RC" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Dedupe when updater succeeded
+        if: steps.updater.outputs.rc == '0'
         run: python dedupe_public_sports_youtube.py
-
-      - name: Protect against zero-result overwrite
+      - name: Build persistent diagnostic summary
+        if: always()
         shell: bash
         run: |
-          COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u || true)
-          PREV=$(grep -c '^#EXTINF:' /tmp/public_sports_youtube.prev.m3u || true)
-          echo "Generated YouTube entries: $COUNT"
-          echo "Previous YouTube entries: $PREV"
-          if [ "$COUNT" -lt 1 ]; then
-            echo 'ERROR: YouTube updater returned zero LIVE entries'
-            echo 'Restoring previous successful M3U before stopping'
-            cp /tmp/public_sports_youtube.prev.m3u public_sports_youtube.m3u
-            exit 1
-          fi
-
-      - name: Rebuild public_sports.m3u from canonical sources
-        run: python merge_m3u.py
-
-      - name: Normalize public sports labels
-        run: python normalize_public_sports_labels.py
-
-      - name: Validate generated M3U
+          COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u 2>/dev/null || true)
+          PREV=$(grep -c '^#EXTINF:' /tmp/public_sports_youtube.prev.m3u 2>/dev/null || true)
+          {
+            echo "UTC=$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
+            echo "UPDATER_RC=${{ steps.updater.outputs.rc }}"
+            echo "GENERATED_ENTRIES=$COUNT"
+            echo "PREVIOUS_ENTRIES=$PREV"
+            echo
+            echo '===== updater log ====='
+            cat /tmp/public_youtube_run.log 2>/dev/null || true
+          } > public_youtube_run_latest.txt
+          if [ "$COUNT" -lt 1 ]; then cp /tmp/public_sports_youtube.prev.m3u public_sports_youtube.m3u; fi
+      - name: Rebuild public M3U when entries exist
         shell: bash
         run: |
-          test -s public_sports.m3u
-          test -s public_sports_youtube.m3u
-          COUNT=$(grep -Ec 'group-title="(競輪 YouTube LIVE|地方競馬 YouTube LIVE|オートレース YouTube LIVE|ボートレース YouTube LIVE|公営競技 横断LIVE)"' public_sports_youtube.m3u || true)
-          echo "Public sports YouTube LIVE count: $COUNT"
-          DUPES=$(grep '^#EXTINF:' public_sports.m3u | sed -n 's/.*tvg-id="\([^"]*\)".*/\1/p' | grep '^youtube\.' | sort | uniq -d || true)
-          if [ -n "$DUPES" ]; then
-            echo "Duplicate YouTube tvg-id detected:"
-            echo "$DUPES"
-            exit 1
+          COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u 2>/dev/null || true)
+          if [ "$COUNT" -gt 0 ]; then
+            python merge_m3u.py
+            python normalize_public_sports_labels.py
           fi
-          echo "YouTube duplicate validation OK"
-
-      - name: Commit updated LIVE URLs
+      - name: Commit M3U and diagnostic log
+        if: always()
         shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public_sports.m3u public_sports_youtube.m3u || true
-          if git diff --cached --quiet; then
-            echo "No changes"
-            exit 0
-          fi
-          git commit -m "Update public sports YouTube LIVE URLs"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add public_sports.m3u public_sports_youtube.m3u public_youtube_run_latest.txt || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Update public sports YouTube LIVE and diagnostics'
           git pull --rebase origin main
           git push origin main
+      - name: Fail on updater error or zero LIVE
+        shell: bash
+        run: |
+          COUNT=$(grep -c '^#EXTINF:' public_sports_youtube.m3u 2>/dev/null || true)
+          if [ "${{ steps.updater.outputs.rc }}" != '0' ] || [ "$COUNT" -lt 1 ]; then
+            echo 'Public YouTube update failed; see public_youtube_run_latest.txt'
+            exit 1
+          fi

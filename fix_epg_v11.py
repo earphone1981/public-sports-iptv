@@ -142,8 +142,9 @@ def add_gap_epg(root):
     return filled
 
 def force_current_coverage(root):
-    """最終安全網: 現在時刻を覆う表示可能programmeが無い全対象chへ即時補完を入れる。"""
+    """最終安全網: 現在時刻を覆う表示可能programmeが無い全対象chへ、5分前から即時補完を入れる。"""
     now=datetime.datetime.now(JST).replace(second=0,microsecond=0)
+    safe_start=now-datetime.timedelta(minutes=5)
     end=now+datetime.timedelta(hours=6)
     names={}
     for ch in root.findall("channel"):
@@ -160,7 +161,7 @@ def force_current_coverage(root):
             if s and e and s<=now<e:
                 covered=True; break
         if covered:continue
-        p=ET.SubElement(root,"programme",start=fmt_xmltv(now),stop=fmt_xmltv(end),channel=cid)
+        p=ET.SubElement(root,"programme",start=fmt_xmltv(safe_start),stop=fmt_xmltv(end),channel=cid)
         ET.SubElement(p,"title",lang="ja").text=f"⏳ 開催情報確認待ち {name}"
         ET.SubElement(p,"desc",lang="ja").text="現在時刻のEPGが未取得のため自動補完しています。次回更新で正式表示へ更新します。"
         added+=1
@@ -196,7 +197,7 @@ def main():
         for races in groups.values():
             races.sort(key=lambda x:x[0]); previous_cut=None
             for post,p in races:
-                own_cut=post+datetime.timedelta(minutes=1); old_start=parse_xmltv(p.get("start")); new_start=previous_cut if previous_cut is not None else old_start
+                own_cut=post+datetime.timedelta(minutes=3); old_start=parse_xmltv(p.get("start")); new_start=previous_cut if previous_cut is not None else old_start
                 if new_start is not None and new_start<own_cut:
                     p.set("start",fmt_xmltv(new_start)); p.set("stop",fmt_xmltv(own_cut)); adjusted+=1
                 previous_cut=own_cut

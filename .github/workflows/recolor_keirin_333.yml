@@ -1,30 +1,30 @@
 name: Recolor Keirin 333m Logos
 
 on:
-  push:
-    branches: [logo-333-recolor]
-    paths:
-      - '.github/trigger_recolor_keirin_333.txt'
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
 
 jobs:
   recolor:
+    if: github.event.issue.title == '[one-shot] recolor keirin 333m logos'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
         with:
-          ref: logo-333-recolor
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: pip install pillow
       - run: python tools/recolor_keirin_333.py
-      - name: Commit recolored logos
+      - name: Commit recolored logos and remove one-shot helpers
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm tools/recolor_keirin_333.py .github/workflows/recolor_keirin_333.yml
           git add public_sports_logos_github_43/keirin_logos_github_ready/{matsudo,odawara,ito,toyama,nara,hofu}.png
-          git commit -m "Recolor 333m keirin logos" || exit 0
+          git commit -m "Recolor 333m keirin logos"
           git push

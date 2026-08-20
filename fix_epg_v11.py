@@ -9,205 +9,129 @@ FINISHED_TITLE = "⛔🏁 本日の全レースは終了しました 🏁⛔"
 NON_EVENT_TITLE = "🚫💤 本日は開催していません 💤🚫"
 TARGET_PREFIXES = ("keirin.", "chihou.", "keiba.", "auto.", "boat.")
 TARGET_JRA = {"jra.east", "jra.west", "jra.hokkaido"}
+SPECIAL_KEIRIN = {"keirin.kawasaki":"かわさき","keirin.nagoya":"なごや","keirin.kochi":"こうち"}
+SPECIAL_KEIRIN_FULL = {"keirin.pist6":"千葉PIST6（休止中）","keirin.takamatsu":"高松けいりん（休止中）","keirin.mukomachi":"向日町けいりん（休止中）"}
+R_CIRCLED={1:"❶",2:"❷",3:"❸",4:"❹",5:"❺",6:"❻",7:"❼",8:"❽",9:"❾",10:"❿",11:"⓫",12:"⓬"}; CIRCLED_R={v:str(k) for k,v in R_CIRCLED.items()}
 
-SPECIAL_KEIRIN = {"keirin.kawasaki": "かわさき", "keirin.nagoya": "なごや", "keirin.kochi": "こうち"}
-SPECIAL_KEIRIN_FULL = {"keirin.pist6": "千葉PIST6（休止中）", "keirin.takamatsu": "高松けいりん（休止中）", "keirin.mukomachi": "向日町けいりん（休止中）"}
-R_CIRCLED = {1:"❶",2:"❷",3:"❸",4:"❹",5:"❺",6:"❻",7:"❼",8:"❽",9:"❾",10:"❿",11:"⓫",12:"⓬"}
-CIRCLED_R = {v:str(k) for k,v in R_CIRCLED.items()}
-
-def parse_xmltv(value):
-    s=str(value or "").strip(); m=re.match(r"(\d{14})\s*([+-]\d{4})?",s)
+def parse_xmltv(v):
+    m=re.match(r"(\d{14})\s*([+-]\d{4})?",str(v or '').strip())
     if not m:return None
-    digits,off=m.groups()
-    if off:return datetime.datetime.strptime(f"{digits} {off}","%Y%m%d%H%M%S %z").astimezone(JST)
-    return datetime.datetime.strptime(digits,"%Y%m%d%H%M%S").replace(tzinfo=JST)
-
-def fmt_xmltv(dt): return dt.astimezone(JST).strftime("%Y%m%d%H%M%S +0900")
-def is_target(cid): return cid.startswith(TARGET_PREFIXES) or cid in TARGET_JRA
+    d,o=m.groups()
+    if o:return datetime.datetime.strptime(f'{d} {o}','%Y%m%d%H%M%S %z').astimezone(JST)
+    return datetime.datetime.strptime(d,'%Y%m%d%H%M%S').replace(tzinfo=JST)
+def fmt_xmltv(dt):return dt.astimezone(JST).strftime('%Y%m%d%H%M%S +0900')
+def is_target(cid):return cid.startswith(TARGET_PREFIXES) or cid in TARGET_JRA
 
 def clean_base_name(name):
-    s=str(name or "").strip(); s=re.sub(r"^\d{1,2}\s+","",s); s=s.replace("Ⓚ","")
-    for suffix in ("けいりん","けいば","オート"):
-        if s.endswith(suffix):s=s[:-len(suffix)]
-    if s.startswith("BOATRACE"):s=s[len("BOATRACE"):]
+    s=str(name or '').strip();s=re.sub(r'^\d{1,2}\s+','',s);s=s.replace('Ⓚ','')
+    for x in ('けいりん','けいば','オート'):
+        if s.endswith(x):s=s[:-len(x)]
+    if s.startswith('BOATRACE'):s=s[8:]
     return s.strip()
-
 def standardized_name(cid,current):
     if cid in SPECIAL_KEIRIN_FULL:return SPECIAL_KEIRIN_FULL[cid]
-    base=clean_base_name(current)
-    if cid.startswith("keirin."):return f"{SPECIAL_KEIRIN.get(cid,base)}けいりん"
-    if cid.startswith(("chihou.","keiba.")):return f"{base}けいば"
-    if cid.startswith("auto."):return f"{base}オート"
-    if cid.startswith("boat."):return f"BOATRACE{base}"
+    b=clean_base_name(current)
+    if cid.startswith('keirin.'):return f'{SPECIAL_KEIRIN.get(cid,b)}けいりん'
+    if cid.startswith(('chihou.','keiba.')):return f'{b}けいば'
+    if cid.startswith('auto.'):return f'{b}オート'
+    if cid.startswith('boat.'):return f'BOATRACE{b}'
     return current
 
 def extract_race_parts(title):
-    t=str(title or "").strip()
-    m=re.search(r"(?P<venue>[^\s【】]+)\s+(?P<race>\d{1,2})R\s+(?P<time>\d{1,2}:\d{2})発走\s*(?P<rest>.*)$",t)
-    if m: venue=m.group("venue"); race_no=m.group("race"); race_time=m.group("time"); rest=m.group("rest").strip()
+    t=str(title or '').strip();m=re.search(r'(?P<venue>[^\s【】]+)\s+(?P<race>\d{1,2})R\s+(?P<time>\d{1,2}:\d{2})発走\s*(?P<rest>.*)$',t)
+    if m:race_no=m.group('race');race_time=m.group('time');rest=m.group('rest').strip()
     else:
-        symbols="".join(re.escape(x) for x in CIRCLED_R)
-        m2=re.search(rf"(?P<race>[{symbols}])ℛ\s+(?P<time>\d{{1,2}}:\d{{2}})発走\s*(?P<rest>.*)$",t)
-        if not m2:return None
-        venue=""; race_no=CIRCLED_R.get(m2.group("race")); race_time=m2.group("time"); rest=m2.group("rest").strip()
-        if not race_no:return None
-    rest=rest.replace(LIVE_PREFIX,"").strip()
-    rest=re.sub(r"^(?:🌅|☀️|🌇|🌙|⭐|🌃|🌌|🚲|🚤|🏍️|🏇|💛)+\s*","",rest)
-    rest=re.sub(r"^(?:モーニング|通常|デイ|薄暮|サマータイム|ナイター|ミッドナイト|オーバーミッドナイト)\s*","",rest)
-    brackets=re.findall(r"【([^】]+)】",rest); plain=re.sub(r"\s*【[^】]+】\s*"," ",rest); plain=re.sub(r"\s+"," ",plain).strip()
-    detail=brackets[-1].strip() if brackets else plain
-    if not detail:detail=plain or "レース"
-    front_name=plain or detail; front_name=re.sub(r"^(?:🏆\s*MAIN\s*)","",front_name).strip(); front_name=re.sub(r"^[🚲🚤🏍️🏇💛]+\s*","",front_name).strip()
-    return venue,race_no,race_time,front_name,detail
+        sy=''.join(re.escape(x) for x in CIRCLED_R);m=re.search(rf'(?P<race>[{sy}])ℛ\s+(?P<time>\d{{1,2}}:\d{{2}})発走\s*(?P<rest>.*)$',t)
+        if not m:return None
+        race_no=CIRCLED_R.get(m.group('race'));race_time=m.group('time');rest=m.group('rest').strip()
+    rest=rest.replace(LIVE_PREFIX,'').strip();br=re.findall(r'【([^】]+)】',rest);plain=re.sub(r'\s*【[^】]+】\s*',' ',rest);plain=re.sub(r'\s+',' ',plain).strip();detail=br[-1].strip() if br else plain
+    return race_no,race_time,detail or 'レース'
+def race_no_deco(n):
+    try:i=int(str(n).strip());return f'{R_CIRCLED.get(i,str(i))}ℛ'
+    except:return f'{n}ℛ'
+def competition_icon(cid,d):
+    if re.search(r'[LＬ]級|ガールズ',d):return '💛'
+    if cid.startswith('boat.'):return '🚤'
+    if cid.startswith('auto.'):return '🏍️'
+    if cid.startswith(('chihou.','keiba.')) or cid in TARGET_JRA:return '🏇'
+    return '🚲' if cid.startswith('keirin.') else ''
+def decorate_detail(d,cid):
+    d=re.sub(r'\s+',' ',str(d or 'レース')).strip();icon=competition_icon(cid,d)
+    if re.search(r'優勝|決勝|ファイナル',d):return f'🏆【{d}】🏆'
+    if '準決' in d:return f'🔥【{d}】🔥'
+    return f'{icon}【{d} {icon}】' if icon else f'【{d}】'
+def build_live_title(n,t,d,cid):return '  '.join([race_no_deco(n),f'{t}発走',decorate_detail(d,cid),LIVE_PREFIX])
+def resolve_post_time(p,t):
+    s=parse_xmltv(p.get('start'))
+    if not s:return None
+    h,m=map(int,t.split(':'));base=s.date();cs=[datetime.datetime.combine(base+datetime.timedelta(days=x),datetime.time(h,m),tzinfo=JST) for x in (-1,0,1)]
+    return min(cs,key=lambda x:abs((x-s).total_seconds()))
 
-def race_no_deco(race_no):
-    try:n=int(str(race_no).strip())
-    except Exception:return f"{race_no}ℛ"
-    return f"{R_CIRCLED.get(n,str(n))}ℛ"
-
-def competition_icon(cid,detail):
-    d=str(detail or "")
-    if re.search(r"[LＬ]級|ガールズ",d):return "💛"
-    if cid.startswith("boat."):return "🚤"
-    if cid.startswith("auto."):return "🏍️"
-    if cid.startswith(("chihou.","keiba.")) or cid in TARGET_JRA:return "🏇"
-    if cid.startswith("keirin."):return "🚲"
-    return ""
-
-def front_deco(detail):
-    d=re.sub(r"\s+"," ",str(detail or "")).strip()
-    if re.search(r"優勝|決勝|ファイナル",d):return "🏆決勝🏆"
-    if "準決" in d:return "🔥準決勝🔥"
-    if re.search(r"G[ⅠI1]|ＧⅠ|JpnI\b",d,re.I):return "👑GⅠ👑"
-    if re.search(r"G[ⅡI2]|ＧⅡ|JpnII\b",d,re.I):return "✨GⅡ✨"
-    if re.search(r"G[ⅢI3]|ＧⅢ|JpnIII\b",d,re.I):return "🌟GⅢ🌟"
-    return ""
-
-def decorate_detail(detail,cid):
-    d=re.sub(r"\s+"," ",str(detail or "レース")).strip()
-    if re.search(r"[LＬ]級|ガールズ",d):return f"💛【{d} 💛】"
-    if re.search(r"優勝|決勝|ファイナル",d):return f"🏆【{d}】🏆"
-    if "準決" in d:return f"🔥【{d}】🔥"
-    if re.search(r"G[ⅠI1]|ＧⅠ|JpnI\b",d,re.I):return f"👑【{d}】👑"
-    if re.search(r"G[ⅡI2]|ＧⅡ|JpnII\b",d,re.I):return f"✨【{d}】✨"
-    if re.search(r"G[ⅢI3]|ＧⅢ|JpnIII\b",d,re.I):return f"🌟【{d}】🌟"
-    icon=competition_icon(cid,d); return f"{icon}【{d} {icon}】" if icon else f"【{d}】"
-
-def build_live_title(race_no,race_time,detail,cid):
-    parts=[]; deco=front_deco(detail)
-    if deco:parts.append(deco)
-    parts += [race_no_deco(race_no),f"{race_time}発走",decorate_detail(detail,cid),LIVE_PREFIX]
-    return "  ".join(parts)
-
-def resolve_post_time(programme,race_time):
-    start=parse_xmltv(programme.get("start"))
-    if start is None:return None
-    h,minute=map(int,race_time.split(":")); base=start.date()
-    candidates=[datetime.datetime.combine(base+datetime.timedelta(days=d),datetime.time(h,minute),tzinfo=JST) for d in (-1,0,1)]
-    return min(candidates,key=lambda x:abs((x-start).total_seconds()))
-
-def add_gap_epg(root):
-    today=datetime.datetime.now(JST).date(); date_str=today.strftime("%Y%m%d")
-    day_start=datetime.datetime.combine(today,datetime.time(0,0),tzinfo=JST)
-    day_end=day_start+datetime.timedelta(days=1)
-    names={}
-    for ch in root.findall("channel"):
-        cid=ch.get("id","")
-        if is_target(cid):names[cid]=ch.findtext("display-name") or cid
-    filled=0
+def normalize_today(root):
+    """今日の対象chを重複ゼロの一本タイムラインへ再構成。既存番組を優先し、隙間だけ補完。"""
+    today=datetime.datetime.now(JST).date();ds=datetime.datetime.combine(today,datetime.time(0,0),tzinfo=JST);de=ds+datetime.timedelta(days=1)
+    names={ch.get('id'):ch.findtext('display-name') or ch.get('id') for ch in root.findall('channel') if is_target(ch.get('id',''))}
+    rebuilt=0
     for cid,name in names.items():
-        intervals=[]
-        for p in root.findall("programme"):
-            if p.get("channel")!=cid:continue
-            title=(p.findtext("title") or "").strip()
-            if not title:continue
-            ps=parse_xmltv(p.get("start")); pe=parse_xmltv(p.get("stop"))
-            if not ps or not pe or pe<=day_start or ps>=day_end:continue
-            intervals.append((max(ps,day_start),min(pe,day_end)))
-        intervals.sort(key=lambda x:x[0]); merged=[]
-        for s,e in intervals:
-            if not merged or s>merged[-1][1]:merged.append([s,e])
-            elif e>merged[-1][1]:merged[-1][1]=e
-        cur=day_start; gaps=[]
-        for s,e in merged:
-            if s>cur:gaps.append((cur,s))
-            if e>cur:cur=e
-        if cur<day_end:gaps.append((cur,day_end))
-        for gs,ge in gaps:
-            if ge<=gs:continue
-            p=ET.SubElement(root,"programme",start=fmt_xmltv(gs),stop=fmt_xmltv(ge),channel=cid)
-            ET.SubElement(p,"title",lang="ja").text=f"⏳ 開催情報確認待ち {name}"
-            ET.SubElement(p,"desc",lang="ja").text=f"{date_str} のEPG未取得時間帯を安全補完しています。"
-            filled+=1
-    return filled
-
-def force_current_coverage(root):
-    """最終安全網: 現在時刻を覆う表示可能programmeが無い全対象chへ、5分前から即時補完を入れる。"""
-    now=datetime.datetime.now(JST).replace(second=0,microsecond=0)
-    safe_start=now-datetime.timedelta(minutes=5)
-    end=now+datetime.timedelta(hours=6)
-    names={}
-    for ch in root.findall("channel"):
-        cid=ch.get("id","")
-        if is_target(cid):names[cid]=ch.findtext("display-name") or cid
-    added=0
-    for cid,name in names.items():
-        covered=False
-        for p in root.findall("programme"):
-            if p.get("channel")!=cid:continue
-            title=(p.findtext("title") or "").strip()
-            if not title:continue
-            s=parse_xmltv(p.get("start")); e=parse_xmltv(p.get("stop"))
-            if s and e and s<=now<e:
-                covered=True; break
-        if covered:continue
-        p=ET.SubElement(root,"programme",start=fmt_xmltv(safe_start),stop=fmt_xmltv(end),channel=cid)
-        ET.SubElement(p,"title",lang="ja").text=f"⏳ 開催情報確認待ち {name}"
-        ET.SubElement(p,"desc",lang="ja").text="現在時刻のEPGが未取得のため自動補完しています。次回更新で正式表示へ更新します。"
-        added+=1
-    return added
+        candidates=[]
+        for p in list(root.findall('programme')):
+            if p.get('channel')!=cid:continue
+            s=parse_xmltv(p.get('start'));e=parse_xmltv(p.get('stop'));title=(p.findtext('title') or '').strip()
+            if not s or not e or not title or e<=ds or s>=de:continue
+            candidates.append((max(s,ds),min(e,de),p))
+        candidates.sort(key=lambda x:(x[0],x[1]))
+        # 今日に掛かる既存programmeはいったん外し、重複を切って再配置
+        for p in list(root.findall('programme')):
+            if p.get('channel')!=cid:continue
+            s=parse_xmltv(p.get('start'));e=parse_xmltv(p.get('stop'))
+            if s and e and e>ds and s<de:root.remove(p)
+        cur=ds
+        for s,e,p in candidates:
+            if e<=cur:continue
+            if s>cur:
+                gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(s),channel=cid);ET.SubElement(gap,'title',lang='ja').text=f'⏳ 開催情報確認待ち {name}';ET.SubElement(gap,'desc',lang='ja').text='EPG未取得時間帯を補完しています。'
+            ns=max(s,cur)
+            if ns<e:
+                p.set('start',fmt_xmltv(ns));p.set('stop',fmt_xmltv(e));root.append(p);cur=e
+        if cur<de:
+            gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(de),channel=cid);ET.SubElement(gap,'title',lang='ja').text=f'⏳ 開催情報確認待ち {name}';ET.SubElement(gap,'desc',lang='ja').text='EPG未取得時間帯を補完しています。'
+        rebuilt+=1
+    return rebuilt
 
 def main():
-    path=Path("epg.xml"); tree=ET.parse(path); root=tree.getroot()
-    for ch in root.findall("channel"):
-        cid=ch.get("id","")
+    path=Path('epg.xml');tree=ET.parse(path);root=tree.getroot()
+    for ch in root.findall('channel'):
+        cid=ch.get('id','')
         if not is_target(cid):continue
-        dn=ch.find("display-name"); current=dn.text if dn is not None and dn.text else ""; new_name=standardized_name(cid,current)
-        if dn is None:dn=ET.SubElement(ch,"display-name")
-        dn.text=new_name
-    by_channel={}; formatted=0
-    for p in root.findall("programme"):
-        cid=p.get("channel","")
+        dn=ch.find('display-name');cur=dn.text if dn is not None and dn.text else '';name=standardized_name(cid,cur)
+        if dn is None:dn=ET.SubElement(ch,'display-name')
+        dn.text=name
+    by={};formatted=0
+    for p in root.findall('programme'):
+        cid=p.get('channel','')
         if not is_target(cid):continue
-        title_el=p.find("title")
-        if title_el is None:continue
-        title=title_el.text or ""
-        if "本日は開催していません" in title:title_el.text=NON_EVENT_TITLE; continue
-        if "本日の開催は終了しました" in title or "本日の全レースは終了しました" in title:title_el.text=FINISHED_TITLE; continue
+        te=p.find('title')
+        if te is None:continue
+        title=te.text or ''
+        if '本日は開催していません' in title:te.text=NON_EVENT_TITLE;continue
+        if '本日の開催は終了しました' in title or '本日の全レースは終了しました' in title:te.text=FINISHED_TITLE;continue
         parts=extract_race_parts(title)
         if not parts:continue
-        venue,race_no,race_time,front_name,detail=parts; post=resolve_post_time(p,race_time)
-        if post is None:continue
-        title_el.text=build_live_title(race_no,race_time,detail,cid); by_channel.setdefault(cid,[]).append((post,p)); formatted+=1
+        n,t,d=parts;post=resolve_post_time(p,t)
+        if not post:continue
+        te.text=build_live_title(n,t,d,cid);by.setdefault(cid,[]).append((post,p));formatted+=1
     adjusted=0
-    for cid,items in by_channel.items():
-        items.sort(key=lambda x:x[0]); groups={}
+    for cid,items in by.items():
+        items.sort(key=lambda x:x[0]);prev=None
         for post,p in items:
-            key=post.date() if post.hour>=4 else post.date()-datetime.timedelta(days=1); groups.setdefault(key,[]).append((post,p))
-        for races in groups.values():
-            races.sort(key=lambda x:x[0]); previous_cut=None
-            for post,p in races:
-                own_cut=post+datetime.timedelta(minutes=3); old_start=parse_xmltv(p.get("start")); new_start=previous_cut if previous_cut is not None else old_start
-                if new_start is not None and new_start<own_cut:
-                    p.set("start",fmt_xmltv(new_start)); p.set("stop",fmt_xmltv(own_cut)); adjusted+=1
-                previous_cut=own_cut
-    safety=add_gap_epg(root)
-    current=force_current_coverage(root)
-    programmes=list(root.findall("programme"))
-    for p in programmes:root.remove(p)
-    programmes.sort(key=lambda p:(parse_xmltv(p.get("start")) or datetime.datetime.max.replace(tzinfo=JST),p.get("channel","")))
-    for p in programmes:root.append(p)
-    ET.indent(tree,space="    "); tree.write(path,encoding="utf-8",xml_declaration=True)
-    print(f"EPG v11 finalized: titles={formatted} timing={adjusted} gap_fill={safety} current_force={current}")
-
-if __name__=="__main__":main()
+            cut=post+datetime.timedelta(minutes=3);old=parse_xmltv(p.get('start'));ns=prev if prev is not None else old
+            if ns and ns<cut:p.set('start',fmt_xmltv(ns));p.set('stop',fmt_xmltv(cut));adjusted+=1
+            prev=cut
+    rebuilt=normalize_today(root)
+    ps=list(root.findall('programme'))
+    for p in ps:root.remove(p)
+    ps.sort(key=lambda p:(parse_xmltv(p.get('start')) or datetime.datetime.max.replace(tzinfo=JST),p.get('channel','')))
+    for p in ps:root.append(p)
+    ET.indent(tree,space='    ');tree.write(path,encoding='utf-8',xml_declaration=True)
+    print(f'EPG v11 finalized: titles={formatted} timing={adjusted} timelines={rebuilt}')
+if __name__=='__main__':main()

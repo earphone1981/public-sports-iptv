@@ -326,6 +326,441 @@
         <desc lang="ja">淑子の見た北の大地2019</desc>
         <category lang="ja">スポーツ</category>
     </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="auto.hamamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 浜松オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="auto.iizuka">
+        <title lang="ja">⏳ 開催情報確認待ち 飯塚オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="auto.isesaki">
+        <title lang="ja">⏳ 開催情報確認待ち 伊勢崎オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="auto.kawaguchi">
+        <title lang="ja">⏳ 開催情報確認待ち 川口オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="auto.sanyo">
+        <title lang="ja">⏳ 開催情報確認待ち 山陽オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.amagasaki">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE尼崎</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.ashiya">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE芦屋</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.biwako">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACEびわこ</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.edogawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.fukuoka">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE福岡</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.gamagori">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE蒲郡</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.hamanako">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE浜名湖</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.heiwajima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE平和島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.karatsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE唐津</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.kiryu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE桐生</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.kojima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE児島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.marugame">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE丸亀</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.mikuni">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE三国</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.miyajima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE宮島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.naruto">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE鳴門</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.omura">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE大村</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE下関</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.suminoe">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE住之江</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.tamagawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE多摩川</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.toda">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE戸田</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.tokoname">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE常滑</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.tokuyama">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE徳山</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.tsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE津</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE若松</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.funabashi">
+        <title lang="ja">⏳ 開催情報確認待ち 船橋けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.himeji">
+        <title lang="ja">⏳ 開催情報確認待ち 姫路けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.kanazawa">
+        <title lang="ja">⏳ 開催情報確認待ち 金沢けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.kasamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 笠松けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.kawasaki_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 川崎けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.kochi_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 高知けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.mizusawa">
+        <title lang="ja">⏳ 開催情報確認待ち 水沢けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.mombetsu">
+        <title lang="ja">⏳ 開催情報確認待ち 門別けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.morioka">
+        <title lang="ja">⏳ 開催情報確認待ち 盛岡けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.nagoya_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 名古屋けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.obihiro">
+        <title lang="ja">⏳ 開催情報確認待ち 帯広けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.oi">
+        <title lang="ja">⏳ 開催情報確認待ち 大井けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.saga">
+        <title lang="ja">⏳ 開催情報確認待ち 佐賀けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.sonoda">
+        <title lang="ja">⏳ 開催情報確認待ち 園田けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="chihou.urawa">
+        <title lang="ja">⏳ 開催情報確認待ち 浦和けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="jra.east">
+        <title lang="ja">⏳ 開催情報確認待ち JRA EAST</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="jra.hokkaido">
+        <title lang="ja">⏳ 開催情報確認待ち JRA HOKKAIDO</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="jra.west">
+        <title lang="ja">⏳ 開催情報確認待ち JRA WEST</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.aomori">
+        <title lang="ja">⏳ 開催情報確認待ち 青森けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.beppu">
+        <title lang="ja">⏳ 開催情報確認待ち 別府けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.fukui">
+        <title lang="ja">⏳ 開催情報確認待ち 福井けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.gifu">
+        <title lang="ja">⏳ 開催情報確認待ち 岐阜けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.hakodate">
+        <title lang="ja">⏳ 開催情報確認待ち 函館けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.hiratsuka">
+        <title lang="ja">⏳ 開催情報確認待ち 平塚けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.hiroshima">
+        <title lang="ja">⏳ 開催情報確認待ち 広島けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.hofu">
+        <title lang="ja">⏳ 開催情報確認待ち 防府けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.ito">
+        <title lang="ja">⏳ 開催情報確認待ち 伊東けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.iwakitaira">
+        <title lang="ja">⏳ 開催情報確認待ち いわき平けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 京王閣けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.kishiwada">
+        <title lang="ja">⏳ 開催情報確認待ち 岸和田けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.kokura">
+        <title lang="ja">⏳ 開催情報確認待ち 小倉けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.komatsushima">
+        <title lang="ja">⏳ 開催情報確認待ち 小松島けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.kumamoto">
+        <title lang="ja">⏳ 開催情報確認待ち 熊本けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.kurume">
+        <title lang="ja">⏳ 開催情報確認待ち 久留米けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.maebashi">
+        <title lang="ja">⏳ 開催情報確認待ち 前橋けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.matsudo">
+        <title lang="ja">⏳ 開催情報確認待ち 松戸けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.matsusaka">
+        <title lang="ja">⏳ 開催情報確認待ち 松阪けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.matsuyama">
+        <title lang="ja">⏳ 開催情報確認待ち 松山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.mukomachi">
+        <title lang="ja">⏳ 開催情報確認待ち 向日町けいりん（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.nara">
+        <title lang="ja">⏳ 開催情報確認待ち 奈良けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.odawara">
+        <title lang="ja">⏳ 開催情報確認待ち 小田原けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.ogaki">
+        <title lang="ja">⏳ 開催情報確認待ち 大垣けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.omiya">
+        <title lang="ja">⏳ 開催情報確認待ち 大宮けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.pist6">
+        <title lang="ja">⏳ 開催情報確認待ち 千葉PIST6（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.sasebo">
+        <title lang="ja">⏳ 開催情報確認待ち 佐世保けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.seibuen">
+        <title lang="ja">⏳ 開催情報確認待ち 西武園けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.shizuoka">
+        <title lang="ja">⏳ 開催情報確認待ち 静岡けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.tachikawa">
+        <title lang="ja">⏳ 開催情報確認待ち 立川けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.takamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 高松けいりん（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.takeo">
+        <title lang="ja">⏳ 開催情報確認待ち 武雄けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.tamano">
+        <title lang="ja">⏳ 開催情報確認待ち 玉野けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.toride">
+        <title lang="ja">⏳ 開催情報確認待ち 取手けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.toyama">
+        <title lang="ja">⏳ 開催情報確認待ち 富山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.toyohashi">
+        <title lang="ja">⏳ 開催情報確認待ち 豊橋けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.utsunomiya">
+        <title lang="ja">⏳ 開催情報確認待ち 宇都宮けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.wakayama">
+        <title lang="ja">⏳ 開催情報確認待ち 和歌山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.yahiko">
+        <title lang="ja">⏳ 開催情報確認待ち 弥彦けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820000000 +0900" stop="20260820010000 +0900" channel="keirin.yokkaichi">
+        <title lang="ja">⏳ 開催情報確認待ち 四日市けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
     <programme start="20260820010000 +0000" stop="20260820013000 +0000" channel="jra.gch">
         <title lang="ja">新・馬学講座ホースアカデミー #113</title>
         <desc lang="ja">「サラブレッドの最新遺伝学〜遺伝学の基礎〜」</desc>
@@ -4033,12 +4468,12 @@ F2 週刊実話賞
 📅 2026年08月20日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260820200600 +0900" stop="20260820204600 +0900" channel="chihou.nagoya_keiba">
-        <title lang="ja">⓬ℛ  20:45発走  🏇【金シャチ最終戦３歳 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">⓬ℛ  20:45発走  🏇【有 金シャチ最終戦３歳 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:45
 🏷️ 種別: 一般
-📢 レース名: 金シャチ最終戦３歳
+📢 レース名: 有 金シャチ最終戦３歳
 🏆 メインレース
 📅 2026年08月20日</desc>
     </programme>
@@ -4502,7 +4937,7 @@ F2 週刊実話賞
         <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
 次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
     </programme>
-    <programme start="20260820234100 +0900" stop="20260820235900 +0900" channel="auto.sanyo">
+    <programme start="20260820234100 +0900" stop="20260820235959 +0900" channel="auto.sanyo">
         <title lang="ja">⏳ 開催情報確認待ち 山陽オート</title>
         <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
 次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
@@ -4514,6 +4949,431 @@ F2 週刊実話賞
     <programme start="20260820235500 +0900" stop="20260820235900 +0900" channel="keirin.sasebo">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">佐世保の本日の競輪は全て終了しました。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="auto.iizuka">
+        <title lang="ja">⏳ 開催情報確認待ち 飯塚オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="auto.isesaki">
+        <title lang="ja">⏳ 開催情報確認待ち 伊勢崎オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="auto.kawaguchi">
+        <title lang="ja">⏳ 開催情報確認待ち 川口オート</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.amagasaki">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE尼崎</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.ashiya">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE芦屋</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.biwako">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACEびわこ</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.edogawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.fukuoka">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE福岡</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.gamagori">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE蒲郡</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.hamanako">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE浜名湖</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.heiwajima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE平和島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.karatsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE唐津</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.kiryu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE桐生</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.kojima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE児島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.marugame">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE丸亀</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.mikuni">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE三国</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.miyajima">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE宮島</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.naruto">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE鳴門</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.omura">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE大村</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.shimonoseki">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE下関</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.suminoe">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE住之江</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.tamagawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE多摩川</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.toda">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE戸田</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.tokoname">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE常滑</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.tokuyama">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE徳山</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.tsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE津</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="boat.wakamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE若松</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.funabashi">
+        <title lang="ja">⏳ 開催情報確認待ち 船橋けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.himeji">
+        <title lang="ja">⏳ 開催情報確認待ち 姫路けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.kanazawa">
+        <title lang="ja">⏳ 開催情報確認待ち 金沢けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.kasamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 笠松けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.kawasaki_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 川崎けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.kochi_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 高知けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.mizusawa">
+        <title lang="ja">⏳ 開催情報確認待ち 水沢けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.mombetsu">
+        <title lang="ja">⏳ 開催情報確認待ち 門別けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.morioka">
+        <title lang="ja">⏳ 開催情報確認待ち 盛岡けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.nagoya_keiba">
+        <title lang="ja">⏳ 開催情報確認待ち 名古屋けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.obihiro">
+        <title lang="ja">⏳ 開催情報確認待ち 帯広けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.oi">
+        <title lang="ja">⏳ 開催情報確認待ち 大井けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.saga">
+        <title lang="ja">⏳ 開催情報確認待ち 佐賀けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.sonoda">
+        <title lang="ja">⏳ 開催情報確認待ち 園田けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="chihou.urawa">
+        <title lang="ja">⏳ 開催情報確認待ち 浦和けいば</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="jra.east">
+        <title lang="ja">⏳ 開催情報確認待ち JRA EAST</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="jra.hokkaido">
+        <title lang="ja">⏳ 開催情報確認待ち JRA HOKKAIDO</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="jra.west">
+        <title lang="ja">⏳ 開催情報確認待ち JRA WEST</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.aomori">
+        <title lang="ja">⏳ 開催情報確認待ち 青森けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.beppu">
+        <title lang="ja">⏳ 開催情報確認待ち 別府けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.fukui">
+        <title lang="ja">⏳ 開催情報確認待ち 福井けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.gifu">
+        <title lang="ja">⏳ 開催情報確認待ち 岐阜けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.hakodate">
+        <title lang="ja">⏳ 開催情報確認待ち 函館けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.hiratsuka">
+        <title lang="ja">⏳ 開催情報確認待ち 平塚けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.hiroshima">
+        <title lang="ja">⏳ 開催情報確認待ち 広島けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.hofu">
+        <title lang="ja">⏳ 開催情報確認待ち 防府けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.ito">
+        <title lang="ja">⏳ 開催情報確認待ち 伊東けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.iwakitaira">
+        <title lang="ja">⏳ 開催情報確認待ち いわき平けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.keiogatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 京王閣けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.kishiwada">
+        <title lang="ja">⏳ 開催情報確認待ち 岸和田けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.kokura">
+        <title lang="ja">⏳ 開催情報確認待ち 小倉けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.komatsushima">
+        <title lang="ja">⏳ 開催情報確認待ち 小松島けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.kumamoto">
+        <title lang="ja">⏳ 開催情報確認待ち 熊本けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.kurume">
+        <title lang="ja">⏳ 開催情報確認待ち 久留米けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.maebashi">
+        <title lang="ja">⏳ 開催情報確認待ち 前橋けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.matsudo">
+        <title lang="ja">⏳ 開催情報確認待ち 松戸けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.matsusaka">
+        <title lang="ja">⏳ 開催情報確認待ち 松阪けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.matsuyama">
+        <title lang="ja">⏳ 開催情報確認待ち 松山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.mukomachi">
+        <title lang="ja">⏳ 開催情報確認待ち 向日町けいりん（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.nara">
+        <title lang="ja">⏳ 開催情報確認待ち 奈良けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.odawara">
+        <title lang="ja">⏳ 開催情報確認待ち 小田原けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.ogaki">
+        <title lang="ja">⏳ 開催情報確認待ち 大垣けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.omiya">
+        <title lang="ja">⏳ 開催情報確認待ち 大宮けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.pist6">
+        <title lang="ja">⏳ 開催情報確認待ち 千葉PIST6（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.sasebo">
+        <title lang="ja">⏳ 開催情報確認待ち 佐世保けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.seibuen">
+        <title lang="ja">⏳ 開催情報確認待ち 西武園けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.shizuoka">
+        <title lang="ja">⏳ 開催情報確認待ち 静岡けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.tachikawa">
+        <title lang="ja">⏳ 開催情報確認待ち 立川けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.takamatsu">
+        <title lang="ja">⏳ 開催情報確認待ち 高松けいりん（休止中）</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.takeo">
+        <title lang="ja">⏳ 開催情報確認待ち 武雄けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.tamano">
+        <title lang="ja">⏳ 開催情報確認待ち 玉野けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.toride">
+        <title lang="ja">⏳ 開催情報確認待ち 取手けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.toyama">
+        <title lang="ja">⏳ 開催情報確認待ち 富山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.toyohashi">
+        <title lang="ja">⏳ 開催情報確認待ち 豊橋けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.utsunomiya">
+        <title lang="ja">⏳ 開催情報確認待ち 宇都宮けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.wakayama">
+        <title lang="ja">⏳ 開催情報確認待ち 和歌山けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.yahiko">
+        <title lang="ja">⏳ 開催情報確認待ち 弥彦けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
+    </programme>
+    <programme start="20260820235900 +0900" stop="20260820235959 +0900" channel="keirin.yokkaichi">
+        <title lang="ja">⏳ 開催情報確認待ち 四日市けいりん</title>
+        <desc lang="ja">20260820 のEPG未取得時間帯を安全補完しています。
+次回更新で開催前・各R・開催終了・非開催の正式表示へ自動更新します。</desc>
     </programme>
     <programme start="20260821000000 +0000" stop="20260821010000 +0000" channel="jra.gch">
         <title lang="ja">グリーンチャンネル傑作選（淑子の見た北の大地2019） #68</title>

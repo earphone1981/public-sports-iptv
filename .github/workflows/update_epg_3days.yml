@@ -3,24 +3,21 @@ name: Update Public Sports EPG 3 Days
 on:
   workflow_dispatch:
   schedule:
-    # 08:00 JST every day
     - cron: "0 23 * * *"
   push:
     branches:
       - main
     paths:
-      # 「これ一発」が統合M3Uを書き換えたらEPGも続けて更新する
       - "public_sports.m3u"
       - "main_epg_3days.py"
       - "fix_epg_v11.py"
       - "fix_boat_waiting_title.py"
+      - "fix_boat_day_type.py"
       - "fix_autorace_today_official.py"
       - "fix_epg_duplicate_channel_ids.py"
       - "sort_public_sports_by_epg.py"
       - ".github/workflows/update_epg_3days.yml"
 
-# public_sports.m3u / epg.xml を書き換える他Workflowと直列化する。
-# 同時pushによる git pull --rebase の競合を防ぐ。
 concurrency:
   group: public-sports-m3u-writer
   cancel-in-progress: false
@@ -46,7 +43,6 @@ jobs:
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
 
-      # 既存Runが固まっても、新Runでは12分で次工程へ進む。
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true
@@ -63,13 +59,12 @@ jobs:
       - name: Show BOAT first race while waiting
         run: python -u fix_boat_waiting_title.py
 
+      - name: Fix BOAT day type including midnight races
+        run: python -u fix_boat_day_type.py
+
       - name: Fix duplicate-name channel IDs
         run: python -u fix_epg_duplicate_channel_ids.py
 
-      # EPGを正として、各公営競技グループ内のM3Uを
-      # モーニング→デイ→薄暮→ナイター→ミッドナイト→オーバーミッドナイト順へ並べる。
-      # 同一区分は1R発走の早い順。非開催・取得不能は末尾。
-      # YouTube/JRA/GCHは固定順を維持する。
       - name: Sort public sports M3U from today's EPG
         run: python -u sort_public_sports_by_epg.py
 

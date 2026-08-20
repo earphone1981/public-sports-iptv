@@ -39,33 +39,23 @@ jobs:
         env:
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
         run: |
-          if [ -n "$YOUTUBE_COOKIES" ]; then
-            printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
-          else
-            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
-          fi
+          if [ -n "$YOUTUBE_COOKIES" ]; then printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt; else printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt; fi
           printf '# Netscape HTTP Cookie File\n' > empty_cookies.txt
           echo "cookie bytes=$(wc -c < youtube_cookies.txt)"
-          head -n 1 youtube_cookies.txt || true
 
       - name: Diagnose targets
         shell: bash
         run: |
           set +e
           mkdir -p diag
-
           test_one() {
-            NAME="$1"
-            URL="$2"
-            SAFE=$(echo "$NAME" | tr ' /' '__')
-
+            NAME="$1"; URL="$2"; SAFE=$(echo "$NAME" | tr ' /' '__')
             echo "===== $NAME : cookie =====" | tee -a diag/summary.txt
             yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --no-warnings -F "$URL" > "diag/${SAFE}_cookie_formats.txt" 2> "diag/${SAFE}_cookie_error.txt"
             echo "formats rc=$?" | tee -a diag/summary.txt
             tail -n 20 "diag/${SAFE}_cookie_error.txt" | tee -a diag/summary.txt
             yt-dlp --cookies youtube_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --match-filter is_live -g "$URL" > "diag/${SAFE}_cookie_urls.txt" 2>> "diag/${SAFE}_cookie_error.txt"
             echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_cookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
-
             echo "===== $NAME : no-cookie =====" | tee -a diag/summary.txt
             yt-dlp --cookies empty_cookies.txt --js-runtimes node --extractor-args 'youtube:player_client=default,web_safari' --no-playlist --no-warnings -F "$URL" > "diag/${SAFE}_nocookie_formats.txt" 2> "diag/${SAFE}_nocookie_error.txt"
             echo "formats rc=$?" | tee -a diag/summary.txt
@@ -74,19 +64,16 @@ jobs:
             echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_nocookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
             echo | tee -a diag/summary.txt
           }
-
-          test_one '松山競輪' 'https://www.youtube.com/@%E6%9D%BE%E5%B1%B1%E7%AB%B6%E8%BC%AA/live'
+          test_one '函館競輪' 'https://www.youtube.com/results?search_query=%E5%87%BD%E9%A4%A8%E7%AB%B6%E8%BC%AA+LIVE'
           test_one 'BOATRACE大村' 'https://www.youtube.com/channel/UCPLb9R1EIqxNBy8Qzcrz8Wg/live'
           test_one 'WINTICKET' 'https://www.youtube.com/@winticket0402/live'
-
           echo '===== search test =====' | tee -a diag/summary.txt
-          yt-dlp --cookies youtube_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:競輪 公式 LIVE' > diag/search_cookie.jsonl 2> diag/search_cookie_error.txt
+          yt-dlp --cookies youtube_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:函館競輪 公式 LIVE' > diag/search_cookie.jsonl 2> diag/search_cookie_error.txt
           echo "search cookie rc=$? lines=$(wc -l < diag/search_cookie.jsonl)" | tee -a diag/summary.txt
           tail -n 20 diag/search_cookie_error.txt | tee -a diag/summary.txt
-          yt-dlp --cookies empty_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:競輪 公式 LIVE' > diag/search_nocookie.jsonl 2> diag/search_nocookie_error.txt
+          yt-dlp --cookies empty_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:函館競輪 公式 LIVE' > diag/search_nocookie.jsonl 2> diag/search_nocookie_error.txt
           echo "search no-cookie rc=$? lines=$(wc -l < diag/search_nocookie.jsonl)" | tee -a diag/summary.txt
           tail -n 20 diag/search_nocookie_error.txt | tee -a diag/summary.txt
-
           cp diag/summary.txt public_youtube_diag_latest.txt
           cat public_youtube_diag_latest.txt
 
@@ -103,10 +90,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add public_youtube_diag_latest.txt
-          if git diff --cached --quiet; then
-            echo 'No diagnostic summary changes'
-            exit 0
-          fi
+          if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Update public YouTube diagnostic summary'
           git pull --rebase origin main
           git push origin main

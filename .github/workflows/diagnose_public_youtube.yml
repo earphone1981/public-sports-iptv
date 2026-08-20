@@ -1,0 +1,129 @@
+name: Diagnose Public YouTube
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/public_youtube_diag.trigger'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install latest yt-dlp
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade --pre 'yt-dlp[default]'
+          yt-dlp --version
+
+      - name: Prepare cookie jars
+        shell: bash
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          if [ -n "$YOUTUBE_COOKIES" ]; then
+            printf '%s' "$YOUTUBE_COOKIES" > youtube_cookies.txt
+          else
+            printf '# Netscape HTTP Cookie File\n' > youtube_cookies.txt
+          fi
+          printf '# Netscape HTTP Cookie File\n' > empty_cookies.txt
+          echo "cookie bytes=$(wc -c < youtube_cookies.txt)"
+          head -n 1 youtube_cookies.txt || true
+
+      - name: Diagnose targets
+        shell: bash
+        run: |
+          set +e
+          mkdir -p diag
+
+          test_one() {
+            NAME="$1"
+            URL="$2"
+            SAFE=$(echo "$NAME" | tr ' /' '__')
+
+            echo "===== $NAME : cookie =====" | tee -a diag/summary.txt
+            yt-dlp \
+              --cookies youtube_cookies.txt \
+              --js-runtimes node \
+              --extractor-args 'youtube:player_client=default,web_safari' \
+              --no-playlist \
+              --no-warnings \
+              -F "$URL" \
+              > "diag/${SAFE}_cookie_formats.txt" \
+              2> "diag/${SAFE}_cookie_error.txt"
+            echo "formats rc=$?" | tee -a diag/summary.txt
+            tail -n 20 "diag/${SAFE}_cookie_error.txt" | tee -a diag/summary.txt
+
+            yt-dlp \
+              --cookies youtube_cookies.txt \
+              --js-runtimes node \
+              --extractor-args 'youtube:player_client=default,web_safari' \
+              --no-playlist \
+              --match-filter is_live \
+              -g "$URL" \
+              > "diag/${SAFE}_cookie_urls.txt" \
+              2>> "diag/${SAFE}_cookie_error.txt"
+            echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_cookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
+
+            echo "===== $NAME : no-cookie =====" | tee -a diag/summary.txt
+            yt-dlp \
+              --cookies empty_cookies.txt \
+              --js-runtimes node \
+              --extractor-args 'youtube:player_client=default,web_safari' \
+              --no-playlist \
+              --no-warnings \
+              -F "$URL" \
+              > "diag/${SAFE}_nocookie_formats.txt" \
+              2> "diag/${SAFE}_nocookie_error.txt"
+            echo "formats rc=$?" | tee -a diag/summary.txt
+            tail -n 20 "diag/${SAFE}_nocookie_error.txt" | tee -a diag/summary.txt
+
+            yt-dlp \
+              --cookies empty_cookies.txt \
+              --js-runtimes node \
+              --extractor-args 'youtube:player_client=default,web_safari' \
+              --no-playlist \
+              --match-filter is_live \
+              -g "$URL" \
+              > "diag/${SAFE}_nocookie_urls.txt" \
+              2>> "diag/${SAFE}_nocookie_error.txt"
+            echo "urls rc=$? count=$(grep -c '^http' diag/${SAFE}_nocookie_urls.txt 2>/dev/null || true)" | tee -a diag/summary.txt
+            echo | tee -a diag/summary.txt
+          }
+
+          test_one '松山競輪' 'https://www.youtube.com/@%E6%9D%BE%E5%B1%B1%E7%AB%B6%E8%BC%AA/live'
+          test_one 'BOATRACE大村' 'https://www.youtube.com/channel/UCPLb9R1EIqxNBy8Qzcrz8Wg/live'
+          test_one 'WINTICKET' 'https://www.youtube.com/@winticket0402/live'
+
+          echo '===== search test =====' | tee -a diag/summary.txt
+          yt-dlp --cookies youtube_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:競輪 公式 LIVE' > diag/search_cookie.jsonl 2> diag/search_cookie_error.txt
+          echo "search cookie rc=$? lines=$(wc -l < diag/search_cookie.jsonl)" | tee -a diag/summary.txt
+          tail -n 20 diag/search_cookie_error.txt | tee -a diag/summary.txt
+          yt-dlp --cookies empty_cookies.txt --flat-playlist --playlist-end 3 --dump-json 'ytsearch3:競輪 公式 LIVE' > diag/search_nocookie.jsonl 2> diag/search_nocookie_error.txt
+          echo "search no-cookie rc=$? lines=$(wc -l < diag/search_nocookie.jsonl)" | tee -a diag/summary.txt
+          tail -n 20 diag/search_nocookie_error.txt | tee -a diag/summary.txt
+
+          cat diag/summary.txt
+
+      - name: Upload diagnostics artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-youtube-diagnostics
+          path: diag/
+          if-no-files-found: error

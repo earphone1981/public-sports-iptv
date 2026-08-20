@@ -9,7 +9,9 @@ on:
       - main
     paths:
       - "public_sports.m3u"
+      - "boatrace_today.m3u"
       - "main_epg_3days.py"
+      - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
       - "fix_boat_waiting_title.py"
       - "fix_boat_day_type.py"
@@ -49,6 +51,9 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: python -u main_epg_3days.py
+
+      - name: Repair BOAT active venues from current M3U
+        run: python -u fix_boat_active_from_m3u.py
 
       - name: Repair today's AutoRace directly from all 5 official program pages
         run: python -u fix_autorace_today_official.py

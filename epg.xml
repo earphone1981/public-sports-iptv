@@ -204,6 +204,12 @@
     <channel id="boat.toda">
         <display-name>BOATRACE戸田</display-name>
     </channel>
+    <channel id="boat.edogawa">
+        <display-name>BOATRACE江戸川</display-name>
+    </channel>
+    <channel id="boat.hamanako">
+        <display-name>BOATRACE浜名湖</display-name>
+    </channel>
     <channel id="boat.heiwajima">
         <display-name>BOATRACE平和島</display-name>
     </channel>
@@ -254,12 +260,6 @@
     </channel>
     <channel id="boat.kiryu">
         <display-name>BOATRACE桐生</display-name>
-    </channel>
-    <channel id="boat.edogawa">
-        <display-name>BOATRACE江戸川</display-name>
-    </channel>
-    <channel id="boat.hamanako">
-        <display-name>BOATRACE浜名湖</display-name>
     </channel>
     <channel id="boat.gamagori">
         <display-name>BOATRACE蒲郡</display-name>
@@ -668,18 +668,10 @@
         <desc lang="ja">「農場HACCP取り組みの現場」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260820220017 +0000" stop="20260820223017 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
     <programme start="20260820223000 +0000" stop="20260820230000 +0000" channel="jra.gch">
         <title lang="ja">がんばる！畜産！8 #1</title>
         <desc lang="ja">「なるほど！畜産現場　「国際養鶏養豚総合展2024」前編」</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260820223017 +0000" stop="20260820230017 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！8 #1[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
     <programme start="20260821080000 +0900" stop="20260821100600 +0900" channel="auto.hamamatsu">
         <title lang="ja">❶ℛ  10:03発走  🏍️【予定 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1129,10 +1121,6 @@ F1 富山新聞杯
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年08月21日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260820230017 +0000" stop="20260820233017 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！7 #1[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
     <programme start="20260821081000 +0900" stop="20260821082200 +0900" channel="keirin.takeo">
         <title lang="ja">⏳ 開催情報確認待ち 武雄けいりん</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
@@ -1167,10 +1155,6 @@ F1 富山新聞杯
         <title lang="ja">がんばる！畜産！6 #1</title>
         <desc lang="ja">「なるほど！畜産現場　IPPS２０２２特集パート１」</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260820233017 +0000" stop="20260821000017 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！6 #1[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
     <programme start="20260821083300 +0900" stop="20260821085300 +0900" channel="keirin.takeo">
         <title lang="ja">❷ℛ  08:50発走  🚲【Ａ級 予選 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1221,7 +1205,7 @@ F1 富山新聞杯
         <desc lang="ja">淑子の見た北の大地2019</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821000017 +0000" stop="20260821010017 +0000" channel="jra.gch">
+    <programme start="20260821000047 +0000" stop="20260821010047 +0000" channel="jra.gch">
         <title lang="ja">[無]グリーンチャンネル傑作選（淑子の見た北の大地2019） #68[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49120/S_2a596972ee914754a4493cb66202ca40_20251226104123893.jpg</image>
     </programme>
@@ -1233,12 +1217,12 @@ F1 富山新聞杯
 ⏰ 発走予定: 09:24
 📅 2026年08月21日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260821091300 +0900" stop="20260821093900 +0900" channel="boat.karatsu">
-        <title lang="ja">❸ℛ  09:36発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260821091300 +0900" stop="20260821094100 +0900" channel="boat.karatsu">
+        <title lang="ja">❸ℛ  09:38発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 23 唐津
 📢 ＢＴＳ三日月開設３０周年記念
 🌅
-⏰ 発走予定: 09:36
+⏰ 発走予定: 09:38
 📅 2026年08月21日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260821091400 +0900" stop="20260821093500 +0900" channel="keirin.takeo">
@@ -1269,12 +1253,12 @@ F1 富山新聞杯
 📢 開催名: オッズパーク杯
 📅 開催日次: 初日</desc>
     </programme>
-    <programme start="20260821093900 +0900" stop="20260821100500 +0900" channel="boat.karatsu">
-        <title lang="ja">❹ℛ  10:02発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260821094100 +0900" stop="20260821100700 +0900" channel="boat.karatsu">
+        <title lang="ja">❹ℛ  10:04発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 23 唐津
 📢 ＢＴＳ三日月開設３０周年記念
 🌅
-⏰ 発走予定: 10:02
+⏰ 発走予定: 10:04
 📅 2026年08月21日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260821095300 +0900" stop="20260821102300 +0900" channel="boat.ashiya">
@@ -1300,17 +1284,9 @@ F1 富山新聞杯
         <desc lang="ja">「サラブレッドの最新遺伝学〜遺伝学の基礎〜」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821010017 +0000" stop="20260821013017 +0000" channel="jra.gch">
+    <programme start="20260821010047 +0000" stop="20260821013047 +0000" channel="jra.gch">
         <title lang="ja">[無]新・馬学講座ホースアカデミー #113[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83270/S_f432d241a52b4cd6ac6bcf503f551663_20260804175206899.png</image>
-    </programme>
-    <programme start="20260821100500 +0900" stop="20260821103400 +0900" channel="boat.karatsu">
-        <title lang="ja">❺ℛ  10:31発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 23 唐津
-📢 ＢＴＳ三日月開設３０周年記念
-🌅
-⏰ 発走予定: 10:31
-📅 2026年08月21日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260821100600 +0900" stop="20260821102000 +0900" channel="auto.hamamatsu">
         <title lang="ja">❶ℛ  10:03発走  🏍️【予選 2026年08月21日 電投締切10 : 01 発走予定10 : 03 距 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1319,6 +1295,14 @@ F1 富山新聞杯
 ⏰ 発走予定: 10:03
 📢 予選 2026年08月21日 電投締切10 : 01 発走予定10 : 03 距
 📅 2026年08月21日</desc>
+    </programme>
+    <programme start="20260821100700 +0900" stop="20260821103500 +0900" channel="boat.karatsu">
+        <title lang="ja">❺ℛ  10:32発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 唐津
+📢 ＢＴＳ三日月開設３０周年記念
+🌅
+⏰ 発走予定: 10:32
+📅 2026年08月21日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260821101500 +0900" stop="20260821102500 +0900" channel="boat.amagasaki">
         <title lang="ja">⏳ 開催情報確認待ち BOATRACE尼崎</title>
@@ -1376,7 +1360,7 @@ F1 富山新聞杯
         <desc lang="ja">大自然の中でのびのびと過ごす馬の姿をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821013017 +0000" stop="20260821020017 +0000" channel="jra.gch">
+    <programme start="20260821013047 +0000" stop="20260821020047 +0000" channel="jra.gch">
         <title lang="ja">[無]Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/6578/S_c5b1f425c91345e09dcbacfa6bb671c5_20250512104702669.png</image>
     </programme>
@@ -1400,7 +1384,7 @@ F1 富山新聞杯
         <title lang="ja">⏳ 開催情報確認待ち 富山けいりん</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
-    <programme start="20260821103400 +0900" stop="20260821110400 +0900" channel="boat.karatsu">
+    <programme start="20260821103500 +0900" stop="20260821110400 +0900" channel="boat.karatsu">
         <title lang="ja">❻ℛ  11:01発走  🚤【🌅モーニング ＢＴＳ三日月開設３０周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 23 唐津
 📢 ＢＴＳ三日月開設３０周年記念
@@ -1519,7 +1503,7 @@ F1 富山新聞杯
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">武雄の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260821020017 +0000" stop="20260821030017 +0000" channel="jra.gch">
+    <programme start="20260821020047 +0000" stop="20260821030047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人 サマーセレクション[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83352/S_1b64bd3a2bdf4261b8fd177172033615_20260805102045888.png</image>
     </programme>
@@ -1778,7 +1762,7 @@ F1 富山新聞杯
         <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821030017 +0000" stop="20260821040017 +0000" channel="jra.gch">
+    <programme start="20260821030047 +0000" stop="20260821040047 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1025[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -2004,7 +1988,7 @@ F1 富山新聞杯
         <desc lang="ja">「新潟２歳Ｓ、キーンランドＣ　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821040017 +0000" stop="20260821050017 +0000" channel="jra.gch">
+    <programme start="20260821040047 +0000" stop="20260821050047 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -2209,7 +2193,7 @@ F1 富山新聞杯
         <desc lang="ja">「キャプテン渡辺と仲間たちがダービーデーを楽しみ尽くす！」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821050017 +0000" stop="20260821060017 +0000" channel="jra.gch">
+    <programme start="20260821050047 +0000" stop="20260821060047 +0000" channel="jra.gch">
         <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (前編)[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84154/S_1a0123ca2075451bb338746fca87394e_20260806111436134.png</image>
     </programme>
@@ -2455,7 +2439,7 @@ F1 富山新聞杯
         <desc lang="ja">＃590「安田隆行」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821060017 +0000" stop="20260821063017 +0000" channel="jra.gch">
+    <programme start="20260821060047 +0000" stop="20260821063047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人セレクション（安田隆行）[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29452/S_dead827f6a4c46a2bbf5fdc46cf573c8_20250917121642741.png</image>
     </programme>
@@ -2634,7 +2618,7 @@ F1 富山新聞杯
         <desc lang="ja">「セレクトセールリポート」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821063017 +0000" stop="20260821070017 +0000" channel="jra.gch">
+    <programme start="20260821063047 +0000" stop="20260821070047 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #350[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/68520/S_1ea54bc8a8c5404998a3656f4afe59c6_20260403130550526.png</image>
     </programme>
@@ -2695,12 +2679,12 @@ F1 富山新聞杯
 📅 2026年08月21日 開催区分: デイ</desc>
     </programme>
     <programme start="20260821154300 +0900" stop="20260821161800 +0900" channel="chihou.nagoya_keiba">
-        <title lang="ja">❹ℛ  16:15発走  🏇【２歳２組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❹ℛ  16:15発走  🏇【有 ２歳２組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:15
 🏷️ 種別: 一般
-📢 レース名: ２歳２組
+📢 レース名: 有 ２歳２組
 📅 2026年08月21日</desc>
     </programme>
     <programme start="20260821154400 +0900" stop="20260821161200 +0900" channel="auto.iizuka">
@@ -2801,7 +2785,7 @@ F1 富山新聞杯
         <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821070017 +0000" stop="20260821080017 +0000" channel="jra.gch">
+    <programme start="20260821070047 +0000" stop="20260821080047 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1025[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -3069,7 +3053,7 @@ F1 富山新聞杯
         <desc lang="ja">「新潟２歳Ｓ、キーンランドＣ　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821080017 +0000" stop="20260821090017 +0000" channel="jra.gch">
+    <programme start="20260821080047 +0000" stop="20260821090047 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -3300,7 +3284,7 @@ F1 富山新聞杯
         <desc lang="ja">「アキナ山名文和、小牧太」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821090017 +0000" stop="20260821100017 +0000" channel="jra.gch">
+    <programme start="20260821090047 +0000" stop="20260821100047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人 サマーセレクション[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83352/S_1b64bd3a2bdf4261b8fd177172033615_20260805102045888.png</image>
     </programme>
@@ -3498,7 +3482,7 @@ F1 富山新聞杯
         <desc lang="ja">「朱鷺S、伊賀S、2026ワールドオールスタージョッキーズ他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821100017 +0000" stop="20260821113017 +0000" channel="jra.gch">
+    <programme start="20260821100047 +0000" stop="20260821113047 +0000" channel="jra.gch">
         <title lang="ja">[生]トラックマンTV #764</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -3751,7 +3735,7 @@ F1 富山新聞杯
         <title lang="ja">⏳ 開催情報確認待ち 大垣けいりん</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
-    <programme start="20260821113017 +0000" stop="20260821133017 +0000" channel="jra.gch">
+    <programme start="20260821113047 +0000" stop="20260821133047 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
@@ -3988,7 +3972,7 @@ F1 富山新聞杯
         <desc lang="ja">2026インターナショナルS中継</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821133017 +0000" stop="20260821143017 +0000" channel="jra.gch">
+    <programme start="20260821133047 +0000" stop="20260821143047 +0000" channel="jra.gch">
         <title lang="ja">[再]ALL IN LINE～世界の競馬～（2026インターナショナルS中継） #130</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85070/S_a3965e7bf7d84be4ac87f0150fde1256_20260814103853732.png</image>
     </programme>
@@ -4061,7 +4045,7 @@ F1 富山新聞杯
         <desc lang="ja">「朱鷺S、伊賀S、2026ワールドオールスタージョッキーズ他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821143017 +0000" stop="20260820160017 +0000" channel="jra.gch">
+    <programme start="20260821143047 +0000" stop="20260820160047 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #764</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -4782,7 +4766,7 @@ F1 富山新聞杯
         <desc lang="ja">「新潟２歳Ｓ、キーンランドＣ　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821160017 +0000" stop="20260821170017 +0000" channel="jra.gch">
+    <programme start="20260821160047 +0000" stop="20260821170047 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -4791,7 +4775,7 @@ F1 富山新聞杯
         <desc lang="ja">「アキナ山名文和、小牧太」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821170017 +0000" stop="20260821180017 +0000" channel="jra.gch">
+    <programme start="20260821170047 +0000" stop="20260821180047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人 サマーセレクション[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83352/S_1b64bd3a2bdf4261b8fd177172033615_20260805102045888.png</image>
     </programme>
@@ -4800,7 +4784,7 @@ F1 富山新聞杯
         <desc lang="ja">「朱鷺S、伊賀S、2026ワールドオールスタージョッキーズ他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821180017 +0000" stop="20260821193017 +0000" channel="jra.gch">
+    <programme start="20260821180047 +0000" stop="20260821193047 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #764</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -4809,15 +4793,25 @@ F1 富山新聞杯
         <desc lang="ja">「朱鷺S、伊賀S、2026ワールドオールスタージョッキーズ　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260821193017 +0000" stop="20260821213017 +0000" channel="jra.gch">
+    <programme start="20260821193047 +0000" stop="20260821213047 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260821213017 +0000" stop="20260821223017 +0000" channel="jra.gch">
+    <programme start="20260821213000 +0000" stop="20260821223000 +0000" channel="jra.gch">
+        <title lang="ja">競馬場の達人 サマーセレクション</title>
+        <desc lang="ja">「アキナ山名文和、小牧太」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260821213047 +0000" stop="20260821223047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人 サマーセレクション[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83352/S_1b64bd3a2bdf4261b8fd177172033615_20260805102045888.png</image>
     </programme>
-    <programme start="20260821223017 +0000" stop="20260822000017 +0000" channel="jra.gch">
+    <programme start="20260821223000 +0000" stop="20260822000000 +0000" channel="jra.gch">
+        <title lang="ja">[再]トラックマンTV #764</title>
+        <desc lang="ja">「朱鷺S、伊賀S、2026ワールドオールスタージョッキーズ他　展望」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260821223047 +0000" stop="20260822000047 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #764</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -5193,7 +5187,12 @@ F1 富山新聞杯
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年08月22日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260822000017 +0000" stop="20260822040017 +0000" channel="jra.gch">
+    <programme start="20260822000000 +0000" stop="20260822040000 +0000" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822000047 +0000" stop="20260822040047 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49117/S_78d7c89c3847443188b346ffd95aeae5_20251226102121755.png</image>
     </programme>
@@ -5525,7 +5524,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 3歳未勝利 2,600 （芝）
 📅 2026年08月22日</desc>
     </programme>
-    <programme start="20260822040017 +0000" stop="20260822100017 +0000" channel="jra.gch">
+    <programme start="20260822040000 +0000" stop="20260822100000 +0000" channel="jra.gch">
+        <title lang="ja">[生]中央競馬全レース中継</title>
+        <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822040047 +0000" stop="20260822100047 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49117/S_78d7c89c3847443188b346ffd95aeae5_20251226102121755.png</image>
     </programme>
@@ -5650,12 +5654,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822154500 +0900" stop="20260822155800 +0900" channel="chihou.saga">
-        <title lang="ja">❶ℛ  15:55発走  🏇【２歳－４組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❶ℛ  15:55発走  🏇【有 ２歳－４組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 15:55
 🏷️ 種別: 一般
-📢 レース名: ２歳－４組
+📢 レース名: 有 ２歳－４組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822155000 +0900" stop="20260822162500 +0900" channel="jra.east">
@@ -5675,12 +5679,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822155800 +0900" stop="20260822163300 +0900" channel="chihou.saga">
-        <title lang="ja">❷ℛ  16:30発走  🏇【Ｃ２－７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❷ℛ  16:30発走  🏇【有 Ｃ２－７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:30
 🏷️ 種別: 一般
-📢 レース名: Ｃ２－７組
+📢 レース名: 有 Ｃ２－７組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822160000 +0900" stop="20260822163500 +0900" channel="jra.west">
@@ -5714,12 +5718,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822163300 +0900" stop="20260822170800 +0900" channel="chihou.saga">
-        <title lang="ja">❸ℛ  17:05発走  🏇【Ｃ２－６組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❸ℛ  17:05発走  🏇【有 Ｃ２－６組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:05
 🏷️ 種別: 一般
-📢 レース名: Ｃ２－６組
+📢 レース名: 有 Ｃ２－６組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822163500 +0900" stop="20260822171000 +0900" channel="jra.west">
@@ -5762,12 +5766,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822170800 +0900" stop="20260822174300 +0900" channel="chihou.saga">
-        <title lang="ja">❹ℛ  17:40発走  🏇【令和８年熊本地震被災者支援Ｃ２－５組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❹ℛ  17:40発走  🏇【有 令和８年熊本地震被災者支援Ｃ２－５組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:40
 🏷️ 種別: 一般
-📢 レース名: 令和８年熊本地震被災者支援Ｃ２－５組
+📢 レース名: 有 令和８年熊本地震被災者支援Ｃ２－５組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822171000 +0900" stop="20260822174000 +0900" channel="jra.west">
@@ -5833,12 +5837,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822181300 +0900" stop="20260822184300 +0900" channel="chihou.saga">
-        <title lang="ja">❻ℛ  18:40発走  🏇【Ｃ１－７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❻ℛ  18:40発走  🏇【有 Ｃ１－７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 18:40
 🏷️ 種別: 一般
-📢 レース名: Ｃ１－７組
+📢 レース名: 有 Ｃ１－７組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822183300 +0900" stop="20260822190300 +0900" channel="chihou.obihiro">
@@ -5855,19 +5859,24 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">新潟の本日のJRA開催は終了しました。</desc>
     </programme>
     <programme start="20260822184300 +0900" stop="20260822191800 +0900" channel="chihou.saga">
-        <title lang="ja">❼ℛ  19:15発走  🏇【準重賞 南風月賞Ａ１・Ａ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❼ℛ  19:15発走  🏇【有 準重賞 南風月賞Ａ１・Ａ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:15
 🏷️ 種別: 一般
-📢 レース名: 準重賞 南風月賞Ａ１・Ａ２
+📢 レース名: 有 準重賞 南風月賞Ａ１・Ａ２
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822185000 +0900" stop="20260822235900 +0900" channel="jra.west">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">中京の本日のJRA開催は終了しました。</desc>
     </programme>
-    <programme start="20260822100017 +0000" stop="20260822103017 +0000" channel="jra.gch">
+    <programme start="20260822100000 +0000" stop="20260822103000 +0000" channel="jra.gch">
+        <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #418</title>
+        <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822100047 +0000" stop="20260822103047 +0000" channel="jra.gch">
         <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #418</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
@@ -5889,7 +5898,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ＡＩパッカル賞Ｃ１－６組
 📅 2026年08月22日</desc>
     </programme>
-    <programme start="20260822103017 +0000" stop="20260822120017 +0000" channel="jra.gch">
+    <programme start="20260822103000 +0000" stop="20260822120000 +0000" channel="jra.gch">
+        <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1018</title>
+        <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822103047 +0000" stop="20260822120047 +0000" channel="jra.gch">
         <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1018</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
@@ -5903,12 +5917,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822194800 +0900" stop="20260822202300 +0900" channel="chihou.saga">
-        <title lang="ja">❾ℛ  20:20発走  🏇【残暑特選Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❾ℛ  20:20発走  🏇【有 残暑特選Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:20
 🏷️ 種別: 一般
-📢 レース名: 残暑特選Ｃ２
+📢 レース名: 有 残暑特選Ｃ２
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822201300 +0900" stop="20260822204300 +0900" channel="chihou.obihiro">
@@ -5922,12 +5936,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822202300 +0900" stop="20260822205300 +0900" channel="chihou.saga">
-        <title lang="ja">❿ℛ  20:50発走  🏇【ＳＡＧＡリベンジャーズＣ２－３組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❿ℛ  20:50発走  🏇【有 ＳＡＧＡリベンジャーズＣ２－３組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:50
 🏷️ 種別: 一般
-📢 レース名: ＳＡＧＡリベンジャーズＣ２－３組
+📢 レース名: 有 ＳＡＧＡリベンジャーズＣ２－３組
 📅 2026年08月22日</desc>
     </programme>
     <programme start="20260822203000 +0900" stop="20260822233000 +0900" channel="keirin.matsuyama">
@@ -5952,14 +5966,19 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月22日</desc>
     </programme>
-    <programme start="20260822205300 +0900" stop="20260823191800 +0900" channel="chihou.saga">
-        <title lang="ja">❼ℛ  19:15発走  🏇【重賞 九州チャンピオンシップオープン 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260822205300 +0900" stop="20260823160800 +0900" channel="chihou.saga">
+        <title lang="ja">❶ℛ  16:05発走  🏇【夢を叶える！ミクチャライバー記念Ｃ２－１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
 🌙 開催区分: ナイター
-⏰ 発走予定: 19:15
+⏰ 発走予定: 16:05
 🏷️ 種別: 一般
-📢 レース名: 重賞 九州チャンピオンシップオープン
+📢 レース名: 夢を叶える！ミクチャライバー記念Ｃ２－１
 📅 2026年08月23日</desc>
+    </programme>
+    <programme start="20260822120000 +0000" stop="20260822123000 +0000" channel="jra.gch">
+        <title lang="ja">アタック！地方競馬 #386</title>
+        <desc lang="ja">「地方競馬情報が満載！」</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260822210000 +0900" stop="20260822235900 +0900" channel="keirin.matsudo">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -5969,7 +5988,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">玉野の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260822120017 +0000" stop="20260822123017 +0000" channel="jra.gch">
+    <programme start="20260822120047 +0000" stop="20260822123047 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #386</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76921/S_75d2c137c63145ecaa922483910136b5_20260605133203809.png</image>
     </programme>
@@ -5981,17 +6000,37 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">佐賀の本日の競馬は全て終了しました。</desc>
     </programme>
-    <programme start="20260822123017 +0000" stop="20260822130017 +0000" channel="jra.gch">
+    <programme start="20260822123000 +0000" stop="20260822130000 +0000" channel="jra.gch">
+        <title lang="ja">競馬場の達人（内竜也） #614</title>
+        <desc lang="ja">「内竜也」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822123047 +0000" stop="20260822130047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（内竜也） #614[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail/image/20945798/S_BC628281091793_650a94247964404abbc39fec29c8c03a_20260819093636779.png</image>
     </programme>
-    <programme start="20260822130017 +0000" stop="20260822133017 +0000" channel="jra.gch">
+    <programme start="20260822130000 +0000" stop="20260822133000 +0000" channel="jra.gch">
+        <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #418</title>
+        <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822130047 +0000" stop="20260822133047 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #418</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail/image/20945818/S_BC071185687929_05bc001f9d6741b7b380c4524c39ef28_20260819093915904.png</image>
     </programme>
-    <programme start="20260822133017 +0000" stop="20260822143017 +0000" channel="jra.gch">
+    <programme start="20260822133000 +0000" stop="20260822143000 +0000" channel="jra.gch">
+        <title lang="ja">[生]特別番組 2026シティオブヨークS中継</title>
+        <desc lang="ja">サトノレーヴが出走するシティオブヨークSを緊急中継！</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822133047 +0000" stop="20260822143047 +0000" channel="jra.gch">
         <title lang="ja">[生]特別番組 2026シティオブヨークS中継</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85206/S_9b0f8091e55b4558a1b8738877152019_20260819175245274.png</image>
+    </programme>
+    <programme start="20260822143000 +0000" stop="20260822160000 +0000" channel="jra.gch">
+        <title lang="ja">今日のレースリプレイ</title>
+        <desc lang="ja">「第３回新潟競馬第１日・第３回中京競馬第１日・第２回札幌競馬第１日」</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260822233000 +0900" stop="20260822235900 +0900" channel="keirin.matsuyama">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -6001,7 +6040,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">大垣の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260822143017 +0000" stop="20260821160017 +0000" channel="jra.gch">
+    <programme start="20260822143047 +0000" stop="20260821160047 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
@@ -6365,27 +6404,42 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260822160017 +0000" stop="20260822180017 +0000" channel="jra.gch">
+    <programme start="20260822160000 +0000" stop="20260822180000 +0000" channel="jra.gch">
+        <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #918</title>
+        <desc lang="ja">「新潟2歳S、キーンランドC、名古屋城S　他」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822160047 +0000" stop="20260822180047 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260822180017 +0000" stop="20260822193017 +0000" channel="jra.gch">
+    <programme start="20260822180000 +0000" stop="20260822193000 +0000" channel="jra.gch">
+        <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1018</title>
+        <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822180047 +0000" stop="20260822193047 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1018</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260822193017 +0000" stop="20260822200017 +0000" channel="jra.gch">
+    <programme start="20260822193000 +0000" stop="20260822200000 +0000" channel="jra.gch">
+        <title lang="ja">アタック！地方競馬 #386</title>
+        <desc lang="ja">「地方競馬情報が満載！」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260822193047 +0000" stop="20260822200047 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #386</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76921/S_75d2c137c63145ecaa922483910136b5_20260605133203809.png</image>
     </programme>
-    <programme start="20260822200017 +0000" stop="20260822220017 +0000" channel="jra.gch">
+    <programme start="20260822200047 +0000" stop="20260822220047 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #918</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260822220017 +0000" stop="20260822223017 +0000" channel="jra.gch">
+    <programme start="20260822220047 +0000" stop="20260822223047 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #418</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260822223017 +0000" stop="20260823000017 +0000" channel="jra.gch">
+    <programme start="20260822223047 +0000" stop="20260823000047 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1018</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
@@ -6459,10 +6513,10 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は大井のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260823080000 +0900" stop="20260823185500 +0900" channel="chihou.saga">
+    <programme start="20260823080000 +0900" stop="20260823154500 +0900" channel="chihou.saga">
         <title lang="ja">⏳ 待機 佐賀 🌙ナイター</title>
         <desc lang="ja">地方競馬 佐賀
-1R発走予定 19:15
+1R発走予定 16:05
 📅 2026年08月23日</desc>
     </programme>
     <programme start="20260823080000 +0900" stop="20260823235900 +0900" channel="chihou.sonoda">
@@ -6711,7 +6765,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年08月23日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260823000017 +0000" stop="20260823040017 +0000" channel="jra.gch">
+    <programme start="20260823000047 +0000" stop="20260823040047 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79117/S_0127828687bd41d681e332be5584c1fb_20260701163100211.jpg</image>
     </programme>
@@ -7164,7 +7218,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 3歳以上1勝クラス 1,500 （芝）定量
 📅 2026年08月23日</desc>
     </programme>
-    <programme start="20260823040017 +0000" stop="20260823103017 +0000" channel="jra.gch">
+    <programme start="20260823040047 +0000" stop="20260823103047 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79117/S_0127828687bd41d681e332be5584c1fb_20260701163100211.jpg</image>
     </programme>
@@ -7264,6 +7318,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 豊川特別 3歳以上1勝クラス 1,200 （ダ）定量
 📅 2026年08月23日</desc>
     </programme>
+    <programme start="20260823160800 +0900" stop="20260823163800 +0900" channel="chihou.saga">
+        <title lang="ja">❷ℛ  16:35発走  🏇【リスナーとの絆！ミクチャＶライバー記Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:35
+🏷️ 種別: 一般
+📢 レース名: リスナーとの絆！ミクチャＶライバー記Ｃ２
+📅 2026年08月23日</desc>
+    </programme>
     <programme start="20260823161000 +0900" stop="20260823165000 +0900" channel="jra.hokkaido">
         <title lang="ja">⓬ℛ 🏇 札幌 16:20発走 2026ワールドオールスタージョッキーズ 第4戦 3歳以上2勝クラス 1,800 （芝）（国際騎手招待）定量</title>
         <desc lang="ja">🏇 JRA 札幌
@@ -7303,6 +7366,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 障害3歳以上未勝利 3,000 （芝）定量
 📅 2026年08月23日</desc>
     </programme>
+    <programme start="20260823163800 +0900" stop="20260823170800 +0900" channel="chihou.saga">
+        <title lang="ja">❸ℛ  17:05発走  🏇【ミクチャ愛届けるＦＵＫＵＯＫＡ記念Ｃ２－ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:05
+🏷️ 種別: 一般
+📢 レース名: ミクチャ愛届けるＦＵＫＵＯＫＡ記念Ｃ２－
+📅 2026年08月23日</desc>
+    </programme>
     <programme start="20260823165000 +0900" stop="20260823235900 +0900" channel="jra.hokkaido">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">札幌の本日のJRA開催は終了しました。</desc>
@@ -7326,6 +7398,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">和歌山の本日の競輪は全て終了しました。</desc>
     </programme>
+    <programme start="20260823170800 +0900" stop="20260823173800 +0900" channel="chihou.saga">
+        <title lang="ja">❹ℛ  17:35発走  🏇【令和８年熊本地震被災者支援Ｃ２－９組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:35
+🏷️ 種別: 一般
+📢 レース名: 令和８年熊本地震被災者支援Ｃ２－９組
+📅 2026年08月23日</desc>
+    </programme>
     <programme start="20260823171000 +0900" stop="20260823174000 +0900" channel="jra.west">
         <title lang="ja">❿ℛ 🏇 中京 17:20発走 3歳未勝利 1,800 （ダ）</title>
         <desc lang="ja">🏇 JRA 中京
@@ -7347,6 +7428,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <desc lang="ja">🏇 JRA 新潟
 ⏰ 発走予定: 17:40
 📢 3歳以上1勝クラス 1,000 （芝・直）定量
+📅 2026年08月23日</desc>
+    </programme>
+    <programme start="20260823173800 +0900" stop="20260823181300 +0900" channel="chihou.saga">
+        <title lang="ja">❺ℛ  18:10発走  🏇【ＵＭＡＴＥＮＡ賞Ｃ２－８組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:10
+🏷️ 種別: 一般
+📢 レース名: ＵＭＡＴＥＮＡ賞Ｃ２－８組
 📅 2026年08月23日</desc>
     </programme>
     <programme start="20260823174000 +0900" stop="20260823181000 +0900" channel="jra.west">
@@ -7379,6 +7469,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 3歳未勝利 1,200 （ダ）
 📅 2026年08月23日</desc>
     </programme>
+    <programme start="20260823181300 +0900" stop="20260823184300 +0900" channel="chihou.saga">
+        <title lang="ja">❻ℛ  18:40発走  🏇【九州女子翼来場記念Ｃ１－９組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:40
+🏷️ 種別: 一般
+📢 レース名: 九州女子翼来場記念Ｃ１－９組
+📅 2026年08月23日</desc>
+    </programme>
     <programme start="20260823182300 +0900" stop="20260823185800 +0900" channel="chihou.kanazawa">
         <title lang="ja">❺ℛ  18:55発走  🏇【ばにちゃん＆まいちゃんバースデー杯Ｃ２八 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -7391,6 +7490,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <programme start="20260823184000 +0900" stop="20260823235900 +0900" channel="jra.east">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">新潟の本日のJRA開催は終了しました。</desc>
+    </programme>
+    <programme start="20260823184300 +0900" stop="20260823191800 +0900" channel="chihou.saga">
+        <title lang="ja">❼ℛ  19:15発走  🏇【重賞 九州チャンピオンシップオープン 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:15
+🏷️ 種別: 一般
+📢 レース名: 重賞 九州チャンピオンシップオープン
+📅 2026年08月23日</desc>
     </programme>
     <programme start="20260823185000 +0900" stop="20260823235900 +0900" channel="jra.west">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -7405,7 +7513,16 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 祝！健二郎還暦おめでとう記念Ｃ２七
 📅 2026年08月23日</desc>
     </programme>
-    <programme start="20260823103017 +0000" stop="20260823110017 +0000" channel="jra.gch">
+    <programme start="20260823191800 +0900" stop="20260823195300 +0900" channel="chihou.saga">
+        <title lang="ja">❽ℛ  19:50発走  🏇【サガデーナイト競馬賞Ｃ１－８組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:50
+🏷️ 種別: 一般
+📢 レース名: サガデーナイト競馬賞Ｃ１－８組
+📅 2026年08月23日</desc>
+    </programme>
+    <programme start="20260823103047 +0000" stop="20260823110047 +0000" channel="jra.gch">
         <title lang="ja">トレセンχ同好会 #9[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79211/S_2ac8668a4fdf44e19b5df8dafa0bbea0_20260702094200684.png</image>
     </programme>
@@ -7418,11 +7535,16 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 能登復興支援 能登ヒバ賞Ｃ２六
 📅 2026年08月23日</desc>
     </programme>
-    <programme start="20260823194500 +0900" stop="20260823235900 +0900" channel="chihou.saga">
-        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
-        <desc lang="ja">佐賀の本日の競馬は全て終了しました。</desc>
+    <programme start="20260823195300 +0900" stop="20260823202300 +0900" channel="chihou.saga">
+        <title lang="ja">❾ℛ  20:20発走  🏇【いて座特選Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:20
+🏷️ 種別: 一般
+📢 レース名: いて座特選Ｃ２
+📅 2026年08月23日</desc>
     </programme>
-    <programme start="20260823110017 +0000" stop="20260823120017 +0000" channel="jra.gch">
+    <programme start="20260823110047 +0000" stop="20260823120047 +0000" channel="jra.gch">
         <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (前編)[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84154/S_1a0123ca2075451bb338746fca87394e_20260806111436134.png</image>
     </programme>
@@ -7433,6 +7555,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 20:40
 🏷️ 種別: 一般
 📢 レース名: 金沢競馬で目指せ初勝利☆Ｃ２十４歳上未勝
+📅 2026年08月23日</desc>
+    </programme>
+    <programme start="20260823202300 +0900" stop="20260823205300 +0900" channel="chihou.saga">
+        <title lang="ja">❿ℛ  20:50発走  🏆【一発逆転ファイナルレース×ＳＡＧＡリベン】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 佐賀
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:50
+🏷️ 種別: 一般
+📢 レース名: 一発逆転ファイナルレース×ＳＡＧＡリベン
 📅 2026年08月23日</desc>
     </programme>
     <programme start="20260823203000 +0900" stop="20260823233000 +0900" channel="keirin.matsuyama">
@@ -7461,7 +7592,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">松戸の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260823120017 +0000" stop="20260823130017 +0000" channel="jra.gch">
+    <programme start="20260823120047 +0000" stop="20260823130047 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たち（ヴィブロス） #437[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79168/S_252f6881dd4b40578662859fef45a0b5_20260702091957179.jpg</image>
     </programme>
@@ -7469,15 +7600,19 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">金沢の本日の競馬は全て終了しました。</desc>
     </programme>
-    <programme start="20260823130017 +0000" stop="20260823133017 +0000" channel="jra.gch">
+    <programme start="20260823212000 +0900" stop="20260823235900 +0900" channel="chihou.saga">
+        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
+        <desc lang="ja">佐賀の本日の競馬は全て終了しました。</desc>
+    </programme>
+    <programme start="20260823130047 +0000" stop="20260823133047 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79200/S_a3e1c61bad4443d1a6a61ce6ae0c8a28_20260702093646391.png</image>
     </programme>
-    <programme start="20260823133017 +0000" stop="20260823140017 +0000" channel="jra.gch">
+    <programme start="20260823133047 +0000" stop="20260823140047 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #350[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/68520/S_1ea54bc8a8c5404998a3656f4afe59c6_20260403130550526.png</image>
     </programme>
-    <programme start="20260823140017 +0000" stop="20260822153017 +0000" channel="jra.gch">
+    <programme start="20260823140047 +0000" stop="20260822153047 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>

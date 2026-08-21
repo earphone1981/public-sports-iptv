@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <tv generator-info-name="CombinedEPGGenerator">
-    <channel id="keirin.takeo">
-        <display-name>武雄けいりん</display-name>
-    </channel>
     <channel id="keirin.seibuen">
         <display-name>西武園けいりん</display-name>
     </channel>
@@ -23,6 +20,9 @@
     </channel>
     <channel id="keirin.ogaki">
         <display-name>大垣けいりん</display-name>
+    </channel>
+    <channel id="keirin.takeo">
+        <display-name>武雄けいりん</display-name>
     </channel>
     <channel id="keirin.aomori">
         <display-name>青森けいりん</display-name>
@@ -189,12 +189,6 @@
     <channel id="auto.sanyo">
         <display-name>山陽オート</display-name>
     </channel>
-    <channel id="boat.ashiya">
-        <display-name>BOATRACE芦屋</display-name>
-    </channel>
-    <channel id="boat.karatsu">
-        <display-name>BOATRACE唐津</display-name>
-    </channel>
     <channel id="boat.amagasaki">
         <display-name>BOATRACE尼崎</display-name>
     </channel>
@@ -221,6 +215,12 @@
     </channel>
     <channel id="boat.omura">
         <display-name>BOATRACE大村</display-name>
+    </channel>
+    <channel id="boat.ashiya">
+        <display-name>BOATRACE芦屋</display-name>
+    </channel>
+    <channel id="boat.karatsu">
+        <display-name>BOATRACE唐津</display-name>
     </channel>
     <channel id="boat.biwako">
         <display-name>BOATRACEびわこ</display-name>

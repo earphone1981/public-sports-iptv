@@ -3366,12 +3366,12 @@ F1 富山新聞杯
 📢 3歳以上1勝クラス 1,800 （ダ）定量
 📅 2026年08月22日</desc>
     </programme>
-    <programme start="20260822171100 +0900" stop="20260822174500 +0900" channel="boat.heiwajima">
-        <title lang="ja">⓬ℛ  17:42発走  🚤【☀️デイ ａｕじぶん銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260822171100 +0900" stop="20260822174800 +0900" channel="boat.heiwajima">
+        <title lang="ja">⓬ℛ  17:45発走  🚤【☀️デイ ａｕじぶん銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 04 平和島
 📢 ａｕじぶん銀行賞
 ☀️
-⏰ 発走予定: 17:42
+⏰ 発走予定: 17:45
 📅 2026年08月22日 開催区分: デイ</desc>
     </programme>
     <programme start="20260822171100 +0900" stop="20260822173900 +0900" channel="keirin.matsudo">
@@ -3520,7 +3520,7 @@ F1 富山新聞杯
 ⏰ 発走予定: 18:08
 📅 2026年08月22日 開催区分: ミッドナイト</desc>
     </programme>
-    <programme start="20260822174500 +0900" stop="20260822181200 +0900" channel="boat.heiwajima">
+    <programme start="20260822174800 +0900" stop="20260822181500 +0900" channel="boat.heiwajima">
         <title lang="ja">⏳ 開催情報確認待ち BOATRACE平和島</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
@@ -3603,10 +3603,6 @@ F1 富山新聞杯
 ⏰ 発走予定: 18:34
 📅 2026年08月22日 開催区分: ミッドナイト</desc>
     </programme>
-    <programme start="20260822181200 +0900" stop="20260822235900 +0900" channel="boat.heiwajima">
-        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
-        <desc lang="ja">04 平和島の本日のボートレースは全て終了しました。</desc>
-    </programme>
     <programme start="20260822181300 +0900" stop="20260822184300 +0900" channel="chihou.saga">
         <title lang="ja">❻ℛ  18:40発走  🏇【有 Ｃ１－７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 佐賀
@@ -3623,6 +3619,10 @@ F1 富山新聞杯
 ⏰ 発走予定: 18:43
 📢 予選 2026年08月22日 電投締切18 : 41 発走予定18 : 43 距
 📅 2026年08月22日</desc>
+    </programme>
+    <programme start="20260822181500 +0900" stop="20260822235900 +0900" channel="boat.heiwajima">
+        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
+        <desc lang="ja">04 平和島の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260822182000 +0900" stop="20260822185100 +0900" channel="boat.shimonoseki">
         <title lang="ja">❽ℛ  18:48発走  🚤【🌙ナイター 日刊スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>

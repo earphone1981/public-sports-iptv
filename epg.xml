@@ -195,6 +195,9 @@
     <channel id="boat.karatsu">
         <display-name>BOATRACE唐津</display-name>
     </channel>
+    <channel id="boat.tokoname">
+        <display-name>BOATRACE常滑</display-name>
+    </channel>
     <channel id="boat.toda">
         <display-name>BOATRACE戸田</display-name>
     </channel>
@@ -263,9 +266,6 @@
     </channel>
     <channel id="boat.kiryu">
         <display-name>BOATRACE桐生</display-name>
-    </channel>
-    <channel id="boat.tokoname">
-        <display-name>BOATRACE常滑</display-name>
     </channel>
     <channel id="boat.suminoe">
         <display-name>BOATRACE住之江</display-name>

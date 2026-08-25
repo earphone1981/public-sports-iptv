@@ -1,8 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <tv generator-info-name="CombinedEPGGenerator">
-    <channel id="keirin.kochi">
-        <display-name>こうちけいりん</display-name>
-    </channel>
     <channel id="keirin.gifu">
         <display-name>岐阜けいりん</display-name>
     </channel>
@@ -26,6 +23,9 @@
     </channel>
     <channel id="keirin.kumamoto">
         <display-name>熊本けいりん</display-name>
+    </channel>
+    <channel id="keirin.kochi">
+        <display-name>こうちけいりん</display-name>
     </channel>
     <channel id="keirin.beppu">
         <display-name>別府けいりん</display-name>
@@ -189,15 +189,6 @@
     <channel id="auto.sanyo">
         <display-name>山陽オート</display-name>
     </channel>
-    <channel id="boat.ashiya">
-        <display-name>BOATRACE芦屋</display-name>
-    </channel>
-    <channel id="boat.tokuyama">
-        <display-name>BOATRACE徳山</display-name>
-    </channel>
-    <channel id="boat.mikuni">
-        <display-name>BOATRACE三国</display-name>
-    </channel>
     <channel id="boat.tsu">
         <display-name>BOATRACE津</display-name>
     </channel>
@@ -224,6 +215,15 @@
     </channel>
     <channel id="boat.wakamatsu">
         <display-name>BOATRACE若松</display-name>
+    </channel>
+    <channel id="boat.ashiya">
+        <display-name>BOATRACE芦屋</display-name>
+    </channel>
+    <channel id="boat.tokuyama">
+        <display-name>BOATRACE徳山</display-name>
+    </channel>
+    <channel id="boat.mikuni">
+        <display-name>BOATRACE三国</display-name>
     </channel>
     <channel id="boat.biwako">
         <display-name>BOATRACEびわこ</display-name>
@@ -674,11 +674,11 @@
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年08月25日開催一覧に11 びわこは掲載されていません。</desc>
     </programme>
-    <programme start="20260825080000 +0900" stop="20260825105400 +0900" channel="boat.edogawa">
-        <title lang="ja">🚤 03 江戸川　本日開催　第1️⃣R 11:14発走予定❗️</title>
+    <programme start="20260825080000 +0900" stop="20260825105900 +0900" channel="boat.edogawa">
+        <title lang="ja">🚤 03 江戸川　本日開催　第1️⃣R 11:19発走予定❗️</title>
         <desc lang="ja">🚤 ボートレース 03 江戸川
 📢 第２６回スカッとさわやか杯
-1R 11:14 発走予定
+1R 11:19 発走予定
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825080000 +0900" stop="20260825115600 +0900" channel="boat.fukuoka">
@@ -745,7 +745,7 @@
     </programme>
     <programme start="20260825080000 +0900" stop="20260825235900 +0900" channel="boat.omura">
         <title lang="ja">⚠️ BOAT EPG診断 大村: 時刻抽出失敗 (0件)</title>
-        <desc lang="ja">取得HTML文字数=13130
+        <desc lang="ja">取得HTML文字数=13140
 先頭サンプル=BOAT RACE オフィシャルウェブサイト データがありません。 表示条件を変更してもう一度処理を行ってください。 ログインページ トップページへ インターネット投票へ スマートフォン版へ PAGE TOP ■ボートレースを知る楽しむ ■レーススケジュール 本日のレース 本日の払戻金一覧 月間スケジュール SG・PG1スケジュール G1・G2スケジュール G3スケジュール ヴィーナスシリーズ ルーキーシリーズ マスターズリーグ メディア情報 ■データファイル ボートレーサー検索 ボートレース場データ SG・PG1・G1記録集 高配当ベスト10 優勝レーサー一覧 ダウンロード・他 ■レース場・チケットショップ ボートレース場 チケットショップ ■テレボート ネット投票会員登録 各種サービス マイページ 投票結果 ログイン情報をお忘れの方 お客様情報の照会・変更 FAQ・お問い合わせ テレボート会員限定キャンペーン テレボートリンク 本サイトについて サイトポリシー プライバシーポリシー サイトマップ ご意見・ご要望 ボートレース関係団体 メールマガジン購読 テレボートリンク COPYRIGHT © BOAT RACE OFFICIAL WEB ALL RIGHTS RESERVED.</desc>
     </programme>
     <programme start="20260825080000 +0900" stop="20260825235900 +0900" channel="boat.shimonoseki">
@@ -1340,12 +1340,12 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 10:36
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825102800 +0900" stop="20260825105800 +0900" channel="boat.tokuyama">
-        <title lang="ja">❻ℛ  10:55発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260825102800 +0900" stop="20260825110100 +0900" channel="boat.tokuyama">
+        <title lang="ja">❻ℛ  10:58発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 18 徳山
 📢 ｔｙｓテレビ山口杯争奪戦
 🌅
-⏰ 発走予定: 10:55
+⏰ 発走予定: 10:58
 📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260825103100 +0900" stop="20260825110100 +0900" channel="boat.tsu">
@@ -1452,10 +1452,6 @@ F2 バイチャカップＫドリームス杯
 📢 開催名: バイチャカップＫドリームス杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260825105400 +0900" stop="20260825110400 +0900" channel="boat.edogawa">
-        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
-        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
-    </programme>
     <programme start="20260825105600 +0900" stop="20260825112000 +0900" channel="keirin.hofu">
         <title lang="ja">❷ℛ  11:17発走  🚲【Ａ級 一般 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 防府
@@ -1466,17 +1462,21 @@ F2 バイチャカップＫドリームス杯
 📢 開催名: 山頭火賞争奪戦／ｔｙｓ杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260825105800 +0900" stop="20260825113000 +0900" channel="boat.tokuyama">
-        <title lang="ja">❼ℛ  11:27発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 18 徳山
-📢 ｔｙｓテレビ山口杯争奪戦
-🌅
-⏰ 発走予定: 11:27
-📅 2026年08月25日 開催区分: モーニング</desc>
+    <programme start="20260825105900 +0900" stop="20260825110900 +0900" channel="boat.edogawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
+        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
     <programme start="20260825110000 +0900" stop="20260825235900 +0900" channel="keirin.kochi">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">高知の本日の競輪は全て終了しました。</desc>
+    </programme>
+    <programme start="20260825110100 +0900" stop="20260825113300 +0900" channel="boat.tokuyama">
+        <title lang="ja">❼ℛ  11:30発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 ｔｙｓテレビ山口杯争奪戦
+🌅
+⏰ 発走予定: 11:30
+📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260825110100 +0900" stop="20260825112700 +0900" channel="boat.tsu">
         <title lang="ja">❸ℛ  11:24発走  🏆【☀️デイ 男女Ｗ優勝戦】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1484,14 +1484,6 @@ F2 バイチャカップＫドリームス杯
 📢 男女Ｗ優勝戦
 ☀️
 ⏰ 発走予定: 11:24
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
-    <programme start="20260825110400 +0900" stop="20260825111700 +0900" channel="boat.edogawa">
-        <title lang="ja">❶ℛ  11:14発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 11:14
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825110400 +0900" stop="20260825114100 +0900" channel="boat.tokoname">
@@ -1528,6 +1520,14 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 11:35
 📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
+    <programme start="20260825110900 +0900" stop="20260825112200 +0900" channel="boat.edogawa">
+        <title lang="ja">❶ℛ  11:19発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 11:19
+📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260825111200 +0900" stop="20260825112200 +0900" channel="boat.hamanako">
         <title lang="ja">⏳ 開催情報確認待ち BOATRACE浜名湖</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
@@ -1555,14 +1555,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 11:46
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825111700 +0900" stop="20260825114400 +0900" channel="boat.edogawa">
-        <title lang="ja">❷ℛ  11:41発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 11:41
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825112000 +0900" stop="20260825114600 +0900" channel="keirin.hofu">
         <title lang="ja">❸ℛ  11:43発走  🚲【Ａ級 特選 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 防府
@@ -1572,6 +1564,14 @@ F2 バイチャカップＫドリームス杯
 🏆 グレード: F1
 📢 開催名: 山頭火賞争奪戦／ｔｙｓ杯
 📅 開催日次: 最終日</desc>
+    </programme>
+    <programme start="20260825112200 +0900" stop="20260825114900 +0900" channel="boat.edogawa">
+        <title lang="ja">❷ℛ  11:46発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 11:46
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825112200 +0900" stop="20260825113500 +0900" channel="boat.hamanako">
         <title lang="ja">❶ℛ  11:32発走  🚤【☀️デイ デイリースポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1620,14 +1620,6 @@ F2 バイチャカップＫドリームス杯
 📢 開催名: バイチャカップＫドリームス杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260825113000 +0900" stop="20260825120300 +0900" channel="boat.tokuyama">
-        <title lang="ja">❽ℛ  12:00発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 18 徳山
-📢 ｔｙｓテレビ山口杯争奪戦
-🌅
-⏰ 発走予定: 12:00
-📅 2026年08月25日 開催区分: モーニング</desc>
-    </programme>
     <programme start="20260825113100 +0900" stop="20260825115400 +0900" channel="boat.amagasaki">
         <title lang="ja">❹ℛ  11:51発走  🚤【☀️デイ スポーツニッポン杯しらなみ賞競走〜まくって〜 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 13 尼崎
@@ -1635,6 +1627,14 @@ F2 バイチャカップＫドリームス杯
 ☀️
 ⏰ 発走予定: 11:51
 📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260825113300 +0900" stop="20260825120400 +0900" channel="boat.tokuyama">
+        <title lang="ja">❽ℛ  12:01発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 ｔｙｓテレビ山口杯争奪戦
+🌅
+⏰ 発走予定: 12:01
+📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
     <programme start="20260825113500 +0900" stop="20260825120000 +0900" channel="boat.hamanako">
         <title lang="ja">❷ℛ  11:57発走  🚤【☀️デイ デイリースポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1689,14 +1689,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 12:12
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825114400 +0900" stop="20260825121100 +0900" channel="boat.edogawa">
-        <title lang="ja">❸ℛ  12:08発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 12:08
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825114600 +0900" stop="20260825121300 +0900" channel="keirin.hofu">
         <title lang="ja">❹ℛ  12:10発走  🚲【Ａ級 特選 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 防府
@@ -1708,13 +1700,21 @@ F2 バイチャカップＫドリームス杯
 📅 開催日次: 最終日</desc>
     </programme>
     <programme start="20260825114800 +0900" stop="20260825122300 +0900" channel="chihou.morioka">
-        <title lang="ja">❷ℛ  12:20発走  🏇【Ｃ２二組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">❷ℛ  12:20発走  🏇【有 Ｃ２二組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 盛岡
 🌇 開催区分: 薄暮
 ⏰ 発走予定: 12:20
 🏷️ 種別: 一般
-📢 レース名: Ｃ２二組
+📢 レース名: 有 Ｃ２二組
 📅 2026年08月25日</desc>
+    </programme>
+    <programme start="20260825114900 +0900" stop="20260825121600 +0900" channel="boat.edogawa">
+        <title lang="ja">❸ℛ  12:13発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 12:13
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825114900 +0900" stop="20260825122600 +0900" channel="boat.miyajima">
         <title lang="ja">❹ℛ  12:23発走  🚤【☀️デイ 第５３回岩田杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1771,7 +1771,7 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 12:29
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825120300 +0900" stop="20260825123600 +0900" channel="boat.tokuyama">
+    <programme start="20260825120400 +0900" stop="20260825123600 +0900" channel="boat.tokuyama">
         <title lang="ja">❾ℛ  12:33発走  🚤【🌅モーニング ｔｙｓテレビ山口杯争奪戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 18 徳山
 📢 ｔｙｓテレビ山口杯争奪戦
@@ -1806,14 +1806,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 12:40
 📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260825121100 +0900" stop="20260825123800 +0900" channel="boat.edogawa">
-        <title lang="ja">❹ℛ  12:35発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 12:35
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825121300 +0900" stop="20260825124800 +0900" channel="chihou.kasamatsu">
         <title lang="ja">❸ℛ  12:45発走  🏇【好きです笠松競馬Ｃ１０ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 笠松
@@ -1839,6 +1831,14 @@ F2 バイチャカップＫドリームス杯
 📢 中日新聞・中日スポーツ 第４０回中日カップ
 ☀️
 ⏰ 発走予定: 12:38
+📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260825121600 +0900" stop="20260825124300 +0900" channel="boat.edogawa">
+        <title lang="ja">❹ℛ  12:40発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 12:40
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825121900 +0900" stop="20260825124700 +0900" channel="boat.fukuoka">
@@ -1928,14 +1928,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 13:05
 📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260825123800 +0900" stop="20260825130500 +0900" channel="boat.edogawa">
-        <title lang="ja">❺ℛ  13:02発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 13:02
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825124000 +0900" stop="20260825130700 +0900" channel="keirin.hofu">
         <title lang="ja">❻ℛ  13:04発走  🚲【Ｓ級 一般 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 防府
@@ -1952,6 +1944,14 @@ F2 バイチャカップＫドリームス杯
 📢 中日新聞・中日スポーツ 第４０回中日カップ
 ☀️
 ⏰ 発走予定: 13:10
+📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260825124300 +0900" stop="20260825131000 +0900" channel="boat.edogawa">
+        <title lang="ja">❺ℛ  13:07発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 13:07
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825124300 +0900" stop="20260825131600 +0900" channel="boat.mikuni">
@@ -2051,14 +2051,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 13:34
 📅 2026年08月25日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260825130500 +0900" stop="20260825133200 +0900" channel="boat.edogawa">
-        <title lang="ja">❻ℛ  13:29発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 13:29
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825130700 +0900" stop="20260825133600 +0900" channel="keirin.hofu">
         <title lang="ja">❼ℛ  13:33発走  🚲【Ｓ級 一般 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 防府
@@ -2076,6 +2068,14 @@ F2 バイチャカップＫドリームス杯
 🌅
 ⏰ 発走予定: 13:41
 📅 2026年08月25日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260825131000 +0900" stop="20260825133700 +0900" channel="boat.edogawa">
+        <title lang="ja">❻ℛ  13:34発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 13:34
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825131300 +0900" stop="20260825134000 +0900" channel="boat.tokoname">
         <title lang="ja">❼ℛ  13:37発走  🚤【☀️デイ 中日新聞・中日スポーツ 第４０回中日カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2154,14 +2154,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 14:00
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825133200 +0900" stop="20260825135900 +0900" channel="boat.edogawa">
-        <title lang="ja">❼ℛ  13:56発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 13:56
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825133300 +0900" stop="20260825140800 +0900" channel="chihou.morioka">
         <title lang="ja">❺ℛ  14:05発走  🏇【３歳Ｃ１二組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 盛岡
@@ -2196,6 +2188,14 @@ F2 バイチャカップＫドリームス杯
 🌅
 ⏰ 発走予定: 14:10
 📅 2026年08月25日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260825133700 +0900" stop="20260825140400 +0900" channel="boat.edogawa">
+        <title lang="ja">❼ℛ  14:01発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 14:01
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825134000 +0900" stop="20260825140900 +0900" channel="boat.tokoname">
         <title lang="ja">❽ℛ  14:06発走  🚤【☀️デイ 中日新聞・中日スポーツ 第４０回中日カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2266,14 +2266,6 @@ F2 バイチャカップＫドリームス杯
 📢 レース名: 藤城氏金無いけど５０で退職記念Ｃ７
 📅 2026年08月25日</desc>
     </programme>
-    <programme start="20260825135900 +0900" stop="20260825142700 +0900" channel="boat.edogawa">
-        <title lang="ja">❽ℛ  14:24発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 14:24
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825140000 +0900" stop="20260825141000 +0900" channel="chihou.mombetsu">
         <title lang="ja">⏳ 開催情報確認待ち 門別けいば</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
@@ -2284,6 +2276,14 @@ F2 バイチャカップＫドリームス杯
 📢 デイリースポーツ杯
 ☀️
 ⏰ 発走予定: 14:30
+📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260825140400 +0900" stop="20260825143200 +0900" channel="boat.edogawa">
+        <title lang="ja">❽ℛ  14:29発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 14:29
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825140600 +0900" stop="20260825143700 +0900" channel="boat.miyajima">
@@ -2397,14 +2397,6 @@ F2 バイチャカップＫドリームス杯
 📅 開催日次: 2日目
 🔥 準決勝</desc>
     </programme>
-    <programme start="20260825142700 +0900" stop="20260825145500 +0900" channel="boat.edogawa">
-        <title lang="ja">❾ℛ  14:52発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 14:52
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825142700 +0900" stop="20260825145400 +0900" channel="boat.mikuni">
         <title lang="ja">⏳ 開催情報確認待ち BOATRACE三国</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
@@ -2424,6 +2416,14 @@ F2 バイチャカップＫドリームス杯
 📢 男女Ｗ優勝戦
 ☀️
 ⏰ 発走予定: 15:03
+📅 2026年08月25日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260825143200 +0900" stop="20260825150000 +0900" channel="boat.edogawa">
+        <title lang="ja">❾ℛ  14:57発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 14:57
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825143300 +0900" stop="20260825150400 +0900" channel="boat.hamanako">
@@ -2558,14 +2558,6 @@ F2 バイチャカップＫドリームス杯
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">10 三国の本日のボートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260825145500 +0900" stop="20260825152500 +0900" channel="boat.edogawa">
-        <title lang="ja">❿ℛ  15:22発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 15:22
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825145700 +0900" stop="20260825153000 +0900" channel="keirin.gifu">
         <title lang="ja">⓫ℛ  15:27発走  🏆【Ｓ級 準決勝】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 岐阜
@@ -2589,6 +2581,14 @@ F2 バイチャカップＫドリームス杯
 🏷️ 種別: 一般
 📢 レース名: Ｂ２組
 📅 2026年08月25日</desc>
+    </programme>
+    <programme start="20260825150000 +0900" stop="20260825153000 +0900" channel="boat.edogawa">
+        <title lang="ja">❿ℛ  15:27発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 15:27
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825150000 +0900" stop="20260825152800 +0900" channel="boat.kiryu">
         <title lang="ja">❷ℛ  15:25発走  🚤【🌙ナイター 第７２回ボートレースメモリアル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2783,14 +2783,6 @@ F2 バイチャカップＫドリームス杯
 📢 開催名: 燦燦ダイヤモンド滝澤正光杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260825152500 +0900" stop="20260825155600 +0900" channel="boat.edogawa">
-        <title lang="ja">⓫ℛ  15:53発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 15:53
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825152600 +0900" stop="20260825153700 +0900" channel="keirin.matsusaka">
         <title lang="ja">❶ℛ  15:34発走  🚲【Ａ級 チャレンジ予選 🚲】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚲 競輪 松阪
@@ -2808,6 +2800,14 @@ F2 バイチャカップＫドリームス杯
 🌙
 ⏰ 発走予定: 15:54
 📅 2026年08月25日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260825153000 +0900" stop="20260825160100 +0900" channel="boat.edogawa">
+        <title lang="ja">⓫ℛ  15:58発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 15:58
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825153000 +0900" stop="20260825161300 +0900" channel="keirin.gifu">
         <title lang="ja">⓬ℛ  16:10発走  🏆【Ｓ級 準決勝】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2960,14 +2960,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 16:21
 📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260825155600 +0900" stop="20260825162800 +0900" channel="boat.edogawa">
-        <title lang="ja">⓬ℛ  16:25発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 03 江戸川
-📢 第２６回スカッとさわやか杯
-☀️
-⏰ 発走予定: 16:25
-📅 2026年08月25日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260825155700 +0900" stop="20260825162600 +0900" channel="boat.kiryu">
         <title lang="ja">❹ℛ  16:23発走  🚤【🌙ナイター 第７２回ボートレースメモリアル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 01 桐生
@@ -2988,6 +2980,14 @@ F2 バイチャカップＫドリームス杯
     <programme start="20260825155900 +0900" stop="20260825162100 +0900" channel="keirin.wakayama">
         <title lang="ja">⏳ 開催情報確認待ち 和歌山けいりん</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
+    </programme>
+    <programme start="20260825160100 +0900" stop="20260825163300 +0900" channel="boat.edogawa">
+        <title lang="ja">⓬ℛ  16:30発走  🚤【☀️デイ 第２６回スカッとさわやか杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 03 江戸川
+📢 第２６回スカッとさわやか杯
+☀️
+⏰ 発走予定: 16:30
+📅 2026年08月25日 開催区分: デイ</desc>
     </programme>
     <programme start="20260825160200 +0900" stop="20260825163600 +0900" channel="boat.hamanako">
         <title lang="ja">⓫ℛ  16:33発走  🚤【☀️デイ デイリースポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -3112,10 +3112,6 @@ F2 バイチャカップＫドリームス杯
 ⏰ 発走予定: 16:53
 📅 2026年08月25日 開催区分: ナイター</desc>
     </programme>
-    <programme start="20260825162800 +0900" stop="20260825165500 +0900" channel="boat.edogawa">
-        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
-        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
-    </programme>
     <programme start="20260825162800 +0900" stop="20260825170300 +0900" channel="chihou.morioka">
         <title lang="ja">❿ℛ  17:00発走  🏇【Ｂ１三組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 盛岡
@@ -3127,6 +3123,10 @@ F2 バイチャカップＫドリームス杯
     </programme>
     <programme start="20260825162800 +0900" stop="20260825165000 +0900" channel="keirin.hofu">
         <title lang="ja">⏳ 開催情報確認待ち 防府けいりん</title>
+        <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
+    </programme>
+    <programme start="20260825163300 +0900" stop="20260825170000 +0900" channel="boat.edogawa">
+        <title lang="ja">⏳ 開催情報確認待ち BOATRACE江戸川</title>
         <desc lang="ja">EPG未取得時間帯を補完しています。</desc>
     </programme>
     <programme start="20260825163300 +0900" stop="20260825170800 +0900" channel="chihou.mombetsu">
@@ -3249,10 +3249,6 @@ F2 バイチャカップＫドリームス杯
 📢 レース名: 長江崚行 爆誕２０２６Ｃ１二
 📅 2026年08月25日</desc>
     </programme>
-    <programme start="20260825165500 +0900" stop="20260825235900 +0900" channel="boat.edogawa">
-        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
-        <desc lang="ja">03 江戸川の本日のボートレースは全て終了しました。</desc>
-    </programme>
     <programme start="20260825165600 +0900" stop="20260825172600 +0900" channel="boat.kiryu">
         <title lang="ja">❻ℛ  17:23発走  🚤【🌙ナイター 第７２回ボートレースメモリアル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 01 桐生
@@ -3271,6 +3267,10 @@ F2 バイチャカップＫドリームス杯
 📢 開催名: 茶重リーフティーＣｕｐ ＷＴ杯
 📅 開催日次: 初日
 💛 ガールズ</desc>
+    </programme>
+    <programme start="20260825170000 +0900" stop="20260825235900 +0900" channel="boat.edogawa">
+        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
+        <desc lang="ja">03 江戸川の本日のボートレースは全て終了しました。</desc>
     </programme>
     <programme start="20260825170300 +0900" stop="20260825173800 +0900" channel="chihou.morioka">
         <title lang="ja">⓫ℛ  17:35発走  🏇【Ｂ１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -3724,12 +3724,12 @@ F2 バイチャカップＫドリームス杯
 📅 開催日次: 最終日</desc>
     </programme>
     <programme start="20260825193800 +0900" stop="20260825201300 +0900" channel="chihou.funabashi">
-        <title lang="ja">⓫ℛ  20:10発走  🏇【特別 威風堂々特別Ｂ２三Ｂ３一 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">⓫ℛ  20:10発走  🏇【有 特別 威風堂々特別Ｂ２三Ｂ３一 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 船橋
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:10
 🏷️ 種別: 一般
-📢 レース名: 特別 威風堂々特別Ｂ２三Ｂ３一
+📢 レース名: 有 特別 威風堂々特別Ｂ２三Ｂ３一
 📅 2026年08月25日</desc>
     </programme>
     <programme start="20260825194200 +0900" stop="20260825201100 +0900" channel="boat.wakamatsu">
@@ -5908,13 +5908,13 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月26日</desc>
     </programme>
-    <programme start="20260826203300 +0900" stop="20260827195800 +0900" channel="chihou.mombetsu">
-        <title lang="ja">⓫ℛ  19:55発走  🏇【重賞 ブリーダーズゴールドカップJpnIII 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260826203300 +0900" stop="20260827142300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❶ℛ  14:20発走  🏇【２歳 未勝利 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 門別
 🌙 開催区分: ナイター
-⏰ 発走予定: 19:55
+⏰ 発走予定: 14:20
 🏷️ 種別: 一般
-📢 レース名: 重賞 ブリーダーズゴールドカップJpnIII
+📢 レース名: ２歳 未勝利
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260826205000 +0900" stop="20260826235900 +0900" channel="auto.isesaki">
@@ -6370,10 +6370,10 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は水沢のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260827080000 +0900" stop="20260827193500 +0900" channel="chihou.mombetsu">
+    <programme start="20260827080000 +0900" stop="20260827140000 +0900" channel="chihou.mombetsu">
         <title lang="ja">⏳ 待機 門別 🌙ナイター</title>
         <desc lang="ja">地方競馬 門別
-1R発走予定 19:55
+1R発走予定 14:20
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827080000 +0900" stop="20260827235900 +0900" channel="chihou.morioka">
@@ -7092,6 +7092,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 Ｃ２二３歳以上特別
 📅 2026年08月27日</desc>
     </programme>
+    <programme start="20260827142300 +0900" stop="20260827145300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❷ℛ  14:50発走  🏇【２歳 未勝利 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 14:50
+🏷️ 種別: 一般
+📢 レース名: ２歳 未勝利
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827143300 +0900" stop="20260827151300 +0900" channel="chihou.kasamatsu">
         <title lang="ja">❾ℛ  15:10発走  🏇【３歳５組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 笠松
@@ -7117,6 +7126,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 15:20
 🏷️ 種別: 一般
 📢 レース名: 特別 Ｃ２一３歳以上特別
+📅 2026年08月27日</desc>
+    </programme>
+    <programme start="20260827145300 +0900" stop="20260827152300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❸ℛ  15:20発走  🏇【３歳以上 Ｃ４－２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:20
+🏷️ 種別: 一般
+📢 レース名: ３歳以上 Ｃ４－２
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827150000 +0900" stop="20260827210000 +0900" channel="keirin.matsusaka">
@@ -7159,6 +7177,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｂ９・Ｃ２組Ｂ９Ｃ２
 📅 2026年08月27日</desc>
     </programme>
+    <programme start="20260827152300 +0900" stop="20260827155300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❹ℛ  15:50発走  🏇【３歳以上 Ｃ４－２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:50
+🏷️ 種別: 一般
+📢 レース名: ３歳以上 Ｃ４－２
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827152300 +0900" stop="20260827155800 +0900" channel="chihou.sonoda">
         <title lang="ja">⓫ℛ  15:55発走  🏇【特別 残暑特別Ｂ１ ３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -7184,6 +7211,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 16:20
 🏷️ 種別: 一般
 📢 レース名: 準重賞 Ｊ認 秋風ジュニア２歳・オープン
+📅 2026年08月27日</desc>
+    </programme>
+    <programme start="20260827155300 +0900" stop="20260827162800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❺ℛ  16:25発走  🏇【Ｊ認 アタックチャレンジ２歳未勝利 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:25
+🏷️ 種別: 一般
+📢 レース名: Ｊ認 アタックチャレンジ２歳未勝利
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827155800 +0900" stop="20260827163300 +0900" channel="chihou.sonoda">
@@ -7215,6 +7251,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 🏆 メインレース
 📅 2026年08月27日</desc>
     </programme>
+    <programme start="20260827162800 +0900" stop="20260827165800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❻ℛ  16:55発走  🏇【Ｊ認 フレッシュチャレンジ２歳新馬 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:55
+🏷️ 種別: 一般
+📢 レース名: Ｊ認 フレッシュチャレンジ２歳新馬
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827164300 +0900" stop="20260827171300 +0900" channel="chihou.funabashi">
         <title lang="ja">❻ℛ  17:10発走  🏇【特別 馬い！岩手八幡平バイオレット記念Ｃ２選抜 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 船橋
@@ -7222,6 +7267,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 17:10
 🏷️ 種別: 一般
 📢 レース名: 特別 馬い！岩手八幡平バイオレット記念Ｃ２選抜
+📅 2026年08月27日</desc>
+    </programme>
+    <programme start="20260827165800 +0900" stop="20260827173300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❼ℛ  17:30発走  🏇【祝３０周年！ＳＰＡＴ４賞Ｃ３－２Ｃ４－１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:30
+🏷️ 種別: 一般
+📢 レース名: 祝３０周年！ＳＰＡＴ４賞Ｃ３－２Ｃ４－１
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827170000 +0900" stop="20260827235900 +0900" channel="chihou.sonoda">
@@ -7249,6 +7303,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">笠松の本日の競馬は全て終了しました。</desc>
     </programme>
+    <programme start="20260827173300 +0900" stop="20260827180800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❽ℛ  18:05発走  🏇【共済ホール賞Ｃ３－２Ｃ４－１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:05
+🏷️ 種別: 一般
+📢 レース名: 共済ホール賞Ｃ３－２Ｃ４－１
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827174300 +0900" stop="20260827181800 +0900" channel="chihou.funabashi">
         <title lang="ja">❽ℛ  18:15発走  🏇【特別 Ｊ認 トーシンブリザードメモリアル２歳一 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 船橋
@@ -7256,6 +7319,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 18:15
 🏷️ 種別: 一般
 📢 レース名: 特別 Ｊ認 トーシンブリザードメモリアル２歳一
+📅 2026年08月27日</desc>
+    </programme>
+    <programme start="20260827180800 +0900" stop="20260827184300 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❾ℛ  18:40発走  🏇【特別 ＪＡ共済３Ｑカップ２歳オープン 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:40
+🏷️ 種別: 一般
+📢 レース名: 特別 ＪＡ共済３Ｑカップ２歳オープン
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827181800 +0900" stop="20260827185300 +0900" channel="chihou.funabashi">
@@ -7267,6 +7339,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 渓流ダッシュＣ１Ｃ２選抜馬
 📅 2026年08月27日</desc>
     </programme>
+    <programme start="20260827184300 +0900" stop="20260827191800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">❿ℛ  19:15発走  🏇【特別 グランシャリオドリーム５２Ｃ３－２Ｃ４－ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:15
+🏷️ 種別: 一般
+📢 レース名: 特別 グランシャリオドリーム５２Ｃ３－２Ｃ４－
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827185300 +0900" stop="20260827192800 +0900" channel="chihou.funabashi">
         <title lang="ja">❿ℛ  19:25発走  🏇【特別 鋸山特別Ｂ２二 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 船橋
@@ -7274,6 +7355,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 19:25
 🏷️ 種別: 一般
 📢 レース名: 特別 鋸山特別Ｂ２二
+📅 2026年08月27日</desc>
+    </programme>
+    <programme start="20260827191800 +0900" stop="20260827195800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">⓫ℛ  19:55発走  🏇【重賞 ブリーダーズゴールドカップJpnIII 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:55
+🏷️ 種別: 一般
+📢 レース名: 重賞 ブリーダーズゴールドカップJpnIII
 📅 2026年08月27日</desc>
     </programme>
     <programme start="20260827192800 +0900" stop="20260827200800 +0900" channel="chihou.funabashi">
@@ -7285,6 +7375,16 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 準重賞 アレキサンドライトカップ３歳牝馬オープン
 📅 2026年08月27日</desc>
     </programme>
+    <programme start="20260827195800 +0900" stop="20260827203800 +0900" channel="chihou.mombetsu">
+        <title lang="ja">⓬ℛ  20:35発走  🏇【特別 サッポロビール１５０周年特別Ａ１Ａ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 門別
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:35
+🏷️ 種別: 一般
+📢 レース名: 特別 サッポロビール１５０周年特別Ａ１Ａ２
+🏆 メインレース
+📅 2026年08月27日</desc>
+    </programme>
     <programme start="20260827200800 +0900" stop="20260827205300 +0900" channel="chihou.funabashi">
         <title lang="ja">⓬ℛ  20:50発走  🏇【特別 ペルセウス２２００Ｂ２Ｂ３選抜馬 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 船橋
@@ -7294,10 +7394,6 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 ペルセウス２２００Ｂ２Ｂ３選抜馬
 🏆 メインレース
 📅 2026年08月27日</desc>
-    </programme>
-    <programme start="20260827202500 +0900" stop="20260827235900 +0900" channel="chihou.mombetsu">
-        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
-        <desc lang="ja">門別の本日の競馬は全て終了しました。</desc>
     </programme>
     <programme start="20260827203000 +0900" stop="20260827233000 +0900" channel="keirin.kishiwada">
         <title lang="ja">【F2】 岸和田 ⭐ミッドナイト 初日 開催予定 （仮時間）※実際の時間ではありません</title>
@@ -7328,6 +7424,10 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <programme start="20260827210000 +0900" stop="20260827235900 +0900" channel="keirin.tamano">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">玉野の本日の競輪は全て終了しました。</desc>
+    </programme>
+    <programme start="20260827210500 +0900" stop="20260827235900 +0900" channel="chihou.mombetsu">
+        <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
+        <desc lang="ja">門別の本日の競馬は全て終了しました。</desc>
     </programme>
     <programme start="20260827212000 +0900" stop="20260827235900 +0900" channel="chihou.funabashi">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>

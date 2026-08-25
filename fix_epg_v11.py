@@ -11,6 +11,7 @@ TARGET_PREFIXES = ("keirin.", "chihou.", "keiba.", "auto.", "boat.")
 TARGET_JRA = {"jra.east", "jra.west", "jra.hokkaido"}
 SPECIAL_KEIRIN = {"keirin.kawasaki":"かわさき","keirin.nagoya":"なごや","keirin.kochi":"こうち"}
 SPECIAL_KEIRIN_FULL = {"keirin.pist6":"千葉PIST6（休止中）","keirin.takamatsu":"高松けいりん（休止中）","keirin.mukomachi":"向日町けいりん（休止中）"}
+SPECIAL_BOAT = {"boat.karatsu":"BOATRACEからつ"}
 R_CIRCLED={1:"❶",2:"❷",3:"❸",4:"❹",5:"❺",6:"❻",7:"❼",8:"❽",9:"❾",10:"❿",11:"⓫",12:"⓬"}; CIRCLED_R={v:str(k) for k,v in R_CIRCLED.items()}
 
 def parse_xmltv(v):
@@ -30,6 +31,7 @@ def clean_base_name(name):
     return s.strip()
 def standardized_name(cid,current):
     if cid in SPECIAL_KEIRIN_FULL:return SPECIAL_KEIRIN_FULL[cid]
+    if cid in SPECIAL_BOAT:return SPECIAL_BOAT[cid]
     b=clean_base_name(current)
     if cid.startswith('keirin.'):return f'{SPECIAL_KEIRIN.get(cid,b)}けいりん'
     if cid.startswith(('chihou.','keiba.')):return f'{b}けいば'

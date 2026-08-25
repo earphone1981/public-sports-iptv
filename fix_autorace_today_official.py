@@ -1,6 +1,7 @@
 from pathlib import Path
 import datetime
 import html
+import json
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -162,13 +163,18 @@ def main():
     tree=ET.parse(EPG); root=tree.getroot()
     day_start=datetime.datetime.combine(TODAY,datetime.time(8,0),tzinfo=JST)
     end_limit=datetime.datetime.combine(TODAY+datetime.timedelta(days=1),datetime.time(1,0),tzinfo=JST)
-    replaced=[]; preserved=[]
+    replaced=[]; preserved=[]; inactive=[]; unknown=[]
 
     for venue,(cid,slug) in AUTO.items():
         races,fetched_pages=get_races(venue,slug)
         if not races:
             print(f"AUTORACE DIRECT {venue}: races=0 fetched_pages={fetched_pages} -> existing EPG preserved")
-            preserved.append(venue); continue
+            preserved.append(venue)
+            if fetched_pages:
+                inactive.append(cid)
+            else:
+                unknown.append(cid)
+            continue
 
         for prog in list(root.findall("programme")):
             if prog.get("channel")!=cid:continue
@@ -212,6 +218,15 @@ def main():
     for x in channels+programmes:root.append(x)
     if hasattr(ET,"indent"):ET.indent(tree,space="    ")
     tree.write(EPG,encoding="utf-8",xml_declaration=True)
+    Path("/tmp/autorace_official_status.json").write_text(
+        json.dumps({
+            "date": TODAY.strftime("%Y%m%d"),
+            "active": [AUTO[name][0] for name in replaced],
+            "inactive": inactive,
+            "unknown": unknown,
+        }, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     print("AutoRace direct today fix complete")
     print("replaced:",", ".join(replaced) if replaced else "none")
     print("preserved:",", ".join(preserved) if preserved else "none")

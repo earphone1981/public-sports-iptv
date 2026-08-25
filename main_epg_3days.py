@@ -79,7 +79,7 @@ BOAT_MAP = {
     "20 若松": "boat.wakamatsu",
     "21 芦屋": "boat.ashiya",
     "22 福岡": "boat.fukuoka",
-    "23 唐津": "boat.karatsu",
+    "23 からつ": "boat.karatsu",
     "24 大村": "boat.omura",
 }
 
@@ -116,7 +116,7 @@ BOAT_CODE_BY_NAME = {
     "20 若松": "20",
     "21 芦屋": "21",
     "22 福岡": "22",
-    "23 唐津": "23",
+    "23 からつ": "23",
     "24 大村": "24",
 }
 

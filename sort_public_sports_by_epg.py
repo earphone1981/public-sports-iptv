@@ -112,6 +112,10 @@ def sync_tvg_name(block,epg_names):
         ext=re.sub(r'tvg-name="[^"]*"',f'tvg-name="{name}"',ext,flags=re.I)
     else:
         ext=ext.replace(' group-title=',f' tvg-name="{name}" group-title=',1)
+    # IPTV clients commonly display the M3U name after the final comma rather
+    # than tvg-name, so keep both labels identical.
+    if ',' in ext:
+        ext=ext.rsplit(',',1)[0]+','+name
     block[0]=ext; return block
 
 def repair_boat_logo(block):

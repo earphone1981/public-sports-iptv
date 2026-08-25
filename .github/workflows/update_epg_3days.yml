@@ -16,6 +16,8 @@ on:
       - "fix_boat_waiting_title.py"
       - "fix_boat_day_type.py"
       - "fix_autorace_today_official.py"
+      - "verified_daily_override.py"
+      - "apply_verified_status.py"
       - "fix_epg_duplicate_channel_ids.py"
       - "sort_public_sports_by_epg.py"
       - "reorder_epg_channels_by_m3u.py"
@@ -67,6 +69,12 @@ jobs:
 
       - name: Fix BOAT day type including midnight races
         run: python -u fix_boat_day_type.py
+
+      - name: Verify today's active venues from official indexes
+        run: python -u verified_daily_override.py
+
+      - name: Apply verified active and non-event status
+        run: python -u apply_verified_status.py
 
       - name: Fix duplicate-name channel IDs
         run: python -u fix_epg_duplicate_channel_ids.py

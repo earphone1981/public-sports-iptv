@@ -49,8 +49,8 @@ def extract_race_parts(title):
     rest=rest.replace(LIVE_PREFIX,'').strip();br=re.findall(r'【([^】]+)】',rest);plain=re.sub(r'\s*【[^】]+】\s*',' ',rest);plain=re.sub(r'\s+',' ',plain).strip();detail=br[-1].strip() if br else plain
     return race_no,race_time,detail or 'レース'
 def race_no_deco(n):
-    try:i=int(str(n).strip());return f'{R_CIRCLED.get(i,str(i))}ℛ'
-    except:return f'{n}ℛ'
+    try:i=int(str(n).strip());return f'【{i}Ｒ】'
+    except:return f'【{n}Ｒ】'
 def competition_icon(cid,d):
     if re.search(r'[LＬ]級|ガールズ',d):return '💛'
     if cid.startswith('boat.'):return '🚤'
@@ -69,8 +69,31 @@ def resolve_post_time(p,t):
     h,m=map(int,t.split(':'));base=s.date();cs=[datetime.datetime.combine(base+datetime.timedelta(days=x),datetime.time(h,m),tzinfo=JST) for x in (-1,0,1)]
     return min(cs,key=lambda x:abs((x-s).total_seconds()))
 
+def event_intro(cid,name,programmes):
+    text=' '.join((p.findtext('title') or '')+' '+(p.findtext('desc') or '') for p in programmes)
+    day=''
+    m=re.search(r'[（(](\d+)日目[）)]',text)
+    if m:day=f'（{m.group(1)}日目）'
+    if cid.startswith('keirin.'):
+        if 'ミッドナイト' in text:return f'本日は 🌟ミッドナイト競輪🌟{day}をお送りします'
+        if 'モーニング' in text:return f'本日は 🌅モーニング競輪🌅{day}をお送りします'
+        if 'ナイター' in text:return f'本日は 🌙ナイター競輪🌙{day}をお送りします'
+        return f'本日は 🚲競輪🚲{day}をお送りします'
+    if cid.startswith('boat.'):
+        kind='🌙ナイターボートレース🌙' if 'ナイター' in text else '🚤ボートレース🚤'
+        return f'本日は {kind}{day}をお送りします'
+    if cid.startswith('auto.'):
+        if 'オーバーミッドナイト' in text:return f'本日は 🌌オーバーミッドナイトオート🌌{day}をお送りします'
+        if 'ミッドナイト' in text:return f'本日は 🌟ミッドナイトオート🌟{day}をお送りします'
+        if 'ナイター' in text:return f'本日は 🌙ナイターオート🌙{day}をお送りします'
+        return f'本日は 🏍️オートレース🏍️{day}をお送りします'
+    if cid.startswith(('chihou.','keiba.')):
+        kind='🌙ナイター競馬🌙' if 'ナイター' in text else '🏇地方競馬🏇'
+        return f'本日は {kind}{day}をお送りします'
+    if cid in TARGET_JRA:return f'本日は 🏇JRA中央競馬🏇{day}をお送りします'
+    return f'本日は {name}{day}をお送りします'
+
 def normalize_today(root):
-    """今日の対象chを重複ゼロの一本タイムラインへ再構成。既存番組を優先し、隙間だけ補完。"""
     today=datetime.datetime.now(JST).date();ds=datetime.datetime.combine(today,datetime.time(0,0),tzinfo=JST);de=ds+datetime.timedelta(days=1)
     names={ch.get('id'):ch.findtext('display-name') or ch.get('id') for ch in root.findall('channel') if is_target(ch.get('id',''))}
     rebuilt=0
@@ -82,7 +105,7 @@ def normalize_today(root):
             if not s or not e or not title or e<=ds or s>=de:continue
             candidates.append((max(s,ds),min(e,de),p))
         candidates.sort(key=lambda x:(x[0],x[1]))
-        # 今日に掛かる既存programmeはいったん外し、重複を切って再配置
+        intro=event_intro(cid,name,[p for _,_,p in candidates])
         for p in list(root.findall('programme')):
             if p.get('channel')!=cid:continue
             s=parse_xmltv(p.get('start'));e=parse_xmltv(p.get('stop'))
@@ -91,12 +114,12 @@ def normalize_today(root):
         for s,e,p in candidates:
             if e<=cur:continue
             if s>cur:
-                gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(s),channel=cid);ET.SubElement(gap,'title',lang='ja').text=f'⏳ 開催情報確認待ち {name}';ET.SubElement(gap,'desc',lang='ja').text='EPG未取得時間帯を補完しています。'
+                gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(s),channel=cid);ET.SubElement(gap,'title',lang='ja').text=intro;ET.SubElement(gap,'desc',lang='ja').text=f'{name}の本日の開催案内です。'
             ns=max(s,cur)
             if ns<e:
                 p.set('start',fmt_xmltv(ns));p.set('stop',fmt_xmltv(e));root.append(p);cur=e
         if cur<de:
-            gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(de),channel=cid);ET.SubElement(gap,'title',lang='ja').text=f'⏳ 開催情報確認待ち {name}';ET.SubElement(gap,'desc',lang='ja').text='EPG未取得時間帯を補完しています。'
+            gap=ET.SubElement(root,'programme',start=fmt_xmltv(cur),stop=fmt_xmltv(de),channel=cid);ET.SubElement(gap,'title',lang='ja').text=intro;ET.SubElement(gap,'desc',lang='ja').text=f'{name}の本日の開催案内です。'
         rebuilt+=1
     return rebuilt
 

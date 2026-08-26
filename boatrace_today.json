@@ -125,7 +125,7 @@
   "03 江戸川": {
     "tvg_id": "boat.edogawa",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/03_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -156,82 +156,83 @@
       },
       {
         "rno": 4,
-        "time": "12:39",
+        "time": "12:38",
         "race_name": "",
-        "title": "🌙 03 江戸川 4R【12:39】",
+        "title": "🌙 03 江戸川 4R【12:38】",
         "epg_start": "2026-08-26 12:12",
-        "epg_end": "2026-08-26 12:39"
+        "epg_end": "2026-08-26 12:38"
       },
       {
         "rno": 5,
-        "time": "13:06",
+        "time": "13:04",
         "race_name": "",
-        "title": "🌙 03 江戸川 5R【13:06】",
-        "epg_start": "2026-08-26 12:39",
-        "epg_end": "2026-08-26 13:06"
+        "title": "🌙 03 江戸川 5R【13:04】",
+        "epg_start": "2026-08-26 12:38",
+        "epg_end": "2026-08-26 13:04"
       },
       {
         "rno": 6,
-        "time": "13:33",
+        "time": "13:30",
         "race_name": "",
-        "title": "🌙 03 江戸川 6R【13:33】",
-        "epg_start": "2026-08-26 13:06",
-        "epg_end": "2026-08-26 13:33"
+        "title": "🌙 03 江戸川 6R【13:30】",
+        "epg_start": "2026-08-26 13:04",
+        "epg_end": "2026-08-26 13:30"
       },
       {
         "rno": 7,
-        "time": "14:00",
+        "time": "13:57",
         "race_name": "",
-        "title": "🌙 03 江戸川 7R【14:00】",
-        "epg_start": "2026-08-26 13:33",
-        "epg_end": "2026-08-26 14:00"
+        "title": "🌙 03 江戸川 7R【13:57】",
+        "epg_start": "2026-08-26 13:30",
+        "epg_end": "2026-08-26 13:57"
       },
       {
         "rno": 8,
-        "time": "14:28",
+        "time": "14:25",
         "race_name": "",
-        "title": "🌙 03 江戸川 8R【14:28】",
-        "epg_start": "2026-08-26 14:00",
-        "epg_end": "2026-08-26 14:28"
+        "title": "🌙 03 江戸川 8R【14:25】",
+        "epg_start": "2026-08-26 13:57",
+        "epg_end": "2026-08-26 14:25"
       },
       {
         "rno": 9,
-        "time": "14:56",
+        "time": "14:53",
         "race_name": "一般特選",
-        "title": "🌙 03 江戸川 9R 一般特選【14:56】",
-        "epg_start": "2026-08-26 14:28",
-        "epg_end": "2026-08-26 14:56"
+        "title": "🌙 03 江戸川 9R 一般特選【14:53】",
+        "epg_start": "2026-08-26 14:25",
+        "epg_end": "2026-08-26 14:53"
       },
       {
         "rno": 10,
-        "time": "15:26",
+        "time": "15:23",
         "race_name": "選抜戦",
-        "title": "🌙 03 江戸川 10R 選抜戦【15:26】",
-        "epg_start": "2026-08-26 14:56",
-        "epg_end": "2026-08-26 15:26"
+        "title": "🌙 03 江戸川 10R 選抜戦【15:23】",
+        "epg_start": "2026-08-26 14:53",
+        "epg_end": "2026-08-26 15:23"
       },
       {
         "rno": 11,
-        "time": "15:57",
+        "time": "15:54",
         "race_name": "選抜戦",
-        "title": "🌙 03 江戸川 11R 選抜戦【15:57】",
-        "epg_start": "2026-08-26 15:26",
-        "epg_end": "2026-08-26 15:57"
+        "title": "🌙 03 江戸川 11R 選抜戦【15:54】",
+        "epg_start": "2026-08-26 15:23",
+        "epg_end": "2026-08-26 15:54"
       },
       {
         "rno": 12,
-        "time": "16:29",
+        "time": "16:26",
         "race_name": "優勝戦",
-        "title": "🌙 03 江戸川 12R 優勝戦【16:29】",
-        "epg_start": "2026-08-26 15:57",
-        "epg_end": "2026-08-26 16:29"
+        "title": "🌙 03 江戸川 12R 優勝戦【16:26】",
+        "epg_start": "2026-08-26 15:54",
+        "epg_end": "2026-08-26 16:26"
       }
     ],
     "start": "10:39",
     "end": "22:38",
     "finish_title": "🏁 03 江戸川 本日開催終了",
-    "finish_start": "2026-08-26 16:29",
-    "finish_end": "2026-08-26 22:38"
+    "finish_start": "2026-08-26 16:26",
+    "finish_end": "2026-08-26 22:38",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/a653a7dab652452e8105d6615aa3dca2/4dca7dd82f0744778c289da48630298b/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MjE5NDAsImlvcyI6MTgsImNwIjoiMjA5ODE3NTQwXzIwOTg2MDczOSIsInBwdyI6IjQwayJ9.90e13svMyhIsmpPRqllsSD_X12FaEc_GDefApdXQF3g"
   },
   "04 平和島": {
     "tvg_id": "boat.heiwajima",
@@ -260,7 +261,7 @@
   "06 浜名湖": {
     "tvg_id": "boat.hamanako",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/06_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -366,7 +367,8 @@
     "end": "22:59",
     "finish_title": "🏁 06 浜名湖 本日開催終了",
     "finish_start": "2026-08-26 17:08",
-    "finish_end": "2026-08-26 22:59"
+    "finish_end": "2026-08-26 22:59",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/1219c80b4b5d4e34bd9091b98e534850/7bb5e083cc7b4817a8b3e3aed23d6875/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MjMyMDAsImlvcyI6MTgsImNwIjoiMjA5ODE4ODAwXzIwOTg2MTk5OSIsInBwdyI6IjQwayJ9.uTrwIHt458mHn_CdMmDp063dNG6cu_AtSr2_ZeOvJ2o"
   },
   "07 蒲郡": {
     "tvg_id": "boat.gamagori",
@@ -383,7 +385,7 @@
   "08 常滑": {
     "tvg_id": "boat.tokoname",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/08_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -489,12 +491,13 @@
     "end": "21:58",
     "finish_title": "🏁 08 常滑 本日開催終了",
     "finish_start": "2026-08-26 16:20",
-    "finish_end": "2026-08-26 21:58"
+    "finish_end": "2026-08-26 21:58",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/80fdf65aa6694fecbd08253702b5249b/be1a331e8f3b439fab3c6863acc3a40b/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MTk1NDAsImlvcyI6MTgsImNwIjoiMjA5ODE1MTQwXzIwOTg1ODMzOSIsInBwdyI6IjQwayJ9.0UES7JzYYYhSi6tWannxbGDF4EhHL7x9ml6mw2hHMqw"
   },
   "09 津": {
     "tvg_id": "boat.tsu",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/09_N-1-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -600,12 +603,13 @@
     "end": "21:54",
     "finish_title": "🏁 09 津 本日開催終了",
     "finish_start": "2026-08-26 16:15",
-    "finish_end": "2026-08-26 21:54"
+    "finish_end": "2026-08-26 21:54",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/961f1d8c46034946b94fe9631c389faa/bebc3a32cbd3441ba4462abd0e1d4177/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MTkzMDAsImlvcyI6MTgsImNwIjoiMjA5ODE0OTAwXzIwOTg1ODA5OSIsInBwdyI6IjQwayJ9.oH1zRCsZRmn_gpqDogO74KFc2OIijHwE5zgJHiGwiww"
   },
   "10 三国": {
     "tvg_id": "boat.mikuni",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/10_N-1-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -711,7 +715,8 @@
     "end": "20:12",
     "finish_title": "🏁 10 三国 本日開催終了",
     "finish_start": "2026-08-26 14:24",
-    "finish_end": "2026-08-26 20:12"
+    "finish_end": "2026-08-26 20:12",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/dca91eec80544c94be68255f1fd6d79b/ff75955467504242a1e6001795722ea4/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MTMxODAsImlvcyI6MTgsImNwIjoiMjA5ODA4NzgwXzIwOTg1MTk3OSIsInBwdyI6IjQwayJ9.ZGw4x0HVhNTcrual7zSDHSjUXVVNPxN2bgfLewhM0n0"
   },
   "11 びわこ": {
     "tvg_id": "boat.biwako",
@@ -839,7 +844,7 @@
   "13 尼崎": {
     "tvg_id": "boat.amagasaki",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/13_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -945,7 +950,8 @@
     "end": "22:01",
     "finish_title": "🏁 13 尼崎 本日開催終了",
     "finish_start": "2026-08-26 16:10",
-    "finish_end": "2026-08-26 22:01"
+    "finish_end": "2026-08-26 22:01",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/d0d30f929e5b401aae340a423da9b2fd/f310deb5260044299da43950b7bdded7/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MTk3MjAsImlvcyI6MTgsImNwIjoiMjA5ODE1MzIwXzIwOTg1ODUxOSIsInBwdyI6IjQwayJ9.53N8fgCUAao0k3-qynZ2ZC0O7c64ipe4T9CmwEHTcdg"
   },
   "14 鳴門": {
     "tvg_id": "boat.naruto",
@@ -1061,7 +1067,7 @@
   "15 丸亀": {
     "tvg_id": "boat.marugame",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/15_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "デイ",
     "emoji": "🌞",
@@ -1167,7 +1173,8 @@
     "end": "01:54",
     "finish_title": "🏁 15 丸亀 本日開催終了",
     "finish_start": "2026-08-26 20:30",
-    "finish_end": "2026-08-27 01:54"
+    "finish_end": "2026-08-27 01:54",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/d2289f0a20db4bf1a4613e0336547a23/e975fd762f02465ca7dc1af81276ba28/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzczODQwMCwic3RhcnQiOjE3ODc1NDczMDAsImlvcyI6MTgsImNwIjoiMjA5NzQyOTAwXzIwOTc4NjA5OSIsInBwdyI6IjQwayJ9.JcEo6SqwgLX5BFfm73NrrVNB7ewykhjzzjzx7DEfX4U"
   },
   "16 児島": {
     "tvg_id": "boat.kojima",
@@ -1184,7 +1191,7 @@
   "17 宮島": {
     "tvg_id": "boat.miyajima",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/17_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -1290,12 +1297,13 @@
     "end": "22:09",
     "finish_title": "🏁 17 宮島 本日開催終了",
     "finish_start": "2026-08-26 16:47",
-    "finish_end": "2026-08-26 22:09"
+    "finish_end": "2026-08-26 22:09",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/1383ab1e51194621be541fd0aae375de/61e09868b78746dcb109230578ca4c48/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MjAyMDAsImlvcyI6MTgsImNwIjoiMjA5ODE1ODAwXzIwOTg1ODk5OSIsInBwdyI6IjQwayJ9.hFAABXLDHFL6SzDmFD6ufh9kFyyZP7M8rO9kJaOc4ew"
   },
   "18 徳山": {
     "tvg_id": "boat.tokuyama",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/18_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ナイター",
     "emoji": "🌙",
@@ -1401,7 +1409,8 @@
     "end": "20:04",
     "finish_title": "🏁 18 徳山 本日開催終了",
     "finish_start": "2026-08-26 14:19",
-    "finish_end": "2026-08-26 20:04"
+    "finish_end": "2026-08-26 20:04",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/3115c7edae5f4a87bfa786e0fa87806c/6ad8ebe3d89b468aa37ac1dd4fd8baf6/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MTI3MDAsImlvcyI6MTgsImNwIjoiMjA5ODA4MzAwXzIwOTg1MTQ5OSIsInBwdyI6IjQwayJ9._rzaCsx2tB5SdLoursz0XyMygLwnzdDO2_Ub4V_Ynro"
   },
   "19 下関": {
     "tvg_id": "boat.shimonoseki",
@@ -1418,7 +1427,7 @@
   "20 若松": {
     "tvg_id": "boat.wakamatsu",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/20_N-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "デイ",
     "emoji": "🌞",
@@ -1524,7 +1533,8 @@
     "end": "01:59",
     "finish_title": "🏁 20 若松 本日開催終了",
     "finish_start": "2026-08-26 20:35",
-    "finish_end": "2026-08-27 01:59"
+    "finish_end": "2026-08-27 01:59",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/3347caf95a9848348006aa2de06cd74b/e3466afea74d4f518acd62210390fc34/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4NzczODQwMCwic3RhcnQiOjE3ODc1NTAzMDAsImlvcyI6MTgsImNwIjoiMjA5NzQ1OTAwXzIwOTc4NjM5OSIsInBwdyI6IjQwayJ9.2UM-Bf41JlzOyzB6Eefpjsc5q1ikVJ3F-ZVAtdJoeWg"
   },
   "21 芦屋": {
     "tvg_id": "boat.ashiya",
@@ -1541,7 +1551,7 @@
   "22 福岡": {
     "tvg_id": "boat.fukuoka",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/22_N-1-1.jpg",
-    "live": false,
+    "live": true,
     "held": true,
     "day_type": "ミッドナイト",
     "emoji": "🌟",
@@ -1647,7 +1657,8 @@
     "end": "23:39",
     "finish_title": "🏁 22 福岡 本日開催終了",
     "finish_start": "2026-08-26 18:00",
-    "finish_end": "2026-08-26 23:39"
+    "finish_end": "2026-08-26 23:39",
+    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/078c534b4a174775b7c4e25645da7083/b9c317f7271149af8bcc637aa6245d69/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4Nzc5OTYwMCwic3RhcnQiOjE3ODc2MjU2MDAsImlvcyI6MTgsImNwIjoiMjA5ODIxMjAwXzIwOTg2NDM5OSIsInBwdyI6IjQwayJ9.n7QGnOzUvkjVPdOIpfCxau1WQTQIYhZrWT0wqqbKMOc"
   },
   "23 唐津": {
     "tvg_id": "boat.karatsu",

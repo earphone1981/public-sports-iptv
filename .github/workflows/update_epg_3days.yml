@@ -49,11 +49,18 @@ jobs:
         shell: pwsh
         timeout-minutes: 8
         run: ./boatrace_today.ps1
-      - name: Validate BOAT RACE outputs
+      - name: Validate BOAT RACE daily data
         shell: pwsh
         run: |
           if (!(Test-Path boatrace_today.json) -or !(Test-Path boatrace_today.m3u)) { throw 'BOAT output missing' }
-          if ((Get-Item boatrace_today.m3u).Length -lt 100) { throw 'BOAT M3U is unexpectedly empty' }
+          $data = Get-Content boatrace_today.json -Raw -Encoding UTF8 | ConvertFrom-Json
+          $held = @($data.PSObject.Properties | Where-Object { $_.Value.held -eq $true }).Count
+          if ($held -lt 1) { throw 'BOAT daily data has no held venues' }
+          $live = @($data.PSObject.Properties | Where-Object { $_.Value.live -eq $true }).Count
+          Write-Host "BOAT daily data OK: held=$held live=$live"
+          if ((Get-Item boatrace_today.m3u).Length -lt 100) {
+            Write-Host 'BOAT streams are not open yet; continue EPG update from race schedule JSON.'
+          }
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true

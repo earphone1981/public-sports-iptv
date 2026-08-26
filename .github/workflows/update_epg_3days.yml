@@ -11,6 +11,7 @@ on:
       - "public_sports.m3u"
       - "boatrace_today.m3u"
       - "boatrace_today.ps1"
+      - "repair_boatrace_streams_from_history.py"
       - "main_epg_3days.py"
       - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
@@ -49,6 +50,8 @@ jobs:
         shell: pwsh
         timeout-minutes: 8
         run: ./boatrace_today.ps1
+      - name: Restore BOAT stream URLs from recent valid history
+        run: python -u repair_boatrace_streams_from_history.py
       - name: Validate BOAT RACE daily data
         shell: pwsh
         run: |

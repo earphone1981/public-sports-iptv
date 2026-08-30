@@ -3,7 +3,7 @@ name: Update Public Sports EPG 3 Days
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 23 * * *"
+    - cron: "0 23,3,7,11 * * *"
   push:
     branches:
       - main
@@ -12,6 +12,7 @@ on:
       - "boatrace_today.m3u"
       - "boatrace_today.ps1"
       - "repair_boatrace_streams_from_history.py"
+      - "prune_boatrace_finished.py"
       - "main_epg_3days.py"
       - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
@@ -54,6 +55,8 @@ jobs:
         run: ./boatrace_today.ps1
       - name: Restore BOAT stream URLs from recent valid history
         run: python -u repair_boatrace_streams_from_history.py
+      - name: Remove BOAT venues whose broadcast has finished
+        run: python -u prune_boatrace_finished.py
       - name: Validate BOAT RACE daily data
         shell: pwsh
         run: |
@@ -64,7 +67,7 @@ jobs:
           $live = @($data.PSObject.Properties | Where-Object { $_.Value.live -eq $true }).Count
           Write-Host "BOAT daily data OK: held=$held live=$live"
           if ((Get-Item boatrace_today.m3u).Length -lt 100) {
-            Write-Host 'BOAT streams are not open yet; continue EPG update from race schedule JSON.'
+            Write-Host 'BOAT streams are not open yet or all venues have finished; continue EPG update from race schedule JSON.'
           }
       - name: Generate 3-day EPG
         timeout-minutes: 12

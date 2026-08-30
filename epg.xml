@@ -1,14 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
 <tv generator-info-name="CombinedEPGGenerator">
-    <channel id="keirin.wakayama">
-        <display-name>和歌山けいりん</display-name>
-    </channel>
-    <channel id="keirin.kawasaki">
-        <display-name>かわさきけいりん</display-name>
-    </channel>
-    <channel id="keirin.maebashi">
-        <display-name>前橋けいりん</display-name>
-    </channel>
     <channel id="keirin.kokura">
         <display-name>小倉けいりん</display-name>
     </channel>
@@ -23,6 +14,15 @@
     </channel>
     <channel id="keirin.gifu">
         <display-name>岐阜けいりん</display-name>
+    </channel>
+    <channel id="keirin.kawasaki">
+        <display-name>かわさきけいりん</display-name>
+    </channel>
+    <channel id="keirin.maebashi">
+        <display-name>前橋けいりん</display-name>
+    </channel>
+    <channel id="keirin.wakayama">
+        <display-name>和歌山けいりん</display-name>
     </channel>
     <channel id="keirin.aomori">
         <display-name>青森けいりん</display-name>
@@ -174,11 +174,11 @@
     <channel id="chihou.urawa">
         <display-name>浦和けいば</display-name>
     </channel>
-    <channel id="auto.hamamatsu">
-        <display-name>浜松オート</display-name>
-    </channel>
     <channel id="auto.isesaki">
         <display-name>伊勢崎オート</display-name>
+    </channel>
+    <channel id="auto.hamamatsu">
+        <display-name>浜松オート</display-name>
     </channel>
     <channel id="auto.iizuka">
         <display-name>飯塚オート</display-name>
@@ -188,75 +188,6 @@
     </channel>
     <channel id="auto.sanyo">
         <display-name>山陽オート</display-name>
-    </channel>
-    <channel id="boat.ashiya">
-        <display-name>BOATRACE芦屋</display-name>
-    </channel>
-    <channel id="boat.naruto">
-        <display-name>BOATRACE鳴門</display-name>
-    </channel>
-    <channel id="boat.karatsu">
-        <display-name>BOATRACEからつ</display-name>
-    </channel>
-    <channel id="boat.biwako">
-        <display-name>BOATRACEびわこ</display-name>
-    </channel>
-    <channel id="boat.tsu">
-        <display-name>BOATRACE津</display-name>
-    </channel>
-    <channel id="boat.tokoname">
-        <display-name>BOATRACE常滑</display-name>
-    </channel>
-    <channel id="boat.miyajima">
-        <display-name>BOATRACE宮島</display-name>
-    </channel>
-    <channel id="boat.kojima">
-        <display-name>BOATRACE児島</display-name>
-    </channel>
-    <channel id="boat.hamanako">
-        <display-name>BOATRACE浜名湖</display-name>
-    </channel>
-    <channel id="boat.tamagawa">
-        <display-name>BOATRACE多摩川</display-name>
-    </channel>
-    <channel id="boat.heiwajima">
-        <display-name>BOATRACE平和島</display-name>
-    </channel>
-    <channel id="boat.kiryu">
-        <display-name>BOATRACE桐生</display-name>
-    </channel>
-    <channel id="boat.gamagori">
-        <display-name>BOATRACE蒲郡</display-name>
-    </channel>
-    <channel id="boat.shimonoseki">
-        <display-name>BOATRACE下関</display-name>
-    </channel>
-    <channel id="boat.amagasaki">
-        <display-name>BOATRACE尼崎</display-name>
-    </channel>
-    <channel id="boat.edogawa">
-        <display-name>BOATRACE江戸川</display-name>
-    </channel>
-    <channel id="boat.fukuoka">
-        <display-name>BOATRACE福岡</display-name>
-    </channel>
-    <channel id="boat.marugame">
-        <display-name>BOATRACE丸亀</display-name>
-    </channel>
-    <channel id="boat.mikuni">
-        <display-name>BOATRACE三国</display-name>
-    </channel>
-    <channel id="boat.omura">
-        <display-name>BOATRACE大村</display-name>
-    </channel>
-    <channel id="boat.toda">
-        <display-name>BOATRACE戸田</display-name>
-    </channel>
-    <channel id="boat.tokuyama">
-        <display-name>BOATRACE徳山</display-name>
-    </channel>
-    <channel id="boat.wakamatsu">
-        <display-name>BOATRACE若松</display-name>
     </channel>
     <channel id="jra.gch">
         <display-name>グリーンチャンネル</display-name>
@@ -270,8 +201,77 @@
     <channel id="jra.hokkaido">
         <display-name>JRA HOKKAIDO</display-name>
     </channel>
+    <channel id="boat.kiryu">
+        <display-name>BOATRACE桐生</display-name>
+    </channel>
+    <channel id="boat.toda">
+        <display-name>BOATRACE戸田</display-name>
+    </channel>
+    <channel id="boat.edogawa">
+        <display-name>BOATRACE江戸川</display-name>
+    </channel>
+    <channel id="boat.heiwajima">
+        <display-name>BOATRACE平和島</display-name>
+    </channel>
+    <channel id="boat.tamagawa">
+        <display-name>BOATRACE多摩川</display-name>
+    </channel>
+    <channel id="boat.hamanako">
+        <display-name>BOATRACE浜名湖</display-name>
+    </channel>
+    <channel id="boat.gamagori">
+        <display-name>BOATRACE蒲郡</display-name>
+    </channel>
+    <channel id="boat.tokoname">
+        <display-name>BOATRACE常滑</display-name>
+    </channel>
+    <channel id="boat.tsu">
+        <display-name>BOATRACE津</display-name>
+    </channel>
+    <channel id="boat.mikuni">
+        <display-name>BOATRACE三国</display-name>
+    </channel>
+    <channel id="boat.biwako">
+        <display-name>BOATRACEびわこ</display-name>
+    </channel>
     <channel id="boat.suminoe">
         <display-name>BOATRACE住之江</display-name>
+    </channel>
+    <channel id="boat.amagasaki">
+        <display-name>BOATRACE尼崎</display-name>
+    </channel>
+    <channel id="boat.naruto">
+        <display-name>BOATRACE鳴門</display-name>
+    </channel>
+    <channel id="boat.marugame">
+        <display-name>BOATRACE丸亀</display-name>
+    </channel>
+    <channel id="boat.kojima">
+        <display-name>BOATRACE児島</display-name>
+    </channel>
+    <channel id="boat.miyajima">
+        <display-name>BOATRACE宮島</display-name>
+    </channel>
+    <channel id="boat.tokuyama">
+        <display-name>BOATRACE徳山</display-name>
+    </channel>
+    <channel id="boat.shimonoseki">
+        <display-name>BOATRACE下関</display-name>
+    </channel>
+    <channel id="boat.wakamatsu">
+        <display-name>BOATRACE若松</display-name>
+    </channel>
+    <channel id="boat.ashiya">
+        <display-name>BOATRACE芦屋</display-name>
+    </channel>
+    <channel id="boat.fukuoka">
+        <display-name>BOATRACE福岡</display-name>
+    </channel>
+    <channel id="boat.karatsu">
+        <display-name>BOATRACEからつ</display-name>
+    </channel>
+    <channel id="boat.omura">
+        <display-name>BOATRACE大村</display-name>
     </channel>
     <programme start="20260829143000 +0000" stop="20260829160000 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1019</title>
@@ -643,54 +643,30 @@
         <desc lang="ja">「新潟記念、中京2歳S、日高S　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260829160021 +0000" stop="20260829180021 +0000" channel="jra.gch">
-        <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #919</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
-    </programme>
     <programme start="20260829180000 +0000" stop="20260829183000 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #387</title>
         <desc lang="ja">「地方競馬情報が満載！」</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260829180021 +0000" stop="20260829183021 +0000" channel="jra.gch">
-        <title lang="ja">アタック！地方競馬 #387</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76921/S_75d2c137c63145ecaa922483910136b5_20260605133203809.png</image>
     </programme>
     <programme start="20260829183000 +0000" stop="20260829200000 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <desc lang="ja">「第３回新潟競馬第３日・第３回中京競馬第３日・第２回札幌競馬第３日」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260829183021 +0000" stop="20260829200021 +0000" channel="jra.gch">
-        <title lang="ja">今日のレースリプレイ</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
-    </programme>
     <programme start="20260829200000 +0000" stop="20260829220000 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #919</title>
         <desc lang="ja">「新潟記念、中京2歳S、日高S　他」</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260829200021 +0000" stop="20260829220021 +0000" channel="jra.gch">
-        <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #919</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
     <programme start="20260829220000 +0000" stop="20260829223000 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #419</title>
         <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260829220021 +0000" stop="20260829223021 +0000" channel="jra.gch">
-        <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #419</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
-    </programme>
     <programme start="20260829223000 +0000" stop="20260830000000 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1019</title>
         <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260829223021 +0000" stop="20260830000021 +0000" channel="jra.gch">
-        <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1019</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
     <programme start="20260830080000 +0900" stop="20260830105900 +0900" channel="auto.hamamatsu">
         <title lang="ja">【１Ｒ】  10:56発走  🏍️【予定 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1088,10 +1064,6 @@ keirin.nagoya</desc>
         <title lang="ja">[生]中央競馬全レース中継</title>
         <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260830000021 +0000" stop="20260830040021 +0000" channel="jra.gch">
-        <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79118/S_55b36c95061542599a3fcbc52987611a_20260701163217297.jpg</image>
     </programme>
     <programme start="20260830090100 +0900" stop="20260830092700 +0900" channel="boat.ashiya">
         <title lang="ja">【３Ｒ】  09:24発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1661,11 +1633,11 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830115000 +0900" stop="20260830121800 +0900" channel="auto.hamamatsu">
-        <title lang="ja">【４Ｒ】  12:15発走  🏍️【一般戦 2026年08月30日 電投締切12 : 13 発走予定12 : 15 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【４Ｒ】  12:15発走  🏍️【一般戦 2026年08月30日 電投締切12 : 16 発走予定12 : 15 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 12:15
-📢 一般戦 2026年08月30日 電投締切12 : 13 発走予定12 : 15
+📢 一般戦 2026年08月30日 電投締切12 : 16 発走予定12 : 15
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830115100 +0900" stop="20260830122000 +0900" channel="boat.heiwajima">
@@ -1784,11 +1756,11 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830121800 +0900" stop="20260830124900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">【５Ｒ】  12:46発走  🏆【準々決勝戦 2026年08月30日 電投締切12 : 44 発走予定12 : 4】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【５Ｒ】  12:46発走  🏆【準々決勝戦 2026年08月30日 電投締切12 : 46 発走予定12 : 4】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 12:46
-📢 準々決勝戦 2026年08月30日 電投締切12 : 44 発走予定12 : 4
+📢 準々決勝戦 2026年08月30日 電投締切12 : 46 発走予定12 : 4
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830122000 +0900" stop="20260830124900 +0900" channel="boat.heiwajima">
@@ -1867,12 +1839,12 @@ keirin.nagoya</desc>
 📢 レース名: Ｃ２六組
 📅 2026年08月30日</desc>
     </programme>
-    <programme start="20260830123400 +0900" stop="20260830130000 +0900" channel="boat.tokoname">
-        <title lang="ja">【６Ｒ】  12:57発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830123400 +0900" stop="20260830130200 +0900" channel="boat.tokoname">
+        <title lang="ja">【６Ｒ】  12:59発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 08 常滑
 📢 誠進社杯
 ☀️
-⏰ 発走予定: 12:57
+⏰ 発走予定: 12:59
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830123600 +0900" stop="20260830130300 +0900" channel="boat.tsu">
@@ -1926,11 +1898,11 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830124900 +0900" stop="20260830131900 +0900" channel="auto.hamamatsu">
-        <title lang="ja">【６Ｒ】  13:16発走  🏆【準々決勝戦 2026年08月30日 電投締切13 : 14 発走予定13 : 1】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【６Ｒ】  13:16発走  🏆【準々決勝戦 2026年08月30日 電投締切13 : 15 発走予定13 : 1】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🏍️ オートレース 浜松
 ☀️ 開催区分: デイ
 ⏰ 発走予定: 13:16
-📢 準々決勝戦 2026年08月30日 電投締切13 : 14 発走予定13 : 1
+📢 準々決勝戦 2026年08月30日 電投締切13 : 15 発走予定13 : 1
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830124900 +0900" stop="20260830131900 +0900" channel="boat.heiwajima">
@@ -1967,29 +1939,25 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 13:22
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830130000 +0900" stop="20260830132900 +0900" channel="boat.tokoname">
-        <title lang="ja">【７Ｒ】  13:26発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 08 常滑
-📢 誠進社杯
-☀️
-⏰ 発走予定: 13:26
-📅 2026年08月30日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260830040000 +0000" stop="20260830103000 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継</title>
         <desc lang="ja">中央競馬全レース生中継！JRAで行われる全レースを中心にお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830040021 +0000" stop="20260830103021 +0000" channel="jra.gch">
-        <title lang="ja">[生]中央競馬全レース中継[デ]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79118/S_55b36c95061542599a3fcbc52987611a_20260701163217297.jpg</image>
+    <programme start="20260830130200 +0900" stop="20260830133100 +0900" channel="boat.tokoname">
+        <title lang="ja">【７Ｒ】  13:28発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 13:28
+📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830130300 +0900" stop="20260830133100 +0900" channel="boat.tamagawa">
-        <title lang="ja">【５Ｒ】  13:28発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830130300 +0900" stop="20260830133400 +0900" channel="boat.tamagawa">
+        <title lang="ja">【５Ｒ】  13:31発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 05 多摩川
 📢 第１２回ホットマンカップ
 ☀️
-⏰ 発走予定: 13:28
+⏰ 発走予定: 13:31
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830130300 +0900" stop="20260830133200 +0900" channel="boat.tsu">
@@ -2109,20 +2077,12 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 13:54
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830132900 +0900" stop="20260830140000 +0900" channel="boat.tokoname">
-        <title lang="ja">【８Ｒ】  13:57発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830133100 +0900" stop="20260830140200 +0900" channel="boat.tokoname">
+        <title lang="ja">【８Ｒ】  13:59発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 08 常滑
 📢 誠進社杯
 ☀️
-⏰ 発走予定: 13:57
-📅 2026年08月30日 開催区分: デイ</desc>
-    </programme>
-    <programme start="20260830133100 +0900" stop="20260830140500 +0900" channel="boat.tamagawa">
-        <title lang="ja">【６Ｒ】  14:02発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 05 多摩川
-📢 第１２回ホットマンカップ
-☀️
-⏰ 発走予定: 14:02
+⏰ 発走予定: 13:59
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830133200 +0900" stop="20260830140200 +0900" channel="boat.tsu">
@@ -2131,6 +2091,14 @@ keirin.nagoya</desc>
 📢 男女Ｗ優勝戦
 ☀️
 ⏰ 発走予定: 13:59
+📅 2026年08月30日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260830133400 +0900" stop="20260830140700 +0900" channel="boat.tamagawa">
+        <title lang="ja">【６Ｒ】  14:04発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 14:04
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830133500 +0900" stop="20260830140400 +0900" channel="keirin.kawasaki">
@@ -2241,12 +2209,12 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 14:28
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830140000 +0900" stop="20260830144000 +0900" channel="boat.tokoname">
-        <title lang="ja">【９Ｒ】  14:37発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830140200 +0900" stop="20260830144200 +0900" channel="boat.tokoname">
+        <title lang="ja">【９Ｒ】  14:39発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 08 常滑
 📢 誠進社杯
 ☀️
-⏰ 発走予定: 14:37
+⏰ 発走予定: 14:39
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830140200 +0900" stop="20260830143600 +0900" channel="boat.tsu">
@@ -2267,12 +2235,12 @@ keirin.nagoya</desc>
 📢 開催名: 競輪ワールドシリーズ
 📅 開催日次: 初日</desc>
     </programme>
-    <programme start="20260830140500 +0900" stop="20260830143500 +0900" channel="boat.tamagawa">
-        <title lang="ja">【７Ｒ】  14:32発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830140700 +0900" stop="20260830143600 +0900" channel="boat.tamagawa">
+        <title lang="ja">【７Ｒ】  14:33発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 05 多摩川
 📢 第１２回ホットマンカップ
 ☀️
-⏰ 発走予定: 14:32
+⏰ 発走予定: 14:33
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830141000 +0900" stop="20260830144000 +0900" channel="jra.hokkaido">
@@ -2378,22 +2346,22 @@ keirin.nagoya</desc>
 📢 開催名: 競輪ワールドシリーズ
 📅 開催日次: 初日</desc>
     </programme>
-    <programme start="20260830143500 +0900" stop="20260830150800 +0900" channel="boat.tamagawa">
+    <programme start="20260830143500 +0900" stop="20260830144800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【１Ｒ】  14:45発走  🏇【御坂しのぐ生誕・ぐみこ記念Ｃ２－１０ 直200m 曇 1.6 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 14:45
+🏷️ 種別: 一般
+📢 レース名: 御坂しのぐ生誕・ぐみこ記念Ｃ２－１０ 直200m 曇 1.6 9
+📅 2026年08月30日</desc>
+    </programme>
+    <programme start="20260830143600 +0900" stop="20260830150800 +0900" channel="boat.tamagawa">
         <title lang="ja">【８Ｒ】  15:05発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 05 多摩川
 📢 第１２回ホットマンカップ
 ☀️
 ⏰ 発走予定: 15:05
 📅 2026年08月30日 開催区分: デイ</desc>
-    </programme>
-    <programme start="20260830143500 +0900" stop="20260830144800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１Ｒ】  14:45発走  🏇【御坂しのぐ生誕・ぐみこ記念Ｃ２－１０ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">地方競馬 帯広
-🌙 開催区分: ナイター
-⏰ 発走予定: 14:45
-🏷️ 種別: 一般
-📢 レース名: 御坂しのぐ生誕・ぐみこ記念Ｃ２－１０ 直200m 9
-📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830143600 +0900" stop="20260830151000 +0900" channel="boat.tsu">
         <title lang="ja">【１０Ｒ】  15:07発走  🏆【☀️デイ 男女Ｗ優勝戦】🏆  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2403,20 +2371,20 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 15:07
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830144000 +0900" stop="20260830151300 +0900" channel="boat.tokoname">
-        <title lang="ja">【１０Ｒ】  15:10発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
-        <desc lang="ja">🚤 ボートレース 08 常滑
-📢 誠進社杯
-☀️
-⏰ 発走予定: 15:10
-📅 2026年08月30日 開催区分: デイ</desc>
-    </programme>
     <programme start="20260830144000 +0900" stop="20260830151500 +0900" channel="jra.hokkaido">
         <title lang="ja">【１０Ｒ】 🏇 札幌 14:50発走 HBC賞 3歳以上2勝クラス 1,200 （芝）ハンデ</title>
         <desc lang="ja">🏇 JRA 札幌
 ⏰ 発走予定: 14:50
 📢 HBC賞 3歳以上2勝クラス 1,200 （芝）ハンデ
 📅 2026年08月30日</desc>
+    </programme>
+    <programme start="20260830144200 +0900" stop="20260830151500 +0900" channel="boat.tokoname">
+        <title lang="ja">【１０Ｒ】  15:12発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 15:12
+📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830144700 +0900" stop="20260830150000 +0900" channel="boat.kiryu">
         <title lang="ja">【１Ｒ】  14:57発走  🚤【🌙ナイター 第７２回ボートレースメモリアル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2435,12 +2403,12 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830144800 +0900" stop="20260830151800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【２Ｒ】  15:15発走  🏇【第１８回しっとの夏記念２歳Ｄ－３ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【２Ｒ】  15:15発走  🏇【第１８回しっとの夏記念２歳Ｄ－３ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 15:15
 🏷️ 種別: 一般
-📢 レース名: 第１８回しっとの夏記念２歳Ｄ－３ 直200m 10
+📢 レース名: 第１８回しっとの夏記念２歳Ｄ－３ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830144900 +0900" stop="20260830151900 +0900" channel="keirin.maebashi">
@@ -2566,12 +2534,12 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 15:21
 📅 2026年08月30日 開催区分: ナイター</desc>
     </programme>
-    <programme start="20260830151300 +0900" stop="20260830154100 +0900" channel="boat.tokoname">
-        <title lang="ja">【１１Ｒ】  15:38発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+    <programme start="20260830151500 +0900" stop="20260830154300 +0900" channel="boat.tokoname">
+        <title lang="ja">【１１Ｒ】  15:40発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 08 常滑
 📢 誠進社杯
 ☀️
-⏰ 発走予定: 15:38
+⏰ 発走予定: 15:40
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830151500 +0900" stop="20260830155000 +0900" channel="jra.hokkaido">
@@ -2590,12 +2558,12 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
     <programme start="20260830151800 +0900" stop="20260830155300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【３Ｒ】  15:50発走  🏇【哲☆第二の人生スタート杯２歳Ｃ－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【３Ｒ】  15:50発走  🏇【哲☆第二の人生スタート杯２歳Ｃ－２ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 15:50
 🏷️ 種別: 一般
-📢 レース名: 哲☆第二の人生スタート杯２歳Ｃ－２ 直200m 10
+📢 レース名: 哲☆第二の人生スタート杯２歳Ｃ－２ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830151900 +0900" stop="20260830160500 +0900" channel="boat.miyajima">
@@ -2714,7 +2682,7 @@ keirin.nagoya</desc>
 ⏰ 発走予定: 16:08
 📅 2026年08月30日 開催区分: デイ</desc>
     </programme>
-    <programme start="20260830154100 +0900" stop="20260830162200 +0900" channel="boat.tokoname">
+    <programme start="20260830154300 +0900" stop="20260830162200 +0900" channel="boat.tokoname">
         <title lang="ja">【１２Ｒ】  16:19発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 08 常滑
 📢 誠進社杯
@@ -2783,12 +2751,12 @@ keirin.nagoya</desc>
 🏆 メインレース</desc>
     </programme>
     <programme start="20260830155300 +0900" stop="20260830162300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【４Ｒ】  16:20発走  🏇【ゆにふぃ３期生１周年記念杯２歳Ｂ－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【４Ｒ】  16:20発走  🏇【ゆにふぃ３期生１周年記念杯２歳Ｂ－２ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:20
 🏷️ 種別: 一般
-📢 レース名: ゆにふぃ３期生１周年記念杯２歳Ｂ－２ 直200m 10
+📢 レース名: ゆにふぃ３期生１周年記念杯２歳Ｂ－２ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830155500 +0900" stop="20260830163000 +0900" channel="boat.heiwajima">
@@ -2952,12 +2920,12 @@ keirin.nagoya</desc>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
     <programme start="20260830162300 +0900" stop="20260830165300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【５Ｒ】  16:50発走  🏇【コルトン＆ブモ結婚５周年杯Ｃ２－３ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【５Ｒ】  16:50発走  🏇【コルトン＆ブモ結婚５周年杯Ｃ２－３ 直200m 曇 1.6 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:50
 🏷️ 種別: 一般
-📢 レース名: コルトン＆ブモ結婚５周年杯Ｃ２－３ 直200m 9
+📢 レース名: コルトン＆ブモ結婚５周年杯Ｃ２－３ 直200m 曇 1.6 9
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830162600 +0900" stop="20260830165500 +0900" channel="boat.kiryu">
@@ -3086,12 +3054,12 @@ keirin.nagoya</desc>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
     <programme start="20260830165300 +0900" stop="20260830172300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【６Ｒ】  17:20発走  🏇【天ノ音まもり誕生日記念Ｃ１－４ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【６Ｒ】  17:20発走  🏇【天ノ音まもり誕生日記念Ｃ１－４ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:20
 🏷️ 種別: 一般
-📢 レース名: 天ノ音まもり誕生日記念Ｃ１－４ 直200m 10
+📢 レース名: 天ノ音まもり誕生日記念Ｃ１－４ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830165500 +0900" stop="20260830172400 +0900" channel="boat.kiryu">
@@ -3194,12 +3162,12 @@ keirin.nagoya</desc>
 💛 ガールズ</desc>
     </programme>
     <programme start="20260830172300 +0900" stop="20260830175800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【７Ｒ】  17:55発走  🏇【かーちゃん還暦おめでとう杯Ｂ４－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【７Ｒ】  17:55発走  🏇【有 かーちゃん還暦おめでとう杯Ｂ４－２ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:55
 🏷️ 種別: 一般
-📢 レース名: かーちゃん還暦おめでとう杯Ｂ４－２ 直200m 10
+📢 レース名: 有 かーちゃん還暦おめでとう杯Ｂ４－２ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830172400 +0900" stop="20260830175400 +0900" channel="boat.kiryu">
@@ -3302,12 +3270,12 @@ keirin.nagoya</desc>
 📅 開催日次: 最終日</desc>
     </programme>
     <programme start="20260830175800 +0900" stop="20260830183300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【８Ｒ】  18:30発走  🏇【夢つなぐ帯広西ロータリー杯２歳Ａ－３ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【８Ｒ】  18:30発走  🏇【夢つなぐ帯広西ロータリー杯２歳Ａ－３ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 18:30
 🏷️ 種別: 一般
-📢 レース名: 夢つなぐ帯広西ロータリー杯２歳Ａ－３ 直200m 10
+📢 レース名: 夢つなぐ帯広西ロータリー杯２歳Ａ－３ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830180300 +0900" stop="20260830181500 +0900" channel="auto.isesaki">
@@ -3404,12 +3372,12 @@ keirin.nagoya</desc>
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830183300 +0900" stop="20260830190300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【９Ｒ】  19:00発走  🏇【有鐘絶望デビュー記念杯Ｂ３－６ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【９Ｒ】  19:00発走  🏇【有鐘絶望デビュー記念杯Ｂ３－６ 直200m 曇 1.6 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:00
 🏷️ 種別: 一般
-📢 レース名: 有鐘絶望デビュー記念杯Ｂ３－６ 直200m 9
+📢 レース名: 有鐘絶望デビュー記念杯Ｂ３－６ 直200m 曇 1.6 9
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830183300 +0900" stop="20260830185900 +0900" channel="keirin.yokkaichi">
@@ -3503,12 +3471,12 @@ keirin.nagoya</desc>
 🔥 準決勝</desc>
     </programme>
     <programme start="20260830190300 +0900" stop="20260830193300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１０Ｒ】  19:30発走  🏇【第１３回イルムふかがわ杯Ｂ１－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１０Ｒ】  19:30発走  🏇【第１３回イルムふかがわ杯Ｂ１－２ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:30
 🏷️ 種別: 一般
-📢 レース名: 第１３回イルムふかがわ杯Ｂ１－２ 直200m 10
+📢 レース名: 第１３回イルムふかがわ杯Ｂ１－２ 直200m 曇 1.6 10
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830190500 +0900" stop="20260830193300 +0900" channel="boat.gamagori">
@@ -3582,10 +3550,6 @@ keirin.nagoya</desc>
         <desc lang="ja">騎手が同じ趣味を持つ騎手仲間たちと同好会を結成！Χ＝ファッション（2）</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830103021 +0000" stop="20260830110021 +0000" channel="jra.gch">
-        <title lang="ja">トレセンχ同好会 #10[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79212/S_860f039539aa42d7a9c842c8f45d69b5_20260702094245717.png</image>
-    </programme>
     <programme start="20260830193300 +0900" stop="20260830195900 +0900" channel="boat.gamagori">
         <title lang="ja">【１１Ｒ】  19:56発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 07 蒲郡
@@ -3595,12 +3559,12 @@ keirin.nagoya</desc>
 📅 2026年08月30日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260830193300 +0900" stop="20260830200800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１１Ｒ】  20:05発走  🏇【特別 新日本プロレス 帯広大会Ａ２混合 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１１Ｒ】  20:05発走  🏇【有 特別 新日本プロレス 帯広大会Ａ２混合 直200m 曇 1.6 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:05
 🏷️ 種別: 一般
-📢 レース名: 特別 新日本プロレス 帯広大会Ａ２混合 直200m 9
+📢 レース名: 有 特別 新日本プロレス 帯広大会Ａ２混合 直200m 曇 1.6 9
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830193800 +0900" stop="20260830200500 +0900" channel="keirin.kokura">
@@ -3663,7 +3627,7 @@ keirin.nagoya</desc>
         <desc lang="ja">展望レース：第５８回不来方賞 Jpn2</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830110021 +0000" stop="20260830120021 +0000" channel="jra.gch">
+    <programme start="20260830110034 +0000" stop="20260830120034 +0000" channel="jra.gch">
         <title lang="ja">2026岩手競馬DGショータイム！～不来方賞編～</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76931/S_0e2eb3c6e82e483a9623dfab03314568_20260605133903193.jpeg</image>
     </programme>
@@ -3695,12 +3659,12 @@ keirin.nagoya</desc>
 📅 2026年08月30日</desc>
     </programme>
     <programme start="20260830200800 +0900" stop="20260830204300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１２Ｒ】  20:40発走  🏇【Ｂ３－３ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１２Ｒ】  20:40発走  🏇【Ｂ３－３ 直200m 曇 1.6 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:40
 🏷️ 種別: 一般
-📢 レース名: Ｂ３－３ 直200m 10
+📢 レース名: Ｂ３－３ 直200m 曇 1.6 10
 🏆 メインレース
 📅 2026年08月30日</desc>
     </programme>
@@ -3826,7 +3790,7 @@ keirin.nagoya</desc>
 📢 開催名: オッズパーク杯
 📅 開催日次: 初日</desc>
     </programme>
-    <programme start="20260830120021 +0000" stop="20260830130021 +0000" channel="jra.gch">
+    <programme start="20260830120034 +0000" stop="20260830130034 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たち（ヴィブロス） #437[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79168/S_252f6881dd4b40578662859fef45a0b5_20260702091957179.jpg</image>
     </programme>
@@ -3905,7 +3869,7 @@ keirin.nagoya</desc>
         <desc lang="ja">「浅越ゴエ＆ミサイルマン岩部彰　前編」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830130021 +0000" stop="20260830133021 +0000" channel="jra.gch">
+    <programme start="20260830130034 +0000" stop="20260830133034 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79200/S_a3e1c61bad4443d1a6a61ce6ae0c8a28_20260702093646391.png</image>
     </programme>
@@ -3954,7 +3918,7 @@ keirin.nagoya</desc>
 📢 開催名: ＣＴＣなら３分前まで買える杯
 📅 開催日次: 初日</desc>
     </programme>
-    <programme start="20260830133021 +0000" stop="20260830140021 +0000" channel="jra.gch">
+    <programme start="20260830133034 +0000" stop="20260830140034 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/68520/S_1ea54bc8a8c5404998a3656f4afe59c6_20260403130550526.png</image>
     </programme>
@@ -3995,7 +3959,7 @@ keirin.nagoya</desc>
         <desc lang="ja">「第３回新潟競馬第４日・第３回中京競馬第４日・第２回札幌競馬第４日」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830140021 +0000" stop="20260829153021 +0000" channel="jra.gch">
+    <programme start="20260830140034 +0000" stop="20260829153034 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
@@ -4046,13 +4010,13 @@ keirin.nagoya</desc>
         <title lang="ja">🔄 ただ今データ取得準備中です。 13 尼崎（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.ashiya">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 21 芦屋（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831083500 +0900" channel="boat.ashiya">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.biwako">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 11 びわこ（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831104300 +0900" channel="boat.biwako">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.edogawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 03 江戸川（ボートレース）</title>
@@ -4062,29 +4026,29 @@ keirin.nagoya</desc>
         <title lang="ja">🔄 ただ今データ取得準備中です。 22 福岡（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.gamagori">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 07 蒲郡（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831152000 +0900" channel="boat.gamagori">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.hamanako">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 06 浜名湖（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831112700 +0900" channel="boat.hamanako">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.heiwajima">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 04 平和島（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831115100 +0900" channel="boat.heiwajima">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.karatsu">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 23 からつ（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831084300 +0900" channel="boat.karatsu">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.kiryu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 01 桐生（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.kojima">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 16 児島（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831112300 +0900" channel="boat.kojima">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.marugame">
         <title lang="ja">🔄 ただ今データ取得準備中です。 15 丸亀（ボートレース）</title>
@@ -4106,37 +4070,37 @@ keirin.nagoya</desc>
         <title lang="ja">🔄 ただ今データ取得準備中です。 24 大村（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.shimonoseki">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 19 下関（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831152900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.suminoe">
         <title lang="ja">🔄 ただ今データ取得準備中です。 12 住之江（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.tamagawa">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 05 多摩川（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831113200 +0900" channel="boat.tamagawa">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.toda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 02 戸田（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.tokoname">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 08 常滑（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831103400 +0900" channel="boat.tokoname">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.tokuyama">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 18 徳山（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831083800 +0900" channel="boat.tokuyama">
+        <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.tsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 09 津（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="boat.wakamatsu">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 20 若松（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260831000000 +0900" stop="20260831151000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260831000000 +0900" stop="20260831080000 +0900" channel="chihou.funabashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 船橋（競馬）</title>
@@ -4387,7 +4351,7 @@ keirin.nagoya</desc>
         <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830153021 +0000" stop="20260830163021 +0000" channel="jra.gch">
+    <programme start="20260830153034 +0000" stop="20260830163034 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -4396,7 +4360,7 @@ keirin.nagoya</desc>
         <desc lang="ja">「浅越ゴエ＆ミサイルマン岩部彰　前編」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830163021 +0000" stop="20260830170021 +0000" channel="jra.gch">
+    <programme start="20260830163034 +0000" stop="20260830170034 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79200/S_a3e1c61bad4443d1a6a61ce6ae0c8a28_20260702093646391.png</image>
     </programme>
@@ -4405,21 +4369,39 @@ keirin.nagoya</desc>
         <desc lang="ja">「第３回新潟競馬第３・４日、第３回中京競馬第３・４日、第２回札幌競馬第３・４日」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260830170021 +0000" stop="20260830200021 +0000" channel="jra.gch">
+    <programme start="20260830170034 +0000" stop="20260830200034 +0000" channel="jra.gch">
         <title lang="ja">今週のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
-    <programme start="20260830200021 +0000" stop="20260830203021 +0000" channel="jra.gch">
+    <programme start="20260830200000 +0000" stop="20260830203000 +0000" channel="jra.gch">
+        <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
+        <desc lang="ja" />
+    </programme>
+    <programme start="20260830200034 +0000" stop="20260830203034 +0000" channel="jra.gch">
         <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
     </programme>
-    <programme start="20260830213021 +0000" stop="20260830220021 +0000" channel="jra.gch">
+    <programme start="20260830213000 +0000" stop="20260830220000 +0000" channel="jra.gch">
+        <title lang="ja">カラーバー・ＧＣロゴ</title>
+        <desc lang="ja" />
+    </programme>
+    <programme start="20260830213034 +0000" stop="20260830220034 +0000" channel="jra.gch">
         <title lang="ja">カラーバー・ＧＣロゴ</title>
     </programme>
-    <programme start="20260830220021 +0000" stop="20260830223021 +0000" channel="jra.gch">
+    <programme start="20260830220000 +0000" stop="20260830223000 +0000" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！9 #16</title>
+        <desc lang="ja">「農場HACCP取り組みの現場」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260830220034 +0000" stop="20260830223034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260830223021 +0000" stop="20260830230021 +0000" channel="jra.gch">
+    <programme start="20260830223000 +0000" stop="20260830230000 +0000" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！8 #17</title>
+        <desc lang="ja">「なるほど！畜産現場　「国際養鶏養豚総合展2024 総集編」」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260830223034 +0000" stop="20260830230034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！8 #17[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
@@ -4541,6 +4523,11 @@ keirin.nagoya</desc>
         <title lang="ja">⏳ JRA 開催情報確認待ち JRA EAST</title>
         <desc lang="ja">JRA公式の2026年08月31日開催情報を取得できませんでした。
 開催・非開催をまだ確定していません。</desc>
+    </programme>
+    <programme start="20260830230000 +0000" stop="20260830233000 +0000" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！7 #17</title>
+        <desc lang="ja">「畜産トレンド発見！天皇杯受賞等から見る畜産優良経営」</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831080000 +0900" stop="20260831235900 +0900" channel="jra.hokkaido">
         <title lang="ja">⏳ JRA 開催情報確認待ち JRA HOKKAIDO</title>
@@ -4780,17 +4767,120 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260830230021 +0000" stop="20260830233021 +0000" channel="jra.gch">
+    <programme start="20260830230034 +0000" stop="20260830233034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！7 #17[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260830233021 +0000" stop="20260831000021 +0000" channel="jra.gch">
+    <programme start="20260830233000 +0000" stop="20260831000000 +0000" channel="jra.gch">
+        <title lang="ja">がんばる！畜産！6 #17</title>
+        <desc lang="ja">「なるほど！畜産現場　総集編　国際養鶏養豚総合展2022」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260830233034 +0000" stop="20260831000034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！6 #17[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260831000021 +0000" stop="20260831010021 +0000" channel="jra.gch">
+    <programme start="20260831083500 +0900" stop="20260831090100 +0900" channel="boat.ashiya">
+        <title lang="ja">【２Ｒ】  08:58発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 08:58
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831083800 +0900" stop="20260831085100 +0900" channel="boat.tokuyama">
+        <title lang="ja">【１Ｒ】  08:48発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 08:48
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831084300 +0900" stop="20260831090900 +0900" channel="boat.karatsu">
+        <title lang="ja">【２Ｒ】  09:06発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 09:06
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831085100 +0900" stop="20260831091700 +0900" channel="boat.tokuyama">
+        <title lang="ja">【２Ｒ】  09:14発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 09:14
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831000000 +0000" stop="20260831010000 +0000" channel="jra.gch">
+        <title lang="ja">ＧＣＨ傑作選（証言〜藤沢和雄調教師1500勝の記録） #73</title>
+        <desc lang="ja">証言〜藤沢和雄調教師1500勝の記録</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831000034 +0000" stop="20260831010034 +0000" channel="jra.gch">
         <title lang="ja">[無]ＧＣＨ傑作選（証言～藤沢和雄調教師1500勝の記録） #73[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49120/S_2a596972ee914754a4493cb66202ca40_20251226104123893.jpg</image>
+    </programme>
+    <programme start="20260831090100 +0900" stop="20260831092700 +0900" channel="boat.ashiya">
+        <title lang="ja">【３Ｒ】  09:24発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 09:24
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831090900 +0900" stop="20260831093500 +0900" channel="boat.karatsu">
+        <title lang="ja">【３Ｒ】  09:32発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 09:32
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831091700 +0900" stop="20260831094300 +0900" channel="boat.tokuyama">
+        <title lang="ja">【３Ｒ】  09:40発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 09:40
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831092700 +0900" stop="20260831095300 +0900" channel="boat.ashiya">
+        <title lang="ja">【４Ｒ】  09:50発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 09:50
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831093500 +0900" stop="20260831100100 +0900" channel="boat.karatsu">
+        <title lang="ja">【４Ｒ】  09:58発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 09:58
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831094300 +0900" stop="20260831100900 +0900" channel="boat.tokuyama">
+        <title lang="ja">【４Ｒ】  10:06発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 10:06
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831095300 +0900" stop="20260831102000 +0900" channel="boat.ashiya">
+        <title lang="ja">【５Ｒ】  10:17発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 10:17
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831010000 +0000" stop="20260831013000 +0000" channel="jra.gch">
+        <title lang="ja">新・馬学講座ホースアカデミー #113</title>
+        <desc lang="ja">「サラブレッドの最新遺伝学〜遺伝学の基礎〜」</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831100000 +0900" stop="20260831140000 +0900" channel="keirin.matsusaka">
         <title lang="ja">【F2】 松阪 🌅モーニング 開催予定 （仮時間）※実際の時間ではありません</title>
@@ -4813,141 +4903,38 @@ keirin.nagoya</desc>
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831010021 +0000" stop="20260831013021 +0000" channel="jra.gch">
+    <programme start="20260831010034 +0000" stop="20260831013034 +0000" channel="jra.gch">
         <title lang="ja">[無]新・馬学講座ホースアカデミー #113[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83270/S_f432d241a52b4cd6ac6bcf503f551663_20260804175206899.png</image>
     </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.ashiya">
-        <title lang="ja">🚤 21 芦屋 ☀️開催 ギラヴァンツ北九州カップ （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 21 芦屋
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.biwako">
-        <title lang="ja">🚤 11 びわこ ☀️開催 ボートピア京都やわた開設１９周年記念 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 11 びわこ
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.gamagori">
-        <title lang="ja">🚤 07 蒲郡 ☀️開催 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 07 蒲郡
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.hamanako">
-        <title lang="ja">🚤 06 浜名湖 ☀️開催 オールレディース静岡クラウンメロン杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 06 浜名湖
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.heiwajima">
-        <title lang="ja">🚤 04 平和島 ☀️開催 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 04 平和島
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.karatsu">
-        <title lang="ja">🚤 23 からつ ☀️開催 サマーモーニングバトル （仮時間）※実際の時間ではありません</title>
+    <programme start="20260831100100 +0900" stop="20260831103100 +0900" channel="boat.karatsu">
+        <title lang="ja">【５Ｒ】  10:28発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 23 からつ
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 10:28
+📅 2026年08月31日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.kojima">
-        <title lang="ja">🚤 16 児島 ☀️開催 ＢＴＳ松江開設２６周年記念競走 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 16 児島
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.shimonoseki">
-        <title lang="ja">🚤 19 下関 ☀️開催 ＢＴＳながとオープン６周年記念 新東通信杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 19 下関
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.tamagawa">
-        <title lang="ja">🚤 05 多摩川 ☀️開催 第１２回ホットマンカップ （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 05 多摩川
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.tokoname">
-        <title lang="ja">🚤 08 常滑 ☀️開催 誠進社杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 08 常滑
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
-    </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.tokuyama">
-        <title lang="ja">🚤 18 徳山 ☀️開催 にっぽん未来プロジェクト競走ｉｎ徳山 （仮時間）※実際の時間ではありません</title>
+    <programme start="20260831100900 +0900" stop="20260831103800 +0900" channel="boat.tokuyama">
+        <title lang="ja">【５Ｒ】  10:35発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 18 徳山
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 10:35
+📅 2026年08月31日 開催区分: モーニング</desc>
     </programme>
-    <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="boat.wakamatsu">
-        <title lang="ja">🚤 20 若松 ☀️開催 マスターズリーグ第５戦九州スポーツ杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 20 若松
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年08月31日</desc>
+    <programme start="20260831102000 +0900" stop="20260831104800 +0900" channel="boat.ashiya">
+        <title lang="ja">【６Ｒ】  10:45発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 10:45
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831013000 +0000" stop="20260831020000 +0000" channel="jra.gch">
+        <title lang="ja">Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
+        <desc lang="ja">大自然の中でのびのびと過ごす馬の姿をお届けします。</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831103000 +0900" stop="20260831170000 +0900" channel="keirin.kawasaki">
         <title lang="ja">【F1】 川崎 ☀️デイ 最終日 開催予定 （仮時間）※実際の時間ではありません</title>
@@ -4980,17 +4967,163 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831013021 +0000" stop="20260831020021 +0000" channel="jra.gch">
+    <programme start="20260831013034 +0000" stop="20260831020034 +0000" channel="jra.gch">
         <title lang="ja">[無]Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/6578/S_c5b1f425c91345e09dcbacfa6bb671c5_20250512104702669.png</image>
     </programme>
-    <programme start="20260831020021 +0000" stop="20260831023021 +0000" channel="jra.gch">
+    <programme start="20260831103100 +0900" stop="20260831110000 +0900" channel="boat.karatsu">
+        <title lang="ja">【６Ｒ】  10:57発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 10:57
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831103400 +0900" stop="20260831110400 +0900" channel="boat.tokoname">
+        <title lang="ja">【２Ｒ】  11:01発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 11:01
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831103800 +0900" stop="20260831110700 +0900" channel="boat.tokuyama">
+        <title lang="ja">【６Ｒ】  11:04発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 11:04
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831104300 +0900" stop="20260831111200 +0900" channel="boat.biwako">
+        <title lang="ja">【２Ｒ】  11:09発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 11:09
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831104800 +0900" stop="20260831112100 +0900" channel="boat.ashiya">
+        <title lang="ja">【７Ｒ】  11:18発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 11:18
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831110000 +0900" stop="20260831113600 +0900" channel="boat.karatsu">
+        <title lang="ja">【７Ｒ】  11:33発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 11:33
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831020000 +0000" stop="20260831023000 +0000" channel="jra.gch">
+        <title lang="ja">新・競馬ワンダラー2 #1</title>
+        <desc lang="ja">「神戸　文明開化の競馬場」【2013年放送】</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831020034 +0000" stop="20260831023034 +0000" channel="jra.gch">
         <title lang="ja">[無]新・競馬ワンダラー2 #1[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/73749/S_96c51e8fbc4345f4bb90c181c8de05ec_20260516101429079.png</image>
     </programme>
-    <programme start="20260831023021 +0000" stop="20260831030021 +0000" channel="jra.gch">
+    <programme start="20260831110400 +0900" stop="20260831113000 +0900" channel="boat.tokoname">
+        <title lang="ja">【３Ｒ】  11:27発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 11:27
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831110700 +0900" stop="20260831114000 +0900" channel="boat.tokuyama">
+        <title lang="ja">【７Ｒ】  11:37発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 11:37
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831111200 +0900" stop="20260831114500 +0900" channel="boat.biwako">
+        <title lang="ja">【３Ｒ】  11:42発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 11:42
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831112100 +0900" stop="20260831115500 +0900" channel="boat.ashiya">
+        <title lang="ja">【８Ｒ】  11:52発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 11:52
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831112300 +0900" stop="20260831114900 +0900" channel="boat.kojima">
+        <title lang="ja">【２Ｒ】  11:46発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 11:46
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831112700 +0900" stop="20260831115800 +0900" channel="boat.hamanako">
+        <title lang="ja">【２Ｒ】  11:55発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 11:55
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831113000 +0900" stop="20260831120100 +0900" channel="boat.tokoname">
+        <title lang="ja">【４Ｒ】  11:58発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 11:58
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831023000 +0000" stop="20260831030000 +0000" channel="jra.gch">
+        <title lang="ja">馬産地通信 #351</title>
+        <desc lang="ja">「セレクションセールリポート(1)＆活躍馬のふるさと」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831023034 +0000" stop="20260831030034 +0000" channel="jra.gch">
         <title lang="ja">[無]馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/68520/S_1ea54bc8a8c5404998a3656f4afe59c6_20260403130550526.png</image>
+    </programme>
+    <programme start="20260831113200 +0900" stop="20260831120300 +0900" channel="boat.tamagawa">
+        <title lang="ja">【２Ｒ】  12:00発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 12:00
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831113600 +0900" stop="20260831120700 +0900" channel="boat.karatsu">
+        <title lang="ja">【８Ｒ】  12:04発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 12:04
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831114000 +0900" stop="20260831121200 +0900" channel="boat.tokuyama">
+        <title lang="ja">【８Ｒ】  12:09発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 12:09
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831114500 +0900" stop="20260831121700 +0900" channel="boat.biwako">
+        <title lang="ja">【４Ｒ】  12:14発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 12:14
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831114800 +0900" stop="20260831122300 +0900" channel="chihou.morioka">
         <title lang="ja">【２Ｒ】  12:20発走  🏇【Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5001,9 +5134,94 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831030021 +0000" stop="20260831033021 +0000" channel="jra.gch">
+    <programme start="20260831114900 +0900" stop="20260831122400 +0900" channel="boat.kojima">
+        <title lang="ja">【３Ｒ】  12:21発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 12:21
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831115100 +0900" stop="20260831122000 +0900" channel="boat.heiwajima">
+        <title lang="ja">【２Ｒ】  12:17発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 12:17
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831115500 +0900" stop="20260831123200 +0900" channel="boat.ashiya">
+        <title lang="ja">【９Ｒ】  12:29発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 12:29
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831115800 +0900" stop="20260831122600 +0900" channel="boat.hamanako">
+        <title lang="ja">【３Ｒ】  12:23発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 12:23
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831030000 +0000" stop="20260831033000 +0000" channel="jra.gch">
+        <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615</title>
+        <desc lang="ja">「浅越ゴエ＆ミサイルマン岩部彰　前編」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831030034 +0000" stop="20260831033034 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79200/S_a3e1c61bad4443d1a6a61ce6ae0c8a28_20260702093646391.png</image>
+    </programme>
+    <programme start="20260831120100 +0900" stop="20260831123500 +0900" channel="boat.tokoname">
+        <title lang="ja">【５Ｒ】  12:32発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 12:32
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831120300 +0900" stop="20260831123000 +0900" channel="boat.tamagawa">
+        <title lang="ja">【３Ｒ】  12:27発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 12:27
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831120700 +0900" stop="20260831123900 +0900" channel="boat.karatsu">
+        <title lang="ja">【９Ｒ】  12:36発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 12:36
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831121200 +0900" stop="20260831124400 +0900" channel="boat.tokuyama">
+        <title lang="ja">【９Ｒ】  12:41発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 12:41
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831121700 +0900" stop="20260831124700 +0900" channel="boat.biwako">
+        <title lang="ja">【５Ｒ】  12:44発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 12:44
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831122000 +0900" stop="20260831124900 +0900" channel="boat.heiwajima">
+        <title lang="ja">【３Ｒ】  12:46発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 12:46
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831122300 +0900" stop="20260831125800 +0900" channel="chihou.morioka">
         <title lang="ja">【３Ｒ】  12:55発走  🏇【Ｃ２四組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5014,9 +5232,94 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２四組
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831033021 +0000" stop="20260831040021 +0000" channel="jra.gch">
+    <programme start="20260831122400 +0900" stop="20260831130100 +0900" channel="boat.kojima">
+        <title lang="ja">【４Ｒ】  12:58発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 12:58
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831122600 +0900" stop="20260831125500 +0900" channel="boat.hamanako">
+        <title lang="ja">【４Ｒ】  12:52発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 12:52
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831123000 +0900" stop="20260831130300 +0900" channel="boat.tamagawa">
+        <title lang="ja">【４Ｒ】  13:00発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 13:00
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831033000 +0000" stop="20260831040000 +0000" channel="jra.gch">
+        <title lang="ja">スタリオンライブラリー #90</title>
+        <desc lang="ja">「Toronado、Tassort」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831033034 +0000" stop="20260831040034 +0000" channel="jra.gch">
         <title lang="ja">スタリオンライブラリー #90[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83468/S_1594072fdd8b488a870a2d5bbbb51037_20260805110834248.png</image>
+    </programme>
+    <programme start="20260831123200 +0900" stop="20260831130500 +0900" channel="boat.ashiya">
+        <title lang="ja">【１０Ｒ】  13:02発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 13:02
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831123500 +0900" stop="20260831130800 +0900" channel="boat.tokoname">
+        <title lang="ja">【６Ｒ】  13:05発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 13:05
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831123900 +0900" stop="20260831131100 +0900" channel="boat.karatsu">
+        <title lang="ja">【１０Ｒ】  13:08発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 13:08
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831124400 +0900" stop="20260831131600 +0900" channel="boat.tokuyama">
+        <title lang="ja">【１０Ｒ】  13:13発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 13:13
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831124700 +0900" stop="20260831131400 +0900" channel="boat.biwako">
+        <title lang="ja">【６Ｒ】  13:11発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 13:11
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831124900 +0900" stop="20260831131900 +0900" channel="boat.heiwajima">
+        <title lang="ja">【４Ｒ】  13:16発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 13:16
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831125500 +0900" stop="20260831132500 +0900" channel="boat.hamanako">
+        <title lang="ja">【５Ｒ】  13:22発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 13:22
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831125800 +0900" stop="20260831133300 +0900" channel="chihou.morioka">
         <title lang="ja">【４Ｒ】  13:30発走  🏇【Ｃ２三組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5027,9 +5330,94 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２三組
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831040021 +0000" stop="20260831050021 +0000" channel="jra.gch">
+    <programme start="20260831040000 +0000" stop="20260831050000 +0000" channel="jra.gch">
+        <title lang="ja">競馬年鑑（平成27年Ｐａｒｔ5） #181</title>
+        <desc lang="ja">「平成２７年Part５(セントウルS〜みやこＳ)」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831040034 +0000" stop="20260831050034 +0000" channel="jra.gch">
         <title lang="ja">競馬年鑑（平成27年Ｐａｒｔ5） #181[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/37338/S_0c824ea12fda4e5fb9511f648990702d_20251008175905256.png</image>
+    </programme>
+    <programme start="20260831130100 +0900" stop="20260831133800 +0900" channel="boat.kojima">
+        <title lang="ja">【５Ｒ】  13:35発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 13:35
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831130300 +0900" stop="20260831133100 +0900" channel="boat.tamagawa">
+        <title lang="ja">【５Ｒ】  13:28発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 13:28
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831130500 +0900" stop="20260831134000 +0900" channel="boat.ashiya">
+        <title lang="ja">【１１Ｒ】  13:37発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 13:37
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831130800 +0900" stop="20260831133400 +0900" channel="boat.tokoname">
+        <title lang="ja">【７Ｒ】  13:31発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 13:31
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831131100 +0900" stop="20260831134700 +0900" channel="boat.karatsu">
+        <title lang="ja">【１１Ｒ】  13:44発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 13:44
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831131400 +0900" stop="20260831134300 +0900" channel="boat.biwako">
+        <title lang="ja">【７Ｒ】  13:40発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 13:40
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831131600 +0900" stop="20260831135300 +0900" channel="boat.tokuyama">
+        <title lang="ja">【１１Ｒ】  13:50発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 13:50
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831131900 +0900" stop="20260831135000 +0900" channel="boat.heiwajima">
+        <title lang="ja">【５Ｒ】  13:47発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 13:47
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831132500 +0900" stop="20260831135700 +0900" channel="boat.hamanako">
+        <title lang="ja">【６Ｒ】  13:54発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 13:54
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831133100 +0900" stop="20260831140500 +0900" channel="boat.tamagawa">
+        <title lang="ja">【６Ｒ】  14:02発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 14:02
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831133300 +0900" stop="20260831140800 +0900" channel="chihou.morioka">
         <title lang="ja">【５Ｒ】  14:05発走  🏇【３歳Ｃ２六組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5040,6 +5428,38 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳Ｃ２六組
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831133400 +0900" stop="20260831140200 +0900" channel="boat.tokoname">
+        <title lang="ja">【８Ｒ】  13:59発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 13:59
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831133800 +0900" stop="20260831141500 +0900" channel="boat.kojima">
+        <title lang="ja">【６Ｒ】  14:12発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 14:12
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831134000 +0900" stop="20260831141700 +0900" channel="boat.ashiya">
+        <title lang="ja">【１２Ｒ】  14:14発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 14:14
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831134300 +0900" stop="20260831141000 +0900" channel="boat.biwako">
+        <title lang="ja">【８Ｒ】  14:07発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 14:07
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831134500 +0900" stop="20260831135800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【１Ｒ】  13:55発走  🏇【３歳Ｂ１０ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5048,6 +5468,38 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: ３歳Ｂ１０
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831134700 +0900" stop="20260831142600 +0900" channel="boat.karatsu">
+        <title lang="ja">【１２Ｒ】  14:23発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 14:23
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831135000 +0900" stop="20260831142100 +0900" channel="boat.heiwajima">
+        <title lang="ja">【６Ｒ】  14:18発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 14:18
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831135300 +0900" stop="20260831142900 +0900" channel="boat.tokuyama">
+        <title lang="ja">【１２Ｒ】  14:26発走  🚤【🌅モーニング にっぽん未来プロジェクト競走ｉｎ徳山 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 18 徳山
+📢 にっぽん未来プロジェクト競走ｉｎ徳山
+🌅
+⏰ 発走予定: 14:26
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831135700 +0900" stop="20260831143100 +0900" channel="boat.hamanako">
+        <title lang="ja">【７Ｒ】  14:28発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 14:28
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831135800 +0900" stop="20260831143300 +0900" channel="chihou.kanazawa">
         <title lang="ja">【２Ｒ】  14:30発走  🏇【３歳Ｂ９ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5058,6 +5510,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳Ｂ９
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831050000 +0000" stop="20260831060000 +0000" channel="jra.gch">
+        <title lang="ja">栄光の名馬たちセレクション（ナリタブライアン）</title>
+        <desc lang="ja">#79「ナリタブライアン」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
     <programme start="20260831140000 +0900" stop="20260831235900 +0900" channel="keirin.matsusaka">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">松阪の本日の競輪は全て終了しました。</desc>
@@ -5066,9 +5523,25 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">和歌山の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260831050021 +0000" stop="20260831060021 +0000" channel="jra.gch">
+    <programme start="20260831050034 +0000" stop="20260831060034 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たちセレクション（ナリタブライアン）[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29487/S_f1303a79afdf4b8fa9ccf82ef3bf3ee7_20250918192701361.png</image>
+    </programme>
+    <programme start="20260831140200 +0900" stop="20260831143300 +0900" channel="boat.tokoname">
+        <title lang="ja">【９Ｒ】  14:30発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 14:30
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831140500 +0900" stop="20260831143500 +0900" channel="boat.tamagawa">
+        <title lang="ja">【７Ｒ】  14:32発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 14:32
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831140800 +0900" stop="20260831144300 +0900" channel="chihou.morioka">
         <title lang="ja">【６Ｒ】  14:40発走  🏇【３歳Ｃ２五組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5079,6 +5552,46 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳Ｃ２五組
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831141000 +0900" stop="20260831144200 +0900" channel="boat.biwako">
+        <title lang="ja">【９Ｒ】  14:39発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 14:39
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831141500 +0900" stop="20260901000000 +0900" channel="boat.ashiya">
+        <title lang="ja">【１Ｒ】  08:32発走  🚤【🌅モーニング ギラヴァンツ北九州カップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 21 芦屋
+📢 ギラヴァンツ北九州カップ
+🌅
+⏰ 発走予定: 08:32
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
+    <programme start="20260831141500 +0900" stop="20260831145000 +0900" channel="boat.kojima">
+        <title lang="ja">【７Ｒ】  14:47発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 14:47
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831142100 +0900" stop="20260831145300 +0900" channel="boat.heiwajima">
+        <title lang="ja">【７Ｒ】  14:50発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 14:50
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831142800 +0900" stop="20260901000000 +0900" channel="boat.karatsu">
+        <title lang="ja">【１Ｒ】  08:40発走  🚤【🌅モーニング サマーモーニングバトル 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 23 からつ
+📢 サマーモーニングバトル
+🌅
+⏰ 発走予定: 08:40
+📅 2026年08月31日 開催区分: モーニング</desc>
+    </programme>
     <programme start="20260831142800 +0900" stop="20260831150300 +0900" channel="chihou.obihiro">
         <title lang="ja">【２Ｒ】  15:00発走  🏇【佳乃子のばんえい再来場記念２歳Ｄ－７ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
@@ -5087,6 +5600,26 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 佳乃子のばんえい再来場記念２歳Ｄ－７ 直200m 10
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831142900 +0900" stop="20260901000000 +0900" channel="boat.tokuyama">
+        <title lang="ja">🏁 本日の🚤ボートレース🚤は終了しました</title>
+        <desc lang="ja">本日の全レースは終了しました。</desc>
+    </programme>
+    <programme start="20260831143100 +0900" stop="20260831150600 +0900" channel="boat.hamanako">
+        <title lang="ja">【８Ｒ】  15:03発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 15:03
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831143300 +0900" stop="20260831150300 +0900" channel="boat.tokoname">
+        <title lang="ja">【１０Ｒ】  15:00発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 15:00
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831143300 +0900" stop="20260831150800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【３Ｒ】  15:05発走  🏇【３歳Ｂ８ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5097,6 +5630,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳Ｂ８
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831143500 +0900" stop="20260831150800 +0900" channel="boat.tamagawa">
+        <title lang="ja">【８Ｒ】  15:05発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 15:05
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831144000 +0900" stop="20260831145300 +0900" channel="chihou.oi">
         <title lang="ja">【１Ｒ】  14:50発走  🏇【Ｃ３五 六 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5105,6 +5646,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: Ｃ３五 六
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831144200 +0900" stop="20260831151300 +0900" channel="boat.biwako">
+        <title lang="ja">【１０Ｒ】  15:10発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 15:10
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831144300 +0900" stop="20260831151800 +0900" channel="chihou.morioka">
         <title lang="ja">【７Ｒ】  15:15発走  🏇【３歳Ｃ２四組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5115,6 +5664,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳Ｃ２四組
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831145000 +0900" stop="20260831151800 +0900" channel="boat.kojima">
+        <title lang="ja">【８Ｒ】  15:15発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 15:15
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831145300 +0900" stop="20260831152500 +0900" channel="boat.heiwajima">
+        <title lang="ja">【８Ｒ】  15:22発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 15:22
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831145300 +0900" stop="20260831152500 +0900" channel="chihou.oi">
         <title lang="ja">【２Ｒ】  15:22発走  🏇【Ｃ３五 六 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5123,6 +5688,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: Ｃ３五 六
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831060000 +0000" stop="20260831063000 +0000" channel="jra.gch">
+        <title lang="ja">グラフで見る名馬倶楽部 #4</title>
+        <desc lang="ja">ゴールドアリュール(2)</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831150000 +0900" stop="20260831210000 +0900" channel="keirin.utsunomiya">
         <title lang="ja">【F1】 宇都宮 🌙ナイター 開催予定 （仮時間）※実際の時間ではありません</title>
@@ -5145,9 +5715,17 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831060021 +0000" stop="20260831063021 +0000" channel="jra.gch">
+    <programme start="20260831060034 +0000" stop="20260831063034 +0000" channel="jra.gch">
         <title lang="ja">グラフで見る名馬倶楽部 #4[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83493/S_29917f96ec6348c5a0c3963e420cb0a2_20260805112206758.JPG</image>
+    </programme>
+    <programme start="20260831150300 +0900" stop="20260831153400 +0900" channel="boat.tokoname">
+        <title lang="ja">【１１Ｒ】  15:31発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 15:31
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831150300 +0900" stop="20260831153800 +0900" channel="chihou.obihiro">
         <title lang="ja">【３Ｒ】  15:35発走  🏇【第６回キタノタイショウ記念２歳Ｄ－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5158,6 +5736,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 第６回キタノタイショウ記念２歳Ｄ－２ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831150600 +0900" stop="20260831153700 +0900" channel="boat.hamanako">
+        <title lang="ja">【９Ｒ】  15:34発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 15:34
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831150800 +0900" stop="20260831154000 +0900" channel="boat.tamagawa">
+        <title lang="ja">【９Ｒ】  15:37発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 15:37
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831150800 +0900" stop="20260831154300 +0900" channel="chihou.kanazawa">
         <title lang="ja">【４Ｒ】  15:40発走  🏇【りょうあすＷｅｄｄｉｎｇ記念３歳Ｂ７ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5166,6 +5760,30 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: りょうあすＷｅｄｄｉｎｇ記念３歳Ｂ７
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831151000 +0900" stop="20260831152300 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１Ｒ】  15:20発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 15:20
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831151300 +0900" stop="20260831154600 +0900" channel="boat.biwako">
+        <title lang="ja">【１１Ｒ】  15:43発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 15:43
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831151800 +0900" stop="20260831155300 +0900" channel="boat.kojima">
+        <title lang="ja">【９Ｒ】  15:50発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 15:50
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831151800 +0900" stop="20260831155300 +0900" channel="chihou.morioka">
         <title lang="ja">【８Ｒ】  15:50発走  🏇【Ｃ１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5176,6 +5794,30 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ１
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831152000 +0900" stop="20260831154300 +0900" channel="boat.gamagori">
+        <title lang="ja">【２Ｒ】  15:40発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 15:40
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831152300 +0900" stop="20260831155000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【２Ｒ】  15:47発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 15:47
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831152500 +0900" stop="20260831155500 +0900" channel="boat.heiwajima">
+        <title lang="ja">【９Ｒ】  15:52発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 15:52
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831152500 +0900" stop="20260831155700 +0900" channel="chihou.oi">
         <title lang="ja">【３Ｒ】  15:54発走  🏇【２歳新馬 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5185,9 +5827,38 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ２歳新馬
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831063021 +0000" stop="20260831070021 +0000" channel="jra.gch">
+    <programme start="20260831152900 +0900" stop="20260831155700 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【２Ｒ】  15:54発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 15:54
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831063000 +0000" stop="20260831070000 +0000" channel="jra.gch">
+        <title lang="ja">Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
+        <desc lang="ja">大自然の中でのびのびと過ごす馬の姿をお届けします。</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831063034 +0000" stop="20260831070034 +0000" channel="jra.gch">
         <title lang="ja">Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/6578/S_c5b1f425c91345e09dcbacfa6bb671c5_20250512104702669.png</image>
+    </programme>
+    <programme start="20260831153400 +0900" stop="20260831160500 +0900" channel="boat.tokoname">
+        <title lang="ja">【１２Ｒ】  16:02発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 16:02
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831153700 +0900" stop="20260831160900 +0900" channel="boat.hamanako">
+        <title lang="ja">【１０Ｒ】  16:06発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 16:06
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831153800 +0900" stop="20260831161300 +0900" channel="chihou.obihiro">
         <title lang="ja">【４Ｒ】  16:10発走  🏇【てるＱばんえい初見参記念２歳Ｃ－５ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5198,6 +5869,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: てるＱばんえい初見参記念２歳Ｃ－５ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831154000 +0900" stop="20260831161100 +0900" channel="boat.tamagawa">
+        <title lang="ja">【１０Ｒ】  16:08発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 16:08
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831154300 +0900" stop="20260831160700 +0900" channel="boat.gamagori">
+        <title lang="ja">【３Ｒ】  16:04発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 16:04
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831154300 +0900" stop="20260831161800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【５Ｒ】  16:15発走  🏇【３歳Ｂ６ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5206,6 +5893,30 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: ３歳Ｂ６
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831154600 +0900" stop="20260831162800 +0900" channel="boat.biwako">
+        <title lang="ja">【１２Ｒ】  16:25発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 16:25
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831155000 +0900" stop="20260831161600 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【３Ｒ】  16:13発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 16:13
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831155300 +0900" stop="20260831162200 +0900" channel="boat.kojima">
+        <title lang="ja">【１０Ｒ】  16:19発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 16:19
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831155300 +0900" stop="20260831163300 +0900" channel="chihou.morioka">
         <title lang="ja">【９Ｒ】  16:30発走  🏇【Ｃ１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5216,6 +5927,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ１
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831155500 +0900" stop="20260831163000 +0900" channel="boat.heiwajima">
+        <title lang="ja">【１０Ｒ】  16:27発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 16:27
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831155700 +0900" stop="20260831162400 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【３Ｒ】  16:21発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 16:21
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831155700 +0900" stop="20260831162900 +0900" channel="chihou.oi">
         <title lang="ja">【４Ｒ】  16:26発走  🏇【２歳新馬 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5225,9 +5952,38 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ２歳新馬
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831070021 +0000" stop="20260831073021 +0000" channel="jra.gch">
+    <programme start="20260831070000 +0000" stop="20260831073000 +0000" channel="jra.gch">
+        <title lang="ja">馬産地通信 #351</title>
+        <desc lang="ja">「セレクションセールリポート(1)＆活躍馬のふるさと」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831070034 +0000" stop="20260831073034 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/68520/S_1ea54bc8a8c5404998a3656f4afe59c6_20260403130550526.png</image>
+    </programme>
+    <programme start="20260831160700 +0900" stop="20260831163400 +0900" channel="boat.gamagori">
+        <title lang="ja">【４Ｒ】  16:31発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 16:31
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831160900 +0900" stop="20260831163800 +0900" channel="boat.hamanako">
+        <title lang="ja">【１１Ｒ】  16:35発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 16:35
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831161100 +0900" stop="20260831164400 +0900" channel="boat.tamagawa">
+        <title lang="ja">【１１Ｒ】  16:41発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 16:41
+📅 2026年08月31日 開催区分: デイ</desc>
     </programme>
     <programme start="20260831161300 +0900" stop="20260831164800 +0900" channel="chihou.obihiro">
         <title lang="ja">【５Ｒ】  16:45発走  🏇【市郎美智子ばんえい来場記念Ｃ２－５ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5238,6 +5994,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 市郎美智子ばんえい来場記念Ｃ２－５ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831161600 +0900" stop="20260901000000 +0900" channel="boat.biwako">
+        <title lang="ja">【１Ｒ】  10:40発走  🚤【☀️デイ ボートピア京都やわた開設１９周年記念 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 11 びわこ
+📢 ボートピア京都やわた開設１９周年記念
+☀️
+⏰ 発走予定: 10:40
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831161600 +0900" stop="20260831164100 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【４Ｒ】  16:38発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 16:38
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831161800 +0900" stop="20260831165800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【６Ｒ】  16:55発走  🏇【９月６日俺の誕生日ってマ？記念３歳Ｂ５ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5246,6 +6018,30 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: ９月６日俺の誕生日ってマ？記念３歳Ｂ５
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831162200 +0900" stop="20260831165100 +0900" channel="boat.kojima">
+        <title lang="ja">【１１Ｒ】  16:48発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 16:48
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831162200 +0900" stop="20260901000000 +0900" channel="boat.tokoname">
+        <title lang="ja">【１Ｒ】  10:31発走  🚤【☀️デイ 誠進社杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 08 常滑
+📢 誠進社杯
+☀️
+⏰ 発走予定: 10:31
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831162400 +0900" stop="20260831165300 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【４Ｒ】  16:50発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 16:50
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831162900 +0900" stop="20260831170100 +0900" channel="chihou.oi">
         <title lang="ja">【５Ｒ】  16:58発走  🏇【３歳１１ １２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5256,7 +6052,20 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳１１ １２
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831073021 +0000" stop="20260831080021 +0000" channel="jra.gch">
+    <programme start="20260831163000 +0900" stop="20260831170300 +0900" channel="boat.heiwajima">
+        <title lang="ja">【１１Ｒ】  17:00発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 17:00
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831073000 +0000" stop="20260831080000 +0000" channel="jra.gch">
+        <title lang="ja">トレセンχ同好会 #10</title>
+        <desc lang="ja">騎手が同じ趣味を持つ騎手仲間たちと同好会を結成！Χ＝ファッション（2）</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831073034 +0000" stop="20260831080034 +0000" channel="jra.gch">
         <title lang="ja">トレセンχ同好会 #10[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79212/S_860f039539aa42d7a9c842c8f45d69b5_20260702094245717.png</image>
     </programme>
@@ -5269,6 +6078,38 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: リギル賞Ｃ１
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831163400 +0900" stop="20260831170400 +0900" channel="boat.gamagori">
+        <title lang="ja">【５Ｒ】  17:01発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 17:01
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831163800 +0900" stop="20260831171000 +0900" channel="boat.hamanako">
+        <title lang="ja">【１２Ｒ】  17:07発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 17:07
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831164100 +0900" stop="20260831171300 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【５Ｒ】  17:10発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 17:10
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831164400 +0900" stop="20260831171800 +0900" channel="boat.tamagawa">
+        <title lang="ja">【１２Ｒ】  17:15発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 17:15
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831164800 +0900" stop="20260831172300 +0900" channel="chihou.obihiro">
         <title lang="ja">【６Ｒ】  17:20発走  🏇【祝ひのえうま郁子ちゃん記念Ｃ１－６ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
@@ -5278,6 +6119,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 祝ひのえうま郁子ちゃん記念Ｃ１－６ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831165100 +0900" stop="20260831172300 +0900" channel="boat.kojima">
+        <title lang="ja">【１２Ｒ】  17:20発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 17:20
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831165300 +0900" stop="20260831172200 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【５Ｒ】  17:19発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 17:19
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831165800 +0900" stop="20260831173800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【７Ｒ】  17:35発走  🏇【特別 レッドスピネル特別３歳Ｂ１ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5286,6 +6143,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 レッドスピネル特別３歳Ｂ１
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831080000 +0000" stop="20260831090000 +0000" channel="jra.gch">
+        <title lang="ja">重賞メモリアル #1027</title>
+        <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831170000 +0900" stop="20260831235900 +0900" channel="keirin.kawasaki">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -5299,7 +6161,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">西武園の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260831080021 +0000" stop="20260831090021 +0000" channel="jra.gch">
+    <programme start="20260831080034 +0000" stop="20260831090034 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -5312,6 +6174,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳１１ １２
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831170300 +0900" stop="20260831173800 +0900" channel="boat.heiwajima">
+        <title lang="ja">【１２Ｒ】  17:35発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 17:35
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831170400 +0900" stop="20260831173100 +0900" channel="boat.gamagori">
+        <title lang="ja">【６Ｒ】  17:28発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 17:28
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831170800 +0900" stop="20260831174300 +0900" channel="chihou.morioka">
         <title lang="ja">【１１Ｒ】  17:40発走  🏇【特別 ハヤテ特別オープン 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 盛岡
@@ -5320,6 +6198,46 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 ハヤテ特別オープン
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831171100 +0900" stop="20260901000000 +0900" channel="boat.kojima">
+        <title lang="ja">【１Ｒ】  11:20発走  🚤【☀️デイ ＢＴＳ松江開設２６周年記念競走 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 16 児島
+📢 ＢＴＳ松江開設２６周年記念競走
+☀️
+⏰ 発走予定: 11:20
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831171300 +0900" stop="20260901000000 +0900" channel="boat.hamanako">
+        <title lang="ja">【１Ｒ】  11:24発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 06 浜名湖
+📢 オールレディース静岡クラウンメロン杯
+☀️
+⏰ 発走予定: 11:24
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831171300 +0900" stop="20260831174200 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【６Ｒ】  17:39発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 17:39
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831171800 +0900" stop="20260901000000 +0900" channel="boat.tamagawa">
+        <title lang="ja">【１Ｒ】  11:29発走  🚤【☀️デイ 第１２回ホットマンカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 05 多摩川
+📢 第１２回ホットマンカップ
+☀️
+⏰ 発走予定: 11:29
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260831172200 +0900" stop="20260831174900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【６Ｒ】  17:46発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 17:46
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831172300 +0900" stop="20260831175800 +0900" channel="chihou.obihiro">
         <title lang="ja">【７Ｒ】  17:55発走  🏇【翔輝くん生後６ヶ月記念Ｃ１－３ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5330,6 +6248,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 翔輝くん生後６ヶ月記念Ｃ１－３ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831173100 +0900" stop="20260831175800 +0900" channel="boat.gamagori">
+        <title lang="ja">【７Ｒ】  17:55発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 17:55
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831173300 +0900" stop="20260831180500 +0900" channel="chihou.oi">
         <title lang="ja">【７Ｒ】  18:02発走  🏇【Ｃ２八 九 十 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5339,6 +6265,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２八 九 十
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831173800 +0900" stop="20260901000000 +0900" channel="boat.heiwajima">
+        <title lang="ja">【１Ｒ】  11:48発走  🚤【☀️デイ オラレ刈羽開設１０周年記念第６４回東中スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 04 平和島
+📢 オラレ刈羽開設１０周年記念第６４回東中スポーツ杯
+☀️
+⏰ 発走予定: 11:48
+📅 2026年08月31日 開催区分: デイ</desc>
+    </programme>
     <programme start="20260831173800 +0900" stop="20260831181300 +0900" channel="chihou.kanazawa">
         <title lang="ja">【８Ｒ】  18:10発走  🏇【３歳Ｂ４ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5347,6 +6281,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: ３歳Ｂ４
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831174200 +0900" stop="20260831180700 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【７Ｒ】  18:04発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 18:04
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831174300 +0900" stop="20260831181800 +0900" channel="chihou.morioka">
         <title lang="ja">【１２Ｒ】  18:15発走  🏇【特別 スプリント特別オープン 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5358,6 +6300,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏆 メインレース
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831174900 +0900" stop="20260831181600 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【７Ｒ】  18:13発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 18:13
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831175800 +0900" stop="20260831182600 +0900" channel="boat.gamagori">
+        <title lang="ja">【８Ｒ】  18:23発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 18:23
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831175800 +0900" stop="20260831183300 +0900" channel="chihou.obihiro">
         <title lang="ja">【８Ｒ】  18:30発走  🏇【カス収益化おめでとう２歳Ａ－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
@@ -5367,7 +6325,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: カス収益化おめでとう２歳Ａ－２ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831090021 +0000" stop="20260831100021 +0000" channel="jra.gch">
+    <programme start="20260831090000 +0000" stop="20260831100000 +0000" channel="jra.gch">
+        <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (前編)</title>
+        <desc lang="ja">「キャプテン渡辺と仲間たちがダービーデーを楽しみ尽くす！」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831090034 +0000" stop="20260831100034 +0000" channel="jra.gch">
         <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (前編)[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84154/S_1a0123ca2075451bb338746fca87394e_20260806111436134.png</image>
     </programme>
@@ -5380,6 +6343,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: カサブランカ賞Ｃ２八 九 十
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831180700 +0900" stop="20260831183600 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【８Ｒ】  18:33発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 18:33
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831181300 +0900" stop="20260831184800 +0900" channel="chihou.kanazawa">
         <title lang="ja">【９Ｒ】  18:45発走  🏇【３歳Ｂ３ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5388,6 +6359,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: ３歳Ｂ３
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831181600 +0900" stop="20260831184600 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【８Ｒ】  18:43発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 18:43
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831182600 +0900" stop="20260831185700 +0900" channel="boat.gamagori">
+        <title lang="ja">【９Ｒ】  18:54発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 18:54
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831183300 +0900" stop="20260831190300 +0900" channel="chihou.obihiro">
         <title lang="ja">【９Ｒ】  19:00発走  🏇【第３回太内田優也おめでとうＢ４－４ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5398,6 +6385,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 第３回太内田優也おめでとうＢ４－４ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831183600 +0900" stop="20260831190700 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【９Ｒ】  19:04発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 19:04
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831183800 +0900" stop="20260831191000 +0900" channel="chihou.oi">
         <title lang="ja">【９Ｒ】  19:07発走  🏇【特別 りゅう座特別Ｃ１一選抜 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5406,6 +6401,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 りゅう座特別Ｃ１一選抜
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831184600 +0900" stop="20260831191700 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【９Ｒ】  19:14発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 19:14
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831184800 +0900" stop="20260831192300 +0900" channel="chihou.kanazawa">
         <title lang="ja">【１０Ｒ】  19:20発走  🏇【祝 新太郎＆千紘 結婚しました記３歳Ｂ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5416,7 +6419,20 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 祝 新太郎＆千紘 結婚しました記３歳Ｂ２
 📅 2026年08月31日</desc>
     </programme>
-    <programme start="20260831100021 +0000" stop="20260831130021 +0000" channel="jra.gch">
+    <programme start="20260831185700 +0900" stop="20260831192800 +0900" channel="boat.gamagori">
+        <title lang="ja">【１０Ｒ】  19:25発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 19:25
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831100000 +0000" stop="20260831130000 +0000" channel="jra.gch">
+        <title lang="ja">先週のレースリプレイ</title>
+        <desc lang="ja">「第３回新潟競馬第３・４日、第３回中京競馬第３・４日、第２回札幌競馬第３・４日」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831100034 +0000" stop="20260831130034 +0000" channel="jra.gch">
         <title lang="ja">先週のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
@@ -5429,6 +6445,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 長友翔 四半世紀生存記念Ｂ３－５ 直200m 10
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831190700 +0900" stop="20260831193900 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１０Ｒ】  19:36発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 19:36
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831191000 +0900" stop="20260831194300 +0900" channel="chihou.oi">
         <title lang="ja">【１０Ｒ】  19:40発走  🏇【晩夏賞Ｃ２八 九 十 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -5437,6 +6461,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 晩夏賞Ｃ２八 九 十
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831191700 +0900" stop="20260831195000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【１０Ｒ】  19:47発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 19:47
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831191800 +0900" stop="20260901000000 +0900" channel="chihou.morioka">
         <title lang="ja">【１Ｒ】  11:45発走  🏇【Ｃ２ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5456,6 +6488,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 能登復興支援 機具岩賞Ｂ１四
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831192800 +0900" stop="20260831200100 +0900" channel="boat.gamagori">
+        <title lang="ja">【１１Ｒ】  19:58発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 19:58
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831193800 +0900" stop="20260831201300 +0900" channel="chihou.obihiro">
         <title lang="ja">【１１Ｒ】  20:10発走  🏇【特別 白露特別Ｂ１－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
@@ -5464,6 +6504,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 白露特別Ｂ１－１ 直200m 10
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831193900 +0900" stop="20260831201000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１１Ｒ】  20:07発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 20:07
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831194300 +0900" stop="20260831201800 +0900" channel="chihou.oi">
         <title lang="ja">【１１Ｒ】  20:15発走  🏇【特別 サファイア賞Ｂ１二Ｂ２一選抜特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5474,6 +6522,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 サファイア賞Ｂ１二Ｂ２一選抜特別
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831195000 +0900" stop="20260831201900 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【１１Ｒ】  20:16発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 20:16
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831195800 +0900" stop="20260831203300 +0900" channel="chihou.kanazawa">
         <title lang="ja">【１２Ｒ】  20:30発走  🏇【特別 お家でネット投票！楽天競馬特別Ａ２ｂ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 金沢
@@ -5483,6 +6539,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 お家でネット投票！楽天競馬特別Ａ２ｂ
 🏆 メインレース
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831200100 +0900" stop="20260831203300 +0900" channel="boat.gamagori">
+        <title lang="ja">【１２Ｒ】  20:30発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 20:30
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831201000 +0900" stop="20260831204100 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１２Ｒ】  20:38発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 20:38
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831201300 +0900" stop="20260831204800 +0900" channel="chihou.obihiro">
         <title lang="ja">【１２Ｒ】  20:45発走  🏇【Ｂ４－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -5503,6 +6575,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 宮益坂賞Ｂ３一選抜特別
 🏆 メインレース
 📅 2026年08月31日</desc>
+    </programme>
+    <programme start="20260831201900 +0900" stop="20260831204800 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【１２Ｒ】  20:45発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 20:45
+📅 2026年08月31日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260831203000 +0900" stop="20260831233000 +0900" channel="auto.iizuka">
         <title lang="ja">📅 開催予定 飯塚 ⭐ミッドナイト 【普通開催】 AutoRace.JP投票杯飯塚オーバーミッドナイトオートレース～オトもっちカップ～ 4日目 （仮時間）※実際の時間ではありません</title>
@@ -5547,8 +6627,28 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年08月31日</desc>
     </programme>
+    <programme start="20260831203300 +0900" stop="20260901000000 +0900" channel="boat.gamagori">
+        <title lang="ja">【１Ｒ】  15:17発走  🚤【🌙ナイター 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 日刊ゲンダイ杯争奪 蒲郡トトまるナイト特別
+🌙
+⏰ 発走予定: 15:17
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260831203300 +0900" stop="20260901000000 +0900" channel="chihou.kanazawa">
         <title lang="ja">🏁 本日の🌙ナイター競馬🌙は終了しました</title>
+        <desc lang="ja">本日の全レースは終了しました。</desc>
+    </programme>
+    <programme start="20260831203800 +0900" stop="20260901000000 +0900" channel="boat.shimonoseki">
+        <title lang="ja">【１Ｒ】  15:26発走  🚤【🌙ナイター ＢＴＳながとオープン６周年記念 新東通信杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 19 下関
+📢 ＢＴＳながとオープン６周年記念 新東通信杯
+🌙
+⏰ 発走予定: 15:26
+📅 2026年08月31日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260831204100 +0900" stop="20260901000000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">🏁 本日の🌙ナイターボートレース🌙は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
     <programme start="20260831204300 +0900" stop="20260901000000 +0900" channel="chihou.obihiro">
@@ -5572,17 +6672,32 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">四日市の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260831130021 +0000" stop="20260831140021 +0000" channel="jra.gch">
+    <programme start="20260831130000 +0000" stop="20260831140000 +0000" channel="jra.gch">
+        <title lang="ja">先週の結果分析３ #35</title>
+        <desc lang="ja">「先週行われたレースをタイム面やレース内容等から鋭く分析！」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831130034 +0000" stop="20260831140034 +0000" channel="jra.gch">
         <title lang="ja">先週の結果分析３ #35</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49558/S_fe087ad462c943d59abd646546276cab_20251229150336120.png</image>
     </programme>
-    <programme start="20260831140021 +0000" stop="20260831143021 +0000" channel="jra.gch">
+    <programme start="20260831140000 +0000" stop="20260831143000 +0000" channel="jra.gch">
+        <title lang="ja">トレセンχ同好会 #11</title>
+        <desc lang="ja">騎手が同じ趣味を持つ騎手仲間たちと同好会を結成！Χ＝BBQ（1）</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831140034 +0000" stop="20260831143034 +0000" channel="jra.gch">
         <title lang="ja">トレセンχ同好会 #11[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83505/S_38996cf61251470a80f4640ab1728c46_20260805112706572.png</image>
     </programme>
     <programme start="20260831233000 +0900" stop="20260831235900 +0900" channel="auto.iizuka">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">飯塚の本日のオートレースは全て終了しました。</desc>
+    </programme>
+    <programme start="20260831143000 +0000" stop="20260831150000 +0000" channel="jra.gch">
+        <title lang="ja">ダート競馬JAPAN #166</title>
+        <desc lang="ja">「日本全国のダート競馬展望番組」</desc>
+        <category lang="ja">スポーツ</category>
     </programme>
     <programme start="20260831233000 +0900" stop="20260831235900 +0900" channel="keirin.gifu">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
@@ -5596,7 +6711,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">静岡の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260831143021 +0000" stop="20260830150021 +0000" channel="jra.gch">
+    <programme start="20260831143034 +0000" stop="20260830150034 +0000" channel="jra.gch">
         <title lang="ja">ダート競馬JAPAN #166</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/79154/S_f19eebb440214e348af57c6562016678_20260702091220428.png</image>
     </programme>
@@ -5780,6 +6895,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🔄 ただ今データ取得準備中です。 JRA EAST（JRA）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
+    <programme start="20260831150000 +0000" stop="20260831160000 +0000" channel="jra.gch">
+        <title lang="ja">重賞メモリアル #1027</title>
+        <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
     <programme start="20260901000000 +0900" stop="20260901080000 +0900" channel="jra.hokkaido">
         <title lang="ja">🔄 ただ今データ取得準備中です。 JRA HOKKAIDO（JRA）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
@@ -5960,25 +7080,34 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260831150021 +0000" stop="20260831160021 +0000" channel="jra.gch">
+    <programme start="20260831150034 +0000" stop="20260831160034 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
-    <programme start="20260831160021 +0000" stop="20260831170021 +0000" channel="jra.gch">
+    <programme start="20260831160000 +0000" stop="20260831170000 +0000" channel="jra.gch">
+        <title lang="ja">先週の結果分析３ #35</title>
+        <desc lang="ja">「先週行われたレースをタイム面やレース内容等から鋭く分析！」</desc>
+        <category lang="ja">スポーツ</category>
+    </programme>
+    <programme start="20260831160034 +0000" stop="20260831170034 +0000" channel="jra.gch">
         <title lang="ja">先週の結果分析３ #35</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49558/S_fe087ad462c943d59abd646546276cab_20251229150336120.png</image>
     </programme>
-    <programme start="20260831170021 +0000" stop="20260831173021 +0000" channel="jra.gch">
+    <programme start="20260831170000 +0000" stop="20260831173000 +0000" channel="jra.gch">
+        <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
+        <desc lang="ja" />
+    </programme>
+    <programme start="20260831170034 +0000" stop="20260831173034 +0000" channel="jra.gch">
         <title lang="ja">ＧＣ番宣・ロゴ・カラーバー</title>
     </programme>
-    <programme start="20260831213021 +0000" stop="20260831220021 +0000" channel="jra.gch">
+    <programme start="20260831213034 +0000" stop="20260831220034 +0000" channel="jra.gch">
         <title lang="ja">カラーバー・ＧＣロゴ</title>
     </programme>
-    <programme start="20260831220021 +0000" stop="20260831223021 +0000" channel="jra.gch">
+    <programme start="20260831220034 +0000" stop="20260831223034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260831223021 +0000" stop="20260831230021 +0000" channel="jra.gch">
+    <programme start="20260831223034 +0000" stop="20260831230034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！8 #18[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
@@ -6290,15 +7419,15 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月01日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260831230021 +0000" stop="20260831233021 +0000" channel="jra.gch">
+    <programme start="20260831230034 +0000" stop="20260831233034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！7 #18[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260831233021 +0000" stop="20260901000021 +0000" channel="jra.gch">
+    <programme start="20260831233034 +0000" stop="20260901000034 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！6 #18[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260901000021 +0000" stop="20260901010021 +0000" channel="jra.gch">
+    <programme start="20260901000034 +0000" stop="20260901010034 +0000" channel="jra.gch">
         <title lang="ja">[無]ＧＣＨ傑作選（証言～藤沢和雄調教師1500勝の記録） #73[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49120/S_2a596972ee914754a4493cb66202ca40_20251226104123893.jpg</image>
     </programme>
@@ -6323,7 +7452,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901010021 +0000" stop="20260901013021 +0000" channel="jra.gch">
+    <programme start="20260901010034 +0000" stop="20260901013034 +0000" channel="jra.gch">
         <title lang="ja">[無]新・馬学講座ホースアカデミー #113[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83270/S_f432d241a52b4cd6ac6bcf503f551663_20260804175206899.png</image>
     </programme>
@@ -6632,15 +7761,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901013021 +0000" stop="20260901020021 +0000" channel="jra.gch">
+    <programme start="20260901013034 +0000" stop="20260901020034 +0000" channel="jra.gch">
         <title lang="ja">[無]Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/6578/S_c5b1f425c91345e09dcbacfa6bb671c5_20250512104702669.png</image>
     </programme>
-    <programme start="20260901020021 +0000" stop="20260901023021 +0000" channel="jra.gch">
+    <programme start="20260901020034 +0000" stop="20260901023034 +0000" channel="jra.gch">
         <title lang="ja">[無]新・競馬ワンダラー2 #2[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/73749/S_96c51e8fbc4345f4bb90c181c8de05ec_20260516101429079.png</image>
     </programme>
-    <programme start="20260901023021 +0000" stop="20260901030021 +0000" channel="jra.gch">
+    <programme start="20260901023034 +0000" stop="20260901030034 +0000" channel="jra.gch">
         <title lang="ja">[無]草野仁のGate J.プラス（三浦大輔＆三浦凪沙 後編）#302[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84097/S_bfb10ac754714ac4b7dc8b379a1aab64_20260806105318210.JPG</image>
     </programme>
@@ -6653,7 +7782,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｃ２一組
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901030021 +0000" stop="20260901033021 +0000" channel="jra.gch">
+    <programme start="20260901030034 +0000" stop="20260901033034 +0000" channel="jra.gch">
         <title lang="ja">ダート競馬JAPAN #166</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/73755/S_e451c2bc7cf54d83b98ed2fe96d1a913_20260516111309887.png</image>
     </programme>
@@ -6666,7 +7795,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: ３歳Ｃ２八組
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901033021 +0000" stop="20260901040021 +0000" channel="jra.gch">
+    <programme start="20260901033034 +0000" stop="20260901040034 +0000" channel="jra.gch">
         <title lang="ja">スタリオンライブラリー #90[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83468/S_1594072fdd8b488a870a2d5bbbb51037_20260805110834248.png</image>
     </programme>
@@ -6679,7 +7808,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: うまレター賞３歳Ｃ２七組
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901040021 +0000" stop="20260901050021 +0000" channel="jra.gch">
+    <programme start="20260901040034 +0000" stop="20260901050034 +0000" channel="jra.gch">
         <title lang="ja">競馬年鑑（平成27年Ｐａｒｔ6） #182[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/37338/S_0c824ea12fda4e5fb9511f648990702d_20251008175905256.png</image>
     </programme>
@@ -6700,7 +7829,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">和歌山の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260901050021 +0000" stop="20260901060021 +0000" channel="jra.gch">
+    <programme start="20260901050034 +0000" stop="20260901060034 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たちセレクション（ダンスインザダーク）[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29487/S_f1303a79afdf4b8fa9ccf82ef3bf3ee7_20250918192701361.png</image>
     </programme>
@@ -6807,7 +7936,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901060021 +0000" stop="20260901063021 +0000" channel="jra.gch">
+    <programme start="20260901060034 +0000" stop="20260901063034 +0000" channel="jra.gch">
         <title lang="ja">グラフで見る名馬倶楽部 #5[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83496/S_c34fb01aa08443c1b9792fc29d0c0c73_20260805112244736.JPG</image>
     </programme>
@@ -6856,7 +7985,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: ２歳新馬
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901063021 +0000" stop="20260901073021 +0000" channel="jra.gch">
+    <programme start="20260901063034 +0000" stop="20260901073034 +0000" channel="jra.gch">
         <title lang="ja">2026岩手競馬DGショータイム！～不来方賞編～</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84140/S_50575a4626f64a3fa2e82b651e543e2d_20260806110805812.png</image>
     </programme>
@@ -6941,7 +8070,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: ３歳八 九 十
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901073021 +0000" stop="20260901090021 +0000" channel="jra.gch">
+    <programme start="20260901073034 +0000" stop="20260901090034 +0000" channel="jra.gch">
         <title lang="ja">[生]グリーンチャンネル地方競馬中継（不来方賞・盛岡）</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84144/S_7b36dbc771004cc6907220eea947add2_20260806110925296.jpg</image>
     </programme>
@@ -7088,7 +8217,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｃ１３組
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901090021 +0000" stop="20260901100021 +0000" channel="jra.gch">
+    <programme start="20260901090034 +0000" stop="20260901100034 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -7173,7 +8302,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 アルフェラッツ大空特別Ｂ１ｂ
 📅 2026年09月01日</desc>
     </programme>
-    <programme start="20260901100021 +0000" stop="20260901130021 +0000" channel="jra.gch">
+    <programme start="20260901100034 +0000" stop="20260901130034 +0000" channel="jra.gch">
         <title lang="ja">ザ・パトロールビデオ（場別） #919</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/37346/S_1584f0af7ff84474872a2ecea8e8dd33_20251008184251395.png</image>
     </programme>
@@ -7340,11 +8469,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">伊勢崎の本日のオートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260901130021 +0000" stop="20260901140021 +0000" channel="jra.gch">
+    <programme start="20260901130034 +0000" stop="20260901140034 +0000" channel="jra.gch">
         <title lang="ja">競馬ブロス #173</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/43230/S_3e19b58c18694381a829ff7f2d787b42_20251114163845545.png</image>
     </programme>
-    <programme start="20260901140021 +0000" stop="20260831150021 +0000" channel="jra.gch">
+    <programme start="20260901140034 +0000" stop="20260831150034 +0000" channel="jra.gch">
         <title lang="ja">先週の結果分析３ #35[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49136/S_07b8f81a6fca48eaac2ee5a729d3b67a_20251226112632956.png</image>
     </programme>

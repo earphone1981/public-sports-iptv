@@ -193,7 +193,6 @@ https://autorace-live.akamaized.net/hls/live/2036917/id2/streaming/media.m3u8
 https://autorace-live.akamaized.net/hls/live/2036917-b/id6/streaming/media.m3u8
 
 ## ボートレース
-
 ## 中央競馬
 #EXTINF:-1 tvg-id="jra.gch" tvg-name="グリーンチャンネル" group-title="中央競馬",グリーンチャンネル
 https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/gchmain.m3u8

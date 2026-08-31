@@ -153,7 +153,9 @@ def add_prog(root,cid,start,stop,title,desc):
 
 def race_datetime(time_text,previous=None):
     hh,mm=map(int,time_text.split(":"))
-    dt=datetime.datetime.combine(TODAY,datetime.time(hh,mm),tzinfo=JST)
+    day_offset, hour = divmod(hh, 24)
+    base_day = TODAY + datetime.timedelta(days=day_offset)
+    dt=datetime.datetime.combine(base_day,datetime.time(hour,mm),tzinfo=JST)
     if previous is not None and dt < previous-datetime.timedelta(hours=6):
         dt += datetime.timedelta(days=1)
     return dt

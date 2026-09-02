@@ -677,7 +677,7 @@
   "16 児島": {
     "tvg_id": "boat.kojima",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/16_N-1.jpg",
-    "live": true,
+    "live": false,
     "held": true,
     "day_type": "サマータイム",
     "emoji": "🌇",
@@ -783,8 +783,7 @@
     "end": "18:35",
     "finish_title": "🏁 16 児島 本日開催終了",
     "finish_start": "2026-09-02 17:20",
-    "finish_end": "2026-09-01 18:35",
-    "url": "https://manifest.streaks.jp/v4/cp-boatrace-prod/431061c6e8674d4da3e6b81c5efe0a4d/e223b55120b64d12b31ee2e77d865c85/hls/v3/manifest.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYyI6IjgwNTEyMDg0YTFiODRjMWRhZDJiZTExZjc5NWI2ZGYxIiwiZWRnZSI6IjUwOWM4Y2ExZDEwMjRlZGViOGMyNTE0ZDFmZWJmYmQzIiwiY29kZWNzIjoiYXV0byIsImV4cCI6MTc4ODQwMDgwMCwic3RhcnQiOjE3ODgyMjUwMDAsImlvcyI6MTgsImNwIjoiMjEwNDIwNjAwXzIxMDQ2Mzc5OSIsInBwdyI6IjQwayJ9.sOTnGXeGaiO0llNUvnPBfJtBqKl1TfPGzFjqGXvEwjg"
+    "finish_end": "2026-09-01 18:35"
   },
   "17 宮島": {
     "tvg_id": "boat.miyajima",

@@ -10,28 +10,62 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe current player refs
+      - name: Install browser probe dependencies
+        run: python -m pip install --quiet selenium
+
+      - name: Probe current BOAT browser network
         shell: python
         run: |
-          import json,urllib.request,time
-          UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36'
-          H={'Origin':'https://front.player.boatrace-cdn.jp','Referer':'https://front.player.boatrace-cdn.jp/','User-Agent':UA}
-          def get(url):
-              req=urllib.request.Request(url,headers=H)
-              with urllib.request.urlopen(req,timeout=15) as r:
-                  return r.read().decode('utf-8','replace'),r.status
-          s_url='https://front.player.boatrace-cdn.jp/setting/live/20wakamatsu/setting.json?t=%d'%int(time.time())
-          text,status=get(s_url)
-          print('SETTING_STATUS',status)
-          obj=json.loads(text)
-          print('SETTING_BODY',json.dumps(obj,ensure_ascii=False))
-          for key in ('br_live','br_dvr','mix_live','mix_dvr'):
-              ref=(obj.get(key) or {}).get('ref_id')
-              if not ref: continue
-              p='https://playback.api.streaks.jp/v1/projects/cp-boatrace-prod/medias/ref:%s?audio_only=false'%ref
-              try:
-                  body,st=get(p)
-                  print('PLAYBACK',key,'STATUS',st,'REF',ref)
-                  print('BODY',body[:5000])
-              except Exception as e:
-                  print('PLAYBACK',key,'ERROR',repr(e),'REF',ref)
+          import json, time
+          from selenium import webdriver
+          from selenium.webdriver.chrome.options import Options
+
+          opts = Options()
+          opts.add_argument('--headless=new')
+          opts.add_argument('--no-sandbox')
+          opts.add_argument('--disable-dev-shm-usage')
+          opts.add_argument('--autoplay-policy=no-user-gesture-required')
+          opts.add_argument('--window-size=1280,900')
+          opts.set_capability('goog:loggingPrefs', {'performance': 'ALL', 'browser': 'ALL'})
+
+          urls = [
+              'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=br&dvr=1&audioMode=0&autoplay=1&bitrate=high',
+              'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=mix&dvr=1&audioMode=0&autoplay=1&bitrate=high',
+              'https://livebb.jlc.ne.jp/bb_top/sp_bb/live_20.php',
+              'https://live.boatcast.jp/boatcastsp/live_20.php',
+          ]
+
+          driver = webdriver.Chrome(options=opts)
+          try:
+              for url in urls:
+                  print('\n=== PAGE', url, '===')
+                  driver.get(url)
+                  time.sleep(12)
+                  print('TITLE', driver.title)
+                  print('FINAL', driver.current_url)
+                  try:
+                      for entry in driver.get_log('browser')[-30:]:
+                          print('BROWSER', entry)
+                  except Exception as e:
+                      print('BROWSER_LOG_ERROR', repr(e))
+                  seen = []
+                  for entry in driver.get_log('performance'):
+                      try:
+                          msg = json.loads(entry['message'])['message']
+                          if msg.get('method') != 'Network.requestWillBeSent':
+                              continue
+                          req = msg.get('params', {}).get('request', {})
+                          u = req.get('url', '')
+                          if any(x in u for x in ('m3u8', 'playback.api.streaks.jp', 'manifest.streaks.jp', 'boatrace-cdn.jp', 'jlc.ne.jp', 'boatcast.jp')):
+                              if u not in seen:
+                                  seen.append(u)
+                                  print('REQ', u)
+                                  headers = req.get('headers') or {}
+                                  for k in ('Origin','Referer','Authorization','X-Requested-With','Sec-Fetch-Site'):
+                                      if k in headers:
+                                          print('HDR', k, headers[k])
+                      except Exception:
+                          pass
+                  print('MATCH_COUNT', len(seen))
+          finally:
+              driver.quit()

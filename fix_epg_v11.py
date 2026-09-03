@@ -66,7 +66,15 @@ def build_live_title(n,t,d,cid):return '  '.join([race_no_deco(n),f'{t}発走',d
 def resolve_post_time(p,t):
     s=parse_xmltv(p.get('start'))
     if not s:return None
-    h,m=map(int,t.split(':'));base=s.date();cs=[datetime.datetime.combine(base+datetime.timedelta(days=x),datetime.time(h,m),tzinfo=JST) for x in (-1,0,1)]
+    try:
+        raw_h,m=map(int,t.split(':'))
+    except (TypeError,ValueError):
+        return None
+    if raw_h < 0 or not 0 <= m < 60:
+        return None
+    day_offset,h=divmod(raw_h,24)
+    base=s.date()
+    cs=[datetime.datetime.combine(base+datetime.timedelta(days=x+day_offset),datetime.time(h,m),tzinfo=JST) for x in (-1,0,1)]
     return min(cs,key=lambda x:abs((x-s).total_seconds()))
 
 def event_intro(cid,name,programmes):

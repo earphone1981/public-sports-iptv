@@ -10,27 +10,11 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Inspect sakura BOAT live embed
+      - name: Dump sakura live99 source
         shell: python
         run: |
-          import re, urllib.request, urllib.parse
-          ua='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36'
-          def get(url):
-              req=urllib.request.Request(url,headers={'User-Agent':ua,'Referer':'https://boatrace.sakura.tv/'})
-              with urllib.request.urlopen(req,timeout=15) as r:
-                  return r.read().decode('utf-8','replace'),r.geturl(),r.status
-          for url in ['https://boatrace.sakura.tv/live99.html','https://boatrace.sakura.tv/wakamatsu/']:
-              print('\nPAGE',url)
-              try:
-                  text,final,status=get(url)
-              except Exception as e:
-                  print('ERROR',repr(e)); continue
-              print('STATUS',status,'FINAL',final,'LEN',len(text))
-              for pat in [r'<iframe[^>]+src=["\']([^"\']+)',r'<script[^>]+src=["\']([^"\']+)',r'https?://[^"\'<> ]+\.m3u8[^"\'<> ]*',r'https?://[^"\'<> ]+(?:streaks|boatrace-cdn|jlc|youtube|googlevideo)[^"\'<> ]*']:
-                  for x in re.findall(pat,text,re.I):
-                      if isinstance(x,tuple): x=x[0]
-                      print('MATCH',urllib.parse.urljoin(final,x))
-              for line in text.splitlines():
-                  low=line.lower()
-                  if any(k in low for k in ('iframe','stream','player','live99','m3u8','youtube','streaks')):
-                      print('LINE',line[:1600])
+          import urllib.request
+          req=urllib.request.Request('https://boatrace.sakura.tv/live99.html',headers={'User-Agent':'Mozilla/5.0','Referer':'https://boatrace.sakura.tv/wakamatsu/'})
+          with urllib.request.urlopen(req,timeout=15) as r:
+              text=r.read().decode('utf-8','replace')
+          print(text)

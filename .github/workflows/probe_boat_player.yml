@@ -8,62 +8,34 @@ on:
 
 jobs:
   probe:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      - name: Install browser probe dependencies
-        run: python -m pip install --quiet selenium
-
-      - name: Probe current BOAT browser network
+      - name: Probe current BOAT playback
         shell: python
         run: |
-          import json, time
-          from selenium import webdriver
-          from selenium.webdriver.chrome.options import Options
-
-          opts = Options()
-          opts.page_load_strategy = 'eager'
-          opts.add_argument('--headless=new')
-          opts.add_argument('--no-sandbox')
-          opts.add_argument('--disable-dev-shm-usage')
-          opts.add_argument('--autoplay-policy=no-user-gesture-required')
-          opts.add_argument('--window-size=1280,900')
-          opts.set_capability('goog:loggingPrefs', {'performance': 'ALL', 'browser': 'ALL'})
-
-          url = 'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=br&dvr=1&audioMode=0&autoplay=1&bitrate=high'
-          driver = webdriver.Chrome(options=opts)
-          driver.set_page_load_timeout(15)
-          try:
-              print('PAGE', url)
+          import json, urllib.request, urllib.error, time, platform
+          print('OS', platform.platform())
+          ua='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151 Safari/537.36'
+          h={'Origin':'https://front.player.boatrace-cdn.jp','Referer':'https://front.player.boatrace-cdn.jp/','User-Agent':ua,'Accept':'application/json,text/plain,*/*'}
+          def get(url):
+              req=urllib.request.Request(url,headers=h)
               try:
-                  driver.get(url)
-              except Exception as e:
-                  print('GET_ERROR', repr(e))
-              time.sleep(8)
-              print('TITLE', driver.title)
-              print('FINAL', driver.current_url)
-              for entry in driver.get_log('browser')[-50:]:
-                  print('BROWSER', entry)
-              seen = []
-              for entry in driver.get_log('performance'):
-                  try:
-                      msg = json.loads(entry['message'])['message']
-                      if msg.get('method') != 'Network.requestWillBeSent':
-                          continue
-                      req = msg.get('params', {}).get('request', {})
-                      u = req.get('url', '')
-                      if any(x in u for x in ('m3u8', 'playback.api.streaks.jp', 'manifest.streaks.jp', 'boatrace-cdn.jp')):
-                          if u in seen:
-                              continue
-                          seen.append(u)
-                          print('REQ', u)
-                          headers = req.get('headers') or {}
-                          print('REQ_METHOD', req.get('method'))
-                          for k,v in headers.items():
-                              lk=k.lower()
-                              if lk in ('origin','referer','authorization','x-requested-with','sec-fetch-site','accept','accept-language'):
-                                  print('HDR', k, v)
-                  except Exception:
-                      pass
-              print('MATCH_COUNT', len(seen))
-          finally:
-              driver.quit()
+                  with urllib.request.urlopen(req,timeout=15) as r:
+                      return r.status,r.read().decode('utf-8','replace')
+              except urllib.error.HTTPError as e:
+                  body=e.read().decode('utf-8','replace')
+                  return e.code,body
+          s='https://front.player.boatrace-cdn.jp/setting/live/20wakamatsu/setting.json?t=%d'%int(time.time())
+          st,body=get(s)
+          print('SETTING',st,body[:1000])
+          obj=json.loads(body) if st==200 else {}
+          for key in ('br_live','br_dvr','mix_live','mix_dvr'):
+              ref=(obj.get(key) or {}).get('ref_id')
+              if not ref: continue
+              p='https://playback.api.streaks.jp/v1/projects/cp-boatrace-prod/medias/ref:%s?audio_only=false'%ref
+              pst,pbody=get(p)
+              print('PLAYBACK',key,pst,ref,pbody[:1500])

@@ -8,11 +8,9 @@ on:
 
 jobs:
   probe:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
+    env:
+      PYTHONIOENCODING: utf-8
     steps:
       - name: Probe current BOAT playback
         shell: python
@@ -27,15 +25,16 @@ jobs:
                   with urllib.request.urlopen(req,timeout=15) as r:
                       return r.status,r.read().decode('utf-8','replace')
               except urllib.error.HTTPError as e:
-                  body=e.read().decode('utf-8','replace')
-                  return e.code,body
+                  return e.code,e.read().decode('utf-8','replace')
           s='https://front.player.boatrace-cdn.jp/setting/live/20wakamatsu/setting.json?t=%d'%int(time.time())
           st,body=get(s)
-          print('SETTING',st,body[:1000])
+          print('SETTING_STATUS',st)
           obj=json.loads(body) if st==200 else {}
           for key in ('br_live','br_dvr','mix_live','mix_dvr'):
               ref=(obj.get(key) or {}).get('ref_id')
               if not ref: continue
               p='https://playback.api.streaks.jp/v1/projects/cp-boatrace-prod/medias/ref:%s?audio_only=false'%ref
               pst,pbody=get(p)
-              print('PLAYBACK',key,pst,ref,pbody[:1500])
+              print('PLAYBACK',key,'STATUS',pst,'REF',ref)
+              if pst == 200:
+                  print('BODY',pbody[:1500])

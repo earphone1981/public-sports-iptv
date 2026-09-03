@@ -15,36 +15,43 @@ PUBLIC_M3U = Path("public_sports.m3u")
 TVG_RE = re.compile(r'tvg-id="([^"]+)"', re.I)
 
 
-def parse_hhmm(value: str | None) -> dt.datetime | None:
+def parse_hhmm(value: str | None, reference: dt.datetime | None = None) -> dt.datetime | None:
     if not value:
         return None
     m = re.fullmatch(r"(\d{1,2}):(\d{2})", str(value).strip())
     if not m:
         return None
     hour, minute = map(int, m.groups())
-    base = dt.datetime.combine(TODAY, dt.time(hour % 24, minute), tzinfo=JST)
-    if hour >= 24:
-        base += dt.timedelta(days=1)
+    if hour < 0 or not 0 <= minute < 60:
+        return None
+    day_offset, clock_hour = divmod(hour, 24)
+    base = dt.datetime.combine(TODAY + dt.timedelta(days=day_offset), dt.time(clock_hour, minute), tzinfo=JST)
+    if reference is not None:
+        while base < reference:
+            base += dt.timedelta(days=1)
     return base
 
 
 def finish_time(item: dict) -> dt.datetime | None:
-    # Prefer the official stream end time captured from setting.json.
-    end = parse_hhmm(item.get("end"))
+    # Stream end values can cross midnight (for example 01:59 means the next day).
+    start = parse_hhmm(item.get("start"))
+    end = parse_hhmm(item.get("end"), reference=start)
     if end:
         return end
 
-    # Fall back to explicit EPG finish_end if available.
+    # Fall back to explicit EPG finish_end if available, but reject stale dates.
     finish_end = item.get("finish_end")
     if finish_end:
         try:
-            return dt.datetime.strptime(finish_end, "%Y-%m-%d %H:%M").replace(tzinfo=JST)
+            parsed = dt.datetime.strptime(finish_end, "%Y-%m-%d %H:%M").replace(tzinfo=JST)
+            if parsed.date() >= TODAY:
+                return parsed
         except Exception:
             pass
 
-    # Final fallback: 15 minutes after the last race deadline.
+    # Final fallback: 15 minutes after the last race deadline, respecting midnight rollover.
     races = item.get("races") or []
-    times = [parse_hhmm(r.get("time")) for r in races if isinstance(r, dict)]
+    times = [parse_hhmm(r.get("time"), reference=start) for r in races if isinstance(r, dict)]
     times = [x for x in times if x is not None]
     if times:
         return max(times) + dt.timedelta(minutes=15)
@@ -128,7 +135,7 @@ def main() -> None:
         if end is not None and NOW >= end:
             item["live"] = False
             item.pop("url", None)
-            print(f"BOAT finished -> remove: {venue} ({tvg}) end={end:%H:%M}")
+            print(f"BOAT finished -> remove: {venue} ({tvg}) end={end:%m-%d %H:%M}")
             continue
         keep_ids.add(tvg)
 

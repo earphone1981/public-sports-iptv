@@ -1,11 +1,12 @@
 import base64
 import datetime as dt
+import html as html_lib
 import json
 import re
 import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urljoin, urlsplit
 from urllib.request import Request, urlopen
 
 JST = dt.timezone(dt.timedelta(hours=9))
@@ -16,11 +17,16 @@ DATE8 = NOW_JST.strftime("%Y%m%d")
 JSON_PATH = Path("boatrace_today.json")
 M3U_PATH = Path("boatrace_today.m3u")
 COOKIES = Path("youtube_cookies.txt")
-UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36"
+UA = "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/151 Mobile Safari/537.36"
 STREAKS_HEADERS = {
     "Accept": "application/json",
     "Origin": "https://players.streaks.jp",
     "Referer": "https://players.streaks.jp/",
+    "User-Agent": UA,
+}
+JLC_HEADERS = {
+    "Accept": "text/html,application/xhtml+xml,application/javascript,*/*;q=0.8",
+    "Referer": "https://livebb.jlc.ne.jp/",
     "User-Agent": UA,
 }
 
@@ -78,6 +84,12 @@ def current_streaks_url(url: str) -> bool:
         return False
 
 
+def fetch_text(url: str, headers: dict, timeout: int = 8):
+    req = Request(url, headers=headers)
+    with urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", errors="replace"), r.geturl()
+
+
 def fetch_streaks_hls(tvg: str):
     code = VENUE_CODES.get(tvg)
     if not code:
@@ -87,15 +99,92 @@ def fetch_streaks_hls(tvg: str):
         f"ref:lm-br-{code}-tokyo-{DATE8}?audio_only=false"
     )
     try:
-        req = Request(api, headers=STREAKS_HEADERS)
-        with urlopen(req, timeout=8) as r:
-            obj = json.loads(r.read().decode("utf-8", errors="replace"))
+        text, _ = fetch_text(api, STREAKS_HEADERS)
+        obj = json.loads(text)
         for src in obj.get("sources") or []:
             url = str(src.get("src") or "")
             if current_streaks_url(url):
                 return url
     except Exception as e:
         print(f"BOAT Streaks API failed: {tvg}: {type(e).__name__}: {e}")
+    return None
+
+
+def normalize_scan_text(text: str):
+    return html_lib.unescape(text).replace("\\/", "/").replace("\\u0026", "&")
+
+
+def m3u8_candidates(text: str, base: str):
+    text = normalize_scan_text(text)
+    out = []
+    patterns = [
+        r'https?://[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?',
+        r'//[^\s"\'<>]+?\.m3u8(?:\?[^\s"\'<>]*)?',
+        r'["\']([^"\']+?\.m3u8(?:\?[^"\']*)?)["\']',
+    ]
+    for idx, pat in enumerate(patterns):
+        for m in re.finditer(pat, text, flags=re.I):
+            raw = m.group(1) if idx == 2 else m.group(0)
+            if raw.startswith("//"):
+                raw = "https:" + raw
+            elif not raw.startswith(("http://", "https://")):
+                raw = urljoin(base, raw)
+            raw = raw.rstrip("\\);,]")
+            if raw not in out:
+                out.append(raw)
+    return out
+
+
+def linked_assets(text: str, base: str):
+    text = normalize_scan_text(text)
+    out = []
+    for m in re.finditer(r'(?:src|href)\s*=\s*["\']([^"\']+)["\']', text, flags=re.I):
+        u = urljoin(base, m.group(1))
+        if not u.startswith("http"):
+            continue
+        host = (urlsplit(u).hostname or "").lower()
+        path = urlsplit(u).path.lower()
+        if host.endswith("jlc.ne.jp") and (path.endswith(".js") or "streamer" in path or "live_" in path):
+            if u not in out:
+                out.append(u)
+    for m in re.finditer(r'["\']([^"\']+(?:\.js|streamer\.php)[^"\']*)["\']', text, flags=re.I):
+        u = urljoin(base, m.group(1))
+        host = (urlsplit(u).hostname or "").lower()
+        if host.endswith("jlc.ne.jp") and u not in out:
+            out.append(u)
+    return out
+
+
+def fetch_jlc_hls(tvg: str):
+    code = VENUE_CODES.get(tvg)
+    if not code:
+        return None
+    jo = code[:2]
+    queue = [
+        f"https://livebb.jlc.ne.jp/bb_top/sp_bb/live_{jo}.php",
+        f"https://livebb.jlc.ne.jp/bb_top/new_bb/streamer/streamer.php?jo={jo}&md=L",
+        f"https://livebb.jlc.ne.jp/bb_top/sp_bb/streamer/streamer.php?jo={jo}&m=1",
+    ]
+    seen = set()
+    while queue and len(seen) < 16:
+        u = queue.pop(0)
+        if u in seen:
+            continue
+        seen.add(u)
+        try:
+            text, final_url = fetch_text(u, JLC_HEADERS, timeout=7)
+        except Exception as e:
+            print(f"BOAT JLC fetch failed: {tvg}: {type(e).__name__}: {e}")
+            continue
+        found = m3u8_candidates(text, final_url)
+        if found:
+            preferred = [x for x in found if "vod" not in x.lower() and "replay" not in x.lower()]
+            url = (preferred or found)[0]
+            print(f"BOAT JLC m3u8 discovered: {tvg}: {url}")
+            return url
+        for asset in linked_assets(text, final_url):
+            if asset not in seen and asset not in queue:
+                queue.append(asset)
     return None
 
 
@@ -203,6 +292,9 @@ def extract_live_hls(name: str):
 
 
 def resolve_one(tvg: str, venue: str, item: dict):
+    jlc = fetch_jlc_hls(tvg)
+    if jlc:
+        return tvg, VENUE_NAMES.get(tvg) or venue, jlc, "jlc", None
     official = fetch_streaks_hls(tvg)
     if official:
         return tvg, VENUE_NAMES.get(tvg) or venue, official, "streaks", None
@@ -234,8 +326,11 @@ def main():
         if tvg in held and current_streaks_url(entry[1]):
             chosen[tvg] = entry
             print(f"BOAT primary current-day Streaks: {tvg}")
+        elif tvg in held and "googlevideo.com" not in entry[1]:
+            chosen[tvg] = entry
+            print(f"BOAT retained non-Google public HLS: {tvg}")
         elif tvg in held:
-            print(f"BOAT rejected stale/non-current primary URL: {tvg}")
+            print(f"BOAT rejected IP-bound/stale primary URL: {tvg}")
 
     targets = []
     for tvg, (venue, item) in held.items():
@@ -248,6 +343,7 @@ def main():
             continue
         targets.append((tvg, venue, item))
 
+    jlc_ok = 0
     streaks_ok = 0
     youtube_ok = 0
     fallback_fail = 0
@@ -260,7 +356,10 @@ def main():
                 rtvg, name, url, source, error = fut.result()
                 if url:
                     chosen[rtvg] = ("", url)
-                    if source == "streaks":
+                    if source == "jlc":
+                        jlc_ok += 1
+                        print(f"BOAT JLC public HLS OK: {rtvg} {name}")
+                    elif source == "streaks":
                         streaks_ok += 1
                         print(f"BOAT Streaks official HLS OK: {rtvg} {name}")
                     else:
@@ -296,7 +395,7 @@ def main():
     JSON_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"BOAT current-live result: held={len(held)} live={live_count} "
-        f"streaks_ok={streaks_ok} youtube_ok={youtube_ok} fail={fallback_fail}; history disabled"
+        f"jlc_ok={jlc_ok} streaks_ok={streaks_ok} youtube_ok={youtube_ok} fail={fallback_fail}; history disabled"
     )
 
 

@@ -21,6 +21,7 @@ jobs:
           from selenium.webdriver.chrome.options import Options
 
           opts = Options()
+          opts.page_load_strategy = 'eager'
           opts.add_argument('--headless=new')
           opts.add_argument('--no-sandbox')
           opts.add_argument('--disable-dev-shm-usage')
@@ -28,44 +29,41 @@ jobs:
           opts.add_argument('--window-size=1280,900')
           opts.set_capability('goog:loggingPrefs', {'performance': 'ALL', 'browser': 'ALL'})
 
-          urls = [
-              'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=br&dvr=1&audioMode=0&autoplay=1&bitrate=high',
-              'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=mix&dvr=1&audioMode=0&autoplay=1&bitrate=high',
-              'https://livebb.jlc.ne.jp/bb_top/sp_bb/live_20.php',
-              'https://live.boatcast.jp/boatcastsp/live_20.php',
-          ]
-
+          url = 'https://front.player.boatrace-cdn.jp/player/live?service=boatcast&stadium=20wakamatsu&sourceType=br&dvr=1&audioMode=0&autoplay=1&bitrate=high'
           driver = webdriver.Chrome(options=opts)
+          driver.set_page_load_timeout(15)
           try:
-              for url in urls:
-                  print('\n=== PAGE', url, '===')
+              print('PAGE', url)
+              try:
                   driver.get(url)
-                  time.sleep(12)
-                  print('TITLE', driver.title)
-                  print('FINAL', driver.current_url)
+              except Exception as e:
+                  print('GET_ERROR', repr(e))
+              time.sleep(8)
+              print('TITLE', driver.title)
+              print('FINAL', driver.current_url)
+              for entry in driver.get_log('browser')[-50:]:
+                  print('BROWSER', entry)
+              seen = []
+              for entry in driver.get_log('performance'):
                   try:
-                      for entry in driver.get_log('browser')[-30:]:
-                          print('BROWSER', entry)
-                  except Exception as e:
-                      print('BROWSER_LOG_ERROR', repr(e))
-                  seen = []
-                  for entry in driver.get_log('performance'):
-                      try:
-                          msg = json.loads(entry['message'])['message']
-                          if msg.get('method') != 'Network.requestWillBeSent':
+                      msg = json.loads(entry['message'])['message']
+                      if msg.get('method') != 'Network.requestWillBeSent':
+                          continue
+                      req = msg.get('params', {}).get('request', {})
+                      u = req.get('url', '')
+                      if any(x in u for x in ('m3u8', 'playback.api.streaks.jp', 'manifest.streaks.jp', 'boatrace-cdn.jp')):
+                          if u in seen:
                               continue
-                          req = msg.get('params', {}).get('request', {})
-                          u = req.get('url', '')
-                          if any(x in u for x in ('m3u8', 'playback.api.streaks.jp', 'manifest.streaks.jp', 'boatrace-cdn.jp', 'jlc.ne.jp', 'boatcast.jp')):
-                              if u not in seen:
-                                  seen.append(u)
-                                  print('REQ', u)
-                                  headers = req.get('headers') or {}
-                                  for k in ('Origin','Referer','Authorization','X-Requested-With','Sec-Fetch-Site'):
-                                      if k in headers:
-                                          print('HDR', k, headers[k])
-                      except Exception:
-                          pass
-                  print('MATCH_COUNT', len(seen))
+                          seen.append(u)
+                          print('REQ', u)
+                          headers = req.get('headers') or {}
+                          print('REQ_METHOD', req.get('method'))
+                          for k,v in headers.items():
+                              lk=k.lower()
+                              if lk in ('origin','referer','authorization','x-requested-with','sec-fetch-site','accept','accept-language'):
+                                  print('HDR', k, v)
+                  except Exception:
+                      pass
+              print('MATCH_COUNT', len(seen))
           finally:
               driver.quit()

@@ -198,8 +198,26 @@
     <channel id="boat.shimonoseki">
         <display-name>BOATRACE下関</display-name>
     </channel>
-    <channel id="boat.omura">
-        <display-name>BOATRACE大村</display-name>
+    <channel id="boat.tokoname">
+        <display-name>BOATRACE常滑</display-name>
+    </channel>
+    <channel id="boat.amagasaki">
+        <display-name>BOATRACE尼崎</display-name>
+    </channel>
+    <channel id="boat.miyajima">
+        <display-name>BOATRACE宮島</display-name>
+    </channel>
+    <channel id="boat.kojima">
+        <display-name>BOATRACE児島</display-name>
+    </channel>
+    <channel id="boat.hamanako">
+        <display-name>BOATRACE浜名湖</display-name>
+    </channel>
+    <channel id="boat.fukuoka">
+        <display-name>BOATRACE福岡</display-name>
+    </channel>
+    <channel id="boat.tokuyama">
+        <display-name>BOATRACE徳山</display-name>
     </channel>
     <channel id="jra.gch">
         <display-name>グリーンチャンネル</display-name>
@@ -228,14 +246,8 @@
     <channel id="boat.tamagawa">
         <display-name>BOATRACE多摩川</display-name>
     </channel>
-    <channel id="boat.hamanako">
-        <display-name>BOATRACE浜名湖</display-name>
-    </channel>
     <channel id="boat.gamagori">
         <display-name>BOATRACE蒲郡</display-name>
-    </channel>
-    <channel id="boat.tokoname">
-        <display-name>BOATRACE常滑</display-name>
     </channel>
     <channel id="boat.tsu">
         <display-name>BOATRACE津</display-name>
@@ -246,32 +258,20 @@
     <channel id="boat.biwako">
         <display-name>BOATRACEびわこ</display-name>
     </channel>
-    <channel id="boat.amagasaki">
-        <display-name>BOATRACE尼崎</display-name>
-    </channel>
     <channel id="boat.naruto">
         <display-name>BOATRACE鳴門</display-name>
     </channel>
     <channel id="boat.marugame">
         <display-name>BOATRACE丸亀</display-name>
     </channel>
-    <channel id="boat.kojima">
-        <display-name>BOATRACE児島</display-name>
-    </channel>
-    <channel id="boat.miyajima">
-        <display-name>BOATRACE宮島</display-name>
-    </channel>
-    <channel id="boat.tokuyama">
-        <display-name>BOATRACE徳山</display-name>
-    </channel>
     <channel id="boat.ashiya">
         <display-name>BOATRACE芦屋</display-name>
     </channel>
-    <channel id="boat.fukuoka">
-        <display-name>BOATRACE福岡</display-name>
-    </channel>
     <channel id="boat.karatsu">
         <display-name>BOATRACEからつ</display-name>
+    </channel>
+    <channel id="boat.omura">
+        <display-name>BOATRACE大村</display-name>
     </channel>
     <programme start="20260903000000 +0900" stop="20260903080000 +0900" channel="auto.hamamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浜松（オートレース）</title>

@@ -640,7 +640,7 @@
   "12 住之江": {
     "tvg_id": "boat.suminoe",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/12_N-1-1.jpg",
-    "live": true,
+    "live": false,
     "held": true,
     "day_type": "ミッドナイト",
     "emoji": "🌟",
@@ -747,8 +747,7 @@
     "end": "01:59",
     "finish_title": "🏁 12 住之江 本日開催終了",
     "finish_start": "2026-09-03 20:31",
-    "finish_end": "2026-09-04 01:59",
-    "url": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1788454626/ei/glKZar_TGIWiut0PjYucsAk/ip/52.161.82.85/id/ll1Tv4YXsIE.2/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr1---sn-najern7k.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/bui/AR3QkAl9hbGGT3l9DzLsBClFbz7jmToZleWAQYOhYGNmpFW3cV8JpJlq58r_q6SH2EgYnKWRtfbEn6sQ/spc/I-rgITGz3ixUkWBNx7TCuDJYzR5TBHZ5MJbE9wkCt0PIDY5CtA8pjsQ18vNy6g/vprv/1/reg/0/playlist_type/DVR/initcwndbps/6762500/met/1788433029,/mh/bE/mm/44/mn/sn-najern7k/ms/lva/mv/m/mvi/1/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565116,52135441/mt/1788432506/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRQIgX7XlNiiKhhZqkR1t2W3XWx0y9zQBLKQ6a86YjWyPqy0CIQDv7r1kbkdfWCVKkFJ86xlBajM3ZpONz6TuSMtTIl0t0w%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIgTlLHFiU2yi4ZFmzMxglJGIIp1dyUdjKldWaGs29S_x4CIQDNkQb1O2gZLWOH-ps85tkyVur6T4LGmmvGTYpRfzLEug%3D%3D/playlist/index.m3u8"
+    "finish_end": "2026-09-04 01:59"
   },
   "13 尼崎": {
     "tvg_id": "boat.amagasaki",
@@ -1227,7 +1226,7 @@
   "19 下関": {
     "tvg_id": "boat.shimonoseki",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/19_N-1.jpg",
-    "live": true,
+    "live": false,
     "held": true,
     "day_type": "ミッドナイト",
     "emoji": "🌟",
@@ -1334,13 +1333,12 @@
     "end": "01:59",
     "finish_title": "🏁 19 下関 本日開催終了",
     "finish_start": "2026-09-03 20:45",
-    "finish_end": "2026-09-04 01:59",
-    "url": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1788454632/ei/iFKZavvTLe7jy_sPgbzb0Qw/ip/52.161.82.85/id/_RaZZ3_GlOg.1/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr1---sn-2onajj-5c.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/bui/AR3QkAlzL71qCFHlv6vosGtdvdaL5FIQ5CNYbM6dQjnvKDuTjPRK-Bk-6R-3L1ImKlB29S0FE-ZoKVXM/spc/I-rgIWHTV8Z_nysScczJFRP87XgaSTHgLcD0_UWXrgmBAruv-v3kEn2g7HQ6Nw/vprv/1/reg/0/playlist_type/DVR/initcwndbps/6895000/met/1788433034,/mh/QI/mm/44/mn/sn-2onajj-5c/ms/lva/mv/m/mvi/1/pl/18/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565116,52135441/mt/1788432764/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRQIgQ-B1_RfAutTgRKR-YODPPS9glc7It0bRAmvqfTxw6zcCIQCjYysVQCUrQlJiPTLqYT9wVxncJQatl9hW4tJhd9Vkjw%3D%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRQIhANzoaE7f7uZSQ_aYejfMhhQNuXlCwe9_ngmi9NuecCLhAiBsBLimawM0GlVxtC_JO0eFrF37LPsb3LoThMGHflyYGw%3D%3D/playlist/index.m3u8"
+    "finish_end": "2026-09-04 01:59"
   },
   "20 若松": {
     "tvg_id": "boat.wakamatsu",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/20_N-1.jpg",
-    "live": true,
+    "live": false,
     "held": true,
     "day_type": "ミッドナイト",
     "emoji": "🌟",
@@ -1447,8 +1445,7 @@
     "end": "01:59",
     "finish_title": "🏁 20 若松 本日開催終了",
     "finish_start": "2026-09-03 20:38",
-    "finish_end": "2026-09-04 01:59",
-    "url": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1788454632/ei/iFKZaq7dKbrVy_sPoMedwA8/ip/52.161.82.85/id/tRuryr-XRmI.1/itag/96/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D137/rqh/1/hls_chunk_host/rr6---sn-2onajj-5c.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/bui/AR3QkAleRg_JcOMXkWnKqGiBX7MPMDEenNgwbJc4CUT0nHkC6QwgCC70egWZE_tenHP5l7Ko0IAdOCZ6/spc/I-rgITi4peO80vOTpp-KXSq8J4oEjZQ6E7mV4HErp9_Xd0aiGI_33GcFb2CEJw/vprv/1/reg/0/playlist_type/LIVE/initcwndbps/6895000/met/1788433034,/mh/m3/mm/44/mn/sn-2onajj-5c/ms/lva/mv/m/mvi/6/pl/18/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565116,52135441/mt/1788432764/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRgIhAOIIqDqq-u_yeHQWsoLpznfkMyPH4qElasra1hBABYQDAiEA2Oa3xWVvsNtkwQTUNBZWItVfx1eVSoks8hrgNESJ1LA%3D/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRgIhAJSoc2BaBp1m02YrUe8NX5JtBbm_UKtLnDi95jKtvCteAiEAooTT8Fbc82xyGZ8YjvGdL5_REG3romBidtovEJU1MpU%3D/playlist/index.m3u8"
+    "finish_end": "2026-09-04 01:59"
   },
   "21 芦屋": {
     "tvg_id": "boat.ashiya",
@@ -1591,7 +1588,7 @@
   "24 大村": {
     "tvg_id": "boat.omura",
     "logo": "https://www.boatrace.jp/static/uploads/sites/8/24_N-1.jpg",
-    "live": true,
+    "live": false,
     "held": true,
     "day_type": "ミッドナイト",
     "emoji": "🌟",
@@ -1698,7 +1695,6 @@
     "end": "01:59",
     "finish_title": "🏁 24 大村 本日開催終了",
     "finish_start": "2026-09-03 22:41",
-    "finish_end": "2026-09-04 01:59",
-    "url": "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1788454632/ei/iFKZarSMKM3FzN0P9NfiWQ/ip/52.161.82.85/id/JfnFdKDoT00.1/itag/301/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/sgoap/gir%3Dyes%3Bitag%3D140/sgovp/gir%3Dyes%3Bitag%3D299/rqh/1/hls_chunk_host/rr2---sn-najern7r.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/playlist_duration/30/manifest_duration/30/bui/AR3QkAmYrNxDqxVG0Vg_NyV4PO4o_E1eX3kRvKzmTkyIzjfzF44Tr5y6DO9dtBtGPaptQDYbjQQOjrvT/spc/I-rgIfg9huT5SeG1twJFvBgY6bIPAT8cRgX3j5yGqrX-tMG5_MzPgjEGH-VJmw/vprv/1/reg/0/playlist_type/DVR/initcwndbps/7460000/met/1788433034,/mh/6r/mm/44/mn/sn-najern7r/ms/lva/mv/m/mvi/2/pl/16/rms/lva,lva/dover/11/pacing/0/keepalive/yes/fexp/51565116,52135441,52189888/mt/1788432742/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,live,sgoap,sgovp,rqh,xpc,playlist_duration,manifest_duration,bui,spc,vprv,reg,playlist_type/sig/AE0s2JYwRAIgXroC8RN-mdTfwx2A1UmA2xcycG-VNFkEFbn2lbAyHsICID0mcRjIWqbEq-0s3lzKY0gZ6m8XZFRcPGMD604uiB7l/lsparams/hls_chunk_host,initcwndbps,met,mh,mm,mn,ms,mv,mvi,pl,rms/lsig/APaTxxMwRAIgbbZHsY2ssuwHZZxQ9AJhjcxFa5A6tMsQetmpPGsKPRMCIEK5O-PcJhfxKQMU9CwJAPbnUGGEJNMHOQGfafIT8i_a/playlist/index.m3u8"
+    "finish_end": "2026-09-04 01:59"
   }
 }

@@ -6,14 +6,23 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
+from urllib.request import Request, urlopen
 
 JST = dt.timezone(dt.timedelta(hours=9))
 NOW_UTC = dt.datetime.now(dt.timezone.utc)
 NOW_JST = NOW_UTC.astimezone(JST)
 TODAY_JST = NOW_JST.date()
+DATE8 = NOW_JST.strftime("%Y%m%d")
 JSON_PATH = Path("boatrace_today.json")
 M3U_PATH = Path("boatrace_today.m3u")
 COOKIES = Path("youtube_cookies.txt")
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151 Safari/537.36"
+STREAKS_HEADERS = {
+    "Accept": "application/json",
+    "Origin": "https://players.streaks.jp",
+    "Referer": "https://players.streaks.jp/",
+    "User-Agent": UA,
+}
 
 VENUE_NAMES = {
     "boat.kiryu": "桐生", "boat.toda": "戸田", "boat.edogawa": "江戸川",
@@ -24,6 +33,16 @@ VENUE_NAMES = {
     "boat.kojima": "児島", "boat.miyajima": "宮島", "boat.tokuyama": "徳山",
     "boat.shimonoseki": "下関", "boat.wakamatsu": "若松", "boat.ashiya": "芦屋",
     "boat.fukuoka": "福岡", "boat.karatsu": "唐津", "boat.omura": "大村",
+}
+VENUE_CODES = {
+    "boat.kiryu": "01kiryu", "boat.toda": "02toda", "boat.edogawa": "03edogawa",
+    "boat.heiwajima": "04heiwajima", "boat.tamagawa": "05tamagawa", "boat.hamanako": "06hamanako",
+    "boat.gamagori": "07gamagori", "boat.tokoname": "08tokoname", "boat.tsu": "09tsu",
+    "boat.mikuni": "10mikuni", "boat.biwako": "11biwako", "boat.suminoe": "12suminoe",
+    "boat.amagasaki": "13amagasaki", "boat.naruto": "14naruto", "boat.marugame": "15marugame",
+    "boat.kojima": "16kojima", "boat.miyajima": "17miyajima", "boat.tokuyama": "18tokuyama",
+    "boat.shimonoseki": "19shimonoseki", "boat.wakamatsu": "20wakamatsu", "boat.ashiya": "21ashiya",
+    "boat.fukuoka": "22fukuoka", "boat.karatsu": "23karatsu", "boat.omura": "24omura",
 }
 
 
@@ -57,6 +76,27 @@ def current_streaks_url(url: str) -> bool:
         return True
     except Exception:
         return False
+
+
+def fetch_streaks_hls(tvg: str):
+    code = VENUE_CODES.get(tvg)
+    if not code:
+        return None
+    api = (
+        "https://playback.api.streaks.jp/v1/projects/cp-boatrace-prod/medias/"
+        f"ref:lm-br-{code}-tokyo-{DATE8}?audio_only=false"
+    )
+    try:
+        req = Request(api, headers=STREAKS_HEADERS)
+        with urlopen(req, timeout=8) as r:
+            obj = json.loads(r.read().decode("utf-8", errors="replace"))
+        for src in obj.get("sources") or []:
+            url = str(src.get("src") or "")
+            if current_streaks_url(url):
+                return url
+    except Exception as e:
+        print(f"BOAT Streaks API failed: {tvg}: {type(e).__name__}: {e}")
+    return None
 
 
 def youtube_url_fresh(url: str) -> bool:
@@ -163,11 +203,14 @@ def extract_live_hls(name: str):
 
 
 def resolve_one(tvg: str, venue: str, item: dict):
+    official = fetch_streaks_hls(tvg)
+    if official:
+        return tvg, VENUE_NAMES.get(tvg) or venue, official, "streaks", None
     name = VENUE_NAMES.get(tvg) or re.sub(r"^\d+\s*", "", venue)
     try:
-        return tvg, name, extract_live_hls(name), None
+        return tvg, name, extract_live_hls(name), "youtube", None
     except Exception as e:
-        return tvg, name, None, f"{type(e).__name__}: {e}"
+        return tvg, name, None, None, f"{type(e).__name__}: {e}"
 
 
 def main():
@@ -205,24 +248,29 @@ def main():
             continue
         targets.append((tvg, venue, item))
 
+    streaks_ok = 0
     youtube_ok = 0
-    youtube_fail = 0
+    fallback_fail = 0
     if targets:
-        print(f"BOAT YouTube LIVE parallel targets={len(targets)} workers={min(4, len(targets))}")
+        print(f"BOAT live resolve parallel targets={len(targets)} workers={min(4, len(targets))}")
         with ThreadPoolExecutor(max_workers=min(4, len(targets))) as ex:
             futures = {ex.submit(resolve_one, tvg, venue, item): (tvg, venue, item) for tvg, venue, item in targets}
             for fut in as_completed(futures):
                 tvg, venue, item = futures[fut]
-                rtvg, name, url, error = fut.result()
+                rtvg, name, url, source, error = fut.result()
                 if url:
                     chosen[rtvg] = ("", url)
-                    youtube_ok += 1
-                    print(f"BOAT YouTube LIVE fallback OK: {rtvg} {name}")
+                    if source == "streaks":
+                        streaks_ok += 1
+                        print(f"BOAT Streaks official HLS OK: {rtvg} {name}")
+                    else:
+                        youtube_ok += 1
+                        print(f"BOAT YouTube LIVE fallback OK: {rtvg} {name}")
                 else:
-                    youtube_fail += 1
+                    fallback_fail += 1
                     item["live"] = False
                     item.pop("url", None)
-                    print(f"BOAT YouTube live fallback failed: {rtvg} {name}: {error}")
+                    print(f"BOAT live resolve failed: {rtvg} {name}: {error}")
 
     lines = ["#EXTM3U", ""]
     live_count = 0
@@ -247,8 +295,8 @@ def main():
     M3U_PATH.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     JSON_PATH.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
-        f"BOAT current-live fallback result: held={len(held)} live={live_count} "
-        f"youtube_ok={youtube_ok} youtube_fail={youtube_fail}; git-history restore disabled"
+        f"BOAT current-live result: held={len(held)} live={live_count} "
+        f"streaks_ok={streaks_ok} youtube_ok={youtube_ok} fail={fallback_fail}; history disabled"
     )
 
 

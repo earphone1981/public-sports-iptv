@@ -47,13 +47,16 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install BOAT live fallback resolver
+        run: python -m pip install --disable-pip-version-check --quiet --upgrade yt-dlp
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
       - name: Update today's BOAT RACE data
         shell: pwsh
         timeout-minutes: 8
         run: ./boatrace_today.ps1
-      - name: Restore BOAT stream URLs from recent valid history
+      - name: Resolve BOAT current live streams only
+        timeout-minutes: 12
         run: python -u repair_boatrace_streams_from_history.py
       - name: Remove BOAT venues whose broadcast has finished
         run: python -u prune_boatrace_finished.py

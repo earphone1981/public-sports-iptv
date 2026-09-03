@@ -198,6 +198,9 @@
     <channel id="boat.shimonoseki">
         <display-name>BOATRACE下関</display-name>
     </channel>
+    <channel id="boat.omura">
+        <display-name>BOATRACE大村</display-name>
+    </channel>
     <channel id="jra.gch">
         <display-name>グリーンチャンネル</display-name>
     </channel>
@@ -269,9 +272,6 @@
     </channel>
     <channel id="boat.karatsu">
         <display-name>BOATRACEからつ</display-name>
-    </channel>
-    <channel id="boat.omura">
-        <display-name>BOATRACE大村</display-name>
     </channel>
     <programme start="20260903000000 +0900" stop="20260903080000 +0900" channel="auto.hamamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浜松（オートレース）</title>
@@ -3596,11 +3596,11 @@ keirin.nagoya</desc>
 📅 2026年09月03日</desc>
     </programme>
     <programme start="20260903192500 +0900" stop="20260903195900 +0900" channel="auto.sanyo">
-        <title lang="ja">【１１Ｒ】  19:56発走  🏍️【予選 2026年09月03日 電投締切19 : 54 発走予定19 : 56 距 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１１Ｒ】  19:56発走  🏍️【予選 2026年09月03日 電投締切19 : 55 発走予定19 : 56 距 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🏍️ オートレース 山陽
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:56
-📢 予選 2026年09月03日 電投締切19 : 54 発走予定19 : 56 距
+📢 予選 2026年09月03日 電投締切19 : 55 発走予定19 : 56 距
 📅 2026年09月03日</desc>
     </programme>
     <programme start="20260903192500 +0900" stop="20260903195100 +0900" channel="keirin.matsudo">
@@ -4278,9 +4278,9 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260904000000 +0900" stop="20260904080000 +0900" channel="boat.gamagori">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 07 蒲郡（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260904000000 +0900" stop="20260904151500 +0900" channel="boat.gamagori">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260904000000 +0900" stop="20260904112700 +0900" channel="boat.hamanako">
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
@@ -5290,17 +5290,6 @@ keirin.nagoya</desc>
 ⏰ 公式LIVE予定: 10:25～16:55
 📅 2026年09月04日</desc>
     </programme>
-    <programme start="20260904103000 +0900" stop="20260904170000 +0900" channel="boat.gamagori">
-        <title lang="ja">🚤 07 蒲郡 ☀️開催 一般社団法人蒲郡市観光協会長杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 07 蒲郡
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年09月04日</desc>
-    </programme>
     <programme start="20260904103000 +0900" stop="20260904170000 +0900" channel="boat.omura">
         <title lang="ja">🚤 24 大村 ☀️開催 ミッドナイトボートレースｉｎ大村 ８ （仮時間）※実際の時間ではありません</title>
         <desc lang="ja">🚤 ボートレース 24 大村
@@ -6147,6 +6136,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ４組
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904151500 +0900" stop="20260904152800 +0900" channel="boat.gamagori">
+        <title lang="ja">【１Ｒ】  15:25発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 15:25
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904152200 +0900" stop="20260904154800 +0900" channel="boat.miyajima">
         <title lang="ja">【１０Ｒ】  15:45発走  🚤【☀️デイ 第１７回ＰａｙＰａｙ銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
@@ -6179,6 +6176,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ☀️
 ⏰ 発走予定: 15:58
 📅 2026年09月04日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260904152800 +0900" stop="20260904155300 +0900" channel="boat.gamagori">
+        <title lang="ja">【２Ｒ】  15:50発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 15:50
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904063000 +0000" stop="20260904070000 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #351</title>
@@ -6256,6 +6261,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 16:20
 📅 2026年09月04日 開催区分: デイ</desc>
     </programme>
+    <programme start="20260904155300 +0900" stop="20260904161600 +0900" channel="boat.gamagori">
+        <title lang="ja">【３Ｒ】  16:13発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 16:13
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904155700 +0900" stop="20260904162900 +0900" channel="chihou.oi">
         <title lang="ja">【４Ｒ】  16:26発走  🏇【２歳一 二 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -6323,6 +6336,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: Ｃ３一３歳以上
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904161600 +0900" stop="20260904164200 +0900" channel="boat.gamagori">
+        <title lang="ja">【４Ｒ】  16:39発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 16:39
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904161800 +0900" stop="20260904164800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【５Ｒ】  16:45発走  🏇【秋兆賞３歳３ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6394,6 +6415,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: Ｃ２四３歳以上
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904164200 +0900" stop="20260904171200 +0900" channel="boat.gamagori">
+        <title lang="ja">【５Ｒ】  17:09発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 17:09
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904164400 +0900" stop="20260904171300 +0900" channel="boat.hamanako">
         <title lang="ja">【１２Ｒ】  17:10発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6476,6 +6505,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳選抜牝馬
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904171200 +0900" stop="20260904173700 +0900" channel="boat.gamagori">
+        <title lang="ja">【６Ｒ】  17:34発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 17:34
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904171300 +0900" stop="20260905000000 +0900" channel="boat.hamanako">
         <title lang="ja">【１Ｒ】  11:24発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 06 浜名湖
@@ -6519,6 +6556,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ１三 四 五
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904173700 +0900" stop="20260904180500 +0900" channel="boat.gamagori">
+        <title lang="ja">【７Ｒ】  18:02発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 18:02
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904174300 +0900" stop="20260904181300 +0900" channel="chihou.sonoda">
         <title lang="ja">【８Ｒ】  18:10発走  🏇【特別 三日月特別Ａ１ ３歳以上登録馬 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6555,6 +6600,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
+    <programme start="20260904180500 +0900" stop="20260904184400 +0900" channel="boat.gamagori">
+        <title lang="ja">【８Ｒ】  18:41発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 18:41
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904180500 +0900" stop="20260904183800 +0900" channel="chihou.oi">
         <title lang="ja">【８Ｒ】  18:35発走  🏇【シャンゼリゼ賞Ｃ１三 四 五 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 大井
@@ -6590,6 +6643,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 処暑賞Ｂ２二選抜特別
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904184400 +0900" stop="20260904191300 +0900" channel="boat.gamagori">
+        <title lang="ja">【９Ｒ】  19:10発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 19:10
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904184800 +0900" stop="20260904192300 +0900" channel="chihou.sonoda">
         <title lang="ja">【１０Ｒ】  19:20発走  🏇【コスモス賞Ｃ２一３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6636,6 +6697,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 こうま座特別Ｃ２一選抜
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904191300 +0900" stop="20260904194200 +0900" channel="boat.gamagori">
+        <title lang="ja">【１０Ｒ】  19:39発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 19:39
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904192300 +0900" stop="20260904195800 +0900" channel="chihou.sonoda">
         <title lang="ja">【１１Ｒ】  19:55発走  🏇【特別 全農パールライス杯Ｂ２ ３歳以上特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6653,6 +6722,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 初秋特別Ａ４
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904194200 +0900" stop="20260904201100 +0900" channel="boat.gamagori">
+        <title lang="ja">【１１Ｒ】  20:08発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 20:08
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904194300 +0900" stop="20260904201800 +0900" channel="chihou.oi">
         <title lang="ja">【１１Ｒ】  20:15発走  🏇【特別 デイリースポーツ賞Ｂ３二選抜特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6682,6 +6759,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 金シャチ最終戦Ｃ
 🏆 メインレース
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904201100 +0900" stop="20260904204100 +0900" channel="boat.gamagori">
+        <title lang="ja">【１２Ｒ】  20:38発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 07 蒲郡
+📢 一般社団法人蒲郡市観光協会長杯
+🌙
+⏰ 発走予定: 20:38
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904201800 +0900" stop="20260904205300 +0900" channel="chihou.oi">
         <title lang="ja">【１２Ｒ】  20:50発走  🏇【特別 月見特別Ｃ１三 四 五選抜 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6753,6 +6838,10 @@ BOAT RACE公式の開催一覧で開催を確認済み。
     <programme start="20260904113053 +0000" stop="20260904133053 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
+    </programme>
+    <programme start="20260904204100 +0900" stop="20260905000000 +0900" channel="boat.gamagori">
+        <title lang="ja">🏁 本日の🌙ナイターボートレース🌙は終了しました</title>
+        <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
     <programme start="20260904204800 +0900" stop="20260905000000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１Ｒ】  14:40発走  🏇【Ｃ６組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>

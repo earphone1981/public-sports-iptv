@@ -3,7 +3,7 @@ name: Update Public Sports EPG 3 Days
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 23,3,7,11 * * *"
+    - cron: "0 23 * * *"
   push:
     branches:
       - main
@@ -11,8 +11,7 @@ on:
       - "public_sports.m3u"
       - "boatrace_today.m3u"
       - "boatrace_today.ps1"
-      - "boatrace_today_fast.py"
-      - "prune_boatrace_finished.py"
+      - "repair_boatrace_streams_from_history.py"
       - "main_epg_3days.py"
       - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
@@ -30,7 +29,7 @@ on:
 
 concurrency:
   group: public-sports-m3u-writer
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -49,21 +48,24 @@ jobs:
           python-version: "3.12"
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
-      - name: Preserve BOAT stream playlist from self-hosted updater
-        run: cp boatrace_today.m3u /tmp/boatrace_today.m3u.streams
-      - name: Update today's BOAT RACE schedule data concurrently
-        timeout-minutes: 3
-        run: python -u boatrace_today_fast.py
-      - name: Restore BOAT stream playlist without cloud-resolved URLs
-        run: cp /tmp/boatrace_today.m3u.streams boatrace_today.m3u
-      - name: Validate BOAT RACE daily schedule data
+      - name: Update today's BOAT RACE data
+        shell: pwsh
+        timeout-minutes: 8
+        run: ./boatrace_today.ps1
+      - name: Restore BOAT stream URLs from recent valid history
+        run: python -u repair_boatrace_streams_from_history.py
+      - name: Validate BOAT RACE daily data
         shell: pwsh
         run: |
-          if (!(Test-Path boatrace_today.json)) { throw 'BOAT JSON output missing' }
+          if (!(Test-Path boatrace_today.json) -or !(Test-Path boatrace_today.m3u)) { throw 'BOAT output missing' }
           $data = Get-Content boatrace_today.json -Raw -Encoding UTF8 | ConvertFrom-Json
           $held = @($data.PSObject.Properties | Where-Object { $_.Value.held -eq $true }).Count
           if ($held -lt 1) { throw 'BOAT daily data has no held venues' }
-          Write-Host "BOAT schedule data OK: held=$held; stream M3U is preserved from self-hosted updater"
+          $live = @($data.PSObject.Properties | Where-Object { $_.Value.live -eq $true }).Count
+          Write-Host "BOAT daily data OK: held=$held live=$live"
+          if ((Get-Item boatrace_today.m3u).Length -lt 100) {
+            Write-Host 'BOAT streams are not open yet; continue EPG update from race schedule JSON.'
+          }
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true
@@ -112,5 +114,5 @@ jobs:
           cp /tmp/boatrace_today.m3u.generated boatrace_today.m3u
           git add epg.xml public_sports.m3u boatrace_today.json boatrace_today.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update BOAT schedule data and public sports EPG"
+          git commit -m "Update BOAT daily data, EPG and public sports M3U"
           git push origin HEAD:main

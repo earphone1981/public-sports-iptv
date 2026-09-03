@@ -30,7 +30,7 @@ on:
 
 concurrency:
   group: public-sports-m3u-writer
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: write

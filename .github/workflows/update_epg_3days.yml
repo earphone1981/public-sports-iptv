@@ -72,6 +72,20 @@ jobs:
           if ((Get-Item boatrace_today.m3u).Length -lt 100) {
             Write-Host 'BOAT streams are not open yet or all venues have finished; continue EPG update from race schedule JSON.'
           }
+      - name: Publish BOAT live playlist immediately
+        run: |
+          live=$(python -c "import json; d=json.load(open('boatrace_today.json',encoding='utf-8-sig')); print(sum(1 for x in d.values() if x.get('live') is True))")
+          echo "BOAT immediate publish live=$live"
+          if [ "$live" -lt 1 ]; then
+            echo "No confirmed current live URL; do not overwrite the public playlist with an empty BOAT result."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add boatrace_today.json boatrace_today.m3u public_sports.m3u
+          git diff --cached --quiet && echo "No BOAT changes" && exit 0
+          git commit -m "Publish current BOAT live streams [skip ci]"
+          git push origin HEAD:main
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true

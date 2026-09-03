@@ -3,6 +3,7 @@ import datetime as dt
 import json
 import re
 import subprocess
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
@@ -48,10 +49,6 @@ def current_streaks_url(url: str) -> bool:
         exp = int(payload.get("exp") or 0)
         if exp <= int(NOW_UTC.timestamp()) + 600:
             return False
-        # The old recovery code accepted any unexpired JWT.  BOAT tokens can
-        # remain unexpired after the actual broadcast day, which restored a
-        # previous-day VTR as if it were today's live feed.  Require the media
-        # start date to be today in JST when the token exposes start/nbf/iat.
         start = payload.get("start") or payload.get("nbf") or payload.get("iat")
         if start:
             start_day = dt.datetime.fromtimestamp(int(start), dt.timezone.utc).astimezone(JST).date()
@@ -118,7 +115,6 @@ def in_live_window(item: dict) -> bool:
     now = NOW_JST.hour * 60 + NOW_JST.minute
     if first >= 18 * 60 and now < 6 * 60:
         now += 1440
-    # Resolve shortly before 1R and keep trying until 45 min after the final deadline.
     return (first - 50) <= now <= (last + 45)
 
 
@@ -126,7 +122,6 @@ def ytdlp_base():
     cmd = ["yt-dlp", "--no-warnings", "--no-cache-dir"]
     if COOKIES.exists() and COOKIES.stat().st_size > 20:
         cmd += ["--cookies", str(COOKIES)]
-    # Current yt-dlp can use Node on GitHub-hosted runners for YouTube JS challenges.
     cmd += ["--js-runtimes", "node"]
     return cmd
 
@@ -135,38 +130,44 @@ def extract_live_hls(name: str):
     queries = [
         f"ytsearch5:BOATRACE {name} 公式 レースライブ",
         f"ytsearch5:ボートレース{name} レースライブ",
-        f"ytsearch5:{name} ボートレース LIVE 公式",
     ]
     errors = []
     for query in queries:
-        for selector in ("best[protocol^=m3u8]", "best"):
-            try:
-                p = subprocess.run(
-                    ytdlp_base() + [
-                        "--extractor-args", "youtube:player_client=default,web_safari,web",
-                        "--no-playlist",
-                        "--match-filter", "is_live",
-                        "-f", selector,
-                        "-g", query,
-                    ],
-                    text=True,
-                    capture_output=True,
-                    timeout=50,
-                )
-            except subprocess.TimeoutExpired:
-                errors.append("timeout")
-                continue
-            urls = [x.strip() for x in p.stdout.splitlines() if x.strip().startswith(("http://", "https://"))]
-            for url in urls:
-                if (".m3u8" in url or "manifest.googlevideo.com" in url) and youtube_url_fresh(url):
-                    return url
-            msg = (p.stderr or p.stdout or f"yt-dlp rc={p.returncode}").strip()
-            if msg:
-                errors.append(msg[-600:])
-            low = msg.lower()
-            if "429" in low or "too many requests" in low or "sign in to confirm" in low:
-                break
+        try:
+            p = subprocess.run(
+                ytdlp_base() + [
+                    "--extractor-args", "youtube:player_client=default,web_safari,web",
+                    "--no-playlist",
+                    "--match-filter", "is_live",
+                    "-f", "best[protocol^=m3u8]/best",
+                    "-g", query,
+                ],
+                text=True,
+                capture_output=True,
+                timeout=40,
+            )
+        except subprocess.TimeoutExpired:
+            errors.append("timeout")
+            continue
+        urls = [x.strip() for x in p.stdout.splitlines() if x.strip().startswith(("http://", "https://"))]
+        for url in urls:
+            if (".m3u8" in url or "manifest.googlevideo.com" in url) and youtube_url_fresh(url):
+                return url
+        msg = (p.stderr or p.stdout or f"yt-dlp rc={p.returncode}").strip()
+        if msg:
+            errors.append(msg[-600:])
+        low = msg.lower()
+        if "429" in low or "too many requests" in low or "sign in to confirm" in low:
+            break
     raise RuntimeError(" | ".join(errors)[-1000:] or "no live HLS")
+
+
+def resolve_one(tvg: str, venue: str, item: dict):
+    name = VENUE_NAMES.get(tvg) or re.sub(r"^\d+\s*", "", venue)
+    try:
+        return tvg, name, extract_live_hls(name), None
+    except Exception as e:
+        return tvg, name, None, f"{type(e).__name__}: {e}"
 
 
 def main():
@@ -186,8 +187,6 @@ def main():
     current = parse_entries(current_text)
     chosen = {}
 
-    # Only keep a Streaks URL produced for today's JST broadcast.  Never scan git
-    # history here: an old but unexpired token is exactly what caused the black screen.
     for tvg, entry in current.items():
         if tvg in held and current_streaks_url(entry[1]):
             chosen[tvg] = entry
@@ -195,8 +194,7 @@ def main():
         elif tvg in held:
             print(f"BOAT rejected stale/non-current primary URL: {tvg}")
 
-    youtube_ok = 0
-    youtube_fail = 0
+    targets = []
     for tvg, (venue, item) in held.items():
         if tvg in chosen:
             continue
@@ -205,18 +203,26 @@ def main():
             item.pop("url", None)
             print(f"BOAT live fallback skip outside live window: {tvg} {venue}")
             continue
-        name = VENUE_NAMES.get(tvg) or re.sub(r"^\d+\s*", "", venue)
-        try:
-            url = extract_live_hls(name)
-        except Exception as e:
-            youtube_fail += 1
-            item["live"] = False
-            item.pop("url", None)
-            print(f"BOAT YouTube live fallback failed: {tvg} {name}: {type(e).__name__}: {e}")
-            continue
-        chosen[tvg] = ("", url)
-        youtube_ok += 1
-        print(f"BOAT YouTube LIVE fallback OK: {tvg} {name}")
+        targets.append((tvg, venue, item))
+
+    youtube_ok = 0
+    youtube_fail = 0
+    if targets:
+        print(f"BOAT YouTube LIVE parallel targets={len(targets)} workers={min(4, len(targets))}")
+        with ThreadPoolExecutor(max_workers=min(4, len(targets))) as ex:
+            futures = {ex.submit(resolve_one, tvg, venue, item): (tvg, venue, item) for tvg, venue, item in targets}
+            for fut in as_completed(futures):
+                tvg, venue, item = futures[fut]
+                rtvg, name, url, error = fut.result()
+                if url:
+                    chosen[rtvg] = ("", url)
+                    youtube_ok += 1
+                    print(f"BOAT YouTube LIVE fallback OK: {rtvg} {name}")
+                else:
+                    youtube_fail += 1
+                    item["live"] = False
+                    item.pop("url", None)
+                    print(f"BOAT YouTube live fallback failed: {rtvg} {name}: {error}")
 
     lines = ["#EXTM3U", ""]
     live_count = 0

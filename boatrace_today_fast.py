@@ -55,6 +55,29 @@ VENUES = [
 ]
 
 
+def load_old_today():
+    if not JSON_PATH.exists():
+        return {}
+    try:
+        data = json.loads(JSON_PATH.read_text(encoding="utf-8-sig"))
+    except Exception:
+        return {}
+    out = {}
+    for venue, item in data.items():
+        races = item.get("races") or []
+        same_day = any(str(r.get("epg_start") or "").startswith(DATE10) for r in races)
+        # A venue with no races is useful only as a non-event hint; never use a
+        # previous day's held state as today's schedule.
+        if same_day:
+            out[venue] = item
+        elif item.get("held") is False:
+            out[venue] = item
+    return out
+
+
+OLD_DATA = load_old_today()
+
+
 def fetch_text(url: str, headers: dict[str, str], timeout: int = 6) -> str:
     req = Request(url, headers=headers)
     with urlopen(req, timeout=timeout) as r:
@@ -74,6 +97,19 @@ def parse_iso(value: str | None):
         return None
     try:
         return dt.datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(JST)
+    except Exception:
+        return None
+
+
+def parse_old_clock(value, start=None):
+    if not value:
+        return None
+    try:
+        h, m = map(int, str(value).split(":", 1))
+        x = dt.datetime.combine(TODAY, dt.time(h, m), JST)
+        if start is not None and x < start - dt.timedelta(hours=6):
+            x += dt.timedelta(days=1)
+        return x
     except Exception:
         return None
 
@@ -101,6 +137,22 @@ def get_race_times(jcd: str):
     return out
 
 
+def old_race_times_for(name: str):
+    item = OLD_DATA.get(name) or {}
+    out = {}
+    for race in item.get("races") or []:
+        if not str(race.get("epg_start") or "").startswith(DATE10):
+            continue
+        try:
+            rno = int(race.get("rno") or 0)
+        except Exception:
+            continue
+        t = str(race.get("time") or "")
+        if 1 <= rno <= 12 and re.fullmatch(r"[0-2][0-9]:[0-5][0-9]", t):
+            out[rno] = t
+    return out
+
+
 def normalized_race_datetimes(race_times: dict[int, str]):
     out = {}
     prev = None
@@ -119,10 +171,7 @@ def in_live_window(race_dts: dict[int, dt.datetime]):
         return False
     first = race_dts[min(race_dts)]
     last = race_dts[max(race_dts)]
-    now = NOW
-    if first.hour >= 18 and now.hour < 6 and now.date() == TODAY + dt.timedelta(days=1):
-        pass
-    return first - dt.timedelta(minutes=60) <= now <= last + dt.timedelta(minutes=45)
+    return first - dt.timedelta(minutes=60) <= NOW <= last + dt.timedelta(minutes=45)
 
 
 def get_playback(code: str):
@@ -141,14 +190,8 @@ def get_playback(code: str):
 
 
 def old_race_names():
-    if not JSON_PATH.exists():
-        return {}
-    try:
-        data = json.loads(JSON_PATH.read_text(encoding="utf-8-sig"))
-    except Exception:
-        return {}
     out = {}
-    for venue, item in data.items():
+    for venue, item in OLD_DATA.items():
         for race in item.get("races") or []:
             if str(race.get("epg_start") or "").startswith(DATE10):
                 out[(venue, int(race.get("rno") or 0))] = str(race.get("race_name") or "")
@@ -158,8 +201,7 @@ def old_race_names():
 def day_type(start, end):
     if not start or not end:
         return "", "🚤"
-    end_cmp = end
-    if end_cmp.date() > start.date() or end_cmp.hour < start.hour:
+    if end.date() > start.date() or end.hour < start.hour:
         return "ミッドナイト", "🌟"
     mins = end.hour * 60 + end.minute
     if mins >= 20 * 60:
@@ -174,14 +216,27 @@ def day_type(start, end):
 def scan_venue(v):
     name, jcd, code, tvg_id, logo = v
     race_times = get_race_times(jcd)
+    schedule_source = "official-index"
+    if not race_times:
+        race_times = old_race_times_for(name)
+        if race_times:
+            schedule_source = "same-day-committed-fallback"
     held = bool(race_times)
+
     start, end = get_setting(code)
+    old = OLD_DATA.get(name) or {}
+    if held and not start:
+        start = parse_old_clock(old.get("start"))
+    if held and not end:
+        end = parse_old_clock(old.get("end"), start=start)
+
     race_dts = normalized_race_datetimes(race_times)
     stream = get_playback(code) if held and in_live_window(race_dts) else None
     return {
         "name": name, "jcd": jcd, "code": code, "tvg_id": tvg_id, "logo": logo,
         "race_times": race_times, "race_dts": race_dts, "held": held,
         "start": start, "end": end, "stream": stream,
+        "schedule_source": schedule_source,
     }
 
 
@@ -202,13 +257,15 @@ def main():
                 name, jcd, code, tvg_id, logo = v
                 print(f"BOAT scan failed {name}: {type(e).__name__}: {e}")
                 row = {"name": name, "jcd": jcd, "code": code, "tvg_id": tvg_id, "logo": logo,
-                       "race_times": {}, "race_dts": {}, "held": False, "start": None, "end": None, "stream": None}
+                       "race_times": {}, "race_dts": {}, "held": False, "start": None, "end": None,
+                       "stream": None, "schedule_source": "error"}
             scanned[row["tvg_id"]] = row
 
     today_data = {}
     m3u = ["#EXTM3U", ""]
     live_count = 0
     held_count = 0
+    fallback_schedule_count = 0
 
     for name, jcd, code, tvg_id, logo in VENUES:
         row = scanned[tvg_id]
@@ -216,6 +273,9 @@ def main():
         stream = row["stream"]
         start = row["start"]
         end = row["end"]
+        source = row.get("schedule_source") or "unknown"
+        if source == "same-day-committed-fallback":
+            fallback_schedule_count += 1
         dtype, emoji = day_type(start, end)
         item = {
             "tvg_id": tvg_id,
@@ -225,6 +285,7 @@ def main():
             "day_type": dtype,
             "emoji": emoji,
             "races": [],
+            "schedule_source": source,
         }
         if start:
             item["start"] = start.strftime("%H:%M")
@@ -278,11 +339,14 @@ def main():
 
         today_data[name] = item
         status = "Streaks OK" if stream else "held / direct stream unavailable"
-        print(f"BOAT {name}: {status}; races={len(item['races'])}")
+        print(f"BOAT {name}: {status}; races={len(item['races'])}; schedule={source}")
 
     M3U_PATH.write_text("\n".join(m3u).rstrip() + "\n", encoding="utf-8")
     JSON_PATH.write_text(json.dumps(today_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"BOAT fast update complete: held={held_count} direct_live={live_count} date={DATE8}")
+    print(
+        f"BOAT fast update complete: held={held_count} direct_live={live_count} "
+        f"same_day_schedule_fallback={fallback_schedule_count} date={DATE8}"
+    )
 
 
 if __name__ == "__main__":

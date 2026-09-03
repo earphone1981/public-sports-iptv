@@ -53,8 +53,16 @@ jobs:
         run: git pull --ff-only origin main
       - name: Update today's BOAT RACE data
         shell: pwsh
-        timeout-minutes: 8
-        run: ./boatrace_today.ps1
+        timeout-minutes: 6
+        run: |
+          # BOAT's playback endpoint currently fails for many/all venues. Do not
+          # spend 20 seconds on every dead request before reaching the live fallback.
+          $path = './boatrace_today.ps1'
+          $src = Get-Content $path -Raw -Encoding UTF8
+          $src = $src.Replace('-TimeoutSec 20', '-TimeoutSec 6')
+          $src = $src.Replace('[TimeSpan]::FromSeconds(20)', '[TimeSpan]::FromSeconds(8)')
+          [System.IO.File]::WriteAllText($path, $src, [System.Text.UTF8Encoding]::new($false))
+          ./boatrace_today.ps1
       - name: Resolve BOAT current live streams only
         timeout-minutes: 12
         run: python -u repair_boatrace_streams_from_history.py

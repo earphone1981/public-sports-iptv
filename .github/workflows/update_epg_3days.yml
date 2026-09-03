@@ -11,7 +11,8 @@ on:
       - "public_sports.m3u"
       - "boatrace_today.m3u"
       - "boatrace_today.ps1"
-      - "repair_boatrace_streams_from_history.py"
+      - "boatrace_github_oneclick.js"
+      - "merge_m3u.py"
       - "main_epg_3days.py"
       - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
@@ -42,62 +43,89 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
-      - name: Update today's BOAT RACE data
+
+      - name: Preserve BOAT M3U supplied by iPhone one-click
+        run: cp boatrace_today.m3u /tmp/boatrace_today.m3u.oneclick
+
+      - name: Update today's BOAT RACE schedule only
         shell: pwsh
         timeout-minutes: 8
         run: ./boatrace_today.ps1
-      - name: Restore BOAT stream URLs from recent valid history
-        run: python -u repair_boatrace_streams_from_history.py
-      - name: Validate BOAT RACE daily data
+
+      - name: Restore iPhone one-click BOAT stream URLs
+        run: cp /tmp/boatrace_today.m3u.oneclick boatrace_today.m3u
+
+      - name: Validate BOAT schedule and one-click playlist
         shell: pwsh
         run: |
           if (!(Test-Path boatrace_today.json) -or !(Test-Path boatrace_today.m3u)) { throw 'BOAT output missing' }
           $data = Get-Content boatrace_today.json -Raw -Encoding UTF8 | ConvertFrom-Json
           $held = @($data.PSObject.Properties | Where-Object { $_.Value.held -eq $true }).Count
           if ($held -lt 1) { throw 'BOAT daily data has no held venues' }
-          $live = @($data.PSObject.Properties | Where-Object { $_.Value.live -eq $true }).Count
-          Write-Host "BOAT daily data OK: held=$held live=$live"
-          if ((Get-Item boatrace_today.m3u).Length -lt 100) {
-            Write-Host 'BOAT streams are not open yet; continue EPG update from race schedule JSON.'
+          $m3u = Get-Content boatrace_today.m3u -Raw -Encoding UTF8
+          $streams = ([regex]::Matches($m3u, '(?m)^https?://')).Count
+          Write-Host "BOAT schedule OK: held=$held / iPhone one-click streams=$streams"
+          if ($streams -lt 1) {
+            Write-Host 'No iPhone one-click BOAT streams are stored yet. EPG will update, but BOAT playback stays empty until Scriptable one-click is run.'
           }
+
       - name: Generate 3-day EPG
         timeout-minutes: 12
         continue-on-error: true
         env:
           PYTHONUNBUFFERED: "1"
         run: python -u main_epg_3days.py
+
+      - name: Merge current one-click BOAT M3U into public sports
+        run: python -u merge_m3u.py
+
       - name: Repair BOAT active venues from current M3U
         run: python -u fix_boat_active_from_m3u.py
+
       - name: Repair today's AutoRace directly from all 5 official program pages
         run: python -u fix_autorace_today_official.py
+
       - name: Finalize v11 race titles and three-minute switching
         run: python -u fix_epg_v11.py
+
       - name: Show BOAT first race while waiting
         run: python -u fix_boat_waiting_title.py
+
       - name: Fix BOAT day type including midnight races
         run: python -u fix_boat_day_type.py
+
       - name: Verify today's active venues from official indexes
         run: python -u verified_daily_override.py
+
       - name: Apply verified active and non-event status
         run: python -u apply_verified_status.py
+
       - name: Format race numbers for OTT Navigator
         run: python -u format_race_number_epg.py
+
       - name: Validate race dates, pre-race and post-race states
         run: python -u validate_race_epg_boundaries.py
+
       - name: Fix duplicate-name channel IDs
         run: python -u fix_epg_duplicate_channel_ids.py
+
       - name: Sort public sports M3U from today's EPG
         run: python -u sort_public_sports_by_epg.py
+
       - name: Sync EPG channel order to sorted M3U
         run: python -u reorder_epg_channels_by_m3u.py
+
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+
       - name: Commit and push generated files safely
         run: |
           git config user.name "github-actions[bot]"
@@ -114,5 +142,5 @@ jobs:
           cp /tmp/boatrace_today.m3u.generated boatrace_today.m3u
           git add epg.xml public_sports.m3u boatrace_today.json boatrace_today.m3u
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update BOAT daily data, EPG and public sports M3U"
+          git commit -m "Update public sports EPG with iPhone one-click BOAT M3U"
           git push origin HEAD:main

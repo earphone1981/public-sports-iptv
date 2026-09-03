@@ -4326,9 +4326,9 @@ keirin.nagoya</desc>
         <title lang="ja">🔄 ただ今データ取得準備中です。 19 下関（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260904000000 +0900" stop="20260904080000 +0900" channel="boat.suminoe">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 12 住之江（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260904000000 +0900" stop="20260904152000 +0900" channel="boat.suminoe">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260904000000 +0900" stop="20260904080000 +0900" channel="boat.tamagawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 05 多摩川（ボートレース）</title>
@@ -4350,9 +4350,9 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260904000000 +0900" stop="20260904080000 +0900" channel="boat.wakamatsu">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 20 若松（ボートレース）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260904000000 +0900" stop="20260904153200 +0900" channel="boat.wakamatsu">
+        <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
     <programme start="20260904000000 +0900" stop="20260904080000 +0900" channel="chihou.funabashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 船橋（競馬）</title>
@@ -5301,28 +5301,6 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
 📅 2026年09月04日</desc>
     </programme>
-    <programme start="20260904103000 +0900" stop="20260904170000 +0900" channel="boat.suminoe">
-        <title lang="ja">🚤 12 住之江 ☀️開催 日刊スポーツ杯争奪第３０回ブルースターカップ （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 12 住之江
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年09月04日</desc>
-    </programme>
-    <programme start="20260904103000 +0900" stop="20260904170000 +0900" channel="boat.wakamatsu">
-        <title lang="ja">🚤 20 若松 ☀️開催 マスターズリーグ第５戦九州スポーツ杯 （仮時間）※実際の時間ではありません</title>
-        <desc lang="ja">🚤 ボートレース 20 若松
-BOAT RACE公式の開催一覧で開催を確認済み。
-1R～12Rの発走予定時刻は未公表または未取得です。
-☀️ 開催区分: 開催
-⏰ 仮予定: 10:30～17:00
-⚠️ （仮時間）※実際の時間ではありません
-開催は確認できていますが、公式の実時刻が未公表または取得できないため仮時間で表示しています。
-📅 2026年09月04日</desc>
-    </programme>
     <programme start="20260904013000 +0000" stop="20260904020000 +0000" channel="jra.gch">
         <title lang="ja">Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ　Ｗｏｒｌｄ</title>
         <desc lang="ja">世界各地の競馬にまつわる景色をお届けします。</desc>
@@ -6144,6 +6122,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 15:25
 📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
+    <programme start="20260904152000 +0900" stop="20260904154400 +0900" channel="boat.suminoe">
+        <title lang="ja">【２Ｒ】  15:41発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 15:41
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904152200 +0900" stop="20260904154800 +0900" channel="boat.miyajima">
         <title lang="ja">【１０Ｒ】  15:45発走  🚤【☀️デイ 第１７回ＰａｙＰａｙ銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
@@ -6203,6 +6189,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29627/S_86b62ec44ab04767b68a5eaaf1f7456f_20250924125338138.png</image>
     </programme>
+    <programme start="20260904153200 +0900" stop="20260904155600 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【２Ｒ】  15:53発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 15:53
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904153300 +0900" stop="20260904160800 +0900" channel="boat.hamanako">
         <title lang="ja">【１０Ｒ】  16:05発走  🚤【☀️デイ オールレディース静岡クラウンメロン杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 06 浜名湖
@@ -6245,6 +6239,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 色月疾風戦３歳４
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904154400 +0900" stop="20260904161200 +0900" channel="boat.suminoe">
+        <title lang="ja">【３Ｒ】  16:09発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 16:09
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904154800 +0900" stop="20260904162000 +0900" channel="boat.miyajima">
         <title lang="ja">【１１Ｒ】  16:17発走  🚤【☀️デイ 第１７回ＰａｙＰａｙ銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 17 宮島
@@ -6267,6 +6269,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 一般社団法人蒲郡市観光協会長杯
 🌙
 ⏰ 発走予定: 16:13
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260904155600 +0900" stop="20260904162800 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【３Ｒ】  16:25発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 16:25
 📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904155700 +0900" stop="20260904162900 +0900" channel="chihou.oi">
@@ -6337,6 +6347,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ３一３歳以上
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904161200 +0900" stop="20260904163600 +0900" channel="boat.suminoe">
+        <title lang="ja">【４Ｒ】  16:33発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 16:33
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904161600 +0900" stop="20260904164200 +0900" channel="boat.gamagori">
         <title lang="ja">【４Ｒ】  16:39発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 07 蒲郡
@@ -6365,6 +6383,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
     <programme start="20260904162300 +0900" stop="20260905000000 +0900" channel="boat.biwako">
         <title lang="ja">🏁 本日の🚤ボートレース🚤は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
+    </programme>
+    <programme start="20260904162800 +0900" stop="20260904165600 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【４Ｒ】  16:53発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 16:53
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904162900 +0900" stop="20260905000000 +0900" channel="boat.amagasaki">
         <title lang="ja">【１Ｒ】  10:36発走  🚤【☀️デイ 尼崎あきんど倶楽部３０周年記念杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6398,6 +6424,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ☀️
 ⏰ 発走予定: 10:47
 📅 2026年09月04日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260904163600 +0900" stop="20260904170400 +0900" channel="boat.suminoe">
+        <title lang="ja">【５Ｒ】  17:01発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 17:01
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904163800 +0900" stop="20260905000000 +0900" channel="boat.tsu">
         <title lang="ja">【１Ｒ】  10:42発走  🚤【☀️デイ 開設７４周年記念 ツッキー王座決定戦 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6462,6 +6496,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 10:57
 📅 2026年09月04日 開催区分: デイ</desc>
     </programme>
+    <programme start="20260904165600 +0900" stop="20260904172000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【５Ｒ】  17:17発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 17:17
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904080000 +0000" stop="20260904090000 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <desc lang="ja">「セントウルＳ、紫苑Ｓ、京成杯オータムＨ、札幌２歳S　他」</desc>
@@ -6505,6 +6547,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: ３歳選抜牝馬
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904170400 +0900" stop="20260904173200 +0900" channel="boat.suminoe">
+        <title lang="ja">【６Ｒ】  17:29発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 17:29
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904171200 +0900" stop="20260904173700 +0900" channel="boat.gamagori">
         <title lang="ja">【６Ｒ】  17:34発走  🚤【🌙ナイター 一般社団法人蒲郡市観光協会長杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 07 蒲郡
@@ -6530,6 +6580,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２三３歳以上
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904172000 +0900" stop="20260904175100 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【６Ｒ】  17:48発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 17:48
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904172300 +0900" stop="20260904175300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【７Ｒ】  17:50発走  🏇【Ｂ８組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -6546,6 +6604,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ☀️
 ⏰ 発走予定: 11:48
 📅 2026年09月04日 開催区分: デイ</desc>
+    </programme>
+    <programme start="20260904173200 +0900" stop="20260904175800 +0900" channel="boat.suminoe">
+        <title lang="ja">【７Ｒ】  17:55発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 17:55
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904173300 +0900" stop="20260904180500 +0900" channel="chihou.oi">
         <title lang="ja">【７Ｒ】  18:02発走  🏇【Ｃ１三 四 五 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6573,6 +6639,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 三日月特別Ａ１ ３歳以上登録馬
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904175100 +0900" stop="20260904182000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【７Ｒ】  18:17発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 18:17
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904175300 +0900" stop="20260904182300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【８Ｒ】  18:20発走  🏇【特別 穂香姫特別３歳１ｂ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -6581,6 +6655,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 穂香姫特別３歳１ｂ
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904175800 +0900" stop="20260904182800 +0900" channel="boat.suminoe">
+        <title lang="ja">【８Ｒ】  18:25発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 18:25
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904090000 +0000" stop="20260904100000 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
@@ -6626,6 +6708,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: Ｃ２二３歳以上
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904182000 +0900" stop="20260904185100 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【８Ｒ】  18:48発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 18:48
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904182300 +0900" stop="20260904185800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【９Ｒ】  18:55発走  🏇【Ｂ７組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -6634,6 +6724,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: Ｂ７組
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904182800 +0900" stop="20260904185800 +0900" channel="boat.suminoe">
+        <title lang="ja">【９Ｒ】  18:55発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 18:55
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904183800 +0900" stop="20260904191000 +0900" channel="chihou.oi">
         <title lang="ja">【９Ｒ】  19:07発走  🏇【特別 処暑賞Ｂ２二選抜特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6660,6 +6758,22 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: コスモス賞Ｃ２一３歳以上
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904185100 +0900" stop="20260904191900 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【９Ｒ】  19:16発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 19:16
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
+    <programme start="20260904185800 +0900" stop="20260904192600 +0900" channel="boat.suminoe">
+        <title lang="ja">【１０Ｒ】  19:23発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 19:23
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904185800 +0900" stop="20260904193300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１０Ｒ】  19:30発走  🏇【特別 瑞穂特別３歳１ａ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6705,6 +6819,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⏰ 発走予定: 19:39
 📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
+    <programme start="20260904191900 +0900" stop="20260904195100 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１０Ｒ】  19:48発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 19:48
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904192300 +0900" stop="20260904195800 +0900" channel="chihou.sonoda">
         <title lang="ja">【１１Ｒ】  19:55発走  🏇【特別 全農パールライス杯Ｂ２ ３歳以上特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6713,6 +6835,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 🏷️ 種別: 一般
 📢 レース名: 特別 全農パールライス杯Ｂ２ ３歳以上特別
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904192600 +0900" stop="20260904200600 +0900" channel="boat.suminoe">
+        <title lang="ja">【１１Ｒ】  20:03発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 20:03
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904193300 +0900" stop="20260904200800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１１Ｒ】  20:05発走  🏇【特別 初秋特別Ａ４ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6740,6 +6870,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 デイリースポーツ賞Ｂ３二選抜特別
 📅 2026年09月04日</desc>
     </programme>
+    <programme start="20260904195100 +0900" stop="20260904202000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１１Ｒ】  20:17発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 20:17
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904195800 +0900" stop="20260904203300 +0900" channel="chihou.sonoda">
         <title lang="ja">【１２Ｒ】  20:30発走  🏇【有 特別 キンモクセイ賞Ｃ１ ３歳以上特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
@@ -6749,6 +6887,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 有 特別 キンモクセイ賞Ｃ１ ３歳以上特別
 🏆 メインレース
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904200600 +0900" stop="20260904203400 +0900" channel="boat.suminoe">
+        <title lang="ja">【１２Ｒ】  20:31発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 20:31
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904200800 +0900" stop="20260904204300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１２Ｒ】  20:40発走  🏇【金シャチ最終戦Ｃ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -6777,6 +6923,14 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 月見特別Ｃ１三 四 五選抜
 🏆 メインレース
 📅 2026年09月04日</desc>
+    </programme>
+    <programme start="20260904202000 +0900" stop="20260904204800 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１２Ｒ】  20:45発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 20:45
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904203000 +0900" stop="20260904233000 +0900" channel="auto.sanyo">
         <title lang="ja">📅 開催予定 山陽 ⭐ミッドナイト 【普通開催】 おトクにPLAY!オッズパーク杯山陽オーバーミッドナイトオートレース 1日目 （仮時間）※実際の時間ではありません</title>
@@ -6839,9 +6993,25 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
+    <programme start="20260904203400 +0900" stop="20260905000000 +0900" channel="boat.suminoe">
+        <title lang="ja">【１Ｒ】  15:17発走  🚤【🌙ナイター 日刊スポーツ杯争奪第３０回ブルースターカップ 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 12 住之江
+📢 日刊スポーツ杯争奪第３０回ブルースターカップ
+🌙
+⏰ 発走予定: 15:17
+📅 2026年09月04日 開催区分: ナイター</desc>
+    </programme>
     <programme start="20260904204100 +0900" stop="20260905000000 +0900" channel="boat.gamagori">
         <title lang="ja">🏁 本日の🌙ナイターボートレース🌙は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
+    </programme>
+    <programme start="20260904204100 +0900" stop="20260905000000 +0900" channel="boat.wakamatsu">
+        <title lang="ja">【１Ｒ】  15:29発走  🚤【🌙ナイター マスターズリーグ第５戦九州スポーツ杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">🚤 ボートレース 20 若松
+📢 マスターズリーグ第５戦九州スポーツ杯
+🌙
+⏰ 発走予定: 15:29
+📅 2026年09月04日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260904204800 +0900" stop="20260905000000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１Ｒ】  14:40発走  🏇【Ｃ６組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>

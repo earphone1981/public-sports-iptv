@@ -11,6 +11,7 @@ on:
       - "public_sports.m3u"
       - "boatrace_today.m3u"
       - "boatrace_today.ps1"
+      - "boatrace_today_fast.py"
       - "repair_boatrace_streams_from_history.py"
       - "prune_boatrace_finished.py"
       - "main_epg_3days.py"
@@ -51,18 +52,9 @@ jobs:
         run: python -m pip install --disable-pip-version-check --quiet --upgrade yt-dlp
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
-      - name: Update today's BOAT RACE data
-        shell: pwsh
-        timeout-minutes: 6
-        run: |
-          # BOAT's playback endpoint currently fails for many/all venues. Do not
-          # spend 20 seconds on every dead request before reaching the live fallback.
-          $path = './boatrace_today.ps1'
-          $src = Get-Content $path -Raw -Encoding UTF8
-          $src = $src.Replace('-TimeoutSec 20', '-TimeoutSec 6')
-          $src = $src.Replace('[TimeSpan]::FromSeconds(20)', '[TimeSpan]::FromSeconds(8)')
-          [System.IO.File]::WriteAllText($path, $src, [System.Text.UTF8Encoding]::new($false))
-          ./boatrace_today.ps1
+      - name: Update today's BOAT RACE data concurrently
+        timeout-minutes: 3
+        run: python -u boatrace_today_fast.py
       - name: Resolve BOAT current live streams only
         timeout-minutes: 12
         run: python -u repair_boatrace_streams_from_history.py

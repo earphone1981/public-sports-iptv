@@ -195,6 +195,9 @@
     <channel id="boat.tokuyama">
         <display-name>BOATRACE徳山</display-name>
     </channel>
+    <channel id="boat.biwako">
+        <display-name>BOATRACEびわこ</display-name>
+    </channel>
     <channel id="boat.amagasaki">
         <display-name>BOATRACE尼崎</display-name>
     </channel>
@@ -257,9 +260,6 @@
     </channel>
     <channel id="boat.gamagori">
         <display-name>BOATRACE蒲郡</display-name>
-    </channel>
-    <channel id="boat.biwako">
-        <display-name>BOATRACEびわこ</display-name>
     </channel>
     <channel id="boat.naruto">
         <display-name>BOATRACE鳴門</display-name>
@@ -693,14 +693,6 @@
         <desc lang="ja">「キャプテン渡辺と仲間たちがダービーデーを楽しみ尽くす！」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260903210019 +0000" stop="20260903220019 +0000" channel="jra.gch">
-        <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (後編)[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84162/S_3dcabb8ff2a6491ea9b66cea47a4df62_20260806112034363.png</image>
-    </programme>
-    <programme start="20260903210019 +0000" stop="20260903220019 +0000" channel="jra.gch">
-        <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (後編)[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84162/S_3dcabb8ff2a6491ea9b66cea47a4df62_20260806112034363.png</image>
-    </programme>
     <programme start="20260903220000 +0000" stop="20260903223000 +0000" channel="jra.gch">
         <title lang="ja">がんばる！畜産！9 #16</title>
         <desc lang="ja">「農場HACCP取り組みの現場」</desc>
@@ -711,14 +703,6 @@
         <desc lang="ja">「農場HACCP取り組みの現場」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260903220019 +0000" stop="20260903223019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
-    <programme start="20260903220019 +0000" stop="20260903223019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！9 #16[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
     <programme start="20260903223000 +0000" stop="20260903230000 +0000" channel="jra.gch">
         <title lang="ja">がんばる！畜産！8 #3</title>
         <desc lang="ja">「ドキュメント！畜産の新主役たち「日本畜産学会第132回大会」前編」</desc>
@@ -728,14 +712,6 @@
         <title lang="ja">がんばる！畜産！8 #3</title>
         <desc lang="ja">「ドキュメント！畜産の新主役たち「日本畜産学会第132回大会」前編」</desc>
         <category lang="ja">スポーツ</category>
-    </programme>
-    <programme start="20260903223019 +0000" stop="20260903230019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！8 #3[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
-    <programme start="20260903223019 +0000" stop="20260903230019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！8 #3[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
     <programme start="20260904080000 +0900" stop="20260904100600 +0900" channel="auto.hamamatsu">
         <title lang="ja">【１Ｒ】  10:03発走  🏍️【予定 🏍️】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -1076,14 +1052,6 @@ keirin.nagoya</desc>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月04日の競輪開催なしを確認しました。
 四日市けいりん</desc>
     </programme>
-    <programme start="20260903230019 +0000" stop="20260903233019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！7 #3[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
-    <programme start="20260903230019 +0000" stop="20260903233019 +0000" channel="jra.gch">
-        <title lang="ja">[無]がんばる！畜産！7 #3[字]</title>
-        <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
-    </programme>
     <programme start="20260904082200 +0900" stop="20260904083500 +0900" channel="boat.mikuni">
         <title lang="ja">【１Ｒ】  08:32発走  🚤【🌅モーニング 三国港解禁ふくい甘えび杯 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">🚤 ボートレース 10 三国
@@ -1112,11 +1080,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「畜産トレンド発見！シリーズ令和の畜産危機にさせないために」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260903233019 +0000" stop="20260904000019 +0000" channel="jra.gch">
+    <programme start="20260903233014 +0000" stop="20260904000014 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！6 #3[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260903233019 +0000" stop="20260904000019 +0000" channel="jra.gch">
+    <programme start="20260903233014 +0000" stop="20260904000014 +0000" channel="jra.gch">
         <title lang="ja">[無]がんばる！畜産！6 #3[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
@@ -1194,11 +1162,11 @@ keirin.nagoya</desc>
         <desc lang="ja">証言〜藤沢和雄調教師1500勝の記録</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904000019 +0000" stop="20260904010019 +0000" channel="jra.gch">
+    <programme start="20260904000014 +0000" stop="20260904010014 +0000" channel="jra.gch">
         <title lang="ja">[無]ＧＣＨ傑作選（証言～藤沢和雄調教師1500勝の記録） #73[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49120/S_2a596972ee914754a4493cb66202ca40_20251226104123893.jpg</image>
     </programme>
-    <programme start="20260904000019 +0000" stop="20260904010019 +0000" channel="jra.gch">
+    <programme start="20260904000014 +0000" stop="20260904010014 +0000" channel="jra.gch">
         <title lang="ja">[無]ＧＣＨ傑作選（証言～藤沢和雄調教師1500勝の記録） #73[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49120/S_2a596972ee914754a4493cb66202ca40_20251226104123893.jpg</image>
     </programme>
@@ -1314,11 +1282,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「サラブレッドの最新遺伝学〜遺伝学の基礎〜」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904010019 +0000" stop="20260904013019 +0000" channel="jra.gch">
+    <programme start="20260904010014 +0000" stop="20260904013014 +0000" channel="jra.gch">
         <title lang="ja">[無]新・馬学講座ホースアカデミー #113[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83270/S_f432d241a52b4cd6ac6bcf503f551663_20260804175206899.png</image>
     </programme>
-    <programme start="20260904010019 +0000" stop="20260904013019 +0000" channel="jra.gch">
+    <programme start="20260904010014 +0000" stop="20260904013014 +0000" channel="jra.gch">
         <title lang="ja">[無]新・馬学講座ホースアカデミー #113[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83270/S_f432d241a52b4cd6ac6bcf503f551663_20260804175206899.png</image>
     </programme>
@@ -1415,11 +1383,11 @@ keirin.nagoya</desc>
         <desc lang="ja">世界各地の競馬にまつわる景色をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904013019 +0000" stop="20260904020019 +0000" channel="jra.gch">
+    <programme start="20260904013014 +0000" stop="20260904020014 +0000" channel="jra.gch">
         <title lang="ja">[無]Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ　Ｗｏｒｌｄ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83459/S_14e4cb5530544d62ab66e101fc9df2da_20260805105848851.png</image>
     </programme>
-    <programme start="20260904013019 +0000" stop="20260904020019 +0000" channel="jra.gch">
+    <programme start="20260904013014 +0000" stop="20260904020014 +0000" channel="jra.gch">
         <title lang="ja">[無]Ｇｒｅｅｎ　Ｈｅａｌｉｎｇ　Ｗｏｒｌｄ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83459/S_14e4cb5530544d62ab66e101fc9df2da_20260805105848851.png</image>
     </programme>
@@ -1559,11 +1527,11 @@ keirin.nagoya</desc>
         <desc lang="ja">東西トレセンからの取れたて情報をお届け！</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904020019 +0000" stop="20260904030019 +0000" channel="jra.gch">
+    <programme start="20260904020014 +0000" stop="20260904030014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
-    <programme start="20260904020019 +0000" stop="20260904030019 +0000" channel="jra.gch">
+    <programme start="20260904020014 +0000" stop="20260904030014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
@@ -1797,11 +1765,11 @@ keirin.nagoya</desc>
         <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904030019 +0000" stop="20260904040019 +0000" channel="jra.gch">
+    <programme start="20260904030014 +0000" stop="20260904040014 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
-    <programme start="20260904030019 +0000" stop="20260904040019 +0000" channel="jra.gch">
+    <programme start="20260904030014 +0000" stop="20260904040014 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -2008,11 +1976,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「セントウルＳ、紫苑Ｓ、京成杯オータムＨ、札幌２歳S　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904040019 +0000" stop="20260904050019 +0000" channel="jra.gch">
+    <programme start="20260904040014 +0000" stop="20260904050014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
-    <programme start="20260904040019 +0000" stop="20260904050019 +0000" channel="jra.gch">
+    <programme start="20260904040014 +0000" stop="20260904050014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -2214,11 +2182,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「キャプテン渡辺と仲間たちがダービーデーを楽しみ尽くす！」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904050019 +0000" stop="20260904060019 +0000" channel="jra.gch">
+    <programme start="20260904050014 +0000" stop="20260904060014 +0000" channel="jra.gch">
         <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (後編)[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84162/S_3dcabb8ff2a6491ea9b66cea47a4df62_20260806112034363.png</image>
     </programme>
-    <programme start="20260904050019 +0000" stop="20260904060019 +0000" channel="jra.gch">
+    <programme start="20260904050014 +0000" stop="20260904060014 +0000" channel="jra.gch">
         <title lang="ja">水曜馬スペ！キャプテン渡辺のオンライン競馬パーティ13 (後編)[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84162/S_3dcabb8ff2a6491ea9b66cea47a4df62_20260806112034363.png</image>
     </programme>
@@ -2466,11 +2434,11 @@ keirin.nagoya</desc>
 📅 開催日次: 2日目
 🔥 準決勝</desc>
     </programme>
-    <programme start="20260904060019 +0000" stop="20260904063019 +0000" channel="jra.gch">
+    <programme start="20260904060014 +0000" stop="20260904063014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84155/S_df26471c63624f1da5ec94d1c7d788cd_20260806111749904.png</image>
     </programme>
-    <programme start="20260904060019 +0000" stop="20260904063019 +0000" channel="jra.gch">
+    <programme start="20260904060014 +0000" stop="20260904063014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84155/S_df26471c63624f1da5ec94d1c7d788cd_20260806111749904.png</image>
     </programme>
@@ -2625,11 +2593,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「セレクションセールリポート(1)＆活躍馬のふるさと」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904063019 +0000" stop="20260904070019 +0000" channel="jra.gch">
+    <programme start="20260904063014 +0000" stop="20260904070014 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29627/S_86b62ec44ab04767b68a5eaaf1f7456f_20250924125338138.png</image>
     </programme>
-    <programme start="20260904063019 +0000" stop="20260904070019 +0000" channel="jra.gch">
+    <programme start="20260904063014 +0000" stop="20260904070014 +0000" channel="jra.gch">
         <title lang="ja">馬産地通信 #351[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29627/S_86b62ec44ab04767b68a5eaaf1f7456f_20250924125338138.png</image>
     </programme>
@@ -2811,11 +2779,11 @@ keirin.nagoya</desc>
         <desc lang="ja">当該週に行われる重賞競走の過去のレース映像をお届けします。</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904070019 +0000" stop="20260904080019 +0000" channel="jra.gch">
+    <programme start="20260904070014 +0000" stop="20260904080014 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
-    <programme start="20260904070019 +0000" stop="20260904080019 +0000" channel="jra.gch">
+    <programme start="20260904070014 +0000" stop="20260904080014 +0000" channel="jra.gch">
         <title lang="ja">重賞メモリアル #1027[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/30707/S_39a1524f104d48448fe4375920d17483_20250929195658479.png</image>
     </programme>
@@ -2848,12 +2816,12 @@ keirin.nagoya</desc>
 📅 2026年09月04日 開催区分: デイ</desc>
     </programme>
     <programme start="20260904160800 +0900" stop="20260904163800 +0900" channel="chihou.sonoda">
-        <title lang="ja">【５Ｒ】  16:35発走  🏇【Ｃ３一３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【５Ｒ】  16:35発走  🏇【有 Ｃ３一３歳以上 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 園田
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:35
 🏷️ 種別: 一般
-📢 レース名: Ｃ３一３歳以上
+📢 レース名: 有 Ｃ３一３歳以上
 📅 2026年09月04日</desc>
     </programme>
     <programme start="20260904160900 +0900" stop="20260904163100 +0900" channel="keirin.takeo">
@@ -3066,11 +3034,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「セントウルＳ、紫苑Ｓ、京成杯オータムＨ、札幌２歳S　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904080019 +0000" stop="20260904090019 +0000" channel="jra.gch">
+    <programme start="20260904080014 +0000" stop="20260904090014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
-    <programme start="20260904080019 +0000" stop="20260904090019 +0000" channel="jra.gch">
+    <programme start="20260904080014 +0000" stop="20260904090014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -3295,11 +3263,11 @@ keirin.nagoya</desc>
         <desc lang="ja">東西トレセンからの取れたて情報をお届け！</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904090019 +0000" stop="20260904100019 +0000" channel="jra.gch">
+    <programme start="20260904090014 +0000" stop="20260904100014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
-    <programme start="20260904090019 +0000" stop="20260904100019 +0000" channel="jra.gch">
+    <programme start="20260904090014 +0000" stop="20260904100014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
@@ -3497,11 +3465,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「京成杯オータムハンデキャップ、札幌2歳S、エニフS他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904100019 +0000" stop="20260904113019 +0000" channel="jra.gch">
+    <programme start="20260904100014 +0000" stop="20260904113014 +0000" channel="jra.gch">
         <title lang="ja">[生]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
-    <programme start="20260904100019 +0000" stop="20260904113019 +0000" channel="jra.gch">
+    <programme start="20260904100014 +0000" stop="20260904113014 +0000" channel="jra.gch">
         <title lang="ja">[生]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -3762,11 +3730,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「京成杯オータムH、札幌2歳S、エニフS　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904113019 +0000" stop="20260904133019 +0000" channel="jra.gch">
+    <programme start="20260904113014 +0000" stop="20260904133014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260904113019 +0000" stop="20260904133019 +0000" channel="jra.gch">
+    <programme start="20260904113014 +0000" stop="20260904133014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
@@ -4008,11 +3976,11 @@ keirin.nagoya</desc>
 📢 開催名: 前検日コメならウィンチケット杯
 📅 開催日次: 最終日</desc>
     </programme>
-    <programme start="20260904133019 +0000" stop="20260904140019 +0000" channel="jra.gch">
+    <programme start="20260904133014 +0000" stop="20260904140014 +0000" channel="jra.gch">
         <title lang="ja">トレセンχ同好会 #11[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83505/S_38996cf61251470a80f4640ab1728c46_20260805112706572.png</image>
     </programme>
-    <programme start="20260904133019 +0000" stop="20260904140019 +0000" channel="jra.gch">
+    <programme start="20260904133014 +0000" stop="20260904140014 +0000" channel="jra.gch">
         <title lang="ja">トレセンχ同好会 #11[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/83505/S_38996cf61251470a80f4640ab1728c46_20260805112706572.png</image>
     </programme>
@@ -4063,11 +4031,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「浅越ゴエ＆ミサイルマン岩部彰　前編」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904140019 +0000" stop="20260904143019 +0000" channel="jra.gch">
+    <programme start="20260904140014 +0000" stop="20260904143014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84155/S_df26471c63624f1da5ec94d1c7d788cd_20260806111749904.png</image>
     </programme>
-    <programme start="20260904140019 +0000" stop="20260904143019 +0000" channel="jra.gch">
+    <programme start="20260904140014 +0000" stop="20260904143014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 前編） #615[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84155/S_df26471c63624f1da5ec94d1c7d788cd_20260806111749904.png</image>
     </programme>
@@ -4100,11 +4068,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「京成杯オータムハンデキャップ、札幌2歳S、エニフS他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904143019 +0000" stop="20260903160019 +0000" channel="jra.gch">
+    <programme start="20260904143014 +0000" stop="20260903160014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
-    <programme start="20260904143019 +0000" stop="20260903160019 +0000" channel="jra.gch">
+    <programme start="20260904143014 +0000" stop="20260903160014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -4494,11 +4462,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「セントウルＳ、紫苑Ｓ、京成杯オータムＨ、札幌２歳S　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904160019 +0000" stop="20260904170019 +0000" channel="jra.gch">
+    <programme start="20260904160014 +0000" stop="20260904170014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
-    <programme start="20260904160019 +0000" stop="20260904170019 +0000" channel="jra.gch">
+    <programme start="20260904160014 +0000" stop="20260904170014 +0000" channel="jra.gch">
         <title lang="ja">今週の調教 #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29453/S_6e3425ddb6e346609afb0ee47a77788a_20250917121740910.PNG</image>
     </programme>
@@ -4512,11 +4480,11 @@ keirin.nagoya</desc>
         <desc lang="ja">東西トレセンからの取れたて情報をお届け！</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904170019 +0000" stop="20260904180019 +0000" channel="jra.gch">
+    <programme start="20260904170014 +0000" stop="20260904180014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
-    <programme start="20260904170019 +0000" stop="20260904180019 +0000" channel="jra.gch">
+    <programme start="20260904170014 +0000" stop="20260904180014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
@@ -4530,11 +4498,11 @@ keirin.nagoya</desc>
         <desc lang="ja">「京成杯オータムハンデキャップ、札幌2歳S、エニフS他　展望」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904180019 +0000" stop="20260904193019 +0000" channel="jra.gch">
+    <programme start="20260904180014 +0000" stop="20260904193014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
-    <programme start="20260904180019 +0000" stop="20260904193019 +0000" channel="jra.gch">
+    <programme start="20260904180014 +0000" stop="20260904193014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -4548,27 +4516,27 @@ keirin.nagoya</desc>
         <desc lang="ja">「京成杯オータムH、札幌2歳S、エニフS　他」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260904193019 +0000" stop="20260904213019 +0000" channel="jra.gch">
+    <programme start="20260904193014 +0000" stop="20260904213014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260904193019 +0000" stop="20260904213019 +0000" channel="jra.gch">
+    <programme start="20260904193014 +0000" stop="20260904213014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（土曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260904213019 +0000" stop="20260904223019 +0000" channel="jra.gch">
+    <programme start="20260904213014 +0000" stop="20260904223014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
-    <programme start="20260904213019 +0000" stop="20260904223019 +0000" channel="jra.gch">
+    <programme start="20260904213014 +0000" stop="20260904223014 +0000" channel="jra.gch">
         <title lang="ja">トレセンまるごと情報局 #570</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29634/S_2caa5632250a4610b7e0772b8e68e073_20250924130353764.png</image>
     </programme>
-    <programme start="20260904223019 +0000" stop="20260905000019 +0000" channel="jra.gch">
+    <programme start="20260904223014 +0000" stop="20260905000014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
-    <programme start="20260904223019 +0000" stop="20260905000019 +0000" channel="jra.gch">
+    <programme start="20260904223014 +0000" stop="20260905000014 +0000" channel="jra.gch">
         <title lang="ja">[再]トラックマンTV #766</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41450/S_bb71f738ee8c40a5a1adb7d609ac6207_20251107130851416.png</image>
     </programme>
@@ -4908,11 +4876,11 @@ keirin.nagoya</desc>
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月05日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260905000019 +0000" stop="20260905040019 +0000" channel="jra.gch">
+    <programme start="20260905000014 +0000" stop="20260905040014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84348/S_93e0024703be4c42bb271a016da374c0_20260807110241176.jpg</image>
     </programme>
-    <programme start="20260905000019 +0000" stop="20260905040019 +0000" channel="jra.gch">
+    <programme start="20260905000014 +0000" stop="20260905040014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84348/S_93e0024703be4c42bb271a016da374c0_20260807110241176.jpg</image>
     </programme>
@@ -5256,11 +5224,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 3歳以上1勝クラス 1,800 （芝）（牝）定量
 📅 2026年09月05日</desc>
     </programme>
-    <programme start="20260905040019 +0000" stop="20260905080019 +0000" channel="jra.gch">
+    <programme start="20260905040014 +0000" stop="20260905080014 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84348/S_93e0024703be4c42bb271a016da374c0_20260807110241176.jpg</image>
     </programme>
-    <programme start="20260905040019 +0000" stop="20260905080019 +0000" channel="jra.gch">
+    <programme start="20260905040014 +0000" stop="20260905080014 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84348/S_93e0024703be4c42bb271a016da374c0_20260807110241176.jpg</image>
     </programme>
@@ -5572,11 +5540,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">立川の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260905080019 +0000" stop="20260905083019 +0000" channel="jra.gch">
+    <programme start="20260905080014 +0000" stop="20260905083014 +0000" channel="jra.gch">
         <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905080019 +0000" stop="20260905083019 +0000" channel="jra.gch">
+    <programme start="20260905080014 +0000" stop="20260905083014 +0000" channel="jra.gch">
         <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
@@ -5607,11 +5575,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 第１９回ＷＭＣＵＣ同好会賞Ｂ４－６ 直200m 9
 📅 2026年09月05日</desc>
     </programme>
-    <programme start="20260905083019 +0000" stop="20260905090019 +0000" channel="jra.gch">
+    <programme start="20260905083014 +0000" stop="20260905090014 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #388</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
     </programme>
-    <programme start="20260905083019 +0000" stop="20260905090019 +0000" channel="jra.gch">
+    <programme start="20260905083014 +0000" stop="20260905090014 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #388</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
     </programme>
@@ -5642,11 +5610,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 十勝平野を青黒に染めろ杯２歳Ａ－４ 直200m 10
 📅 2026年09月05日</desc>
     </programme>
-    <programme start="20260905090019 +0000" stop="20260905103019 +0000" channel="jra.gch">
+    <programme start="20260905090014 +0000" stop="20260905103014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
-    <programme start="20260905090019 +0000" stop="20260905103019 +0000" channel="jra.gch">
+    <programme start="20260905090014 +0000" stop="20260905103014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
@@ -5731,11 +5699,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 特別 もんすけカップＢ２－１ 直200m 10
 📅 2026年09月05日</desc>
     </programme>
-    <programme start="20260905103019 +0000" stop="20260905120019 +0000" channel="jra.gch">
+    <programme start="20260905103014 +0000" stop="20260905120014 +0000" channel="jra.gch">
         <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260905103019 +0000" stop="20260905120019 +0000" channel="jra.gch">
+    <programme start="20260905103014 +0000" stop="20260905120014 +0000" channel="jra.gch">
         <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
@@ -5841,11 +5809,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">豊橋の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260905120019 +0000" stop="20260905140019 +0000" channel="jra.gch">
+    <programme start="20260905120014 +0000" stop="20260905140014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260905120019 +0000" stop="20260905140019 +0000" channel="jra.gch">
+    <programme start="20260905120014 +0000" stop="20260905140014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
@@ -5853,11 +5821,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">飯塚の本日のオートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260905140019 +0000" stop="20260905143019 +0000" channel="jra.gch">
+    <programme start="20260905140014 +0000" stop="20260905143014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905140019 +0000" stop="20260905143019 +0000" channel="jra.gch">
+    <programme start="20260905140014 +0000" stop="20260905143014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
@@ -5873,11 +5841,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">松阪の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260905143019 +0000" stop="20260904160019 +0000" channel="jra.gch">
+    <programme start="20260905143014 +0000" stop="20260904160014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260905143019 +0000" stop="20260904160019 +0000" channel="jra.gch">
+    <programme start="20260905143014 +0000" stop="20260904160014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
@@ -6241,59 +6209,59 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905160019 +0000" stop="20260905163019 +0000" channel="jra.gch">
+    <programme start="20260905160014 +0000" stop="20260905163014 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #388</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
     </programme>
-    <programme start="20260905160019 +0000" stop="20260905163019 +0000" channel="jra.gch">
+    <programme start="20260905160014 +0000" stop="20260905163014 +0000" channel="jra.gch">
         <title lang="ja">アタック！地方競馬 #388</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
     </programme>
-    <programme start="20260905163019 +0000" stop="20260905180019 +0000" channel="jra.gch">
+    <programme start="20260905163014 +0000" stop="20260905180014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
-    <programme start="20260905163019 +0000" stop="20260905180019 +0000" channel="jra.gch">
+    <programme start="20260905163014 +0000" stop="20260905180014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
-    <programme start="20260905180019 +0000" stop="20260905183019 +0000" channel="jra.gch">
+    <programme start="20260905180014 +0000" stop="20260905183014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905180019 +0000" stop="20260905183019 +0000" channel="jra.gch">
+    <programme start="20260905180014 +0000" stop="20260905183014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905183019 +0000" stop="20260905200019 +0000" channel="jra.gch">
+    <programme start="20260905183014 +0000" stop="20260905200014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260905183019 +0000" stop="20260905200019 +0000" channel="jra.gch">
+    <programme start="20260905183014 +0000" stop="20260905200014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260905200019 +0000" stop="20260905220019 +0000" channel="jra.gch">
+    <programme start="20260905200014 +0000" stop="20260905220014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260905200019 +0000" stop="20260905220019 +0000" channel="jra.gch">
+    <programme start="20260905200014 +0000" stop="20260905220014 +0000" channel="jra.gch">
         <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
     </programme>
-    <programme start="20260905220019 +0000" stop="20260905223019 +0000" channel="jra.gch">
+    <programme start="20260905220014 +0000" stop="20260905223014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905220019 +0000" stop="20260905223019 +0000" channel="jra.gch">
+    <programme start="20260905220014 +0000" stop="20260905223014 +0000" channel="jra.gch">
         <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
     </programme>
-    <programme start="20260905223019 +0000" stop="20260906000019 +0000" channel="jra.gch">
+    <programme start="20260905223014 +0000" stop="20260906000014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
-    <programme start="20260905223019 +0000" stop="20260906000019 +0000" channel="jra.gch">
+    <programme start="20260905223014 +0000" stop="20260906000014 +0000" channel="jra.gch">
         <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
     </programme>
@@ -6581,11 +6549,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906000019 +0000" stop="20260906040019 +0000" channel="jra.gch">
+    <programme start="20260906000014 +0000" stop="20260906040014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84349/S_091821d589284790aa0a66b5a7db6e65_20260807110321418.jpg</image>
     </programme>
-    <programme start="20260906000019 +0000" stop="20260906040019 +0000" channel="jra.gch">
+    <programme start="20260906000014 +0000" stop="20260906040014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84349/S_091821d589284790aa0a66b5a7db6e65_20260807110321418.jpg</image>
     </programme>
@@ -7035,11 +7003,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 3歳以上1勝クラス 1,200 （芝）定量
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906040019 +0000" stop="20260906080019 +0000" channel="jra.gch">
+    <programme start="20260906040014 +0000" stop="20260906080014 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84349/S_091821d589284790aa0a66b5a7db6e65_20260807110321418.jpg</image>
     </programme>
-    <programme start="20260906040019 +0000" stop="20260906080019 +0000" channel="jra.gch">
+    <programme start="20260906040014 +0000" stop="20260906080014 +0000" channel="jra.gch">
         <title lang="ja">[生]中央競馬全レース中継[デ]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84349/S_091821d589284790aa0a66b5a7db6e65_20260807110321418.jpg</image>
     </programme>
@@ -7316,11 +7284,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">青森の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260906080019 +0000" stop="20260906093019 +0000" channel="jra.gch">
+    <programme start="20260906080014 +0000" stop="20260906093014 +0000" channel="jra.gch">
         <title lang="ja">[生]ＧＣＨ地方競馬中継（ビギナーズカップ、石川テレビ杯、九州ジュニアチャンピオン）</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84366/S_77d5312b17cd44d6aaaef363ae0b5d93_20260807112419458.jpg</image>
     </programme>
-    <programme start="20260906080019 +0000" stop="20260906093019 +0000" channel="jra.gch">
+    <programme start="20260906080014 +0000" stop="20260906093014 +0000" channel="jra.gch">
         <title lang="ja">[生]ＧＣＨ地方競馬中継（ビギナーズカップ、石川テレビ杯、九州ジュニアチャンピオン）</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84366/S_77d5312b17cd44d6aaaef363ae0b5d93_20260807112419458.jpg</image>
     </programme>
@@ -7378,11 +7346,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 楽天競馬で馬券を買おう！楽天競馬Ｃ１特選
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906093019 +0000" stop="20260906110019 +0000" channel="jra.gch">
+    <programme start="20260906093014 +0000" stop="20260906110014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
-    <programme start="20260906093019 +0000" stop="20260906110019 +0000" channel="jra.gch">
+    <programme start="20260906093014 +0000" stop="20260906110014 +0000" channel="jra.gch">
         <title lang="ja">今日のレースリプレイ</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
     </programme>
@@ -7417,11 +7385,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 琴ヶ浜特別Ｃ１－１
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906110019 +0000" stop="20260906120019 +0000" channel="jra.gch">
+    <programme start="20260906110014 +0000" stop="20260906120014 +0000" channel="jra.gch">
         <title lang="ja">目指せ！ジョッキーベイビーズ2026（前編）[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85151/S_cafec4d8f53a49459f0057687ba5e3f3_20260818144645005.png</image>
     </programme>
-    <programme start="20260906110019 +0000" stop="20260906120019 +0000" channel="jra.gch">
+    <programme start="20260906110014 +0000" stop="20260906120014 +0000" channel="jra.gch">
         <title lang="ja">目指せ！ジョッキーベイビーズ2026（前編）[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85151/S_cafec4d8f53a49459f0057687ba5e3f3_20260818144645005.png</image>
     </programme>
@@ -7497,11 +7465,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">豊橋の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260906120019 +0000" stop="20260906130019 +0000" channel="jra.gch">
+    <programme start="20260906120014 +0000" stop="20260906130014 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たち（アカイイト） #438[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84358/S_2db3e7ce5d7f48f298e0f0bf644e515c_20260807111816993.jpg</image>
     </programme>
-    <programme start="20260906120019 +0000" stop="20260906130019 +0000" channel="jra.gch">
+    <programme start="20260906120014 +0000" stop="20260906130014 +0000" channel="jra.gch">
         <title lang="ja">栄光の名馬たち（アカイイト） #438[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84358/S_2db3e7ce5d7f48f298e0f0bf644e515c_20260807111816993.jpg</image>
     </programme>
@@ -7509,19 +7477,19 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">飯塚の本日のオートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260906130019 +0000" stop="20260906133019 +0000" channel="jra.gch">
+    <programme start="20260906130014 +0000" stop="20260906133014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 後編） #616[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85152/S_120d3d0c4c2f4a65ba902df71d86052c_20260818144812446.png</image>
     </programme>
-    <programme start="20260906130019 +0000" stop="20260906133019 +0000" channel="jra.gch">
+    <programme start="20260906130014 +0000" stop="20260906133014 +0000" channel="jra.gch">
         <title lang="ja">競馬場の達人（浅越ゴエ＆ミサイルマン岩部彰 後編） #616[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85152/S_120d3d0c4c2f4a65ba902df71d86052c_20260818144812446.png</image>
     </programme>
-    <programme start="20260906133019 +0000" stop="20260905160019 +0000" channel="jra.gch">
+    <programme start="20260906133014 +0000" stop="20260905160014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]ALL IN LINE～世界の競馬～（2026凱旋門賞前哨戦中継） #131</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/86742/S_64be078b3e46476095b8bd1da7db3238_20260902115350142.png</image>
     </programme>
-    <programme start="20260906133019 +0000" stop="20260905160019 +0000" channel="jra.gch">
+    <programme start="20260906133014 +0000" stop="20260905160014 +0000" channel="jra.gch">
         <title lang="ja">[無][生]ALL IN LINE～世界の競馬～（2026凱旋門賞前哨戦中継） #131</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/86742/S_64be078b3e46476095b8bd1da7db3238_20260902115350142.png</image>
     </programme>

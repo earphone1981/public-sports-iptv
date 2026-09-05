@@ -19,14 +19,14 @@ INPUTS = [
 ]
 
 JRA = [
-    ('jra.gch','グリーンチャンネル','グリーンチャンネル（高画質）','gchmain.m3u8'),
-    ('jra.gch','グリーンチャンネル','グリーンチャンネル（低画質）','gchmain_LQ.m3u8'),
-    ('jra.east','JRA EAST','JRA EAST（高画質）','EAST_test.m3u8'),
-    ('jra.east','JRA EAST','JRA EAST（低画質）','EAST_test_LQ.m3u8'),
-    ('jra.west','JRA WEST','JRA WEST（高画質）','WEST_master .m3u8'),
-    ('jra.west','JRA WEST','JRA WEST（低画質）','WEST_master_LQ.m3u8'),
-    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（高画質）','hokaido_master (1).m3u8'),
-    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（低画質）','hokaido_master_LQ.m3u8'),
+    ('jra.gch','グリーンチャンネル','グリーンチャンネル（高画質）','gchmain.m3u8','gch.png'),
+    ('jra.gch','グリーンチャンネル','グリーンチャンネル（低画質）','gchmain_LQ.m3u8','gch.png'),
+    ('jra.east','JRA EAST','JRA EAST（高画質）','EAST_test.m3u8','east_web3.png'),
+    ('jra.east','JRA EAST','JRA EAST（低画質）','EAST_test_LQ.m3u8','east_web3.png'),
+    ('jra.west','JRA WEST','JRA WEST（高画質）','WEST_master .m3u8','west_web4.png'),
+    ('jra.west','JRA WEST','JRA WEST（低画質）','WEST_master_LQ.m3u8','west_web4.png'),
+    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（高画質）','hokaido_master (1).m3u8','hokkaido_local.png'),
+    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（低画質）','hokaido_master_LQ.m3u8','hokkaido_local.png'),
 ]
 
 
@@ -176,8 +176,8 @@ def main():
         total += append_file(out,label,path,order)
 
     out.append('## 中央競馬')
-    for tvg,name,display,filename in JRA:
-        out += [f'#EXTINF:-1 tvg-id="{tvg}" tvg-name="{name}" group-title="中央競馬",{display}',raw(filename),'']
+    for tvg,name,display,filename,logo in JRA:
+        out += [f'#EXTINF:-1 tvg-id="{tvg}" tvg-name="{name}" tvg-logo="{raw(logo)}" group-title="中央競馬",{display}',raw(filename),'']
         total += 1
 
     OUT.write_text('\n'.join(out).rstrip()+'\n', encoding='utf-8')

@@ -13,6 +13,8 @@ on:
       - 'boatrace_today.m3u'
       - 'merge_m3u.py'
       - 'normalize_public_sports_labels.py'
+      - 'split_jra_quality_epg.py'
+      - 'split_jra_quality_m3u.py'
       - 'fix_logo_refs.py'
       - '.github/workflows/normalize_public_sports.yml'
   workflow_dispatch:
@@ -42,6 +44,10 @@ jobs:
         run: python merge_m3u.py
       - name: Normalize EPG and M3U labels/status
         run: python normalize_public_sports_labels.py
+      - name: Split JRA EPG into HQ and LQ channel IDs
+        run: python split_jra_quality_epg.py
+      - name: Split JRA M3U IDs and assign new HQ LQ logos
+        run: python split_jra_quality_m3u.py
       - name: Fix IPTV logo references
         run: python fix_logo_refs.py
       - name: Validate XML

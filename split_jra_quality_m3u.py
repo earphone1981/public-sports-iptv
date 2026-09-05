@@ -8,23 +8,23 @@ LOGO_BASE = RAW + '/public_sports_logos_github_43/jra_quality'
 SERVICES = {
     'jra.gch': {
         'name': 'グリーンチャンネル',
-        'hq_logo': 'gch_hq.svg',
-        'lq_logo': 'gch_lq.svg',
+        'hq_logo': 'gch_hq.png',
+        'lq_logo': 'gch_lq.png',
     },
     'jra.east': {
         'name': 'JRA EAST',
-        'hq_logo': 'east_hq.svg',
-        'lq_logo': 'east_lq.svg',
+        'hq_logo': 'east_hq.png',
+        'lq_logo': 'east_lq.png',
     },
     'jra.west': {
         'name': 'JRA WEST',
-        'hq_logo': 'west_hq.svg',
-        'lq_logo': 'west_lq.svg',
+        'hq_logo': 'west_hq.png',
+        'lq_logo': 'west_lq.png',
     },
     'jra.hokkaido': {
         'name': 'JRA HOKKAIDO',
-        'hq_logo': 'hokkaido_hq.svg',
-        'lq_logo': 'hokkaido_lq.svg',
+        'hq_logo': 'hokkaido_hq.png',
+        'lq_logo': 'hokkaido_lq.png',
     },
 }
 
@@ -76,7 +76,6 @@ def main():
         if base not in SERVICES:
             continue
 
-        # The URL line immediately following EXTINF determines HQ vs LQ on legacy M3U.
         url = ''
         for j in range(i + 1, min(i + 4, len(lines))):
             if lines[j].strip() and not lines[j].startswith('#'):
@@ -93,7 +92,6 @@ def main():
         new = set_attr(new, 'tvg-name', f"{svc['name']} {label}")
         new = set_attr(new, 'tvg-logo', f'{LOGO_BASE}/{logo}')
 
-        # Keep display title explicit as well, so players that ignore tvg-name still distinguish them.
         comma = new.find(',')
         if comma >= 0:
             display = f"{svc['name']}（{'高画質' if quality == 'hq' else '低画質'}）"

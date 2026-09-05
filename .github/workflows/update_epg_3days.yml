@@ -14,6 +14,8 @@ on:
       - "boatrace_github_oneclick.js"
       - "merge_m3u.py"
       - "main_epg_3days.py"
+      - "split_jra_quality_epg.py"
+      - "split_jra_quality_m3u.py"
       - "fix_boat_active_from_m3u.py"
       - "fix_epg_v11.py"
       - "fix_boat_waiting_title.py"
@@ -119,6 +121,12 @@ jobs:
 
       - name: Sort public sports M3U from today's EPG
         run: python -u sort_public_sports_by_epg.py
+
+      - name: Split JRA EPG into HQ and LQ channel IDs
+        run: python -u split_jra_quality_epg.py
+
+      - name: Split JRA M3U IDs and assign new HQ LQ logos
+        run: python -u split_jra_quality_m3u.py
 
       - name: Sync EPG channel order to sorted M3U
         run: python -u reorder_epg_channels_by_m3u.py

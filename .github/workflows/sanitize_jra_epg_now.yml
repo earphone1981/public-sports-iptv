@@ -1,0 +1,44 @@
+name: Sanitize JRA EPG Now
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/sanitize_jra_epg_now.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-sports-m3u-writer
+  cancel-in-progress: true
+
+jobs:
+  sanitize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Sanitize current JRA EPG
+        run: python sanitize_jra_epg.py
+      - name: Validate XML
+        run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
+      - name: Commit sanitized EPG safely
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp epg.xml /tmp/epg.xml.sanitized
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/epg.xml.sanitized epg.xml
+          git add epg.xml
+          git diff --cached --quiet && echo "EPG already sanitized" && exit 0
+          git commit -m "Sanitize JRA EPG overlaps"
+          git push origin HEAD:main

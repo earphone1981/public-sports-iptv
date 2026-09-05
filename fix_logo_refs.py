@@ -12,14 +12,14 @@ JRA_LOGOS = {
     'jra.east':'east_web3.png',
     'jra.west':'west_web4.png',
     'jra.hokkaido':'hokkaido_local.png',
-    'jra.gch.hq':'public_sports_logos_github_43/jra_quality/gch_hq.svg',
-    'jra.gch.lq':'public_sports_logos_github_43/jra_quality/gch_lq.svg',
-    'jra.east.hq':'public_sports_logos_github_43/jra_quality/east_hq.svg',
-    'jra.east.lq':'public_sports_logos_github_43/jra_quality/east_lq.svg',
-    'jra.west.hq':'public_sports_logos_github_43/jra_quality/west_hq.svg',
-    'jra.west.lq':'public_sports_logos_github_43/jra_quality/west_lq.svg',
-    'jra.hokkaido.hq':'public_sports_logos_github_43/jra_quality/hokkaido_hq.svg',
-    'jra.hokkaido.lq':'public_sports_logos_github_43/jra_quality/hokkaido_lq.svg',
+    'jra.gch.hq':'public_sports_logos_github_43/jra_quality/gch_hq.png',
+    'jra.gch.lq':'public_sports_logos_github_43/jra_quality/gch_lq.png',
+    'jra.east.hq':'public_sports_logos_github_43/jra_quality/east_hq.png',
+    'jra.east.lq':'public_sports_logos_github_43/jra_quality/east_lq.png',
+    'jra.west.hq':'public_sports_logos_github_43/jra_quality/west_hq.png',
+    'jra.west.lq':'public_sports_logos_github_43/jra_quality/west_lq.png',
+    'jra.hokkaido.hq':'public_sports_logos_github_43/jra_quality/hokkaido_hq.png',
+    'jra.hokkaido.lq':'public_sports_logos_github_43/jra_quality/hokkaido_lq.png',
 }
 ROOT='https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/'
 REPO_ROOT='https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/'

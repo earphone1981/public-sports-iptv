@@ -6646,126 +6646,84 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905080004 +0000" stop="20260905083004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905083000 +0000" stop="20260905090000 +0000" channel="jra.gch.hq">
     <title lang="ja">アタック！地方競馬 #388</title>
     <desc lang="ja">「地方競馬情報が満載！」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905083004 +0000" stop="20260905090004 +0000" channel="jra.gch.hq">
-    <title lang="ja">アタック！地方競馬 #388</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
   </programme>
   <programme start="20260905090000 +0000" stop="20260905103000 +0000" channel="jra.gch.hq">
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１日・第４回阪神競馬第１日・第２回札幌競馬第５日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905090004 +0000" stop="20260905103004 +0000" channel="jra.gch.hq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260905103000 +0000" stop="20260905120000 +0000" channel="jra.gch.hq">
     <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905103004 +0000" stop="20260905120004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905120000 +0000" stop="20260905140000 +0000" channel="jra.gch.hq">
     <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <desc lang="ja">「紫苑S、セントウルS、丹頂S　他」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905120004 +0000" stop="20260905140004 +0000" channel="jra.gch.hq">
-    <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
   </programme>
   <programme start="20260905140000 +0000" stop="20260905143000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905140004 +0000" stop="20260905143004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905143000 +0000" stop="20260905160000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905143004 +0000" stop="20260905160004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905160000 +0000" stop="20260905163000 +0000" channel="jra.gch.hq">
     <title lang="ja">アタック！地方競馬 #388</title>
     <desc lang="ja">「地方競馬情報が満載！」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905160004 +0000" stop="20260905163004 +0000" channel="jra.gch.hq">
-    <title lang="ja">アタック！地方競馬 #388</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
   </programme>
   <programme start="20260905163000 +0000" stop="20260905180000 +0000" channel="jra.gch.hq">
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１日・第４回阪神競馬第１日・第２回札幌競馬第５日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905163004 +0000" stop="20260905180004 +0000" channel="jra.gch.hq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260905180000 +0000" stop="20260905183000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905180004 +0000" stop="20260905183004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905183000 +0000" stop="20260905200000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905183004 +0000" stop="20260905200004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905200000 +0000" stop="20260905220000 +0000" channel="jra.gch.hq">
     <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <desc lang="ja">「紫苑S、セントウルS、丹頂S　他」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905200004 +0000" stop="20260905220004 +0000" channel="jra.gch.hq">
-    <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
   </programme>
   <programme start="20260905220000 +0000" stop="20260905223000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905220004 +0000" stop="20260905223004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905223000 +0000" stop="20260906000000 +0000" channel="jra.gch.hq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905223004 +0000" stop="20260906000004 +0000" channel="jra.gch.hq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260906000000 +0000" stop="20260906040000 +0000" channel="jra.gch.hq">
@@ -6799,9 +6757,6 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第２日・第４回阪神競馬第２日・第２回札幌競馬第６日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260906093004 +0000" stop="20260906110004 +0000" channel="jra.gch.hq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260906110000 +0000" stop="20260906120000 +0000" channel="jra.gch.hq">
@@ -6853,9 +6808,6 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">今週のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１・２日、第４回阪神競馬第１・２日、第２回札幌競馬第５・６日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260906170004 +0000" stop="20260906200004 +0000" channel="jra.gch.hq">
-    <title lang="ja">今週のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260906200004 +0000" stop="20260906203004 +0000" channel="jra.gch.hq">
@@ -7016,126 +6968,84 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905080004 +0000" stop="20260905083004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[生]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905083000 +0000" stop="20260905090000 +0000" channel="jra.gch.lq">
     <title lang="ja">アタック！地方競馬 #388</title>
     <desc lang="ja">「地方競馬情報が満載！」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905083004 +0000" stop="20260905090004 +0000" channel="jra.gch.lq">
-    <title lang="ja">アタック！地方競馬 #388</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
   </programme>
   <programme start="20260905090000 +0000" stop="20260905103000 +0000" channel="jra.gch.lq">
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１日・第４回阪神競馬第１日・第２回札幌競馬第５日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905090004 +0000" stop="20260905103004 +0000" channel="jra.gch.lq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260905103000 +0000" stop="20260905120000 +0000" channel="jra.gch.lq">
     <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905103004 +0000" stop="20260905120004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[生]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905120000 +0000" stop="20260905140000 +0000" channel="jra.gch.lq">
     <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <desc lang="ja">「紫苑S、セントウルS、丹頂S　他」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905120004 +0000" stop="20260905140004 +0000" channel="jra.gch.lq">
-    <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
   </programme>
   <programme start="20260905140000 +0000" stop="20260905143000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905140004 +0000" stop="20260905143004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905143000 +0000" stop="20260905160000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905143004 +0000" stop="20260905160004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905160000 +0000" stop="20260905163000 +0000" channel="jra.gch.lq">
     <title lang="ja">アタック！地方競馬 #388</title>
     <desc lang="ja">「地方競馬情報が満載！」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905160004 +0000" stop="20260905163004 +0000" channel="jra.gch.lq">
-    <title lang="ja">アタック！地方競馬 #388</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/70832/S_c794aadbc84e4b37a3038b06f6ece910_20260427143228707.png</image>
   </programme>
   <programme start="20260905163000 +0000" stop="20260905180000 +0000" channel="jra.gch.lq">
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１日・第４回阪神競馬第１日・第２回札幌競馬第５日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905163004 +0000" stop="20260905180004 +0000" channel="jra.gch.lq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260905180000 +0000" stop="20260905183000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905180004 +0000" stop="20260905183004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905183000 +0000" stop="20260905200000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905183004 +0000" stop="20260905200004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260905200000 +0000" stop="20260905220000 +0000" channel="jra.gch.lq">
     <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <desc lang="ja">「紫苑S、セントウルS、丹頂S　他」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905200004 +0000" stop="20260905220004 +0000" channel="jra.gch.lq">
-    <title lang="ja">参考レース＆重賞調教VTR（日曜開催分） #920</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29483/S_74e60705d76540c48f3c306649702f0f_20250918191111506.png</image>
   </programme>
   <programme start="20260905220000 +0000" stop="20260905223000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <desc lang="ja">JRA-VANを活用した深掘りデータから、翌日の勝ち馬をさがします！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905220004 +0000" stop="20260905223004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]ＶＡＮで勝ち馬さがしてみませんか #420</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/76913/S_aeb80f9f05fd47589dae9300aa67024e_20260605132357790.png</image>
   </programme>
   <programme start="20260905223000 +0000" stop="20260906000000 +0000" channel="jra.gch.lq">
     <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <desc lang="ja">コンシェルジュがおすすめのレース・買い目をご提案！</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260905223004 +0000" stop="20260906000004 +0000" channel="jra.gch.lq">
-    <title lang="ja">[再]日曜レース展望KEIBAコンシェルジュ #1020</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/41453/S_b8dbbba80e5048d5927d3ef5a1be655e_20251107131517864.png</image>
   </programme>
   <programme start="20260906000000 +0000" stop="20260906040000 +0000" channel="jra.gch.lq">
@@ -7169,9 +7079,6 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">今日のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第２日・第４回阪神競馬第２日・第２回札幌競馬第６日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260906093004 +0000" stop="20260906110004 +0000" channel="jra.gch.lq">
-    <title lang="ja">今日のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260906110000 +0000" stop="20260906120000 +0000" channel="jra.gch.lq">
@@ -7223,9 +7130,6 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
     <title lang="ja">今週のレースリプレイ</title>
     <desc lang="ja">「第４回中山競馬第１・２日、第４回阪神競馬第１・２日、第２回札幌競馬第５・６日」</desc>
     <category lang="ja">スポーツ</category>
-  </programme>
-  <programme start="20260906170004 +0000" stop="20260906200004 +0000" channel="jra.gch.lq">
-    <title lang="ja">今週のレースリプレイ</title>
     <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/49140/S_59afcf8615fe4bb799a6e77670800baa_20251226113815652.png</image>
   </programme>
   <programme start="20260906200004 +0000" stop="20260906203004 +0000" channel="jra.gch.lq">

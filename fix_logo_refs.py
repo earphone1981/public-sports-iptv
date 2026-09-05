@@ -7,7 +7,14 @@ BOAT_LOGOS = {
 KEIRIN_LOGOS = {
     'keirin.hakodate':'hakodate.png','keirin.aomori':'aomori.png','keirin.iwakitaira':'iwakitaira.png','keirin.yahiko':'yahiko.png','keirin.maebashi':'maebashi.png','keirin.toride':'toride.png','keirin.utsunomiya':'utsunomiya.png','keirin.omiya':'omiya.png','keirin.seibuen':'seibuen.png','keirin.keiogatsu':'keiokaku.png','keirin.tachikawa':'tachikawa.png','keirin.matsudo':'matsudo.png','keirin.kawasaki':'kawasaki.png','keirin.hiratsuka':'hiratsuka.png','keirin.odawara':'odawara.png','keirin.ito':'ito.png','keirin.shizuoka':'shizuoka.png','keirin.nagoya':'nagoya.png','keirin.gifu':'gifu.png','keirin.ogaki':'ogaki.png','keirin.toyohashi':'toyohashi.png','keirin.toyama':'toyama.png','keirin.matsusaka':'matsusaka.png','keirin.yokkaichi':'yokkaichi.png','keirin.fukui':'fukui.png','keirin.nara':'nara.png','keirin.mukomachi':'mukomachi.png','keirin.wakayama':'wakayama.png','keirin.kishiwada':'kishiwada.png','keirin.tamano':'tamano.png','keirin.hiroshima':'hiroshima.png','keirin.hofu':'hofu.png','keirin.takamatsu':'takamatsu.png','keirin.komatsushima':'komatsushima.png','keirin.kochi':'kochi.png','keirin.matsuyama':'matsuyama.png','keirin.kokura':'kokura.png','keirin.kurume':'kurume.png','keirin.takeo':'takeo.png','keirin.sasebo':'sasebo.png','keirin.beppu':'beppu.png','keirin.kumamoto':'kumamoto.png','keirin.pist6':'pist6.png'
 }
+JRA_LOGOS = {
+    'jra.gch':'gch.png',
+    'jra.east':'east_web3.png',
+    'jra.west':'west_web4.png',
+    'jra.hokkaido':'hokkaido_local.png',
+}
 ROOT='https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/public_sports_logos_github_43/'
+REPO_ROOT='https://raw.githubusercontent.com/earphone1981/public-sports-iptv/main/'
 BOAT_BASE=ROOT+'boatrace_24_spaced_cut_1024/'
 KEIRIN_BASE=ROOT+'keirin_square_final_43/'
 
@@ -23,6 +30,7 @@ def fix_file(path):
         tid=m.group(1); logo=None
         if tid in BOAT_LOGOS: logo=BOAT_BASE+BOAT_LOGOS[tid]
         elif tid in KEIRIN_LOGOS: logo=KEIRIN_BASE+KEIRIN_LOGOS[tid]
+        elif tid in JRA_LOGOS: logo=REPO_ROOT+JRA_LOGOS[tid]
         if not logo: continue
         if 'tvg-logo="' in line:
             new=re.sub(r'tvg-logo="[^"]*"',f'tvg-logo="{logo}"',line,count=1)

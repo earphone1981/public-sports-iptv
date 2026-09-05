@@ -1,3 +1,4 @@
+from copy import deepcopy
 from pathlib import Path
 import datetime
 import re
@@ -6,6 +7,7 @@ import xml.etree.ElementTree as ET
 EPG = Path(__file__).resolve().parent / 'epg.xml'
 JRA_PREFIX = 'jra.'
 XMLTV_RE = re.compile(r'^(\d{14})(?:\s+([+-]\d{4}))?$')
+NEAR_DUPLICATE_SECONDS = 10
 
 
 def parse_xmltv(value):
@@ -41,6 +43,17 @@ def programme_signature(prog):
     )
 
 
+def merge_missing_children(dst, src):
+    existing = {child_signature(c) for c in list(dst)}
+    for child in list(src):
+        sig = child_signature(child)
+        if child.tag == 'title':
+            continue
+        if sig not in existing:
+            dst.append(deepcopy(child))
+            existing.add(sig)
+
+
 def main():
     if not EPG.exists():
         raise SystemExit('epg.xml not found')
@@ -48,11 +61,11 @@ def main():
     tree = ET.parse(EPG)
     root = tree.getroot()
     repaired = 0
-    removed = 0
+    exact_removed = 0
+    near_merged = 0
 
-    # Repair malformed JRA stop times. When the source accidentally carries
-    # yesterday's date (or an overnight stop without the next date), move the
-    # stop forward by whole days until it is later than start.
+    # Repair malformed JRA stop times. If the source carries yesterday's date
+    # or an overnight stop without the next date, move stop forward by days.
     for prog in root.findall('programme'):
         if not prog.get('channel', '').startswith(JRA_PREFIX):
             continue
@@ -70,7 +83,7 @@ def main():
             prog.set('stop', format_xmltv(stop, stop_offset))
             repaired += 1
 
-    # Remove exact duplicate JRA programmes after time repair.
+    # Remove byte-for-byte semantic duplicates after time repair.
     seen = set()
     for prog in list(root.findall('programme')):
         if not prog.get('channel', '').startswith(JRA_PREFIX):
@@ -78,9 +91,40 @@ def main():
         sig = programme_signature(prog)
         if sig in seen:
             root.remove(prog)
-            removed += 1
+            exact_removed += 1
         else:
             seen.add(sig)
+
+    # Some GCH sources describe the same programme twice with a 4-second
+    # offset: one entry has description/category and the other has an image.
+    # Merge those into one programme and retain all useful child metadata.
+    by_title = {}
+    for prog in list(root.findall('programme')):
+        channel = prog.get('channel', '')
+        if not channel.startswith(JRA_PREFIX):
+            continue
+        title = (prog.findtext('title') or '').strip()
+        start, _ = parse_xmltv(prog.get('start'))
+        stop, _ = parse_xmltv(prog.get('stop'))
+        if not title or start is None or stop is None:
+            continue
+
+        key = (channel, title)
+        match = None
+        for keeper, kstart, kstop in reversed(by_title.get(key, [])[-6:]):
+            if (
+                abs((start - kstart).total_seconds()) <= NEAR_DUPLICATE_SECONDS
+                and abs((stop - kstop).total_seconds()) <= NEAR_DUPLICATE_SECONDS
+            ):
+                match = keeper
+                break
+
+        if match is not None:
+            merge_missing_children(match, prog)
+            root.remove(prog)
+            near_merged += 1
+        else:
+            by_title.setdefault(key, []).append((prog, start, stop))
 
     # Final safety check: no JRA programme may finish before it starts.
     invalid = []
@@ -96,7 +140,10 @@ def main():
 
     ET.indent(tree, space='  ')
     tree.write(EPG, encoding='utf-8', xml_declaration=True)
-    print(f'JRA EPG sanitized: duplicate_removed={removed} time_repaired={repaired}')
+    print(
+        'JRA EPG sanitized: '
+        f'exact_removed={exact_removed} near_merged={near_merged} time_repaired={repaired}'
+    )
 
 
 if __name__ == '__main__':

@@ -287,15 +287,15 @@
         <title lang="ja">本日は 🏍️オートレース🏍️をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="auto.iizuka">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="auto.iizuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 飯塚（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="auto.isesaki">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="auto.isesaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊勢崎（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="auto.kawaguchi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="auto.kawaguchi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川口（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -307,7 +307,7 @@
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.ashiya">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.ashiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 21 芦屋（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -327,7 +327,7 @@
         <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.hamanako">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.hamanako">
         <title lang="ja">🔄 ただ今データ取得準備中です。 06 浜名湖（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -335,7 +335,7 @@
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.karatsu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.karatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 23 からつ（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -343,11 +343,11 @@
         <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.kojima">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.kojima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 16 児島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.marugame">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.marugame">
         <title lang="ja">🔄 ただ今データ取得準備中です。 15 丸亀（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -359,7 +359,7 @@
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.naruto">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.naruto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 14 鳴門（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -367,7 +367,7 @@
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">BOATRACE大村の本日の開催案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.shimonoseki">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.shimonoseki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 19 下関（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -375,7 +375,7 @@
         <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.tamagawa">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.tamagawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 05 多摩川（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -383,7 +383,7 @@
         <title lang="ja">本日は 🚤ボートレース🚤をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="boat.tokoname">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="boat.tokoname">
         <title lang="ja">🔄 ただ今データ取得準備中です。 08 常滑（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -399,23 +399,23 @@
         <title lang="ja">本日は 🌙ナイターボートレース🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.funabashi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.funabashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 船橋（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.himeji">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.himeji">
         <title lang="ja">🔄 ただ今データ取得準備中です。 姫路（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.kanazawa">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.kanazawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 金沢（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.kasamatsu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.kasamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 笠松（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.kawasaki_keiba">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.kawasaki_keiba">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川崎（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -423,19 +423,19 @@
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.mizusawa">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.mizusawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 水沢（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.mombetsu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.mombetsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 門別（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.morioka">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.morioka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 盛岡（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.nagoya_keiba">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">🔄 ただ今データ取得準備中です。 名古屋（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -443,7 +443,7 @@
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.oi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.oi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大井（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -451,11 +451,11 @@
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.sonoda">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.sonoda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 園田（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="chihou.urawa">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="chihou.urawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浦和（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -475,27 +475,27 @@
         <title lang="ja">本日は 🚲競輪🚲（3日目）をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.beppu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.beppu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 別府（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.fukui">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.fukui">
         <title lang="ja">🔄 ただ今データ取得準備中です。 福井（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.gifu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.gifu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岐阜（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.hakodate">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.hakodate">
         <title lang="ja">🔄 ただ今データ取得準備中です。 函館（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.hiratsuka">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.hiratsuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 平塚（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.hiroshima">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.hiroshima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 広島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -503,39 +503,39 @@
         <title lang="ja">本日は 🌅モーニング競輪🌅（2日目）をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.ito">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.ito">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊東（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.iwakitaira">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.iwakitaira">
         <title lang="ja">🔄 ただ今データ取得準備中です。 いわき平（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.kawasaki">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.kawasaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川崎（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.keiogatsu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.keiogatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 京王閣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.kishiwada">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.kishiwada">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岸和田（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.kochi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.kochi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高知（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.kokura">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.kokura">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小倉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.komatsushima">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.komatsushima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小松島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.kumamoto">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.kumamoto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 熊本（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -543,11 +543,11 @@
         <title lang="ja">本日は 🌟ミッドナイト競輪🌟をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.maebashi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.maebashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 前橋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.matsudo">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.matsudo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松戸（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -555,47 +555,47 @@
         <title lang="ja">本日は 🌟ミッドナイト競輪🌟をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.matsuyama">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.matsuyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.mukomachi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.mukomachi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 向日町（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.nagoya">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.nagoya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 名古屋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.nara">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.nara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 奈良（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.odawara">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.odawara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小田原（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.ogaki">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.ogaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大垣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.omiya">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.omiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.pist6">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.pist6">
         <title lang="ja">🔄 ただ今データ取得準備中です。 千葉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.sasebo">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.sasebo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 佐世保（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.seibuen">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.seibuen">
         <title lang="ja">🔄 ただ今データ取得準備中です。 西武園（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.shizuoka">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.shizuoka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 静岡（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -603,7 +603,7 @@
         <title lang="ja">本日は 🚲競輪🚲をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.takamatsu">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.takamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高松（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -611,11 +611,11 @@
         <title lang="ja">本日は 🌙ナイター競輪🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.tamano">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.tamano">
         <title lang="ja">🔄 ただ今データ取得準備中です。 玉野（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.toride">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.toride">
         <title lang="ja">🔄 ただ今データ取得準備中です。 取手（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -627,19 +627,19 @@
         <title lang="ja">本日は 🌙ナイター競輪🌙（2日目）をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.utsunomiya">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.utsunomiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 宇都宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.wakayama">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.wakayama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 和歌山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.yahiko">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.yahiko">
         <title lang="ja">🔄 ただ今データ取得準備中です。 弥彦（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260905010000 +0900" stop="20260905080000 +0900" channel="keirin.yokkaichi">
+    <programme start="20260905000000 +0900" stop="20260905080000 +0900" channel="keirin.yokkaichi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -2182,8 +2182,7 @@ keirin.nagoya</desc>
 🏷️ Ａ級 決勝
 🏆 グレード: F1
 📢 開催名: 楽天Ｋドリームス杯
-📅 開催日次: 最終日
-🏆 決勝</desc>
+📅 開催日次: 最終日</desc>
     </programme>
     <programme start="20260905133400 +0900" stop="20260905140500 +0900" channel="boat.miyajima">
         <title lang="ja">【７Ｒ】  14:02発走  🚤【☀️デイ 第１７回ＰａｙＰａｙ銀行賞 🚤】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
@@ -2403,12 +2402,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: デイ</desc>
     </programme>
     <programme start="20260905143000 +0900" stop="20260905144300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１Ｒ】  14:40発走  🏇【キラキラ☆ダイコンちゃん杯Ｃ１－９ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１Ｒ】  14:40発走  🏇【キラキラ☆ダイコンちゃん杯Ｃ１－９ 直200m 晴 2.2 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 14:40
 🏷️ 種別: 一般
-📢 レース名: キラキラ☆ダイコンちゃん杯Ｃ１－９ 直200m 9
+📢 レース名: キラキラ☆ダイコンちゃん杯Ｃ１－９ 直200m 晴 2.2 9
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905143000 +0900" stop="20260905150000 +0900" channel="keirin.tachikawa">
@@ -2449,12 +2448,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: デイ</desc>
     </programme>
     <programme start="20260905144300 +0900" stop="20260905151800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【２Ｒ】  15:15発走  🏇【大樹３０歳おめでとう記念２歳Ｄ－６ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【２Ｒ】  15:15発走  🏇【大樹３０歳おめでとう記念２歳Ｄ－６ 直200m 晴 2.2 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 15:15
 🏷️ 種別: 一般
-📢 レース名: 大樹３０歳おめでとう記念２歳Ｄ－６ 直200m 9
+📢 レース名: 大樹３０歳おめでとう記念２歳Ｄ－６ 直200m 晴 2.2 9
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905144500 +0900" stop="20260905152000 +0900" channel="jra.west">
@@ -2648,12 +2647,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: デイ</desc>
     </programme>
     <programme start="20260905151800 +0900" stop="20260905155300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【３Ｒ】  15:50発走  🏇【ずんだもん黒企業同窓ＣＨ賞２歳Ｃ－６ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【３Ｒ】  15:50発走  🏇【ずんだもん黒企業同窓ＣＨ賞２歳Ｃ－６ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 15:50
 🏷️ 種別: 一般
-📢 レース名: ずんだもん黒企業同窓ＣＨ賞２歳Ｃ－６ 直200m 10
+📢 レース名: ずんだもん黒企業同窓ＣＨ賞２歳Ｃ－６ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905152000 +0900" stop="20260905154500 +0900" channel="boat.suminoe">
@@ -2850,12 +2849,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905155300 +0900" stop="20260905162300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【４Ｒ】  16:20発走  🏇【カラトリオ 令陸陽杯２歳Ｂ－４ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【４Ｒ】  16:20発走  🏇【カラトリオ 令陸陽杯２歳Ｂ－４ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:20
 🏷️ 種別: 一般
-📢 レース名: カラトリオ 令陸陽杯２歳Ｂ－４ 直200m 10
+📢 レース名: カラトリオ 令陸陽杯２歳Ｂ－４ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905155400 +0900" stop="20260905161700 +0900" channel="keirin.toyohashi">
@@ -3039,12 +3038,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905162300 +0900" stop="20260905165300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【５Ｒ】  16:50発走  🏇【あるぐら転職＆帯広来場記念Ｃ２－６ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【５Ｒ】  16:50発走  🏇【あるぐら転職＆帯広来場記念Ｃ２－６ 直200m 晴 2.2 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 16:50
 🏷️ 種別: 一般
-📢 レース名: あるぐら転職＆帯広来場記念Ｃ２－６ 直200m 9
+📢 レース名: あるぐら転職＆帯広来場記念Ｃ２－６ 直200m 晴 2.2 9
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905162400 +0900" stop="20260906000000 +0900" channel="keirin.aomori">
@@ -3167,12 +3166,12 @@ keirin.nagoya</desc>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
     <programme start="20260905165300 +0900" stop="20260905172800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【６Ｒ】  17:25発走  🏇【祐希＆莉子ウェディング杯Ｃ１－８ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【６Ｒ】  17:25発走  🏇【祐希＆莉子ウェディング杯Ｃ１－８ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:25
 🏷️ 種別: 一般
-📢 レース名: 祐希＆莉子ウェディング杯Ｃ１－８ 直200m 10
+📢 レース名: 祐希＆莉子ウェディング杯Ｃ１－８ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905165300 +0900" stop="20260905171700 +0900" channel="keirin.takeo">
@@ -3303,12 +3302,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905172800 +0900" stop="20260905175800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【７Ｒ】  17:55発走  🏇【第１９回ＷＭＣＵＣ同好会賞Ｂ４－６ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【７Ｒ】  17:55発走  🏇【第１９回ＷＭＣＵＣ同好会賞Ｂ４－６ 直200m 晴 2.2 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 17:55
 🏷️ 種別: 一般
-📢 レース名: 第１９回ＷＭＣＵＣ同好会賞Ｂ４－６ 直200m 9
+📢 レース名: 第１９回ＷＭＣＵＣ同好会賞Ｂ４－６ 直200m 晴 2.2 9
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905172900 +0900" stop="20260906000000 +0900" channel="boat.fukuoka">
@@ -3424,12 +3423,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905175800 +0900" stop="20260905182800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【８Ｒ】  18:25発走  🏇【十勝平野を青黒に染めろ杯２歳Ａ－４ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【８Ｒ】  18:25発走  🏇【十勝平野を青黒に染めろ杯２歳Ａ－４ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 18:25
 🏷️ 種別: 一般
-📢 レース名: 十勝平野を青黒に染めろ杯２歳Ａ－４ 直200m 10
+📢 レース名: 十勝平野を青黒に染めろ杯２歳Ａ－４ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905180000 +0900" stop="20260905182800 +0900" channel="boat.kiryu">
@@ -3537,12 +3536,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905182800 +0900" stop="20260905185800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【９Ｒ】  18:55発走  🏇【Ｂ３－７ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【９Ｒ】  18:55発走  🏇【Ｂ３－７ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 18:55
 🏷️ 種別: 一般
-📢 レース名: Ｂ３－７ 直200m 10
+📢 レース名: Ｂ３－７ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905182900 +0900" stop="20260905185300 +0900" channel="keirin.takeo">
@@ -3634,12 +3633,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905185800 +0900" stop="20260905192800 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１０Ｒ】  19:25発走  🏇【かれん爆誕ＲＵＮＮＥＲＳ杯Ｂ３－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１０Ｒ】  19:25発走  🏇【かれん爆誕ＲＵＮＮＥＲＳ杯Ｂ３－２ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 19:25
 🏷️ 種別: 一般
-📢 レース名: かれん爆誕ＲＵＮＮＥＲＳ杯Ｂ３－２ 直200m 10
+📢 レース名: かれん爆誕ＲＵＮＮＥＲＳ杯Ｂ３－２ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905190500 +0900" stop="20260905193500 +0900" channel="boat.suminoe">
@@ -3722,12 +3721,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905192800 +0900" stop="20260905200300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１１Ｒ】  20:00発走  🏇【特別 もんすけカップＢ２－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１１Ｒ】  20:00発走  🏇【特別 もんすけカップＢ２－１ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:00
 🏷️ 種別: 一般
-📢 レース名: 特別 もんすけカップＢ２－１ 直200m 10
+📢 レース名: 特別 もんすけカップＢ２－１ 直200m 晴 2.2 10
 📅 2026年09月05日</desc>
     </programme>
     <programme start="20260905192900 +0900" stop="20260905195400 +0900" channel="keirin.toyohashi">
@@ -3840,12 +3839,12 @@ keirin.nagoya</desc>
 📅 2026年09月05日 開催区分: ナイター</desc>
     </programme>
     <programme start="20260905200300 +0900" stop="20260905203300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【１２Ｒ】  20:30発走  🏇【Ｃ２－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【１２Ｒ】  20:30発走  🏇【Ｃ２－２ 直200m 晴 2.2 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 20:30
 🏷️ 種別: 一般
-📢 レース名: Ｃ２－２ 直200m 10
+📢 レース名: Ｃ２－２ 直200m 晴 2.2 10
 🏆 メインレース
 📅 2026年09月05日</desc>
     </programme>
@@ -4186,127 +4185,127 @@ keirin.nagoya</desc>
         <title lang="ja">🏁 本日の🌟ミッドナイト競輪🌟は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="auto.hamamatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="auto.hamamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浜松（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="auto.iizuka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="auto.iizuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 飯塚（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="auto.isesaki">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="auto.isesaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊勢崎（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="auto.kawaguchi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="auto.kawaguchi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川口（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="auto.sanyo">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="auto.sanyo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 山陽（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.amagasaki">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.amagasaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 13 尼崎（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.ashiya">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.ashiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 21 芦屋（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.biwako">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.biwako">
         <title lang="ja">🔄 ただ今データ取得準備中です。 11 びわこ（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.edogawa">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.edogawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 03 江戸川（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.fukuoka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.fukuoka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 22 福岡（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.gamagori">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.gamagori">
         <title lang="ja">🔄 ただ今データ取得準備中です。 07 蒲郡（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.hamanako">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.hamanako">
         <title lang="ja">🔄 ただ今データ取得準備中です。 06 浜名湖（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.heiwajima">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.heiwajima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 04 平和島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.karatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.karatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 23 からつ（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.kiryu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.kiryu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 01 桐生（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.kojima">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.kojima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 16 児島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.marugame">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.marugame">
         <title lang="ja">🔄 ただ今データ取得準備中です。 15 丸亀（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.mikuni">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.mikuni">
         <title lang="ja">🔄 ただ今データ取得準備中です。 10 三国（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.miyajima">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.miyajima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 17 宮島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.naruto">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.naruto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 14 鳴門（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.omura">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.omura">
         <title lang="ja">🔄 ただ今データ取得準備中です。 24 大村（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.shimonoseki">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.shimonoseki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 19 下関（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.suminoe">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.suminoe">
         <title lang="ja">🔄 ただ今データ取得準備中です。 12 住之江（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.tamagawa">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.tamagawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 05 多摩川（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.toda">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.toda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 02 戸田（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.tokoname">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.tokoname">
         <title lang="ja">🔄 ただ今データ取得準備中です。 08 常滑（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.tokuyama">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.tokuyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 18 徳山（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.tsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.tsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 09 津（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="boat.wakamatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="boat.wakamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 20 若松（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.funabashi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.funabashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 船橋（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.himeji">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.himeji">
         <title lang="ja">🔄 ただ今データ取得準備中です。 姫路（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4314,11 +4313,11 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🏇地方競馬🏇をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.kasamatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.kasamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 笠松（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.kawasaki_keiba">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.kawasaki_keiba">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川崎（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4330,15 +4329,15 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🏇地方競馬🏇をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.mombetsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.mombetsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 門別（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.morioka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.morioka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 盛岡（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.nagoya_keiba">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">🔄 ただ今データ取得準備中です。 名古屋（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4346,7 +4345,7 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.oi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.oi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大井（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4354,11 +4353,11 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.sonoda">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.sonoda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 園田（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="chihou.urawa">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="chihou.urawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浦和（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4374,175 +4373,175 @@ keirin.nagoya</desc>
         <title lang="ja">本日は 🏇JRA中央競馬🏇をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.aomori">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.aomori">
         <title lang="ja">🔄 ただ今データ取得準備中です。 青森（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.beppu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.beppu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 別府（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.fukui">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.fukui">
         <title lang="ja">🔄 ただ今データ取得準備中です。 福井（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.gifu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.gifu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岐阜（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.hakodate">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.hakodate">
         <title lang="ja">🔄 ただ今データ取得準備中です。 函館（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.hiratsuka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.hiratsuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 平塚（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.hiroshima">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.hiroshima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 広島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.hofu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.hofu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 防府（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.ito">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.ito">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊東（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.iwakitaira">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.iwakitaira">
         <title lang="ja">🔄 ただ今データ取得準備中です。 いわき平（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kawasaki">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kawasaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川崎（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.keiogatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.keiogatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 京王閣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kishiwada">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kishiwada">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岸和田（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kochi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kochi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高知（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kokura">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kokura">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小倉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.komatsushima">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.komatsushima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小松島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kumamoto">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kumamoto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 熊本（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.kurume">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.kurume">
         <title lang="ja">🔄 ただ今データ取得準備中です。 久留米（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.maebashi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.maebashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 前橋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.matsudo">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.matsudo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松戸（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.matsusaka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.matsusaka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松阪（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.matsuyama">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.matsuyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.mukomachi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.mukomachi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 向日町（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.nagoya">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.nagoya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 名古屋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.nara">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.nara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 奈良（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.odawara">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.odawara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小田原（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.ogaki">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.ogaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大垣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.omiya">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.omiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.pist6">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.pist6">
         <title lang="ja">🔄 ただ今データ取得準備中です。 千葉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.sasebo">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.sasebo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 佐世保（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.seibuen">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.seibuen">
         <title lang="ja">🔄 ただ今データ取得準備中です。 西武園（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.shizuoka">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.shizuoka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 静岡（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.tachikawa">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.tachikawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 立川（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.takamatsu">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.takamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高松（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.takeo">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.takeo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 武雄（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.tamano">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.tamano">
         <title lang="ja">🔄 ただ今データ取得準備中です。 玉野（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.toride">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.toride">
         <title lang="ja">🔄 ただ今データ取得準備中です。 取手（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.toyama">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.toyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 富山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.toyohashi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.toyohashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 豊橋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.utsunomiya">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.utsunomiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 宇都宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.wakayama">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.wakayama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 和歌山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.yahiko">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.yahiko">
         <title lang="ja">🔄 ただ今データ取得準備中です。 弥彦（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260906010000 +0900" stop="20260906080000 +0900" channel="keirin.yokkaichi">
+    <programme start="20260906000000 +0900" stop="20260906080000 +0900" channel="keirin.yokkaichi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -4690,7 +4689,7 @@ keirin.nagoya</desc>
 📢 第28回サッポロビールスターカップ
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="auto.kawaguchi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="auto.kawaguchi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年09月06日の本場開催はありません。</desc>
     </programme>
@@ -4700,91 +4699,91 @@ keirin.nagoya</desc>
 📢 おトクにPLAY!オッズパーク杯山陽オーバーミッドナイトオートレース
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.amagasaki">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.amagasaki">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に13 尼崎は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.ashiya">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.ashiya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に21 芦屋は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.hamanako">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.hamanako">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に06 浜名湖は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.karatsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.karatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に23 からつは掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.kojima">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.kojima">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に16 児島は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.marugame">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.marugame">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に15 丸亀は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.omura">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.omura">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に24 大村は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.shimonoseki">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.shimonoseki">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に19 下関は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.tamagawa">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.tamagawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に05 多摩川は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.tokoname">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.tokoname">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に08 常滑は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.tokuyama">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.tokuyama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に18 徳山は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="boat.wakamatsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="boat.wakamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">BOAT RACE公式の2026年09月06日開催一覧に20 若松は掲載されていません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.funabashi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.funabashi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は船橋のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.himeji">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.himeji">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は姫路のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.kasamatsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.kasamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は笠松のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.kawasaki_keiba">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.kawasaki_keiba">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は川崎のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.mombetsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.mombetsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は門別のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.morioka">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.morioka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は盛岡のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.nagoya_keiba">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は名古屋のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.oi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.oi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は大井のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.sonoda">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.sonoda">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は園田のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="chihou.urawa">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="chihou.urawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は浦和のレース情報を取得していません。</desc>
     </programme>
@@ -4798,27 +4797,27 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.beppu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.beppu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.fukui">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.fukui">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.gifu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.gifu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.hakodate">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.hakodate">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.hiratsuka">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.hiratsuka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.hiroshima">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.hiroshima">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -4832,39 +4831,39 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.ito">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.ito">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.iwakitaira">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.iwakitaira">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.kawasaki">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.kawasaki">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.keiogatsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.keiogatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.kishiwada">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.kishiwada">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.kochi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.kochi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.kokura">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.kokura">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.komatsushima">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.komatsushima">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.kumamoto">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -4878,11 +4877,11 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.maebashi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.maebashi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.matsudo">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.matsudo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -4896,39 +4895,39 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.matsuyama">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.matsuyama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.mukomachi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.mukomachi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.nagoya">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.nagoya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.nara">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.nara">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.odawara">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.odawara">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.ogaki">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.ogaki">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.omiya">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.omiya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.pist6">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.pist6">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.sasebo">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.sasebo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -4942,31 +4941,31 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.shizuoka">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.shizuoka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.tachikawa">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.tachikawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.takamatsu">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.takamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.takeo">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.takeo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.tamano">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.tamano">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.toride">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.toride">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.toyama">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.toyama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -4980,19 +4979,19 @@ keirin.nagoya</desc>
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.utsunomiya">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.utsunomiya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.wakayama">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.wakayama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.yahiko">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.yahiko">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260906080000 +0900" stop="20260907010000 +0900" channel="keirin.yokkaichi">
+    <programme start="20260906080000 +0900" stop="20260906235900 +0900" channel="keirin.yokkaichi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月06日の開催予定はありません。</desc>
     </programme>
@@ -5442,7 +5441,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 旭川特別 3歳以上2勝クラス 1,700 （ダ）定量
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906140000 +0900" stop="20260907010000 +0900" channel="keirin.hofu">
+    <programme start="20260906140000 +0900" stop="20260906235900 +0900" channel="keirin.hofu">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">防府の本日の競輪は全て終了しました。</desc>
     </programme>
@@ -5751,7 +5750,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 重賞 Ｊ認 ビギナーズカップ２歳
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906165500 +0900" stop="20260907010000 +0900" channel="auto.hamamatsu">
+    <programme start="20260906165500 +0900" stop="20260906235900 +0900" channel="auto.hamamatsu">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">浜松の本日のオートレースは全て終了しました。</desc>
     </programme>
@@ -5778,7 +5777,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">ビギナーズカップ、石川テレビ杯、九州ジュニアチャンピオン</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260906170000 +0900" stop="20260907010000 +0900" channel="keirin.aomori">
+    <programme start="20260906170000 +0900" stop="20260906235900 +0900" channel="keirin.aomori">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">青森の本日の競輪は全て終了しました。</desc>
     </programme>
@@ -5854,12 +5853,12 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📅 2026年09月06日</desc>
     </programme>
     <programme start="20260906175800 +0900" stop="20260906183300 +0900" channel="chihou.obihiro">
-        <title lang="ja">【８Ｒ】  18:30発走  🏇【ヤッホ～イ夏暉くん２歳記念Ａ－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <title lang="ja">【８Ｒ】  18:30発走  🏇【ヤッホ～イ夏暉くん２歳記念２歳Ａ－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 帯広
 🌙 開催区分: ナイター
 ⏰ 発走予定: 18:30
 🏷️ 種別: 一般
-📢 レース名: ヤッホ～イ夏暉くん２歳記念Ａ－１ 直200m 10
+📢 レース名: ヤッホ～イ夏暉くん２歳記念２歳Ａ－１ 直200m 10
 📅 2026年09月06日</desc>
     </programme>
     <programme start="20260906180300 +0900" stop="20260907000000 +0900" channel="chihou.mizusawa">
@@ -6093,7 +6092,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 レース名: 地方競馬教養センターで騎手を目指そう２歳
 📅 2026年09月06日</desc>
     </programme>
-    <programme start="20260906205000 +0900" stop="20260907010000 +0900" channel="auto.isesaki">
+    <programme start="20260906205000 +0900" stop="20260906235900 +0900" channel="auto.isesaki">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">伊勢崎の本日のオートレースは全て終了しました。</desc>
     </programme>
@@ -6116,11 +6115,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">「アカイイト」</desc>
         <category lang="ja">スポーツ</category>
     </programme>
-    <programme start="20260906210000 +0900" stop="20260907010000 +0900" channel="keirin.seibuen">
+    <programme start="20260906210000 +0900" stop="20260906235900 +0900" channel="keirin.seibuen">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">西武園の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260906210000 +0900" stop="20260907010000 +0900" channel="keirin.toyohashi">
+    <programme start="20260906210000 +0900" stop="20260906235900 +0900" channel="keirin.toyohashi">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">豊橋の本日の競輪は全て終了しました。</desc>
     </programme>
@@ -6132,7 +6131,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">栄光の名馬たち（アカイイト） #438[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/84358/S_2db3e7ce5d7f48f298e0f0bf644e515c_20260807111816993.jpg</image>
     </programme>
-    <programme start="20260906210500 +0900" stop="20260907010000 +0900" channel="auto.iizuka">
+    <programme start="20260906210500 +0900" stop="20260906235900 +0900" channel="auto.iizuka">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">飯塚の本日のオートレースは全て終了しました。</desc>
     </programme>
@@ -6172,147 +6171,147 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">[無][生]ALL IN LINE～世界の競馬～（2026凱旋門賞前哨戦中継） #131</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/86742/S_64be078b3e46476095b8bd1da7db3238_20260902115350142.png</image>
     </programme>
-    <programme start="20260906233000 +0900" stop="20260907010000 +0900" channel="auto.sanyo">
+    <programme start="20260906233000 +0900" stop="20260906235900 +0900" channel="auto.sanyo">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">山陽の本日のオートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260906233000 +0900" stop="20260907010000 +0900" channel="keirin.kurume">
+    <programme start="20260906233000 +0900" stop="20260906235900 +0900" channel="keirin.kurume">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">久留米の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260906233000 +0900" stop="20260907010000 +0900" channel="keirin.matsusaka">
+    <programme start="20260906233000 +0900" stop="20260906235900 +0900" channel="keirin.matsusaka">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">松阪の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="auto.hamamatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="auto.hamamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浜松（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="auto.iizuka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="auto.iizuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 飯塚（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="auto.isesaki">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="auto.isesaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊勢崎（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="auto.kawaguchi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="auto.kawaguchi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川口（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="auto.sanyo">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="auto.sanyo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 山陽（オートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.amagasaki">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.amagasaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 13 尼崎（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.ashiya">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.ashiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 21 芦屋（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.biwako">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.biwako">
         <title lang="ja">🔄 ただ今データ取得準備中です。 11 びわこ（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.edogawa">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.edogawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 03 江戸川（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.fukuoka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.fukuoka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 22 福岡（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.gamagori">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.gamagori">
         <title lang="ja">🔄 ただ今データ取得準備中です。 07 蒲郡（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.hamanako">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.hamanako">
         <title lang="ja">🔄 ただ今データ取得準備中です。 06 浜名湖（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.heiwajima">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.heiwajima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 04 平和島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.karatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.karatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 23 からつ（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.kiryu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.kiryu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 01 桐生（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.kojima">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.kojima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 16 児島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.marugame">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.marugame">
         <title lang="ja">🔄 ただ今データ取得準備中です。 15 丸亀（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.mikuni">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.mikuni">
         <title lang="ja">🔄 ただ今データ取得準備中です。 10 三国（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.miyajima">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.miyajima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 17 宮島（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.naruto">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.naruto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 14 鳴門（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.omura">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.omura">
         <title lang="ja">🔄 ただ今データ取得準備中です。 24 大村（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.shimonoseki">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.shimonoseki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 19 下関（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.suminoe">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.suminoe">
         <title lang="ja">🔄 ただ今データ取得準備中です。 12 住之江（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.tamagawa">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.tamagawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 05 多摩川（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.toda">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.toda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 02 戸田（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.tokoname">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.tokoname">
         <title lang="ja">🔄 ただ今データ取得準備中です。 08 常滑（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.tokuyama">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.tokuyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 18 徳山（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.tsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.tsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 09 津（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="boat.wakamatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="boat.wakamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 20 若松（ボートレース）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.funabashi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.funabashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 船橋（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.himeji">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.himeji">
         <title lang="ja">🔄 ただ今データ取得準備中です。 姫路（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.kanazawa">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.kanazawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 金沢（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.kasamatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.kasamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 笠松（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -6320,7 +6319,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.kochi_keiba">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.kochi_keiba">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高知（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -6328,11 +6327,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">本日は 🏇地方競馬🏇をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.mombetsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.mombetsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 門別（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.morioka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.morioka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 盛岡（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -6340,207 +6339,207 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
         <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.obihiro">
-        <title lang="ja">🔄 ただ今データ取得準備中です。 帯広（競馬）</title>
-        <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
+    <programme start="20260907000000 +0900" stop="20260907142800 +0900" channel="chihou.obihiro">
+        <title lang="ja">本日は 🌙ナイター競馬🌙をお送りします</title>
+        <desc lang="ja">本日の開催開始前案内です。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.oi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.oi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大井（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.saga">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.saga">
         <title lang="ja">🔄 ただ今データ取得準備中です。 佐賀（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.sonoda">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.sonoda">
         <title lang="ja">🔄 ただ今データ取得準備中です。 園田（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="chihou.urawa">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="chihou.urawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 浦和（競馬）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="jra.east">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="jra.east">
         <title lang="ja">🔄 ただ今データ取得準備中です。 JRA EAST（JRA）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="jra.hokkaido">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="jra.hokkaido">
         <title lang="ja">🔄 ただ今データ取得準備中です。 JRA HOKKAIDO（JRA）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="jra.west">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="jra.west">
         <title lang="ja">🔄 ただ今データ取得準備中です。 JRA WEST（JRA）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.aomori">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.aomori">
         <title lang="ja">🔄 ただ今データ取得準備中です。 青森（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.beppu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.beppu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 別府（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.fukui">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.fukui">
         <title lang="ja">🔄 ただ今データ取得準備中です。 福井（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.gifu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.gifu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岐阜（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.hakodate">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.hakodate">
         <title lang="ja">🔄 ただ今データ取得準備中です。 函館（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.hiratsuka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.hiratsuka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 平塚（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.hiroshima">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.hiroshima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 広島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.hofu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.hofu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 防府（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.ito">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.ito">
         <title lang="ja">🔄 ただ今データ取得準備中です。 伊東（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.iwakitaira">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.iwakitaira">
         <title lang="ja">🔄 ただ今データ取得準備中です。 いわき平（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kawasaki">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kawasaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 川崎（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.keiogatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.keiogatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 京王閣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kishiwada">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kishiwada">
         <title lang="ja">🔄 ただ今データ取得準備中です。 岸和田（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kochi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kochi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高知（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kokura">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kokura">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小倉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.komatsushima">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.komatsushima">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小松島（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kumamoto">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kumamoto">
         <title lang="ja">🔄 ただ今データ取得準備中です。 熊本（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.kurume">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.kurume">
         <title lang="ja">🔄 ただ今データ取得準備中です。 久留米（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.maebashi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.maebashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 前橋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.matsudo">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.matsudo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松戸（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.matsusaka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.matsusaka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松阪（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.matsuyama">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.matsuyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 松山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.mukomachi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.mukomachi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 向日町（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.nagoya">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.nagoya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 名古屋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.nara">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.nara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 奈良（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.odawara">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.odawara">
         <title lang="ja">🔄 ただ今データ取得準備中です。 小田原（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.ogaki">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.ogaki">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大垣（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.omiya">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.omiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 大宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.pist6">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.pist6">
         <title lang="ja">🔄 ただ今データ取得準備中です。 千葉（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.sasebo">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.sasebo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 佐世保（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.seibuen">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.seibuen">
         <title lang="ja">🔄 ただ今データ取得準備中です。 西武園（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.shizuoka">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.shizuoka">
         <title lang="ja">🔄 ただ今データ取得準備中です。 静岡（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.tachikawa">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.tachikawa">
         <title lang="ja">🔄 ただ今データ取得準備中です。 立川（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.takamatsu">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.takamatsu">
         <title lang="ja">🔄 ただ今データ取得準備中です。 高松（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.takeo">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.takeo">
         <title lang="ja">🔄 ただ今データ取得準備中です。 武雄（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.tamano">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.tamano">
         <title lang="ja">🔄 ただ今データ取得準備中です。 玉野（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.toride">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.toride">
         <title lang="ja">🔄 ただ今データ取得準備中です。 取手（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.toyama">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.toyama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 富山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.toyohashi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.toyohashi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 豊橋（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.utsunomiya">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.utsunomiya">
         <title lang="ja">🔄 ただ今データ取得準備中です。 宇都宮（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.wakayama">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.wakayama">
         <title lang="ja">🔄 ただ今データ取得準備中です。 和歌山（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.yahiko">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.yahiko">
         <title lang="ja">🔄 ただ今データ取得準備中です。 弥彦（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
-    <programme start="20260907010000 +0900" stop="20260907080000 +0900" channel="keirin.yokkaichi">
+    <programme start="20260907000000 +0900" stop="20260907080000 +0900" channel="keirin.yokkaichi">
         <title lang="ja">🔄 ただ今データ取得準備中です。 四日市（競輪）</title>
         <desc lang="ja">日付更新後の次回EPGデータ取得・反映を準備しています。</desc>
     </programme>
@@ -6608,11 +6607,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <title lang="ja">[無]がんばる！畜産！8 #18[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/29485/S_ab86d172fc7941a491cf4a3b0dc2a72a_20250918191532769.png</image>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="auto.hamamatsu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="auto.hamamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年09月07日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="auto.iizuka">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="auto.iizuka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年09月07日の本場開催はありません。</desc>
     </programme>
@@ -6628,55 +6627,51 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 📢 川口市営第8回2節
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="auto.sanyo">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="auto.sanyo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">AutoRace.JP公式カレンダーで2026年09月07日の本場開催はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.funabashi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.funabashi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は船橋のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.himeji">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.himeji">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は姫路のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.kanazawa">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.kanazawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は金沢のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.kasamatsu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.kasamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は笠松のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.kochi_keiba">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.kochi_keiba">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は高知のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.mombetsu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.mombetsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は門別のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.morioka">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.morioka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は盛岡のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.obihiro">
-        <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
-        <desc lang="ja">本日は帯広のレース情報を取得していません。</desc>
-    </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.oi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.oi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は大井のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.saga">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.saga">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は佐賀のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.sonoda">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.sonoda">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は園田のレース情報を取得していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="chihou.urawa">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="chihou.urawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">本日は浦和のレース情報を取得していません。</desc>
     </programme>
@@ -6695,35 +6690,35 @@ BOAT RACE公式の開催一覧で開催を確認済み。
         <desc lang="ja">JRA公式の2026年09月07日開催情報を取得できませんでした。
 開催・非開催をまだ確定していません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.aomori">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.aomori">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.beppu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.beppu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.fukui">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.fukui">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.gifu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.gifu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.hakodate">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.hakodate">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.hiratsuka">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.hiratsuka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.hiroshima">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.hiroshima">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.hofu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.hofu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6747,31 +6742,31 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.kawasaki">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.kawasaki">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.keiogatsu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.keiogatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.kishiwada">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.kishiwada">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.kochi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.kochi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.kokura">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.kokura">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.komatsushima">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.komatsushima">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.kumamoto">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.kumamoto">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6785,11 +6780,11 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.maebashi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.maebashi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.matsudo">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.matsudo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6803,23 +6798,23 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.matsuyama">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.matsuyama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.mukomachi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.mukomachi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.nagoya">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.nagoya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.nara">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.nara">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.odawara">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.odawara">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6833,15 +6828,15 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.omiya">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.omiya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.pist6">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.pist6">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.sasebo">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.sasebo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6855,43 +6850,43 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.shizuoka">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.shizuoka">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.tachikawa">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.tachikawa">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.takamatsu">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.takamatsu">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.takeo">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.takeo">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.tamano">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.tamano">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.toride">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.toride">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.toyama">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.toyama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.toyohashi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.toyohashi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.utsunomiya">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.utsunomiya">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.wakayama">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.wakayama">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -6905,7 +6900,7 @@ BOAT RACE公式の開催一覧で開催を確認済み。
 ⚠️ （仮時間）※実際の時間ではありません
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907080000 +0900" stop="20260908010000 +0900" channel="keirin.yokkaichi">
+    <programme start="20260907080000 +0900" stop="20260907235900 +0900" channel="keirin.yokkaichi">
         <title lang="ja">🚫💤 本日は開催していません 💤🚫</title>
         <desc lang="ja">KEIRIN.JP開催日程で2026年09月07日の開催予定はありません。</desc>
     </programme>
@@ -7331,7 +7326,7 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｃ２五組
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907140000 +0900" stop="20260908010000 +0900" channel="keirin.ito">
+    <programme start="20260907140000 +0900" stop="20260907235900 +0900" channel="keirin.ito">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">伊東の本日の競輪は全て終了しました。</desc>
     </programme>
@@ -7361,6 +7356,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: アジア・アジアパラ応援３４ ３歳１０
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907142800 +0900" stop="20260907145800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【２Ｒ】  14:55発走  🏇【倫大朗１歳おめでとう記念２歳Ｄ－８ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 14:55
+🏷️ 種別: 一般
+📢 レース名: 倫大朗１歳おめでとう記念２歳Ｄ－８ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907143300 +0900" stop="20260907151300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【２Ｒ】  15:10発走  🏇【３歳９組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7386,6 +7390,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 15:00
 🏷️ 種別: 一般
 📢 レース名: Ｃ３五
+📅 2026年09月07日</desc>
+    </programme>
+    <programme start="20260907145800 +0900" stop="20260907153800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【３Ｒ】  15:35発走  🏇【はるさん初ばんえい競馬記念２歳Ｄ－５ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 15:35
+🏷️ 種別: 一般
+📢 レース名: はるさん初ばんえい競馬記念２歳Ｄ－５ 直200m 10
 📅 2026年09月07日</desc>
     </programme>
     <programme start="20260907150000 +0900" stop="20260907210000 +0900" channel="keirin.iwakitaira">
@@ -7462,6 +7475,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: のぞみ賞２歳未格付選定馬
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907153800 +0900" stop="20260907161300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【４Ｒ】  16:10発走  🏇【お昼ごはん代ないなった記念２歳Ｃ－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:10
+🏷️ 種別: 一般
+📢 レース名: お昼ごはん代ないなった記念２歳Ｃ－１ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907154300 +0900" stop="20260907161800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【４Ｒ】  16:15発走  🏇【３歳８ａ組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7495,6 +7517,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 16:30
 🏷️ 種別: 一般
 📢 レース名: ２歳５イ
+📅 2026年09月07日</desc>
+    </programme>
+    <programme start="20260907161300 +0900" stop="20260907164300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【５Ｒ】  16:40発走  🏇【ぼーよし爆誕祭２０２６ ２歳Ｂ－５ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 16:40
+🏷️ 種別: 一般
+📢 レース名: ぼーよし爆誕祭２０２６ ２歳Ｂ－５ 直200m 9
 📅 2026年09月07日</desc>
     </programme>
     <programme start="20260907161800 +0900" stop="20260907164800 +0900" channel="chihou.nagoya_keiba">
@@ -7532,6 +7563,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｃ２一 二
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907164300 +0900" stop="20260907171300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【６Ｒ】  17:10発走  🏇【たこ焼ふわっと１５周年記念Ｃ２－７ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:10
+🏷️ 種別: 一般
+📢 レース名: たこ焼ふわっと１５周年記念Ｃ２－７ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907164800 +0900" stop="20260907171800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【６Ｒ】  17:15発走  🏇【特別 緒川城址疾風特別Ｃ１ｃ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7541,15 +7581,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 特別 緒川城址疾風特別Ｃ１ｃ
 📅 2026年09月07日</desc>
     </programme>
-    <programme start="20260907165500 +0900" stop="20260908010000 +0900" channel="auto.kawaguchi">
+    <programme start="20260907165500 +0900" stop="20260907235900 +0900" channel="auto.kawaguchi">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">川口の本日のオートレースは全て終了しました。</desc>
     </programme>
-    <programme start="20260907170000 +0900" stop="20260908010000 +0900" channel="keirin.ogaki">
+    <programme start="20260907170000 +0900" stop="20260907235900 +0900" channel="keirin.ogaki">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">大垣の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260907170000 +0900" stop="20260908010000 +0900" channel="keirin.yahiko">
+    <programme start="20260907170000 +0900" stop="20260907235900 +0900" channel="keirin.yahiko">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">弥彦の本日の競輪は全て終了しました。</desc>
     </programme>
@@ -7577,6 +7617,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 17:40
 🏷️ 種別: 一般
 📢 レース名: ３歳Ｂ２二組
+📅 2026年09月07日</desc>
+    </programme>
+    <programme start="20260907171300 +0900" stop="20260907174300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【７Ｒ】  17:40発走  🏇【９月９日はめろの誕生日記念Ｃ１－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 17:40
+🏷️ 種別: 一般
+📢 レース名: ９月９日はめろの誕生日記念Ｃ１－１ 直200m 10
 📅 2026年09月07日</desc>
     </programme>
     <programme start="20260907171800 +0900" stop="20260907175300 +0900" channel="chihou.nagoya_keiba">
@@ -7616,6 +7665,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 🏆 メインレース
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907174300 +0900" stop="20260907181300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【８Ｒ】  18:10発走  🏇【るいらな記念Ｂ４－７ 直200m 9 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:10
+🏷️ 種別: 一般
+📢 レース名: るいらな記念Ｂ４－７ 直200m 9
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907175300 +0900" stop="20260907182300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【８Ｒ】  18:20発走  🏇【Ｂ１０組 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7651,6 +7709,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: Ｃ２
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907181300 +0900" stop="20260907184800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【９Ｒ】  18:45発走  🏇【ゆうびんやさん生誕記念Ｂ４－５ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 18:45
+🏷️ 種別: 一般
+📢 レース名: ゆうびんやさん生誕記念Ｂ４－５ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907182300 +0900" stop="20260907185300 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【９Ｒ】  18:50発走  🏇【特別 東浦特別Ｃ１ｂ 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7667,6 +7734,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 19:05
 🏷️ 種別: 一般
 📢 レース名: 剛勇賞Ｃ１選定馬
+📅 2026年09月07日</desc>
+    </programme>
+    <programme start="20260907184800 +0900" stop="20260907192300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【１０Ｒ】  19:20発走  🏇【とかち平原賞Ｂ３－８混合 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:20
+🏷️ 種別: 一般
+📢 レース名: とかち平原賞Ｂ３－８混合 直200m 10
 📅 2026年09月07日</desc>
     </programme>
     <programme start="20260907185300 +0900" stop="20260907193300 +0900" channel="chihou.nagoya_keiba">
@@ -7695,6 +7771,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 📢 レース名: 尾花賞Ｃ１五
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907192300 +0900" stop="20260907195800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【１１Ｒ】  19:55発走  🏇【特別 フォーマルハウト特別Ａ１－１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 19:55
+🏷️ 種別: 一般
+📢 レース名: 特別 フォーマルハウト特別Ａ１－１ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907193300 +0900" stop="20260907200800 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">【１１Ｒ】  20:05発走  🏇【特別 サファイアオープンＡ１特別 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
         <desc lang="ja">地方競馬 名古屋
@@ -7711,6 +7796,16 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 ⏰ 発走予定: 20:15
 🏷️ 種別: 一般
 📢 レース名: 特別 日高軽種馬農業協同組合特別Ｂ１二Ｂ２一
+📅 2026年09月07日</desc>
+    </programme>
+    <programme start="20260907195800 +0900" stop="20260907203300 +0900" channel="chihou.obihiro">
+        <title lang="ja">【１２Ｒ】  20:30発走  🏇【とかち秋晴れ賞Ｂ２－２ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 20:30
+🏷️ 種別: 一般
+📢 レース名: とかち秋晴れ賞Ｂ２－２ 直200m 10
+🏆 メインレース
 📅 2026年09月07日</desc>
     </programme>
     <programme start="20260907200800 +0900" stop="20260907204300 +0900" channel="chihou.nagoya_keiba">
@@ -7755,6 +7850,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
 開催は確認できていますが、実際の各R時刻はこの情報源では未確定のため仮時間で表示しています。
 📅 2026年09月07日</desc>
     </programme>
+    <programme start="20260907203300 +0900" stop="20260908142800 +0900" channel="chihou.obihiro">
+        <title lang="ja">【１Ｒ】  14:25発走  🏇【５０歳の新郎新婦誕生記念Ｃ２－１１ 直200m 10 🏇】  🔴📺 ただいま実況放送中！！！ 📺🔴</title>
+        <desc lang="ja">地方競馬 帯広
+🌙 開催区分: ナイター
+⏰ 発走予定: 14:25
+🏷️ 種別: 一般
+📢 レース名: ５０歳の新郎新婦誕生記念Ｃ２－１１ 直200m 10
+📅 2026年09月07日</desc>
+    </programme>
     <programme start="20260907204300 +0900" stop="20260908000000 +0900" channel="chihou.nagoya_keiba">
         <title lang="ja">🏁 本日の🌙ナイター競馬🌙は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
@@ -7763,15 +7867,15 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">🏁 本日の🌙ナイター競馬🌙は終了しました</title>
         <desc lang="ja">本日の全レースは終了しました。</desc>
     </programme>
-    <programme start="20260907210000 +0900" stop="20260908010000 +0900" channel="keirin.iwakitaira">
+    <programme start="20260907210000 +0900" stop="20260907235900 +0900" channel="keirin.iwakitaira">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">いわき平の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260907210000 +0900" stop="20260908010000 +0900" channel="keirin.seibuen">
+    <programme start="20260907210000 +0900" stop="20260907235900 +0900" channel="keirin.seibuen">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">西武園の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260907211000 +0900" stop="20260908010000 +0900" channel="auto.isesaki">
+    <programme start="20260907211000 +0900" stop="20260907235900 +0900" channel="auto.isesaki">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">伊勢崎の本日のオートレースは全て終了しました。</desc>
     </programme>
@@ -7791,11 +7895,11 @@ BOAT RACE公式の3日目詳細はまだ未公表です。
         <title lang="ja">トレセンχ同好会 #12[字]</title>
         <image>https://pm-img-ap.skyperfectv.co.jp/uploads/thumbnail_origin/image/85433/S_1e22dbd1aa3b4b40994a4a5a228062f2_20260825112641353.png</image>
     </programme>
-    <programme start="20260907233000 +0900" stop="20260908010000 +0900" channel="keirin.kurume">
+    <programme start="20260907233000 +0900" stop="20260907235900 +0900" channel="keirin.kurume">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">久留米の本日の競輪は全て終了しました。</desc>
     </programme>
-    <programme start="20260907233000 +0900" stop="20260908010000 +0900" channel="keirin.matsusaka">
+    <programme start="20260907233000 +0900" stop="20260907235900 +0900" channel="keirin.matsusaka">
         <title lang="ja">⛔🏁 本日の全レースは終了しました 🏁⛔</title>
         <desc lang="ja">松阪の本日の競輪は全て終了しました。</desc>
     </programme>

@@ -19,14 +19,14 @@ INPUTS = [
 ]
 
 JRA = [
-    ('jra.gch','グリーンチャンネル','グリーンチャンネル（高画質）','gchmain.m3u8','gch.png'),
-    ('jra.gch','グリーンチャンネル','グリーンチャンネル（低画質）','gchmain_LQ.m3u8','gch.png'),
-    ('jra.east','JRA EAST','JRA EAST（高画質）','EAST_test.m3u8','east_web3.png'),
-    ('jra.east','JRA EAST','JRA EAST（低画質）','EAST_test_LQ.m3u8','east_web3.png'),
-    ('jra.west','JRA WEST','JRA WEST（高画質）','WEST_master .m3u8','west_web4.png'),
-    ('jra.west','JRA WEST','JRA WEST（低画質）','WEST_master_LQ.m3u8','west_web4.png'),
-    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（高画質）','hokaido_master (1).m3u8','hokkaido_local.png'),
-    ('jra.hokkaido','JRA HOKKAIDO','JRA HOKKAIDO（低画質）','hokaido_master_LQ.m3u8','hokkaido_local.png'),
+    ('jra.gch.hq','グリーンチャンネル HQ','グリーンチャンネル（高画質）','gchmain.m3u8','public_sports_logos_github_43/jra_quality/gch_hq.svg'),
+    ('jra.gch.lq','グリーンチャンネル LQ','グリーンチャンネル（低画質）','gchmain_LQ.m3u8','public_sports_logos_github_43/jra_quality/gch_lq.svg'),
+    ('jra.east.hq','JRA EAST HQ','JRA EAST（高画質）','EAST_test.m3u8','public_sports_logos_github_43/jra_quality/east_hq.svg'),
+    ('jra.east.lq','JRA EAST LQ','JRA EAST（低画質）','EAST_test_LQ.m3u8','public_sports_logos_github_43/jra_quality/east_lq.svg'),
+    ('jra.west.hq','JRA WEST HQ','JRA WEST（高画質）','WEST_master .m3u8','public_sports_logos_github_43/jra_quality/west_hq.svg'),
+    ('jra.west.lq','JRA WEST LQ','JRA WEST（低画質）','WEST_master_LQ.m3u8','public_sports_logos_github_43/jra_quality/west_lq.svg'),
+    ('jra.hokkaido.hq','JRA HOKKAIDO HQ','JRA HOKKAIDO（高画質）','hokaido_master (1).m3u8','public_sports_logos_github_43/jra_quality/hokkaido_hq.svg'),
+    ('jra.hokkaido.lq','JRA HOKKAIDO LQ','JRA HOKKAIDO（低画質）','hokaido_master_LQ.m3u8','public_sports_logos_github_43/jra_quality/hokkaido_lq.svg'),
 ]
 
 

@@ -144,7 +144,7 @@ async function dispatchWorkflow(token) {
 
 async function generateBoatM3U() {
   const date = japanDateYYYYMMDD();
-  let output = "#EXTM3U\n\n";
+  let output = `#EXTM3U\n# BOAT-DATE:${date}\n\n`;
   let success = 0;
   const failed = [];
 
@@ -189,6 +189,17 @@ try {
   const token = await getToken();
   const boat = await generateBoatM3U();
   await saveLocalM3U(boat.output);
+
+  if (boat.success < 1) {
+    const a = new Alert();
+    a.title = "⚠️ BOAT取得0件";
+    a.message = "再生URLを1件も取得できなかったため、GitHub上の boatrace_today.m3u は上書きしません。\n\n空M3Uで既存データを消す事故を防止しました。";
+    a.addAction("OK");
+    await a.present();
+    Script.complete();
+    return;
+  }
+
   const pushed = await upsertGitHubFile(BOAT_FILE, boat.output, token, `Update BOAT RACE M3U ${boat.date} from iPhone one-click`);
   await dispatchWorkflow(token);
 

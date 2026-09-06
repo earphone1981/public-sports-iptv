@@ -7,7 +7,7 @@ BASE = Path(__file__).resolve().parent / 'public_sports_logos_github_43' / 'jra_
 def main():
     svgs = sorted(BASE.glob('*.svg'))
     if len(svgs) != 8:
-        raise SystemExit(f'Expected 8 JRA SVG logos, found {len(svgs)}')
+        raise SystemExit(f'Expected 8 JRA SVG logos (GCH/EAST/WEST/LOCAL HQ+LQ), found {len(svgs)}')
 
     for src in svgs:
         dst = src.with_suffix('.png')

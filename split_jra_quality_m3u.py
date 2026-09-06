@@ -22,9 +22,16 @@ SERVICES = {
         'lq_logo': 'west_lq.png',
     },
     'jra.hokkaido': {
-        'name': 'JRA HOKKAIDO',
-        'hq_logo': 'hokkaido_hq.png',
-        'lq_logo': 'hokkaido_lq.png',
+        'name': 'JRA LOCAL',
+        'output_base': 'jra.local',
+        'hq_logo': 'local_hq.png',
+        'lq_logo': 'local_lq.png',
+    },
+    'jra.local': {
+        'name': 'JRA LOCAL',
+        'output_base': 'jra.local',
+        'hq_logo': 'local_hq.png',
+        'lq_logo': 'local_lq.png',
     },
 }
 
@@ -88,7 +95,8 @@ def main():
         logo = svc[f'{quality}_logo']
 
         new = line
-        new = set_attr(new, 'tvg-id', f'{base}.{quality}')
+        output_base = svc.get('output_base', base)
+        new = set_attr(new, 'tvg-id', f'{output_base}.{quality}')
         new = set_attr(new, 'tvg-name', f"{svc['name']} {label}")
         new = set_attr(new, 'tvg-logo', f'{LOGO_BASE}/{logo}')
 

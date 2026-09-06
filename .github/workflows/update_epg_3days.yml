@@ -55,6 +55,19 @@ jobs:
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
 
+      - name: Reject stale BOAT one-click M3U before preserve
+        shell: bash
+        run: |
+          set -euo pipefail
+          today="$(TZ=Asia/Tokyo date +%Y%m%d)"
+          streams="$(grep -Ec '^https?://' boatrace_today.m3u || true)"
+          marker="$(sed -n 's/^# BOAT-DATE://p' boatrace_today.m3u | head -n1 | tr -d '\r')"
+          echo "BOAT one-click precheck: streams=$streams marker=${marker:-legacy/none} today=$today"
+          if [ "$streams" -gt 0 ] && [ -n "$marker" ] && [ "$marker" != "$today" ]; then
+            echo "::warning::stale BOAT one-click playlist rejected: $marker != $today"
+            printf '#EXTM3U\n\n' > boatrace_today.m3u
+          fi
+
       - name: Preserve BOAT M3U supplied by iPhone one-click
         run: cp boatrace_today.m3u /tmp/boatrace_today.m3u.oneclick
 

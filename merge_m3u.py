@@ -25,8 +25,8 @@ JRA = [
     ('jra.east.lq','JRA EAST LQ','JRA EAST（低画質）','EAST_test_LQ.m3u8','public_sports_logos_github_43/jra_quality/east_lq.png'),
     ('jra.west.hq','JRA WEST HQ','JRA WEST（高画質）','WEST_master .m3u8','public_sports_logos_github_43/jra_quality/west_hq.png'),
     ('jra.west.lq','JRA WEST LQ','JRA WEST（低画質）','WEST_master_LQ.m3u8','public_sports_logos_github_43/jra_quality/west_lq.png'),
-    ('jra.hokkaido.hq','JRA HOKKAIDO HQ','JRA HOKKAIDO（高画質）','hokaido_master (1).m3u8','public_sports_logos_github_43/jra_quality/hokkaido_hq.png'),
-    ('jra.hokkaido.lq','JRA HOKKAIDO LQ','JRA HOKKAIDO（低画質）','hokaido_master_LQ.m3u8','public_sports_logos_github_43/jra_quality/hokkaido_lq.png'),
+    ('jra.local.hq','JRA LOCAL WEB5 HQ','JRA LOCAL WEB5（高画質）','hokaido_master (1).m3u8','public_sports_logos_github_43/jra_quality/local_hq.png'),
+    ('jra.local.lq','JRA LOCAL WEB5 LQ','JRA LOCAL WEB5（低画質）','hokaido_master_LQ.m3u8','public_sports_logos_github_43/jra_quality/local_lq.png'),
 ]
 
 

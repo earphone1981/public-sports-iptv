@@ -9,9 +9,8 @@ on:
       - main
     paths:
       - "public_sports.m3u"
-      - "boatrace_today.m3u"
       - "boatrace_today.ps1"
-      - "boatrace_github_oneclick.js"
+      - "sync_boat_v4.py"
       - "merge_m3u.py"
       - "main_epg_3days.py"
       - "split_jra_quality_epg.py"
@@ -55,43 +54,27 @@ jobs:
       - name: Sync latest main before generation
         run: git pull --ff-only origin main
 
-      - name: Reject stale BOAT one-click M3U before preserve
-        shell: bash
-        run: |
-          set -euo pipefail
-          today="$(TZ=Asia/Tokyo date +%Y%m%d)"
-          streams="$(grep -Ec '^https?://' boatrace_today.m3u || true)"
-          marker="$(sed -n 's/^# BOAT-DATE://p' boatrace_today.m3u | head -n1 | tr -d '\r')"
-          echo "BOAT one-click precheck: streams=$streams marker=${marker:-legacy/none} today=$today"
-          if [ "$streams" -gt 0 ] && [ -n "$marker" ] && [ "$marker" != "$today" ]; then
-            echo "::warning::stale BOAT one-click playlist rejected: $marker != $today"
-            printf '#EXTM3U\n\n' > boatrace_today.m3u
-          fi
-
-      - name: Preserve BOAT M3U supplied by iPhone one-click
-        run: cp boatrace_today.m3u /tmp/boatrace_today.m3u.oneclick
-
-      - name: Update today's BOAT RACE schedule only
+      - name: Update today's BOAT RACE schedule metadata
         shell: pwsh
         timeout-minutes: 8
         run: ./boatrace_today.ps1
 
-      - name: Restore iPhone one-click BOAT stream URLs
-        run: cp /tmp/boatrace_today.m3u.oneclick boatrace_today.m3u
+      - name: Sync verified BOAT Auto v4 streams from ajiousama
+        timeout-minutes: 3
+        run: python -u sync_boat_v4.py streams
 
-      - name: Validate BOAT schedule and one-click playlist
-        shell: pwsh
+      - name: Validate BOAT v4 mirror
         run: |
-          if (!(Test-Path boatrace_today.json) -or !(Test-Path boatrace_today.m3u)) { throw 'BOAT output missing' }
-          $data = Get-Content boatrace_today.json -Raw -Encoding UTF8 | ConvertFrom-Json
-          $held = @($data.PSObject.Properties | Where-Object { $_.Value.held -eq $true }).Count
-          if ($held -lt 1) { throw 'BOAT daily data has no held venues' }
-          $m3u = Get-Content boatrace_today.m3u -Raw -Encoding UTF8
-          $streams = ([regex]::Matches($m3u, '(?m)^https?://')).Count
-          Write-Host "BOAT schedule OK: held=$held / iPhone one-click streams=$streams"
-          if ($streams -lt 1) {
-            Write-Host 'No iPhone one-click BOAT streams are stored yet. EPG will update, but BOAT playback stays empty until Scriptable one-click is run.'
-          }
+          python - <<'PY'
+          import json, re
+          s=json.load(open('boat_v4_status.json',encoding='utf-8'))
+          m=open('boatrace_today.m3u',encoding='utf-8').read()
+          n=len(re.findall(r'(?m)^https?://',m))
+          assert s.get('architecture_version') == 4
+          assert s.get('last_update_ok') is True
+          assert n == int(s.get('visible_count',0)), (n,s.get('visible_count'))
+          print(f"BOAT Auto v4 mirror OK: streams={n}, date={s.get('date')}")
+          PY
 
       - name: Generate 3-day EPG
         timeout-minutes: 12
@@ -100,7 +83,7 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python -u main_epg_3days.py
 
-      - name: Merge current one-click BOAT M3U into public sports
+      - name: Merge verified BOAT v4 M3U into public sports
         run: python -u merge_m3u.py
 
       - name: Repair BOAT active venues from current M3U
@@ -148,6 +131,10 @@ jobs:
       - name: Sync EPG channel order to sorted M3U
         run: python -u reorder_epg_channels_by_m3u.py
 
+      - name: Replace BOAT EPG with BOAT Auto v4 verified EPG
+        timeout-minutes: 3
+        run: python -u sync_boat_v4.py epg
+
       - name: Validate XML
         run: python -c "import xml.etree.ElementTree as ET; ET.parse('epg.xml'); print('XML OK')"
 
@@ -159,13 +146,15 @@ jobs:
           cp public_sports.m3u /tmp/public_sports.m3u.generated
           cp boatrace_today.json /tmp/boatrace_today.json.generated
           cp boatrace_today.m3u /tmp/boatrace_today.m3u.generated
+          cp boat_v4_status.json /tmp/boat_v4_status.json.generated
           git fetch origin main
           git reset --hard origin/main
           cp /tmp/epg.xml.generated epg.xml
           cp /tmp/public_sports.m3u.generated public_sports.m3u
           cp /tmp/boatrace_today.json.generated boatrace_today.json
           cp /tmp/boatrace_today.m3u.generated boatrace_today.m3u
-          git add epg.xml public_sports.m3u boatrace_today.json boatrace_today.m3u
+          cp /tmp/boat_v4_status.json.generated boat_v4_status.json
+          git add epg.xml public_sports.m3u boatrace_today.json boatrace_today.m3u boat_v4_status.json
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "Update public sports EPG with iPhone one-click BOAT M3U"
+          git commit -m "Update public sports with verified BOAT Auto v4 data"
           git push origin HEAD:main

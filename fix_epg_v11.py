@@ -79,27 +79,28 @@ def resolve_post_time(p,t):
 
 def event_intro(cid,name,programmes):
     text=' '.join((p.findtext('title') or '')+' '+(p.findtext('desc') or '') for p in programmes)
-    day=''
-    m=re.search(r'[（(](\d+)日目[）)]',text)
-    if m:day=f'（{m.group(1)}日目）'
     if cid.startswith('keirin.'):
-        if 'ミッドナイト' in text:return f'本日は 🌟ミッドナイト競輪🌟{day}をお送りします'
-        if 'モーニング' in text:return f'本日は 🌅モーニング競輪🌅{day}をお送りします'
-        if 'ナイター' in text:return f'本日は 🌙ナイター競輪🌙{day}をお送りします'
-        return f'本日は 🚲競輪🚲{day}をお送りします'
+        if 'ミッドナイト' in text:return '本日、ミッドナイト開催予定'
+        if 'モーニング' in text:return '本日、モーニング開催予定'
+        if 'ナイター' in text:return '本日、ナイター開催予定'
+        return '本日、デイ開催予定'
     if cid.startswith('boat.'):
-        kind='🌙ナイターボートレース🌙' if 'ナイター' in text else '🚤ボートレース🚤'
-        return f'本日は {kind}{day}をお送りします'
+        if 'ナイター' in text:return '本日、ナイター開催予定'
+        if 'モーニング' in text:return '本日、モーニング開催予定'
+        return '本日、デイ開催予定'
     if cid.startswith('auto.'):
-        if 'オーバーミッドナイト' in text:return f'本日は 🌌オーバーミッドナイトオート🌌{day}をお送りします'
-        if 'ミッドナイト' in text:return f'本日は 🌟ミッドナイトオート🌟{day}をお送りします'
-        if 'ナイター' in text:return f'本日は 🌙ナイターオート🌙{day}をお送りします'
-        return f'本日は 🏍️オートレース🏍️{day}をお送りします'
+        if 'オーバーミッドナイト' in text:return '本日、オーバーミッドナイト開催予定'
+        if 'ミッドナイト' in text:return '本日、ミッドナイト開催予定'
+        if 'ナイター' in text:return '本日、ナイター開催予定'
+        if 'モーニング' in text:return '本日、モーニング開催予定'
+        return '本日、デイ開催予定'
     if cid.startswith(('chihou.','keiba.')):
-        kind='🌙ナイター競馬🌙' if 'ナイター' in text else '🏇地方競馬🏇'
-        return f'本日は {kind}{day}をお送りします'
-    if cid in TARGET_JRA:return f'本日は 🏇JRA中央競馬🏇{day}をお送りします'
-    return f'本日は {name}{day}をお送りします'
+        if 'ナイター' in text:return '本日、ナイター開催予定'
+        if '薄暮' in text:return '本日、薄暮開催予定'
+        if 'モーニング' in text:return '本日、モーニング開催予定'
+        return '本日、デイ開催予定'
+    if cid in TARGET_JRA:return '本日、デイ開催予定'
+    return f'本日、{name}開催予定'
 
 def normalize_today(root):
     today=datetime.datetime.now(JST).date();ds=datetime.datetime.combine(today,datetime.time(0,0),tzinfo=JST);de=ds+datetime.timedelta(days=1)
@@ -157,8 +158,12 @@ def main():
     for cid,items in by.items():
         items.sort(key=lambda x:x[0]);prev=None
         for post,p in items:
-            cut=post+datetime.timedelta(minutes=3);old=parse_xmltv(p.get('start'));ns=prev if prev is not None else old
-            if ns and ns<cut:p.set('start',fmt_xmltv(ns));p.set('stop',fmt_xmltv(cut));adjusted+=1
+            cut=post+datetime.timedelta(minutes=3)
+            if prev is None:
+                ns=post-datetime.timedelta(minutes=15)
+            else:
+                ns=prev
+            if ns<cut:p.set('start',fmt_xmltv(ns));p.set('stop',fmt_xmltv(cut));adjusted+=1
             prev=cut
     rebuilt=normalize_today(root)
     ps=list(root.findall('programme'))

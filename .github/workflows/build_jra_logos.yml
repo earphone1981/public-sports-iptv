@@ -1,4 +1,4 @@
-name: Build JRA PNG Logos
+name: Build Canonical JRA PNG Logos
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
       - main
     paths:
       - 'generate_jra_quality_pngs.py'
-      - 'public_sports_logos_github_43/jra_quality/*.svg'
       - '.github/workflows/build_jra_logos.yml'
   workflow_dispatch:
 
@@ -25,16 +24,16 @@ jobs:
         uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Install SVG renderer
-        run: python -m pip install --disable-pip-version-check cairosvg
-      - name: Render JRA SVG logos to PNG
+      - name: Install image tools
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Build approved JRA/GCH PNG logos
         run: python generate_jra_quality_pngs.py
-      - name: Commit PNG logos
+      - name: Commit canonical logo set
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public_sports_logos_github_43/jra_quality/*.png
-          git diff --cached --quiet && echo "PNG logos already current" && exit 0
-          git commit -m "Build JRA HQ LQ PNG logos"
+          git add -A public_sports_logos_github_43/jra_quality gch.png east_web3.png west_web4.png local_web5.png hokkaido_local.png
+          git diff --cached --quiet && echo "JRA/GCH logos already current" && exit 0
+          git commit -m "Apply canonical JRA GCH PNG logos"
           git pull --rebase origin main
           git push origin HEAD:main

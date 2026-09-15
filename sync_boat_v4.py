@@ -8,13 +8,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 BASE = "https://raw.githubusercontent.com/ajiousama/himitsu/main/"
-UA = "public-sports-iptv BOAT-v4 mirror/1.0"
+UA = "public-sports-iptv BOAT-v4 mirror/1.1"
 
 
 def get(name: str) -> bytes:
@@ -24,26 +23,79 @@ def get(name: str) -> bytes:
 
 
 def sync_streams() -> None:
-    playlist = get("freewifi").decode("utf-8")
+    # Use the verified per-venue state directly.  Parsing freewifi made the
+    # mirror depend on playlist layout and could associate a venue with the
+    # wrong neighbouring URL.
+    state_raw = get("boat_auto_state.json")
+    state = json.loads(state_raw)
     status_raw = get("today_boat_status.json")
     status = json.loads(status_raw)
-    if status.get("architecture_version") != 4 or not status.get("last_update_ok"):
-        raise SystemExit("BOAT Auto v4 source is not healthy; refusing to replace local BOAT data")
 
-    lines = playlist.splitlines()
-    out = ["#EXTM3U", f"# BOAT-DATE:{str(status.get('date','')).replace('-', '')}", "# BOAT-SOURCE:ajiousama/himitsu BOAT Auto v4"]
+    for name, obj in (("boat_auto_state.json", state), ("today_boat_status.json", status)):
+        if obj.get("architecture_version") != 4 or not obj.get("last_update_ok"):
+            raise SystemExit(f"BOAT Auto v4 source is not healthy in {name}; refusing to replace local BOAT data")
+
+    if state.get("date") != status.get("date"):
+        raise SystemExit(f"BOAT v4 source date mismatch: state={state.get('date')} status={status.get('date')}")
+
+    streams = state.get("streams") or {}
+    expected = int(status.get("visible_count", 0) or state.get("visible_count", 0))
+    if not isinstance(streams, dict) or not streams:
+        raise SystemExit("BOAT v4 verified streams are missing; refusing to replace local BOAT data")
+
+    venue_names = {}
+    for key in streams:
+        if key.startswith("boat."):
+            venue_names[key] = key.split(".", 1)[1]
+
+    # Prefer names already published by freewifi only as display metadata;
+    # URLs always come from the verified state above.
+    try:
+        playlist = get("freewifi").decode("utf-8")
+        for line in playlist.splitlines():
+            if not (line.startswith("#EXTINF:") and 'tvg-id="boat.' in line):
+                continue
+            import re
+            mid = re.search(r'tvg-id="(boat\.[^"]+)"', line)
+            mname = re.search(r'tvg-name="([^"]+)"', line)
+            if mid and mname:
+                venue_names[mid.group(1)] = mname.group(1).removeprefix("BOATRACE")
+    except Exception as e:
+        print(f"BOAT display-name lookup skipped: {e}")
+
+    out = ["#EXTM3U", f"# BOAT-DATE:{str(status.get('date','')).replace('-', '')}", "# BOAT-SOURCE:ajiousama/himitsu BOAT Auto v4 verified state"]
+    seen_urls = {}
     count = 0
-    for i, line in enumerate(lines):
-        if line.startswith("#EXTINF:") and 'tvg-id="boat.' in line:
-            if i + 1 < len(lines) and lines[i + 1].startswith(("http://", "https://")):
-                out += ["", line, lines[i + 1]]
-                count += 1
-    expected = int(status.get("visible_count", 0))
+    for tvg_id, info in streams.items():
+        if not tvg_id.startswith("boat.") or not isinstance(info, dict):
+            continue
+        url = str(info.get("url") or "").strip()
+        if not url.startswith(("http://", "https://")):
+            continue
+        if not info.get("playback_verified"):
+            raise SystemExit(f"BOAT v4 stream is not playback-verified: {tvg_id}")
+
+        # The manifest path (before ?token=) is the venue/content identity.
+        # Tokens can legitimately be shared, so never compare token alone.
+        manifest = url.split("?", 1)[0]
+        other = seen_urls.get(manifest)
+        if other and other != tvg_id:
+            raise SystemExit(f"BOAT v4 duplicate manifest: {other} and {tvg_id}: {manifest}")
+        seen_urls[manifest] = tvg_id
+
+        slug = tvg_id.split(".", 1)[1]
+        name = venue_names.get(tvg_id, slug)
+        logo = f"https://images.weserv.nl/?url=raw.githubusercontent.com/ajiousama/himitsu/main/logos/public_sports/venues/boat_{slug}.png&output=png"
+        ext = f'#EXTINF:-1 tvg-id="{tvg_id}" tvg-name="BOATRACE{name}" tvg-logo="{logo}" group-title="今日の開催場",BOATRACE{name}'
+        out += ["", ext, url]
+        count += 1
+
     if count < 1 or (expected and count != expected):
-        raise SystemExit(f"BOAT v4 playlist mismatch: extracted={count} expected={expected}")
+        raise SystemExit(f"BOAT v4 playlist mismatch: verified={count} expected={expected}")
+
     Path("boatrace_today.m3u").write_text("\n".join(out) + "\n", encoding="utf-8")
     Path("boat_v4_status.json").write_bytes(status_raw)
-    print(f"BOAT v4 streams synced: {count} venues; date={status.get('date')}")
+    print(f"BOAT v4 verified streams synced: {count} venues; date={status.get('date')}")
 
 
 def merge_epg() -> None:
@@ -62,7 +114,6 @@ def merge_epg() -> None:
         elif e.tag == "programme" and (e.get("channel") or "").startswith("boat."):
             target.remove(e)
 
-    # Channels before programmes keeps XMLTV consumers happy.
     first_programme = next((i for i, e in enumerate(list(target)) if e.tag == "programme"), len(target))
     for cid in sorted(source_channels):
         target.insert(first_programme, source_channels[cid])

@@ -2,33 +2,6 @@ name: Update Public Sports EPG 3 Days
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 23 * * *"
-  push:
-    branches:
-      - main
-    paths:
-      - "public_sports.m3u"
-      - "boatrace_today.ps1"
-      - "sync_boat_v4.py"
-      - "merge_m3u.py"
-      - "main_epg_3days.py"
-      - "split_jra_quality_epg.py"
-      - "split_jra_quality_m3u.py"
-      - "sanitize_jra_epg.py"
-      - "fix_boat_active_from_m3u.py"
-      - "fix_epg_v11.py"
-      - "fix_boat_waiting_title.py"
-      - "fix_boat_day_type.py"
-      - "fix_autorace_today_official.py"
-      - "verified_daily_override.py"
-      - "apply_verified_status.py"
-      - "format_race_number_epg.py"
-      - "validate_race_epg_boundaries.py"
-      - "fix_epg_duplicate_channel_ids.py"
-      - "sort_public_sports_by_epg.py"
-      - "reorder_epg_channels_by_m3u.py"
-      - ".github/workflows/update_epg_3days.yml"
 
 concurrency:
   group: public-sports-m3u-writer
